@@ -355,6 +355,14 @@
 		}
 	}
 
+	span.code{
+		color: $codeString;
+	}
+
+	p.subtext{
+		padding-left: 60px;
+		@include smaller;
+	}
 	
 }//end pl
 

@@ -63,6 +63,8 @@ items:
     value: '#efb61b'
   - name: $buttonBackHover
     value: '#c84700'
+  - name: $codeString
+    value: '#017aa2'
 meta:
   description: >-
     To add to these items, use Sass variables that start with <code>$</code> in
