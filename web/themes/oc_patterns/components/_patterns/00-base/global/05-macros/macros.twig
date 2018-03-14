@@ -85,6 +85,23 @@
 
 
 
+{#######  FOOTER VARIABLES  #######}
+
+{# FOOTER STYLES
+	--------------------
+	Fix the footer or not
+	FOOTER VARIABLES= fixed   ---   leave blank for not fixed
+#}
+<div class="macro-tile">
+<p><strong>FOOTER STYLE</strong></br>
+	VARIABLES= fixed, not-fixed</br>
+	Current= not-fixed
+</p>
+</div>
+{% macro fixedFooter() %}not-fixed{% endmacro %}
+
+
+
 {#######  SVG VIEWBOX POSITIONS  ########}
 
 {# SOCIAL MEDIA WIDGET ICONS 
@@ -104,24 +121,3 @@
 {% macro twitter()%}400 80 80 80{% endmacro %}
 {% macro linkedin()%}320 80 80 80{% endmacro %}
 {% macro youtube()%}400 160 80 80{% endmacro %}
-
-
-
-{#######  FOOTER VARIABLES  #######}
-
-{# FOOTER STYLES
-	--------------------
-	Fix the footer or not
-	FOOTER VARIABLES= fixed   ---   leave blank for not fixed
-#}
-<div class="macro-tile">
-<p><strong>FOOTER STYLE</strong></br>
-	VARIABLES= fixed, not-fixed</br>
-	Current= not-fixed
-</p>
-</div>
-{% macro fixedFooter() %}not-fixed{% endmacro %}
-
-
-
-
