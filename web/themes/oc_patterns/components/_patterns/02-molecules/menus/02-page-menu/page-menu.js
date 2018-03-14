@@ -11,8 +11,9 @@ Drupal.behaviors.pageMenu = {
 
 					//find nested lists and set their parents and expanders
 					if(($('> ul', this).length) && (!$('.expander:first', this).length) ){
-						$(this).addClass('parent').prepend('<button class="expander" aria-expanded="false"></button>');
+					  $(this).addClass('parent').prepend('<button class="expander" aria-expanded="false"></button>');
 					}
+
 
 					//find active-trail li and add aria expanded role
 					$('li.active-trail > .expander').attr('aria-expanded', "true");
