@@ -335,7 +335,7 @@
 	}
 
 	.three-col-vert{
-			@include tab{
+		@include tab{
 			@include columns(3,40px);
 			& > li{
 				width: 100%;

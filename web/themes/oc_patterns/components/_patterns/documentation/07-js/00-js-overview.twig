@@ -1,0 +1,13 @@
+<a name="js-overview" id="js-overview"></a>
+
+<div class="doc-text">
+	<p>Use jquery, defined in libraries, jquery version in drupal, etc.</p>
+	<div class="doc-section">
+		<h4 class="doc-section-title">JS in PL and Drupal</h4>
+		<div class="doc-section-inner">
+			<p><strong>Jquery—</strong> Jquery is what we use to write 98% of the JS on a site. Jquery is a core Drupal dependency and all of the JS files in the theme are set up to use Jquery functions inside of Drupal behaviors.</p>
+			<p>When adding a new file, its ususally easiest to copy an existing theme JS file and jsut delete everything between the opening line: <span class="code">(function($, Drupal) {</span> and the  closing line: <span>})(jQuery, Drupal);</span>. Those two lines let Drupal know that it should use its core jquery file to execute the behaviors inside the file. If you do create a new file from scratch or adding new behaviors to a file, make sure that everything is between those lines.</p>
+		</div>
+	</div>
+</div>
+
