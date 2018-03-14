@@ -10,10 +10,7 @@
 	.two-column{
 		@include tab{
 			.field-oc-long-text{
-				//from 01-mixins.scss
-				@include columnCount(2);
-				//from 01-mixins.scss
-				@include columnGap(2em);
+				@include columns(2, 2em);
 			}
 		}
 	}

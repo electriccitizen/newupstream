@@ -97,14 +97,10 @@
 }
 
 ///mixin - column-count
-@mixin columnCount($column){
-	-webkit-column-count: #{$column};
-	-moz-column-count: #{$column};
-	column-count: #{$column};
-}
-
-///mixin - column-gap
-@mixin columnGap($gap){
+@mixin columns($columns, $gap){
+	-webkit-column-count: #{$columns};
+	-moz-column-count: #{$columns};
+	column-count: #{$columns};
 	-webkit-column-gap: #{$gap};
 	-moz-column-gap: #{$gap};
 	column-gap: #{$gap};

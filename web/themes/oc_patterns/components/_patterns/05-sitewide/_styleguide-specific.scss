@@ -315,8 +315,7 @@
 
 	.two-col-vert{
 		@include tab{
-			@include columnCount(2);
-			@include columnGap(40px);
+			@include columns(2,40px);
 			& > li{
 				display: inline-block;
 				width: 100%;
@@ -337,8 +336,7 @@
 
 	.three-col-vert{
 		@include tab{
-			@include columnCount(3);
-			@include columnGap(40px);
+			@include columns(3,40px);
 			& > li{
 				width: 100%;
 				display: inline-block;
