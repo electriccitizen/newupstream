@@ -1,43 +1,35 @@
 
-ABOUT OC BASE THEME
+ABOUT OC PATTERNS THEME
 ------------
 
-Open Citizen Base Theme (oc_base) is a starter theme by Electric Citizen, http://www.electriccitizen.com. 
+Open Citizen Patterns (OC Patterns) is an Atomic design based Pattern Lab theme by Electric Citizen, http://www.electriccitizen.com. 
 
-For Drupal 8, oc_base uses Drupal's Stable as its base theme; Stable provides minimal markup and very few CSS classes. 
+For Drupal 8, OC Patterns uses Emulsify by Four Kitchens as its base them. The Emulsify Gulp npm package is a tendency of the OC Patterns theme.
 
-oc_base provides a bare minimum of sensible defaults for all themes. For each site, a subtheme (oc_patterns) should be used for any theming specific to the site you are working on (not global to every site).
+OC Patterns is a default theme that comes along with each Drupal 8 site by Electric Citizen. Base elements such as content types, menus and paragraph widgets are pre-themed but can be customized on a per site basis as needed based on the site design. Twig macro presets are use to switch between pre-defined theming sets for certain site elements (fixed vs non-fixed footer, main menu alignment, etc).
+
+Since OC Patterns is a Pattern Lab theme, the theme start command will spin up a local Pattern lab instance in Google Chrome. Detailed theme documentation can be found in that Pattern Lab instance.
 
 
 GETTING STARTED
 --------------------
 
-Working with oc_base requires a few things: 
-(a) working knowledge of Sass
-(b) knowledge of Susy or Singularity (if working with grids and layout)
+Working with OC Patterns requires a few things: 
+(a) working knowledge of Sass, Twig, Jquery
 (c) use of the command line (e.g. Terminal) and a good IDE (e.g. Sublime Text)
 
 To get started:
-(a) git clone the theme to your local machine
-(b) Install npm globally, https://docs.npmjs.com/getting-started/installing-node) 
-(c) Install gulp globally, "sudo npm install -g gulp"
-(c) navigate in the command line window to the folder for oc_base
-(d) run the command, "npm install"
+(a) get a local site instance spun up following the virtual machine on boarding section of the site repo.
+(b) Make sure you have npm installed globally and that you are using version 5.5.1 or later. You can check this by running: npm -v in any command line window.
+(c) cd into the folder for oc_patterns in the command line
+(d) run: npm install
 
 Working: 
-(a) Locaate the sass files (inside the /src folder)
-(b) navigate in the command line window to the folder for oc_base
-(c) Type the command "gulp"
+(a) cd into the oc_patterns folder in the command line
+(b) run: npm start
 
--- This will trigger many things. Sass files will be monitored for changes and compile to CSS files as needed. BrowserSync will open a window in Chrome and Firefox
+-- This will trigger many things: SVG Icons in oc_patterns/images/icons/src will be compiled into a svg sprite and assigned mixins and css selectors, Scss files will be linted and compiled, js files will be listed and compiled, a local Pattern Lab instance will be opened in Google Chrome.
 
 Other notes:
--- for each site, syncConfig.json needs to edited to include the correct URL for your local site. The browsers that get auto opened can be altered (by default it is Chrome and Firefox), or disabled entirely. Add this file to your .gitignore and do not commit it back to the repo.
+-- theme tasks are all run by the npm start script defined in package.json. New tasks can be added to that script and existing tasks defined in that script can be customized in local.gulpe-config.js.
 
-
-
-ABOUT OUR THEMING
---------------------
-
-For more information, see Electric Citizen's theming guide for Drupal 8.
-<insert link>
