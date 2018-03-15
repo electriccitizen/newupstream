@@ -73,11 +73,13 @@ function drush_ec_refresh($nodb=NULL, $nofiles=NULL) {
   if (!$status = drush_invoke_process($site['alias_local'], 'updb -y', array(), array())) {
     drush_log(dt('Unable to run drush updb on !alias', array('!alias' => $site['alias_local'])), 'warning');
   }
+  // change to default
+    chdir('/var/www/drupalvm/web/sites/default');
 
   // sync files
   drush_print('Sync files from '.$site['alias_remote']);
   if ($nofiles == NULL) {
-    exec('rsync -rlvz --size-only --ipv4 --progress -e \'ssh -p 2222\' '.$site['env'].'.'.$site['site'].'@appserver.'.$site['env'].'.'.$site['site'].'.drush.in:files/ sites/default/files');
+    exec('rsync -rlvz --size-only --ipv4 --progress -e \'ssh -p 2222\' '.$site['env'].'.'.$site['site'].'@appserver.'.$site['env'].'.'.$site['site'].'.drush.in:files/ files');
     drush_print('syncing...');
   } elseif ($nodb == 1) {
     drush_print('Skipping file sync from '.$site['alias_remote']);
