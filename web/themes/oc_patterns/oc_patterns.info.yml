@@ -1,6 +1,6 @@
 name: Open Citizen Patterns
 type: theme
-description: Custom theme by Electric Citizen for use with patternlab
+description: Custom theme by Electric Citizen for use with Pattern Lab
 package: EC
 core: 8.x
 # Defines libraries group in which we can add css/js.
