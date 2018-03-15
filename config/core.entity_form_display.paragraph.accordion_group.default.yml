@@ -6,10 +6,12 @@ dependencies:
     - field.field.paragraph.accordion_group.field_accordion_item
     - field.field.paragraph.accordion_group.field_admin_description
     - field.field.paragraph.accordion_group.field_layout
+    - field.field.paragraph.accordion_group.field_oc_long_text
     - field.field.paragraph.accordion_group.field_widget_title
     - paragraphs.paragraphs_type.accordion_group
   module:
     - paragraphs
+    - text
 _core:
   default_config_hash: yj6tXlZeQGNiLqt8kGgtXxQLTK5-NTm3oYxJ2SRVURY
 id: paragraph.accordion_group.default
@@ -19,7 +21,7 @@ mode: default
 content:
   field_accordion_item:
     type: paragraphs
-    weight: 3
+    weight: 4
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -44,6 +46,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
+  field_oc_long_text:
+    weight: 3
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
     region: content
   field_widget_title:
     weight: 0
