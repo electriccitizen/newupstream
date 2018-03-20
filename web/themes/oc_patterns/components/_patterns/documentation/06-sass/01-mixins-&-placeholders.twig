@@ -6,7 +6,7 @@
 		<h4 class="doc-section-title">Mixins & Placeholders</h4>
 		<div class="doc-section-inner">
 			<p>A lot of the power of Sass comes from mixins and placeholders. These are bits of reusable code that prevent you from having to type the same thing over and over. Mixins are denoted as <span class="code">@mixin example{ my scss code here }</span> and called with includes: <span class="code">@include example;</span>. Placeholder are denoted as <span class="code">%example{ my scss code here}</span> and called with extends: <span class="code">@extend %example</span>.</p>
-			<p>The actual difference betwen Mixins and Placeholders can be tricky but here are a couple of key points:
+			<p>The actual difference between Mixins and Placeholders can be tricky but here are a couple of key points:
 				<ol>
 					<li>Variable arguments cannot be passed through placeholders.</li>
 					<li>Placeholders must be used in the file they are declared in, or that file must be imported into the file they will be used in.</li>
@@ -28,7 +28,7 @@
 		<h4 class="doc-section-title">OC Placeholders</h4>
 		<div class="doc-section-inner">
 			<p>Most placeholders are defined in 00-base/_01-placeholders.scss (which is imported into other Scss files as needed. File specific placeholders can be defined within the file they are being used in.</p>
-			<p>A placeholder should be created for any common piece of Scss that is reused across the site (or within a single file) but no contexual arguments are needed. <br>Example:<br><span class="code">%listReset{<br>list-style:none;<br>padding: 0;<br>margin: 0;<br>}</span></p>
+			<p>A placeholder should be created for any common piece of Scss that is reused across the site (or within a single file) but no contextual arguments are needed. <br>Example:<br><span class="code">%listReset{<br>list-style:none;<br>padding: 0;<br>margin: 0;<br>}</span></p>
 		</div>
 	</div>
 </div>

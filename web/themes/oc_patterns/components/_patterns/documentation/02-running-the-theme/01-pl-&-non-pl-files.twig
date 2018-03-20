@@ -13,17 +13,17 @@
 			<p><strong>oc_pattern.info.yml</strong> Outlines all the theme information and sets the block layout regions and Pattern Lab component top level folders that can be inherited into Drupal.</p>
 			<p><strong>oc_patterns.layouts.yml—</strong> Defines the custom OC Patterns templates and their regions.</p>
 			<p><strong>oc_patterns.libraries.yml—</strong> Sets the libraries that can be attached to Twig templates in Drupal. (Fonts, CSS, JS) <strong>External libraries added here should be brought in through CDN whenever possible.</strong></p>
-			<p><strong>oc_patterns.theme—</strong> Provides theme level php functions and hooks.</p>
+			<p><strong>oc_patterns.theme—</strong> Provides theme level PHP functions and hooks.</p>
 			<p><strong>package-lock.json—</strong> Automatic file generated from package.json on <span class="code">npm install</span>. Defines all package dependencies.</p>
 			<p><strong>package.json—</strong> Assigns dependencies and npm scripts for the theme.</p>
 			<p><strong>README.txt—</strong> About the theme and how to install.</p>
-			<p><strong>screenshot.jpp & screenshot.png—</strong> Theme cover images shown in Drupal's Appearance configuration.</p>
+			<p><strong>screenshot.jpg & screenshot.png—</strong> Theme cover images shown in Drupal's Appearance configuration.</p>
 		</div>
 	</div>
 	<div class="doc-section">
 		<h4 class="doc-section-title">Components Folder</h4>
 		<div class="doc-section-inner">
-			<p><strong>/components—</strong> The components folder holds all the files that run Pattern Lab. These are compiled in the /theme/pattern-lab folder (for gulp deploy and the browser local Pattern Lab instance) and the /dist folder (holds the styles.css, stylemaps, all js files, and the svg sprite) for use in Drupal.</p>
+			<p><strong>/components—</strong> The components folder holds all the files that run Pattern Lab. These are compiled in the /theme/pattern-lab folder (for gulp deploy and the browser local Pattern Lab instance) and the /dist folder (holds the styles.css, style maps, all js files, and the svg sprite) for use in Drupal.</p>
 			<p><strong>/components/patterns—</strong> 95% of all theming is done in the /components/_patterns folder. This is where all Scss files, and nearly all Twig and JS files are stored. compiled from and attached from.</p>
 			<p><strong>/components/layouts—</strong> This folder holds the Drupal-specific OC Patterns layouts and related files for Panelizer.</p>
 			<p><strong>/components/meta—</strong> Holds Pattern Lab specific head and foot info.</p>
@@ -44,20 +44,20 @@
 	<div class="doc-section">
 		<h4 class="doc-section-title">Fonts Folder</h4>
 		<div class="doc-section-inner">
-			<p>Holds oc icon font archived from previous themes. NO LONGER USED.</p>
+			<p>Holds OC icon font archived from previous themes. NO LONGER USED.</p>
 		</div>
 	</div>
 	<div class="doc-section">
 		<h4 class="doc-section-title">Images Folder</h4>
 		<div class="doc-section-inner">
 			<p>Holds core theme images and svg icons generated into the svg sprite (images/icons/src/).</p>
-			<p>NOTE: any new icons not added to the sprite or images used as background images can be added in a new subfolder within this folder.</p>
+			<p>NOTE: any new icons not added to the sprite or images used as background images can be added in a new sub-folder within this folder.</p>
 		</div>
 	</div>
 	<div class="doc-section">
 		<h4 class="doc-section-title">JS Folder</h4>
 		<div class="doc-section-inner">
-			<p>Holds the oc-patterns.js file. This file is automatically writtern from an unused example PL file and should not be edited or deleted. All JS should be housed in component js files.</p>
+			<p>Holds the oc-patterns.js file. This file is automatically written from an unused example PL file and should not be edited or deleted. All JS should be housed in component js files.</p>
 		</div>
 	</div>
 	<div class="doc-section">
