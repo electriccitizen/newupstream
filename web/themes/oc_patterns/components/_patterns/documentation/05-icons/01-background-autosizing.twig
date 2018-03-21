@@ -2,7 +2,7 @@
 
 <div class="doc-text">
 	<div class="doc-section">
-		<h4 class="doc-section-title">SVG Background Icon Autosizing</h4>
+		<h4 class="doc-section-title">SVG Background Icon Auto-sizing</h4>
 		<div class="doc-section-inner">
 			<p>OC Patterns has a background sizes file in the base folder (00-base/_03-background-sizes.scss). This file is used as an automatic background sizer for SVG icons used as backgrounds. This corrals all the background svgs into one area and necessitates only a few variable changes when a new icon is added rather than each instance of an svg background needing to be updated each time the sprite is generated.</p>
 			<p>The top of the file holds variables for <span class="code">$rows</span> and <span class="code">$columns</span>. These correspond to the generated svg sprite. Simple load the sprite from /dist/svg/sprite.css.svg into a browser or Adobe Illustrator and count the columns and rows. Changing these values when a new row of column is added while automatically update all background SVG icons to use the proper positioning.</p>

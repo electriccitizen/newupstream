@@ -302,6 +302,39 @@
 		}
 	}//end ol,ul
 
+	ol{
+		&.big-number{
+			counter-reset: item-counter;
+			& > li{
+				list-style-type: none;
+				position: relative;
+				@include spacer(1.5);
+				padding-left: 20px;
+				@include tab{
+					padding-left: 30px;
+				}
+				&:before{
+					content: counter(item-counter, decimal) ".";
+					counter-increment: item-counter;
+					margin-right: 1em;
+					font-size: 36px;
+					font-weight: $heavy;
+					line-height: 1;
+					color: $red;
+					position: absolute;
+					left: -30px;
+					top: 0;
+					font-family: $serif;
+					@include tab{
+						font-size: 54px;
+						left: -40px;
+						top: -8px;
+					}
+				}
+			}//end li
+		}//end big-number
+	}//end ol
+
 	.two-col{
 		@include safeFlex(row,wrap,null,null);
 		& > li{
