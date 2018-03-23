@@ -194,6 +194,13 @@
 
 /*  Class based animations
 --------------- */
+// @include animation('flipY 1.5s      .5s    1          ease-in          forwards');
+//                     name  duration  delay  iteration  timing function  stop keyframe hold
+// forwards keeps the styling of the last keyframe
+// backwards will apply the styling of the first keyframe when animation is done.
+// both will do both (if different styling is used in each)
+// can also set animation direction = reverse, alternate, alternate-reverse (default is normal). Alternate switches direction every iteration
+
 .slideInUp {
 	@include animation('slideInUp 1.5s 1 ease-out');
 }

@@ -5,12 +5,30 @@
 
 /* ADMIN CONTENT VIEW
 -------------------- */
-.view-content.view-display-id-page_1 .view-filters{
-	float: left;
+.view-content.view-display-id-page_1 .view-filters,.view-display-id-media_page_list .view-filters{
+  float: left;
 }
 
-.view-content.view-display-id-page_1 #edit-header.form-wrapper{
-	float: right;
+#views-form-content-page-1 #edit-header.form-wrapper,#views-form-media-media-page-list #edit-header.form-wrapper{
+  float: right;
+  border: 1px solid #ccc;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 20px;
+}
+
+.view-display-id-media_page_list .view-filters .form-item-field-media-categories-target-id{
+  max-width: 300px;
+  margin-right: 20px;
+}
+
+.view-content.view-display-id-page_1 .view-filters .form-actions,.view-display-id-media_page_list .view-filters .form-actions{
+  clear: none;
+  float: left;
+}
+
+.view-content.view-display-id-page_1 .view-filters .form-actions input,.view-display-id-media_page_list .view-filters .form-actions input{
+  margin-top: 16px;
 }
 
 
