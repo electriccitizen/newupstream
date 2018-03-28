@@ -17,6 +17,8 @@ services:
         volumes:
           - $LANDO_APP_ROOT_BIND/lando/sync.sh:/helpers/sync.sh
           - $LANDO_APP_ROOT_BIND/lando/deploy.sh:/helpers/deploy.sh
+          - $LANDO_APP_ROOT_BIND/lando/sync.sh:/helpers/sync.sh
+          - $LANDO_APP_ROOT_BIND/lando/deploy.sh:/helpers/deploy.sh
           - ~/.ssh/known_hosts:/etc/ssh/known_hosts
 tooling:
   sync:
