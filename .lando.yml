@@ -1,0 +1,88 @@
+name: newupstream
+recipe: pantheon
+config:
+  framework: drupal8
+  site: newupstream
+  id: 8be50dbc-4463-43b5-bd18-d83046623820
+  xdebug: false
+ # Make sure we are in the git root
+
+services:
+  appserver:
+    build:
+      - "mkdir -p ~/.drush/site-aliases"
+      - "ln -sf /app/drush/newupstream.aliases.drushrc.php ~/.drush/site-aliases/newupstream.aliases.drushrc.php"
+    overrides:
+      services:
+        volumes:
+          - $LANDO_APP_ROOT_BIND/lando/sync.sh:/helpers/sync.sh
+          - $LANDO_APP_ROOT_BIND/lando/deploy.sh:/helpers/deploy.sh
+          - ~/.ssh/known_hosts:/etc/ssh/known_hosts
+tooling:
+  sync:
+    service: appserver
+    cmd: /helpers/sync.sh
+    options:
+      db:
+        passthrough: true
+        alias:
+          - s
+        describe: Select which database to clone
+        interactive:
+          type: 'list'
+          message: 'Pull database from?'
+          choices:  ['dev','test','live','none']
+          default: 'dev'
+          weight: 1
+  deploy:
+    service: appserver
+    cmd: /helpers/deploy.sh
+    options:
+      db:
+        passthrough: true
+        alias:
+          - d
+        interactive:
+          type: 'input'
+          message: 'What did you change?'
+          default: 'My awesome Lando-based changes'
+          weight: 1
+
+
+# Add in some custom event scripting
+events:
+
+  # Run some commands after `lando db-import`
+  post-db-import:
+
+    # Run `drush version` on the appserver service
+    - appserver: drush version
+
+    # Run `drush version` on the appserver service
+    - exec('cd sites/default');
+    - appserver: drush dis simplesamlphp_auth -y
+
+    # Run `drush version` on the appserver service
+    - appserver: drush en stage_file_proxy -y
+
+  post-pull:
+    - appserver: cd $LANDO_MOUNT/sites/default && drush upwd admin --password=admin
+    - appserver: cd $LANDO_MOUNT/sites/default && drush pmu -y simplesamlphp_auth
+    - appserver: cd $LANDO_MOUNT/sites/default && drush pmu -y extlink
+    - appserver: cd $LANDO_MOUNT/sites/default && drush pmu -y extlink_extra
+    - appserver: cd $LANDO_MOUNT/sites/default && drush pmu -y search_api_solr
+    - appserver: cd $LANDO_MOUNT/sites/default && drush pmu -y pantheon_apachesolr
+    - appserver: cd $LANDO_MOUNT/sites/default && drush pmu -y cob_solr_indexes
+    - appserver: cd $LANDO_MOUNT/sites/default && drush pmu -y search_api
+    - appserver: cd $LANDO_MOUNT/sites/default && drush en stage_file_proxy -y
+    - appserver: cd $LANDO_MOUNT/sites/default && drush variable-set -y stage_file_proxy_origin "https://www.bloomingtonmn.gov"
+    - appserver: cd $LANDO_MOUNT/sites/default && drush en devel -y
+
+  # Run some commands after `lando pull`
+  post-push:
+    - appserver: cd $LANDO_MOUNT/sites/default && drush updb -y
+    - appserver: cd $LANDO_MOUNT/sites/default && drush cc all
+
+  # Run some commands after `lando start`
+  post-start:
+    - echo "App started!"

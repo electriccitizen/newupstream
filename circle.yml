@@ -4,7 +4,7 @@ machine:
     America/Chicago
   php:
     # https://circleci.com/docs/build-image-trusty/#php
-    version: 7.0.11
+    version: 7.1.9
   environment:
     # In addition to the environment variables defined in this file, also
     # add the following variables in the Circle CI UI.
@@ -49,6 +49,9 @@ dependencies:
     - mkdir -p ~/.terminus/plugins
     - composer create-project -n -d ~/.terminus/plugins pantheon-systems/terminus-build-tools-plugin:^1
     - composer create-project -n -d ~/.terminus/plugins pantheon-systems/terminus-secrets-plugin:^1
+    - wget -O drush.phar https://github.com/drush-ops/drush-launcher/releases/download/0.6.0/drush.phar
+    - chmod +x drush.phar
+    - sudo mv drush.phar /usr/local/bin/drush
   post:
     - terminus auth:login -n --machine-token="$TERMINUS_TOKEN"
     - terminus build:env:delete:ci -n "$TERMINUS_SITE" --keep=2 --yes

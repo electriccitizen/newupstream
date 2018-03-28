@@ -3,7 +3,7 @@
 /**
  * Load services definition file.
  */
-$settings['container_yamls'][] = __DIR__ . '/services.yml';
+//$settings['container_yamls'][] = __DIR__ . '/services.yml';
 
 /**
  * Include the Pantheon-specific settings file.
@@ -14,13 +14,13 @@ $settings['container_yamls'][] = __DIR__ . '/services.yml';
  *      a local development environment, to ensure that
  *      the site settings remain consistent.
  */
-include __DIR__ . "/settings.pantheon.php";
+//include __DIR__ . "/settings.pantheon.php";
 
 /**
  * Place the config directory outside of the Drupal root.
  */
 $config_directories = array(
-  CONFIG_SYNC_DIRECTORY => dirname(DRUPAL_ROOT) . '/config',
+  CONFIG_SYNC_DIRECTORY => dirname(DRUPAL_ROOT) . '/config/sync',
 );
 
 
@@ -31,14 +31,15 @@ $config_directories = array(
 if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
   switch($_ENV['PANTHEON_ENVIRONMENT']) {
     case 'live':
-      $config['config_split.config_split.live']['status'] = TRUE;
-      $config['config_split.config_split.excluded']['status'] = TRUE;
+      //$config['config_split.config_split.live']['status'] = TRUE;
+      //$config['config_split.config_split.excluded']['status'] = TRUE;
       $config['environment_indicator.indicator']['bg_color'] = '#990000';
       $config['environment_indicator.indicator']['fg_color'] = '#fff';
       $config['environment_indicator.indicator']['name'] = 'Live';
+      break;
     case 'test':
-      $config['config_split.config_split.test']['status'] = TRUE;
-      $config['config_split.config_split.excluded']['status'] = TRUE;
+      //$config['config_split.config_split.test']['status'] = TRUE;
+      //$config['config_split.config_split.excluded']['status'] = TRUE;
       $config['environment_indicator.indicator']['bg_color'] = '#ff9900';
       $config['environment_indicator.indicator']['fg_color'] = '#fff';
       $config['environment_indicator.indicator']['name'] = 'Test';
@@ -49,8 +50,8 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
       $config['environment_indicator.indicator']['fg_color'] = '#fff';
       $config['environment_indicator.indicator']['name'] = 'Dev';
       break;
-    default :
-      $config['config_split.config_split.live']['status'] = TRUE;
+    default:
+      $config['config_split.config_split.local']['status'] = TRUE;
       break;
   }
 } else { // LOCAL
@@ -61,7 +62,7 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
    */
   $local_settings = __DIR__ . "/settings.local.php";
   if (file_exists($local_settings)) {
-    include $local_settings;
+    //include $local_settings;
   }
 
   /**
@@ -69,11 +70,15 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
    */
   $vm_settings = __DIR__ . "/settings.drupalvm.php";
   if (file_exists($vm_settings)) {
-    include $vm_settings;
+    //include $vm_settings;
   }
-
-
 }
+
+$lando_settings = __DIR__ . "/settings.lando.php";
+if (file_exists($lando_settings)) {
+  include $lando_settings;
+}
+
 
 /**
  * Always install the 'standard' profile to stop the installer from
