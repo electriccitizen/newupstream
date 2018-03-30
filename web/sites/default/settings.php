@@ -72,12 +72,14 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
   if (file_exists($vm_settings)) {
     //include $vm_settings;
   }
+
+  $lando_settings = __DIR__ . "/settings.lando.php";
+  if (file_exists($lando_settings)) {
+    include $lando_settings;
+  }
+
 }
 
-$lando_settings = __DIR__ . "/settings.lando.php";
-if (file_exists($lando_settings)) {
-  include $lando_settings;
-}
 
 
 /**
