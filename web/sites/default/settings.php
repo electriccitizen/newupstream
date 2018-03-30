@@ -14,7 +14,7 @@
  *      a local development environment, to ensure that
  *      the site settings remain consistent.
  */
-//include __DIR__ . "/settings.pantheon.php";
+include __DIR__ . "/settings.pantheon.php";
 
 /**
  * Place the config directory outside of the Drupal root.
