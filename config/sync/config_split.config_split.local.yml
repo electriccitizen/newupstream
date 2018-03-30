@@ -6,7 +6,6 @@ id: local
 label: Local
 folder: ../config/local
 module:
-  config_devel: 0
   devel: 0
   devel_generate: 0
   kint: 0
