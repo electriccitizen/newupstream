@@ -30,50 +30,18 @@ Newupstream is a Composer-based Drupal 8 application hosted on [Pantheon](http:/
 
 ## Getting Started
 
-
-
-
-
 [Back to top](#newupstream)
 
 ## Requirements
 
-Make sure you have the basic skills necessary to effectively use this platform. You should have a solid understanding of the command line, configuration management for teams, git branching, pull requests, Composer/dependency management, and a CI-based deployment process. You will also need to have relatively up-to-date versions of the following components running on your local machine:
+* Install Lando (see https://docs.devwithlando.io/installation/installing.html)
+* Install Terminus (see https://pantheon.io/docs/terminus/install/ )
+* Pantheon account with SSH key
+* Github account with SSH key
 
-* [Git](https://git-scm.com/downloads) ```git version```
-* [Composer](https://getcomposer.org/doc/00-intro.md) ```composer self-update```
-* PHP 5.6+ ```php --version```
-* [Drush 8.1.1+](http://docs.drush.org/en/master/install/) ```drush version```
-* [VirtualBox 5.1.x+](https://www.virtualbox.org/wiki/Downloads) ```vboxmanage --version```
-* [Vagrant 1.8.6+](https://www.vagrantup.com/docs/installation/) ```vagrant --version```
-* [Ansible 2.2+](http://docs.ansible.com/ansible/latest/intro_installation.html) ```ansible --version```
-
-**Vagrant plugins**
-
-Install following Vagrant plugins on your local machine:
-
-```
-vagrant plugin install vagrant-hostsupdater
-
-vagrant plugin install vagrant-vbguest
-```
-
-See the Drupal VM [Quickstart Guide](https://github.com/geerlingguy/drupal-vm#quick-start-guide) for detailed instructions on installing any of the Drupal VM related requirements noted above. This build has been tested on Mac OS but others have reported success running Drupal VM on [Linux/Windows](#linux-and-windows) although you may need to do some additional steps to meet the requirements.
-
-**Pantheon and Github accounts**
-
-> You will need a Pantheon account and a Github account. Make sure both accounts have been added to the respective teams and that your public SSH key has been added to your profiles.
-
-> * [Adding public key to Pantheon](https://pantheon.io/docs/ssh-keys/)
-> * [Adding pubic key to Github](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
-
-> If you already have Pantheon and Github accounts with public keys in place (and they have been added to the appropriate teams for this project) you can skip this step.
-
-[Back to top](#newupstream)
+Mac users with Homebrew can easily install Lando by running brew cask install lando
 
 ## Onboarding
-
-Make sure your user account has been added to both the Github team and to the Pantheon team (with the proper roles/permissions) and that you have uploaded your public SSH key to your profile on both sites prior to beginning.
 
 **Refresh your Pantheon alias file**
 
