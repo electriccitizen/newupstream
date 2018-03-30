@@ -4,7 +4,7 @@
 [![Dashboard wilder](https://img.shields.io/badge/dashboard-newupstream-yellow.svg)](https://dashboard.pantheon.io/sites/cbc91b53-e053-4c27-8ad4-7502151a02ed#dev/code)
 [![Dev Site wilder](https://img.shields.io/badge/site-newupstream-blue.svg)](http://dev-wilder.pantheonsite.io/)
 
-Newupstream is a Composer-based Drupal 8 application hosted on [Pantheon](http://dashboard.getpantheon.com). The application integrates with [Circle CI](https://circleci.com/dashboard) for continuous integration testing. All development and theming is done on a local virtual machine running [Drupal VM](http://drupalvm.com). Please review this README and be sure to understand the core concepts and workflow described below prior to beginning.
+Newupstream is a Composer-based Drupal 8 application hosted on [Pantheon](http://dashboard.getpantheon.com). This repository contains the project build files (composer.json, exported config, etc.), a custom theme, and any custom modules that have been added to the project. It does not contain Drupal core, vendor files, or contributed modules. This repository and its build files are used as the starting point for each build and deployment. The application integrates with [Circle CI](https://circleci.com/dashboard) for continuous integration testing. All development and theming is done on a local virtual machine running [LANDO](https://docs.devwithlando.io/). Please review this README and understand the core concepts and workflow described below prior to beginning.
 
 #### Onboarding and development
 
@@ -30,15 +30,9 @@ Newupstream is a Composer-based Drupal 8 application hosted on [Pantheon](http:/
 
 ## Getting Started
 
-This repository contains the project build files (composer.json, exported config, etc.), a custom theme, and any custom modules that have been added to the project. It does not contain Drupal core, vendor files, or contributed modules. This repository and its build files are used as the starting point for each build and deployment.
 
-See the small icon links at the top of this README for direct links to:
 
-* [Circle CI tests](https://circleci.com/gh/electriccitizen/newupstream)
-* [Pantheon Dashboard](https://dashboard.pantheon.io/sites/7fe220c1-e8a5-4215-94a1-93535ca39080#dev/code)
-* [Pantheon Development site](http://dev-newupstream.pantheonsite.io/)
 
-During development see the [Drupal VM Dashboard](http://dashboard.newupstream.local) for error logs, MySQL/Adminer, and Mailhog.
 
 [Back to top](#newupstream)
 
