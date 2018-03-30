@@ -80,7 +80,7 @@
     "drupal/views_infinite_scroll": "^1.5",
     "drupal/webform": "~5",
     "drupal/xmlsitemap": "^1.0@alpha",
-    "drush/drush": "8.1.15",
+    "drush/drush": "~9",
     "geerlingguy/drupal-vm": "^4.7",
     "rvtraveller/qs-composer-installer": "^1.1",
     "webflo/drupal-core-strict": "^8",
