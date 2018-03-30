@@ -80,6 +80,8 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 
 }
 
+$settings['hash_salt'] = 'randomstuff';
+
 
 
 /**
