@@ -65,7 +65,7 @@ while true; do
     read -p $'\033[0;32mProceed with deploy [y/n]?\033[0;0m ' yn
     #read -p "$(echo -e $GREEN"Proceed with the deploy [y/n]? "$DEFAULT)" yn
     case $yn in
-        [Yy]* ) git commit -am "$MSG"; git push origin $BRANCH_NAME; break;;
+        [Yy]* ) git commit -am "$MSG"; git push origin $FEATURE_BRANCH; break;;
         [Nn]* ) exit;;
         * ) echo "Please answer yes or no.";;
     esac
