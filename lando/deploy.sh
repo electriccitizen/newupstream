@@ -43,7 +43,7 @@ echo "Checking out $MASTER_BRANCH..."
 git checkout master
 git pull origin master
 
-echo "Merging into $FEATURE_BRANCH..."
+echo "Merging $MASTER_BRANCH into $FEATURE_BRANCH..."
 git checkout ${FEATURE_BRANCH##refs/heads/}
 git merge master
 
