@@ -1,61 +1,88 @@
-# Newupstream [needs update]
+# Newupstream
 
-[![CircleCI](https://circleci.com/gh/electriccitizen/newupstream.svg?style=shield)](https://circleci.com/gh/electriccitizen/wilder)
-[![Dashboard wilder](https://img.shields.io/badge/dashboard-newupstream-yellow.svg)](https://dashboard.pantheon.io/sites/cbc91b53-e053-4c27-8ad4-7502151a02ed#dev/code)
-[![Dev Site wilder](https://img.shields.io/badge/site-newupstream-blue.svg)](http://dev-wilder.pantheonsite.io/)
+[![CircleCI](https://circleci.com/gh/electriccitizen/newupstream.svg?style=shield)](https://circleci.com/gh/electriccitizen/newupstream)
+[![Dashboard](https://img.shields.io/badge/dashboard-newupstream-yellow.svg)](https://dashboard.pantheon.io/sites/cbc91b53-e053-4c27-8ad4-7502151a02ed#dev/code)
+[![Dev Site](https://img.shields.io/badge/site-newupstream-blue.svg)](http://dev-newupstream.pantheonsite.io/)
 
-Newupstream is a Composer-based Drupal 8 application hosted on [Pantheon](http://dashboard.getpantheon.com). This repository contains the project build files (composer.json, exported config, etc.), a custom theme, and any custom modules that have been added to the project. It does not contain Drupal core, vendor files, or contributed modules. This repository and its build files are used as the starting point for each build and deployment. The application integrates with [Circle CI](https://circleci.com/dashboard) for continuous integration testing. All development and theming is done on a local virtual machine running [LANDO](https://docs.devwithlando.io/). Please review this README and understand the core concepts and workflow described below prior to beginning.
-
-#### Onboarding and development
-
-* [Getting started](#getting-started)
-* [Requirements](#requirements)
-* [Onboarding](#onboarding)
-* [Workflow basics](#workflow-basics)
-* [**Local development and common tasks**](#local-development-and-common-tasks)
-  * [Making a simple change](#making-a-simple-change)
-  * [Adding a new module](#adding-a-new-module)
-  * [Theming basics](#theming-basics)
-  * [Advanced theming](THEMING.md)
-
-#### More information
-
-* [**Cheatsheet**](#cheatsheet)
-* [Available commands](#available-commands)
-* [Suggested additions](#suggested-additions) (Performance, theming, Behat)
-* [General tips](#general-tips)
-* [Troubleshooting](#troubleshooting)
-* [Linux/Windows](#linux-and-windows)
-* [Support/Feedback](#support-and-feedback)
-
-## Getting Started
-
-[Back to top](#newupstream)
-
-## Requirements
-
-* Install Lando (see https://docs.devwithlando.io/installation/installing.html)
-* Install Terminus (see https://pantheon.io/docs/terminus/install/ )
-* Pantheon account with SSH key
-* Github account with SSH key
-
-Mac users with Homebrew can easily install Lando by running brew cask install lando
+Wilder Foundation is a Composer-based Drupal 8 application hosted on [Pantheon](http://dashboard.getpantheon.com). The application integrates with [Circle CI](https://circleci.com/dashboard) for continuous integration testing. All development and theming is done on a local virtual machine running [Lando](https://docs.devwithlando.io/).
 
 ## Onboarding
 
+See the [onboarding instructions](#onboarding-instructions) below for cloning the repository, installing Lando, and getting your local development environment set up for the first time.
+
+## Basic Workflow
+
+```terminus auth:login``` Make sure you are logged into Terminus via machine token
+
+```lando start``` Make sure Lando is running
+
+```lando sync``` Pull down a new copy of the code and database
+
+```git checkout -b <my-feature-branch>``` Checkout a new branch and do your thing
+
+```lando drush cex``` Export your changes to code
+
+```git add .``` Add any new config, theme, or modules to github
+
+```git commit -am "Commit message"``` commit your changes to Github
+
+```git push origin <my-feature-branch>```
+
+When you push changes to your working branch it will trigger a Circle CI build that attempts to merge and import your changes against the latest production database.
+
+You can monitor the status of your builds here [![CircleCI](https://circleci.com/gh/electriccitizen/newupstream.svg?style=shield)](https://circleci.com/gh/electriccitizen/newupstream) and they are also posted to the #Chompbots channel in Slack. A [Pantheon multidev site](https://dashboard.pantheon.io/sites/cbc91b53-e053-4c27-8ad4-7502151a02ed#dev/code) is also created during the CI build that can be used to check your work or troubleshoot.
+
+## Deploying
+
+Once your tests are passing, create a new Github Pull Request against your branch so that it can be reviewed and merged into master.
+
+## Best practices
+
+1. Always start each new task with a fresh ```lando sync``` to make sure you have all of the latest changes
+
+2. Always create a new ```feature branch``` for your task (do not work directly on ```master```)
+
+3. Do your best to get your work merged into the ```master``` branch at the end of each day
+
+4. If your ```feature branch``` is open for a long time, it is your responsibility to make sure it will still work against ```master```
+
+Note: If you want to merge and test changes from ```master``` into your open feature branch, you will want to checkout and pull ```master``` branch. Then checkout your ```feature branch``` again and merge in the ```master``` branch.  If you are able to merge with no conflicts, then attempt a ```lando drush cim``` to ensure that the new configuration will import with no errors.   
+
+## Helpful info
+
+* Primary development branch: ```master``` (Github)
+* Local drush alias: ```@newupstream.local```
+* Remote drush alias: ```@newupstream.dev```
+* Local URL: https://newupstream.lndo.site (Lando provides multiple URLs)
+* Local login: admin/admin
+* Remote feature branch: ```<your-feature-branch>``` (Pantheon multidev)
+* Remote URL: http://dev-newupstream.pantheonsite.io
+
+## Additional resources
+* [Onboarding](#onboarding-instructions)
+* [Theming basics](#theming-basics)
+* [Learn Lando](#learn-lando)
+* [Suggested additions](#suggested-additions) (Performance, theming, Behat)
+* [Troubleshooting](#troubleshooting)
+* [Support/Feedback](#support-and-feedback)
+
+## Onboarding instructions
+
+**Requirements**
+
+* Install Lando (see https://docs.devwithlando.io/installation/installing.html)
+* Install Terminus (see https://pantheon.io/docs/terminus/install/ )
+* Add public key to Pantheon account and to team
+* Add public key to Github account and add to team
+
+Make sure your user account has been added to both the Github team and to the Pantheon team (with the proper roles/permissions) and that you have uploaded your public SSH key to your profile on both sites prior to beginning.
+
 **Refresh your Pantheon alias file**
 
-You can download and install the Pantheon alias files by clicking the ```Drush aliases``` link at the top of your Pantheon dashboard. Download the ```pantheon.aliases.drushrc.php``` file and place it your ```~/.drush``` folder.
-
-If you use Terminus you can do this automatically:
-
 ```
-terminus auth
+terminus auth:login
 terminus aliases
 ```
-
-You can run ```drush @newupstream.dev status``` to verify you have the correct alias.
-
 
 **On your local machine, clone the working repository:**
 
@@ -71,183 +98,26 @@ cd newupstream
 composer install
 ```
 
-**Build and start the virtual machine:**
+**Start Lando:**
 
 ```
-vagrant up
+lando start
 ```
-
-This takes about 10-15 minutes but you only need to do it once. Sometimes the build will fail due to network errors or downtime at one of the external repositories (this seems to be especially common when building the ```mailhog``` app). If your build fails, you can try running: ```vagrant provision``` and it may fix the build. If not, you may need to run ```vagrant destroy``` and attempt again.
 
 **Install the Drupal site:**
 
 ```
-drush @newupstream.local site:refresh
+lando sync
 ```
 
-The ```site:refresh``` is a wrapper that runs the following commands in order quickly get your local site into a 1:1 state with the ```target site```. You will run this command to install the site and to refresh the site from the primary development environment each time you begin a new task.
+NOTE: Sometimes Lando has issues with Terminus authentication. It may tell you that it cannot authenticate, in which case you will need to run this command:
 
-See the list of [available commands](#available-commands) below for a full explanation of what commands are issued when you run a ```site:refresh``` command.
+```lando terminus auth:login --machine-token=<YOUR-TOKEN>```
+
+If you do not already have a saved machine token to use, you will need to [generate a new Terminus token](https://dashboard.pantheon.io/login?destination=%2Fuser#account/tokens/create/terminus/) to use (save this token for later use on future Lando build.)
 
 [Back to top](#newupstream)
 
-## Workflow basics
-
-* Primary development branch: ```master``` (Github)
-* Local drush alias: ```@newupstream.local```
-* Local environment: DrupalVM
-* Local URL: http://newupstream.local
-* Local login: admin/admin
-* Remote deploy branch: ```multidev``` (Pantheon)
-* Remote drush alias: ```@newupstream.dev```
-* Remote URL: http://dev-newupstream.pantheonsite.io
-
-Create a new ```working branch``` from ```master``` for each new task or issue. When you push your ```working branch``` to Github, the application builds itself on Circle CI and is automatically deployed to a Pantheon ```multidev``` environment. You will continue pushing to your ```working branch``` for additional QA, adjustments and fixes, or to diagnose any failing Circle CI tests.
-
-Once you have run a ```site:export``` command (see below) and everything is ready to deploy, submit a pull request on Github to merge your ```working branch``` into the ```master``` branch. A project maintainer will review your pull request and merge your changes into the upstream.
-
-This triggers another build and the application is automatically deployed to the Pantheon development server if it passes all of the defined tests on Circle CI.
-
-[Back to top](#newupstream)
-
-## Local development and common tasks
-
-Before beginning a new task, always make sure you are starting from a 1:1 state with the development server:
-
-```
-drush @newupstream.local site:refresh
-```
-
-You run the ```site:refresh``` command at any time to reset your local environment. This command will automatically checkout the ```master``` branch but will not delete or alter any ```working branch``` you may have in place. By default, ```site:refresh``` will sync both the database and files from ```development``` server. If you want to skip the database or file sync, you can pass arguments to ```site:refresh``` like so:
-
-```
-drush @newupstream.local site:refresh --nodb=1 --nofiles=1
-```
-
-See the list of [available commands](#available-commands) below for a full explanation of what commands are issued when you run a ```site:refresh``` command.
-
-[Back to top](#newupstream)
-
-### Making a simple change
-
-Always create and checkout a new ```working branch``` for your task on your local environment:
-
-```
-git branch <my_issue_or_fix>
-
-git checkout <my_issue_or_fix>
-```
-
-Create a new ```working branch``` for each specific task or issue.  
-
-**Make your changes in Drupal**
-
-Change the site name, change the limit on a view, alter or create a content type, add a taxonomy, or make any other configuration change. If you are only changing theme files or custom modules files (and not altering any Drupal configuration), you should still use the deploy process outlined below.
-
-**Export to your working branch**
-
-When you are ready to push up your work for further QA or review, export the active configuration from your ```working branch``` and run a series of sanity checks to make sure your changes will still work against ```master```. You should be in your ```working branch``` when running this command:
-
-```
-drush @newupstream.local site:export
-```
-> The ```site:export``` command is designed to run to completion, but to report errors if there are problems. If you see any ```[error]``` or ```[warning]``` output during the export, or your if you fail to merge ```master``` into your ```working branch```, you will need to manually fix merge conflicts or other errors prior to pushing them back to ```master```.
-
-If you are working on a big task (or a branch that won’t be merged into ```master``` for a significant amount of time) you should run ```site:export``` often to ensure your ```working branch``` continues to work against ```master```.
-
-See the list of [available commands](#available-commands) below for a full explanation of what commands are issued when you run a ```site:export``` command.
-
-**Commit and push your working branching**
-
-If your ```site:export``` was successful with no errors, commit and and push your ```working branch``` to Github:
-
-```
-git add .
-
-git commit -am "GW000: a descriptive message about your commit"
-
-git push origin <your_working_branch>
-```
-
-Each time you push a new ```working branch```, it will automatically deploy a Pantheon ```multidev``` site for QA or further testing and review.
-
-You can continue pushing changes to your ```working branch``` for as long as you need, and they will be deployed to your ```multidev``` site after each push to Github.
-
-**Submit a Pull Request**
-
-When your changes have been reviewed and have passed any additional QA steps, submit a new Github pull request to merge your ```working branch``` into the ```master``` branch.
-
-A project maintainer will review your request and merge to trigger another Circle CI build; if the application continues to pass any defined tests it will deploy automatically to the Pantheon ```dev``` server.
-
-**Start over and begin a new working branch**
-
-Each time your work is successfully merged into ```master``` you should delete your local ```working branch``` and start fresh to get your local environment back into a 1:1 state with develop.
-
-```
-drush @newupstream.local site:refresh
-```
-[Back to top](#newupstream)
-
-### Adding a new module
-
-Remember to create and checkout a new working branch on your local environment:
-
-```
-git branch <add_contrib_module>
-
-git checkout <add_contrib_module>
-```
-
-You create a new ```working branch``` for each specific task or issue and it will be merged into ```master``` via Github pull request when it is ready for deployment.
-
-**Install your new module**
-
-```
-composer require drupal/<contrib_module>
-```
-
-**Enable and configure your module**
-
-```
-drush @newupstream.local en <contrib_module>
-```
-Configure your new module as needed via the Drupal UI.
-
-**Export to your working branch**
-
-When you are ready to push up your work for further QA or review, export your active config:
-
-```
-drush @newupstream.local site:export
-```
-
-See the list of [available commands](#available-commands) below for a full explanation of what commands are issued when you run a ```site:export``` command.
-
-**Commit and push your working branch**
-
-If your ```site:export``` was successful with no errors, commit and push your ```working branch``` to Github:
-
-```
-git add .
-
-git commit -am "GW000: a descriptive message about your commit"
-
-git push origin <your_working_branch>
-```
-You can continue pushing changes to your ```working branch``` for as long as you need and they will be deployed to your ```multidev``` site after each push to Github.
-
-**Submit a Pull Request**
-
-When your changes have been reviewed and have passed any additional QA steps, submit a new Github pull request to merge your ```working branch``` into the ```master``` branch.
-
-**Start over and begin a new working branch**
-
-Each time your work is successfully merged into ```master``` you should delete your local ```working branch``` and start fresh to get your local environment back into a 1:1 state with develop.
-
-```
-drush @newupstream.local site:refresh
-```
-[Back to top](#newupstream)
 
 ## Theming basics
 
@@ -311,107 +181,42 @@ By default, any file in components/\_patterns is going to be shown in Pattern La
 
 [Back to top](#newupstream)
 
-## Cheatsheet
+## Learn Lando
 
-Here are the basic commands to start and finish a new task:
+**Lando commands**
 
-```
-drush @newupstream.local site:refresh
+You can list all of your installed sites:
 
-git branch <your_working_branch>
+```lando list```
 
-git checkout <your_working_branch>
+You may need to restart your app if it is causing you trouble:
 
-[make some changes]
+```lando restart```
 
-drush @newupstream.local site:export
+You may need to rebuild your app if it has changed:
 
-git commit -am "description of your commit"
+```lando rebuild```
 
-git push origin <your_working_branch>
-```
-As outlined above you can submit a pull request into ```master``` once your changes are approved and ready.
+You may need config details about your app such as your available URLs:
 
-[Back to top](#newupstream)
+```lando info```
 
-## Available commands
+You may want to destroy your app completely:
 
-The various build commands available for the project are simple wrappers that automatically issue a series of commands on the virtual machine and perform a series of sanity checks. For debugging or troubleshooting, you may need to run standard commands individually against the vm instead of relying on the wrappers.
+```lando destroy```
 
-**site:refresh**
+You may have to fix a random or persistent Docker error. From the Docker icon (a little whale) in your top Menu Bar:
 
-```
-drush site:refresh
-```
-
-The ```site:refresh``` command is used whenever you want to start a new ```working branch``` based on the current development server. It makes sure you are on the current ```master branch```, runs ```composer install```, and syncs your database and files from ```newupstream.dev``` to ```newupstream.local```. You can optionally choose to skip the file or database sync with ```--nofiles=1``` and ```--nodb=1```
-
-```
-chdir('/var/www/drupalvm'); // move to project root
-
-exec('git checkout '.$site['branch']); // check out the primary development branch
-
-exec('git pull origin '.$site['branch']); // git pull on primary development branch
-
-exec('composer install'); // run composer install for any new modules/updates
-
-chdir('/var/www/drupalvm/web'); // change to web root
-
-drush sql-sync @alias.dev @alias.local -y  // sync the development database
-
-drush @alias.local updb -y // check for any missing database updates
-
-exec('rsync @alias.dev @alias.local') // sync file from the development server
-
-drush cex sync -y // test a config export
-
-cim sync // test a config import
-
-drush upwd admin --password="admin" //update admin pwd
-
-drush cr all // clear cache
-
-```
-**site:export**
-
-```
-drush site:export
-```
-
-The ```site:export``` command is a fairly complex command used to export your active configuration to code and to perform a series of sanity checks against the ```master``` branch. It runs a ```drush cex sync``` to export your code, checks out and pulls the ```master``` branch, completes a merge of ```master``` back into your ```working branch```, runs a ```composer install``` to account for any new modules, and finally runs a ```drush cim sync``` as a final test. This command will generate errors (by design) when anything is amiss to prevent you from pushing bad changes to ```master```. Any errors or merge conflicts will need to be resolved prior to merging.
-
-```
-drush @alias.local cex sync -y // export your active config
-
-git add config/* // proactively add any new files to github
-
-git checkout master // checkout the primary development branching
-
-git pull origin master // pull down the latest config
-
-git checkout <working branch> // checkout the working branch
-
-git merge master // merge primary development branch into your working branch -- you may see merge conflicts at this stage that will need to manually resolved
-
-drush cim sync -y // test a config import
-
-drush cr all // to be safe
-```
-
-**Standard commands**
+```Preferences > Reset```
 
 Note that you can run any standard drush command against your local environment for debugging and troubleshooting:
 
 ```
-drush @newupstream.local cr all
+lando drush cr all
 
-drush sql-sync @newupstream.dev @newupstream.local
+lando drush cex
 
-drush @newupstream.local cex sync
-
-drush @newupstream.local cim sync
-
-composer install
+lando drush cim
 
 etc.
 ```
@@ -448,12 +253,6 @@ brew install npm nvm
 
 ## General tips
 
-* If you run multiple virtual machines for different projects you may run into system-wide memory problems. Keep your vms in a shutdown state unless you are actively working by running ```vagrant halt``` and then another ```vagrant up``` when you need to use the vm again.
-
-* You can run individual drush commands at any time instead of using the ```site:[command]``` wrappers. This is often necessary for troubleshooting.
-
-* If you are running into random issues, make sure to update to the latest versions of the requirements listed above unless otherwise noted in an issue queue.
-
 * Keep your composer version up to date by running:
 
 ```
@@ -468,90 +267,14 @@ composer clear-cache
 
 ## Troubleshooting
 
-**Drush alias problems**
+**Pantheon and Github accounts**
 
-You should have a ```@newupstream.local``` and a ```@newupstream.dev``` alias available immediately after running ```vagrant up```. If your aliases are not working, first:
+> You will need a Pantheon account and a Github account. Make sure both accounts have been added to the respective teams and that your public SSH key has been added to your profiles.
 
-* Make sure you are in the ```web``` folder of your project root
+> * [Adding public key to Pantheon](https://pantheon.io/docs/ssh-keys/)
+> * [Adding pubic key to Github](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
 
-* If still not working try again to download and install a new alias file from your Pantheon dashboard into your ```~/.drush``` folder
-
-* See the onboarding notes above for the most effective alias setup.
-
-**PHP Memory Limit**
-
-If you run into PHP memory errors during any of the build or deployment steps make sure your command line (CLI) version of PHP has sufficient memory. You can use the following command to up your memory limit:
-
-```
-open -a TextEdit $(php -i | grep "Loaded Configuration File" | cut -d" " -f 5)
-```
-
-And in your php.ini file change or set your memory limit to:
-
-```
-memory_limit = 2G
-
-or
-
-memory_limit = -1 (for unlimited memory)
-```
-
-**Could not find the alias**
-
-If your ~/.drush aliases are not setup correctly, try running your commands directly in the web folder:
-
-```
-cd your_project_root/web
-
-drush @newupstream.local <your-command>
-```
-
-**Can’t connect to newupstream.local:**
-
-Sometimes your ```/etc/hosts``` file can become badly formatted, especially if you have attempted multiple attempts on your VM build. Examine and fix your ```/etc/hosts``` file with any badly formed or extraneous entries.
-
-This is often due to a missing ```vagrant-hostupdater``` plugin (see above for install) or a problem with your generated ```/etc/hosts``` file. Sometimes Drupal VM does not insert a proper line break between host entries, so you may see something similar to this in your system's /etc/hosts file:
-
-```
-127.0.0.1       anothersite.dd192.168.189.178newupstream.local # VAGRANT: 461be619b044d8d6d99ca1ea37fc68be
-```
-
-To fix this problem manually edit your system's /etc/hosts file and add a line break where your Drupal VM entries begin:
-
-```
-sudo nano /etc/hosts
-
-127.0.0.1       anothersite.dd //fix the linebreak here!
-
-192.168.189.178  newupstream.local  # VAGRANT: 461be619b044d8d6d99ca1ea37fc68be...
-
-etc.
-```
-
-Examine your ```/etc/hosts``` file to make sure it looks sane and that there are not competing entries for your Drupal VM IP address or other obvious problems.
-
-If you continue to have issues you can also destroy and rebuild the virtual machine in order to start fresh.
-
-```
-vagrant destroy
-```
-
-After running this command, also verify that any related ```/etc/hosts``` entries were deleted during the destroy process. Manually remove any newupstream.local entries that might remain. You can now run:
-
-```
-vagrant up
-```
-
-Watch the build process closely for any errors (especially related to host entries.) If all goes good, the process should complete and you should be able to run ```drush @newupstream.local status``` and return a successful Drupal bootstrap.
-
-## Linux and Windows
-
-These instructions were tested and derived on Mac OS but others have had success running Drupal VM on Linux or Windows. More specific instructions are available below.
-
-* Linux: http://docs.drupalvm.com/en/latest/getting-started/installation-linux/
-* Windows: http://docs.drupalvm.com/en/latest/getting-started/installation-windows/
-
-[Back to top](#newupstream)
+> If you already have Pantheon and Github accounts with public keys in place (and they have been added to the appropriate teams for this project) you can skip this step.
 
 ## Support and feedback
 
