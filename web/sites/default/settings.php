@@ -78,6 +78,11 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
     include $lando_settings;
   }
 
+  $docksal_settings = __DIR__ . "/settings.docksal.php";
+  if (file_exists($docksal_settings)) {
+    include $docksal_settings;
+  }
+
 }
 
 $settings['hash_salt'] = 'randomstuff';
