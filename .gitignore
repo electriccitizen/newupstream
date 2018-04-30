@@ -11,6 +11,9 @@
 /web/profiles/contrib/
 /web/private/scripts/quicksilver
 
+# ignore lando
+.ht.router.php 
+
 # Ignore scaffold files
 web/.csslintrc
 web/.editorconfig
