@@ -57,20 +57,13 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 } else { // LOCAL
   $config['config_split.config_split.local']['status'] = TRUE;
 
-  /**
-   * If there is a local settings file, then include it
-   */
-  $local_settings = __DIR__ . "/settings.local.php";
-  if (file_exists($local_settings)) {
-    //include $local_settings;
-  }
 
   /**
-   * If there is a drupalvm settings file, then include it
+   * If there is a docksal, lando or drupalvm settings file, then include it
    */
   $vm_settings = __DIR__ . "/settings.drupalvm.php";
   if (file_exists($vm_settings)) {
-    //include $vm_settings;
+    include $vm_settings;
   }
 
   $lando_settings = __DIR__ . "/settings.lando.php";
@@ -81,6 +74,14 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
   $docksal_settings = __DIR__ . "/settings.docksal.php";
   if (file_exists($docksal_settings)) {
     include $docksal_settings;
+  }
+
+  /**
+   * If there is a local settings file, then include it
+   */
+  $local_settings = __DIR__ . "/settings.local.php";
+  if (file_exists($local_settings)) {
+    //include $local_settings;
   }
 
 }
