@@ -66,7 +66,7 @@ Instructions for frontend theming and other topics related to Docksal and site b
 
 * [Onboarding](docs/ONBOARD.md)
 * [Frontend/theming](docs/THEME.md)
-* [Working with Docksal](docs/DOCKSAL.md) (coming soon)
+* [Fin commands](https://docs.docksal.io/en/develop/fin/fin/)
 * [Docksal troubleshooting](https://docs.docksal.io/en/develop/troubleshooting/)
 
 ## Old local environments
