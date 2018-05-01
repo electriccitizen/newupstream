@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
 
-## Initialize a Docksal powered local Pantheon site.
+## Validate a Docksal powered local against Pantheon master.
 ##
-## Usage: fin init
-## This file created by copying/editing https://github.com/docksal/drupal7/blob/master/.docksal/commands/init
+## Usage: fin sync
 
 # Abort if anything fails
 set -e
@@ -59,45 +58,38 @@ if [[ "$PROJECT_ROOT" == "" ]]; then
 	exit 1
 fi
 
-if [[ $DOCKER_RUNNING == "true" ]]; then
-	echo -e "${green_bg} Step 1 ${NC}${green} Recreating services...${NC}"
-	fin reset -f
-else
-	echo -e "${green_bg} Step 1 ${NC}${green} Creating services...${NC}"
-	fin up
-fi
+#if [[ $DOCKER_RUNNING == "true" ]]; then
+#	echo -e "${green_bg} Step 1 ${NC}${green} Recreating services...${NC}"
+#	fin reset -f
+#else
+#	echo -e "${green_bg} Step 1 ${NC}${green} Creating services...${NC}"
+#	fin up
+#fi
 
-echo "Waiting 10s for MySQL to initialize...";
-sleep 10
+# Pull from master
+echo -e "${green_bg} Step 1 ${NC}${green} Running git pull from master${NC}"
+cd $PROJECT_ROOT
+git pull origin $GIT_BRANCH
 
 # Run composer install
 echo -e "${green_bg} Step 2 ${NC}${green} Running composer install...${NC}"
 composer install
 
+# Run db updates
+echo -e "${green_bg} Step 3 ${NC}${green} Running database updates...${NC}"
+fin drush updb -y
 
-# Import database.
-echo -e "${green_bg} Step 2 ${NC}${green} Importing database...${NC}"
-time import_database
-
-# Configure things for local development environment.
-echo -e "${green_bg} Step 3 ${NC}${green} Enabling local development-related modules...${NC}"
-time enable_modules
-
-# Configure things for local development environment.
-echo -e "${green_bg} Step 4 ${NC}${green} changing user 1 pwd to admin...${NC}"
-    fin drush upwd admin --password=admin
+# Run entity updates
+echo -e "${green_bg} Step 4 ${NC}${green} Running entity updates...${NC}"
+fin drush entup -y
 
 # Configure things for local development environment.
-echo -e "${green_bg} Step 5 ${NC}${green} clearing cache...${NC}"
-    fin drush cr
+echo -e "${green_bg} Step 5 ${NC}${green} Importing config...${NC}"
+fin drush cim -y
 
-
-if is_windows; then
-	echo-green "Add ${VIRTUAL_HOST} to your hosts file (/etc/hosts), e.g.:"
-	echo-green "192.168.64.100 ${VIRTUAL_HOST}"
-	echo
-fi
-
+# Clear cache
+echo -e "${green_bg} Step 6 ${NC}${green} Clearing caches...${NC}"
+fin drush cr all
 
 
 echo -en "${green_bg} DONE! ${NC} "

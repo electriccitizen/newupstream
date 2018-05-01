@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
 
-## Initialize a Docksal powered local Pantheon site.
+## Sync a Docksal powered local Pantheon site.
 ##
-## Usage: fin init
-## This file created by copying/editing https://github.com/docksal/drupal7/blob/master/.docksal/commands/init
+## Usage: fin sync
 
 # Abort if anything fails
 set -e
@@ -67,28 +66,34 @@ else
 	fin up
 fi
 
+# Run composer install
+echo -e "${green_bg} Step 2 ${NC}${green} Pulling master from Github...${NC}"
+cd $PROJECT_ROOT
+
+git checkout $GIT_BRANCH
+git pull origin $GIT_BRANCH
+
+# Run composer install
+echo -e "${green_bg} Step 3 ${NC}${green} Running composer install...${NC}"
+composer install
+
 echo "Waiting 10s for MySQL to initialize...";
 sleep 10
 
-# Run composer install
-echo -e "${green_bg} Step 2 ${NC}${green} Running composer install...${NC}"
-composer install
-
-
 # Import database.
-echo -e "${green_bg} Step 2 ${NC}${green} Importing database...${NC}"
+echo -e "${green_bg} Step 4 ${NC}${green} Importing database...${NC}"
 time import_database
 
 # Configure things for local development environment.
-echo -e "${green_bg} Step 3 ${NC}${green} Enabling local development-related modules...${NC}"
+echo -e "${green_bg} Step 5 ${NC}${green} Enabling local development-related modules...${NC}"
 time enable_modules
 
 # Configure things for local development environment.
-echo -e "${green_bg} Step 4 ${NC}${green} changing user 1 pwd to admin...${NC}"
+echo -e "${green_bg} Step 6 ${NC}${green} changing user 1 pwd to admin...${NC}"
     fin drush upwd admin --password=admin
 
 # Configure things for local development environment.
-echo -e "${green_bg} Step 5 ${NC}${green} clearing cache...${NC}"
+echo -e "${green_bg} Step 7 ${NC}${green} clearing cache...${NC}"
     fin drush cr
 
 
@@ -98,6 +103,18 @@ if is_windows; then
 	echo
 fi
 
+# Configure things for local development environment.
+echo -e "${green_bg} Step 8 ${NC}${green} Importing config...${NC}"
+fin drush cim -y
+
+echo -e "${green_bg} Step 8 ${NC}${green} Running db updates...${NC}"
+fin drush updb -y
+
+echo -e "${green_bg} Step 8 ${NC}${green} Running entity updtes...${NC}"
+fin drush entup -y
+
+echo -e "${green_bg} Step 8 ${NC}${green} Clearing caches...${NC}"
+fin drush cr all
 
 
 echo -en "${green_bg} DONE! ${NC} "
