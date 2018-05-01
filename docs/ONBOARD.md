@@ -24,7 +24,7 @@ Follow the [one-time setup instructions](https://docs.docksal.io/en/master/getti
 
 **4. Sync project from Pantheon**
 
-```cd ~/Projects/lawhelp```
+```cd ~/Projects/repo-name>```
 
 ```fin sync```
 
