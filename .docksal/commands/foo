@@ -65,7 +65,6 @@ myfunc()
 }
 
 function _sync_db {
-echo "skip db code sync"
 time sync_db $REPLY;
 all_done=1
 }

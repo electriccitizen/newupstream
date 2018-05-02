@@ -20,7 +20,9 @@ cd $PROJECT_ROOT
 
 if ! [ -z "$(git status --untracked-files=no --porcelain)" ]; then
   # Uncommitted changes in tracked files
-  echo -e  "You have uncommitted changes in your branch. Commit or stash your changes prior to continuing."
+  echo -e  "You have uncommitted changes in your branch. Commit or stash your changes prior to continuing. The results of git status are output below:"
+  git status
+
   exit 1
 fi
 
