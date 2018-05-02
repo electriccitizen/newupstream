@@ -15,9 +15,10 @@ NC='\033[0m'
 
 sync_config ()
 {
-echo -e  "${green_bg} Step 3 ${NC}${green} Pulling $GIT_BRANCH branch from Github...${NC}"
+
 cd $PROJECT_ROOT
 
+# Check for a clean repository
 if ! [ -z "$(git status --untracked-files=no --porcelain)" ]; then
   # Uncommitted changes in tracked files
   echo -e  "You have uncommitted changes in your branch. Commit or stash your changes prior to continuing. The results of git status are output below:"
@@ -26,13 +27,15 @@ if ! [ -z "$(git status --untracked-files=no --porcelain)" ]; then
   exit 1
 fi
 
-
-
+# Pull from Github
+echo -e  "${green_bg} Step 3 ${NC}${green} Pulling $GIT_BRANCH branch from Github...${NC}"
+git pull origin $GIT_BRANCH
 
 # Run composer install
 echo -e "${green_bg} Step 3 ${NC}${green} Running composer install...${NC}"
 composer install
 
+# No idea why this is needed but i abide
 if is_windows; then
 	echo-green "Add ${VIRTUAL_HOST} to your hosts file (/etc/hosts), e.g.:"
 	echo-green "192.168.64.100 ${VIRTUAL_HOST}"
@@ -40,16 +43,16 @@ if is_windows; then
 fi
 
 # Configure things for local development environment.
-echo -e "${green_bg} Step 8 ${NC}${green} Importing config...${NC}"
+echo -e "${green_bg} Step 4 ${NC}${green} Importing config...${NC}"
 fin drush cim -y
 
-echo -e "${green_bg} Step 8 ${NC}${green} Running db updates...${NC}"
+echo -e "${green_bg} Step 5 ${NC}${green} Running db updates...${NC}"
 fin drush updb -y
 
-echo -e "${green_bg} Step 8 ${NC}${green} Running entity updtes...${NC}"
+echo -e "${green_bg} Step 6 ${NC}${green} Running entity updtes...${NC}"
 fin drush entup -y
 
-echo -e "${green_bg} Step 8 ${NC}${green} Clearing caches...${NC}"
+echo -e "${green_bg} Step 7 ${NC}${green} Clearing caches...${NC}"
 fin drush cr all
 
 echo -en "${green_bg} DONE! ${NC} "
