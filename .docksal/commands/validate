@@ -47,9 +47,7 @@ is_windows ()
 	fi
 }
 
-#-------------------------- END: Helper functions --------------------------------
-
-#-------------------------- Execution --------------------------------
+function validate () {
 
 if [[ "$PROJECT_ROOT" == "" ]]; then
 	echo-red "\$PROJECT_ROOT is not set"
@@ -59,7 +57,7 @@ fi
 # Check for a clean repository
 if ! [ -z "$(git status --untracked-files=no --porcelain)" ]; then
   # Uncommitted changes in tracked files
-  echo -e  "${red}WARNING: You have uncommitted changes in your branch.${NC}"
+  echo -e  "${red}You have uncommitted changes in your branch.${NC}"
   echo
   echo -e "Commit or stash your changes prior to continuing, and then re-run fin sync:"
   echo
@@ -98,5 +96,27 @@ fin drush cr all
 
 echo -en "${green_bg} VALIDATION COMPLETE! ${NC} "
 echo -e "Open ${yellow}http://${VIRTUAL_HOST}${NC} in your browser to verify the setup."
+
+}
+
+#-------------------------- END: Helper functions --------------------------------
+
+#-------------------------- Execution --------------------------------
+clear
+echo-green "You are about to pull and import configuration from the Github $GIT_BRANCH branch"
+echo-green "and run a series of sanity checks to make sure your code is ready to merge."
+echo
+echo-green "If you have not already exported your active configuration to code, the import "
+echo-green "process will override your work, and you will lose your changes."
+echo
+echo-green "Are you sure you want to continue?"
+select yn in "Yes" "No"; do
+    case $yn in
+        Yes ) validate exit;;
+        No ) exit;;
+    esac
+done
+
+
 
 #-------------------------- END: Execution --------------------------------
