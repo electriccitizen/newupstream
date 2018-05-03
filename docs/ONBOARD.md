@@ -1,35 +1,22 @@
 # Onboarding
 [back to README](../README.md)
 
-**Requirements**
+**Install Terminus and authenticate via machine token**
 
-* Add public key to Pantheon account and add user to project team
-* Add public key to Github account and add user to project team
-* [Install Terminus](https://pantheon.io/docs/terminus/install/) and authenticate via Machine Token
-* Update your Pantheon aliases with ```terminus aliases```
+Follow the [Terminus install instructions](https://pantheon.io/docs/terminus/install/){:target="_blank"} to install and generate a machine token for authentication. If you are already Terminus you can check you version:
 
-**1. Install VirtualBox (5.1.28 or higher)**
+```terminus --version``` and [update Terminus](https://pantheon.io/docs/terminus/updates/) if you are running an older version.
 
-VirtualBox is available for Mac, PC and Linux and can be [installed manually](https://www.virtualbox.org/wiki/Downloads) on your platform.
+**Install VirtualBox (5.1.28 or higher)**
 
-**2. Install Docksal (One-time setup)**
+VirtualBox is available for Mac, PC and Linux and can be [installed manually](https://www.virtualbox.org/wiki/Downloads) on your platform. If necessary, you can update or manage your install via the VirtualBox Manager GUI. 
 
-Follow the [one-time setup instructions](https://docs.docksal.io/en/master/getting-started/env-setup/) for your platform. One you have gotten through Step 3 and started your VM return to this document and continue below.
+**Install Docksal (One-time setup)**
 
-*IMPORTANT: By default, Docksal uses the /Users/[username]/Projects folder to store all Docksal projects. You can change this to /Users/[username]/Sites (or another location) during setup, but be sure to clone all of your projects into whichever project folder you defined during Docksal setup or you will not be able to start your containers.*
+Follow the [one-time setup instructions](https://docs.docksal.io/en/master/getting-started/env-setup/) for your platform. 
 
-**3. Clone repository**
+*IMPORTANT: By default, Docksal uses the /Users/[username]/Projects folder to store projects. You can change this to /Users/[username]/Sites (or another location) during setup, but be sure to clone all of your projects into whichever project folder you defined during Docksal setup. Docksal is opinionated and will not work if you attempt to run from outside your defined project folder.*
 
-```git clone git@github.com:electriccitizen/<repo-name>```
-
-**4. Sync project from Pantheon**
-
-```cd ~/Projects/<repo-name>```
-
-```fin sync```
-
-**5. Start working**
-
-You should now have a synced copy of the site. Be sure to [follow a safe workflow!](../README.md#follow-a-safe-workflow)
+Once you have created and started your Docksal vm you should be all set for this and future Docksal projects. 
 
 [back to README](../README.md)

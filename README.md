@@ -4,29 +4,46 @@
 [![Dashboard newupstream](https://img.shields.io/badge/dashboard-newupstream-yellow.svg)](https://dashboard.pantheon.io/sites/9ec12d94-c804-44b7-968e-166a0b49fdc0#dev/code)
 [![Dev Site newupstream](https://img.shields.io/badge/site-newupstream-blue.svg)](http://dev-newupstream.pantheonsite.io/)
 
-Newupstream is a Composer-based Drupal 8 application hosted on [Pantheon](http://dashboard.getpantheon.com). The application integrates with [Circle CI](https://circleci.com/dashboard) for continuous integration testing and automated deployments to Pantheon. All development and theming is done on a local machine running [Docksal](https://docs.docksal.io). 
+Newupstream is a Composer-based Drupal 8 application hosted on [Pantheon](http://dashboard.getpantheon.com). The application integrates with [Circle CI](https://circleci.com/dashboard) for continuous integration testing and automated deployments. Follow this README to set up a local Docksal environment for site building, development, and theming. 
 
 ## Onboarding
 
-See the [onboarding instructions](docs/ONBOARD.md) for installing Docksal, cloning the repository, and getting your local development environment set up for the first time.
+See the [onboarding instructions](docs/ONBOARD.md) for installing Docksal and Terminus for the first time. Please also:
+
+* Add your public key to your Pantheon account, and be on the team
+* Add your public key to your Github account, and be on the team
+* Update your Pantheon aliases ```terminus aliases```
+
+## Getting started
+
+Clone the repository into your Docksal projects directory, and initialize the site:
+
+```cd ~/Projects``` (assuming you chose the default Docksal project folder)
+
+```git clone git@github.com:electriccitizen/newupstream.git```
+
+Navigate to your project root folder and run:
+
+```fin sync```
+
+This will spin up and clone a local copy of the site that is ready for work:
 
 * Local URL: http://newupstream.docksal
 * Dev URL: http://dev-newupstream.pantheonsite.io
 * Local drush: ```fin drush <your-command>```
 * Remote drush: ```drush @newupstream.dev <your-command>```
 
-
-
 ## Be a good citizen
 
 You are working in a team environment and must follow a few rules. If you are careless, it can lead to:
 
-* Losing all of your uncommitted work
-* Overriding or losing the work of others
+* Losing all of your uncommitted work (bad)
+* Overriding or losing the work of others (worse)
 * Uninstallable configuration or deploy errors
 
+See this guide to [following a safe workflow](docs/WORKFLOW.md) when using configuration management in Drupal 8.
 
-## Follow a safe workflow
+## Recommended workflow
 
 Here is a safe workflow that will help prevent lost work and other problems.
 
@@ -52,7 +69,7 @@ When you push your feature branch to Github, it triggers a Circle CI build to ru
 
 *3. If you see a merge conflict when running ```fin validate``` against your feature branch, it means your changes to a file(s) are conflicting with another change that has already been pushed to master branch. You will need to understand, fix, and commit the conflicting file(s) prior to continuing. As long as you committed your work you can always rollback to your last known working version if necessary.*
 
-*4. Both ```fin sync``` and ```fin validate``` are  helper commands to speed up your normal worklow. For debugging you may need to run the commands manually as needed. You may also sync your site manually if you do not want a full database sync.*
+*4. Both ```fin sync``` and ```fin validate``` are  helper commands to speed up your normal worklow. For debugging you may need to [run the commands manually](docs/WORKFLOW.md) as needed. You may also sync your site manually if you do not want a full database sync.*
 
 ## Submit a Github pull request
 
