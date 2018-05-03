@@ -12,8 +12,9 @@ See the [onboarding instructions](docs/ONBOARD.md) for installing Docksal, cloni
 
 * Local URL: http://newupstream.docksal
 * Dev URL: http://dev-newupstream.pantheonsite.io
-* Remote drush: ```drush @newupstream.dev <your-command>```
 * Local drush: ```fin drush <your-command>```
+* Remote drush: ```drush @newupstream.dev <your-command>```
+
 
 
 ## Be a good citizen

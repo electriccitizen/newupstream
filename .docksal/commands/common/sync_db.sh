@@ -7,5 +7,6 @@
 
 sync_db ()
 {
-  echo "fooman" $1;
+  echo "syncing db"
+  fin drush sql-sync $REMOTE_ALIAS @self -y
 }
