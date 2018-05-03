@@ -65,8 +65,7 @@ Before deploying you need to make sure that your branch still works against the 
 
 **Using fin validate**
 
-*[1]* ```fin validate``` is a helper command that verifies your feature branch is a clean state, runs a ```git pull``` to merge from the master branch, ```composer install```, ```drush updb```, ```drush entup```,```drush cim```, and ```drush cr```. This command automatically validates your working branch against changes that have made by other team members.
-
+*[1]* ```fin validate``` is a helper command that verifies your feature branch is a clean state, runs all of the commands marked as [1] in the above list. This command automatically validates your working branch against changes that have made by other team members.
 
 
 
