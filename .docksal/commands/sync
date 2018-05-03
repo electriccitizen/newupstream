@@ -73,17 +73,11 @@ if ! [ -z "$(git status --untracked-files=no --porcelain)" ]; then
   exit 1
 fi
 
-# Reset or start vm
-if [[ $DOCKER_RUNNING == "true" ]]; then
-	echo -e "${green_bg} Step 1 ${NC}${green} Recreating services...${NC}"
-	#fin reset -f
-else
-	echo -e "${green_bg} Step 1 ${NC}${green} Creating services...${NC}"
-	fin up
-fi
+# Make sure docksal is running
+fin up
 
 # Start database sync
-echo -e "${green_bg} Step 2 ${NC}${green} Import database from:${NC}"
+echo -e "${green_bg} Step 1 ${NC}${green} Import database from:${NC}"
 
 all_done=0
 while (( !all_done )); do
