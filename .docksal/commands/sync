@@ -75,8 +75,8 @@ fi
 
 # Reset or start vm
 if [[ $DOCKER_RUNNING == "true" ]]; then
-	echo -e "${green_bg} Step 1 ${NC}${green} Recreating services...${NC}"
-	fin reset -f
+	#echo -e "${green_bg} Step 1 ${NC}${green} Recreating services...${NC}"
+	#fin reset -f
 else
 	echo -e "${green_bg} Step 1 ${NC}${green} Creating services...${NC}"
 	fin up
