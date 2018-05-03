@@ -28,7 +28,7 @@ cd $PROJECT_ROOT
 
 
 
-  echo-green "Syncing database from $PANTHEON_SITE_ENV"
+  echo-green "Syncing database from $PANTHEON_SITE_ENV..."
   #fin drush sql-sync $REMOTE_ALIAS @self -y
   _sync_config
 }
