@@ -53,17 +53,6 @@ is_windows ()
 	fi
 }
 
-myfunc()
-{
-  echo "You choose $1"
-  # cannot change $1 - we'd have to say:
-  # 1="Goodbye Cruel"
-  # which is not a valid syntax. However, we can
-  # change $a:
-  a="Goodbye Cruel"
-  exit
-}
-
 function _sync_db {
 time sync_db $REPLY;
 all_done=1
@@ -87,7 +76,6 @@ if [[ "$PROJECT_ROOT" == "" ]]; then
 	exit 1
 fi
 
-: <<'END'
 if [[ $DOCKER_RUNNING == "true" ]]; then
 	echo -e "${green_bg} Step 1 ${NC}${green} Recreating services...${NC}"
 	fin reset -f
@@ -95,7 +83,7 @@ else
 	echo -e "${green_bg} Step 1 ${NC}${green} Creating services...${NC}"
 	fin up
 fi
-END
+
 
 # Invoke the spirit of joshua
 clear

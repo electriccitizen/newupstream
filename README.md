@@ -8,27 +8,27 @@ Newupstream is a Composer-based Drupal 8 application hosted on [Pantheon](http:/
 
 ## Onboarding
 
-See the [onboarding instructions](docs/ONBOARD.md) for installing Docksal and Terminus for the first time. Please also:
+See the [one-time setup documentation](docs/SETUP.md) if you are installing VirtualBox, Docksal, and/or Terminus for the first time. Please also:
 
-* Add your public key to your Pantheon account, and be on the team
-* Add your public key to your Github account, and be on the team
-* Update your Pantheon aliases ```terminus aliases```
+* Add your public key to your Pantheon account, and be on the team [(?)](https://pantheon.io/docs/ssh-keys/)
+* Add your public key to your Github account, and be on the team [(?)](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
+* Update your Pantheon aliases (```terminus aliases```)
 
-## Getting started
-
-Clone the repository into your Docksal projects directory, and initialize the site:
-
-```cd ~/Projects``` (assuming you chose the default Docksal project folder)
-
-```git clone git@github.com:electriccitizen/newupstream.git```
-
-Navigate to your project root folder and run:
+Once you meet the above requirements, clone the Github repository into your Docksal projects directory and initialize the site:
 
 ```cd ~/Projects/newupstream```
 
-```fin sync```
+```git clone git@github.com:electriccitizen/newupstream.git```
 
-This will spin up and clone a local copy of the site that is ready for work:
+Move to your project's root folder and initialize the site:
+
+```cd newupstream```
+
+```fin init```
+
+You can run the ```fin init``` command any time you want to start a new install, or to ensure that your local environment is in a safe one-to-one state with the development environment. During active development you will typically run ```fin sync``` instead (see below).
+
+## Getting started
 
 * Local URL: http://newupstream.docksal
 * Dev URL: http://dev-newupstream.pantheonsite.io
@@ -43,7 +43,7 @@ You are working in a team environment and must follow a few rules. If you are ca
 * Overriding or losing the work of others (worse)
 * Uninstallable configuration or deploy errors
 
-See this guide to [following a safe workflow](docs/WORKFLOW.md) when using configuration management in Drupal 8.
+See this guide to [following a safe workflow](docs/WORKFLOW.md) when using configuration management in Drupal 8. The recommended workflow below follows these best practices, and includes two helper commands (```fin sync``` and ```fin validate```) that automate important components of a safe work flow.
 
 ## Recommended workflow
 
@@ -61,9 +61,9 @@ Here is a safe workflow that will help prevent lost work and other problems.
 
 ```fin validate``` to check your work against the master branch and pull in changes from other team members
 
-```git push origin <your-feature-branch>``` to push up your feature branch if everything looks good
+```git push origin <your-feature-branch>``` to push your feature branch to Github if everything looks good
 
-When you push your feature branch to Github, it triggers a Circle CI build to run tests and imports against the development server. Submit a pull request to merge your changes into master when your work is ready to be merged.
+When you push your feature branch, it triggers a Circle CI build to run tests and imports against the development server. You can continue to push to your branch until your work is complete and your site is passing its automated tests.
 
 **NOTES**
 
@@ -86,9 +86,9 @@ Once your feature branch looks good and is passing its Circle CI tests, submit a
 
 Instructions for frontend theming and other topics related to Docksal and site building are available in separate documents:
 
-* [Onboarding](docs/ONBOARD.md)
+* [Initial setup](docs/SETUP.md)
+* [Helpful Docksal (fin) commands](docs/DOCKSAL.md)
 * [Frontend/theming](docs/THEME.md)
-* [Fin commands](https://docs.docksal.io/en/develop/fin/fin/)
 * [Docksal troubleshooting](https://docs.docksal.io/en/develop/troubleshooting/)
 
 ## Old local environments
