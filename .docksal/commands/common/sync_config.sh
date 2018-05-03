@@ -45,7 +45,7 @@ fin drush cim -y
 echo -e "${green_bg} Step 5 ${NC}${green} Running db updates...${NC}"
 fin drush updb -y
 
-echo -e "${green_bg} Step 6 ${NC}${green} Running entity updtes...${NC}"
+echo -e "${green_bg} Step 6 ${NC}${green} Running entity updates...${NC}"
 fin drush entup -y
 
 echo -e "${green_bg} Step 7 ${NC}${green} Clearing caches...${NC}"
