@@ -4,7 +4,7 @@
 [![Dashboard newupstream](https://img.shields.io/badge/dashboard-newupstream-yellow.svg)](https://dashboard.pantheon.io/sites/9ec12d94-c804-44b7-968e-166a0b49fdc0#dev/code)
 [![Dev Site newupstream](https://img.shields.io/badge/site-newupstream-blue.svg)](http://dev-newupstream.pantheonsite.io/)
 
-Newupstream is a Composer-based Drupal 8 application hosted on [Pantheon](http://dashboard.getpantheon.com). The application integrates with [Circle CI](https://circleci.com/dashboard) for continuous integration testing and automated deployments. Follow this README to set up a local Docksal environment for site building, development, and theming. 
+Newupstream is a Composer-based Drupal 8 application hosted on [Pantheon](http://dashboard.getpantheon.com). The application integrates with [Circle CI](https://circleci.com/dashboard) for continuous integration testing and automated deployments. Follow this README to set up a local environment for site building, development, and theming. 
 
 ## Onboarding
 
@@ -26,7 +26,7 @@ Move to your project's root folder and initialize the site:
 
 ```fin init```
 
-You can run the ```fin init``` command any time you want to start a new install, or to ensure that your local environment is in a safe one-to-one state with the development environment. During active development you will typically run ```fin sync``` instead (see below).
+You can run the ```fin init``` command any time you want to start a new install, or to ensure that your local environment is in a safe one-to-one state with the development environment. During active development, you will typically run ```fin sync``` instead (see below).
 
 ## Getting started
 
@@ -50,7 +50,7 @@ See this guide to [following a safe workflow](docs/WORKFLOW.md) when using confi
 
 Here is a safe workflow that will help prevent lost work and other problems.
 
-```fin sync``` to ensure your local site is synced with Github master branch and Pantheon db before starting a new task
+```fin sync``` to ensure your local site is synced with development environment before starting a new task [1]
 
 ```git checkout -b <your-feature-branch>``` to checkout a new feature branch; start a new task and do your thing
 
@@ -60,7 +60,7 @@ Here is a safe workflow that will help prevent lost work and other problems.
 
 ```git commit``` to commit your changes and get your feature branch into a safe, recoverable state
 
-```fin validate``` to check your work against the master branch and pull in changes from other team members
+```fin validate``` to check your work against the master branch and pull in changes from other team members [2]
 
 ```git push origin <your-feature-branch>``` to push your feature branch to Github if everything looks good
 
@@ -68,13 +68,13 @@ When you push your feature branch, it triggers a Circle CI build to run tests an
 
 **NOTES**
 
-*1. ```fin sync``` is a wrapper command that runs: ```git pull origin master```, ```composer install```, a Pantheon ```database sync```, and a ```drush upwd``` to set user 1 pwd to admin/admin. This is followed by ```drush cim```, ```drush dbup```, ```drush entup``` and ```drush cr```. This command ensures your local environment is in a one-to-one state with the Pantheon development environment.*
+[1] ```fin sync``` is a wrapper command to ensure your local environment is in a safe, one-to-one state with the development environment. See [following a safe workflow](docs/WORKFLOW.md) for more details.
 
-*2. ```fin validate``` is a wrapper command that runs: ```git pull origin master```, ```composer install```, ```drush dbup```, ```drush entup```, ```drush cim```, and ```drush cr```. This command is designed to ensure that your feature branch works against the current master branch.*
+[2] ```fin validate``` is a wrapper command to pull in changes from team members and to make sure your branch can safely merge into master. See [following a safe workflow](docs/WORKFLOW.md) for more details.. 
 
-*3. If you see a merge conflict when running ```fin validate``` against your feature branch, it means your changes to a file(s) are conflicting with another change that has already been pushed to master branch. You will need to understand, fix, and commit the conflicting file(s) prior to continuing. As long as you committed your work you can always rollback to your last known working version if necessary.*
+If you see errors or merge conflicts when running ```fin validate``` against your feature branch, it means your changes to a file(s) are conflicting with another change that has already been pushed to master branch. You will need to work with the team to understand, fix, and commit the conflicting file(s). 
 
-*4. Both ```fin sync``` and ```fin validate``` are  helper commands to speed up your normal worklow. For debugging you may need to [run the commands manually](docs/WORKFLOW.md) as needed. You may also sync your site manually if you do not want a full database sync.*
+As long as you have exported and committed your work per the above workflow, you can always rollback to your last known working version if necessary.
 
 ## Submit a Github pull request
 

@@ -2,28 +2,18 @@
 
 ## Validate a Docksal powered local against Pantheon master.
 ##
-## Usage: fin sync
+## Usage: fin validate
 
 # Abort if anything fails
 set -e
 
-#-------------------------- Settings --------------------------------
-
-# PROJECT_ROOT is passed from fin.
-# The following variables are configured in the '.env' file: DOCROOT, VIRTUAL_HOST.
+# SETTINGS
 
 SITE_DIRECTORY="default"
 DOCROOT_PATH="${PROJECT_ROOT}/${DOCROOT}"
 SITEDIR_PATH="${DOCROOT_PATH}/sites/${SITE_DIRECTORY}"
 
-#-------------------------- END: Settings --------------------------------
-
-#-------------------------- Include functions --------------------------------
-
-
-#-------------------------- END: Include functions --------------------------------
-
-#-------------------------- Helper functions --------------------------------
+# HELPERS
 
 # Console colors
 red='\033[0;31m'
@@ -37,6 +27,7 @@ echo-green () { echo -e "${green}$1${NC}"; }
 echo-green-bg () { echo -e "${green_bg}$1${NC}"; }
 echo-yellow () { echo -e "${yellow}$1${NC}"; }
 
+# Windows check and fix for (something?)
 is_windows ()
 {
 	local res=$(uname | grep 'CYGWIN_NT')
@@ -47,6 +38,7 @@ is_windows ()
 	fi
 }
 
+# Validate against master
 function validate () {
 
 if [[ "$PROJECT_ROOT" == "" ]]; then
@@ -93,16 +85,13 @@ fin drush cim -y
 echo -e "${green_bg} Step 6 ${NC}${green} Clearing caches...${NC}"
 fin drush cr all
 
-
 echo -en "${green_bg} VALIDATION COMPLETE! ${NC} "
 echo -e "Open ${yellow}http://${VIRTUAL_HOST}${NC} in your browser to verify the setup."
 
 exit
 }
 
-#-------------------------- END: Helper functions --------------------------------
-
-#-------------------------- Execution --------------------------------
+# Execute
 clear
 echo-green "You are about to pull and import configuration from the Github $GIT_BRANCH branch"
 echo-green "and run a series of sanity checks to make sure your code is ready to merge."
@@ -117,7 +106,3 @@ select yn in "Yes" "No"; do
         No ) exit;;
     esac
 done
-
-
-
-#-------------------------- END: Execution --------------------------------
