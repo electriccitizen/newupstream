@@ -109,14 +109,12 @@ echo -e "${green_bg} Step 2 ${NC}${green} Import database from:${NC}"
 
 all_done=0
 while (( !all_done )); do
-    options=($PANTHEON_SITE_ENV 'test' 'live' 'none' 'exit')
+    options=($PANTHEON_SITE_ENV 'none' 'exit')
     select opt in "${options[@]}"; do
         case $REPLY in
             1) _sync_db; exit ;;
-            2) _sync_db; break ;;
-            3) _sync_db; break ;;
-            4) _sync_config; break ;;
-            5) exit ;;
+            2) _sync_config; break ;;
+            3) exit ;;
             *) echo "Invalid option" ;;
      esac
     done
