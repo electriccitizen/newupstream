@@ -24,8 +24,16 @@ echo-yellow () { echo -e "${yellow}$1${NC}"; }
 
 sync_db ()
 {
+cd $PROJECT_ROOT
+
+
+
   echo-green "Syncing database from $REPLY"
   fin drush sql-sync $REMOTE_ALIAS @self -y
+  _sync_config
 }
 
-time sync_config
+_sync_config ()
+{
+    time sync_config
+}

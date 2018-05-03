@@ -76,6 +76,20 @@ if [[ "$PROJECT_ROOT" == "" ]]; then
 	exit 1
 fi
 
+clear
+
+# Check for a clean repository
+if ! [ -z "$(git status --untracked-files=no --porcelain)" ]; then
+  # Uncommitted changes in tracked files
+  echo -e  "${red}WARNING: You have uncommitted changes in your branch.${NC}"
+  echo
+  echo -e "Commit or stash your changes prior to continuing, and then re-run fin sync:"
+  echo
+  git status
+  exit 1
+fi
+
+# Reset or start vm
 if [[ $DOCKER_RUNNING == "true" ]]; then
 	echo -e "${green_bg} Step 1 ${NC}${green} Recreating services...${NC}"
 	fin reset -f
@@ -83,6 +97,7 @@ else
 	echo -e "${green_bg} Step 1 ${NC}${green} Creating services...${NC}"
 	fin up
 fi
+
 
 
 # Invoke the spirit of joshua
