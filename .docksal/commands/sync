@@ -51,7 +51,6 @@ all_done=1
 
 # Sync config
 function _sync_config {
-echo "skip db code sync"
 time sync_config $REPLY;
 all_done=1
 }
@@ -105,7 +104,6 @@ done
 
 exit
 
-echo "SYNC COMPLETE!"
 sleep 2
 #-------------------------- END: Execution --------------------------------
 
