@@ -20,8 +20,6 @@ SITEDIR_PATH="${DOCROOT_PATH}/sites/${SITE_DIRECTORY}"
 
 #-------------------------- Include functions --------------------------------
 
-source "${PROJECT_ROOT}/.docksal/commands/common/import_database.sh"
-source "${PROJECT_ROOT}/.docksal/commands/common/enable_modules.sh"
 
 #-------------------------- END: Include functions --------------------------------
 
@@ -58,16 +56,22 @@ if [[ "$PROJECT_ROOT" == "" ]]; then
 	exit 1
 fi
 
-#if [[ $DOCKER_RUNNING == "true" ]]; then
-#	echo -e "${green_bg} Step 1 ${NC}${green} Recreating services...${NC}"
-#	fin reset -f
-#else
-#	echo -e "${green_bg} Step 1 ${NC}${green} Creating services...${NC}"
-#	fin up
-#fi
+# Check for a clean repository
+if ! [ -z "$(git status --untracked-files=no --porcelain)" ]; then
+  # Uncommitted changes in tracked files
+  echo -e  "${red}WARNING: You have uncommitted changes in your branch.${NC}"
+  echo
+  echo -e "Commit or stash your changes prior to continuing, and then re-run fin sync:"
+  echo
+  git status
+  exit 1
+fi
+
+# Make sure docksal is running
+fin up
 
 # Pull from master
-echo -e "${green_bg} Step 1 ${NC}${green} Running git pull from master${NC}"
+echo -e "${green_bg} Step 1 ${NC}${green} Running git pull from $GIT_BRANCH ${NC}"
 cd $PROJECT_ROOT
 git pull origin $GIT_BRANCH
 
@@ -92,7 +96,7 @@ echo -e "${green_bg} Step 6 ${NC}${green} Clearing caches...${NC}"
 fin drush cr all
 
 
-echo -en "${green_bg} DONE! ${NC} "
+echo -en "${green_bg} VALIDATION COMPLETE! ${NC} "
 echo -e "Open ${yellow}http://${VIRTUAL_HOST}${NC} in your browser to verify the setup."
 
 #-------------------------- END: Execution --------------------------------
