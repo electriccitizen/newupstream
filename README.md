@@ -55,9 +55,11 @@ Here is a safe workflow that will help prevent lost work and other problems.
 
 ```fin drush cex``` to export your changes
 
-```git add``` and ```git commit``` to add and commit any new config, theme, module or config files in your feature branch
+```git add``` to add any new configuration, theme, or custom module files 
 
-```fin validate``` to check your work against the master branch
+```git commit``` to commit your changes and get your feature branch into a safe, recoverable state
+
+```fin validate``` to check your work against the master branch and pull in changes from other team members
 
 ```git push origin <your-feature-branch>``` to push up your feature branch if everything looks good
 
