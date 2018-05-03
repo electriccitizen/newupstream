@@ -58,11 +58,11 @@ all_done=1
 
 # Execute
 if [[ "$PROJECT_ROOT" == "" ]]; then
-	echo-red "\$PROJECT_ROOT is not set"
+	echo-red "\$PROJECT_ROOT is not set!"
 	exit 1
 fi
 
-# Check for a clean repository or exit
+# Check for a clean repository
 if ! [ -z "$(git status --untracked-files=no --porcelain)" ]; then
   # Uncommitted changes in tracked files
   echo -e  "${red}WARNING: You have uncommitted changes in your branch.${NC}"
@@ -82,10 +82,6 @@ else
 	fin up
 fi
 
-# Invoke the spirit of joshua
-clear
-say shall we play a game?
-
 # Start database sync
 echo -e "${green_bg} Step 2 ${NC}${green} Import database from:${NC}"
 
@@ -95,7 +91,7 @@ while (( !all_done )); do
     select opt in "${options[@]}"; do
         case $REPLY in
             1) _sync_db; exit ;;
-            2) _sync_config; break ;;
+            2) _sync_config; exit ;;
             3) exit ;;
             *) echo "Invalid option" ;;
      esac
