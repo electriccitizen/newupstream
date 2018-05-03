@@ -1,33 +1,23 @@
 #!/usr/bin/env bash
 
-## Sync a Docksal powered local Pantheon site.
+## Sync your local environment with fresh data and code from Pantheon development environment.
 ##
-## Usage: fin foo
+## Usage: fin sync
 
 # Abort if anything fails
 set -e
 
-#-------------------------- Settings --------------------------------
-
-# PROJECT_ROOT is passed from fin.
-# The following variables are configured in the '.env' file: DOCROOT, VIRTUAL_HOST.
-
+# SETTINGS
 SITE_DIRECTORY="default"
 DOCROOT_PATH="${PROJECT_ROOT}/${DOCROOT}"
 SITEDIR_PATH="${DOCROOT_PATH}/sites/${SITE_DIRECTORY}"
 
-#-------------------------- END: Settings --------------------------------
-
-#-------------------------- Include functions --------------------------------
-
-source "${PROJECT_ROOT}/.docksal/commands/common/import_database.sh"
-source "${PROJECT_ROOT}/.docksal/commands/common/enable_modules.sh"
+# INCLUDES
 source "${PROJECT_ROOT}/.docksal/commands/common/sync_db.sh"
 source "${PROJECT_ROOT}/.docksal/commands/common/sync_config.sh"
 
-#-------------------------- END: Include functions --------------------------------
 
-#-------------------------- Helper functions --------------------------------
+# HELPERS
 
 # Console colors
 red='\033[0;31m'
@@ -35,7 +25,6 @@ green='\033[0;32m'
 green_bg='\033[42m'
 yellow='\033[1;33m'
 NC='\033[0m'
-
 bg='\[\033[0;35m\]'
 
 echo-red () { echo -e "${red}$1${NC}"; }
@@ -43,6 +32,7 @@ echo-green () { echo -e "${green}$1${NC}"; }
 echo-green-bg () { echo -e "${green_bg}$1${NC}"; }
 echo-yellow () { echo -e "${yellow}$1${NC}"; }
 
+# Windows check
 is_windows ()
 {
 	local res=$(uname | grep 'CYGWIN_NT')
@@ -53,40 +43,38 @@ is_windows ()
 	fi
 }
 
-myfunc()
-{
-  echo "You choose $1"
-  # cannot change $1 - we'd have to say:
-  # 1="Goodbye Cruel"
-  # which is not a valid syntax. However, we can
-  # change $a:
-  a="Goodbye Cruel"
-  exit
-}
-
+# Sync db
 function _sync_db {
 time sync_db $REPLY;
 all_done=1
 }
 
-
+# Sync config
 function _sync_config {
+echo "skip db code sync"
 time sync_config $REPLY;
 all_done=1
 }
 
-#-------------------------- END: Helper functions --------------------------------
 
-#-------------------------- Execution --------------------------------
-
-
-# Make sure we are ready to rock
+# Execute
 if [[ "$PROJECT_ROOT" == "" ]]; then
 	echo-red "\$PROJECT_ROOT is not set"
 	exit 1
 fi
 
-: <<'END'
+# Check for a clean repository or exit
+if ! [ -z "$(git status --untracked-files=no --porcelain)" ]; then
+  # Uncommitted changes in tracked files
+  echo -e  "${red}WARNING: You have uncommitted changes in your branch.${NC}"
+  echo
+  echo -e "Commit or stash your changes prior to continuing, and then re-run fin sync:"
+  echo
+  git status
+  exit 1
+fi
+
+# Reset or start vm
 if [[ $DOCKER_RUNNING == "true" ]]; then
 	echo -e "${green_bg} Step 1 ${NC}${green} Recreating services...${NC}"
 	fin reset -f
@@ -94,25 +82,22 @@ else
 	echo -e "${green_bg} Step 1 ${NC}${green} Creating services...${NC}"
 	fin up
 fi
-END
 
 # Invoke the spirit of joshua
 clear
-#say shall we play a game?
+say shall we play a game?
 
 # Start database sync
 echo -e "${green_bg} Step 2 ${NC}${green} Import database from:${NC}"
 
 all_done=0
 while (( !all_done )); do
-    options=($PANTHEON_SITE_ENV 'test' 'live' 'none' 'exit')
+    options=($PANTHEON_SITE_ENV 'none' 'exit')
     select opt in "${options[@]}"; do
         case $REPLY in
             1) _sync_db; exit ;;
-            2) _sync_db; break ;;
-            3) _sync_db; break ;;
-            4) _sync_config; break ;;
-            5) exit ;;
+            2) _sync_config; break ;;
+            3) exit ;;
             *) echo "Invalid option" ;;
      esac
     done
@@ -120,7 +105,7 @@ done
 
 exit
 
-echo "Exiting"
+echo "SYNC COMPLETE!"
 sleep 2
 #-------------------------- END: Execution --------------------------------
 

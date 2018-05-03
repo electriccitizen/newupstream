@@ -34,6 +34,7 @@ You can run the ```fin init``` command any time you want to start a new install,
 * Dev URL: http://dev-newupstream.pantheonsite.io
 * Local drush: ```fin drush <your-command>```
 * Remote drush: ```drush @newupstream.dev <your-command>```
+* User 1: admin/admin
 
 ## Be a good citizen
 
