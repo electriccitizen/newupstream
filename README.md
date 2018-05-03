@@ -24,6 +24,8 @@ Clone the repository into your Docksal projects directory, and initialize the si
 
 Navigate to your project root folder and run:
 
+```cd ~/Projects/newupstream```
+
 ```fin sync```
 
 This will spin up and clone a local copy of the site that is ready for work:
