@@ -18,15 +18,6 @@ sync_config ()
 
 cd $PROJECT_ROOT
 
-# Check for a clean repository
-if ! [ -z "$(git status --untracked-files=no --porcelain)" ]; then
-  # Uncommitted changes in tracked files
-  echo -e  "You have uncommitted changes in your branch. Commit or stash your changes prior to continuing. The results of git status are output below:"
-  git status
-
-  exit 1
-fi
-
 # Pull from Github
 echo -e  "${green_bg} Step 3 ${NC}${green} Pulling $GIT_BRANCH branch from Github...${NC}"
 git pull origin $GIT_BRANCH
