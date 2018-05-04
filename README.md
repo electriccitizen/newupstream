@@ -68,9 +68,9 @@ When you push your feature branch, it triggers a Circle CI build to run tests an
 
 **NOTES**
 
-[1] ```fin sync``` is a wrapper command to ensure your local environment is in a safe, one-to-one state with the development environment. See [following a safe workflow](docs/WORKFLOW.md) for more details.
+[1] ```fin sync``` is an wrapper command to ensure your local environment is in a safe, one-to-one state with the development environment (with an optional database sync). See [following a safe workflow](docs/WORKFLOW.md) for more details.
 
-[2] ```fin validate``` is a wrapper command to pull in changes from team members and to make sure your branch can safely merge into master. See [following a safe workflow](docs/WORKFLOW.md) for more details.. 
+[2] ```fin validate``` is a wrapper command to pull in changes from team members, and to make sure your branch can safely merge into master. See [following a safe workflow](docs/WORKFLOW.md) for more details. If your feature branch is open for a long time, you should export and ```fin validate``` often.
 
 If you see errors or merge conflicts when running ```fin validate``` against your feature branch, it means your changes to a file(s) are conflicting with another change that has already been pushed to master branch. You will need to work with the team to understand, fix, and commit the conflicting file(s). 
 
@@ -83,19 +83,17 @@ Once your feature branch looks good and is passing its Circle CI tests, submit a
 *Note: Advanced or otherwise approved users can submit and merge their own PRs, and/or merge and push a feature branch directly into master without a formal pull request. Ask if you have questions, and err on the side of caution.*
 
 
-## Other helpful topics
+## Next steps
 
-Instructions for frontend theming and other topics related to Docksal and site building are available in separate documents:
+Instructions for frontend theming and other topics are available in separate documents:
 
-* [Initial setup](docs/SETUP.md)
-* [Helpful Docksal (fin) commands](docs/DOCKSAL.md)
 * [Frontend/theming](docs/THEME.md)
-* [Docksal troubleshooting](https://docs.docksal.io/en/develop/troubleshooting/)
+* [Helpful commands](docs/DOCKSAL.md)
+* [Troubleshooting](docs/TROUBLESHOOT.md)
 
 ## Old local environments
 
 If you have previously worked on this project or are having trouble with Docksal, the old [Lando](docs/LANDO.md) and [DrupalVM](docs/DRUPALVM.md) builds are both still available if needed.
-
 
 ## Support and feedback
 

@@ -25,7 +25,7 @@
 
 ```fin restart``` or ```fin reset```
 
-**You may want to stop and completely rwmove your containers:**
+**You may want to stop and completely remove your containers:**
 
 ```fin remove```
 

@@ -1,12 +1,12 @@
-# Safe workflow for Configuration Management in Drupal 8
+# Following a safe workflow (D8)
 
 [back to README](../README.md)
 
-Keep your team members and clients in a safe and happy state. If you practice the workflow outlined below, you will avoid most common problems.
+If you practice the workflow outlined below, you will avoid most common problems. This document includes a few specific ```fin``` (docksal) commands, but the general principles and commands apply to all local environments (DrupalVM, Lando, DDEV, ADD, Mamp, custom stack, etc.) and should be followed to make for a happier team.
 
 ## Get in sync
 
-Following these steps will ensure that you are in one-to-one state with the development server, and that everything is working correctly prior to starting a new task.
+Following these steps, will ensure that you are in one-to-one state with the development server, and that everything is working correctly prior to starting a new task.
 
 ```git status``` to make sure you have a clean master branch with no uncommitted work
 
@@ -26,7 +26,7 @@ Following these steps will ensure that you are in one-to-one state with the deve
 
 **Using fin sync**
 
-```fin sync``` is a helper that runs all of the commands above, in order, and is recommended to get into a one-to-one state with development.
+```fin sync``` is a helper that runs all of the commands above, in order, and is highly recommended to get into a one-to-one state with development.
 
 *IMPORTANT: As noted above, the database sync is optional. However, it is critical that you run ```fin drush cim``` after pulling from master to import new configuration into your database and to your active configuration. If you fail to do so, any newly added configuration will be lost the next time you do a configuration export.*
 
@@ -65,8 +65,42 @@ Before deploying you need to make sure that your branch still works against the 
 
 **Using fin validate**
 
-*[1]* ```fin validate``` is a helper command that verifies your feature branch is a clean state, runs all of the commands marked as [1] in the above list. This command automatically validates your working branch against changes that have made by other team members.
+*[1]* ```fin validate``` is a helper command that verifies your feature branch is a clean state, runs all of the commands marked as [1] in the above list. This command automatically validates your working branch against changes that have made by other team members. Be sure to export and commit your changes prior to running ```fin validate```.
 
+## Safe module updates
+
+```composer udpate drupal/<my-module --with-dependencies```
+
+```fin drush updb```
+
+```fin drush cex```
+
+```git add```
+
+```git commit```
+
+```git push```
+## You're doing it wrong
+
+The workflow above is designed to prevent you from making common mistakes:
+
+**If you simply EXPORT and merge your code into master without testing** against the lastest changes, you risk losing the work of your team members, or causing a broken build that will need to be resolved.  
+
+**If you MERGE before you export** you will lose the new configuration from your team during export. The ```drush cex``` process deletes and regenerates your config files, so everything may work fine for you, but you will not actually be verifying against the latest work in the master branch.
+
+**If you MERGE before you commit your code** you will have no simple way to revert back to your safe state, and will have to manually clean up merge conflicts before continuing. This is not fun.
+
+**IF you MERGE but fail to run ```drush cim```** you will lose any new changes the next time you run an export. 
+
+**If you IMPORT configuration before you export** you will lose your active work with no way to recover. If you pull from master and import new configuration prior to exporting your own work, it is gone forever.
+
+**If you don't run ```drush updb``` or ```drush entup``` to verify** after merging the master branch, you could inadverntely end up with a broken database.
+
+**If you MERGE code from master before you export** you will lose the new configuration during the export.
+
+There are lots of things that can go wrong, but if you understand and follow the recommended workflow you will help to eliminate 99% of the typical problems.
+
+[back to README](../README.md)  
 
 
 
