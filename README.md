@@ -88,8 +88,9 @@ Once your feature branch looks good and is passing its Circle CI tests, submit a
 Instructions for frontend theming and other topics are available in separate documents:
 
 * [Frontend/theming](docs/THEME.md)
-* [Helpful commands](docs/DOCKSAL.md)
+* [Working with Docksal](docs/DOCKSAL.md)
 * [Troubleshooting](docs/TROUBLESHOOT.md)
+* [Following a safe workflow](docs/WORKFLOW.md)
 
 ## Old local environments
 
