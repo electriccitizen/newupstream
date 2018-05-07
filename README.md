@@ -18,6 +18,8 @@ Move to your project's root folder and initialize the site:
 
 ```cd newupstream```
 
+```composer install```
+
 ```fin init```
 
 Once the site is up, you are ready to start working:
