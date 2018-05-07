@@ -1,8 +1,8 @@
 # Newupstream
 
-[![CircleCI](https://circleci.com/gh/electriccitizen/newsupstream.svg?style=shield)](https://circleci.com/gh/electriccitizen/newsupstream)
-[![Dashboard newsupstream](https://img.shields.io/badge/dashboard-newsupstream-yellow.svg)](https://dashboard.pantheon.io/sites/9ec12d94-c804-44b7-968e-166a0b49fdc0#dev/code)
-[![Dev Site newsupstream](https://img.shields.io/badge/site-newsupstream-blue.svg)](http://dev-newsupstream.pantheonsite.io/)
+[![CircleCI](https://circleci.com/gh/electriccitizen/newupstream.svg?style=shield)](https://circleci.com/gh/electriccitizen/newupstream)
+[![Dashboard newupstream](https://img.shields.io/badge/dashboard-newupstream-yellow.svg)](https://dashboard.pantheon.io/sites/9ec12d94-c804-44b7-968e-166a0b49fdc0#dev/code)
+[![Dev Site newupstream](https://img.shields.io/badge/site-newupstream-blue.svg)](http://dev-newupstream.pantheonsite.io/)
 
 Newupstream is a Composer-based Drupal 8 application hosted on [Pantheon](http://dashboard.getpantheon.com). Follow this README to create your local environment, and to learn the best practices for effectively contributing to the project.
 
@@ -12,18 +12,18 @@ See the [setup documentation](docs/SETUP.md) if you are installing VirtualBox, D
 
 ```cd ~/Projects```
 
-```git clone git@github.com:electriccitizen/newsupstream.git```
+```git clone git@github.com:electriccitizen/newupstream.git```
 
 Move to your project's root folder and initialize the site:
 
-```cd newsupstream```
+```cd newupstream```
 
 ```fin init```
 
 Once the site is up, you are ready to start working:
 
-* Local: http://newsupstream.docksal
-* Dev: http://dev-newsupstream.pantheonsite.io
+* Local: http://newupstream.docksal
+* Dev: http://dev-newupstream.pantheonsite.io
 * User: admin/admin (local)
 
 You can run [fin init](docs/commands/INIT.md) any time you want to reset or guarantee that your local environment is in a safe one-to-one state with your upstream environment. 
