@@ -8,7 +8,7 @@ Newupstream is a Composer-based Drupal 8 application hosted on [Pantheon](http:/
 
 ## Onboarding
 
-See the [one-time setup documentation](docs/SETUP.md) if you are installing VirtualBox, Docksal, and/or Terminus for the first time. Please also:
+See the [one-time setup documentation](.docksal/docs/SETUP.md) if you are installing VirtualBox, Docksal, and/or Terminus for the first time. Please also:
 
 * Add your public key to your Pantheon account, and be on the team [(?)](https://pantheon.io/docs/ssh-keys/)
 * Add your public key to your Github account, and be on the team [(?)](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)

@@ -21,6 +21,19 @@
           "reference": "2.6.4"
           }
       }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "electriccitizen/ec-docksal",
+        "version": "1.0.2",
+        "type": "drupal-custom-module",
+        "source": {
+          "url": "https://github.com/electriccitizen/ec-docksal.git",
+          "type": "git",
+          "reference": "1.0.2"
+        }
+      }
     }
   ],
     "require": {
@@ -86,7 +99,8 @@
     "webflo/drupal-core-strict": "^8",
     "webflo/drupal-finder": "^0.3.0",
     "wikimedia/composer-merge-plugin": "~1.3",
-    "woothemes/flexslider": "2.6.4"
+    "woothemes/flexslider": "2.6.4",
+    "electriccitizen/ec-docksal": "~1"
   },
   "require-dev": {
     "mikey179/vfsstream": "^1.2",
@@ -140,7 +154,8 @@
       "web/profiles/{$name}": ["type:drupal-profile"],
       "web/libraries/{$name}": ["type:drupal-library"],
       "web/themes/{$name}": ["type:drupal-theme"],
-      "drush/contrib/{$name}": ["type:drupal-drush"]
+      "drush/contrib/{$name}": ["type:drupal-drush"],
+      ".docksal": ["type:drupal-custom-module"]
     },
     "build-env": {
       "export-configuration": "drush config-export --yes"

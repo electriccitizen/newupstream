@@ -32,6 +32,10 @@ echo-green () { echo -e "${green}$1${NC}"; }
 echo-green-bg () { echo -e "${green_bg}$1${NC}"; }
 echo-yellow () { echo -e "${yellow}$1${NC}"; }
 
+
+echo $1
+
+
 # Windows check
 is_windows ()
 {
