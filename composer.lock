@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "dde32e24a6136b429207ab74faae735f",
+    "content-hash": "048806ecdb54262ee5ecf9ab4b5ab33a",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -5587,11 +5587,11 @@
         },
         {
             "name": "electriccitizen/docksal",
-            "version": "1.2.8",
+            "version": "1.2.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/electriccitizen/docksal.git",
-                "reference": "1.2.8"
+                "reference": "1.2.9"
             },
             "type": "drupal-custom-module"
         },
