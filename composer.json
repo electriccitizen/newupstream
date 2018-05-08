@@ -137,10 +137,12 @@
     "prepare-for-pantheon": "DrupalProject\\composer\\ScriptHandler::prepareForPantheon",
     "post-install-cmd": [
       "@drupal-scaffold",
-      "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+      "DrupalProject\\composer\\ScriptHandler::createRequiredFiles",
+      "./.docksal/setenv.sh dev @newupstream.dev"
     ],
     "post-update-cmd": [
-      "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+      "DrupalProject\\composer\\ScriptHandler::createRequiredFiles",
+      "./.docksal/setenv.sh dev @newupstream.dev"
     ],
     "post-create-project-cmd": [
       "@drupal-scaffold",
