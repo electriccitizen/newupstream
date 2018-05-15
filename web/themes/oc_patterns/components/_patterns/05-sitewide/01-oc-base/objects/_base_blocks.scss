@@ -11,7 +11,7 @@
 			//from 01-mixins.scss 
 			@include opacity(.7);
 			//from 02-animations.scss 
-			@include transThreeAll;
+			@include transAll(.3s);
 		}
 	}
 }

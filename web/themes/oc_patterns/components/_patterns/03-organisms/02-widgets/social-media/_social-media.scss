@@ -19,7 +19,7 @@
 			color: $link;
 			&:hover,&:focus{
 				color: $hoverLink;
-				@include transThreeAll;
+				@include transAll(.3s);
 			}
 		}
 	}

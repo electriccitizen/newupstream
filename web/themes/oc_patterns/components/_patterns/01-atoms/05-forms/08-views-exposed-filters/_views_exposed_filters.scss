@@ -15,13 +15,13 @@
 		color: $white;
 		&:hover,&:focus{
 			background: $hoverLink;
-			@include transThreeAll;
+			@include transAll(.3s);
 		}
 		&#edit-reset{
 			background: $black;
 			&:hover{
 				background: $hoverLink;
-				@include transThreeAll;
+				@include transAll(.3s);
 			}
 		}
 	}

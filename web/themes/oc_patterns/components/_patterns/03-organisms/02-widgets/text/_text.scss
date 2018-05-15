@@ -10,7 +10,7 @@
 	.two-column{
 		@include tab{
 			.field-oc-long-text{
-				@include columns(2, 2em);
+				@include cssColumns(2, 2em);
 			}
 		}
 	}

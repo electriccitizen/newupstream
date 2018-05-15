@@ -14,7 +14,7 @@
 
 	//links		
 	.button-widget{
-		@include transThreeAll;
+		@include transAll(.3s);
 		@include button;
 		padding: .75em 2em;
 		min-width: 200px;

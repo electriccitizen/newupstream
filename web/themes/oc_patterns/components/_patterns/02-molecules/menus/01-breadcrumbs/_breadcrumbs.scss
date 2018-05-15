@@ -22,7 +22,7 @@
 		a{
 			padding-right: .25em;
 			//from 02-animations.scss
-			@include transThreeAll;
+			@include transAll(.3s);
 		}
 		&:not(:last-of-type){
 			&:after{

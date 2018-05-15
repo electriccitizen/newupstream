@@ -22,7 +22,7 @@ $pager-line: 24px;
 		color: $white;
 		background: $midTeal;
 		text-decoration: none;
-		@include transThreeAll;
+		@include transAll(.3s);
 	}
 }
 
@@ -32,7 +32,7 @@ $pager-line: 24px;
 	color: $midTeal;
 	&:hover,&:focus{
 		color: $black;
-		@include transThreeAll;
+		@include transAll(.3s);
 	}
 }
 
@@ -140,7 +140,7 @@ ul.flippy{
 			color: $midTeal;
 			&:hover,&:focus{
 				color: $black;
-				@include transThreeAll;
+				@include transAll(.3s);
 			}
 		}
 		&.flippy-next{

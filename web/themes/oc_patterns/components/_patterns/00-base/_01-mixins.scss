@@ -97,7 +97,7 @@
 }
 
 ///mixin - column-count
-@mixin columns($columns, $gap){
+@mixin cssColumns($columns, $gap){
 	-webkit-column-count: #{$columns};
 	-moz-column-count: #{$columns};
 	column-count: #{$columns};
@@ -155,7 +155,7 @@
 	&:hover,&:focus{
 		border-color: $darkGrey;
 		@include opacity(.7);
-		@include transThreeAll;
+		@include transAll(.3s);
 	}
 }
 

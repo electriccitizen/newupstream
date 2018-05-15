@@ -11,7 +11,7 @@
 }
 .view-content a,.card a{
 	//from 02-animations.scss
-	@include transThreeAll;
+	@include transAll(.3s);
 }
 
 

@@ -23,7 +23,7 @@
 				background-color: $link;
 				color: $white;
 				//from 02-animations.scss
-				@include transThreeAll;
+				@include transAll(.3s);
 			}
 		}
 	}
@@ -37,7 +37,7 @@
 				color: $white;
 				border-color: $borderRule;
 				//from 02-animations.scss
-				@include transThreeAll;
+				@include transAll(.3s);
 			}
 		}
 	}
@@ -51,7 +51,7 @@
 				color: $black;
 				border-color: $white;
 				//from 02-animations.scss
-				@include transThreeAll;
+				@include transAll(.3s);
 			}
 		}
 	}//end image

@@ -9,7 +9,7 @@
 			&:hover,&:focus{
 				color: $link;
 				//from 02-animations.scss
-				@include transThreeAll;
+				@include transAll(.3s);
 			}
 		}
 	}
@@ -18,7 +18,7 @@
 		@include listReset;
 		a:hover,a:focus{
 			//from 02-animations.scss
-			@include transThreeAll;
+			@include transAll(.3s);
 		}
 	}
 }//end book navigation

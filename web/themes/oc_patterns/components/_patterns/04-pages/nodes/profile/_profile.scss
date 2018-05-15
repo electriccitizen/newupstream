@@ -59,7 +59,7 @@
 	.field-email,.field-phone{
 		a{
 			//from 03-animations.scss
-			@include transThreeAll;
+			@include transAll(.3s);
 		}
 	}
 

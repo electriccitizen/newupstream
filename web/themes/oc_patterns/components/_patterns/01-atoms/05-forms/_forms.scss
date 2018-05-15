@@ -90,7 +90,7 @@
 	&:hover,&:focus{
 		background: $buttonBackHover;
 		//from 02-animations.scss
-		@include transThreeAll;
+		@include transAll(.3s);
 		color: $white;
 	}
 }

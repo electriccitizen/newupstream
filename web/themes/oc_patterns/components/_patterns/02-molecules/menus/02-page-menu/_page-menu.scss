@@ -19,14 +19,14 @@
 			display: none;
 			padding-left: 12px;
 			//from 02-animations.scss
-			@include transThreeAll;
+			@include transAll(.3s);
 			li{
 				//reset sub menus to base font size
 				//from text.scss
 				@include baseFontSize;
 				a:hover{
 					//from 02-animations.scsss
-					@include transThreeAll;
+					@include transAll(.3s);
 				}
 			}
 		}

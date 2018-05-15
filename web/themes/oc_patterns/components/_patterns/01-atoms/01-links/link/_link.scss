@@ -10,7 +10,7 @@ a {
 		text-decoration: underline;
 		.field.body &,.field-oc-long-text &{
 			//from 02-animations.scss
-			@include transThreeAll;
+			@include transAll(.3s);
 		}
 	}
 }
@@ -20,6 +20,6 @@ a {
 .pl a.alt{
 	&:hover{
 		//from 02-animations.scss
-		@include transThreeAll;
+		@include transAll(.3s);
 	}
 }

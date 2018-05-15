@@ -59,7 +59,7 @@
 						text-indent: 0;
 						&:hover,&:active,&:focus{
 							background: $midGrey;
-							@include transThreeAll;
+							@include transAll(.3s);
 						}
 						@include tab{
 							padding: .5em 3em;
@@ -102,7 +102,7 @@
 .pl .search-header a{
 	&:hover,&:focus{
 		//from 03-animations.scss
-		@include transThreeAll;
+		@include transAll(.3s);
 	}
 }
 

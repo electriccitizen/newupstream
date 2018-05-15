@@ -168,23 +168,15 @@
 /* Simple Animations
 ----------------- */
 
-///mixin - transTwoAll
-@mixin transTwoAll{
-	transition: all .2s ease;
-	-moz-transition: all .2s ease;
-	-webkit-transition: all .2s ease;
+///mixin - transAll
+@mixin transAll($time){
+	transition: all $time ease;
+	-moz-transition: all $time ease;
+	-webkit-transition: all $time ease;
 	-webkit-transform: translateZ(0);
 }
 
-///mixin - transThreeAll
-@mixin transThreeAll{
-	transition: all .3s ease;
-	-moz-transition: all .3s ease;
-	-webkit-transition: all .3s ease;
-	-webkit-transform: translateZ(0);
-}
-
-///mixin - transThreeAll
+///mixin - transAll(.3s)
 @mixin transClear{
 	transition: none;
 	-moz-transition: none;
