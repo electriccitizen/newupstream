@@ -8,9 +8,7 @@
 	.addtoany_list > a{
 		padding: 0 1px;
 		&:hover,&:focus{
-			//from 01-mixins.scss 
-			@include opacity(.7);
-			//from 02-animations.scss 
+			@include opacity(.7); 
 			@include transAll(.3s);
 		}
 	}

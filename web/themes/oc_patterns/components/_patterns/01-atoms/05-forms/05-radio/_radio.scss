@@ -27,7 +27,6 @@
 	}
 	//custom radio buttons (defined in forms.scss, set with variable from macros.twig)
 	.custom-options &{
-		//from forms.scss
 		@include customOptions;
 		label:before{
 			border-radius: 50%;

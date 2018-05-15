@@ -7,9 +7,7 @@
 ------------- */
 .blog.all-posts{
 	.view-widget &{
-		//from 01-mixins.scss 
 		@include paddedText;
-		//from 01-mixins.scss 
 		@include auto;
 	}
 
@@ -41,7 +39,6 @@
 	//date and author
 	.views-field-nothing{
 		.metatext{
-			//from 01-text.scss 
 			@include textDate;
 			margin-bottom: 1em;
 		}
@@ -53,9 +50,7 @@
 ------------- */
 .events.all-upcoming-events{
 	.view-widget &{
-		//from 01-mixins.scss 
 		@include paddedText;
-		//from 01-mixins.scss 
 		@include auto;
 	}
 	.view-content{
@@ -68,9 +63,7 @@
 ------------- */
 .news.all-news{
 	.view-widget &{
-		//from 01-mixins.scss 
 		@include paddedText;
-		//from 01-mixins.scss 
 		@include auto;
 	}
 	.view-content{
@@ -83,9 +76,7 @@
 ------------- */
 .profiles.all-staff{
 	.view-widget &{
-		//from 01-mixins.scss 
-		@include paddedText;
-		//from 01-mixins.scss 
+		@include paddedText; 
 		@include auto;
 	}
 	.view-content{
@@ -97,8 +88,7 @@
 		}
 	}	
 	.views-field-field-profile-image{
-		.view-mode-square{
-			//from 01-mixins.scss 
+		.view-mode-square{ 
 			@include auto;
 			img{
 				display: block;

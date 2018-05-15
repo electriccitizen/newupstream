@@ -61,13 +61,10 @@ a[href$='.pdf']{
 		top: 4px;
 		width: 15px;
 		height: 18px;
-		//from icon_sprite.scss 
 		@include sprite-file-pdf;
-		//from 03-background-sizes.scss
 		@include iconSize;
 	}
 	&:hover:before,&:focus:before{
-		//from 01-mixins.scss 
 		@include opacity(.7);
 	}
 }
@@ -83,13 +80,10 @@ a[href$='.doc'],a[href$=".docx"]{
 		top: 4px;
 		width: 15px;
 		height: 18px;
-		//from icon_sprite.scss 
 		@include sprite-file-word;
-		//from 03-background-sizes.scss 
 		@include iconSize;
 	}
 	&:hover:before,&:focus:before{
-		//from 01-mixins.scss 
 		@include opacity(.7);
 	}
 }
@@ -105,13 +99,10 @@ a[href$='.xls'],a[href$=".xlsx"]{
 		top: 4px;
 		width: 15px;
 		height: 18px;
-		//from icon_sprite.scss 
 		@include sprite-file-xls;
-		//from 03-background-sizes.scss 
 		@include iconSize;
 	}
 	&:hover:before,&:focus:hover{
-		//from 01-mixins.scss 
 		@include opacity(.7);
 	}
 }
@@ -127,13 +118,10 @@ a[href$='.ppt'],a[href$=".pptx"]{
 		top: 4px;
 		width: 15px;
 		height: 18px;
-		//from icon_sprite.scss 
-		@include sprite-file-ppt;
-		//from 03-background-sizes.scss 
+		@include sprite-file-ppt; 
 		@include iconSize;
 	}
 	&:hover:before,&:focus:hover{
-		//from 01-mixins.scss 
 		@include opacity(.7);
 	}
 }

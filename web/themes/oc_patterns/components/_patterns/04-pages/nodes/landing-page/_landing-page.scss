@@ -10,7 +10,6 @@
 		}
 		.field-banner{
 			opacity: 0;
-			//from 02-animations.scss
 			@include animation('fadeIn 1.2s 1 forwards');
 			img{
 				width: 100%;
@@ -33,7 +32,6 @@
 
 
 	.block-region-main{
-		//from node.scss
 		@include mainContent;
 		.field.body{
 			p{

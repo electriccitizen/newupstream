@@ -10,7 +10,6 @@
 			max-width: $maxWidth;
 			padding-left: 20px;
 			padding-right: 20px;
-			//from 01-mixins.scss
 			@include auto;
 			width: 100%;
 		}

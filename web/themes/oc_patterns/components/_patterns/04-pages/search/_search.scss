@@ -75,7 +75,7 @@
 							}
 						}
 					}
-				}//end foirm
+				}//end form
 			}//end block search form
 
 			h2.results-header{
@@ -101,7 +101,6 @@
 ------------------ */
 .pl .search-header a{
 	&:hover,&:focus{
-		//from 03-animations.scss
 		@include transAll(.3s);
 	}
 }

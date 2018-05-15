@@ -16,9 +16,7 @@
 	//allow map to override layout margins on mobile
 	.field-location{
 		@include onlySmall{
-			//from 01-mixins.scss
 			@include edgeToEdge;
-			//from 01-mixins.scss
 			@include calc(max-width, "100% + 40px");
 		}
 	}
@@ -33,9 +31,7 @@
 		width: 100%;
 		max-width: 200%;
 		@include onlySmall{
-			//from 01-mixins.scss
 			@include edgeToEdge;
-			//from 01-mixins.scss
 			@include calc(width, "100% + 40px");
 		}
 	}

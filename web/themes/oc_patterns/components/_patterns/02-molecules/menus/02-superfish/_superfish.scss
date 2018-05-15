@@ -153,7 +153,6 @@
 			&:after{
 				content: '';
 				display: inline-block;
-				//from 03-background-sizes.scss
 				@include deskMenuArrow;
 				padding: 0;
 				position: relative;
@@ -162,7 +161,6 @@
 			}
 			&:hover{
 				&:after{
-					//from 03-background-sizes.scss
 					@include deskMenuArrowActive;
 				}
 			}
@@ -238,7 +236,6 @@
 				padding: 8px 40px;
 				//downsizing for all toggler 3 and below
 				&:after{
-					//from 03-background-sizes.scss
 					@include deskSubSize;
 					height: 15px;
 					width: 15px;
@@ -246,7 +243,6 @@
 				}
 				&:hover,&:focus{
 					&:after{
-						//from 03-background-sizes.scss
 						@include deskSubSize;
 					}
 				}
@@ -265,7 +261,6 @@
 			clip: inherit;
 			width: 100% !important;
 			padding: 10px 0 !important;
-			//from 01-mixins.scss
 			@include clearFix;
 			overflow: visible !important;
 			& > li{
@@ -330,30 +325,25 @@ ul.sf-menu.sf-accordion{
 				top: 50%;
 				left: 50%;
 				margin: 0;
-				//from 01-mixins.scss
 				@include translate(-50%, -50%);
 				content: '';
 				background-color: transparent;
 				height: 18px;
 				width: 18px;
-				//from 03-background-sizes.scss
 				@include mobileMenuOpen;
 			}
 			&:hover{
 				&:after{
-					//from 03-background-sizes.scss
 					@include mobileMenuActive;
 				}
 			}
 		}//end accordion button
 
 		&.menuparent{
-			//from 01-mixins.scss
 			@include clearFix;
 			a{
 				&:not(.sf-accordion-button){
 					padding-right: 0;
-					//from 01-mixins.scss
 					@include calc(width, "100% - 60px");
 				}
 			}
@@ -361,18 +351,15 @@ ul.sf-menu.sf-accordion{
 
 		&.active-trail > .sf-accordion-button{
 			&:after{
-				//from 03-background-sizes.scss
 				@include mobileMenuActive;
 			}
 			&:hover:after{
-				///from 03-background-sizes.scss
 				@include mobileMenuOpen;
 			} 
 		}
 		&.sf-expanded > .sf-accordion-button{
 			&:after,&:hover:after{
 				content: '';
-				//from 03-background-sizes.scss
 				@include mobileMenuClose;
 			}
 		}
@@ -472,7 +459,6 @@ ul.sf-menu.sf-accordion{
 		.menuparent{
 			position: relative;
 			& > ul{
-				//from 01-mixins.scss
 				@include listReset;
 				margin-top: 10px;
 				position: absolute;
@@ -494,7 +480,6 @@ ul.sf-menu.sf-accordion{
 			display: none;
 		}
 		ul{
-			//from 01-mixins.scss
 			@include listReset;
 			&.sf-main{
 				position: relative;
@@ -514,7 +499,6 @@ ul.sf-menu.sf-accordion{
 				left: 50%;
 				margin: 0;
 				display: block;
-				//from 01-mixins.scss
 				@include translate(-50%, -50%);
 			}
 		}

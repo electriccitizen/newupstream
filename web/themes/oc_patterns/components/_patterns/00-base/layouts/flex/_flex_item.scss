@@ -9,12 +9,10 @@ FLEX ITEMS
 	min-height: 0;
 	min-width: 0;
 	&:not(.fill){
-		//from 01-mixins.scss
 		@include safeFlexSize(0,0,100%);
 	}
 	//use auto for fill-remainder widget layout
 	&.fill{
-		//from 01-mixins.scss
 		@include safeFlexSize(0,0,auto);
 	}
 
@@ -62,7 +60,6 @@ FLEX ITEMS
 			}
 		}
 		&.quarter,&.third{
-			//from 01-mixins.scss
 			@include safeFlexSize(0,0,50%);
 		}
 	}
@@ -70,23 +67,18 @@ FLEX ITEMS
 	//percents at content width
 	@include maxWidth{
 		&.quarter{
-			//from 01-mixins.scss
 			@include safeFlexSize(0,0,25%);
 		}
 		&.third{
-			//from 01-mixins.scss
 			@include safeFlexSize(0,0,33.333%);
 		}
 		&.half{
-			//from 01-mixins.scss
 			@include safeFlexSize(0,0,50%);
 		}
 		&.two-thirds{
-			//from 01-mixins.scss
 			@include safeFlexSize(0,0,66.666%);
 		}
 		&.three-quarter{
-			//from 01-mixins.scss
 			@include safeFlexSize(0,0,75%);
 		}
 	}

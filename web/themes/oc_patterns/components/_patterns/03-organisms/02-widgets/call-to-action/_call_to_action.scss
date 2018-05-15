@@ -22,7 +22,6 @@
 			&:hover,&:focus{
 				background-color: $link;
 				color: $white;
-				//from 02-animations.scss
 				@include transAll(.3s);
 			}
 		}
@@ -36,7 +35,6 @@
 				background-color: $transBlack;
 				color: $white;
 				border-color: $borderRule;
-				//from 02-animations.scss
 				@include transAll(.3s);
 			}
 		}
@@ -50,7 +48,6 @@
 				background-color: $transWhite;
 				color: $black;
 				border-color: $white;
-				//from 02-animations.scss
 				@include transAll(.3s);
 			}
 		}
@@ -60,11 +57,9 @@
 	& > .widget-color,& > .image{
 		overflow: hidden;
 		& > *{
-			//from 01-mixins.scss
 			@include translate3d(0, 150%, 0);
 		}
 		&.slideUp > *{
-			//from 02-animations.scsss
 			@include animation('slideInUp 1s 1 ease-out forwards');
 		}
 	}

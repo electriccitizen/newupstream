@@ -25,7 +25,6 @@
 	}
 	&:hover,&:focus {
 		background-color: $midGrey;
-		//from 02-animations.scss
 		@include transAll(.3s);
 	}
 }
@@ -40,7 +39,6 @@
 		background: $outlineColor;
 		color: $black;
 		border-color: $outlineColor;
-		//from 02-animations.scss
 		@include transAll(.3s);
 	}
 }

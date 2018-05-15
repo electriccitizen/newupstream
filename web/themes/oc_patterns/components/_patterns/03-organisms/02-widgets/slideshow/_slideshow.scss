@@ -31,14 +31,12 @@
 		&.slick-next:hover,&.slick-next:focus{
 			&:before{
 				border-left-color: $link;
-				//from 01-mixins.scss 
 				@include transition(border-left-color, .3s, ease);
 			}
 		}
 		&.slick-prev:hover,&.slick-prev:focus{
 			&:before{
 				border-right-color: $link;
-				//from 01-mixins.scss 
 				@include transition(border-right-color, .3s, ease);
 			}
 		}
@@ -51,7 +49,6 @@
 .slick-slider{
 	@include sliderTriangle;
 	.slick-list{
-		//from 01-mixins.scss 
 		@include listReset;
 	}
 

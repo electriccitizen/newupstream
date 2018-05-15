@@ -10,7 +10,6 @@
 
 	//top level
 	& > ul{
-		//from 01-mixins.scss
 		@include listReset;
 
 		//child menus
@@ -18,14 +17,11 @@
 			margin: .25em 0;
 			display: none;
 			padding-left: 12px;
-			//from 02-animations.scss
 			@include transAll(.3s);
 			li{
 				//reset sub menus to base font size
-				//from text.scss
 				@include baseFontSize;
 				a:hover{
-					//from 02-animations.scsss
 					@include transAll(.3s);
 				}
 			}
@@ -74,9 +70,7 @@
 				& > ul{
 					display: block;
 					height: 0;
-					//from 02-animations.scss
 					@include animation(slideDown .2s 1 forwards);
-					//from 01-mixins.scss
 					@include backfaceVisibility(hidden);
 				}
 				& > a{
@@ -113,14 +107,12 @@
 				width: 20px;
 				top: 8px;
 				right: 8px;         
-				//from 03-background-sizes.scss
 				@include sideDropArrow;
 			}
 		}
 		//icons when open, focused
 		&.select2-container--open,&:focus{
 			.select2-selection--single .select2-selection__arrow{
-				//from background-sizes.scss
 				@include sideDropArrowActive;
 			}
 		}
@@ -137,7 +129,6 @@
 			right: 0;
 		}
 		@include breakpoint (1240px){
-			//from 01-mixins.scss
 			@include calc(right, "50vw - 620px");
 		}
 		h2.block-title{

@@ -7,7 +7,6 @@
 	//use flex to support layout field
 	@include safeFlex(row,wrap,null,null);
 	//override layout padding
-	//from 01-mixins.scss
 	@include edgeToEdge;
 	// preserve layout padding and prevent backgrounds from overflowing when next to sidebars
 	.beaker .main &,.bunsen .main &{
@@ -35,7 +34,6 @@
 		color: $transBlack;
 		&:hover,&:focus{
 			color: $black;
-			//from 02-animations.scss
 			@include transAll(.3s);
 		}
 	}
@@ -43,7 +41,6 @@
 		color: $black;
 		&:hover,&:focus{
 			color: $transBlack;
-			//from 02-animations.scss
 			@include transAll(.3s);
 		}
 	}
@@ -66,7 +63,6 @@
 		color: $transWhite;
 		&:hover,&:focus{
 			color: $white;
-			//from 02-animations.scss
 			@include transAll(.3s);
 		}
 	}
@@ -74,7 +70,6 @@
 		color: $white;
 		&:hover,&:focus{
 			color: $transWhite;
-			//from 02-animations.scss
 			@include transAll(.3s);
 		}
 	}
@@ -112,7 +107,6 @@
 	position: relative;
 	background-position: center !important;
 	background-size: cover !important;
-	//from 01-mixins.scss
 	@include overlay;
 	& *{
 		position: relative;

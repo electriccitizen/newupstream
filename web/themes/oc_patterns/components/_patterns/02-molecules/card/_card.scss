@@ -10,7 +10,6 @@
 	@include listReset;
 }
 .view-content a,.card a{
-	//from 02-animations.scss
 	@include transAll(.3s);
 }
 
@@ -19,7 +18,6 @@
 .card-image{
 	margin-bottom: 1em;
 	a img{
-		//from 01-mixins.scss
 		@include imageHover;
 	}
 }//end card-image
@@ -33,7 +31,6 @@
 			height: auto;
 			border-radius: 50%;
 			display: block;
-			//from 01-mixins.scss
 			@include auto;
 		}
 	}
@@ -48,7 +45,6 @@
 		margin-top: 0;
 	}
 	.date{
-		//from text.scss
 		@include textDate;
 		margin-bottom: .5em;
 	}

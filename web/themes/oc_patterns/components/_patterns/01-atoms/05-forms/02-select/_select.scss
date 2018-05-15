@@ -52,7 +52,6 @@ body .select2-container--default{
 			width: 15px;
 			height: 15px;
 			background: $link;
-			//from 03-background-sizes.scss
 			@include dropArrow;
 			top: 11px;
 			right: 10px;
@@ -94,15 +93,12 @@ body .select2-container--default{
 				width: 15px;
 				height: 15px;
 				background-color: $link;
-				//from 03-background-sizes.scss
 				@include dropArrow;
 			}
 			input.select2-search__field{
 				color: $darkGrey;
-				//from forms.scss
 				@include placeholder;
 				&:focus{
-					//from forms.scss
 					@include placeholderFocus;
 				}
 			}
@@ -125,7 +121,6 @@ body .select2-container--default{
 		//single
 		.select2-selection--single{
 			.select2-selection__arrow{
-				//from 03-background-sizes.scss
 				@include dropArrowActive;
 			}
 		}
@@ -134,14 +129,11 @@ body .select2-container--default{
 		.select2-selection--multiple{			
 			.select2-search--inline{ 
 				&:after{
-					//from 03-background-sizes.scss
 					@include dropArrowActive;
 				}
 				input.select2-search__field{
-					//from forms.scss
 					@include placeholder;
 					&:focus{
-						//from forms.scss
 						@include placeholderFocus;
 					}
 				}

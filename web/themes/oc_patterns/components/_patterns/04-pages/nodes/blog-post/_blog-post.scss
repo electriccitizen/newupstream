@@ -15,7 +15,6 @@
 			@include tab{
 				.field-banner{
 					position: relative;
-					///from 01-mixins.scss
 					@include overlay;
 				}
 			}
@@ -34,7 +33,6 @@
 		.block-entity-fieldnodetitle{
 			//date and author
 			.metatext{
-				//from text.scss
 				@include textDate;
 				padding: 0 20px;
 				margin-bottom: 1.5em;
@@ -46,7 +44,6 @@
 				top: 45%;
 				left: 0;
 				width: 100%;
-				//from 01-mixins.scss
 				@include translateY(-50%);
 				z-index: 10;
 				color: $white;
@@ -55,7 +52,6 @@
 					margin-bottom: .25em;
 				}
 				.metatext{
-					///from 01-mixins.scss
 					@include opacity(1);
 				}
 			}
@@ -82,14 +78,12 @@
 
 
 	.block-region-main{
-		//from node.scss
 		@include mainContentSide;
 
 		//author
 		.block-entity-fieldnodefield-author{
 			margin-bottom: 2em;
 			max-width: $maxWidthText;
-			//from 01-mixins.scss
 			@include auto;
 			.profile-teaser{
 				.field-profile-image{
@@ -97,16 +91,13 @@
 						border-radius: 50%;
 						max-width: 200px;
 						display: block;
-						//from 01-mixins.scss
 						@include auto;
 						margin-bottom: 1em;
-						//from 01-mixins.scss
 						@include imageHover;
 					}
 				}
 				.info{
 					a:hover,&:focus{
-						//from 02-animations.scss
 						@include transAll(.3s);
 					}
 				}
@@ -140,9 +131,7 @@
 					}
 				}
 				a{
-					//from text.scss
 					@include smaller;
-					//from 02-animations.scss
 					@include transAll(.3s);
 				}
 			}
@@ -155,7 +144,6 @@
 		padding: 0 20px;
 		.block-flippy-block{
 			max-width: $maxWidth;
-			//from 01-mixins.scss
 			@include auto;
 		}
 	}
@@ -180,7 +168,6 @@
 				.icon{
 					height: 32px;
 					width: 32px;
-					//from 03-background-sizes.scss
 					@include a2aSize;
 				}
 			}

@@ -20,7 +20,6 @@
 		right: 0;
 		height: 24px;
 		width: 24px;
-		//from 03-background-sizes
 		@include hamburger;
 	}
 	&:hover,&:focus{
@@ -37,7 +36,6 @@
 	}
 	&.sf-expanded{
 		&:before{
-			//from 03-background-sizes;
 			@include hamburger-expanded;
 		}
 	}

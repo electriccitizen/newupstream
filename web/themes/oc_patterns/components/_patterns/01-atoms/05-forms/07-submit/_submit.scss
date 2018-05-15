@@ -3,7 +3,6 @@
 =============== */
 
 input[type="submit"]{
-	//from forms.scss
 	@include formSubmit;
 	font-size: 15px;
 }

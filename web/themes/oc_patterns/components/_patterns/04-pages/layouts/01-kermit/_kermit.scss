@@ -4,14 +4,12 @@
 
 .kermit{
 	.top{
-		//from layouts.scss
 		@include top;
 	}
 	.main{
 		width: 100%;
 		padding: 2em 20px 0;
 		max-width: $maxWidth;
-		//from 01-mixins.scss
 		@include auto;
 	}
 	.bottom{
@@ -54,7 +52,6 @@
 			margin-bottom: 0;
 			background: $siteBack;
 			.body{
-				//from 01-mixins.scss
 				@include paddedText;
 				@include auto;
 				padding: 2em 20px 5em;

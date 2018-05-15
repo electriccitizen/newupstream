@@ -16,7 +16,6 @@
 		text-align: right;
 	}
 	ul{
-		//from 01-mixins.scss
 		@include listReset;
 		@include safeFlex(row,wrap,null,null);
 		li{

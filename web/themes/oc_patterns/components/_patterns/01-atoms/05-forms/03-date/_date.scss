@@ -4,7 +4,6 @@
 
 .js-form-type-date {
 	input{
-		//from forms.scss
 		@include textInput;
 		max-width: 180px;
 	}

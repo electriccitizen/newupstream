@@ -5,14 +5,12 @@
 @mixin fileUpload{
 	.js-form-managed-file,.form-managed-file{
 		input.js-form-submit,input.form-submit{
-			//from forms.scss
 			@include formSubmit;
 			font-size: 13px;
 			padding: .5em 2em;
 		}
 		//allowed upload file types description
 		.description{
-			//from text.scss
 			@include xSmaller;
 			line-height: 1.25em;
 			opacity: .7;

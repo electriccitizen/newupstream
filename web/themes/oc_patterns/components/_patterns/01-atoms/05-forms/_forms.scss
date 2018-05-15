@@ -69,14 +69,12 @@
 		position: relative;
 		top: -1px;
 		right: -.25em;
-		//from text.scss
 		@include xSmaller;
 	}
 }
 
 ///mixin - form-submit
 @mixin formSubmit{
-	//from 01-mixins.scss
 	@include browserWipe;
 	background: $buttonBack;
 	font-weight: $heavy;
@@ -89,7 +87,6 @@
 	color: $black;
 	&:hover,&:focus{
 		background: $buttonBackHover;
-		//from 02-animations.scss
 		@include transAll(.3s);
 		color: $white;
 	}
@@ -135,7 +132,6 @@
 -------------------- */
 //wipe browser appearance from inputs
 input[type=text], input[type=search], input[type=url], input[type=number], textarea, input[type="search"] {
-	//from 01-mixins.scss
 	@include browserWipe;
 }
 
@@ -167,7 +163,6 @@ input[type=text], input[type=search], input[type=url], input[type=number], texta
 
 //descriptions
 .description{
-	//from text.scss
 	@include smaller;
 }
 input + .description{
@@ -182,7 +177,6 @@ fieldset{
 	margin: 0;
 	legend{
 		font-weight: $heavy;
-		//from text.scss
 		@include larger;
 		margin-bottom: .5em;
 	}

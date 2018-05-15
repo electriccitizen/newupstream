@@ -5,13 +5,11 @@
 	//body
 	.block-entity-fieldnodebody{
 		max-width: $maxWidth;
-		//from 01-mixins.scss
 		@include auto;
 		margin-bottom: 2em;
 	}
 	.block-entity-fieldnodefield-oc-widgets{
 		max-width: $maxWidth;
-		//from 01-mixins.scss
 		@include auto
 	}
 }
@@ -20,13 +18,11 @@
 	//body
 	.block-entity-fieldnodebody{
 		max-width: $maxWidthText;
-		//from 01-mixins.scss
 		@include auto;
 		margin-bottom: 2em;
 	}
 	.block-entity-fieldnodefield-oc-widgets{
 		max-width: $maxWidth;
-		//from 01-mixins.scss
 		@include auto
 	}
 }

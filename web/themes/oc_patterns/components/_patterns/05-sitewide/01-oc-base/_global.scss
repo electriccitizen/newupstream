@@ -91,9 +91,7 @@ div{
 /* ADMIN NODE EDIT TABS
 ----------------- */
 .block-local-tasks-block{
-	//from 01-mixins.scss 
 	@include paddedContent;
-	//from 01-mixins.scss 
 	@include auto;
 	margin-top: 2em;
 	.tabs {

@@ -8,16 +8,13 @@
 			color: $black;
 			&:hover,&:focus{
 				color: $link;
-				//from 02-animations.scss
 				@include transAll(.3s);
 			}
 		}
 	}
 	ul{
-		//from 01-mixins.scss
 		@include listReset;
 		a:hover,a:focus{
-			//from 02-animations.scss
 			@include transAll(.3s);
 		}
 	}

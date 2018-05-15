@@ -74,7 +74,6 @@
 		&:hover,&:focus{
 			background: $midGrey;
 			color: $white;
-			//from animations.scss
 			@include transAll(.3s);
 		}
 	}
@@ -87,7 +86,6 @@
 		overflow: hidden;
 		background: $offWhite;
 		padding: 0 2em;
-		//from 02-animations.scss
 		@include transTwoAll;	
 	}
 
@@ -134,20 +132,16 @@
 				display: block;
 				width: 20px;
 				height: 20px;
-				//from icon_sprite.scss
 				@include sprite-accordion-shut;
-				//from 03-background-sizes.scss
 				@include accordcaretSize;
 			}
 			&:hover:after,&:focus:after{
 				content: '';
-				//from 03-background-sizes.scss
 				@include accordcaretShutHover;
 			}
 		}
 		&.accord-active .accordion-header:after{
 			content: '';
-			//from 03-background-sizes.scss
 			@include accordcaretOpen;
 		}
 
@@ -155,20 +149,16 @@
 		&.red{
 			.accordion-header{
 				&:after{
-					//from icon_sprites.scss
 					@include sprite-accordion-shut-red;
-					//from 03-background-sizes.scss
 					@include accordcaretSize;
 				}
 				&:hover:after,&:focus:after{
 					content: '';
-					//from 03-background-sizes.scss
 					@include accordcaretShutHover;
 				}
 			}
 			&.accord-active .accordion-header:after{
 				content: '';
-				//from 03-background-sizes.scss
 				@include accordcaretOpen;
 			}
 		}//end caret-red
@@ -177,20 +167,16 @@
 		&.black{
 			.accordion-header{
 				&:after{
-					//from icon_sprites.scss
 					@include sprite-accordion-shut-black;
-					//from 03-background-sizes.scss
 					@include accordcaretSize;
 				}
 				&:hover:after,&:focus:after{
 					content: '';
-					//from 03-background-sizes.scss
 					@include accordcaretShutHover;
 				}
 			}
 			&.accord-active .accordion-header:after{
 				content: '';
-				//from 03-background-sizes.scss
 				@include accordcaretOpen;
 			}
 		}//end caret-black

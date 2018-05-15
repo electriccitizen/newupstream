@@ -156,7 +156,6 @@
 		width: 100%;
 		margin-bottom: 1em;
 		ul{
-			//from 01-mixins.scss 
 			@include listReset;
 			.include-tag{
 				color: $blue;

@@ -7,7 +7,6 @@
 	//Wrapper sizing (needs to be changed when image styles are changed or added to widget)
 	.image-wrapper{
 		max-width: $maxWidth;
-		//from 01-mixins.scss
 		@include auto;
 		&.small{
 			max-width: 300px;
@@ -34,9 +33,7 @@
 	//override layout padding on mobile
 	img{
 		@include onlySmall{
-			//from 01-mixins.scss
 			@include edgeToEdge;
-			//from 01-mixins.scss
 			@include calc(max-width, "100% + 40px");
 		}
 	}
@@ -45,7 +42,6 @@
 	a:hover{
 		text-decoration: none;
 		img{
-			//from 01-mixins.scss
 			@include imageHover;
 		}
 	}

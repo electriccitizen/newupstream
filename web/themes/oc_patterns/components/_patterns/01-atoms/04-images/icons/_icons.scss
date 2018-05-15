@@ -18,7 +18,6 @@ a.icon{
 	display: block;
 	&:hover,&:focus{
 		color: $hoverLink;
-		//from 02-animations.scss
 		@include transAll(.3s);
 	}
 	svg{
@@ -34,7 +33,6 @@ a.icon{
 	display: inline-block;
 	width: 60px;
 	height: 60px;
-	//from 03-background-sizes.scss
 	@include plIconSize;
 }
 .pl .icons-demo{

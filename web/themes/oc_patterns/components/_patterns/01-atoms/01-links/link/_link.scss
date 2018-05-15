@@ -9,7 +9,6 @@ a {
 		color: $hoverLink;
 		text-decoration: underline;
 		.field.body &,.field-oc-long-text &{
-			//from 02-animations.scss
 			@include transAll(.3s);
 		}
 	}
@@ -19,7 +18,6 @@ a {
 ------------------ */
 .pl a.alt{
 	&:hover{
-		//from 02-animations.scss
 		@include transAll(.3s);
 	}
 }

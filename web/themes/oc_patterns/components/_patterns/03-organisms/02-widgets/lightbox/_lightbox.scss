@@ -18,7 +18,6 @@
 		overflow: hidden;
 		img{
 			width: 100%;
-			//from 01-mixins.scss
 			@include imageHover;
 		}
 
@@ -139,30 +138,25 @@
 .paragraph--type--lightbox-gallery{
 	.image-gal{
 		.view-mode-large-thumb{
-			//from 01-mixins.scss
 			@include opacity(0);
 		}
 		&:nth-of-type(4n+1){
 			.view-mode-large-thumb.randomEntrance{
-				//from 02-animations.scss
 				@include animation('fadeIn .1s .9s forwards');
 			}
 		}
 		&:nth-of-type(4n+2){
 			.view-mode-large-thumb.randomEntrance{
-				//from 02-animations.scss
 				@include animation('fadeIn 1.3s .9s forwards');
 			}
 		}
 		&:nth-of-type(4n+3){
 			.view-mode-large-thumb.randomEntrance{
-				//from 02-animations.scss
 				@include animation('fadeIn .7s .9s forwards');
 			}
 		}
 		&:nth-of-type(4n+4){
 			.view-mode-large-thumb.randomEntrance{
-				//from 02-animations.scss
 				@include animation('fadeIn 1.8s .9s forwards');
 			}
 		}
