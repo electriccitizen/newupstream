@@ -77,20 +77,6 @@ third_party_settings:
             context_mapping:
               entity: '@panelizer.entity_context:entity'
             uuid: 2546e9ea-3be3-42fd-87d4-63e2f45c4ef3
-          6bc4426f-84e4-480e-bdfa-44eef6803301:
-            id: 'menu_block:main'
-            label: 'Main navigation'
-            provider: menu_block
-            label_display: '0'
-            level: 1
-            depth: 0
-            expand: 1
-            parent: 'main:'
-            suggestion: main
-            region: top
-            weight: 1
-            uuid: 6bc4426f-84e4-480e-bdfa-44eef6803301
-            context_mapping: {  }
           3e5151e7-9435-4b23-b51c-8bde259c5732:
             id: 'entity_field:node:field_banner'
             label: Banner
