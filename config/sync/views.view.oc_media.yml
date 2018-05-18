@@ -1891,33 +1891,6 @@ display:
         - url.query_args
         - user.permissions
       tags: {  }
-  media_page_list:
-    display_plugin: page
-    id: media_page_list
-    display_title: Media
-    position: 1
-    display_options:
-      display_extenders: {  }
-      path: admin/content/media
-      menu:
-        type: tab
-        title: Media
-        description: ''
-        expanded: false
-        parent: ''
-        weight: 0
-        context: '0'
-        menu_name: main
-      display_description: ''
-    cache_metadata:
-      max-age: 0
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - url
-        - url.query_args
-        - user.permissions
-      tags: {  }
   video_browser:
     display_plugin: entity_browser
     id: video_browser

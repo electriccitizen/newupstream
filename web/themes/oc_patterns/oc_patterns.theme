@@ -30,12 +30,6 @@ function oc_patterns_preprocess_field(&$variables, $hook) {
         $view = views_embed_view($view_name,$display_name);  
         $view_output = \Drupal::service('renderer')->render($view);  
         $variables["viewfield"] = $view_output;
-  }elseif ($variables['element']['#object']->bundle() == 'slideshow') { 
-        //ksm($variables);
-        $paragraph_id = $variables['element']['#object']->id(); 
-        $view = views_embed_view('oc_widgets', 'slideshow',$paragraph_id);  
-        $view_output = \Drupal::service('renderer')->render($view);  
-        $variables["viewfield"] = $view_output;
   }elseif ($variables['element']['#object']->bundle() == 'news_by_category') { 
         //ksm($variables);
         $paragraph_id = $variables['element']['#object']->id(); 

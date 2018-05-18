@@ -3,6 +3,9 @@
 ================ */
 
 .paragraph--type--form{
+	max-width: $maxWidthText;
+	@include auto;
+	
 	.field-oc-long-text{
 		margin-bottom: 1em;
 	}

@@ -4,19 +4,16 @@
 {{block_instructions}}
 
 {% block plwidgetopen %}
-	<div class="paragraph--type--buttons">
+	<div class="paragraph--type--block-placer">
 {% endblock %}
 	{% if widget_title %}
 		<h3 class="widget-title">{{widget_title}}</h3>
 	{% endif %}
-	
-	<div class="wrapper">
-		<div class="field--name-field-block">
+		<div class="field-block">
 			{% block blockPlacer %}
 				{{ block_content }}
 			{% endblock %}
 		</div>
-	</div>
 {% block plwidgetclose %}
 	</div>
 {% endblock %}

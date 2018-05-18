@@ -2,8 +2,11 @@
    BLOCK PLACER WIDGET
 ================ */
 .paragraph--type--block-placer{
-	.wrapper{
-		max-width: $maxWidth !important;
-	}	
+	.field-block{
+		.field.body{
+			max-width: $maxWidthText;
+			@include auto;
+		}
+	}
 }//end paragraph-block-placer
 

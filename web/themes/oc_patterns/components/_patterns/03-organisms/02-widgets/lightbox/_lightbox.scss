@@ -2,10 +2,8 @@
    LIGHTBOX GALLERY WIDGET
 ==================== */
 .paragraph--type--lightbox-gallery{
-	.wrapper{
-		max-width: $maxWidth !important;
-		text-align: center;
-	}
+	text-align: center;
+
 	//hide the content before lightbox
 	.featherlight-hidden{
 		display: none;
