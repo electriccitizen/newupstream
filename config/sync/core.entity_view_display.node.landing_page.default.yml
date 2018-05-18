@@ -55,7 +55,7 @@ third_party_settings:
               weight: 0
               region: content
             region: main
-            weight: -2
+            weight: -10
             context_mapping:
               entity: '@panelizer.entity_context:entity'
             uuid: af93de64-c923-429c-b4fd-7641fd362112
@@ -72,8 +72,8 @@ third_party_settings:
               third_party_settings: {  }
               weight: 0
               region: content
-            region: main
-            weight: -1
+            region: widgets
+            weight: -2
             context_mapping:
               entity: '@panelizer.entity_context:entity'
             uuid: 2546e9ea-3be3-42fd-87d4-63e2f45c4ef3

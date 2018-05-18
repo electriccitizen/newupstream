@@ -1,16 +1,17 @@
-uuid: e0d047a0-b6ae-4a7b-8a56-b6d0da2bcca9
+uuid: 6969f387-d6b1-4514-9a34-0acc963a22b6
 langcode: en
 status: true
 dependencies:
   module:
     - paragraphs
-_core:
-  default_config_hash: B6xbC4rYsdx3A2043SE5YAhJfLq_K2YJHV6aPbN8V_k
-id: paragraph.field_two_column
-field_name: field_two_column
+id: paragraph.field_anchor_link
+field_name: field_anchor_link
 entity_type: paragraph
-type: boolean
-settings: {  }
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
 module: core
 locked: false
 cardinality: 1

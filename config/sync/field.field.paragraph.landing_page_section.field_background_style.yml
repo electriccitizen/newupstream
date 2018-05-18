@@ -1,22 +1,20 @@
-uuid: d650375c-571f-442a-b444-12578a616071
+uuid: efc53e19-e000-48f9-8834-785f99a81dbf
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_background_style
-    - paragraphs.paragraphs_type.call_to_action
+    - paragraphs.paragraphs_type.landing_page_section
   module:
     - options
-_core:
-  default_config_hash: 7tj-OO-KXic1CsC1o7SrvqoOI8TMiDBZsbBUzDfeoX0
-id: paragraph.call_to_action.field_background_style
+id: paragraph.landing_page_section.field_background_style
 field_name: field_background_style
 entity_type: paragraph
-bundle: call_to_action
+bundle: landing_page_section
 label: 'Background Style'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

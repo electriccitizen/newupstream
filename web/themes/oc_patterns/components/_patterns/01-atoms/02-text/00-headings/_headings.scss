@@ -101,7 +101,7 @@ h1 {
 	@include heading1;
 }
 
-h2:not(.block-title):not(.widget-title){
+h2:not(.block-title):not(.section-title){
 	@include heading2;
 }
 
@@ -126,14 +126,16 @@ h2+ul, h3+ul, h4+ul, h5+ul, h6+ul {
 }
 
 
-/* BLOCK AND WIDGET HEADINGS
+/* BLOCK, SECTION AND WIDGET HEADINGS
 -------------------------- */
-.block-title,.widget-title{
+.block-title{
 	@include blockTitle;
-	.block-region-sidebar &{
-		text-align: left;
-		max-width: 100%;
-	}
+}
+.section-title{
+	@include blockTitle;
+}
+.widget-title{
+	@include blockTitle;
 }
 
 

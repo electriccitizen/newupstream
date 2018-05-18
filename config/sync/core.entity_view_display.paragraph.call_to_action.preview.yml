@@ -5,15 +5,10 @@ dependencies:
   config:
     - core.entity_view_mode.paragraph.preview
     - field.field.paragraph.call_to_action.field_admin_description
-    - field.field.paragraph.call_to_action.field_background_image
-    - field.field.paragraph.call_to_action.field_background_style
-    - field.field.paragraph.call_to_action.field_layout
     - field.field.paragraph.call_to_action.field_oc_link
     - field.field.paragraph.call_to_action.field_oc_long_text
     - field.field.paragraph.call_to_action.field_widget_title
     - paragraphs.paragraphs_type.call_to_action
-  module:
-    - options
 _core:
   default_config_hash: a3idBcEqrHwu7r_cfaXHwclQ3G-A17Li5YYs-YLBY1Y
 id: paragraph.call_to_action.preview
@@ -21,13 +16,6 @@ targetEntityType: paragraph
 bundle: call_to_action
 mode: preview
 content:
-  field_layout:
-    weight: 1
-    label: inline
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: content
   field_widget_title:
     weight: 0
     label: hidden
@@ -38,7 +26,5 @@ content:
     region: content
 hidden:
   field_admin_description: true
-  field_background_image: true
-  field_background_style: true
   field_oc_link: true
   field_oc_long_text: true

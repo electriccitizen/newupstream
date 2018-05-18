@@ -34,11 +34,7 @@
 	.block-region-main{
 		@include mainContent;
 		.field.body{
-			p{
-				&:first-child{
-					font-size: 22px;				
-				}
-			}
+		
 		}
 	}
 }//end landing-page

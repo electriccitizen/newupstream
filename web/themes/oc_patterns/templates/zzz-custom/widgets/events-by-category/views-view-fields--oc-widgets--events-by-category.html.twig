@@ -39,7 +39,7 @@
 {% endif %}
 
 <div class="card-text">
-	<h3><a href="{{ fields.path.content|striptags|trim }}">{{ fields.title.content }}</a></h3>
+	<h4><a href="{{ fields.path.content|striptags|trim }}">{{ fields.title.content }}</a></h4>
 	{% if 'date' in displayFields %}
 		{{ fields.field_oc_date.content }}
 	{% endif %}

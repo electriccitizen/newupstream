@@ -10,6 +10,8 @@ kermit:
       label: Top
     main:
       label: Main Content
+    widgets:
+      label: Widget Content
     bottom:
       label: Bottom
 beaker:

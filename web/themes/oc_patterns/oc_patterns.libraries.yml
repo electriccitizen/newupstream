@@ -14,16 +14,6 @@ global-styling:
     - core/underscore
     - core/drupalSettings
     - core/jquery.once
-ct-node:
-  version: 1.0
-  js:
-    components/_patterns/04-pages/nodes/node.js: {}
-  dependencies:
-    - core/jquery
-    - core/drupal
-    - core/underscore
-    - core/drupalSettings
-    - core/jquery.once
 accordion:
   version: 1.0
   js:
@@ -86,6 +76,15 @@ slideshow:
   js:
     components/_patterns/03-organisms/02-widgets/slideshow/slideshow.js: {}
     //cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js: { type: external, minified: true }
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery.once
+widgets:
+  version: 3.0
+  js:
+    components/_patterns/03-organisms/02-widgets/widgets.js: {}
   dependencies:
     - core/jquery
     - core/drupal

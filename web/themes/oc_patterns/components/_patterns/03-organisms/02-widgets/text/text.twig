@@ -15,16 +15,14 @@
 {% endblock %}
 
 		{% if widget_title %}
-			<h2 class="widget-title">{{ widget_title }}</h2>
+			<h3 class="widget-title">{{ widget_title }}</h3>
 		{% endif %}
 
 		<div class="wrapper">
 			{% block text %}
-				<div class="{{ columns }}">
-					<div class="field field-oc-long-text">
-						<p>{{ text }}</p>
-						<p>{{ text_two }}</p>
-					</div>
+				<div class="field field-oc-long-text">
+					<p>{{ text }}</p>
+					<p>{{ text_two }}</p>
 				</div>
 			{% endblock %}
 		</div>

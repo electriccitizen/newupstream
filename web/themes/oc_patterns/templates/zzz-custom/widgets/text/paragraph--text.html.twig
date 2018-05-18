@@ -51,34 +51,20 @@
 
 {% block widgetContent %}
 
-	{# figure out if a background style is set and provide the propper wrapper #}
-	{% if (content.field_background_style[0]['#markup'] == 'image') and (content.field_background_image.0|render) %}
-	{# add class of image and set style background image #}
-		<div class="{{special}}" style="background:url({{ bgImage }}) no-repeat">
-	{% elseif (content.field_background_style[0]['#markup']|render) and (content.field_background_style[0]['#markup'] != 'image') %}
-		<div class="widget-color {{special}}">
-	{% endif %}
+	{% embed "@organisms/02-widgets/text/text.twig" 
+		with{
+			widget_title: content.field_widget_title.0['#context'].value
+		}
+	%}
+		{% block plwidgetopen %}{# remove pl only structure #}{% endblock %}
+		
+		{% block text %}
 
-		{% embed "@organisms/02-widgets/text/text.twig" 
-			with{
-				widget_title: content.field_widget_title.0['#context'].value
-			}
-		%}
-			{% block plwidgetopen %}{# remove pl only structure #}{% endblock %}
+			{{ content.field_oc_long_text}}
 			
-			{% block text %}
-				{% set columns = content.field_two_column.0['#markup'] %}
-				<div class="{{ columns }}">
-					{{ content.field_oc_long_text}}
-				</div>
-				
-			{% endblock %}
+		{% endblock %}
 
-			{% block plwidgetclose %}{# remove pl only structure #}{% endblock %}
-		{% endembed %}
-
-	{% if content.field_background_style[0]['#markup']|render %}
- 		</div>
- 	{% endif %}
+		{% block plwidgetclose %}{# remove pl only structure #}{% endblock %}
+	{% endembed %}
 
 {% endblock %}
