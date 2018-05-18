@@ -4,12 +4,9 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.slideshow.field_admin_description
-    - field.field.paragraph.slideshow.field_layout
     - field.field.paragraph.slideshow.field_oc_image_multi
     - field.field.paragraph.slideshow.field_widget_title
     - paragraphs.paragraphs_type.slideshow
-  module:
-    - options
 _core:
   default_config_hash: nssYWgY6HAl60m8YV2ayrIk83LZLKV-C5j3AsWpNLPQ
 id: paragraph.slideshow.default
@@ -17,13 +14,6 @@ targetEntityType: paragraph
 bundle: slideshow
 mode: default
 content:
-  field_layout:
-    weight: 1
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: list_key
-    region: content
   field_oc_image_multi:
     type: entity_reference_entity_view
     weight: 2

@@ -44,17 +44,10 @@ set classes = [
 ]
 %}
 {{ attach_library('oc_patterns/widgets') }}
-{% if label_hidden %}
-	<div{{ attributes.addClass(classes) }}>
-		{% for item in items %}
-			{{ item.content }}
-		{% endfor %}
-	</div>
-{% else %}
-	<div{{ attributes.addClass(classes) }}>
-		<div{{ title_attributes }}>{{ label }}</div>
-		{% for item in items %}
-			{{ item.content }}
-		{% endfor %}
-	</div>
-{% endif %}
+
+<div{{ attributes.addClass(classes) }}>
+	{% for item in items %}
+		{{ item.content }}
+	{% endfor %}
+</div>
+

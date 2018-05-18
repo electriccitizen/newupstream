@@ -29,22 +29,8 @@
  * @see template_preprocess_views_view_fields()
  */
 #}
-{% set displayFields = fields.field_display_options.content|striptags|trim %}
-
-
-{% if 'image' in displayFields %}
-	<div class="card-image">
-		{{ fields.field_banner.content }}
-	</div>
-{% endif %}
-
-<div class="card-text">
+<div class="news-item">
 	<h4><a href="{{ fields.path.content|striptags|trim }}">{{ fields.title.content }}</a></h4>
-	{% if 'date' in displayFields %}
-		{{ fields.created.content }}
-	{% endif %}
-
-	{% if 'body' in displayFields %}
-		{{ fields.body.content }}
-	{% endif %}
+	{{ fields.created.content }}
+	{{ fields.body.content }}
 </div>

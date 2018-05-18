@@ -48,7 +48,7 @@ set classes = [
 ]
 %}
 
-<div class="section{% if (content.field_background_style|render) %} background {{ content.field_background_style.0['#markup'] }}{% endif %} {{ position }}"{% if (content.field_background_style[0]['#markup'] == 'image') and (content.field_background_image.0|render) %} style="background:url({{ file_url(content.field_background_image.0['#media'].field_media_image.entity.fileuri) }}) no-repeat;background-size: cover;"{% endif %}> 
+<div class="section{% if (content.field_background_style|render) %} background {{ content.field_background_style.0['#markup'] }}{% endif %} {{ content.field_layout.0['#marukup'] }}"{% if (content.field_background_style.0['#markup'] == 'image') and (content.field_background_image.0|render) %} style="background:url({{ file_url(content.field_background_image.0['#media'].field_media_image.entity.fileuri) }}) no-repeat;background-size: cover;"{% endif %}> 
 	
 	{% set anchor = content.field_anchor_link.0['#context'].value|clean_id %}
 	{% if anchor %}<a name="{{ anchor }}" id="{{ anchor }}"></a>{% endif %}

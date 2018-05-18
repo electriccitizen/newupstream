@@ -65,7 +65,7 @@
 			{% if content.field_oc_link_multi.0 %}
 				<div class="field field-oc-link-multi">
 					{% for key, button in content.field_oc_link_multi['#items'] if key|first != '#' %}
-						<button onclick="window.location='{{ button.url }}';" title="{{ button.url }}"{% if button.options.external == 'true' %} target="_blank"{% endif %}>{{ button.title }}</button>
+						<a href="{{ button.url }}"{% if button.options.external == 'true' %} target="_blank"{% endif %}>{{ button.title }}</a>
 					{% endfor %}
 				</div>
 			{% endif %}
@@ -76,3 +76,5 @@
 	{% endembed %}
 	
 {% endblock %}
+
+

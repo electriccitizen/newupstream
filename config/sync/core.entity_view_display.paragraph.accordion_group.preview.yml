@@ -6,11 +6,8 @@ dependencies:
     - core.entity_view_mode.paragraph.preview
     - field.field.paragraph.accordion_group.field_accordion_item
     - field.field.paragraph.accordion_group.field_admin_description
-    - field.field.paragraph.accordion_group.field_layout
     - field.field.paragraph.accordion_group.field_widget_title
     - paragraphs.paragraphs_type.accordion_group
-  module:
-    - options
 _core:
   default_config_hash: dBcAEE4FictnV5HfCiQPbf5AcAnQrlm5NeQWE6N9w_Y
 id: paragraph.accordion_group.preview
@@ -25,13 +22,6 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
-    region: content
-  field_layout:
-    weight: 1
-    label: inline
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
     region: content
 hidden:
   field_accordion_item: true
