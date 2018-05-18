@@ -5,14 +5,10 @@ dependencies:
   config:
     - field.field.paragraph.accordion_group.field_accordion_item
     - field.field.paragraph.accordion_group.field_admin_description
-    - field.field.paragraph.accordion_group.field_layout
-    - field.field.paragraph.accordion_group.field_oc_long_text
     - field.field.paragraph.accordion_group.field_widget_title
     - paragraphs.paragraphs_type.accordion_group
   module:
     - entity_reference_revisions
-    - options
-    - text
 _core:
   default_config_hash: EpiAZwmNAgzRs8bsuDtcjOUrBEkuT9O9Zj8KAU33BNI
 id: paragraph.accordion_group.default
@@ -28,20 +24,6 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    region: content
-  field_layout:
-    weight: 1
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: list_key
-    region: content
-  field_oc_long_text:
-    weight: 2
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
     region: content
   field_widget_title:
     weight: 0

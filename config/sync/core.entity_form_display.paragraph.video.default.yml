@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.video.field_admin_description
-    - field.field.paragraph.video.field_layout
     - field.field.paragraph.video.field_oc_long_text
     - field.field.paragraph.video.field_oc_video
     - field.field.paragraph.video.field_widget_title
@@ -27,12 +26,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
-    region: content
-  field_layout:
-    weight: 2
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
     region: content
   field_oc_long_text:
     weight: 4

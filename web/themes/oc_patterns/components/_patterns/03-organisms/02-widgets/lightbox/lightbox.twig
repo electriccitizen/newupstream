@@ -4,7 +4,6 @@
 {{lightbox_instructions}}
 
 {% block plwidgetopen %}
-<div class="flex-wrap pl-spacer">
 	<div class="paragraph--type--lightbox-gallery">
 {% endblock %}
 
@@ -14,7 +13,7 @@
 			{% endif %}
 		{% endblock %}
 		
-		<div class="wrapper">
+		<div class="gallery-wrapper">
 			{% block lightboxContent %}
 				{% for image in images %}
 					<div class="featherlight-gal image-gal" href="#item{{image.id}}">
@@ -30,5 +29,4 @@
 
 {% block plwidgetclose %}
 	</div>
-</div>
 {% endblock %}

@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.map.field_admin_description
-    - field.field.paragraph.map.field_layout
     - field.field.paragraph.map.field_location
     - field.field.paragraph.map.field_oc_long_text
     - field.field.paragraph.map.field_pin_info
@@ -12,7 +11,6 @@ dependencies:
     - paragraphs.paragraphs_type.map
   module:
     - geolocation
-    - options
     - text
 _core:
   default_config_hash: fQaEoneAvRw1QiKd5gRRKWDtf3aBGLz6s1tIbWaBwvI
@@ -21,13 +19,6 @@ targetEntityType: paragraph
 bundle: map
 mode: default
 content:
-  field_layout:
-    weight: 1
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: list_key
-    region: content
   field_location:
     weight: 2
     label: hidden

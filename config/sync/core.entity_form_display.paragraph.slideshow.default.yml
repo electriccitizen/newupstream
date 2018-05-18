@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.slideshow.field_admin_description
-    - field.field.paragraph.slideshow.field_layout
     - field.field.paragraph.slideshow.field_oc_image_multi
     - field.field.paragraph.slideshow.field_widget_title
     - paragraphs.paragraphs_type.slideshow
@@ -25,12 +24,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
-    region: content
-  field_layout:
-    weight: 2
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
     region: content
   field_oc_image_multi:
     weight: 3
