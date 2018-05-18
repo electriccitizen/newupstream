@@ -3,6 +3,9 @@
 =============== */
 
 .paragraph--type--call-to-action{
+	max-width: $maxWidthText;
+	@include auto;
+	
 	.widget-title{
 		text-align: center;
 	}
@@ -27,34 +30,10 @@
 		}
 	}
 
-	//light backgrounds
-	& > .orange{
-		.field-oc-link a{
-			color: $black;
-			&:hover,&:focus{
-				background-color: $transBlack;
-				color: $white;
-				border-color: $borderRule;
-				@include transAll(.3s);
-			}
-		}
-	}
-
-	///dark background and image
-	& > .image,& > .blue, & > .grey{
-		.field-oc-link a{
-			color: $white;
-			&:hover,&:focus{
-				background-color: $transWhite;
-				color: $black;
-				border-color: $white;
-				@include transAll(.3s);
-			}
-		}
-	}//end image
+	
 
 	//when has slidin animation (call_to_action.js)
-	& > .widget-color,& > .image{
+	.wrapper{
 		overflow: hidden;
 		& > *{
 			@include translate3d(0, 150%, 0);

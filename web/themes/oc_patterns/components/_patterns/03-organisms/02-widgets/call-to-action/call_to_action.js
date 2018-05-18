@@ -3,7 +3,7 @@
 //Slideup animation for cta content when on a background
 Drupal.behaviors.ctaSlide = {
 	attach: function (context, settings) {
-		$(".paragraph--type--call-to-action > .widget-color,.paragraph--type--call-to-action > .image", context).once('contentSlide').each(function(){  
+		$(".paragraph--type--call-to-action", context).once('contentSlide').each(function(){  
 			
 		//animate when the page scrolls down far enough
 		$(window).on("load", function(){
@@ -12,7 +12,7 @@ Drupal.behaviors.ctaSlide = {
 				randomEntrance();
 			});
 			function randomEntrance() {
-				$('.paragraph--type--call-to-action > .widget-color,.paragraph--type--call-to-action > .image').each(function(){
+				$('.paragraph--type--call-to-action .wrapper').each(function(){
 					if($(document).scrollTop() + window.innerHeight > $(this).offset().top + 50)
 					$(this).addClass('slideUp');
 				});

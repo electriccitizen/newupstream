@@ -2,49 +2,10 @@
    ACCORDION WIDGET
 ================= */
 
-/* COLOR MIXINS
------------------- */
-//red set in macros.twig
-@mixin red{
-	.accordion-header{
-		border-color: $red;
-		color: $red;
-		&:hover{
-			background: $red; 
-			color: $white;
-		}
-	}
-	.field-oc-long-text{
-		background: $offWhite;
-	}
-	&.accord-active{ 
-		.accordion-header{
-			background: $red; 
-			color: $white;
-		}
-	}
-}//end red
-
-//black set in macros.twig
-@mixin black{
-	.accordion-header{
-		border-color: $black;
-		color: $black;
-		&:hover{
-			background: $black; 
-			color: $white;
-		}
-	}
-	.field-oc-long-text{
-		background: $offWhite;
-	}
-	&.accord-active{ 
-		.accordion-header{
-			background: $black; 
-			color: $white;
-		}
-	}
-}//end black
+.paragraph--type--accordion-group{
+	max-width: $maxWidthText;
+	@include auto;
+}
 
 
 /* ITEM STYLING
@@ -114,74 +75,6 @@
 			}
 		}
 	}
-	
-	/* VARIABLE CHANGES (set in macros.twig)
-	---------------- */
-	&.red{
-		@include red;
-	}
-
-	&.black{
-		@include black;
-	}
-
-	&.caret{
-		.accordion-header{
-			&:after{
-				content:'';
-				display: block;
-				width: 20px;
-				height: 20px;
-				@include sprite-accordion-shut;
-				@include accordcaretSize;
-			}
-			&:hover:after,&:focus:after{
-				content: '';
-				@include accordcaretShutHover;
-			}
-		}
-		&.accord-active .accordion-header:after{
-			content: '';
-			@include accordcaretOpen;
-		}
-
-		//red caret
-		&.red{
-			.accordion-header{
-				&:after{
-					@include sprite-accordion-shut-red;
-					@include accordcaretSize;
-				}
-				&:hover:after,&:focus:after{
-					content: '';
-					@include accordcaretShutHover;
-				}
-			}
-			&.accord-active .accordion-header:after{
-				content: '';
-				@include accordcaretOpen;
-			}
-		}//end caret-red
-
-		//black caret
-		&.black{
-			.accordion-header{
-				&:after{
-					@include sprite-accordion-shut-black;
-					@include accordcaretSize;
-				}
-				&:hover:after,&:focus:after{
-					content: '';
-					@include accordcaretShutHover;
-				}
-			}
-			&.accord-active .accordion-header:after{
-				content: '';
-				@include accordcaretOpen;
-			}
-		}//end caret-black
-
-	}//end caret
 
 }//end accordion-item
 

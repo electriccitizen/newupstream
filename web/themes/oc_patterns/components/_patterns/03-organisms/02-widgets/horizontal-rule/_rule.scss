@@ -3,9 +3,7 @@
 ========================= */
 
 .paragraph--type--horizontal-rule{
-	.wrapper{
-		max-width: $maxWidthText;
-		@include auto;
-	}
+	max-width: $maxWidthText;
+	@include auto;
 }//end form widget
 
