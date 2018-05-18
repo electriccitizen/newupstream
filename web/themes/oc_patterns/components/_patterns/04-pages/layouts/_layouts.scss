@@ -16,7 +16,7 @@
 	}
 }//end top mixin
 
-//enforce clear on every region to catch any floats leaking over from content
+
 .top,.main,.bottom,.sidebar{
 	clear: both;
 }
