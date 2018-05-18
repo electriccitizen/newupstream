@@ -9,7 +9,6 @@ dependencies:
     - field.field.paragraph.basic_page_section.field_background_image
     - field.field.paragraph.basic_page_section.field_background_style
     - field.field.paragraph.basic_page_section.field_layout
-    - field.field.paragraph.basic_page_section.field_section_intro
     - field.field.paragraph.basic_page_section.field_section_title
     - field.field.paragraph.basic_page_section.field_section_widgets
     - paragraphs.paragraphs_type.basic_page_section
@@ -45,6 +44,5 @@ content:
 hidden:
   field_anchor_link: true
   field_background_image: true
-  field_section_intro: true
   field_section_title: true
   field_section_widgets: true

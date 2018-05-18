@@ -15,13 +15,14 @@ dependencies:
   module:
     - entity_reference_revisions
     - options
+    - text
 id: paragraph.landing_page_section.default
 targetEntityType: paragraph
 bundle: landing_page_section
 mode: default
 content:
   field_anchor_link:
-    weight: 1
+    weight: 2
     label: hidden
     settings:
       link_to_entity: false
@@ -52,11 +53,11 @@ content:
     type: list_key
     region: content
   field_section_intro:
-    weight: 2
+    weight: 1
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: basic_string
+    type: text_default
     region: content
   field_section_title:
     weight: 0
