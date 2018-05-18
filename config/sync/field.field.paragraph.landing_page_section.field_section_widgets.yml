@@ -29,7 +29,7 @@ entity_type: paragraph
 bundle: landing_page_section
 label: 'Section Widgets'
 description: ''
-required: false
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''
@@ -58,6 +58,9 @@ settings:
       accordion_group:
         enabled: true
         weight: 23
+      basic_page_section:
+        weight: 24
+        enabled: false
       accordion_item:
         weight: 24
         enabled: false

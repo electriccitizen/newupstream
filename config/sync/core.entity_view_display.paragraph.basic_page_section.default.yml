@@ -1,23 +1,23 @@
-uuid: 9d3b5710-78c2-4848-9eaf-04620ed6b5af
+uuid: 8649d849-b59c-4709-bb83-c28afe54eda5
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.landing_page_section.field_admin_description
-    - field.field.paragraph.landing_page_section.field_anchor_link
-    - field.field.paragraph.landing_page_section.field_background_image
-    - field.field.paragraph.landing_page_section.field_background_style
-    - field.field.paragraph.landing_page_section.field_layout
-    - field.field.paragraph.landing_page_section.field_section_intro
-    - field.field.paragraph.landing_page_section.field_section_title
-    - field.field.paragraph.landing_page_section.field_section_widgets
-    - paragraphs.paragraphs_type.landing_page_section
+    - field.field.paragraph.basic_page_section.field_admin_description
+    - field.field.paragraph.basic_page_section.field_anchor_link
+    - field.field.paragraph.basic_page_section.field_background_image
+    - field.field.paragraph.basic_page_section.field_background_style
+    - field.field.paragraph.basic_page_section.field_layout
+    - field.field.paragraph.basic_page_section.field_section_intro
+    - field.field.paragraph.basic_page_section.field_section_title
+    - field.field.paragraph.basic_page_section.field_section_widgets
+    - paragraphs.paragraphs_type.basic_page_section
   module:
     - entity_reference_revisions
     - options
-id: paragraph.landing_page_section.default
+id: paragraph.basic_page_section.default
 targetEntityType: paragraph
-bundle: landing_page_section
+bundle: basic_page_section
 mode: default
 content:
   field_anchor_link:
@@ -32,8 +32,8 @@ content:
     weight: 5
     label: hidden
     settings:
-      link: true
       view_mode: default
+      link: false
     third_party_settings: {  }
     type: entity_reference_entity_view
     region: content
@@ -42,14 +42,14 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: list_key
+    type: list_default
     region: content
   field_layout:
     weight: 3
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: list_key
+    type: list_default
     region: content
   field_section_intro:
     weight: 2
@@ -67,13 +67,13 @@ content:
     type: string
     region: content
   field_section_widgets:
-    type: entity_reference_revisions_entity_view
     weight: 6
     label: hidden
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
     region: content
 hidden:
   field_admin_description: true
