@@ -29,16 +29,8 @@
   {%
     set classes = [
       'block',
-      'block-' ~ label|clean_class,
+      'block-' ~ content['#block_content'].label()|clean_class,
       'block-' ~ content['#block_content'].bundle|clean_class,
-      'block-' ~ plugin_id|clean_class,
-    ]
-  %}
-{% elseif label %}
-  {%
-    set classes = [
-      'block',
-      'block-' ~ label|clean_class,
       'block-' ~ plugin_id|clean_class,
     ]
   %}
@@ -46,17 +38,20 @@
   {%
     set classes = [
       'block',
+      'block-' ~ content['#block_content'].label()|clean_class,
       'block-' ~ plugin_id|clean_class,
     ]
   %}
 {% endif %}
 <div{{ attributes.addClass(classes) }}>
-	{{ title_prefix }}
-	{% if label %}
-		<h2 class="block-title">{{ label }}</h2>
-	{% endif %}
-	{{ title_suffix }}
-	{% block content %}
-		{{ content }}
-	{% endblock %}
+  {% block blockContent %}
+    {{ title_prefix }}
+    {% if label %}
+      <h2 class="block-title">{{ label }}</h2>
+    {% endif %}
+    {{ title_suffix }}
+    {% block content %}
+      {{ content }}
+    {% endblock %}
+  {% endblock %}
 </div>
