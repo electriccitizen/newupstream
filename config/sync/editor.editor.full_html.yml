@@ -27,6 +27,7 @@ settings:
             - JustifyLeft
             - JustifyCenter
             - JustifyRight
+            - Indent
         -
           name: Lists
           items:
@@ -59,10 +60,10 @@ settings:
           items:
             - Styles
   plugins:
-    language:
-      language_list: un
     stylescombo:
       styles: span.highlight|highlight
+    language:
+      language_list: un
     linkit:
       linkit_profile: wysiwyg
 image_upload:

@@ -151,7 +151,7 @@
 
 ///mixin - imageHover
 @mixin imageHover{
-	border: 1px solid $lightGray;
+	border: 1px solid $lightGrey;
 	&:hover,&:focus{
 		border-color: $darkGrey;
 		@include opacity(.7);
@@ -306,6 +306,64 @@
 	}
 }
 
+
+@mixin lightBack {
+	h2,h3,h4,h5,h6,p,div {
+		color: $black;
+		&.pane-title{
+			border-color: $borderRule;
+		}
+	}
+	:before,:after{
+		color: $black;
+	}
+	a{
+		color: $transBlack;
+		&:hover,&:focus{
+			color: $black;
+			@include transAll(.3s);
+		}
+	}
+	.widget-title > a{
+		color: $black;
+		&:hover,&:focus{
+			color: $transBlack;
+			@include transAll(.3s);
+		}
+	}
+	figcaption {
+		color: $darkGrey;
+	}
+}
+
+@mixin darkBack {
+	h2,h3,h4,h5,h6,p,div {
+		color: $white;
+		&.pane-title{
+			border-color: $white;
+		}
+	}
+	:before,:after{
+		color: $white;
+	}
+	a{
+		color: $transWhite;
+		&:hover,&:focus{
+			color: $white;
+			@include transAll(.3s);
+		}
+	}
+	.widget-title > a{
+		color: $white;
+		&:hover,&:focus{
+			color: $transWhite;
+			@include transAll(.3s);
+		}
+	}
+	figcaption {
+		color: $white;
+	}
+}
 
 
 /* LAYOUT MIXINS

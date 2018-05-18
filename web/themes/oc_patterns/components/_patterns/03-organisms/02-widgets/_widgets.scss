@@ -18,123 +18,128 @@
 	}	
 }
 
-/* BACKGROUND TEXT STYLING MIXINS
------------------ */
-@mixin lightBack {
-	h2,h3,h4,h5,h6,p,div {
-		color: $black;
-		&.pane-title{
-			border-color: $borderRule;
-		}
-	}
-	:before,:after{
-		color: $black;
-	}
-	a{
-		color: $transBlack;
-		&:hover,&:focus{
-			color: $black;
-			@include transAll(.3s);
-		}
-	}
-	.widget-title > a{
-		color: $black;
-		&:hover,&:focus{
-			color: $transBlack;
-			@include transAll(.3s);
-		}
-	}
-	figcaption {
-		color: $darkGrey;
-	}
-}
 
-@mixin darkBack {
-	h2,h3,h4,h5,h6,p,div {
-		color: $white;
-		&.pane-title{
-			border-color: $white;
-		}
-	}
-	:before,:after{
-		color: $white;
-	}
-	a{
-		color: $transWhite;
-		&:hover,&:focus{
-			color: $white;
-			@include transAll(.3s);
-		}
-	}
-	.widget-title > a{
-		color: $white;
-		&:hover,&:focus{
-			color: $transWhite;
-			@include transAll(.3s);
-		}
-	}
-	figcaption {
-		color: $white;
-	}
-}
+/* ===========
+SECTION LAYOUTS
+============= */
 
-/* WIDGET BACKGROUNDS
----------------- */
-//color
-.paragraph > .widget-color{
-	padding: 3em 20px;
-	//dk grey style
-	&.grey{
-		background-color: $darkGrey;
-		@include darkBack;
-	}
-	//dk grey style
-	&.blue{
-		background-color: $blue;
-		@include darkBack;
-	}
-	//dk grey style
-	&.orange{
-		background-color: $gold;
-		@include lightBack;
-	}
-}
-
-//image
-.paragraph > .image{
-	padding: 3em 20px;
-	@include darkBack;
+/* WIDGETS FLEX ITEMS
+--------------------- */
+.section{
+	width: 100%;
+	padding-left: 20px;
+	padding-right: 20px;
 	position: relative;
-	background-position: center !important;
-	background-size: cover !important;
-	@include overlay;
-	& *{
+
+	&:not(.background){
+		padding-top: 3em;
+		padding-bottom: 3em;
+		& + .section:not(.background){
+			padding-top: 0;
+		}
+	}
+	&.background{
+		padding-bottom: 3em;
+		padding-top: 3em;
+	}
+
+	.section-holder{
+		max-width: $maxWidth + 40px;
+		padding-left: 20px;
+		padding-right: 20px;
+		@include auto;
+	}
+
+	//default section layout
+	.field-section-widgets{
 		position: relative;
-		z-index: 2;
-		color: $white;	
-	}
-	.paragraph--type--call-to-action &{
-		h2 > a{
-			color: $white;
-			&:hover,&:focus{
-				color: $transWhite;
-			}
-		}
-		.field-oc-link a{
-			color: $white;
-			&:hover,&:focus{
-				background-color: $transWhite;
-				color: $black;
-				border-color: $white;
+		z-index: 4;
+		@include safeFlex(row,wrap,null,null);
+		& > .section-item{
+			width: 100%;
+			//need mins so that js can calculate width and height (for slider)
+			min-height: 0;
+			min-width: 0;
+			&:not(:last-child){
+				@include spacer(2);
 			}
 		}
 	}
-}
+
+	&.columned{
+		.field-section-widgets{
+			& > .section-item{
+				@include tab{
+					width: 50%;
+					&:nth-child(odd):not(:only-of-type){
+						padding-right: 30px;
+					}
+					&:nth-child(even){
+						padding-left: 30px;
+					}
+					&:nth-last-child(2){
+						@include spacer(0);
+					}
+				}
+			}
+		}
+	}//end columned
+
+	&.left{
+		.field-section-widgets{
+			& > .section-item{
+				@include tab{
+					width: 50%;
+					margin-right: 100px;
+					padding-right: 30px;
+				}
+			}
+		}
+	}//end left
+
+	&.right{
+		.field-section-widgets{
+			@include safeFlex(row,wrap,end,null);
+			& > .section-item{
+				@include tab{
+					width: 50%;
+					margin-left: 100px;
+					padding-left: 30px;
+				}
+			}
+		}
+	}//end right
+
+	/* background styles
+	--------------------- */
+	&.grey{
+		background: $lightGrey;
+	}
+
+	&.image{
+		position: relative;
+		background-size: cover;
+		@include darkBack;
+		& > *{
+			position: relative;
+			z-index: 1;
+		}
+		&:before{
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: $imgOverlay;
+		}
+	}
+
+}//end section
 
 
-/* LAYOUT WIDTHS
-------------------- */
-//styled in 00-base/layouts./flex/flex-item.scss
+
 
 
 /* WIDGETS WITHOUT SPECIFIC PL FOLDERS

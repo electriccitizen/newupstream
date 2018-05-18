@@ -6,13 +6,5 @@
 	.field-oc-long-text{
 		margin-bottom: .5em;
 	}
-	//two column text option
-	.two-column{
-		@include tab{
-			.field-oc-long-text{
-				@include cssColumns(2, 2em);
-			}
-		}
-	}
 }//end links-files widget
 

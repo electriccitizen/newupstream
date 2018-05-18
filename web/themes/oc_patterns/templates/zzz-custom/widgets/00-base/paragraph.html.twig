@@ -56,30 +56,19 @@ view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
 ]
 %}
 
-{# find the selected layout key string and flex-wrap class (and backless if there is no widget style background) #}
-{% if (content.field_background_style|render) %}
-	{% set flex = 'flex-wrap ' ~ content.field_layout['#items'].getString()|clean_class %}
 
-{% else %}
-	{% set flex = 'flex-wrap ' ~ content.field_layout['#items'].getString()|clean_class ~ ' backless' %}
-{% endif %}
-
-{# find the value of the background style and image to be used on extended templates that need it #}
-{% set special = content.field_background_style[0]['#markup'] %}
-{% set bgImage = file_url(content.field_background_image[0]['#media'].field_media_image.entity.fileuri) %}
-
-<div class="{{flex}}"> 
+<div class="section-item"> 
 	{% block widget %}
 		
 		{# set the default paragraph classes #}
-		<div{{ attributes.addClass(classes,view)  }}>
+		<div{{ attributes.addClass(classes)  }}>
 			
 			{# print the content without the styling fields #}
     		{% block widgetContent %}
     			{{ content.field_widget_title }}
     			<div class="wrapper">
 					{# print the content without the styling fields #}
-    				{{ content|without('field_layout','field_widget_title') }}
+    				{{ content|without('field_widget_title') }}
     			</div>
     		{% endblock %}
 		

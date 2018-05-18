@@ -1,19 +1,17 @@
-uuid: f119e094-eebf-4253-87fc-5ce73ec6b8fa
+uuid: 3ac0aa9e-5cea-4da8-84ec-30aa1d5d98a2
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_background_image
     - media_entity.bundle.image
-    - paragraphs.paragraphs_type.links_files
-_core:
-  default_config_hash: SkV6U-8Rf65YFRMEq-ZhZpIrZ9DeaVl-tn5FQN8ZoBI
-id: paragraph.links_files.field_background_image
+    - paragraphs.paragraphs_type.landing_page_section
+id: paragraph.landing_page_section.field_background_image
 field_name: field_background_image
 entity_type: paragraph
-bundle: links_files
+bundle: landing_page_section
 label: 'Background Image'
-description: 'Add a background image or select and existing one from the media library. <strong>NOTE:</strong> This background image will scale to cover the whole widget and will be cropped as needed from the center.'
+description: 'The background image will be scaled and cropped from the center to fit the entire section. <strong>NOTE:</strong> Optimal image width is 1500px.'
 required: false
 translatable: true
 default_value: {  }

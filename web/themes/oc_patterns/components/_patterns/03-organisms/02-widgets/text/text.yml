@@ -14,9 +14,6 @@ text:
 text_two:
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quamquam ab iis philosophiam et omnes ingenuas disciplinas habemus; Ut id aliis narrare gestiant? Tum Piso: Quoniam igitur aliquid omnes, quid Lucius noster?"
 
-#break text using css columns on larger screens. Available variables: two-column
-columns:
-  # two-column
 
 text_instructions:
   "DRUPAL: This template is embedded into the Drupal text paragraph template."
