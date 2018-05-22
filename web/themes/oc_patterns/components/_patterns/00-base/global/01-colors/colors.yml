@@ -50,7 +50,7 @@ items:
   - name: $unpubDark
     value: '#fdd5dd'
   - name: $siteBack
-    value: '#f6f6f6'
+    value: '#ffffff'
   - name: $borderRule
     value: '#222222'
   - name: $link
