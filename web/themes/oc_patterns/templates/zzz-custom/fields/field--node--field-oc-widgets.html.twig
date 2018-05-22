@@ -44,29 +44,31 @@ set classes = [
 ]
 %}
 
-{% if label_hidden %}
-	{% if multiple %}
-		<div{{ attributes.addClass(classes) }}>
-			{% for item in items %}
-				{{ item.content }}
-			{% endfor %}
-		</div>
-	{% else %}
-		{% for item in items %}
-			{{ item.content }}
-		{% endfor %}
-	{% endif %}
-{% else %}
-	<div{{ attributes.addClass(classes) }}>
-		<div{{ title_attributes }}>{{ label }}</div>
-		{% if multiple %}
-			<div>
-		{% endif %}
-		{% for item in items %}
-			{{ item.content }}
-		{% endfor %}
-		{% if multiple %}
-			</div>
-		{% endif %}
+{{ attach_library('oc_patterns/widgets') }}
+{# anchor links #}
+{% set count = 0 %}
+{% for anchor in items %}
+  {% if anchor.content['#paragraph'].field_anchor_link.0.value %}
+    {% set count = count + 1 %}
+  {% endif %}
+{% endfor %}
+
+{% if count > 0 %}
+   <div class="widget-anchors" id="toc">
+		<h2><span class="toc-toggle">&#9776</span>On This Page</h2>
+		<div class="anchors" aria-expanded="false">
+	      {% for anchor in items %}
+				{% if anchor.content['#paragraph'].field_anchor_link.0.value %}
+	            <a href="#{{ anchor.content['#paragraph'].field_anchor_link.0.value|clean_id }}">{{ anchor.content['#paragraph'].field_anchor_link.0.value }}</a>
+	         {% endif %}
+	      {% endfor %}
+	   </div>
 	</div>
+  
 {% endif %}
+
+<div{{ attributes.addClass(classes) }}>
+	{% for item in items %}
+		{{ item.content }}
+	{% endfor %}
+</div>

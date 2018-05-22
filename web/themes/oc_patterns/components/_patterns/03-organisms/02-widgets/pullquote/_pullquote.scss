@@ -2,7 +2,11 @@
 	PULLQUOTE WIDGET
 ======================= */
 .paragraph--type--pullquote{
-
+	max-width: $maxWidthText;
+	@include auto;
+	.widget-title{
+		@include spacer(1.5);
+	}
 	//quote text
 	.field-oc-long-text{
 		position: relative;
