@@ -1,6 +1,7 @@
 (function($, Drupal) {
 
 //Slideup animation for cta content when on a background
+/*
 Drupal.behaviors.ctaSlide = {
 	attach: function (context, settings) {
 		$(".paragraph--type--call-to-action", context).once('contentSlide').each(function(){  
@@ -22,6 +23,7 @@ Drupal.behaviors.ctaSlide = {
 		});
 	}
 };
+*/
 
 
 })(jQuery, Drupal);

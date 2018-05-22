@@ -52,10 +52,20 @@
   @include sprite-accordion-shut-red;
 }
 
-@mixin sprite-close-circle-punchout {
+@mixin sprite-back-to-top-arrow {
   @include svg-common;
 
   background-position: 40% 25%;
+}
+
+.sprite-back-to-top-arrow {
+  @include sprite-back-to-top-arrow;
+}
+
+@mixin sprite-close-circle-punchout {
+  @include svg-common;
+
+  background-position: 0 50%;
 }
 
 .sprite-close-circle-punchout {
@@ -65,7 +75,7 @@
 @mixin sprite-drop-arrow {
   @include svg-common;
 
-  background-position: 0 50%;
+  background-position: 20% 50%;
 }
 
 .sprite-drop-arrow {
@@ -75,7 +85,7 @@
 @mixin sprite-drop-arrow-active {
   @include svg-common;
 
-  background-position: 20% 50%;
+  background-position: 40% 50%;
 }
 
 .sprite-drop-arrow-active {
@@ -85,7 +95,7 @@
 @mixin sprite-drop-arrow-active-white {
   @include svg-common;
 
-  background-position: 40% 50%;
+  background-position: 60% 0;
 }
 
 .sprite-drop-arrow-active-white {
@@ -95,7 +105,7 @@
 @mixin sprite-drop-arrow-white {
   @include svg-common;
 
-  background-position: 60% 0;
+  background-position: 60% 25%;
 }
 
 .sprite-drop-arrow-white {
@@ -105,7 +115,7 @@
 @mixin sprite-drupal {
   @include svg-common;
 
-  background-position: 60% 25%;
+  background-position: 60% 50%;
 }
 
 .sprite-drupal {
@@ -115,7 +125,7 @@
 @mixin sprite-facebook {
   @include svg-common;
 
-  background-position: 60% 50%;
+  background-position: 0 75%;
 }
 
 .sprite-facebook {
@@ -125,7 +135,7 @@
 @mixin sprite-file-pdf {
   @include svg-common;
 
-  background-position: 0 75%;
+  background-position: 20% 75%;
 }
 
 .sprite-file-pdf {
@@ -135,7 +145,7 @@
 @mixin sprite-file-ppt {
   @include svg-common;
 
-  background-position: 20% 75%;
+  background-position: 0 0;
 }
 
 .sprite-file-ppt {
@@ -145,7 +155,7 @@
 @mixin sprite-file-word {
   @include svg-common;
 
-  background-position: 0 0;
+  background-position: 60% 75%;
 }
 
 .sprite-file-word {
@@ -155,7 +165,7 @@
 @mixin sprite-file-xls {
   @include svg-common;
 
-  background-position: 60% 75%;
+  background-position: 80% 0;
 }
 
 .sprite-file-xls {
@@ -165,7 +175,7 @@
 @mixin sprite-hamburger {
   @include svg-common;
 
-  background-position: 80% 0;
+  background-position: 80% 25%;
 }
 
 .sprite-hamburger {
@@ -175,7 +185,7 @@
 @mixin sprite-linkedin {
   @include svg-common;
 
-  background-position: 80% 25%;
+  background-position: 80% 50%;
 }
 
 .sprite-linkedin {
@@ -185,7 +195,7 @@
 @mixin sprite-menu-desk-item-active {
   @include svg-common;
 
-  background-position: 80% 50%;
+  background-position: 80% 75%;
 }
 
 .sprite-menu-desk-item-active {
@@ -195,7 +205,7 @@
 @mixin sprite-menu-desk-item-open {
   @include svg-common;
 
-  background-position: 80% 75%;
+  background-position: 0 100%;
 }
 
 .sprite-menu-desk-item-open {
@@ -205,7 +215,7 @@
 @mixin sprite-menu-item-toggle-active {
   @include svg-common;
 
-  background-position: 0 100%;
+  background-position: 20% 100%;
 }
 
 .sprite-menu-item-toggle-active {
@@ -215,7 +225,7 @@
 @mixin sprite-menu-item-toggle-close {
   @include svg-common;
 
-  background-position: 20% 100%;
+  background-position: 40% 100%;
 }
 
 .sprite-menu-item-toggle-close {
@@ -225,7 +235,7 @@
 @mixin sprite-menu-item-toggle-open {
   @include svg-common;
 
-  background-position: 40% 100%;
+  background-position: 60% 100%;
 }
 
 .sprite-menu-item-toggle-open {
@@ -235,7 +245,7 @@
 @mixin sprite-search-submit {
   @include svg-common;
 
-  background-position: 60% 100%;
+  background-position: 80% 100%;
 }
 
 .sprite-search-submit {
@@ -245,7 +255,7 @@
 @mixin sprite-search-submit-hover {
   @include svg-common;
 
-  background-position: 80% 100%;
+  background-position: 100% 0;
 }
 
 .sprite-search-submit-hover {
@@ -255,7 +265,7 @@
 @mixin sprite-search-toggle {
   @include svg-common;
 
-  background-position: 100% 0;
+  background-position: 100% 25%;
 }
 
 .sprite-search-toggle {
@@ -265,7 +275,7 @@
 @mixin sprite-twitter {
   @include svg-common;
 
-  background-position: 100% 25%;
+  background-position: 100% 50%;
 }
 
 .sprite-twitter {
@@ -275,7 +285,7 @@
 @mixin sprite-youtube {
   @include svg-common;
 
-  background-position: 100% 50%;
+  background-position: 100% 75%;
 }
 
 .sprite-youtube {

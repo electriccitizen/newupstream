@@ -32,18 +32,4 @@
 	  }
 	};
 
-	Drupal.behaviors.sectionTriangles = {
-	  attach: function (context, settings) {
-	    $(".section.triangle", context).once('sectionDecor').each(function(){  
-	    	//add pre-tri class to sections before the tri-cut section
-	    	$(this).prev('.section').addClass('pre-tri');
-	    	//add anchors-pre-tri class to anchor links if the first section uses tri-cut
-	    	if(($(this).is(':not(.image):first-child')) && ($('.widget-anchors').length)){
-	    		$('.widget-anchors').addClass('anchors-pre-tri');
-	    	}
-
-	   });
-	  }
-	};
-
 })(jQuery);

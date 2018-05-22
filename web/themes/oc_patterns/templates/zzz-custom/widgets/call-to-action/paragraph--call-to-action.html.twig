@@ -49,6 +49,7 @@
 #}
 
 {% block widgetContent %}
+
 	{{ attach_library('oc_patterns/call-to-action') }}
 	
 	{% embed "@organisms/02-widgets/call-to-action/call_to_action.twig" 
@@ -62,11 +63,10 @@
 		{% block cta %}
 			
 			{{ content.field_oc_long_text }}
-			{% if content.field_oc_link_multi.0 %}
-				<div class="field field-oc-link-multi">
-					{% for key, button in content.field_oc_link_multi['#items'] if key|first != '#' %}
-						<a href="{{ button.url }}"{% if button.options.external == 'true' %} target="_blank"{% endif %}>{{ button.title }}</a>
-					{% endfor %}
+			{% if content.field_oc_link.0 %}
+				<div class="field field-oc-link">
+					
+					<a href="{{ buttonUrl }}"{% if content.field_oc_link.0['#options'].external == 'true' %} target="_blank"{% endif %}>{{ content.field_oc_link.0['#title'] }}</a>
 				</div>
 			{% endif %}
 		{% endblock %}

@@ -119,6 +119,15 @@ $accordiontoggle: 20px;
 }
 
 
+///used in WIDGETS.SCSS
+$backAnchor: 30px;
+@mixin backAnchorArrow{
+	@include sprite-back-to-top-arrow;
+	@include backgroundSize($columns * $backAnchor,$rows * $backAnchor);
+}
+
+
+
 /* PATTERN LAB ONLY
 ---------------- */
 /// used in BLOG-POST.SCSS

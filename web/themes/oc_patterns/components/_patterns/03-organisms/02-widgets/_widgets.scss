@@ -139,6 +139,88 @@ SECTION LAYOUTS
 }//end section
 
 
+//Anchor Links
+.widget-anchors{
+	max-width: $maxWidth;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 1em;
+	padding-bottom: 1em;	
+	text-align: center;
+	position: relative;
+	z-index: 1;
+	@include spacer(2);
+	@include auto;
+	&:after{
+		@include fullBack($lightGrey);
+	}
+	@include onlySmall{
+		h2:not(.block-title):not(.widget-title){
+			font-size: 24px;
+			color: $black;
+			cursor: pointer;
+			font-weight: $regular;
+			margin-bottom: 0;
+			span{
+				font-size: 36px;
+				margin-right: .25em;
+			}
+		}
+	}
+	@include tab{
+		margin-bottom: 2em;
+		h2{
+			display: none;
+		}
+	}
+	.anchors{
+		display: none;
+		padding-top: 1em;
+		@include tab{
+			display: block !important;
+			@include bleed(20px);
+			padding-bottom: 1em;
+		}
+	}
+	a{
+		padding: 15px 10px;
+		position: relative;
+		display: block;
+		font-family: $header;
+		&:not(:last-child):after{
+			content: '';
+			display: block;
+			position: absolute;
+			top: 100%;
+			right: 50%;
+			width: 100px;
+			margin-right: -50px;
+			background: $black;
+			height: 1px;
+		}
+		@include tab{
+			display: inline-block;
+			padding: 0 10px;
+			font-size: 22px;
+			&:not(:last-child):after{
+				height: 70%;
+				width: 1px;
+				top: 18%;
+				right: -.5px;
+				margin-right: 0;
+			}
+		}
+		@include maxWidth{
+			font-size: 24px;
+		}
+	}//end a 
+
+	//snug up first section if it has a background
+	& + .field--name-field-oc-widgets > .section:first-child.background{
+		margin-top: -2em;
+	}
+
+}//end widget anchors (in this section)
 
 
 
