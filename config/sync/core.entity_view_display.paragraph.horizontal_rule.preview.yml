@@ -12,4 +12,5 @@ targetEntityType: paragraph
 bundle: horizontal_rule
 mode: preview
 content: {  }
-hidden: {  }
+hidden:
+  field_hr_default: true
