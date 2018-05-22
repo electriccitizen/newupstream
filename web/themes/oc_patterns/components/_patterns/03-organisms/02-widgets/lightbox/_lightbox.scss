@@ -14,6 +14,7 @@
 		max-width: 250px;
 		display: inline-block;
 		overflow: hidden;
+		cursor: pointer;
 		img{
 			width: 100%;
 			@include imageHover;
@@ -133,6 +134,7 @@
 }//end featherlight
 
 /* random entrance scripts (lightbox.js) */
+/*
 .paragraph--type--lightbox-gallery{
 	.image-gal{
 		.view-mode-large-thumb{
@@ -160,6 +162,8 @@
 		}
 	}//end a.swipebox
 }//end random entrance lightbox gallery
+*/
+
 
 /* PATTERN LAB ONLY
 -------------------- */

@@ -14,6 +14,7 @@ Drupal.behaviors.lightbox = {
 	}
 }
 
+/*
 //Fade-in class for lightboxes when in viewframe.
 Drupal.behaviors.galleryFadeIn = {
 	attach: function (context, settings) {
@@ -35,5 +36,6 @@ Drupal.behaviors.galleryFadeIn = {
 		});
 	}
 }
+*/
 
 })(jQuery, Drupal);

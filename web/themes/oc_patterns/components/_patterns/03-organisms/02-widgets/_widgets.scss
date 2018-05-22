@@ -141,8 +141,6 @@ SECTION LAYOUTS
 
 //Anchor Links
 .widget-anchors{
-	margin-bottom: 2em;
-	@include auto;
 	max-width: $maxWidth;
 	padding-left: 20px;
 	padding-right: 20px;
@@ -151,6 +149,8 @@ SECTION LAYOUTS
 	text-align: center;
 	position: relative;
 	z-index: 1;
+	@include spacer(2);
+	@include auto;
 	&:after{
 		@include fullBack($lightGrey);
 	}
@@ -214,6 +214,11 @@ SECTION LAYOUTS
 			font-size: 24px;
 		}
 	}//end a 
+
+	//snug up first section if it has a background
+	& + .field--name-field-oc-widgets > .section:first-child.background{
+		margin-top: -2em;
+	}
 
 }//end widget anchors (in this section)
 
