@@ -17,7 +17,7 @@ global-styling:
 accordion:
   version: 1.0
   js:
-    components/_patterns/03-organisms/02-widgets/accordion/accordion.js: {}
+    components/_patterns/03-organisms/01-widgets/accordion/accordion.js: {}
   dependencies:
     - core/jquery
     - core/drupal
@@ -30,7 +30,7 @@ lightbox:
       https://cdn.rawgit.com/noelboss/featherlight/1.7.12/release/featherlight.min.css: { type: external, minified: true }
       https://cdn.rawgit.com/noelboss/featherlight/1.7.12/release/featherlight.gallery.min.css: { type: external, minified: true }
   js:
-    components/_patterns/03-organisms/02-widgets/lightbox/lightbox.js: {}
+    components/_patterns/03-organisms/01-widgets/lightbox/lightbox.js: {}
     https://cdn.rawgit.com/noelboss/featherlight/1.7.12/release/featherlight.min.js: { type: external, minified: true }
     https://cdn.rawgit.com/noelboss/featherlight/1.7.12/release/featherlight.gallery.min.js: { type: external, minified: true }
   dependencies:
@@ -74,7 +74,7 @@ slideshow:
 widgets:
   version: 3.0
   js:
-    components/_patterns/03-organisms/02-widgets/widgets.js: {}
+    components/_patterns/03-organisms/01-widgets/widgets.js: {}
   dependencies:
     - core/jquery
     - core/drupal
