@@ -125,7 +125,7 @@
 ---------------- */
 .pl #base-grid{
 	strong{
-		color: $blue;
+		color: $codeString;
 	}
 }
 
@@ -158,7 +158,7 @@
 		ul{
 			@include listReset;
 			.include-tag{
-				color: $blue;
+				color: $codeString;
 			}
 			.similar{
 				margin-top: .5em;
@@ -286,7 +286,7 @@
 				li{
 					@include spacer(.5);
 					a{
-						color: $midGrey;
+						color: $grey;
 						&:hover,&:focus{
 							color: $link;
 						}
@@ -319,7 +319,7 @@
 					font-size: 36px;
 					font-weight: $heavy;
 					line-height: 1;
-					color: $red;
+					color: $redBad;
 					position: absolute;
 					left: -30px;
 					top: 0;

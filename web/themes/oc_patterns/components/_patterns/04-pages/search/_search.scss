@@ -58,7 +58,7 @@
 						height: auto;
 						text-indent: 0;
 						&:hover,&:active,&:focus{
-							background: $midGrey;
+							background: $hoverLink;
 							@include transAll(.3s);
 						}
 						@include tab{
@@ -71,7 +71,7 @@
 						&#edit-reset{
 							background: $black;
 							&:hover,&:focus,&:active{
-								background: $midGrey;
+								background: $hoverLink;
 							}
 						}
 					}
