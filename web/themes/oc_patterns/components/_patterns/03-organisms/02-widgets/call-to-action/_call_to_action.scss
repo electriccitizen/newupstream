@@ -30,21 +30,6 @@
 		}
 	}
 
-	
-
-	//when has slidin animation (call_to_action.js)
-	/*
-	.wrapper{
-		overflow: hidden;
-		& > *{
-			@include translate3d(0, 150%, 0);
-		}
-		&.slideUp > *{
-			@include animation('slideInUp 1s 1 ease-out forwards');
-		}
-	}
-	*/
-
 }//end cta
 
 

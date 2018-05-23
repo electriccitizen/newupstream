@@ -83,7 +83,6 @@
     "drupal/pathologic": "1.x-dev",
     "drupal/redirect": "~1",
     "drupal/search_api": "~1",
-    "drupal/simple_block": "^1.0@beta",
     "drupal/stage_file_proxy": "^1.0@alpha",
     "drupal/superfish": "~1",
     "drupal/token": "^1.0@RC",
