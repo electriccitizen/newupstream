@@ -60,7 +60,6 @@
     "drupal/entity_embed": "^1.0@beta",
     "drupal/environment_indicator": "~3",
     "drupal/field_group": "^1.0@RC",
-    "drupal/flexslider": "^2.0@beta",
     "drupal/flippy": "1.x-dev",
     "drupal/focal_point": "~1",
     "drupal/geolocation": "^1.11",
@@ -98,7 +97,6 @@
     "webflo/drupal-core-strict": "^8",
     "webflo/drupal-finder": "^0.3.0",
     "wikimedia/composer-merge-plugin": "~1.3",
-    "woothemes/flexslider": "2.6.4",
     "electriccitizen/docksal": "~1"
   },
   "require-dev": {
