@@ -112,3 +112,13 @@ input[value="Add new media"],input[value="Add existing media"]{
 }
 
 
+/* ADMIN RESTRICTED ITEMS
+------------------------ */
+/* Hide restricted block type titles */
+.path-block:not(.role-administrator) #block-content-restricted-edit-form .field--name-info{
+	display: none;
+}
+
+
+
+
