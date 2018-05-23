@@ -41,13 +41,8 @@
 
 	//accordion content
 	.field-oc-long-text{
-		position: relative;
-		top: 0;
-		height: 0;
-		overflow: hidden;
-		background: $offWhite;
-		padding: 0 2em;
-		@include transAll(.3);	
+		display: none;
+		padding: 1em 2em;
 	}
 
 	//active accordion
@@ -60,18 +55,13 @@
 				content: "–";
 			}
 		}
-		.field-oc-long-text{
-			padding: 2em;
-			height: 100%;
-		}
 	}//end active
 
 	//no-js fallback
 	.no-js &{
 		&:hover,&:focus{
 			.field-oc-long-text{
-				padding: 2em;
-				height: 100%;
+				display: block;
 			}
 		}
 	}

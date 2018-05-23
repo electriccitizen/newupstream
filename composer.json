@@ -93,13 +93,12 @@
     "drupal/webform": "~5",
     "drupal/xmlsitemap": "^1.0@alpha",
     "drush/drush": "~8",
+    "electriccitizen/docksal": "~1",
     "geerlingguy/drupal-vm": "^4.7",
     "rvtraveller/qs-composer-installer": "^1.1",
     "webflo/drupal-core-strict": "^8",
     "webflo/drupal-finder": "^0.3.0",
-    "wikimedia/composer-merge-plugin": "~1.3",
-    "woothemes/flexslider": "2.6.4",
-    "electriccitizen/docksal": "~1"
+    "wikimedia/composer-merge-plugin": "~1.3"
   },
   "require-dev": {
     "mikey179/vfsstream": "^1.2",

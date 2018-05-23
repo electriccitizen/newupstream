@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "45281226525040d6590ec80702e24feb",
+    "content-hash": "3d95f803109acdb3cf0eab0f29d8cdfa",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -8611,16 +8611,6 @@
             ],
             "description": "Composer plugin to merge multiple composer.json files",
             "time": "2017-04-25T02:31:25+00:00"
-        },
-        {
-            "name": "woothemes/flexslider",
-            "version": "2.6.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/woothemes/FlexSlider.git",
-                "reference": "2.6.4"
-            },
-            "type": "drupal-library"
         },
         {
             "name": "zendframework/zend-diactoros",

@@ -4,6 +4,7 @@ status: true
 dependencies:
   module:
     - focal_point
+    - image_style_quality
 _core:
   default_config_hash: MAInAJ6e22teIjbGjK0_md840o9E6FuY8x3mM22_JKM
 name: 350x350_2x
@@ -16,3 +17,10 @@ effects:
     data:
       width: 700
       height: 700
+      crop_type: focal_point
+  3cf78d2e-fdc4-4a1e-8f70-81929a6fec9f:
+    uuid: 3cf78d2e-fdc4-4a1e-8f70-81929a6fec9f
+    id: image_style_quality
+    weight: 2
+    data:
+      quality: 35

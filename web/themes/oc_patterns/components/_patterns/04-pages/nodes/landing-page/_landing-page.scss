@@ -5,9 +5,6 @@
 .node--type-landing_page{
 	.block-region-top{
 		position: relative;
-		.block-entity-fieldnodetitle{
-			margin-top: 0;
-		}
 		.field-banner{
 			opacity: 0;
 			@include animation('fadeIn 1.2s 1 forwards');
@@ -15,27 +12,11 @@
 				width: 100%;
 			}
 		}
-		.field-node-title{
-			margin-top: 0;
-			margin-bottom: 1.5em;
-			h1{
-				margin: 0;
-			}
-		}
-		.page-menu{
-			@include tab{
-				top: 100%;
-				bottom: auto;
-			}
-		}
 	}//end block-regoin-top
 
 
 	.block-region-main{
 		@include mainContent;
-		.field.body{
-		
-		}
 	}
 }//end landing-page
 

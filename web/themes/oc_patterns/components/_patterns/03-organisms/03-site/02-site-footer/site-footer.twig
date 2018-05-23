@@ -6,7 +6,6 @@ that markup will need be changed in their pl twig files.
 Available macro variables: fixed, non-fixed.
 #}
 
-{% import "@base/global/05-macros/macros.twig" as styles %}
 
 {% block footerStart %}
 {{ footer_instructions }}
@@ -20,7 +19,7 @@ Available macro variables: fixed, non-fixed.
 
 {% block footerContent %}
 <footer role="contentinfo" class="pl-spacer">
-	<div class="footer-inner {{ styles.fixedFooter }}">	
+	<div class="footer-inner">	
 		<div>
 		{% if address %}
 			{% include "@molecules/blocks/footer-address/_footer-address.twig" %}
