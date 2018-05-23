@@ -136,7 +136,7 @@ $addtoany: 32px;
 	@include backgroundSize($columns * $addtoany,$rows * $addtoany);
 }
 
-/// used in SITEWIDE GLOBAL-STYLES.SCSS 
+/// used in MISCELLANEOUS GLOBAL-STYLES.SCSS 
 $iconsize: 18px;
 @mixin iconSize{
 	@include backgroundSize($columns * $iconsize,$rows * $iconsize);

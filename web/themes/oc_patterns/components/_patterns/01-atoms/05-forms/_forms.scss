@@ -184,3 +184,15 @@ fieldset{
 		margin: 0 1em;
 	}
 }
+
+
+
+/* USER LOGIN
+--------------- */
+.user-login-form{
+	.form-item input:not([type="submit"]){
+		max-width: 400px;
+	}
+}
+
+

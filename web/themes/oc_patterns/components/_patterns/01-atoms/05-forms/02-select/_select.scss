@@ -29,6 +29,7 @@ optgroup:empty{
 //override script set width
 .select2-container--default{
 	width: 100% !important;
+	max-width: 250px;
 }
 
 

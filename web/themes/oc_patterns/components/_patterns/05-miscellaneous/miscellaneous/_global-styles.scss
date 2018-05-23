@@ -6,13 +6,68 @@ body {
 	& > .overflow-guard{
 		overflow-x: hidden;
 	}
-}
-p{
-	margin-top: 0;
+	div{
+		box-sizing: border-box;
+		
+		*{
+			box-sizing: inherit;
+		}
+	}
 }
 
 .container-inline div{
 	display: inline;
+}
+
+
+/* MAP PINS
+-------------- */
+//google api map pins
+.gm-style-iw{
+	strong{
+		font-weight: $heavy;
+	}
+	em{
+		font-style: italic;
+	}
+	h2{
+		font-size: 16px;
+	}
+	h3{
+		font-size: 14px;
+	}
+}
+
+/* PANELS-IPE
+------------------- */
+//save buttons
+#panels-ipe-tray{
+	z-index: 1000;
+	a{
+		padding: 5px 10px;
+		border: 1px solid;
+		&.panelizer-ipe-save-custom{
+			border-color: $greenGood;
+			background: $greenGood;
+			color: $white;
+			&:hover,&:focus{
+				background: transparent;
+				color: darken($greenGood, 10%);
+			}
+		}
+		&.panelizer-ipe-save-default{
+			border-color: $redBad;
+			background: $redBad;
+			color: $white;
+			&:hover,&:focus{
+				background: transparent;
+				color: darken($redBad, 10%);
+			}
+		}
+	}
+}
+.ipe-category-picker-bottom{
+	white-space: initial;
 }
 
 
@@ -77,6 +132,8 @@ p{
 		}
 	}
 }//end back anchor
+
+
 
 /*  FILE ICONS
 --------------- */
@@ -157,6 +214,39 @@ a[href$='.ppt'],a[href$=".pptx"]{
 	}
 }
 
+
+/* ADMIN NODE EDIT TABS
+----------------- */
+.block-local-tasks-block{
+	@include paddedContent;
+	@include auto;
+	margin-top: 2em;
+	.tabs {
+		margin: 1em 0;
+		border-bottom:1px solid $midGrey;
+
+		ul {
+			padding-left:0;
+			margin:0;
+		}
+		li {
+			margin:0 2px 0 0;
+			background: $white;
+			display: inline-block;
+		}
+
+		a {
+			display: block;
+			padding: 0.2em 1em;
+			&.is-active {
+				background-color: $lightGrey;
+			}
+			&:focus,&:hover {
+				background-color: $offWhite;
+			}
+		}
+	}
+}//end local tasks
 
 
 /* PLAYGROUND
