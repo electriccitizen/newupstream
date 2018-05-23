@@ -1,44 +1,48 @@
-uuid: 9118e571-faa3-4280-88c0-8f47591a844d
+uuid: 9d40b9e8-b440-4a90-a62c-811e2c1fabf7
 langcode: en
 status: true
 dependencies:
   config:
-    - image.style.large_rectangle_600x400
-    - image.style.large_rectangle_600x400_2x
-    - image.style.small_rectangle_300x200
-    - image.style.small_rectangle_300x200_2x
-    - image.style.xl_rectangle_900x600
+    - image.style.large_800
+    - image.style.maxwidth_1200
+    - image.style.medium_500
+    - image.style.medium_500_2x
+    - image.style.small_300
+    - image.style.small_300_2x
   theme:
     - oc_patterns
-_core:
-  default_config_hash: btN3JKWY6iEOV6TxmwlRMhts6zyEoS7fdmqwK4DRC_Y
-id: xl_rectangle
-label: 'XL Rectangle'
+id: full_1200
+label: 'Full (1200)'
 image_style_mappings:
+  -
+    breakpoint_id: oc_patterns.images.bigdesk
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: maxwidth_1200
   -
     breakpoint_id: oc_patterns.images.desk
     multiplier: 1x
     image_mapping_type: image_style
-    image_mapping: xl_rectangle_900x600
+    image_mapping: large_800
   -
     breakpoint_id: oc_patterns.images.tablet
     multiplier: 1x
     image_mapping_type: image_style
-    image_mapping: large_rectangle_600x400
+    image_mapping: medium_500
   -
     breakpoint_id: oc_patterns.images.tablet
     multiplier: 2x
     image_mapping_type: image_style
-    image_mapping: large_rectangle_600x400_2x
+    image_mapping: medium_500_2x
   -
     breakpoint_id: oc_patterns.images.mobile
     multiplier: 1x
     image_mapping_type: image_style
-    image_mapping: small_rectangle_300x200
+    image_mapping: small_300
   -
     breakpoint_id: oc_patterns.images.mobile
     multiplier: 2x
     image_mapping_type: image_style
-    image_mapping: small_rectangle_300x200_2x
+    image_mapping: small_300_2x
 breakpoint_group: oc_patterns
-fallback_image_style: xl_rectangle_900x600
+fallback_image_style: maxwidth_1200
