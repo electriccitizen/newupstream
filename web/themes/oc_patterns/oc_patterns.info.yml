@@ -39,4 +39,4 @@ component-libraries:
       - components/_patterns/04-pages
   miscellaneous:
     paths:
-      - components/_patterns/05-miscellanous
+      - components/_patterns/05-miscellaneous
