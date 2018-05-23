@@ -37,6 +37,7 @@ footer {
 		}
 
 		//styling when fixed
+		/*
 		&.isFixed{
 			@include tab{
 				border-top: 1px solid $offWhite;
@@ -69,7 +70,7 @@ footer {
 				}
 			}//end tab
 		}//end fixed
-
+		*/
 	}//end footer-inner
 
 }//end footer

@@ -40,8 +40,6 @@ $h6Sm: 18px;
 	@include headerGlobals;
 	font-family: $display-header;
 	font-size: $h1Sm;
-	text-transform: uppercase;
-	letter-spacing: 1px;
 	@include tab{
 		font-size: $h1Mid;
 	}
