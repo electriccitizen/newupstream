@@ -5,6 +5,7 @@ dependencies:
   module:
     - editor
     - entity_embed
+    - pathologic
 _core:
   default_config_hash: pgLG5Mf5QuicT2Cd60RdxCLbXDUnPpAauMdLbUgb0KA
 name: 'Full HTML'
@@ -75,3 +76,13 @@ filters:
     weight: -46
     settings:
       filter_url_length: 72
+  filter_pathologic:
+    id: filter_pathologic
+    provider: pathologic
+    status: true
+    weight: 50
+    settings:
+      settings_source: global
+      local_settings:
+        protocol_style: full
+        local_paths: ''
