@@ -76,7 +76,7 @@
 ///mixin - form-submit
 @mixin formSubmit{
 	@include browserWipe;
-	background: $buttonBack;
+	background: $link;
 	font-weight: $heavy;
 	font-family: $header;
 	text-transform: uppercase;
@@ -86,7 +86,7 @@
 	border: 0;
 	color: $black;
 	&:hover,&:focus{
-		background: $buttonBackHover;
+		background: $hoverLink;
 		@include transAll(.3s);
 		color: $white;
 	}

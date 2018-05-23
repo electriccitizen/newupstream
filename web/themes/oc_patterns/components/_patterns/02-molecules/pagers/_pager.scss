@@ -10,31 +10,21 @@ $pager-line: 24px;
 
 ///mixin - pagerTiemStyle
 @mixin pagerItemStyle{
-	color: $midTeal;
 	display: block;
 	width: 26px;
 	height: 26px;
 	line-height: $pager-line;
-	border: 1px solid $midTeal;
+	border: 1px solid $link;
 	text-align: center;
 	border-radius: 6px;
 	&:hover,&:focus{
 		color: $white;
-		background: $midTeal;
+		background: $hoverLink;
 		text-decoration: none;
 		@include transAll(.3s);
 	}
 }
 
-
-///mixin - pagerControl
-@mixin pagerControl{
-	color: $midTeal;
-	&:hover,&:focus{
-		color: $black;
-		@include transAll(.3s);
-	}
-}
 
 
 /* GLOBAL PAGER STYLING
@@ -64,44 +54,27 @@ $pager-line: 24px;
 		&.is-active{
 			a{
 				color: $white;
-				background: darken($midTeal, 12%);
+				background: darken($link, 12%);
 				&:hover,&:focus{
-					background: $midTeal;
+					background: $hoverLink;
 				}
 			}
 		}
 	}//end page number items
 
-	//first styling
-	.pager__item--first{
-		a{
-			@include pagerControl;
-		}
-	}
-
 	//previous styling
 	.pager__item--previous{
 		a{
-			@include pagerControl;
-			margin-right: .5em;
+			display: none;
 		}
 	}
 
 	//next styling
 	.pager__item--next{
 		a{
-			@include pagerControl;
-			margin-left: .5em;
+			display: none;
 		}
 	}
-
-	//last styling
-	.pager__item--last{
-		a{
-			@include pagerControl;
-		}
-	}
-
 }//end full .pager
 
 
@@ -136,13 +109,6 @@ ul.flippy{
 		@include baseFontSize;
 		padding: 15px 0;
 		width: 50%;
-		a{
-			color: $midTeal;
-			&:hover,&:focus{
-				color: $black;
-				@include transAll(.3s);
-			}
-		}
 		&.flippy-next{
 			text-align: right;
 		}

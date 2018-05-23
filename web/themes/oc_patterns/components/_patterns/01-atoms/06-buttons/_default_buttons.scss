@@ -24,7 +24,7 @@
 		color: $white;
 	}
 	&:hover,&:focus {
-		background-color: $midGrey;
+		background-color: $hoverLink;
 		@include transAll(.3s);
 	}
 }
@@ -62,5 +62,5 @@
 .pl.background{
 	padding: 2em 3em;
 	width: 100%;
-	background: $warmGrey;
+	background: $hoverLink;
 }
