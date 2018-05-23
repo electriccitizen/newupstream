@@ -37,6 +37,6 @@ component-libraries:
   pages:
     paths:
       - components/_patterns/04-pages
-  sitewide:
+  miscellaneous:
     paths:
-      - components/_patterns/05-sitewide
+      - components/_patterns/05-miscellaneous

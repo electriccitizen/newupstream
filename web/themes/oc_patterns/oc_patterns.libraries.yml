@@ -51,7 +51,7 @@ lightbox:
 media-js:
   version: 1.0
   js:
-    components/_patterns/05-sitewide/01-oc-base/media/media.js: {}
+    components/_patterns/01-atoms/08-media/media.js: {}
   dependencies:
     - core/jquery
     - core/drupal

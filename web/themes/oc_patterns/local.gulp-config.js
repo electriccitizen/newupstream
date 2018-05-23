@@ -71,7 +71,7 @@
       mode: {
         css: {
           bust: false,
-          dest: '../../dist',
+          dest: themeDir + '/dist',
           prefix: '@mixin sprite-%s',
           render: {
             scss: {
