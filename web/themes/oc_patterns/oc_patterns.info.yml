@@ -14,7 +14,8 @@ base theme: stable
 hidden: false
 regions:
  header: Header 
- content: Content 
+ content: Content
+ prefooter: Pre-Footer  
  footer: Footer 
 # MUST install `components` module: `drush dl components && drush en components -y`
 # For compatibility with Pattern Lab templates; this list must

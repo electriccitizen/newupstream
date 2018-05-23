@@ -95,6 +95,14 @@
 		</main>
 	{% endblock %}
 
+	{% block pagePreFooter %}
+		{% if page.prefooter %}
+			<section role="prefooter" class="prefooter">
+				{{ page.prefooter }}
+			</section>
+		{% endif %}
+	{% endblock %}
+
 	{% block pageFooter %}
 		{% if page.footer %}
 			<footer role="contentinfo">
