@@ -6,12 +6,10 @@ dependencies:
     - field.storage.node.body
     - field.storage.node.field_oc_date
     - field.storage.paragraph.field_number_of_items
-    - field.storage.paragraph.field_oc_image_multi
     - node.type.event
     - node.type.news
   module:
     - datetime
-    - flexslider_views
     - node
     - options
     - paragraphs
@@ -63,13 +61,14 @@ display:
         options:
           offset: 0
       style:
-        type: flexslider
+        type: html_list
         options:
           grouping: {  }
-          flexslider: null
-          optionset: default
-          captionfield: ''
-          id: ''
+          row_class: ''
+          default_row_class: true
+          type: ul
+          wrapper_class: item-list
+          class: ''
       row:
         type: fields
         options:
@@ -78,10 +77,10 @@ display:
           hide_empty: false
           default_field_elements: true
       fields:
-        field_oc_image_multi:
-          id: field_oc_image_multi
-          table: paragraph__field_oc_image_multi
-          field: field_oc_image_multi
+        id:
+          id: id
+          table: paragraphs_item_field_data
+          field: id
           relationship: none
           group_type: group
           admin_label: ''
@@ -126,20 +125,23 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_entity_view
+          click_sort_column: value
+          type: number_integer
           settings:
-            view_mode: default
-          group_column: target_id
+            thousand_separator: ''
+            prefix_suffix: true
+          group_column: value
           group_columns: {  }
-          group_rows: false
+          group_rows: true
           delta_limit: 0
           delta_offset: 0
           delta_reversed: false
           delta_first_last: false
-          multi_type: ul
+          multi_type: separator
           separator: ', '
           field_api_classes: false
+          entity_type: paragraph
+          entity_field: id
           plugin_id: field
       filters: {  }
       sorts: {  }
@@ -192,8 +194,7 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
-      tags:
-        - 'config:field.storage.paragraph.field_oc_image_multi'
+      tags: {  }
   events_by_category:
     display_plugin: embed
     id: events_by_category

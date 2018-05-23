@@ -41,7 +41,7 @@
 
 {% block widgetContent %}
 	{{ attach_library('oc_patterns/lightbox') }}
-	{% embed "@organisms/02-widgets/lightbox/lightbox.twig" 
+	{% embed "@organisms/01-widgets/lightbox/lightbox.twig" 
 		with{
 			widget_title: content.field_widget_title.0['#context'].value
 		}

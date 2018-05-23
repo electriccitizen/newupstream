@@ -23,16 +23,6 @@ accordion:
     - core/drupal
     - core/drupalSettings
     - core/jquery.once
-call-to-action:
-  version: 3.0
-  js:
-    components/_patterns/03-organisms/02-widgets/call-to-action/call_to_action.js: {}
-  dependencies:
-    - core/jquery
-    - core/drupal
-    - core/underscore
-    - core/drupalSettings
-    - core/jquery.once
 lightbox:
   version: 3.0
   css:

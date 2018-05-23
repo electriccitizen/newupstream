@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - image.style.oc_thumbnail
     - image.style.oc_thumbnail_large
     - image.style.thumbnail
     - media_entity.bundle.document
@@ -1293,7 +1292,7 @@ display:
           click_sort_column: target_id
           type: image
           settings:
-            image_style: oc_thumbnail
+            image_style: thumbnail
             image_link: ''
           group_column: ''
           group_columns: {  }
