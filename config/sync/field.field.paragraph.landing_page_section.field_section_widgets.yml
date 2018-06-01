@@ -39,7 +39,6 @@ settings:
     negate: 0
     target_bundles:
       accordion_group: accordion_group
-      admin_view_placer: admin_view_placer
       block_placer: block_placer
       call_to_action: call_to_action
       event_by_category: event_by_category
@@ -54,74 +53,63 @@ settings:
       slideshow: slideshow
       text: text
       video: video
+      admin_view_placer: admin_view_placer
     target_bundles_drag_drop:
       accordion_group:
         enabled: true
-        weight: 23
-      basic_page_section:
-        weight: 24
-        enabled: false
+        weight: -39
       accordion_item:
-        weight: 24
+        weight: -38
         enabled: false
-      admin_view_placer:
-        enabled: true
-        weight: 25
+      basic_page_section:
+        weight: -37
+        enabled: false
       block_placer:
         enabled: true
-        weight: 26
-      buttons:
-        weight: 27
-        enabled: false
+        weight: -36
       call_to_action:
         enabled: true
-        weight: 28
-      custom_code:
-        weight: 29
-        enabled: false
+        weight: -35
       event_by_category:
         enabled: true
-        weight: 30
+        weight: -34
       form:
         enabled: true
-        weight: 31
+        weight: -33
       horizontal_rule:
         enabled: true
-        weight: 32
+        weight: -32
       image:
         enabled: true
-        weight: 33
+        weight: -31
       landing_page_section:
-        weight: 34
+        weight: -30
         enabled: false
       lightbox_gallery:
         enabled: true
-        weight: 35
+        weight: -29
       links_files:
         enabled: true
-        weight: 36
+        weight: -28
       map:
         enabled: true
-        weight: 37
+        weight: -27
       news_by_category:
         enabled: true
-        weight: 38
+        weight: -26
       pullquote:
         enabled: true
-        weight: 39
+        weight: -25
       slideshow:
         enabled: true
-        weight: 40
-      social_media:
-        weight: 41
-        enabled: false
-      social_platform:
-        weight: 42
-        enabled: false
+        weight: -24
       text:
         enabled: true
-        weight: 43
+        weight: -23
       video:
         enabled: true
-        weight: 44
+        weight: -22
+      admin_view_placer:
+        enabled: true
+        weight: -21
 field_type: entity_reference_revisions
