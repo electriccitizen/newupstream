@@ -133,6 +133,13 @@
 	appearance: none;
 }
 
+@mixin buttonWipe{
+	@include browserWipe;
+	background: none;
+	border: none;
+	color: inherit;
+}
+
 
 /// mixin - overlay
 @mixin overlay{
