@@ -2,64 +2,138 @@
 	 SEARCH
 =================== */
 
+///mixin placholder
+%searchBlockPlaceholder{
+	$place-tint: 1;
+	$place-color: $white;
+	&::-webkit-placeholder{
+		opacity: $place-tint;
+		color: $place-color;
+	}
+	&::-moz-placeholder{
+		opacity: $place-tint;
+		color: $place-color;
+	}
+	&:-ms-input-placeholder{
+		opacity: $place-tint;
+		color: $place-color;
+	}
+	&::-webkit-input-placeholder{
+		opacity: $place-tint;
+		color: $place-color;
+	}
+}
+
+///mixin - placeholderFocus
+%searchBlockPlaceholderFocus{
+	$place-focus-tint: .2;
+	$place-focus-color: $white;
+	&::-webkit-placeholder{
+		opacity: $place-focus-tint;
+		color: $place-focus-color;
+	}
+	&::-moz-placeholder{
+		opacity: $place-focus-tint;
+		color: $place-focus-color;
+	}
+	&:-ms-input-placeholder{
+		opacity: $place-focus-tint;
+		color: $place-focus-color;
+	}
+	&::-webkit-input-placeholder{
+		opacity: $place-focus-tint;
+		color: $place-focus-color;
+	}
+}
+
+
 .block-search-form-block{
 
 	//search icon
 	.t-search{
 		font-size: 16px;
 		text-indent: 9000px;
-		width: 22px;
-		height: 22px;
+		width: 23px;
+		height: 21px;
 		cursor: pointer;
 		display: block;
-		@include searchOpenToggle;
-		&.searching{
-			@include searchCloseToggle;
-		} 
-		//add an accessiblity indicator
-		&:hover,&:focus{
-			&:after{
-				content: '';
-				display: block;
-				height: 1px;
-				width: 100%;
-				background: $black;
-				position: absolute;
-				bottom: -4px;
-				left: 0;
+		@include searchOpenToggle; 
+		border: 1px solid transparent;
+	}
+	.t-search-wrapper{
+		&:hover{
+			background: $grey;
+			.t-search{
+				@include searchCloseToggle;
 			}
-		}   
+		}
 	}
 
-	//center search box on mobile and set height to 0 so can open under header when toggled
-	#search-block-form,#views-exposed-form-site-search-search-results {
-		height: 0;
-		overflow: hidden;
-		text-align: center;
-		z-index: 5;
-		position: absolute;
-		top: 100%;
-		left: 50%;
-		@include translateX(-50%);
-		width: 80%;
-		max-width: 500px;
-		@include backfaceVisibility(hidden);
-		&.slideDown{
-			height: 50px;
-			@include transition(height, .2s, linear);
+	.t-search:focus{
+		border: 1px solid $black;
+	}
 
+	//close search
+	.t-search-close{
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: 50px;
+		width: 50px;
+		display: none;
+		z-index: 502;
+		.close-search{
+			font-family: $header;
+			display: block;
+			width: 100%;
+			height: 100%;
+			color: $black;
+			font-size: 28px;
+			background: $offWhite;
+			cursor: pointer;
+			@include safeFlex(column,null,center,center);
+			&:hover,&:focus{
+				text-decoration: none;
+				background: $black;
+				color: $offWhite;
+			}
 		}
-		& > div{
-			display: inline-block;
+		.close-text{
+			font-family: $displayHeader;
+			font-size: 18px;
+			color: $white;
+			position: absolute;
+			bottom: -24px;
+			left: 0;
+			width: 100%;
+			text-align: center;
 		}
-		//move search box back to upper right at desktop
+	}//end search close
+
+
+	//put search form wrapper at top of screen and full width, hide for slide effect
+	.search-form-wrapper{
+		position: absolute;
+		display: none;
+		z-index: 500;
+		top: 0;
+		left: 0;
+		width: 100%;
+		@include maxWidth{
+			@include calc(left, "-50vw + 620px");
+			width: 100vw;
+		}
+	}
+
+	//put search form at top of screen and full width
+	#views-exposed-form-site-search-search-results {
+		position: relative;
+		width: 100%;
+		padding: 80px 20px;
+		text-align: center;
+		background: rgba(35,35,35,0.97);
 		@include deskMenu{
-			top: -5px;
-			left: auto;
-			//from 01-mixins.scss
-			@include translateX(0);
-			right: 55px;
-			max-width: 320px;
+			padding: 160px 20px;
 		}
 
 		//search box input
@@ -67,64 +141,63 @@
 			padding: 10px 0;
 			width: 100%;
 			margin-bottom: 0;
-			@include deskMenu{
-				width: 320px;
+			max-width: 800px;
+			@include auto;
+			label{
+				text-align: left;
+				font-size: 36px;
+				color: $white;
+				font-family: $header;
+				@include spacer(.25);
+				@include tab{
+					font-size: 42px;
+				}
 			}
 			input{
 				width: 100%;
-				@include deskMenu{
-					width: 100%;
-				}
-				padding: 9px 10px;
-				font-size: 13px;
+				background: transparent;
+				padding: 9px 0;
 				border: none;
-				border: 1px solid $borderRule;
-				@include placeholder;
+				color: $white;
+				font-family: $serif;
+				border-bottom: 1px solid $white;
+				border-radius: 0;
+				@extend %searchBlockPlaceholder;
+				//prevent yellow chrome autofill inset                                                   
+				&:-webkit-autofill{
+					-webkit-box-shadow: 0 0 0 1000px $white inset;
+				}
+				@include tab{
+					font-size: 22px;
+				}
 				&:focus{
-					@include placeholderFocus;
+					@extend %searchBlockPlaceholderFocus;
 				}
 			}
 		}
 
 		//search submit button
+		.form-actions{
+			position: relative;
+			@include auto;
+			max-width: 800px;
+		}
 		.form-submit{
 			position: absolute;
 			right: 8px;
-			top: 18px;
+			top: -46px;
 			color: $white;
 			text-indent: 9000px;
 			border: none;
-			height: 24px;
-			width: 24px;
+			height: 25px;
+			width: 25px;
 			@include searchSubmitMobile;
 			padding: 0;
 			&:hover{
-				@include searchSubmitMobileHover;
-				@include transClear;
-			}
-			@include tab{
-				height: 20px;
-				width: 20px;
-				@include searchSubmitTabSize;
-				&:hover{
-					@include searchSubmitTabSize;
-				}
+				@include opacity(.7);
 			}
 		}
 	}//end search block form
-
-	//when styled as box (set in macros.twig)
-	&.box{
-		@include deskMenu{
-			#search-block-form{
-				height: auto;
-				right: 20px;
-			}
-			.t-search{
-				display: none;
-			}
-		}
-	}
 
 }//end search block
 

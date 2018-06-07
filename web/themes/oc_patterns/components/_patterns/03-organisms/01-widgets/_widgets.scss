@@ -50,6 +50,12 @@ SECTION LAYOUTS
 		@include auto;
 	}
 
+	.field-section-intro{
+		max-width: $maxWidthText;
+		@include auto;
+		@include spacer(1.5);
+	}
+
 	//default section layout
 	.field-section-widgets{
 		position: relative;

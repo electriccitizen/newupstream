@@ -2,27 +2,23 @@
 	 SUPERFISH 
 ================ */
 
-/* MIXINS
+/* PLACEHOLDERS
 ------------ */
-/// mixin - menuShim  (adds color space when menu is not at bottom of header)
-@mixin menushim{
-	&:after{
-		content: '';
-		display: block;
-		position: absolute;
-		height: 10px;
-		width: 100%;
-		top: 100%;
-		left: 0;
-	}
+
+%menuDropdown{
+	background: $white;
+	border-left: 1px solid $grey;
+	border-right: 1px solid $grey;
+	border-bottom: 3px solid $black;
 }
 
-///mixin - menuDropdown
-@mixin menuDropdown{
-	background: $white;
-	border-left: 1px solid $black;
-	border-right: 1px solid $black;
-	border-bottom: 6px solid $black;
+%childDrop{
+	&.menuparent{
+		& > ul{
+			background: $white;
+			border: 1px dotted $borderRule;
+		}
+	}
 }
 
 
@@ -48,16 +44,7 @@
 
 /* DESK FISH
 ---------------- */
-.sf-menu.sf-horizontal.sf-main{
-
-	%deskdrop{
-		&.menuparent{
-			& > ul{
-				background: $white;
-				border: 1px dotted $borderRule;
-			}
-		}
-	}
+.sf-menu.sf-horizontal{
 
 	//override deafult floats
 	li{
@@ -66,8 +53,8 @@
 
 
 	/* ====  sf main links ==== */
-	&.sf-menu{
-		@include safeFlex(row,wrap,null,null);
+	&.sf-main{
+		@include safeFlex(row,wrap,end,null);
 		& > li{
 			&:not(.sfHover){
 				& > ul{
@@ -80,21 +67,12 @@
 				font-size: 20px;
 				display: block;
 				position: relative;
-				//shim to join main links with dropdowns in case positioned higher in header
-				//@include menushim;
 			}
 			&.active-trail > a{
-				color: $white;
+				color: $link;
 			}
 			&:hover,&:focus{
 				background: $white;
-				& > a{
-					color: $black;
-					&:after{
-						///menu shim background  
-						background: $white;
-					}
-				}
 			}
 		}
 	}//end main links
@@ -102,44 +80,17 @@
 
 	/* ====  sf main dropdown ==== */
 	& > li.sf-depth-1{
-		&:last-of-type{
-			margin-right: -10px;
-		}
 
 		//dropdown wrapper
 		& > ul{
 			padding: 20px 0 0;
-			@include menuDropdown;
+			top: 100%;
+			@extend %menuDropdown;
 			& > li{ 
-				padding: 0 0 20px;
-			}
-		}
-		
-		//single column
-		&:not(.justification){
-			& > ul{
-				margin-top: 20px;
-				& > li{
-					&:not(:last-of-type){
-						padding: 0;
-					}
+				padding: 0;
+				&:last-of-type{
+					padding: 0 0 20px;
 				}
-			}
-		}
-
-		//multi-column (justification added as a class on the main menu parent in drupal structure > menus)
-		&.justification{
-			position: static;
-			& > ul{
-				right: 0;
-				left: auto;
-				width: 100vw;
-				top: 100%;
-				max-width: $maxWidth;
-				padding-left: 20px;
-				padding-right: 20px;
-				padding-bottom: 20px;
-				@include safeFlex(row, wrap, null, null);
 			}
 		}
 
@@ -184,51 +135,23 @@
 		line-height: 1em;
 		padding: 12px 20px;
 	}
-
-	//level 2 when in multi-column
-	.justification{
-		a.sf-depth-2{
-			&.menuparent{
-				//remove 2nd level togglers when in multi-column
-				border-bottom: 1px dotted $borderRule;
-				&:after{
-					content: none !important;
-				}
-			}
-		}//end level 2 link
-		&.two-colum li.sf-depth-2{
-			@include safeFlexSize(0,0,50%);
-			padding: 0 10px;
-			& > a{
-				padding: 12px 10px;
-			}
-		}
-		&.three-column li.sf-depth-2{
-			@include safeFlexSize(0,0,33.333%);
-			padding: 0 10px;
-			& > a{
-				padding: 12px 10px;
-			}
-		}
-	}//end justification
-	
-
 	 
 
 	/* ====  Level 3 ==== */
 
-	//dropdown wrapper when not in multi-column
-	.sf-depth-1:not(.justification) .sf-depth-2{
+	//dropdown wrapper 
+	.sf-depth-1 .sf-depth-2{
 		ul{
-			@include menuDropdown;
+			@extend %menuDropdown;
+			border-top: 1px solid $grey;
 		}
 	}
 
-	//non-justified level 3
+	//level 3
 	li.sf-depth-2 li{
 		font-size: 17px;
 		line-height: 1em;
-		@extend %deskdrop;
+		@extend %childDrop;
 		& > a{
 			padding-left: 40px;
 			padding: 8px 20px 8px 40px;
@@ -250,38 +173,9 @@
 		}
 	}//end a.level 3
 
-	//justified level 3
-	.sf-depth-1.justification li.sf-depth-2{
-		//need importants to force sf-hidden open to show level three
-		& > ul{
-			position: relative !important;
-			top: 0;
-			left: 0;
-			height: auto !important;
-			clip: inherit;
-			width: 100% !important;
-			padding: 10px 0 !important;
-			@include clearFix;
-			overflow: visible !important;
-			& > li{
-				text-align: left;
-				float: left;
-				width: auto;
-				clear: left;
-				& > a{
-					display: inline-block;
-					padding: 10px 20px;
-				}
-				& > ul{
-					left: 100%;
-				}
-			}//end lie
-		}//end ul
-	}//end justification sf-depth-2
-
 	/* ====  Level 4 ==== */
 	li.sf-depth-4{
-		@extend %deskdrop;
+		@extend %childDrop;
 	}
 
 
@@ -447,7 +341,6 @@ ul.sf-menu.sf-accordion{
 			li.sf-depth-1{
 				max-width: 200px;
 				background: $white;
-				@include menushim;
 				&:after{
 					background: $white;
 				}

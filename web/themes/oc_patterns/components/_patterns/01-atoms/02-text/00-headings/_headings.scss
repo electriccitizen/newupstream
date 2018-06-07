@@ -38,7 +38,7 @@ $h6Sm: 18px;
 
 @mixin heading1{
 	@include headerGlobals;
-	font-family: $display-header;
+	font-family: $displayHeader;
 	font-size: $h1Sm;
 	@include tab{
 		font-size: $h1Mid;
@@ -131,9 +131,12 @@ h2+ul, h3+ul, h4+ul, h5+ul, h6+ul {
 }
 .section-title{
 	@include blockTitle;
+	font-size: 24px;
 }
 .widget-title{
 	@include blockTitle;
+	letter-spacing: 0;
+	text-transform: none;
 }
 
 

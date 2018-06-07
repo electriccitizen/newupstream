@@ -5,11 +5,11 @@
       "value": "\"Open Sans\", Helvetica, Arial, sans-serif"
     },
     {
-      "name": "$display-header",
+      "name": "$displayHeader",
       "value": "\"Raleway\", Helvetica, Arial, sans-serif"
     },
     {
-      "name": "$bodyfont",
+      "name": "$bodyFont",
       "value": "\"Open Sans\", Helvetica, Arial, sans-serif"
     },
     {

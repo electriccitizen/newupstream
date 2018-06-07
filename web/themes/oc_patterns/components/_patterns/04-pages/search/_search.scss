@@ -25,57 +25,63 @@
 				}
 			}
 			.block-search-form-block{
-				text-align: left;
+				margin-top: 2em;
 				margin-bottom: 2em;
 				display: block;
 				width: 100%;
-				.t-search{
+				position: relative;
+				//hide header search block toggle;
+				.t-search-wrapper{
 					display: none;
 				}
-				#views-exposed-form-site-search-search-results{
-					@include safeFlex(row,wrap,null,center);
-					@include translateX(0);
-					height: auto;
-					position: static;
-					max-width: 100%;
+
+				//show non-header search block and set to max-width
+				.search-form-wrapper{
+					display: block;
+					position: relative;
 					width: 100%;
+					left: 0;
+					top: 0;
+				}
+
+				#views-exposed-form-site-search-search-results{
+					padding: 50px 20px;
+					background: $lightGrey;
 					.form-item-search-api-fulltext{
-						@include safeFlexSize(0,1,280px);
-						margin-right: 1em;
+						max-width: 590px;
 						label{
 							display: none;
 						}
 						input{
-
-						}
-					}
-					.form-actions input{
-						margin-bottom: 0;
-						padding: .5em 2.25em;
-						position: static;
-						background: $link;
-						width: 132px;
-						height: auto;
-						text-indent: 0;
-						&:hover,&:active,&:focus{
-							background: $hoverLink;
-							@include transAll(.3s);
-						}
-						@include tab{
-							padding: .5em 3em;
-							width: 145px;
-						}
-						&:not(#edit-reset){
-							margin-right: 10px;
-						}
-						&#edit-reset{
-							background: $black;
-							&:hover,&:focus,&:active{
-								background: $hoverLink;
+							background: $siteBack;
+							color: $black;
+							padding-left: 20px;
+							padding-right: 20px;
+							font-style: italic;
+							@include placeholder;
+							//prevent yellow chrome autofill inset 
+							&:-webkit-autofill{
+								-webkit-box-shadow: 0 0 0 1000px $white inset;
+							}
+							&:focus{
+								@include placeholderFocus;
 							}
 						}
 					}
-				}//end form
+					.form-actions{
+						max-width: 590px;
+						input{
+							height: 24px;
+							width: 24px;
+							top: -42px;
+							@include searchSubmitMobile;
+							right: 18px;
+							&:hover,&:active,&:focus{
+								@include opacity(.4);
+							}
+						}
+					}
+				}//end foirm
 			}//end block search form
 
 			h2.results-header{

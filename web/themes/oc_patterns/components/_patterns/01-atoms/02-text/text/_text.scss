@@ -37,7 +37,7 @@
 /* TYPE STYLES
 --------------- */
 html,code{
-	font-family: $bodyfont;
+	font-family: $bodyFont;
 	@include baseFontSize;
 	line-height: 1.4;
 	-webkit-font-smoothing: antialiased;

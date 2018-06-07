@@ -2,17 +2,8 @@
  Drupal: This file is embedded in the site-header.twig pattern lab file and in the search-block Drupal block.
 #}
 
-{% import "@base/global/05-macros/macros.twig" as styles %}
 
 {{ search_instructions }}
-
-{% block searchOpen %}
-	{% if styles.searchBox == 'toggle' %}
-		<div class="pl-spacer">
-			Search Toggle Icon
-		</div>
-	{% endif %}
-{% endblock %}
 
 <div data-drupal-selector="search-block-form" id="block-oc-patterns-search" class="block block-search-form-block {{ styles.searchBox }}" role="search">
 	<a class="t-search" tabindex="-1" role="button"></a>
