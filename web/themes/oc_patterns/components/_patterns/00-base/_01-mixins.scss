@@ -133,6 +133,13 @@
 	appearance: none;
 }
 
+@mixin buttonWipe{
+	@include browserWipe;
+	background: none;
+	border: none;
+	color: inherit;
+}
+
 
 /// mixin - overlay
 @mixin overlay{
@@ -385,8 +392,8 @@ $textW: $maxWidthText;
 
 ///mixin - edgeToEdge
 @mixin edgeReset {
-	margin-left:0px;
-	margin-right:0px;
+	margin-left:0;
+	margin-right:0;
 }
 
 ///mixin - clearfix
