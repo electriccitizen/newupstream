@@ -11,6 +11,9 @@
 #}
 
 <div class="block block-search-form-block">
-	<a class="t-search" tabindex="-1" role="button"></a>
-	{{ content }}
+	<div class="t-search-wrapper"><a href="#" class="t-search" role="expander">open</a></div>
+	<div class="t-search-close"><a href="#" class="close-search" role="contractor">X</a><span class="close-text">close</span></div>
+	<div class="search-form-wrapper" aria-expanded="false">
+		{{ content }}
+	</div>
 </div>

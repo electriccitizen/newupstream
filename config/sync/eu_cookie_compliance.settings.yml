@@ -15,7 +15,7 @@ popup_agreed_enabled: true
 popup_bg_hex: ''
 popup_clicking_confirmation: true
 popup_scrolling_confirmation: false
-popup_delay: 1000
+popup_delay: 500
 show_disagree_button: true
 popup_disagree_button_message: 'More Info'
 popup_enabled: true

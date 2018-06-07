@@ -38,7 +38,7 @@ display:
         type: input_required
         options:
           submit_button: Search
-          reset_button: true
+          reset_button: false
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
           expose_sort_order: false
@@ -226,7 +226,7 @@ display:
           exposed: true
           expose:
             operator_id: search_api_fulltext_op
-            label: Keyword(s)
+            label: ''
             description: ''
             use_operator: false
             operator: search_api_fulltext_op
@@ -240,6 +240,7 @@ display:
               administrator: '0'
               senior_editor: '0'
               editor: '0'
+            placeholder: ''
           is_grouped: false
           group_info:
             label: ''

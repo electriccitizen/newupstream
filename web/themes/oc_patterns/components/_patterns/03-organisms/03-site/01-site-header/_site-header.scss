@@ -24,7 +24,7 @@
 
 	//set width at desktop
 	@include deskMenu{
-		width: 300px;
+		width: 240px;
 	}
 
 	a{
@@ -48,7 +48,7 @@
 
 	//set width at desktop
 	@include deskMenu{
-		@include calc(width, "100% - 300px");
+		@include calc(width, "100% - 240px");
 	}
 
 	//search toggler
@@ -67,28 +67,13 @@
 /* MAIN NAVIGATION BLOCK
 ------------------------ */
 .block-superfishmain{
-	text-align: right;
-
 	//desktop position
 	@include deskMenu{
+		position: absolute;
+		right: 0;
+		bottom: 0;
 		width: 100%;
-		margin: 10px 0 0 -10px;
-		vertical-align: middle;
-		text-align: left;
-
-		//when menu alignment right variable is used
-		&.right{
-			text-align: right;
-			margin: 10px -15px 0 0;
-		}
-
-		//when menu alignment center variable is used
-		&.center{
-			width: 100%;
-			text-align: center;
-			position: static;
-			margin: 0;
-		}
+		padding-left: 280px;
 	}//end deskMenu
 	
 }//end main nav

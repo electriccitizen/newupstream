@@ -45,7 +45,16 @@
 		<css-placeholder token="{{ placeholder_token|raw }}">
 		<js-placeholder token="{{ placeholder_token|raw }}">
 		{% block headInsert %}
-			{# placeholder for any site or page specific <head> additions #}
+			{# place for any site or page specific <head> additions #}
+			<link rel="apple-touch-icon" sizes="180x180" href="/themes/oc_patterns/favicons/apple-touch-icon.png">
+			<link rel="icon" type="image/png" sizes="32x32" href="/themes/oc_patterns/favicons/favicon-32x32.png">
+			<link rel="icon" type="image/png" sizes="16x16" href="/themes/oc_patterns/favicons/favicon-16x16.png">
+			<link rel="manifest" href="/themes/oc_patterns/favicons/site.webmanifest">
+			<link rel="mask-icon" href="/themes/oc_patterns/favicons/safari-pinned-tab.svg" color="#5bbad5">
+			<link rel="shortcut icon" href="/themes/oc_patterns/favicons/favicon.ico">
+			<meta name="msapplication-TileColor" content="#da532c">
+			<meta name="msapplication-config" content="/themes/oc_patterns/favicons/browserconfig.xml">
+			<meta name="theme-color" content="#ffffff">
 		{% endblock %}
 	</head>
 	<body {{ attributes.addClass(body_classes) }}>
@@ -60,7 +69,8 @@
 			{{ page }}
 			{{ page_bottom }}
 			{% block bottomInsert %}
-				{# placeholder for any site or page specific additions (like fixed modals) #}
+				{# place for any site or page specific additions (like fixed modals) #}
+				<div class="back-anchor"><a href="#">Back to Table of Contents</a></div>
 			{% endblock %}
 		</div>
 		<js-bottom-placeholder token="{{ placeholder_token|raw }}">
