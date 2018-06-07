@@ -2,8 +2,8 @@
 		MIXINS
 =================== */
 
-//   For help see the mixins refernce chart in Pattern Lab: 
-//   /pattern-lab/public/?p=base-mixins  or 
+//   For help see the mixins refernce chart in Pattern Lab:
+//   /pattern-lab/public/?p=base-mixins  or
 //   /public/?p=base-mixins
 
 
@@ -108,17 +108,17 @@
 
 
 ///mixin - calc
-@mixin calc($property, $expression) { 
+@mixin calc($property, $expression) {
 	#{$property}: -webkit-calc(#{$expression});
-	#{$property}: -moz-calc(#{$expression});  
-	#{$property}: calc(#{$expression}); 
+	#{$property}: -moz-calc(#{$expression});
+	#{$property}: calc(#{$expression});
 }
 
 ///mixin - calcForce
-@mixin calcForce($property, $expression) { 
+@mixin calcForce($property, $expression) {
 	#{$property}: -webkit-calc(#{$expression}) !important;
-	#{$property}: -moz-calc(#{$expression}) !important;  
-	#{$property}: calc(#{$expression}) !important; 
+	#{$property}: -moz-calc(#{$expression}) !important;
+	#{$property}: calc(#{$expression}) !important;
 }
 
 
@@ -219,12 +219,12 @@
 }
 
 ///mixin - gradient
-@mixin gradient($grad-direction,$grad-start,$grad-stop) { 
-	background: -moz-linear-gradient($grad-direction, $grad-start 0%,$grad-stop 100%); /* FF3.6+ */  
-	background: -webkit-linear-gradient($grad-direction, $grad-start 0%,$grad-stop 100%); /* Chrome10+,Safari5.1+ */ 
-	background: -o-linear-gradient($grad-direction, $grad-start 0%,$grad-stop 100%); /* Opera 11.10+ */ 
-	background: -ms-linear-gradient($grad-direction, $grad-start 0%,$grad-stop 100%); /* IE10+ */ 
-	@if $grad-direction == 'top'{	
+@mixin gradient($grad-direction,$grad-start,$grad-stop) {
+	background: -moz-linear-gradient($grad-direction, $grad-start 0%,$grad-stop 100%); /* FF3.6+ */
+	background: -webkit-linear-gradient($grad-direction, $grad-start 0%,$grad-stop 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient($grad-direction, $grad-start 0%,$grad-stop 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient($grad-direction, $grad-start 0%,$grad-stop 100%); /* IE10+ */
+	@if $grad-direction == 'top'{
 		background: linear-gradient(to bottom, $grad-start 0%,$grad-stop 100%); /* W3C */
 	}@else if $grad-direction == 'bottom'{
 		background: linear-gradient(to top, $grad-start 0%,$grad-stop 100%); /* W3C */
@@ -233,7 +233,7 @@
 	}@else if $grad-direction == 'right'{
 		background: linear-gradient(to left, $grad-start 0%,$grad-stop 100%); /* W3C */
 	}
-	
+
 }
 
 
@@ -245,7 +245,7 @@
 	transform: rotate(0.05deg);
 	$actualWidth: $triWidth / 2;
 	$actualHeight: $triHeight / 2;
-	@if $triDirection == 'up'{	
+	@if $triDirection == 'up'{
 		border-right: $actualWidth double rgba(0,0,0,0);
 		border-left: $actualWidth double rgba(0,0,0,0);
 		border-bottom: $triHeight solid $triColor;
@@ -265,12 +265,12 @@
 }
 
 ///mixin - gradient
-@mixin gradient($gradDirection,$gradStart,$gradStop) { 
-	background: -moz-linear-gradient($gradDirection, $gradStart 0%,$gradStop 100%); /* FF3.6+ */  
-	background: -webkit-linear-gradient($gradDirection, $gradStart 0%,$gradStop 100%); /* Chrome10+,Safari5.1+ */ 
-	background: -o-linear-gradient($gradDirection, $gradStart 0%,$gradStop 100%); /* Opera 11.10+ */ 
-	background: -ms-linear-gradient($gradDirection, $gradStart 0%,$gradStop 100%); /* IE10+ */ 
-	@if $gradDirection == 'top'{	
+@mixin gradient($gradDirection,$gradStart,$gradStop) {
+	background: -moz-linear-gradient($gradDirection, $gradStart 0%,$gradStop 100%); /* FF3.6+ */
+	background: -webkit-linear-gradient($gradDirection, $gradStart 0%,$gradStop 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient($gradDirection, $gradStart 0%,$gradStop 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient($gradDirection, $gradStart 0%,$gradStop 100%); /* IE10+ */
+	@if $gradDirection == 'top'{
 		background: linear-gradient(to bottom, $gradStart 0%,$gradStop 100%); /* W3C */
 	}@else if $gradDirection == 'bottom'{
 		background: linear-gradient(to top, $gradStart 0%,$gradStop 100%); /* W3C */
@@ -279,7 +279,7 @@
 	}@else if $gradDirection == 'right'{
 		background: linear-gradient(to left, $gradStart 0%,$gradStop 100%); /* W3C */
 	}
-	
+
 }
 
 // move arrows outside of slick and change color
@@ -392,8 +392,8 @@ $textW: $maxWidthText;
 
 ///mixin - edgeToEdge
 @mixin edgeReset {
-	margin-left: 0;
-	margin-right: 0;
+	margin-left:0;
+	margin-right:0;
 }
 
 ///mixin - clearfix
@@ -506,7 +506,7 @@ $textW: $maxWidthText;
 		}
 		@include tab{
 			width: 33.333%;
-		}	
+		}
 	}
 }
 
@@ -527,7 +527,7 @@ $textW: $maxWidthText;
 		}
 		@include tab{
 			width: 25%;
-		}	
+		}
 	}
 }
 
@@ -560,7 +560,3 @@ $textW: $maxWidthText;
 	margin-right: $bleedWidth * -0.5;
 	@include calc(width, "100% + "$bleedWidth);
 }
-
-
-
-
