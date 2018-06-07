@@ -2,17 +2,12 @@
    FOOTER COPYRIGHT
 ==================== */
 
-.block-simple-blockfooter-copyright{
-	@include safeFlexSize(0,0,100%);
-	@include safeFlexOrder(3);
+.block-copyright{
+	width: 100%;
 	text-align: center;
-	//change the footer block order at tab and align rigth and bottom
 	@include tab{
-		@include safeFlexSize(0,0,50%);
-		position: absolute;
-		bottom: 0;
-		right: 0;
-		text-align: right;
+		width: 50%;
+		text-align: left;
 	}
 	p{
 		margin:0;

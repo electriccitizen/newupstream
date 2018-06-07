@@ -11,7 +11,7 @@ dependencies:
 id: copyright
 theme: oc_patterns
 region: footer
-weight: 0
+weight: -3
 provider: null
 plugin: 'block_content:d3b2a7dd-2a2c-4a67-9f8d-21ad07f83fbb'
 settings:
