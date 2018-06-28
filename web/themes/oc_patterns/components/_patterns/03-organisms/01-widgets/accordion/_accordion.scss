@@ -14,25 +14,29 @@
 
 	//accordion header bar
 	.accordion-header{
-		border: 1px solid;
-		border-color: $darkGrey;
-		color: $darkGrey;
 		margin-bottom: 0;
 		position: relative;
-		padding: 10px 10px 10px 30px;
-		display: block;
 		margin-top: -1px;
-		cursor: pointer;
+		color: $darkGrey;
+		font-size: 22px;
+		border: 1px solid;
+		border-color: $darkGrey;
+		z-index: 3;
+		a{
+			padding: 10px 10px 10px 30px;
+			display: block;
+			color: inherit;
+		}
 		&:after{
 			position: absolute;
 			right: 30px;
 			top: 10px;
-			z-index: 2;
+			z-index: -1;
 			content: "+";
 		}
 		&:hover,&:focus{
-			background: $darkGrey;
 			color: $white;
+			background: $darkGrey;
 			@include transAll(.3s);
 		}
 	}
@@ -46,8 +50,8 @@
 	//active accordion
 	&.accord-active{
 		.accordion-header{
-			background: $darkGrey;
 			color: $white;
+			background: $darkGrey;
 			border-bottom: 0;
 			&:after{
 				content: "–";

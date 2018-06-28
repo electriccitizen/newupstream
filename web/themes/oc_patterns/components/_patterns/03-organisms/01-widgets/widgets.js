@@ -18,14 +18,17 @@
 	    	});
 
 	    	//scroll to anchors
-	    	$('a', this).click(function(){
+	    	$('a', this).click(function(e){
+	    		e.preventDefault();
 	    		var anchor = $(this).attr('href');
-	    		$('.anchors').slideUp(200).removeClass('expanded');
+	    		$('.anchors').slideUp(10).removeClass('expanded');
 	    		$('.anchors').attr('aria-expanded', 'false');
 	    		$('.toc-toggle').html('&#9776');
-	    		$('html, body').animate({
-                scrollTop: $(anchor).offset().top - 100
-            });
+	    		setTimeout(function(){
+	    			$('html, body').animate({
+               	 scrollTop: $(anchor).offset().top - 100
+            	});
+	    		}, 20);
 	    	});
 
 	   });

@@ -5,13 +5,11 @@ dependencies:
   config:
     - field.field.paragraph.map.field_admin_description
     - field.field.paragraph.map.field_location
-    - field.field.paragraph.map.field_oc_long_text
     - field.field.paragraph.map.field_pin_info
     - field.field.paragraph.map.field_widget_title
     - paragraphs.paragraphs_type.map
   module:
     - geolocation
-    - text
 _core:
   default_config_hash: fQaEoneAvRw1QiKd5gRRKWDtf3aBGLz6s1tIbWaBwvI
 id: paragraph.map.default
@@ -51,13 +49,6 @@ content:
       common_map: ''
     third_party_settings: {  }
     type: geolocation_map
-    region: content
-  field_oc_long_text:
-    weight: 3
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
     region: content
   field_widget_title:
     weight: 0

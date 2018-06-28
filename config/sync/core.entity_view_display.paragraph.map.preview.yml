@@ -6,7 +6,6 @@ dependencies:
     - core.entity_view_mode.paragraph.preview
     - field.field.paragraph.map.field_admin_description
     - field.field.paragraph.map.field_location
-    - field.field.paragraph.map.field_oc_long_text
     - field.field.paragraph.map.field_pin_info
     - field.field.paragraph.map.field_widget_title
     - paragraphs.paragraphs_type.map
@@ -27,6 +26,5 @@ content:
     region: content
 hidden:
   field_location: true
-  field_oc_long_text: true
   field_pin_info: true
   field_widget_title: true

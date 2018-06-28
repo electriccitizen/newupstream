@@ -7,7 +7,6 @@ dependencies:
     - field.field.paragraph.links_files.field_admin_description
     - field.field.paragraph.links_files.field_oc_file_multi
     - field.field.paragraph.links_files.field_oc_link_multi
-    - field.field.paragraph.links_files.field_oc_long_text
     - field.field.paragraph.links_files.field_widget_title
     - paragraphs.paragraphs_type.links_files
 _core:
@@ -28,5 +27,4 @@ content:
 hidden:
   field_oc_file_multi: true
   field_oc_link_multi: true
-  field_oc_long_text: true
   field_widget_title: true

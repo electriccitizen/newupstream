@@ -36,18 +36,30 @@
  * @ingroup themeable
  */
 #}
-{{ attach_library('oc_patterns/accordion') }}
+{% extends "paragraph.html.twig" %}
 
-{% set text = {
-	'#type': 'processed_text',
-	'#text': content.field_oc_long_text.0['#text'],
-	'#format': content.field_oc_long_text.0['#format']
- } %}
-{% include "@organisms/01-widgets/accordion/01-accordion.twig" 
-	with{
-		accordion_header: content.field_accordion_header.0['#context'].value,
-		accordion_content: text,
-	}
-%}
+{% block widgetContent %}
+	{{ attach_library('oc_patterns/accordion') }}
 
+	{{ content.field_widget_title }}
 
+	<div class="wrapper">
+		<div class="field field-accordion-item" aria-label="Accordion">
+			{% for key, accordion in content.field_accordion_item if key|first != '#' %}
+				{% set control = 'accordion-content-' ~ paragraph.id() ~ '-' ~ (key + 1) %}
+				{% set text = {
+					'#type': 'processed_text',
+					'#text': accordion['#paragraph'].field_oc_long_text.0.value,
+					'#format': accordion['#paragraph'].field_oc_long_text.0.format
+				 } %}
+				{% include "@organisms/01-widgets/accordion/01-accordion.twig" 
+					with{
+						accordion_header: accordion['#paragraph'].field_accordion_header.value,
+						accordion_content: text,
+						accordion_control: control
+					}
+				%}
+			{% endfor %}
+		</div>
+	</div>
+{% endblock %}
