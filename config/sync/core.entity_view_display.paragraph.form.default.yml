@@ -5,11 +5,9 @@ dependencies:
   config:
     - field.field.paragraph.form.field_admin_description
     - field.field.paragraph.form.field_oc_form
-    - field.field.paragraph.form.field_oc_long_text
     - field.field.paragraph.form.field_widget_title
     - paragraphs.paragraphs_type.form
   module:
-    - text
     - webform
 _core:
   default_config_hash: gs1OJ_9PAoyVHNHPgwsh_01Dcds15Jf4PItQvovZt8w
@@ -24,14 +22,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: webform_entity_reference_entity_view
-    region: content
-  field_oc_long_text:
-    type: text_trimmed
-    weight: 1
-    label: hidden
-    settings:
-      trim_length: 600
-    third_party_settings: {  }
     region: content
   field_widget_title:
     weight: 0

@@ -5,11 +5,9 @@ dependencies:
   config:
     - field.field.paragraph.form.field_admin_description
     - field.field.paragraph.form.field_oc_form
-    - field.field.paragraph.form.field_oc_long_text
     - field.field.paragraph.form.field_widget_title
     - paragraphs.paragraphs_type.form
   module:
-    - text
     - webform
 _core:
   default_config_hash: 2aO7q9w8B-je1MG54aFSCQM9SOdu0qpSo6nukwmWJQo
@@ -31,14 +29,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: webform_entity_reference_select
-    region: content
-  field_oc_long_text:
-    weight: 3
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: text_textarea
     region: content
   field_widget_title:
     weight: 0

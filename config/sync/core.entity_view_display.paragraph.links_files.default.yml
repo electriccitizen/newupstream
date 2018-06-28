@@ -6,12 +6,10 @@ dependencies:
     - field.field.paragraph.links_files.field_admin_description
     - field.field.paragraph.links_files.field_oc_file_multi
     - field.field.paragraph.links_files.field_oc_link_multi
-    - field.field.paragraph.links_files.field_oc_long_text
     - field.field.paragraph.links_files.field_widget_title
     - paragraphs.paragraphs_type.links_files
   module:
     - link
-    - text
 _core:
   default_config_hash: t4myUCrdEfadnhW1DNLEqW6a3lImNGYmmK0e-LnQNdE
 id: paragraph.links_files.default
@@ -39,13 +37,6 @@ content:
       target: ''
     third_party_settings: {  }
     type: link
-    region: content
-  field_oc_long_text:
-    weight: 1
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
     region: content
   field_widget_title:
     weight: 0
