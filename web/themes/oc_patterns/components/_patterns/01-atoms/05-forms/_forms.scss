@@ -96,11 +96,22 @@
 @mixin customOptions{
 	input{
 		//hide the normal inputs
-		display: none;
+		position: absolute;
+		opacity: 0;
 		&:checked{
 			+ label:before{
 				background: $transBlack;
 				border-color: darken($link, 5%);
+			}
+			&:hover{
+				& + label:before{
+					background: $black;
+				}
+			}
+		}
+		&:focus,&:hover{
+			+ label:before{
+				background: $transBlack;
 			}
 		}
 	}

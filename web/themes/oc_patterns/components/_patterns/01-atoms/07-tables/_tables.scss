@@ -5,7 +5,7 @@
 ///MIXIN TABLE
 /// Default table styling
 @mixin table{
-
+	width: 100%;
 	caption{
 		font-weight: $heavy;
 		margin-bottom: .5em;
@@ -51,6 +51,7 @@
 .body,.field-oc-long-text{
 	table{
 		@include table;
+		@include spacer(1.5);
 	} 
 }
 
