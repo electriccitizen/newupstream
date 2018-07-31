@@ -23,26 +23,69 @@ body {
 /* COOKIES ACCEPTANCE
 ------------------------ */
 #sliding-popup{
+	background: $offWhite;
+	border-bottom: 6px solid $transBlack;
 	.logged-in &{
 		top: 84px !important;
 	}
+	.eu-cookie-compliance-content{
+		max-width: 100%;
+	}
 	.eu-cookie-compliance-banner{
-		max-width: $maxWidth;
+		max-width: $desk;
 		@include auto;
 		padding: 20px 40px;
-		background: $grey;
-		border-left: 2px solid $transBlack;
-		border-right: 2px solid $transBlack;
-		border-bottom: 6px solid $transBlack;
+		.eu-cookie-compliance-message{
+			padding-right: 20px;
+			max-width: 100%;
+			line-height: 1.15;
+			@include mobileMenu{
+				float: none;
+			}
+			@include deskMenu{
+				@include calc(max-width, "100% - 150px");
+			}
+			.eu-cookie-compliance-more-button{
+				@include buttonWipe;
+				color: $link;
+				font-size: 15px;
+				font-family: $bodyFont;
+				text-decoration: underline;
+				display: inline-block;
+				padding: 0;
+				margin: 0;
+				text-align: left;
+				&:hover,&:focus{
+					color: $hoverLink;
+					text-decoration: none;
+				}
+				//hide more info on privacy page
+				.page-node-XX &{
+					display: none;
+				}
+			}
+		}
+		h2{
+			font-family: $header;
+			font-size: 21px;
+		}
+		p{
+			font-size: 15px;
+			margin-bottom: .5em;
+		}
 	}
 	.eu-cookie-compliance-buttons{
-		@include safeFlex(column,null,center,null);
-		height: 150px;
+		max-width: none;
+		@include mobileMenu{
+			float: none;
+			margin-top: 1em;
+		}
 		button{
 			@include buttonWipe;
-			@include button;
+			@include outlineButton($link);
 			display: block;
 			width: 150px;
+			font-size: 15px;
 		}
 	}
 }//end sliding popup

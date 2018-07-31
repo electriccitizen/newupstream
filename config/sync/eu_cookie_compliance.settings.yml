@@ -11,7 +11,7 @@ popup_agreed:
   value: '<h2>Thank you for accepting cookies</h2><p>You can now hide this message or find out more about cookies.</p>'
   format: restricted_html
 popup_agree_button_message: 'I Agree'
-popup_agreed_enabled: true
+popup_agreed_enabled: false
 popup_bg_hex: ''
 popup_clicking_confirmation: true
 popup_scrolling_confirmation: false
@@ -45,3 +45,15 @@ better_support_for_screen_readers: false
 use_mobile_message: false
 _core:
   default_config_hash: OlBvbDcm2PUT2i28p3oNpuKaUKbbK4qjfrAyYxvd0B8
+cookie_session: 0
+method: default
+disagree_button_label: 'No, thanks'
+whitelisted_cookies: ''
+disabled_javascripts: ''
+consent_storage_method: do_not_store
+withdraw_message:
+  value: '<h2>We use cookies on this site to enhance your user experience</h2><p>You have given your consent for us to set cookies.</p>'
+  format: full_html
+withdraw_action_button_label: 'Withdraw consent'
+withdraw_tab_button_label: 'Privacy settings'
+withdraw_enabled: false
