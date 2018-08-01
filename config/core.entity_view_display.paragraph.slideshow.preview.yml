@@ -1,0 +1,54 @@
+uuid: 597e35e9-5594-4685-9b09-2e35ae8b31fc
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.slideshow.field_admin_description
+    - field.field.paragraph.slideshow.field_oc_image_multi
+    - field.field.paragraph.slideshow.field_widget_title
+    - paragraphs.paragraphs_type.slideshow
+  module:
+    - layout_builder
+    - layout_discovery
+third_party_settings:
+  layout_builder:
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          a5827ae8-4c3f-4a51-ab5e-2a636c362a07:
+            uuid: a5827ae8-4c3f-4a51-ab5e-2a636c362a07
+            region: content
+            configuration:
+              id: 'field_block:paragraph:slideshow:field_admin_description'
+              label_display: ''
+              formatter:
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+                type: string
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+_core:
+  default_config_hash: XZanBBXDIpnK4U9BSUcZr4zLIMPxymiihtGGzXWU8w8
+id: paragraph.slideshow.preview
+targetEntityType: paragraph
+bundle: slideshow
+mode: preview
+content:
+  field_admin_description:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  field_oc_image_multi: true
+  field_widget_title: true

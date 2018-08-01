@@ -25,24 +25,14 @@
  * @see template_preprocess_block()
  */
 #}
-{% if content['#block_content'].info.0.value %}
-  {%
-    set classes = [
-      'block',
-      'block-' ~ content['#block_content'].bundle|clean_class,
-      'block-' ~ content['#block_content'].info.0.value|clean_class,
-      'block-' ~ content['#block_content'].id.0.value,
-    ]
-  %}
-{% else %}
-  {%
-    set classes = [
-      'block',
-      ' block-' ~ content['#block_content'].bundle|clean_class,
-      ' block-' ~ content['#block_content'].id.0.value
-    ]
-  %}
-{% endif %}
+{%
+  set classes = [
+    'block',
+    'block-' ~ content['#field_name']|clean_class,
+    'block-' ~ content['#field_type']|clean_class,
+    'block-' ~ content['#entity_type']|clean_class
+  ]
+%}
 
 <div{{ attributes.addClass(classes) }}>
   {% block blockContent %}

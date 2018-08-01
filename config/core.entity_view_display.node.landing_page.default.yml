@@ -1,0 +1,139 @@
+uuid: fa2411b0-a310-4427-a81e-688f9eba384e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.landing_page.body
+    - field.field.node.landing_page.field_banner
+    - field.field.node.landing_page.field_metatags
+    - field.field.node.landing_page.field_oc_widgets
+    - node.type.landing_page
+  module:
+    - ctools_block
+    - entity_reference_revisions
+    - layout_builder
+    - layout_discovery
+    - metatag
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          9e22f009-3444-4e16-95b1-777041d7a1fa:
+            uuid: 9e22f009-3444-4e16-95b1-777041d7a1fa
+            region: content
+            configuration:
+              id: 'field_block:node:landing_page:body'
+              label_display: ''
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 2
+          7345c819-4c55-4956-9f31-ad064020bd11:
+            uuid: 7345c819-4c55-4956-9f31-ad064020bd11
+            region: content
+            configuration:
+              id: 'field_block:node:landing_page:field_oc_widgets'
+              label_display: ''
+              formatter:
+                label: above
+                settings:
+                  view_mode: default
+                  link: ''
+                third_party_settings: {  }
+                type: entity_reference_revisions_entity_view
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 3
+          a6950a26-24af-4e85-aafa-4951f610eaf1:
+            uuid: a6950a26-24af-4e85-aafa-4951f610eaf1
+            region: content
+            configuration:
+              id: 'field_block:node:landing_page:field_banner'
+              label: Banner
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: banner
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+          126500ed-0b85-4f21-9a51-7d6e4546d40a:
+            uuid: 126500ed-0b85-4f21-9a51-7d6e4546d40a
+            region: content
+            configuration:
+              id: 'entity_field:node:title'
+              label: Title
+              provider: ctools_block
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: string
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+                weight: 0
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 1
+_core:
+  default_config_hash: 1h2sEQ222bYyFk67-1xEhAMXEdbzEI367eTDmO2XiM8
+id: node.landing_page.default
+targetEntityType: node
+bundle: landing_page
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_banner:
+    weight: 102
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_metatags:
+    weight: 103
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: content
+  field_oc_widgets:
+    weight: 105
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  addtoany: true

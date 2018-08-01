@@ -1,0 +1,55 @@
+uuid: eb46d2a1-3f90-48b0-a3bc-c5f612c6dcc4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.support_book.body
+    - node.type.support_book
+  module:
+    - layout_builder
+    - layout_discovery
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          37bb9a48-bb6a-4680-b372-ff7b2a2d8817:
+            uuid: 37bb9a48-bb6a-4680-b372-ff7b2a2d8817
+            region: content
+            configuration:
+              id: 'field_block:node:support_book:body'
+              label_display: ''
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+_core:
+  default_config_hash: zs7lQwC-x3RO8F51uxAs-b0WMoO79Uls3sPCfC8Ggks
+id: node.support_book.default
+targetEntityType: node
+bundle: support_book
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  addtoany: true

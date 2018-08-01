@@ -1,0 +1,96 @@
+uuid: e26f04b7-5db6-4b2b-8573-9bdac2254dfe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_oc_widgets
+    - node.type.landing_page
+    - paragraphs.paragraphs_type.landing_page_section
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: kcqIbUIIwAZzpFWuxpaR0MWUPyO9fLRi8lkkRG7kQuo
+id: node.landing_page.field_oc_widgets
+field_name: field_oc_widgets
+entity_type: node
+bundle: landing_page
+label: Widgets
+description: 'Add widgets to this node. Use the layout option on each widget to set it''s width and use the draggable handles to set the order to create custom layout grids. <strong>NOTE:</strong> When using Manage Content through IPE, you will not be able to re-order widgets, just this entire field itself.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      landing_page_section: landing_page_section
+    target_bundles_drag_drop:
+      accordion_group:
+        weight: -45
+        enabled: false
+      accordion_item:
+        weight: -45
+        enabled: false
+      admin_view_placer:
+        weight: -45
+        enabled: false
+      block_placer:
+        weight: -45
+        enabled: false
+      buttons:
+        weight: -45
+        enabled: false
+      call_to_action:
+        weight: -45
+        enabled: false
+      custom_code:
+        weight: -45
+        enabled: false
+      event_by_category:
+        weight: -44
+        enabled: false
+      form:
+        weight: -43
+        enabled: false
+      horizontal_rule:
+        weight: -42
+        enabled: false
+      image:
+        weight: -41
+        enabled: false
+      lightbox_gallery:
+        weight: -40
+        enabled: false
+      links_files:
+        weight: -39
+        enabled: false
+      map:
+        weight: -38
+        enabled: false
+      news_by_category:
+        weight: -36
+        enabled: false
+      pullquote:
+        weight: -35
+        enabled: false
+      slideshow:
+        weight: -34
+        enabled: false
+      social_media:
+        weight: -33
+        enabled: false
+      social_platform:
+        weight: -32
+        enabled: false
+      text:
+        weight: -31
+        enabled: false
+      video:
+        weight: -30
+        enabled: false
+      landing_page_section:
+        enabled: true
+        weight: 23
+field_type: entity_reference_revisions

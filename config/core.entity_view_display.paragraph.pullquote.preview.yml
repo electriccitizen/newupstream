@@ -1,0 +1,56 @@
+uuid: 6c76aa14-5fc1-4772-8f49-b887ece0b00d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.pullquote.field_admin_description
+    - field.field.paragraph.pullquote.field_oc_long_text
+    - field.field.paragraph.pullquote.field_oc_short_text
+    - field.field.paragraph.pullquote.field_widget_title
+    - paragraphs.paragraphs_type.pullquote
+  module:
+    - layout_builder
+    - layout_discovery
+third_party_settings:
+  layout_builder:
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          73498948-3a15-408e-9900-9cb7fd77e83e:
+            uuid: 73498948-3a15-408e-9900-9cb7fd77e83e
+            region: content
+            configuration:
+              id: 'field_block:paragraph:pullquote:field_admin_description'
+              label_display: ''
+              formatter:
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+                type: string
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+_core:
+  default_config_hash: Fre6cQ-HzRIHFfCmxDRPPKqalDFzVNOLau9H82BzukA
+id: paragraph.pullquote.preview
+targetEntityType: paragraph
+bundle: pullquote
+mode: preview
+content:
+  field_admin_description:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  field_oc_long_text: true
+  field_oc_short_text: true
+  field_widget_title: true

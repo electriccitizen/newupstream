@@ -1,0 +1,54 @@
+uuid: 5da651d3-96c4-4c04-a258-288a806a9e42
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.text.field_admin_description
+    - field.field.paragraph.text.field_oc_long_text
+    - field.field.paragraph.text.field_widget_title
+    - paragraphs.paragraphs_type.text
+  module:
+    - layout_builder
+    - layout_discovery
+third_party_settings:
+  layout_builder:
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          7df11044-4729-425d-aee0-e5439ea62319:
+            uuid: 7df11044-4729-425d-aee0-e5439ea62319
+            region: content
+            configuration:
+              id: 'field_block:paragraph:text:field_admin_description'
+              label_display: ''
+              formatter:
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+                type: string
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+_core:
+  default_config_hash: 3LILobBZ-eyHffflFgFi7Gon7Jd8n_OIVzKolRcFqc4
+id: paragraph.text.preview
+targetEntityType: paragraph
+bundle: text
+mode: preview
+content:
+  field_admin_description:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  field_oc_long_text: true
+  field_widget_title: true
