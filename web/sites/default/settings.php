@@ -17,7 +17,7 @@ include __DIR__ . "/settings.pantheon.php";
  * Place the config directory outside of the Drupal root.
  */
 $config_directories = array(
-  CONFIG_SYNC_DIRECTORY => dirname(DRUPAL_ROOT) . '/config',
+  CONFIG_SYNC_DIRECTORY => dirname(DRUPAL_ROOT) . '/config/sync',
 );
 /**
  * Set up config splits
@@ -25,6 +25,8 @@ $config_directories = array(
 if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
   switch($_ENV['PANTHEON_ENVIRONMENT']) {
     case 'live':
+      //$config['config_split.config_split.live']['status'] = TRUE;
+      //$config['config_split.config_split.excluded']['status'] = TRUE;
       $config['config_split.config_split.live']['status'] = TRUE;
       $config['config_split.config_split.excluded']['status'] = TRUE;
       $config['environment_indicator.indicator']['bg_color'] = '#990000';
@@ -32,6 +34,8 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
       $config['environment_indicator.indicator']['name'] = 'Live';
       break;
     case 'test':
+      //$config['config_split.config_split.test']['status'] = TRUE;
+      //$config['config_split.config_split.excluded']['status'] = TRUE;
       $config['config_split.config_split.test']['status'] = TRUE;
       $config['config_split.config_split.excluded']['status'] = TRUE;
       $config['environment_indicator.indicator']['bg_color'] = '#ff9900';
@@ -44,6 +48,7 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
       $config['environment_indicator.indicator']['fg_color'] = '#fff';
       $config['environment_indicator.indicator']['name'] = 'Dev';
       break;
+    default:
     default :
       $config['config_split.config_split.local']['status'] = TRUE;
       break;
