@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "3a85075d9d8cc27006e212dba8a50611",
+    "content-hash": "4f6a7b6d71aa36920dba14ffa4630c9d",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -4245,64 +4245,6 @@
                 "source": "http://cgit.drupalcode.org/metatag",
                 "issues": "http://drupal.org/project/issues/metatag"
             }
-        },
-        {
-            "name": "drupal/page_manager",
-            "version": "dev-4.x",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/page_manager",
-                "reference": "d99c1507907cda8940accd33fd016ef496e49876"
-            },
-            "require": {
-                "drupal/core": "^8.0.5",
-                "drupal/ctools": "~3"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-4.x": "4.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-4.0-beta3+0-dev",
-                    "datestamp": "1523670484",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Project has not opted into security advisory coverage!"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Tim Plunkett",
-                    "homepage": "https://www.drupal.org/u/tim.plunkett",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "dsnopek",
-                    "homepage": "https://www.drupal.org/user/266527"
-                },
-                {
-                    "name": "japerry",
-                    "homepage": "https://www.drupal.org/user/45640"
-                },
-                {
-                    "name": "tim.plunkett",
-                    "homepage": "https://www.drupal.org/user/241634"
-                }
-            ],
-            "description": "Provides a way to place blocks on a custom page.",
-            "homepage": "https://www.drupal.org/project/page_manager",
-            "support": {
-                "source": "https://git.drupal.org/project/page_manager.git",
-                "issues": "https://www.drupal.org/project/issues/page_manager",
-                "irc": "irc://irc.freenode.org/drupal-contribute"
-            },
-            "time": "2018-04-14T01:41:41+00:00"
         },
         {
             "name": "drupal/panelizer",
@@ -10986,7 +10928,6 @@
         "drupal/flippy": 20,
         "drupal/inline_entity_form": 10,
         "drupal/libraries": 20,
-        "drupal/page_manager": 20,
         "drupal/pathologic": 20,
         "drupal/stage_file_proxy": 15,
         "drupal/token": 5,

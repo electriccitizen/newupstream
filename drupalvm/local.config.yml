@@ -1,5 +1,0 @@
-vagrant_synced_folder_default_type: ""
-vagrant_synced_folders:
-- local_path: .
-destination: /var/www/newupstream
-type: ""

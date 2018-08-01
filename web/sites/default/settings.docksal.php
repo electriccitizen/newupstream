@@ -7,3 +7,4 @@ $databases['default']['default'] = array (
   'host' => 'db',
   'driver' => 'mysql',
 );
+$settings['hash_salt'] = 'wahoo';
