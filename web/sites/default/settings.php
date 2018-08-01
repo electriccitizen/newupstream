@@ -48,8 +48,7 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
       $config['environment_indicator.indicator']['fg_color'] = '#fff';
       $config['environment_indicator.indicator']['name'] = 'Dev';
       break;
-    default:
-    default :
+      default :
       $config['config_split.config_split.local']['status'] = TRUE;
       break;
   }
