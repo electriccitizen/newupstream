@@ -48,28 +48,14 @@ set classes = [
 ]
 %}
 
-<div class="section{% if (content.field_background_style|render) %} background {{ content.field_background_style.0['#markup'] }}{% endif %} {{ content.field_layout.0['#markup'] }}"{% if (content.field_background_style.0['#markup'] == 'image') and (content.field_background_image.0|render) %} style="background:url({{ file_url(content.field_background_image.0['#media'].field_media_image.entity.fileuri) }}) no-repeat;background-size: cover;"{% endif %}> 
-	
-	{% set anchor = content.field_anchor_link.0['#context'].value|clean_id %}
-	{% if anchor %}<a name="{{ anchor }}" id="{{ anchor }}"></a>{% endif %}
 
-		
-	{# set the default paragraph classes #}
-	<div{{ attributes.addClass(classes)  }}>
-		
-		{# print the content without the styling fields #}
- 		{% block widgetContent %}
- 			{%- if content.field_section_title.0 -%}
- 			<div class="field-section-title">
- 				<h2 class="section-title">
- 					{{- content.field_section_title.0['#context'].value -}}
- 				</h2>
- 			</div>
- 			{%- endif -%}
- 			{{ content.field_section_intro }}
-			{{ content.field_section_widgets }}
- 		{% endblock %}
+{# set the default paragraph classes #}
+<div{{ attributes.addClass(classes)  }}>
 	
-	</div>
+	{# print the content without the styling fields #}
+		{% block widgetContent %}
+			{{ content|without('field_layout','field_background_style','field_background_image') }}
+		{% endblock %}
 
 </div>
+

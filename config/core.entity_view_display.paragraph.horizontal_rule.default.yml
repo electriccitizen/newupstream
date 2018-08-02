@@ -1,0 +1,49 @@
+uuid: b9e25bed-367f-4627-85ad-8467ca96b9df
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.horizontal_rule.field_hr_default
+    - paragraphs.paragraphs_type.horizontal_rule
+  module:
+    - layout_builder
+    - layout_discovery
+third_party_settings:
+  layout_builder:
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          37558382-47fc-4bfa-b54f-1ab5d7740a36:
+            uuid: 37558382-47fc-4bfa-b54f-1ab5d7740a36
+            region: content
+            configuration:
+              id: 'field_block:paragraph:horizontal_rule:field_hr_default'
+              label_display: ''
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+_core:
+  default_config_hash: t6otQCKPzPAgpEGYtfDn8FMhw2ivuCcn1Pz8Z9EMLEs
+id: paragraph.horizontal_rule.default
+targetEntityType: paragraph
+bundle: horizontal_rule
+mode: default
+content:
+  field_hr_default:
+    type: string
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden: {  }

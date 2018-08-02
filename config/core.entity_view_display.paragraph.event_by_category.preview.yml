@@ -1,0 +1,58 @@
+uuid: 54a8c3b2-9dd6-4b4e-ac25-7392423fbeb6
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.event_by_category.field_admin_description
+    - field.field.paragraph.event_by_category.field_category
+    - field.field.paragraph.event_by_category.field_number_of_items
+    - field.field.paragraph.event_by_category.field_viewfield
+    - field.field.paragraph.event_by_category.field_widget_title
+    - paragraphs.paragraphs_type.event_by_category
+  module:
+    - layout_builder
+    - layout_discovery
+third_party_settings:
+  layout_builder:
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          b23fd3af-9303-42df-b4e9-9c2a68013ca5:
+            uuid: b23fd3af-9303-42df-b4e9-9c2a68013ca5
+            region: content
+            configuration:
+              id: 'field_block:paragraph:event_by_category:field_admin_description'
+              label_display: ''
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+_core:
+  default_config_hash: xUHRmqp0xJ9PTwYTxIk6_tbMxkucKqpAAe3amC3dNkg
+id: paragraph.event_by_category.preview
+targetEntityType: paragraph
+bundle: event_by_category
+mode: preview
+content:
+  field_admin_description:
+    type: string
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  field_category: true
+  field_number_of_items: true
+  field_viewfield: true
+  field_widget_title: true

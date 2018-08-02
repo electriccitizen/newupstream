@@ -1,0 +1,21 @@
+uuid: efc53e19-e000-48f9-8834-785f99a81dbf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_background_style
+    - paragraphs.paragraphs_type.landing_page_section
+  module:
+    - options
+id: paragraph.landing_page_section.field_background_style
+field_name: field_background_style
+entity_type: paragraph
+bundle: landing_page_section
+label: 'Background Style'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

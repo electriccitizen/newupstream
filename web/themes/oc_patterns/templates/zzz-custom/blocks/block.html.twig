@@ -25,24 +25,25 @@
  * @see template_preprocess_block()
  */
 #}
-{% if content['#block_content'].bundle %}
+{% if content['#block_content'].info.0.value %}
   {%
     set classes = [
       'block',
-      'block-' ~ content['#block_content'].label()|clean_class,
       'block-' ~ content['#block_content'].bundle|clean_class,
-      'block-' ~ plugin_id|clean_class,
+      'block-' ~ content['#block_content'].info.0.value|clean_class,
+      'block-' ~ content['#block_content'].id.0.value,
     ]
   %}
 {% else %}
   {%
     set classes = [
       'block',
-      'block-' ~ content['#block_content'].label()|clean_class,
-      'block-' ~ plugin_id|clean_class,
+      ' block-' ~ content['#block_content'].bundle|clean_class,
+      ' block-' ~ content['#block_content'].id.0.value
     ]
   %}
 {% endif %}
+
 <div{{ attributes.addClass(classes) }}>
   {% block blockContent %}
     {{ title_prefix }}

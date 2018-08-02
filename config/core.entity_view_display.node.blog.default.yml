@@ -1,0 +1,159 @@
+uuid: 05cba92d-65f1-458f-b89e-d5fd96aa2b5a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.blog.body
+    - field.field.node.blog.field_author
+    - field.field.node.blog.field_banner
+    - field.field.node.blog.field_metatags
+    - field.field.node.blog.field_tags
+    - node.type.blog
+  module:
+    - layout_builder
+    - layout_discovery
+    - metatag
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          c058771e-8baa-4ea4-b758-8e9b95c56cc8:
+            uuid: c058771e-8baa-4ea4-b758-8e9b95c56cc8
+            region: content
+            configuration:
+              id: 'field_block:node:blog:body'
+              label_display: ''
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+          5a57e8c4-b8b0-4792-86f5-4dcbeef21b0e:
+            uuid: 5a57e8c4-b8b0-4792-86f5-4dcbeef21b0e
+            region: content
+            configuration:
+              id: 'field_block:node:blog:field_banner'
+              label_display: ''
+              formatter:
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+                type: entity_reference_label
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 1
+          794a6e46-03ec-4c8e-adf4-8fb7f00cd699:
+            uuid: 794a6e46-03ec-4c8e-adf4-8fb7f00cd699
+            region: content
+            configuration:
+              id: 'field_block:node:blog:field_tags'
+              label_display: ''
+              formatter:
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+                type: entity_reference_label
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 2
+          63b5fb32-5887-480c-9745-7babb803976d:
+            uuid: 63b5fb32-5887-480c-9745-7babb803976d
+            region: content
+            configuration:
+              id: 'field_block:node:blog:field_author'
+              label_display: ''
+              formatter:
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+                type: entity_reference_label
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 3
+          1b9a53c7-b42a-4fd3-a584-8503188cf02c:
+            uuid: 1b9a53c7-b42a-4fd3-a584-8503188cf02c
+            region: content
+            configuration:
+              id: 'field_block:node:blog:field_metatags'
+              label_display: ''
+              formatter:
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+                type: metatag_empty_formatter
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 4
+_core:
+  default_config_hash: Xu1s1fWGlIX5L7AeMiRTydm1tunLJGrAodp6YJMZ5Sw
+id: node.blog.default
+targetEntityType: node
+bundle: blog
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_author:
+    weight: 105
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_banner:
+    weight: 103
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_metatags:
+    weight: 107
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: content
+  field_tags:
+    weight: 104
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  flippy_pager:
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  addtoany: true

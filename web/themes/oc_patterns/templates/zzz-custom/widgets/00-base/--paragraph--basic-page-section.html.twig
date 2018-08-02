@@ -52,6 +52,7 @@ set classes = [
 	{% set anchor = content.field_anchor_link.0['#context'].value|clean_id %}
 	{% if anchor %}<a name="{{ anchor }}" id="{{ anchor }}"></a>{% endif %}
 
+	{{ dd(content._layout_builder.0.content) }}
 		
 	{# set the default paragraph classes #}
 	<div{{ attributes.addClass(classes)  }}>
