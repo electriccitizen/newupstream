@@ -8,6 +8,7 @@ dependencies:
     - field.field.paragraph.text.field_widget_title
     - paragraphs.paragraphs_type.text
   module:
+    - ctools_block
     - layout_builder
     - layout_discovery
     - text
@@ -18,33 +19,39 @@ third_party_settings:
         layout_id: layout_onecol
         layout_settings: {  }
         components:
-          45475895-c62c-44d1-a652-a467584aceac:
-            uuid: 45475895-c62c-44d1-a652-a467584aceac
+          11d945cc-e99f-4edf-a641-89d47d8ccb48:
+            uuid: 11d945cc-e99f-4edf-a641-89d47d8ccb48
             region: content
             configuration:
-              id: 'field_block:paragraph:text:field_widget_title'
-              label_display: ''
+              id: 'entity_field:paragraph:field_widget_title'
+              label: 'Widget Title'
+              provider: ctools_block
+              label_display: '0'
               formatter:
                 label: hidden
+                type: string
                 settings:
                   link_to_entity: false
                 third_party_settings: {  }
-                type: string
+                weight: 0
               context_mapping:
                 entity: layout_builder.entity
             additional: {  }
             weight: 0
-          bfb7a94b-da57-4a19-bf8a-e4edbd5b7560:
-            uuid: bfb7a94b-da57-4a19-bf8a-e4edbd5b7560
+          531bd36d-5dbf-4ef3-b5ef-b6723f441ed0:
+            uuid: 531bd36d-5dbf-4ef3-b5ef-b6723f441ed0
             region: content
             configuration:
-              id: 'field_block:paragraph:text:field_oc_long_text'
-              label_display: ''
+              id: 'entity_field:paragraph:field_oc_long_text'
+              label: Text
+              provider: ctools_block
+              label_display: '0'
               formatter:
                 label: hidden
+                type: text_default
                 settings: {  }
                 third_party_settings: {  }
-                type: text_default
+                weight: 0
               context_mapping:
                 entity: layout_builder.entity
             additional: {  }

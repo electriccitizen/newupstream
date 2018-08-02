@@ -27,10 +27,10 @@
 #}
 {%
   set classes = [
-    'block-field',
-    'block-' ~ content['#field_name']|clean_class,
-    'block-' ~ content['#field_type']|clean_class,
-    'block-' ~ content['#entity_type']|clean_class
+    'entity-field',
+    'entity-field-' ~ content.field['#field_name']|clean_class,
+    'enitty-field-' ~ content.field['#field_type']|clean_class,
+    'enitty-field-' ~ content.field['#entity_type']|clean_class
   ]
 %}
 

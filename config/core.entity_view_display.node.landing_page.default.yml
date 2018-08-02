@@ -23,58 +23,27 @@ third_party_settings:
         layout_id: layout_onecol
         layout_settings: {  }
         components:
-          9e22f009-3444-4e16-95b1-777041d7a1fa:
-            uuid: 9e22f009-3444-4e16-95b1-777041d7a1fa
+          6c36eaac-6cfe-4697-b401-4c4d5f5c6022:
+            uuid: 6c36eaac-6cfe-4697-b401-4c4d5f5c6022
             region: content
             configuration:
-              id: 'field_block:node:landing_page:body'
-              label_display: ''
-              formatter:
-                label: hidden
-                type: text_default
-                settings: {  }
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
-            weight: 2
-          7345c819-4c55-4956-9f31-ad064020bd11:
-            uuid: 7345c819-4c55-4956-9f31-ad064020bd11
-            region: content
-            configuration:
-              id: 'field_block:node:landing_page:field_oc_widgets'
-              label_display: ''
-              formatter:
-                label: above
-                settings:
-                  view_mode: default
-                  link: ''
-                third_party_settings: {  }
-                type: entity_reference_revisions_entity_view
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
-            weight: 3
-          a6950a26-24af-4e85-aafa-4951f610eaf1:
-            uuid: a6950a26-24af-4e85-aafa-4951f610eaf1
-            region: content
-            configuration:
-              id: 'field_block:node:landing_page:field_banner'
+              id: 'entity_field:node:field_banner'
               label: Banner
-              provider: layout_builder
+              provider: ctools_block
               label_display: '0'
               formatter:
-                label: above
+                label: hidden
                 type: entity_reference_entity_view
                 settings:
-                  view_mode: banner
+                  view_mode: default
                 third_party_settings: {  }
+                weight: 0
               context_mapping:
                 entity: layout_builder.entity
             additional: {  }
             weight: 0
-          126500ed-0b85-4f21-9a51-7d6e4546d40a:
-            uuid: 126500ed-0b85-4f21-9a51-7d6e4546d40a
+          f9677b0c-5520-49b6-8fda-957b2b771855:
+            uuid: f9677b0c-5520-49b6-8fda-957b2b771855
             region: content
             configuration:
               id: 'entity_field:node:title'
@@ -92,6 +61,43 @@ third_party_settings:
                 entity: layout_builder.entity
             additional: {  }
             weight: 1
+          aa099101-6a18-4815-8475-5aa33dd1d1a0:
+            uuid: aa099101-6a18-4815-8475-5aa33dd1d1a0
+            region: content
+            configuration:
+              id: 'entity_field:node:body'
+              label: Body
+              provider: ctools_block
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+                weight: 0
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 2
+          f38e6559-ee91-4c1f-b047-f54a1413dcb1:
+            uuid: f38e6559-ee91-4c1f-b047-f54a1413dcb1
+            region: content
+            configuration:
+              id: 'entity_field:node:field_oc_widgets'
+              label: Widgets
+              provider: ctools_block
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_revisions_entity_view
+                settings:
+                  view_mode: default
+                third_party_settings: {  }
+                weight: 0
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 3
 _core:
   default_config_hash: 1h2sEQ222bYyFk67-1xEhAMXEdbzEI367eTDmO2XiM8
 id: node.landing_page.default

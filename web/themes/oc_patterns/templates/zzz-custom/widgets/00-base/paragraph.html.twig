@@ -38,39 +38,37 @@
 #}
 
 
+{# NOTES
+------------
+	This is the parent paragraphs template. Other paragraphs templates can extend this template as needed by
+	inheriting and altering the blocks defined here.
+	Field templates can also overview content set here (example: field--paragraph--field-widget-title.html.twig which sets all titles h2.pane-title)
+#}
+
+
 {# define default paragraphs classes #}
 {%
 set classes = [
 'paragraph',
 'paragraph--type--' ~ paragraph.bundle|clean_class,
-'paragraphs-item-' ~ paragraph.id.value,
-'section-holder'
+view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+'paragraphs-item-' ~ paragraph.id.value
 ]
 %}
 
-<div class="section{% if (content.field_background_style|render) %} background {{ content.field_background_style.0['#markup'] }}{% endif %} {{ content.field_layout.0['#markup'] }}"{% if (content.field_background_style.0['#markup'] == 'image') and (content.field_background_image.0|render) %} style="background:url({{ file_url(content.field_background_image.0['#media'].field_media_image.entity.fileuri) }}) no-repeat;background-size: cover;"{% endif %}> 
-	
-	{% set anchor = content.field_anchor_link.0['#context'].value|clean_id %}
-	{% if anchor %}<a name="{{ anchor }}" id="{{ anchor }}"></a>{% endif %}
 
-	{{ dd(content._layout_builder.0.content) }}
-
-	{# set the default paragraph classes #}
-	<div{{ attributes.addClass(classes)  }}>
+<div class="section-item"> 
+	{% block widget %}
 		
-		{# print the content without the styling fields #}
- 		{% block widgetContent %}
- 			{%- if content.field_section_title.0 -%}
- 			<div class="field-section-title">
- 				<h2 class="section-title">
- 					{{- content.field_section_title.0['#context'].value -}}
- 				</h2>
- 			</div>
- 			{%- endif -%}
- 			{{ content.field_section_intro }}
-			{{ content.field_section_widgets }}
- 		{% endblock %}
-	
-	</div>
+		{# set the default paragraph classes #}
+		<div{{ attributes.addClass(classes)  }}>
+			
+    		{% block widgetContent %}
+    			{{ content }}
+    		{% endblock %}
+		
+		</div>
+
+	{% endblock %}
 
 </div>
