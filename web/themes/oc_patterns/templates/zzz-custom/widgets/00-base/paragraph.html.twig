@@ -56,19 +56,34 @@ view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
 ]
 %}
 
-
-<div class="section-item"> 
+{# add a wrapper if not a main section widget (used for in-section layout) #}
+{% if 'section' not in paragraph.bundle|clean_class %}
+	<div class="section-item"> 
+{% endif %}
 	{% block widget %}
-		
 		{# set the default paragraph classes #}
 		<div{{ attributes.addClass(classes)  }}>
-			
     		{% block widgetContent %}
-    			{{ content }}
-    		{% endblock %}
-		
-		</div>
+    			{# print section title, intro and widget title outside of inner wrapper #}
+    			{{ content.field_secton_title }}
+    			{{ content.field_section_intro }}
+    			{{ content.field_widget_title }}
 
+    			{% block widgetInner %}
+	    			{# print an inner wrapper if not a section field #}
+	    			{% if 'section' not in paragraph.bundle|clean_class %}
+	    				<div class="widget-wrapper">
+	    			{% endif %}
+	    					{{ content|without('field_widget_title') }}
+	    			{% if 'section' not in paragraph.bundle|clean_class %}
+	    				</div>
+	    			{% endif %}
+	    		{% endblock %}
+    			
+    		{% endblock %}
+		</div>
 	{% endblock %}
 
-</div>
+{% if 'section' not in paragraph.bundle|clean_class %}
+	</div>
+{% endif %}
