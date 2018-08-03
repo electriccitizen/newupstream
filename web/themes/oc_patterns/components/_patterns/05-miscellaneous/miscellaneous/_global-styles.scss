@@ -109,39 +109,6 @@ body {
 	}
 }
 
-/* PANELS-IPE
-------------------- */
-//save buttons
-#panels-ipe-tray{
-	z-index: 1000;
-	a{
-		padding: 5px 10px;
-		border: 1px solid;
-		&.panelizer-ipe-save-custom{
-			border-color: $greenGood;
-			background: $greenGood;
-			color: $white;
-			&:hover,&:focus{
-				background: transparent;
-				color: darken($greenGood, 10%);
-			}
-		}
-		&.panelizer-ipe-save-default{
-			border-color: $redBad;
-			background: $redBad;
-			color: $white;
-			&:hover,&:focus{
-				background: transparent;
-				color: darken($redBad, 10%);
-			}
-		}
-	}
-}
-.ipe-category-picker-bottom{
-	white-space: initial;
-}
-
-
 /* LAYOUT BUILDER UI
 -------------------- */
 .layout-section .layout-builder--layout__region{
@@ -299,35 +266,40 @@ a[href$='.ppt'],a[href$=".pptx"]{
 
 /* ADMIN NODE EDIT TABS
 ----------------- */
-.block-local-tasks-block{
-	@include paddedContent;
+#block-oc-patterns-local-tasks{
+	max-width: $maxWidth;
+	padding: .75em 20px .5em;
+	position: relative;
 	@include auto;
-	margin-top: 2em;
+	&:after{
+		@include fullBack($darkGrey);
+	}
 	.tabs {
-		margin: 1em 0;
-		border-bottom:1px solid $grey;
-
-		ul {
-			padding-left:0;
-			margin:0;
-		}
+		@include listReset;
+		@include safeFlex(row,wrap,null,null);
+		@include bleed(10px);
 		li {
-			margin:0 2px 0 0;
-			background: $white;
-			display: inline-block;
+			padding: 0 10px;
+			@include onlySmall{
+				width: 100%;
+			}
 		}
-
 		a {
+			@include outlineButton($white);
+			text-transform: none;
+			padding: 0 12px;
 			display: block;
-			padding: 0.2em 1em;
 			&.is-active {
-				background-color: $lightGrey;
+				background-color: $white;
+				color: $black;
 			}
 			&:focus,&:hover {
 				background-color: $offWhite;
+				color: $black;
+				@include opacity(.8);
 			}
 		}
-	}
+	}// end tabs
 }//end local tasks
 
 

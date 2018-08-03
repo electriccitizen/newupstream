@@ -22,8 +22,8 @@ third_party_settings:
         layout_id: layout_onecol
         layout_settings: {  }
         components:
-          d8028ef1-a312-4cc8-9093-0007b8aeab41:
-            uuid: d8028ef1-a312-4cc8-9093-0007b8aeab41
+          57031955-b249-4a7e-8e30-08f9a620ff2e:
+            uuid: 57031955-b249-4a7e-8e30-08f9a620ff2e
             region: content
             configuration:
               id: 'field_block:node:page:field_banner'
@@ -34,14 +34,14 @@ third_party_settings:
                 label: hidden
                 type: entity_reference_entity_view
                 settings:
-                  view_mode: default
+                  view_mode: banner
                 third_party_settings: {  }
               context_mapping:
                 entity: layout_builder.entity
             additional: {  }
             weight: 0
-          235ff624-8d2a-4897-bde8-86cb4d6ba8e5:
-            uuid: 235ff624-8d2a-4897-bde8-86cb4d6ba8e5
+          73e38ea3-00cf-4122-bcb1-43c1373e9723:
+            uuid: 73e38ea3-00cf-4122-bcb1-43c1373e9723
             region: content
             configuration:
               id: 'field_block:node:page:title'
@@ -58,8 +58,12 @@ third_party_settings:
                 entity: layout_builder.entity
             additional: {  }
             weight: 1
-          8a107b49-b0fc-4427-b005-c7c298d371c2:
-            uuid: 8a107b49-b0fc-4427-b005-c7c298d371c2
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          1eaee1a1-cd33-4dbf-ad13-921a03d7286f:
+            uuid: 1eaee1a1-cd33-4dbf-ad13-921a03d7286f
             region: content
             configuration:
               id: 'field_block:node:page:body'
@@ -74,9 +78,9 @@ third_party_settings:
               context_mapping:
                 entity: layout_builder.entity
             additional: {  }
-            weight: 2
-          2905ea0f-f0aa-4181-a0b2-40284226edfa:
-            uuid: 2905ea0f-f0aa-4181-a0b2-40284226edfa
+            weight: 0
+          cb646449-e63c-4f69-a259-a75f5bf8320e:
+            uuid: cb646449-e63c-4f69-a259-a75f5bf8320e
             region: content
             configuration:
               id: 'field_block:node:page:field_oc_widgets'
@@ -92,8 +96,9 @@ third_party_settings:
               context_mapping:
                 entity: layout_builder.entity
             additional: {  }
-            weight: 3
+            weight: 1
     allow_custom: false
+    is_enabled: true
 _core:
   default_config_hash: 6cLH5reWp4HB-2AJp7PY1kXioC8KrzluoED6Q9UGPHw
 id: node.page.default
