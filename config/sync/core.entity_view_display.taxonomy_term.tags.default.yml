@@ -5,64 +5,31 @@ dependencies:
   config:
     - taxonomy.vocabulary.tags
   module:
-    - panelizer
+    - layout_builder
+    - layout_discovery
     - text
 third_party_settings:
-  panelizer:
-    enable: false
-    custom: false
-    allow: false
-    default: default
-    displays:
-      default:
-        blocks:
-          1056a9df-9a8e-4647-a0f8-bf0a0390dffd:
-            id: system_breadcrumb_block
-            label: Breadcrumbs
-            provider: system
-            label_display: '0'
-            region: top
-            weight: 0
-            uuid: 1056a9df-9a8e-4647-a0f8-bf0a0390dffd
-            context_mapping: {  }
-          6cdbaf19-5c73-4ec1-9267-78a44a6f408a:
-            id: 'entity_field:taxonomy_term:name'
-            label: Name
-            provider: ctools_block
-            label_display: '0'
-            formatter:
-              label: hidden
-              type: string
-              settings:
-                link_to_entity: false
-              third_party_settings: {  }
-              weight: 0
-            region: top
-            weight: 0
-            uuid: 6cdbaf19-5c73-4ec1-9267-78a44a6f408a
-            context_mapping:
-              entity: '@panelizer.entity_context:entity'
-          9fa05d8f-137b-4588-9cfa-639bb62a3d79:
-            id: system_main_block
-            label: 'Main page content'
-            provider: system
-            label_display: visible
-            region: main
-            weight: 0
-            uuid: 9fa05d8f-137b-4588-9cfa-639bb62a3d79
-            context_mapping: {  }
-        id: panels_variant
-        label: Default
-        uuid: cc05574b-3173-4dd8-9084-13fcecba03de
-        weight: 0
-        layout: kermit
+  layout_builder:
+    sections:
+      -
+        layout_id: layout_onecol
         layout_settings: {  }
-        page_title: ''
-        storage_type: panelizer_default
-        storage_id: 'taxonomy_term:tags:default:default'
-        builder: ipe
-        pattern: panelizer
-        static_context: {  }
+        components:
+          02ff3466-6f96-4f74-99d2-7edab5f81132:
+            uuid: 02ff3466-6f96-4f74-99d2-7edab5f81132
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:tags:description'
+              label_display: ''
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
 _core:
   default_config_hash: FZRvIfZfyUVyc9lNDXmNEESpI9EUKfwqb96sx0bPD44
 id: taxonomy_term.tags.default

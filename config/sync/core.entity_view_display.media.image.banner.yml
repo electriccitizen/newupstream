@@ -9,7 +9,33 @@ dependencies:
     - media_entity.bundle.image
     - responsive_image.styles.banner
   module:
+    - layout_builder
+    - layout_discovery
     - responsive_image
+third_party_settings:
+  layout_builder:
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          a546d81f-dab2-4180-8bfd-bd288b75c55a:
+            uuid: a546d81f-dab2-4180-8bfd-bd288b75c55a
+            region: content
+            configuration:
+              id: 'field_block:media:image:field_media_image'
+              label_display: ''
+              formatter:
+                type: responsive_image
+                label: hidden
+                settings:
+                  responsive_image_style: banner
+                  image_link: ''
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
 _core:
   default_config_hash: s5MJFi6aQfX_l9wyQDkoxGGenBkfMSf7chdjvuTU1uo
 id: media.image.banner

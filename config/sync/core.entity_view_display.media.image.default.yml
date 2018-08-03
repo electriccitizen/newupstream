@@ -9,6 +9,48 @@ dependencies:
     - media_entity.bundle.image
   module:
     - image
+    - layout_builder
+    - layout_discovery
+third_party_settings:
+  layout_builder:
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          ae0761db-2908-4de5-b135-3d6a415ea429:
+            uuid: ae0761db-2908-4de5-b135-3d6a415ea429
+            region: content
+            configuration:
+              id: 'field_block:media:image:field_media_image'
+              label_display: ''
+              formatter:
+                label: hidden
+                settings:
+                  image_style: max_2600x2600
+                  image_link: ''
+                third_party_settings: {  }
+                type: image
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+          64b38dfd-d4e5-4d34-92b4-dcff4d32868e:
+            uuid: 64b38dfd-d4e5-4d34-92b4-dcff4d32868e
+            region: content
+            configuration:
+              id: 'field_block:media:image:field_caption'
+              label_display: ''
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 1
 _core:
   default_config_hash: 1BnxX0BwF07rnn-vhVeHdMf4worsiGCBFihQi4Tli1I
 id: media.image.default

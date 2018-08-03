@@ -9,7 +9,6 @@ dependencies:
     - field.field.node.blog.field_banner
     - field.field.node.blog.field_metatags
     - field.field.node.blog.field_tags
-    - field.field.node.blog.panelizer
     - node.type.blog
   module:
     - entity_browser_entity_form
@@ -92,7 +91,6 @@ content:
     region: content
 hidden:
   created: true
-  panelizer: true
   promote: true
   sticky: true
   uid: true

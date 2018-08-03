@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.horizontal_rule.field_hr_default
     - paragraphs.paragraphs_type.horizontal_rule
 _core:
   default_config_hash: poC50Nk_Na8LklcqAmN7Zokmq3bGGF9kA2YZc2MDdbw

@@ -9,7 +9,63 @@ dependencies:
     - field.field.paragraph.pullquote.field_widget_title
     - paragraphs.paragraphs_type.pullquote
   module:
+    - layout_builder
+    - layout_discovery
     - text
+third_party_settings:
+  layout_builder:
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          f78df3db-907b-4dcf-be4f-47f51f7ae403:
+            uuid: f78df3db-907b-4dcf-be4f-47f51f7ae403
+            region: content
+            configuration:
+              id: 'field_block:paragraph:pullquote:field_widget_title'
+              label_display: ''
+              formatter:
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+                type: string
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+          be28420d-4e97-4558-997e-7f3c7582b542:
+            uuid: be28420d-4e97-4558-997e-7f3c7582b542
+            region: content
+            configuration:
+              id: 'field_block:paragraph:pullquote:field_oc_long_text'
+              label_display: ''
+              formatter:
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+                type: text_default
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 1
+          857a0acc-4ba8-4e06-b97a-5bcc258d02b8:
+            uuid: 857a0acc-4ba8-4e06-b97a-5bcc258d02b8
+            region: content
+            configuration:
+              id: 'field_block:paragraph:pullquote:field_oc_short_text'
+              label_display: ''
+              formatter:
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+                type: string
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 2
 _core:
   default_config_hash: W1unfZPyxu-TmLblj9gahdJrdkrcLrwy9OcM5dru2PM
 id: paragraph.pullquote.default

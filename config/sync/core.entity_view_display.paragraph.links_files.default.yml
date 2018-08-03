@@ -9,7 +9,69 @@ dependencies:
     - field.field.paragraph.links_files.field_widget_title
     - paragraphs.paragraphs_type.links_files
   module:
+    - layout_builder
+    - layout_discovery
     - link
+third_party_settings:
+  layout_builder:
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          fa02a504-020a-4e45-b70f-432701eda0c7:
+            uuid: fa02a504-020a-4e45-b70f-432701eda0c7
+            region: content
+            configuration:
+              id: 'field_block:paragraph:links_files:field_widget_title'
+              label_display: ''
+              formatter:
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+                type: string
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+          a5c217e7-8aa8-4067-830e-6580a672e059:
+            uuid: a5c217e7-8aa8-4067-830e-6580a672e059
+            region: content
+            configuration:
+              id: 'field_block:paragraph:links_files:field_oc_link_multi'
+              label_display: ''
+              formatter:
+                label: hidden
+                settings:
+                  trim_length: 80
+                  url_only: false
+                  url_plain: false
+                  rel: ''
+                  target: ''
+                third_party_settings: {  }
+                type: link
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 1
+          cc65e9ae-e842-4687-b792-80ee2d9ecc3f:
+            uuid: cc65e9ae-e842-4687-b792-80ee2d9ecc3f
+            region: content
+            configuration:
+              id: 'field_block:paragraph:links_files:field_oc_file_multi'
+              label_display: ''
+              formatter:
+                label: hidden
+                settings:
+                  link: true
+                  view_mode: default
+                third_party_settings: {  }
+                type: entity_reference_entity_view
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 2
 _core:
   default_config_hash: t4myUCrdEfadnhW1DNLEqW6a3lImNGYmmK0e-LnQNdE
 id: paragraph.links_files.default

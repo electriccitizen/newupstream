@@ -6,7 +6,35 @@ dependencies:
     - field.field.media.video.field_media_video_embed_field
     - media_entity.bundle.video
   module:
+    - layout_builder
+    - layout_discovery
     - video_embed_field
+third_party_settings:
+  layout_builder:
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          4c3ce10a-118d-4d07-bd4e-3341ff592f25:
+            uuid: 4c3ce10a-118d-4d07-bd4e-3341ff592f25
+            region: content
+            configuration:
+              id: 'field_block:media:video:field_media_video_embed_field'
+              label_display: ''
+              formatter:
+                type: video_embed_field_video
+                label: hidden
+                settings:
+                  responsive: true
+                  width: 854
+                  height: 480
+                  autoplay: false
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
 _core:
   default_config_hash: ddOtogk2XqTPEjjKQwjzrMFapqhS7lTvNDSJltR6xz8
 id: media.video.default
