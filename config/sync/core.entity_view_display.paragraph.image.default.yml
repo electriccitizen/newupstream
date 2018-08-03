@@ -7,7 +7,6 @@ dependencies:
     - field.field.paragraph.image.field_image_style
     - field.field.paragraph.image.field_oc_image
     - field.field.paragraph.image.field_oc_link
-    - field.field.paragraph.image.field_oc_long_text
     - field.field.paragraph.image.field_widget_title
     - paragraphs.paragraphs_type.image
   module:
@@ -15,7 +14,6 @@ dependencies:
     - layout_discovery
     - link
     - options
-    - text
 third_party_settings:
   layout_builder:
     sections:
@@ -91,21 +89,6 @@ third_party_settings:
                 entity: layout_builder.entity
             additional: {  }
             weight: 3
-          afcc9dd6-a44d-4281-832f-960d4b028d67:
-            uuid: afcc9dd6-a44d-4281-832f-960d4b028d67
-            region: content
-            configuration:
-              id: 'field_block:paragraph:image:field_oc_long_text'
-              label_display: ''
-              formatter:
-                label: hidden
-                settings: {  }
-                third_party_settings: {  }
-                type: text_default
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
-            weight: 4
 _core:
   default_config_hash: KKTvaaAiy4uvufoZOAb8WoexVgBcXEkaoWZ4VETpDvA
 id: paragraph.image.default
@@ -140,13 +123,6 @@ content:
       target: ''
     third_party_settings: {  }
     type: link
-    region: content
-  field_oc_long_text:
-    weight: 5
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
     region: content
   field_widget_title:
     weight: 0

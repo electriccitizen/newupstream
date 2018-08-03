@@ -56,10 +56,6 @@
 		}
 	%}
 		{% block plwidgetopen %}{# patternlab specifc html #}{% endblock %}
-		
-		{% block linkText %}
-			{{ content.field_oc_long_text }}
-		{% endblock %}
 
 		{% block links %}
 			{% if content.field_oc_link_multi.0  or content.field_oc_file_multi.0 %}
