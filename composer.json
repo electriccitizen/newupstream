@@ -179,6 +179,9 @@
     "patches": {
       "drupal/addanother":{
         "URL doesnt match machine name": "https://www.drupal.org/files/issues/addanother-url-doesnt-match-machine-name-2851584-3.patch"
+      },
+      "drupal/core":{
+        "Layout Builder optout": "https://www.drupal.org/files/issues/2018-07-28/2936358-opt_in-2936358-64-do-not-test.patch"
       }
     },
     "enable-patching": true
