@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.node.support_book.body
-    - field.field.node.support_book.panelizer
     - node.type.support_book
   module:
     - path
@@ -51,7 +50,6 @@ content:
     region: content
 hidden:
   created: true
-  panelizer: true
   promote: true
   sticky: true
   uid: true

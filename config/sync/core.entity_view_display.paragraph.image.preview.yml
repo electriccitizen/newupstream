@@ -11,6 +11,32 @@ dependencies:
     - field.field.paragraph.image.field_oc_long_text
     - field.field.paragraph.image.field_widget_title
     - paragraphs.paragraphs_type.image
+  module:
+    - layout_builder
+    - layout_discovery
+third_party_settings:
+  layout_builder:
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          fbae03d3-8a71-408a-a907-cdc2627fd5fa:
+            uuid: fbae03d3-8a71-408a-a907-cdc2627fd5fa
+            region: content
+            configuration:
+              id: 'field_block:paragraph:image:field_admin_description'
+              label_display: ''
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
 _core:
   default_config_hash: AjAC2S2QaMII3YbdOiRs2RTZAEAsFaM6mDM70Fb2rYQ
 id: paragraph.image.preview

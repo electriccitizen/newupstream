@@ -10,7 +10,47 @@ dependencies:
     - field.field.paragraph.admin_view_placer.field_widget_title
     - paragraphs.paragraphs_type.admin_view_placer
   module:
+    - layout_builder
+    - layout_discovery
     - options
+third_party_settings:
+  layout_builder:
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          f0bb68b0-7b55-4463-aa13-f62629368f09:
+            uuid: f0bb68b0-7b55-4463-aa13-f62629368f09
+            region: content
+            configuration:
+              id: 'field_block:paragraph:admin_view_placer:field_widget_title'
+              label_display: ''
+              formatter:
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+                type: string
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+          4b481587-64e7-4f5a-8405-1e0cc3d52460:
+            uuid: 4b481587-64e7-4f5a-8405-1e0cc3d52460
+            region: content
+            configuration:
+              id: 'field_block:paragraph:admin_view_placer:field_viewfield'
+              label_display: ''
+              formatter:
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+                type: list_key
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 1
 _core:
   default_config_hash: 6FGzyIledxX_JbJM7Yz6zD9ZrnwemBuYazZy1Amprtg
 id: paragraph.admin_view_placer.default

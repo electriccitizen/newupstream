@@ -9,6 +9,48 @@ dependencies:
     - paragraphs.paragraphs_type.accordion_group
   module:
     - entity_reference_revisions
+    - layout_builder
+    - layout_discovery
+third_party_settings:
+  layout_builder:
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          23829e67-95a1-4980-99da-643d7f26e129:
+            uuid: 23829e67-95a1-4980-99da-643d7f26e129
+            region: content
+            configuration:
+              id: 'field_block:paragraph:accordion_group:field_widget_title'
+              label_display: ''
+              formatter:
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+                type: string
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+          1c2f799f-4d11-4a68-8eec-a0653db187c4:
+            uuid: 1c2f799f-4d11-4a68-8eec-a0653db187c4
+            region: content
+            configuration:
+              id: 'field_block:paragraph:accordion_group:field_accordion_item'
+              label_display: ''
+              formatter:
+                type: entity_reference_revisions_entity_view
+                label: hidden
+                settings:
+                  view_mode: default
+                  link: ''
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 1
 _core:
   default_config_hash: EpiAZwmNAgzRs8bsuDtcjOUrBEkuT9O9Zj8KAU33BNI
 id: paragraph.accordion_group.default

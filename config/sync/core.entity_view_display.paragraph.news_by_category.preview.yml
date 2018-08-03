@@ -10,6 +10,32 @@ dependencies:
     - field.field.paragraph.news_by_category.field_viewfield
     - field.field.paragraph.news_by_category.field_widget_title
     - paragraphs.paragraphs_type.news_by_category
+  module:
+    - layout_builder
+    - layout_discovery
+third_party_settings:
+  layout_builder:
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          fa2796fe-e148-41eb-b1f3-d836550b97cb:
+            uuid: fa2796fe-e148-41eb-b1f3-d836550b97cb
+            region: content
+            configuration:
+              id: 'field_block:paragraph:news_by_category:field_admin_description'
+              label_display: ''
+              formatter:
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+                type: string
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
 _core:
   default_config_hash: hLmzzIUnQ5kHCVx8JbWOSneRDCh6cWB-H-h72Q2SVm0
 id: paragraph.news_by_category.preview

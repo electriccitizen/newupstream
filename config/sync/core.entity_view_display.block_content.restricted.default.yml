@@ -6,7 +6,31 @@ dependencies:
     - block_content.type.restricted
     - field.field.block_content.restricted.body
   module:
+    - layout_builder
+    - layout_discovery
     - text
+third_party_settings:
+  layout_builder:
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          10b1b57f-052b-476b-9ed1-f4b18016d4ef:
+            uuid: 10b1b57f-052b-476b-9ed1-f4b18016d4ef
+            region: content
+            configuration:
+              id: 'field_block:block_content:restricted:body'
+              label_display: ''
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
 id: block_content.restricted.default
 targetEntityType: block_content
 bundle: restricted

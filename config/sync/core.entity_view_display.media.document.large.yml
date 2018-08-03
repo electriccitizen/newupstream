@@ -8,6 +8,31 @@ dependencies:
     - media_entity.bundle.document
   module:
     - file
+    - layout_builder
+    - layout_discovery
+third_party_settings:
+  layout_builder:
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          02a61cd3-c6d7-42a1-8aba-d78dfe8f23c6:
+            uuid: 02a61cd3-c6d7-42a1-8aba-d78dfe8f23c6
+            region: content
+            configuration:
+              id: 'field_block:media:document:field_media_file'
+              label_display: ''
+              formatter:
+                type: file_default
+                label: hidden
+                settings:
+                  use_description_as_link_text: true
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
 _core:
   default_config_hash: 8_g6JM_aaqTITnt2YCrEYwsrwgAQYFpkDEsQtm8U3Ns
 id: media.document.large
@@ -19,7 +44,8 @@ content:
     type: file_default
     weight: 0
     label: hidden
-    settings: {  }
+    settings:
+      use_description_as_link_text: true
     third_party_settings: {  }
     region: content
 hidden:
