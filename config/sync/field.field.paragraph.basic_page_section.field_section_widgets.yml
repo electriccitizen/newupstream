@@ -7,7 +7,6 @@ dependencies:
     - paragraphs.paragraphs_type.accordion_group
     - paragraphs.paragraphs_type.basic_page_section
     - paragraphs.paragraphs_type.form
-    - paragraphs.paragraphs_type.horizontal_rule
     - paragraphs.paragraphs_type.image
     - paragraphs.paragraphs_type.lightbox_gallery
     - paragraphs.paragraphs_type.links_files
@@ -35,7 +34,6 @@ settings:
     target_bundles:
       accordion_group: accordion_group
       form: form
-      horizontal_rule: horizontal_rule
       image: image
       lightbox_gallery: lightbox_gallery
       links_files: links_files

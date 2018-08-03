@@ -12,14 +12,6 @@
 		<h3 class="widget-title">{{widget_title}}</h3>
 	{% endif %}
 
-	{% block linkText %}
-		{% if link_summary %}
-			<div class="field field-oc-long-text">
-				{{ link_summary }}
-			</div>
-		{% endif %}
-	{% endblock %}
-
 	{% block links %}
 		<div class="field field-oc-link-multi">
 			{% for link in links %}

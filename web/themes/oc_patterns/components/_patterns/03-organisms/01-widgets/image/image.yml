@@ -12,8 +12,6 @@ image_link:
   "http://www.google.com"
 image_aria:
   "Link Title"
-image_text:
-  "Quae cum praeponunt, ut sit aliqua rerum selectio, naturam videntur sequi; Quis Aristidem non mortuum diligit? Nummus in Croesi divitiis obscuratur, pars est tamen divitiarum. Nec vero sum nescius esse utilitatem in historia, non modo voluptatem."
-
+  
 image_instructions:
   "Drupal: The image widget template is embedded in the drupal image paragraph template."

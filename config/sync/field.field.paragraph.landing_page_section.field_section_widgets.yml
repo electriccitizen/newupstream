@@ -10,7 +10,6 @@ dependencies:
     - paragraphs.paragraphs_type.call_to_action
     - paragraphs.paragraphs_type.event_by_category
     - paragraphs.paragraphs_type.form
-    - paragraphs.paragraphs_type.horizontal_rule
     - paragraphs.paragraphs_type.image
     - paragraphs.paragraphs_type.landing_page_section
     - paragraphs.paragraphs_type.lightbox_gallery
@@ -43,7 +42,6 @@ settings:
       call_to_action: call_to_action
       event_by_category: event_by_category
       form: form
-      horizontal_rule: horizontal_rule
       image: image
       lightbox_gallery: lightbox_gallery
       links_files: links_files

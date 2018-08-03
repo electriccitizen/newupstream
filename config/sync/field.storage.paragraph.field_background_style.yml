@@ -15,10 +15,10 @@ settings:
   allowed_values:
     -
       value: grey
-      label: grey
+      label: Grey
     -
       value: image
-      label: image
+      label: Image
   allowed_values_function: ''
 module: options
 locked: false
