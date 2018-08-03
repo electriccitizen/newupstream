@@ -90,8 +90,16 @@
     </footer>
   {% endif %}
 
-  <div{{ content_attributes }}>
-    {{ content }}
+  <div{{ content_attributes.addClass('main-node-content') }} role="main">
+    {% if content._layout_builder %}
+      {% for layoutSection in content._layout_builder %}
+        <section id="section-{{ loop.index }}" class="node-section" role="complementary">
+          {{ layoutSection }}
+        </section>
+      {% endfor %}
+    {% else %}
+      {{ content }}
+    {% endif %}
   </div>
 
 </article>
