@@ -26,45 +26,55 @@ third_party_settings:
         layout_id: layout_onecol
         layout_settings: {  }
         components:
-          7c5ccd23-36cd-449b-8dd4-2af06f3fc019:
-            uuid: 7c5ccd23-36cd-449b-8dd4-2af06f3fc019
+          d22ea93e-d8cc-45a7-8af2-2662554a5b21:
+            uuid: d22ea93e-d8cc-45a7-8af2-2662554a5b21
             region: content
             configuration:
               id: 'field_block:node:event:field_banner'
-              label_display: ''
+              label: Banner
+              provider: layout_builder
+              label_display: '0'
               formatter:
                 label: hidden
+                type: entity_reference_entity_view
                 settings:
-                  link: true
+                  view_mode: square
                 third_party_settings: {  }
-                type: entity_reference_label
               context_mapping:
                 entity: layout_builder.entity
             additional: {  }
             weight: 0
-          9abc954e-9dbf-425c-ad5b-00aae5d1b148:
-            uuid: 9abc954e-9dbf-425c-ad5b-00aae5d1b148
+          c6faee18-20f9-482d-9d2a-a02c6e75f8d4:
+            uuid: c6faee18-20f9-482d-9d2a-a02c6e75f8d4
             region: content
             configuration:
               id: 'field_block:node:event:field_oc_date'
-              label_display: ''
+              label: Date
+              provider: layout_builder
+              label_display: '0'
               formatter:
                 label: hidden
-                settings:
-                  format_type: medium
-                  timezone_override: ''
-                third_party_settings: {  }
                 type: datetime_default
+                settings:
+                  timezone_override: UTC
+                  format_type: oc_short_date_time
+                third_party_settings: {  }
               context_mapping:
                 entity: layout_builder.entity
             additional: {  }
             weight: 1
-          b6fe289a-d170-47a7-8fde-5aa646dc392c:
-            uuid: b6fe289a-d170-47a7-8fde-5aa646dc392c
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          5157183b-4d56-4741-9dde-4201fd1e702f:
+            uuid: 5157183b-4d56-4741-9dde-4201fd1e702f
             region: content
             configuration:
               id: 'field_block:node:event:body'
-              label_display: ''
+              label: Body
+              provider: layout_builder
+              label_display: '0'
               formatter:
                 label: hidden
                 type: text_default
@@ -73,63 +83,54 @@ third_party_settings:
               context_mapping:
                 entity: layout_builder.entity
             additional: {  }
-            weight: 2
-          5fb8c30b-8e78-47ff-a3d6-13d3ca9b9a82:
-            uuid: 5fb8c30b-8e78-47ff-a3d6-13d3ca9b9a82
+            weight: 0
+          b7759f63-8c59-4aaf-ac98-dd1de48175e4:
+            uuid: b7759f63-8c59-4aaf-ac98-dd1de48175e4
             region: content
             configuration:
               id: 'field_block:node:event:field_event_location'
-              label_display: ''
+              label: 'Event Location'
+              provider: layout_builder
+              label_display: '0'
               formatter:
                 label: hidden
+                type: geolocation_map
                 settings:
-                  set_marker: '1'
-                  title: ' '
+                  set_marker: '0'
+                  title: ''
                   info_text: '[node:field_event_pin_info]'
+                  replacement_patterns:
+                    token_geolocation:
+                      token_items: ''
                   google_map_settings:
-                    height: 400px
+                    height: 350px
                     width: 100%
                     type: ROADMAP
-                    zoom: '10'
+                    zoom: '13'
                     maxZoom: 18
                     minZoom: 0
                     mapTypeControl: 1
                     streetViewControl: 1
                     zoomControl: 1
+                    rotateControl: 0
                     fullscreenControl: 1
+                    scrollwheel: 0
                     gestureHandling: auto
                     draggable: 1
-                    style: '[{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#444444"}]},{"featureType":"administrative.country","elementType":"labels.text","stylers":[{"visibility":"off"},{"color":"#767676"}]},{"featureType":"administrative.locality","elementType":"labels.text","stylers":[{"visibility":"simplified"},{"color":"#767676"},{"lightness":"-23"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#acd5cb"},{"visibility":"on"},{"lightness":"49"}]},{"featureType":"water","elementType":"geometry.fill","stylers":[{"color":"#acd5cb"},{"lightness":"49"}]}]'
-                    marker_icon_path: ''
-                    disableAutoPan: 1
-                    rotateControl: 0
-                    scrollwheel: 0
                     preferScrollingToZooming: 0
                     disableDoubleClickZoom: 0
+                    style: '[{"featureType":"all","elementType":"labels.text.fill","stylers":[{"color":"#736c68"}]},{"featureType":"landscape.man_made","elementType":"geometry.fill","stylers":[{"color":"#e7e6e5"}]},{"featureType":"landscape.natural","elementType":"all","stylers":[{"visibility":"on"},{"color":"#d4e4d3"}]},{"featureType":"poi","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#f5f5f5"}]},{"featureType":"poi.park","elementType":"geometry.fill","stylers":[{"color":"#d4e4d3"}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"color":"#f5f5f5"}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"color":"#e7e6e5"},{"gamma":"0.65"},{"lightness":"0"}]},{"featureType":"transit","elementType":"labels.text","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#aad5df"}]}]'
                     info_auto_display: 0
-                  use_overridden_map_settings: 0
-                  common_map: ''
+                    marker_icon_path: ''
+                    disableAutoPan: 0
+                  use_overridden_map_settings: 1
                 third_party_settings: {  }
-                type: geolocation_map
               context_mapping:
                 entity: layout_builder.entity
             additional: {  }
-            weight: 3
-          3c809c5c-59eb-4a0d-89b9-18a048d8caca:
-            uuid: 3c809c5c-59eb-4a0d-89b9-18a048d8caca
-            region: content
-            configuration:
-              id: 'field_block:node:event:field_metatags'
-              label_display: ''
-              formatter:
-                label: above
-                settings: {  }
-                third_party_settings: {  }
-                type: metatag_empty_formatter
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
-            weight: 4
+            weight: 1
+    allow_custom: false
+    is_enabled: true
 _core:
   default_config_hash: loMHYsfHZt2ah-BioORO_TAK_v7Gf-b6gCl285D03zk
 id: node.event.default

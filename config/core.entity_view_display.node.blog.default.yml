@@ -10,6 +10,8 @@ dependencies:
     - field.field.node.blog.field_tags
     - node.type.blog
   module:
+    - addtoany
+    - flippy
     - layout_builder
     - layout_discovery
     - metatag
@@ -22,12 +24,83 @@ third_party_settings:
         layout_id: layout_onecol
         layout_settings: {  }
         components:
-          c058771e-8baa-4ea4-b758-8e9b95c56cc8:
-            uuid: c058771e-8baa-4ea4-b758-8e9b95c56cc8
+          22c27178-e58b-4cf0-b1c7-4a72feb31293:
+            uuid: 22c27178-e58b-4cf0-b1c7-4a72feb31293
+            region: content
+            configuration:
+              id: 'field_block:node:blog:field_banner'
+              label: Banner
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: banner
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+          05721808-3cce-4616-9726-698baa2e9c6d:
+            uuid: 05721808-3cce-4616-9726-698baa2e9c6d
+            region: content
+            configuration:
+              id: 'field_block:node:blog:title'
+              label: Title
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: string
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 1
+          701082eb-fbcc-445b-b37d-b276a41be881:
+            uuid: 701082eb-fbcc-445b-b37d-b276a41be881
+            region: content
+            configuration:
+              id: addtoany_block
+              label: 'AddToAny buttons'
+              provider: addtoany
+              label_display: '0'
+              context_mapping: {  }
+            additional: {  }
+            weight: 2
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          ba0bca5f-7ea0-4235-a1c7-eb5554f8c1f4:
+            uuid: ba0bca5f-7ea0-4235-a1c7-eb5554f8c1f4
+            region: content
+            configuration:
+              id: 'field_block:node:blog:field_tags'
+              label: Tags
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: inline
+                type: entity_reference_label
+                settings:
+                  link: false
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+          af13427d-f15b-4284-a4ac-38b9c9e7633c:
+            uuid: af13427d-f15b-4284-a4ac-38b9c9e7633c
             region: content
             configuration:
               id: 'field_block:node:blog:body'
-              label_display: ''
+              label: Body
+              provider: layout_builder
+              label_display: '0'
               formatter:
                 label: hidden
                 type: text_default
@@ -36,70 +109,24 @@ third_party_settings:
               context_mapping:
                 entity: layout_builder.entity
             additional: {  }
-            weight: 0
-          5a57e8c4-b8b0-4792-86f5-4dcbeef21b0e:
-            uuid: 5a57e8c4-b8b0-4792-86f5-4dcbeef21b0e
-            region: content
-            configuration:
-              id: 'field_block:node:blog:field_banner'
-              label_display: ''
-              formatter:
-                label: above
-                settings:
-                  link: true
-                third_party_settings: {  }
-                type: entity_reference_label
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
             weight: 1
-          794a6e46-03ec-4c8e-adf4-8fb7f00cd699:
-            uuid: 794a6e46-03ec-4c8e-adf4-8fb7f00cd699
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          d94df72a-42f8-461f-a52a-d75c8c166a73:
+            uuid: d94df72a-42f8-461f-a52a-d75c8c166a73
             region: content
             configuration:
-              id: 'field_block:node:blog:field_tags'
-              label_display: ''
-              formatter:
-                label: above
-                settings:
-                  link: true
-                third_party_settings: {  }
-                type: entity_reference_label
-              context_mapping:
-                entity: layout_builder.entity
+              id: flippy_block
+              label: 'Flippy Block'
+              provider: flippy
+              label_display: '0'
+              context_mapping: {  }
             additional: {  }
-            weight: 2
-          63b5fb32-5887-480c-9745-7babb803976d:
-            uuid: 63b5fb32-5887-480c-9745-7babb803976d
-            region: content
-            configuration:
-              id: 'field_block:node:blog:field_author'
-              label_display: ''
-              formatter:
-                label: above
-                settings:
-                  link: true
-                third_party_settings: {  }
-                type: entity_reference_label
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
-            weight: 3
-          1b9a53c7-b42a-4fd3-a584-8503188cf02c:
-            uuid: 1b9a53c7-b42a-4fd3-a584-8503188cf02c
-            region: content
-            configuration:
-              id: 'field_block:node:blog:field_metatags'
-              label_display: ''
-              formatter:
-                label: above
-                settings: {  }
-                third_party_settings: {  }
-                type: metatag_empty_formatter
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
-            weight: 4
+            weight: 0
+    allow_custom: false
+    is_enabled: true
 _core:
   default_config_hash: Xu1s1fWGlIX5L7AeMiRTydm1tunLJGrAodp6YJMZ5Sw
 id: node.blog.default
