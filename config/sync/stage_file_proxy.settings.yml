@@ -1,4 +1,4 @@
-hotlink: false
+hotlink: true
 origin: 'http://dev-newupstream.pantheonsite.io'
 origin_dir: sites/default/files
 use_imagecache_root: true

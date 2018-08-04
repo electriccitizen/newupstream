@@ -4,17 +4,13 @@
 
 .node-landing-page.node-content{
 
-	//banner section
-	#section-2{
-		@include spacer(2);
-	}
-	.field-banner{
+	.block-field-banner{
 		opacity: 0;
 		@include animation('fadeIn 1.2s 1 forwards');
 		@include spacer(2);
-		img{
-			width: 100%;
-		}
+	}
+	.block-field.block-title{
+		@include centerTitle;
 	}
 
 }//end landing-page

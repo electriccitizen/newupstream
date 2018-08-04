@@ -16,7 +16,6 @@ dependencies:
     - entity_reference_revisions
     - layout_builder
     - layout_discovery
-    - options
     - text
 third_party_settings:
   layout_builder:
@@ -141,37 +140,6 @@ targetEntityType: paragraph
 bundle: basic_page_section
 mode: default
 content:
-  field_anchor_link:
-    weight: 2
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_background_image:
-    weight: 5
-    label: hidden
-    settings:
-      view_mode: default
-      link: false
-    third_party_settings: {  }
-    type: entity_reference_entity_view
-    region: content
-  field_background_style:
-    weight: 4
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: list_key
-    region: content
-  field_layout:
-    weight: 3
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: list_key
-    region: content
   field_section_intro:
     weight: 1
     label: hidden
@@ -188,7 +156,7 @@ content:
     type: string
     region: content
   field_section_widgets:
-    weight: 6
+    weight: 2
     label: hidden
     settings:
       view_mode: default
@@ -198,3 +166,7 @@ content:
     region: content
 hidden:
   field_admin_description: true
+  field_anchor_link: true
+  field_background_image: true
+  field_background_style: true
+  field_layout: true

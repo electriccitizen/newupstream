@@ -25,24 +25,27 @@
  * @see template_preprocess_block()
  */
 #}
-{% if content['#block_content'].info.0.value %}
-  {%
-    set classes = [
-      'block',
-      'block-' ~ content['#block_content'].bundle|clean_class,
-      'block-' ~ content['#block_content'].info.0.value|clean_class,
-      'block-' ~ content['#block_content'].id.0.value,
-    ]
-  %}
-{% else %}
-  {%
-    set classes = [
-      'block',
-      ' block-' ~ content['#block_content'].bundle|clean_class,
-      ' block-' ~ content['#block_content'].id.0.value
-    ]
-  %}
+{% if plugin_id %}
+  {% set pluginClass = 'block-' ~ plugin_id %}
 {% endif %}
+{% if content['#block_content'].bundle %}
+  {% set bundleClass = 'block-' ~ content['#block_content'].bundle|clean_class %}
+{% endif %}
+{% if content['#block_content'].info.0.value %}
+  {% set titleClass = 'block-' ~ content['#block_content'].info.0.value|clean_class %}
+{% endif %}
+{% if content['#block_content'].id.0.value %}
+  {% set idClass = 'block-' ~ content['#block_content'].id.0.value %}
+{% endif %}
+
+
+{% set classes = [
+    'block',
+    pluginClass,
+    bundleClass,
+    titleClass,
+    idClass
+] %}
 
 <div{{ attributes.addClass(classes) }}>
   {% block blockContent %}

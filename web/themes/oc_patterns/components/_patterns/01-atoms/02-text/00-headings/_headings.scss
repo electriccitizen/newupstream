@@ -126,14 +126,14 @@ h2+ul, h3+ul, h4+ul, h5+ul, h6+ul {
 
 /* BLOCK, SECTION AND WIDGET HEADINGS
 -------------------------- */
-.block-title{
+h2.block-title{
 	@include blockTitle;
 }
-.section-title{
+h2.section-title{
 	@include blockTitle;
 	font-size: 24px;
 }
-.widget-title{
+h3.widget-title{
 	@include blockTitle;
 	letter-spacing: 0;
 	text-transform: none;

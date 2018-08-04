@@ -2,9 +2,9 @@
    ADDTOANY
 ==================== */
 
-.block-addtoany-block{
+.block-addtoany_block{
 	.addtoany_list > a{
-		padding: 0 1px;
+		padding: 0 0 0 1px;
 		&:hover,&:focus{
 			@include opacity(.7); 
 			@include transAll(.3s);
