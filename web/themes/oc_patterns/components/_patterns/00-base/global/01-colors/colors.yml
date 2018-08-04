@@ -2,11 +2,11 @@ items:
   - name: $body
     value: '#4d4e4e'
   - name: $lightGrey
-    value: '#ddd'
+    value: '#ededed'
   - name: $grey
     value: '#ccc'
   - name: $darkGrey
-    value: '#222222'
+    value: '#4a4a4a'
   - name: $offWhite
     value: '#f6f6f6'
   - name: $white
@@ -23,10 +23,8 @@ items:
     value: 'rgba(35,35,35,0.7)'
   - name: $imgOverlay
     value: 'rgba(35,35,35,0.4)'
-  - name: $greenGood
-    value: '#218d00'
-  - name: $redBad
-    value: '#cd0210'
+  - name: $redWarning
+    value: '#e80212'
   - name: $unpub
     value: '#fff4fa'
   - name: $unpubDark
@@ -36,7 +34,7 @@ items:
   - name: $borderRule
     value: '#222222'
   - name: $link
-    value: '#d52d00'
+    value: '#bf0e0e'
   - name: $activeLink
     value: '#000000'
   - name: $hoverLink

@@ -161,7 +161,7 @@ SECTION LAYOUTS
 	@include spacer(2);
 	@include auto;
 	&:after{
-		@include fullBack($lightGrey);
+		@include fullBack($grey);
 	}
 	@include onlySmall{
 		h2:not(.block-title):not(.widget-title){
@@ -195,7 +195,10 @@ SECTION LAYOUTS
 		padding: 15px 10px;
 		position: relative;
 		display: block;
-		font-family: $header;
+		font-family: $header;s
+		&:hover,&:focus{
+			color: $hoverLink;
+		}
 		&:not(:last-child):after{
 			content: '';
 			display: block;

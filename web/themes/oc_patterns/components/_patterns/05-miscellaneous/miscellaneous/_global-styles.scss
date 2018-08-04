@@ -271,6 +271,7 @@ a[href$='.ppt'],a[href$=".pptx"]{
 	padding: .75em 20px .5em;
 	position: relative;
 	@include auto;
+	@include spacer(1);
 	&:after{
 		@include fullBack($darkGrey);
 	}
