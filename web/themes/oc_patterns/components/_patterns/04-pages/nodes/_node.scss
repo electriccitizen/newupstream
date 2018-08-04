@@ -2,6 +2,26 @@
    NODES GLOBAL
 =================== */
 
+/* GLOBAL SECTIONS
+-------------------- */
+.node-section{
+	position: relative;
+}
+
+@mixin sectionLimit{
+	max-width: $contentStop;
+	@include auto;
+}//end section limit
+
+
+/* BODY
+-------------- */
+.node-content .block-body{
+	max-width: $textMax;
+	@include auto;
+	@include spacer(2);
+}
+
 
 
 /* unpub NODES

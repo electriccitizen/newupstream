@@ -8,6 +8,10 @@ img{
 	display: block;
 }
 
+.field-media-image + figcaption{
+	margin-top: .5em;
+}
+
 //constrain images with smaller sizes (commonly embedded)
 .view-modemediasmall,.view-mode-small{
 	width: 300px;

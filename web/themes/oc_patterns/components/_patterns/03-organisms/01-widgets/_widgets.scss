@@ -46,13 +46,6 @@ SECTION LAYOUTS
 		padding-top: 3em;
 	}
 
-	.section-holder{
-		max-width: $contentStop + 40px;
-		padding-left: 20px;
-		padding-right: 20px;
-		@include auto;
-	}
-
 	.field-section-intro{
 		max-width: $textMax;
 		@include auto;
@@ -69,11 +62,15 @@ SECTION LAYOUTS
 			//need mins so that js can calculate width and height (for slider)
 			min-height: 0;
 			min-width: 0;
+			max-width: $contentStop + 40px;
+			padding-left: 20px;
+			padding-right: 20px;
+			@include auto;
 			&:not(:last-child){
 				@include spacer(2);
 			}
 		}
-	}
+	}//end field section widgets
 
 	&.columned{
 		.field-section-widgets{

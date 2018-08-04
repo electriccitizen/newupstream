@@ -2,11 +2,16 @@
    LANDING PAGE NODE
 ==================== */
 
-.node--type-landing_page{
+.node-landing-page.node-content{
 
+	//banner section
+	#section-2{
+		@include spacer(2);
+	}
 	.field-banner{
 		opacity: 0;
 		@include animation('fadeIn 1.2s 1 forwards');
+		@include spacer(2);
 		img{
 			width: 100%;
 		}
