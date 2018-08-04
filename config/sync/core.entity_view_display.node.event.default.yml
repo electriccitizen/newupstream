@@ -60,20 +60,19 @@ third_party_settings:
                 entity: layout_builder.entity
             additional: {  }
             weight: 0
-          c6faee18-20f9-482d-9d2a-a02c6e75f8d4:
-            uuid: c6faee18-20f9-482d-9d2a-a02c6e75f8d4
+          fb53ba54-8418-43df-8508-c66b86d7a2d3:
+            uuid: fb53ba54-8418-43df-8508-c66b86d7a2d3
             region: content
             configuration:
-              id: 'field_block:node:event:field_oc_date'
-              label: Date
+              id: 'field_block:node:event:title'
+              label: Title
               provider: layout_builder
               label_display: '0'
               formatter:
                 label: hidden
-                type: datetime_default
+                type: string
                 settings:
-                  timezone_override: UTC
-                  format_type: oc_short_date_time
+                  link_to_entity: false
                 third_party_settings: {  }
               context_mapping:
                 entity: layout_builder.entity
@@ -112,7 +111,7 @@ third_party_settings:
                 label: hidden
                 type: geolocation_map
                 settings:
-                  set_marker: '0'
+                  set_marker: '1'
                   title: ''
                   info_text: '[node:field_event_pin_info]'
                   replacement_patterns:

@@ -57,15 +57,15 @@ SECTION LAYOUTS
 		position: relative;
 		z-index: 4;
 		@include safeFlex(row,wrap,null,null);
+		max-width: $contentStop + 40px;
+		padding-left: 20px;
+		padding-right: 20px;
+		@include auto;
 		& > .section-item{
 			width: 100%;
 			//need mins so that js can calculate width and height (for slider)
 			min-height: 0;
 			min-width: 0;
-			max-width: $contentStop + 40px;
-			padding-left: 20px;
-			padding-right: 20px;
-			@include auto;
 			&:not(:last-child){
 				@include spacer(2);
 			}

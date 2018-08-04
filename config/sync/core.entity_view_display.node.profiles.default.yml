@@ -58,41 +58,6 @@ third_party_settings:
                 entity: layout_builder.entity
             additional: {  }
             weight: 0
-          b1a62a42-77d9-4b8b-bc75-65b1b1816b10:
-            uuid: b1a62a42-77d9-4b8b-bc75-65b1b1816b10
-            region: content
-            configuration:
-              id: 'field_block:node:profiles:field_email'
-              label: Email
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: hidden
-                type: email_mailto
-                settings: {  }
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
-            weight: 1
-          9b1d6d4e-756d-4b04-8c9b-3b2d602886da:
-            uuid: 9b1d6d4e-756d-4b04-8c9b-3b2d602886da
-            region: content
-            configuration:
-              id: 'field_block:node:profiles:field_phone'
-              label: Phone
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: hidden
-                type: telephone_link
-                settings:
-                  title: ''
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
-            weight: 2
           f21834ba-d68b-4baa-8ec6-2a1a23ad055d:
             uuid: f21834ba-d68b-4baa-8ec6-2a1a23ad055d
             region: content
@@ -129,6 +94,41 @@ third_party_settings:
                 entity: layout_builder.entity
             additional: {  }
             weight: 4
+          b1a62a42-77d9-4b8b-bc75-65b1b1816b10:
+            uuid: b1a62a42-77d9-4b8b-bc75-65b1b1816b10
+            region: content
+            configuration:
+              id: 'field_block:node:profiles:field_email'
+              label: Email
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: email_mailto
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 5
+          9b1d6d4e-756d-4b04-8c9b-3b2d602886da:
+            uuid: 9b1d6d4e-756d-4b04-8c9b-3b2d602886da
+            region: content
+            configuration:
+              id: 'field_block:node:profiles:field_phone'
+              label: Phone
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: telephone_link
+                settings:
+                  title: ''
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 6
       -
         layout_id: layout_onecol
         layout_settings: {  }

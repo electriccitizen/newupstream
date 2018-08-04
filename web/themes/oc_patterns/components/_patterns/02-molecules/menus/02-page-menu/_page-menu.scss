@@ -4,33 +4,53 @@
 
 
 .block--system-menu.page-menu{
-
-	/* NON-KERMIT DESKTOP MENU
-	-------------- */ 
-
-	//top level
-	& > ul:not(.contextual-links){
-		@include listReset;
-
-		//child menus
-		ul:not(.contextual-links){
-			margin: .25em 0;
-			display: none;
-			padding-left: 12px;
-			@include transAll(.3s);
-			li{
-				//reset sub menus to base font size
-				@include baseFontSize;
-				a:hover{
-					@include transAll(.3s);
-				}
+	@include onlySmall{
+		@include spacer(2);
+	}
+	h2.block-title{
+		position: relative;
+		padding: .5em 1em;
+		background: $lightGrey;
+		@include onlySmall{
+			padding: 1em;
+			@include edgeToEdge;
+		}	 
+		a.page-menu-toggle{
+			margin-right: 1em;
+			@include tab{
+				display: none;
 			}
 		}
-		//set first livel to larger size
-		& > li{
-			font-size: 20px;
+	}
+	//top level
+	#page-menu-wrapper{
+		display: none;
+		@include tab{
+			display: block !important;
 		}
-	}//end first level ul
+		& > ul:not(.contextual-links){
+			@include listReset;
+
+			//child menus
+			ul:not(.contextual-links){
+				margin: .25em 0;
+				display: none;
+				padding-left: 12px;
+				@include transAll(.3s);
+				li{
+					//reset sub menus to base font size
+					@include baseFontSize;
+					a:hover{
+						@include transAll(.3s);
+					}
+				}
+			}
+			//set first livel to larger size
+			& > li{
+				font-size: 20px;
+			}
+		}//end first level ul
+	}//end page menu wrapper
 
 
 	//global menu items

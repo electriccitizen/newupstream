@@ -75,7 +75,7 @@ third_party_settings:
               context_mapping:
                 entity: layout_builder.entity
             additional: {  }
-            weight: 1
+            weight: 2
           701082eb-fbcc-445b-b37d-b276a41be881:
             uuid: 701082eb-fbcc-445b-b37d-b276a41be881
             region: content
@@ -86,7 +86,7 @@ third_party_settings:
               label_display: '0'
               context_mapping: {  }
             additional: {  }
-            weight: 2
+            weight: 1
       -
         layout_id: layout_onecol
         layout_settings: {  }

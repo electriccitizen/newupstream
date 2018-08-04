@@ -24,9 +24,6 @@
 	{{ element.0['#context'].value }}
 </h1>
 <div class="metatext">
-	<span class="date">{{ element['#object'].created.value|date("F j, Y") }}</span>
-	{% if author %}
-		<span class="author"> by {{ element['#object'].field_author.entity.title.value }}</span>
-	{% endif %}
+	<span class="date">{{ element['#object'].field_oc_date.value|date("F j, Y \\a\\t g:ia") }}</span>
 </div>
 

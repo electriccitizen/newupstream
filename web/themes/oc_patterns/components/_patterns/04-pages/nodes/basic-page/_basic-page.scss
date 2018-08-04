@@ -1,13 +1,13 @@
 /* ============
    BASIC PAGE
 ================ */
-.node--type-page{
-	.field-banner{
-		img{
-			display: block;
-			width: 100%;
-		}
-	}
+.node-page.node-content{
 	
+	.block-field-banner{
+		@include spacer(2);
+	}
+	.block-field.block-title{
+		@include centerTitle;
+	}
 
 }//end basic page

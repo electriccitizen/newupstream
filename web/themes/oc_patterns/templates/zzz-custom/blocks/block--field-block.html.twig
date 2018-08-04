@@ -25,14 +25,24 @@
  * @see template_preprocess_block()
  */
 #}
-{%
-  set classes = [
-    'block-field',
-    'block-' ~ content['#field_name']|clean_class,
-    'block-' ~ content['#field_type']|clean_class,
-    'block-' ~ content['#entity_type']|clean_class
-  ]
-%}
+{% if content['#theme']|clean_class %}
+  {% set theme = 'block-' ~ content['#theme']|clean_class %}
+{% endif %}
+{% if content['#field_name']|clean_class %}
+  {% set fieldName = 'block-' ~ content['#field_name']|clean_class %}
+{% endif %}
+{% if content['#field_type']|clean_class %}
+  {% set fieldType = 'block-' ~ content['#field_name']|clean_class %}
+{% endif %}
+{% if content['#entity_type']|clean_class %}
+  {% set entityType = 'block-' ~ content['#field_name']|clean_class %}
+{% endif %}
+{% set classes = [
+    theme,
+    fieldName,
+    fieldType,
+    entityType
+] %}
 
 <div{{ attributes.addClass(classes) }}>
   {% block blockContent %}
