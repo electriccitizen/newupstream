@@ -70,7 +70,12 @@
  *   in different view modes.
  */
 #}
-<article{{ attributes }}>
+{% set classes = [
+  'node-content',
+  'node-' ~ node.type.0.target_id|clean_class,
+  'node-' ~ node.id
+] %}
+<article{{ attributes.addClass(classes) }}>
 
   {{ title_prefix }}
   {% if not page %}

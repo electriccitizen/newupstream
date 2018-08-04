@@ -65,8 +65,8 @@ view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
 		<div{{ attributes.addClass(classes)  }}>
     		{% block widgetContent %}
     			{# print section title, intro and widget title outside of inner wrapper #}
-    			{{ content.field_secton_title }}
-    			{{ content.field_section_intro }}
+    			{{ content.field_section_title }}
+ 				{{ content.field_section_intro }}
     			{{ content.field_widget_title }}
 
     			{% block widgetInner %}
@@ -74,7 +74,7 @@ view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
 	    			{% if 'section' not in paragraph.bundle|clean_class %}
 	    				<div class="widget-wrapper">
 	    			{% endif %}
-	    					{{ content|without('field_widget_title') }}
+	    					{{ content|without('field_widget_title','field_section_title','field_section_intro') }}
 	    			{% if 'section' not in paragraph.bundle|clean_class %}
 	    				</div>
 	    			{% endif %}
