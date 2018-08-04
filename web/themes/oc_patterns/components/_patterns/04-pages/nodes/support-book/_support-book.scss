@@ -1,7 +1,39 @@
 /* ==============
    SUPPORT BOOK NODE
 ===================== */
-.node-type-support-book{
+.node-support-book.node-content{
+	.main-node-content{
+		@include sectionLimit;
+		@include clearFix;
+	}
+
+	//nav section
+	.node-section#section-2{
+		padding-left: 20px;
+		padding-right: 20px;
+		@include tab{
+			float: left;
+			width: 350px;
+		}
+	}
+
+	//main-content section
+	.node-section#section-3{
+		padding-left: 20px;
+		padding-right: 20px;
+		@include tab{
+			float: left;
+			@include calc(width, "100% - 350px");
+			padding-left: 40px;
+		}
+	}
+
+	//body field
+	.block-field.block-body{
+		padding-left: 0;
+		padding-right: 0;
+		max-width: none;
+	}
 
 	//restricted access message
 	&:not(.logged-in){
