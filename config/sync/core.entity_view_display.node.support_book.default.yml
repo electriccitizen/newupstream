@@ -35,19 +35,19 @@ third_party_settings:
         layout_id: layout_onecol
         layout_settings: {  }
         components:
-          8e0351bb-7144-42ba-9aa9-4f05d69689a0:
-            uuid: 8e0351bb-7144-42ba-9aa9-4f05d69689a0
+          c0ba77d7-9652-490e-b90a-575248950d2c:
+            uuid: c0ba77d7-9652-490e-b90a-575248950d2c
             region: content
             configuration:
               id: 'menu_block:support-book'
-              label: 'Support Book'
+              label: 'Web Editor Guide'
               provider: menu_block
               label_display: visible
               level: 1
               depth: 0
-              expand: 0
+              expand: 1
               parent: 'support-book:'
-              suggestion: support_book
+              suggestion: page_menu
               context_mapping: {  }
             additional: {  }
             weight: 0

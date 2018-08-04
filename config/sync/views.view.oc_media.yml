@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.storage.media.field_media_file
     - image.style.oc_thumbnail_large
     - image.style.thumbnail
     - media_entity.bundle.document
@@ -10,6 +11,7 @@ dependencies:
     - media_entity.bundle.video
   module:
     - entity_browser
+    - file
     - image
     - media_entity
     - user
@@ -1241,18 +1243,18 @@ display:
       display_extenders: {  }
       display_description: ''
       fields:
-        thumbnail__target_id:
-          id: thumbnail__target_id
-          table: media_field_data
-          field: thumbnail__target_id
+        field_media_file:
+          id: field_media_file
+          table: media__field_media_file
+          field: field_media_file
           relationship: none
           group_type: group
           admin_label: ''
           label: ''
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: "<div class=\"file-extension\">\n<span class=\"{{field_media_file}}\"></span>\n</div>"
             make_link: false
             path: ''
             absolute: false
@@ -1290,10 +1292,8 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: target_id
-          type: image
-          settings:
-            image_style: thumbnail
-            image_link: ''
+          type: file_url_plain
+          settings: {  }
           group_column: ''
           group_columns: {  }
           group_rows: true
@@ -1304,8 +1304,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: media
-          entity_field: thumbnail
           plugin_id: field
         name:
           id: name
@@ -1560,7 +1558,8 @@ display:
         - url
         - url.query_args
         - user.permissions
-      tags: {  }
+      tags:
+        - 'config:field.storage.media.field_media_file'
   image_browser:
     display_plugin: entity_browser
     id: image_browser

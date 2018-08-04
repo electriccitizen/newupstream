@@ -65,6 +65,40 @@
 	margin: 0;
 }
 
+/* CUSTOM MEDIA BROWSER FILE ICONS */
+.eb-media .views-field .file-extension{
+	padding-left: 10px;
+	padding-bottom: 5px;
+}
+.eb-media .views-field .file-extension span{
+	display: block;
+	height: 100px;
+	width: 100px;
+	position: relative;
+	color: red;
+	background: #eee;
+}
+.eb-media .views-field .file-extension [class$='.pdf']{
+	background: url(../icons/file-icons/file-pdf.svg) no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+.eb-media .views-field .file-extension [class$='.doc'],.eb-media .views-field .file-extension [class$='.docx']{
+	background: url(../icons/file-icons/file-word.svg) no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+.eb-media .views-field .file-extension [class$='.xls'],.eb-media .views-field .file-extension [class$='.xlsx']{
+	background: url(../icons/file-icons/file-xls.svg) no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+.eb-media .views-field .file-extension [class$='.ppt'],.eb-media .views-field .file-extension [class$='.pptx']{
+	background: url(../icons/file-icons/file-ppt.svg) no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+
 /* INLINE ENTITY FORM (ADD MEDIA) BUTTONS
 ------------------- */
 input[value="Add new media"],input[value="Add existing media"]{
