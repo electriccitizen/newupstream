@@ -73,26 +73,6 @@ third_party_settings:
                 entity: layout_builder.entity
             additional: {  }
             weight: 1
-          9980f345-31ba-4511-bd1c-b9281497a659:
-            uuid: 9980f345-31ba-4511-bd1c-b9281497a659
-            region: content
-            configuration:
-              id: 'field_block:node:news:created'
-              label: 'Authored on'
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: hidden
-                type: timestamp
-                settings:
-                  date_format: oc_text_date_only
-                  custom_date_format: ''
-                  timezone: UTC
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
-            weight: 2
       -
         layout_id: layout_onecol
         layout_settings: {  }
