@@ -1,31 +1,7 @@
 /* ===============
    NODES GLOBAL
 =================== */
-@mixin mainContentSide{
-	//body
-	.block-entity-fieldnodebody{
-		max-width: $contentStop;
-		@include auto;
-		margin-bottom: 2em;
-	}
-	.block-entity-fieldnodefield-oc-widgets{
-		max-width: $contentStop;
-		@include auto
-	}
-}
 
-@mixin mainContent{
-	//body
-	.block-entity-fieldnodebody{
-		max-width: $textMax;
-		@include auto;
-		margin-bottom: 2em;
-	}
-	.block-entity-fieldnodefield-oc-widgets{
-		max-width: $contentStop;
-		@include auto
-	}
-}
 
 
 /* unpub NODES

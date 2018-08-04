@@ -1,0 +1,11 @@
+/* ===============
+   layout builder admin theming
+=================== */
+.layout-section .layout-builder--layout__region{
+	.draggable{
+		*{
+			word-break: break-all;
+		}
+	}
+}//end layout builder section region
+

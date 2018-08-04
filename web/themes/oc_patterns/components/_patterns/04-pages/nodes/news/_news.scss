@@ -14,20 +14,5 @@
 		margin-bottom: 1.5em;
 	}
 
-	.block-region-main{
-		@include mainContentSide;
-	}
-
-	//move sidebar to first in bunsen
-	.bunsen{
-		@include onlySmall{
-			.sidebar{
-				@include safeFlexOrder(1);
-			}
-			.main{
-				@include safeFlexOrder(2);
-			}
-		}
-	}
 
 }//end news

@@ -10,10 +10,6 @@
 		}
 	}
 
-	.block-region-main{
-		@include mainContentSide;
-	}
-
 	.block-entity-fieldnodefield-oc-date{
 		.field-oc-date{
 			margin-bottom: 1.5em;
@@ -27,18 +23,6 @@
 
 	.block-entity-fieldnodefield-event-location{
 		margin-bottom: 1.5em;
-	}
-
-	//put sidebar first when in bunsen
-	.bunsen{
-		@include onlySmall{
-			.sidebar{
-				@include safeFlexOrder(1);
-			}
-			.main{
-				@include safeFlexOrder(2);
-			}
-		}
 	}
 	
 }//end event
