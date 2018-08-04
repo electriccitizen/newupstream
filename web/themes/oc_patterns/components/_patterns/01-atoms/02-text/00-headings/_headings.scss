@@ -43,7 +43,7 @@ $h6Sm: 18px;
 	@include tab{
 		font-size: $h1Mid;
 	}
-	@include maxWidth{
+	@include contentStop{
 		font-size: $h1Lg;
 	}
 }
@@ -54,7 +54,7 @@ $h6Sm: 18px;
 	@include tab{
 		font-size: $h2Md;
 	}
-	@include maxWidth{
+	@include contentStop{
 		font-size: $h2Lg;
 	}
 }
@@ -88,7 +88,7 @@ $h6Sm: 18px;
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	text-align: center;
-	max-width: $maxWidth;
+	max-width: $contentStop;
 	@include auto;
 }
 

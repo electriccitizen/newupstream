@@ -67,7 +67,7 @@
 
 .paragraph--type--slideshow{
 	.wrapper{
-		max-width: $maxWidth !important;
+		max-width: $contentStop !important;
 	}
 	
 	//slider container overrides layout padding on mobile

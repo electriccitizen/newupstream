@@ -5,7 +5,7 @@
 .paragraph--type--map{
 	//override default text width wrapper sizing
 	.wrapper{
-		max-width: $maxWidth !important;
+		max-width: $contentStop !important;
 	}
 	//allow map to override layout margins on mobile
 	.field-location{

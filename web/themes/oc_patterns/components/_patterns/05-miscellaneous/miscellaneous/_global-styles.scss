@@ -109,16 +109,6 @@ body {
 	}
 }
 
-/* LAYOUT BUILDER UI
--------------------- */
-.layout-section .layout-builder--layout__region{
-	.draggable{
-		*{
-			word-break: break-all;
-		}
-	}
-}//end layout builder section region
-
 
 /* SKIP NAV
 ------------- */
@@ -267,10 +257,11 @@ a[href$='.ppt'],a[href$=".pptx"]{
 /* ADMIN NODE EDIT TABS
 ----------------- */
 #block-oc-patterns-local-tasks{
-	max-width: $maxWidth;
+	max-width: $contentStop;
 	padding: .75em 20px .5em;
 	position: relative;
 	@include auto;
+	@include spacer(1);
 	&:after{
 		@include fullBack($darkGrey);
 	}

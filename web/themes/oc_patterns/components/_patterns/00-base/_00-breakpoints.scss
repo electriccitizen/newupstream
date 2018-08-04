@@ -7,8 +7,8 @@
 $smallTab: 500px;
 $tab: 760px;
 $desk: 900px;
-$maxWidth: 1200px;
-$maxWidthText: 800px;
+$contentStop: 1200px;
+$textMax: 800px;
 $onlyTab: 760px 899px;
 $onlySmall: max-width 759px;
 $onlyPhone: max-width 499px; 
@@ -38,9 +38,9 @@ $deskMenu:min-width 980px;
 	}
 }
 
-///mixin - maxWidth
-@mixin maxWidth {
-	@include breakpoint($maxWidth) {
+///mixin - contentStop
+@mixin contentStop {
+	@include breakpoint($contentStop) {
 		@content;
 	}
 }

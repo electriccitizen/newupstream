@@ -17,11 +17,27 @@ dependencies:
     - layout_builder
     - layout_discovery
     - metatag
+    - system
     - text
     - user
 third_party_settings:
   layout_builder:
     sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          4f63138d-9667-4838-9eb0-4c192b5807eb:
+            uuid: 4f63138d-9667-4838-9eb0-4c192b5807eb
+            region: content
+            configuration:
+              id: system_breadcrumb_block
+              label: Breadcrumbs
+              provider: system
+              label_display: '0'
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
       -
         layout_id: layout_onecol
         layout_settings: {  }

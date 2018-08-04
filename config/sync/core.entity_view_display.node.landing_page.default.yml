@@ -13,11 +13,27 @@ dependencies:
     - layout_builder
     - layout_discovery
     - metatag
+    - system
     - text
     - user
 third_party_settings:
   layout_builder:
     sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          d6a1eb18-ea64-4550-9cb4-9e9d91664720:
+            uuid: d6a1eb18-ea64-4550-9cb4-9e9d91664720
+            region: content
+            configuration:
+              id: system_breadcrumb_block
+              label: Breadcrumbs
+              provider: system
+              label_display: '0'
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
       -
         layout_id: layout_onecol
         layout_settings: {  }
@@ -79,8 +95,12 @@ third_party_settings:
                 entity: layout_builder.entity
             additional: {  }
             weight: 0
-          8385c801-d808-49fe-9538-a9b9c74e79ab:
-            uuid: 8385c801-d808-49fe-9538-a9b9c74e79ab
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          9fd7c5d5-6dd2-4880-96e2-943963f774ee:
+            uuid: 9fd7c5d5-6dd2-4880-96e2-943963f774ee
             region: content
             configuration:
               id: 'field_block:node:landing_page:field_oc_widgets'
@@ -96,7 +116,7 @@ third_party_settings:
               context_mapping:
                 entity: layout_builder.entity
             additional: {  }
-            weight: 1
+            weight: 0
     allow_custom: false
     is_enabled: true
 _core:

@@ -3,21 +3,15 @@
 ==================== */
 
 .node--type-landing_page{
-	.block-region-top{
-		position: relative;
-		.field-banner{
-			opacity: 0;
-			@include animation('fadeIn 1.2s 1 forwards');
-			img{
-				width: 100%;
-			}
+
+	.field-banner{
+		opacity: 0;
+		@include animation('fadeIn 1.2s 1 forwards');
+		img{
+			width: 100%;
 		}
-	}//end block-regoin-top
-
-
-	.block-region-main{
-		@include mainContent;
 	}
+
 }//end landing-page
 
 

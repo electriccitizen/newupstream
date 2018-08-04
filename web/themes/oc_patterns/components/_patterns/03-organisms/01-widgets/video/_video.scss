@@ -4,11 +4,11 @@
 
 .paragraph--type--video{
 	.wrapper{
-		max-width: $maxWidth !important;
+		max-width: $contentStop !important;
 	}
 	//video summary
 	.field-oc-long-text{
-		max-width: $maxWidthText;
+		max-width: $textMax;
 		@include auto;
 		margin-top: 1em;
 	}

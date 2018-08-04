@@ -3,7 +3,7 @@
 ================== */
 
 .paragraph--type--news-by-category{
-	max-width: $maxWidthText;
+	max-width: $textMax;
 	@include auto;
 
 	//add a bit more space before start of view if there is a title

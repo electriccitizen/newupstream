@@ -111,6 +111,6 @@ span.highlight{
 .pl{
 	.pl-long-text{
 		@include auto;
-		max-width: $maxWidthText;
+		max-width: $textMax;
 	}
 }

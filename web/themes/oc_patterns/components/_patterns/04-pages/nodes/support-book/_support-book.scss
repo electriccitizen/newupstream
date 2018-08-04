@@ -2,19 +2,6 @@
    SUPPORT BOOK NODE
 ===================== */
 .node-type-support-book{
-	.block-region-top{
-		margin-bottom: 2em;
-	}
-
-	.block-region-main{
-		@include mainContentSide;
-	}
-
-	.block-region-sidebar{
-		@include tab{
-			margin-top: .5em;
-		}
-	}
 
 	//restricted access message
 	&:not(.logged-in){
@@ -29,7 +16,7 @@
 			bottom: 0;
 			text-align: center;
 			& > div{
-				max-width: $maxWidthText + 40px;
+				max-width: $textMax + 40px;
 				border: 1px solid $borderRule;
 				padding: 40px 30px;
 				@include auto;
@@ -39,7 +26,7 @@
 				@include translate(-50%,-50%);
 			}
 		}
-	}
+	}//end restricted access
 
 }//end support book
 

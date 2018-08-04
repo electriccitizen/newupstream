@@ -17,7 +17,7 @@ footer {
 		//limit footer content to max-width and set flex parenting
 		& > div{
 			position: relative;
-			max-width: $maxWidth;
+			max-width: $contentStop;
 			@include auto;
 			@include safeFlex(row,wrap,null,null);
 		}

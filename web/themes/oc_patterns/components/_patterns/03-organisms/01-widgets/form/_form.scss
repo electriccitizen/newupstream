@@ -3,7 +3,7 @@
 ================ */
 
 .paragraph--type--form{
-	max-width: $maxWidthText;
+	max-width: $textMax;
 	@include auto;
 	form{
 		& > .js-form-item{

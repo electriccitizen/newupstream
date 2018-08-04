@@ -3,7 +3,7 @@
 =============== */
 
 .paragraph--type--call-to-action{
-	max-width: $maxWidthText;
+	max-width: $textMax;
 	@include auto;
 	
 	.widget-title{

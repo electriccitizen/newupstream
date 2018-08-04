@@ -95,7 +95,7 @@
 		text-align: center;
 		max-width: 60%;
 		margin: 2em auto;
-		border: 2px solid $redBad;
+		border: 2px solid $redWarning;
 		padding: 1em 2em;
 		@include onlySmall{
 			display: none;
@@ -259,7 +259,7 @@
 		}
 		.doc-section-inner{
 			@include auto;
-			max-width: $maxWidthText;
+			max-width: $textMax;
 		}
 	}
 	ol,ul{
@@ -319,7 +319,7 @@
 					font-size: 36px;
 					font-weight: $heavy;
 					line-height: 1;
-					color: $redBad;
+					color: $redWarning;
 					position: absolute;
 					left: -30px;
 					top: 0;

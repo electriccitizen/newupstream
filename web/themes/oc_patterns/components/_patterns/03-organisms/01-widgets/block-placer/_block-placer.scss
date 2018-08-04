@@ -4,7 +4,7 @@
 .paragraph--type--block-placer{
 	.field-block{
 		.field.body{
-			max-width: $maxWidthText;
+			max-width: $textMax;
 			@include auto;
 		}
 	}

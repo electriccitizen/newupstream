@@ -14,12 +14,28 @@ dependencies:
   module:
     - layout_builder
     - layout_discovery
+    - system
     - telephone
     - text
     - user
 third_party_settings:
   layout_builder:
     sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          e2631d8f-f064-488b-9907-111a531c0c96:
+            uuid: e2631d8f-f064-488b-9907-111a531c0c96
+            region: content
+            configuration:
+              id: system_breadcrumb_block
+              label: Breadcrumbs
+              provider: system
+              label_display: '0'
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
       -
         layout_id: layout_onecol
         layout_settings: {  }
