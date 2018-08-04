@@ -9,18 +9,20 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Template\Attribute;
 use Drupal\taxonomy\Entity\Term;
 
-//alter viewport metatag to prevent user scaling (solves select list autozoom)
-// function oc_patterns_page_attachments_alter(array &$page){
-//   $viewport = [
-//     '#type' => 'html_tag',
-//     '#tag' => 'meta',
-//     '#attributes' => [
-//       'name' => 'viewport',
-//       'content' => 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no',
-//     ],
-//   ];
-//   $page['#attached']['html_head'][] = [$viewport, 'viewport'];
-// }
+
+// Block suggestions for custom block bundles.
+function oc_patterns_preprocess_html(&$variables) {
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if ($node) {
+    if ((!$node instanceof NodeInterface) && ($node_revision = \Drupal::routeMatch()->getParameter('node_revision'))) {
+      $node = \Drupal::entityTypeManager()->getStorage('node')->loadRevision($node_revision);
+    }
+    //find out if there is a banner cut chosen and add as class
+    if ((!empty($node->field_banner[0])) || ($node->field_profile_image[0])){
+      $variables['attributes']['class'][] = 'has-main-image';
+    }
+  }
+}
 
 
 function oc_patterns_preprocess_field(&$variables, $hook) {

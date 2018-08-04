@@ -20,18 +20,16 @@
 	.block-addtoany_block{
 		padding: 0 20px;
 		text-align: right;
-		max-width: $contentStop;
 		margin-top: -3px;
-		@include auto;
+		@include sectionLimit;
 		@include spacer(2);
 	}
 
 	//tags
 	.block-field-tags{
-		max-width: $textMax;
-		@include auto;
-		@include spacer(.5);
 		font-size: 16px;
+		@include textContent;
+		@include spacer(.5);
 		.label{
 			font-weight: $heavy;
 			margin-right: .5em;
@@ -52,12 +50,9 @@
 		}
 	}//end tags
 
-
-
-
 	.block-flippy-block{
-		max-width: $contentStop;
-		@include auto;
+		@include sectionLimit;
+		@include spacer(2);
 	}
 
 

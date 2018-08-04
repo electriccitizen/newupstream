@@ -20,6 +20,12 @@
 	@include auto;
 }//end section limit
 
+@mixin textContent{
+	max-width: $textMax + 40px;
+	padding-left: 20px;
+	padding-right: 20px;
+	@include auto;
+}
 
 /* BANNER
 ------------ */
@@ -32,8 +38,7 @@
 /* BODY
 -------------- */
 .node-content .block-body{
-	max-width: $textMax;
-	@include auto;
+	@include textContent;
 	@include spacer(2);
 }
 
