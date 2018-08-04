@@ -6,7 +6,7 @@
 
 	//Wrapper sizing (needs to be changed when image styles are changed or added to widget)
 	.image-wrapper{
-		max-width: $maxWidth;
+		max-width: $contentStop;
 		@include auto;
 		&.small{
 			max-width: 300px;
@@ -50,7 +50,7 @@
 	.field-oc-long-text{
 		margin: 1em auto 0;
 		text-align: left;
-		max-width: $maxWidthText;
+		max-width: $textMax;
 	}
 	
 }//end image widget

@@ -3,7 +3,7 @@
 ================= */
 
 .paragraph--type--accordion-group{
-	max-width: $maxWidthText;
+	max-width: $textMax;
 	@include auto;
 }
 

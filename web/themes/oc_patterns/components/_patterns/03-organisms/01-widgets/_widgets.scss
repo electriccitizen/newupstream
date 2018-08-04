@@ -47,14 +47,14 @@ SECTION LAYOUTS
 	}
 
 	.section-holder{
-		max-width: $maxWidth + 40px;
+		max-width: $contentStop + 40px;
 		padding-left: 20px;
 		padding-right: 20px;
 		@include auto;
 	}
 
 	.field-section-intro{
-		max-width: $maxWidthText;
+		max-width: $textMax;
 		@include auto;
 		@include spacer(1.5);
 	}
@@ -150,7 +150,7 @@ SECTION LAYOUTS
 
 //Anchor Links
 .widget-anchors{
-	max-width: $maxWidth;
+	max-width: $contentStop;
 	padding-left: 20px;
 	padding-right: 20px;
 	padding-top: 1em;
@@ -222,7 +222,7 @@ SECTION LAYOUTS
 				margin-right: 0;
 			}
 		}
-		@include maxWidth{
+		@include contentStop{
 			font-size: 24px;
 		}
 	}//end a 

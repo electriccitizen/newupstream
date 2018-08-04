@@ -3,7 +3,7 @@
 ================= */
 
 .paragraph--type--text{
-	max-width: $maxWidthText;
+	max-width: $textMax;
 	@include auto;
 }//end links-files widget
 

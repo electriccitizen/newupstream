@@ -3,7 +3,7 @@
 ================== */
 
 .paragraph--type--links-files{
-	max-width: $maxWidthText;
+	max-width: $textMax;
 	@include auto;
 	//set margins for links and files lists
 	.links-files{

@@ -2,7 +2,7 @@
 	PULLQUOTE WIDGET
 ======================= */
 .paragraph--type--pullquote{
-	max-width: $maxWidthText;
+	max-width: $textMax;
 	@include auto;
 	.widget-title{
 		@include spacer(1.5);

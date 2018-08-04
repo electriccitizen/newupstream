@@ -9,7 +9,7 @@
 
 	.content-wrapper{
 		@include safeFlex(row,wrap,null,null);
-		max-width: $maxWidth;
+		max-width: $contentStop;
 		@include auto;
 		padding: 0 20px 3em;
 

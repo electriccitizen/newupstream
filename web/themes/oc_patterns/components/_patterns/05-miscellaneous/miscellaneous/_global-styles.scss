@@ -267,7 +267,7 @@ a[href$='.ppt'],a[href$=".pptx"]{
 /* ADMIN NODE EDIT TABS
 ----------------- */
 #block-oc-patterns-local-tasks{
-	max-width: $maxWidth;
+	max-width: $contentStop;
 	padding: .75em 20px .5em;
 	position: relative;
 	@include auto;

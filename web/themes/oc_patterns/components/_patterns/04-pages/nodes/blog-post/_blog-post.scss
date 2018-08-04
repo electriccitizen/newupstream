@@ -69,7 +69,7 @@
 				text-align: right;
 				& > span{
 					display: block;
-					max-width: $maxWidth;
+					max-width: $contentStop;
 					@include auto;
 				}
 			}
@@ -83,7 +83,7 @@
 		//author
 		.block-entity-fieldnodefield-author{
 			margin-bottom: 2em;
-			max-width: $maxWidthText;
+			max-width: $textMax;
 			@include auto;
 			.profile-teaser{
 				.field-profile-image{
@@ -115,7 +115,7 @@
 
 		//tags
 		.block-entity-fieldnodefield-tags{
-			max-width: $maxWidthText;
+			max-width: $textMax;
 			@include auto;
 			.label{
 				font-weight: $heavy;
@@ -143,7 +143,7 @@
 	.block-region-bottom{
 		padding: 0 20px;
 		.block-flippy-block{
-			max-width: $maxWidth;
+			max-width: $contentStop;
 			@include auto;
 		}
 	}

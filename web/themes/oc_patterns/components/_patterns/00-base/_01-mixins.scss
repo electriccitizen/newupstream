@@ -375,8 +375,8 @@
 
 /* LAYOUT MIXINS
 -------------------- */
-$contentW: $maxWidth;
-$textW: $maxWidthText;
+$contentW: $contentStop;
+$textW: $textMax;
 
 ///mixin - auto
 @mixin auto{
@@ -543,7 +543,7 @@ $textW: $maxWidthText;
 		}
 	}
 	.kermit &{
-		@include maxWidth{
+		@include contentStop{
 			@include edgeReset;
 			max-width: 100%;
 		}

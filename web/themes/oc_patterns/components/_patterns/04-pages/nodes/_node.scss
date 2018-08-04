@@ -4,12 +4,12 @@
 @mixin mainContentSide{
 	//body
 	.block-entity-fieldnodebody{
-		max-width: $maxWidth;
+		max-width: $contentStop;
 		@include auto;
 		margin-bottom: 2em;
 	}
 	.block-entity-fieldnodefield-oc-widgets{
-		max-width: $maxWidth;
+		max-width: $contentStop;
 		@include auto
 	}
 }
@@ -17,12 +17,12 @@
 @mixin mainContent{
 	//body
 	.block-entity-fieldnodebody{
-		max-width: $maxWidthText;
+		max-width: $textMax;
 		@include auto;
 		margin-bottom: 2em;
 	}
 	.block-entity-fieldnodefield-oc-widgets{
-		max-width: $maxWidth;
+		max-width: $contentStop;
 		@include auto
 	}
 }

@@ -259,7 +259,7 @@
 		}
 		.doc-section-inner{
 			@include auto;
-			max-width: $maxWidthText;
+			max-width: $textMax;
 		}
 	}
 	ol,ul{
