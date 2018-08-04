@@ -4,24 +4,27 @@
 .node-event.node-content{
 	//image, title, event date
 	.node-section#section-2{
-		padding: 0 20px;
-		@include auto;
-		@include spacer(2);
 		.layout__region--content{
 			@include textContent;
+			@include spacer(2);
 			@include safeFlex(row,wrap,center,null);
 		}
 	}
 	.block-field-banner{
 		width: 350px;
-		@include spacer(1.5);
+		@include onlySmall{
+			@include spacer(1.5);
+		}
 	}
 	.block-field.block-title{
 		text-align: center;
+		width: 100%;
 		@include tab{
 			text-align: left;
-			padding-left: 40px;
-			@include calc(width, "100% - 350px");
+			.has-main-image &{
+				padding-left: 40px;
+				@include calc(width, "100% - 350px");
+			}
 		}
 		h1{
 			@include spacer(.25);
