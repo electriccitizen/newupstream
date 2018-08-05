@@ -7,23 +7,20 @@
 
 ///mixin - button
 @mixin button{
-	background-color: $black;
+	background-color: $link;
 	border:none;
 	color: $white;
-	line-height: 1.4;
+	line-height: 1.15;
 	padding: .5em 2em;
 	display: inline-block;
 	text-decoration: none;
 	text-align: center;
 	text-transform: uppercase;
-	font-size: 15px;
 	font-family: $header;
 	font-weight: $heavy;
 	margin-bottom: .5em;
-	&:visited {
-		color: $white;
-	}
 	&:hover,&:focus {
+		color: $white;
 		background-color: $hoverLink;
 		@include transAll(.3s);
 	}
@@ -37,7 +34,7 @@
 	color: $outlineColor;
 	&:hover,&:focus{
 		background: $outlineColor;
-		color: $black;
+		color: $white;
 		border-color: $outlineColor;
 		@include transAll(.3s);
 	}
@@ -51,7 +48,7 @@
 
 //outlineButtons
 .button-outline{
-	@include outlineButton($black);
+	@include outlineButton($link);
 }
 
 

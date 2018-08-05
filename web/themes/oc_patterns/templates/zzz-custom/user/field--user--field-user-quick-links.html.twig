@@ -38,6 +38,21 @@
 #}
 
 {% block fieldSingleNo %}
-{{ drupal_entity('block', 'views_block__user_dashboard_authored', check_access=false) }}
+	<h2 class="block-title">Quick Links</h2>
+	<div class="links-list">
+		<ul>
+			<li><a href="/admin/content" role="button" class="button">All Content</a></li>
+			<li><a href="/node/add" role="button" class="button">Add Content</a></li>
+			<li><a href="/admin/structure/block/block-content" role="button" class="button">Custom Block Library</a></li>
+			{% if 'administrator' in user.getroles %}
+				<li><a href="/admin/structure" role="button" class="button">Structure</a></li>
+				<li><a href="/admin/config/development/performance" role="button" class="button">Performance</a></li>
+				<li><a href="/admin/reports" role="button" class="button">Reports</a></li>
+			{% elseif 'senior_editor' in user.getroles %}
+				<li><a href="/admin/structure/taxonomy" role="button" class="button">Taxonomy</a></li>
+				<li><a href="/admin/structure/webform" role="button" class="button">Webforms</a></li>
+			{% endif %}
+		</ul>
+	</div>
 {% endblock %}
 
