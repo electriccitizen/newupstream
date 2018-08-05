@@ -4,11 +4,9 @@
 Drupal.behaviors.mobileSelect = {
 	attach: function (context, settings) {
       $("select", context).once('selects').each(function(){  
-	      //if (!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent))) {
-	      	$( 'form:not(.entity-embed-dialog):not(.entity-form-display-form):not(.entity-view-display-form) select,.sg-pattern-example select' ).select2({
-	      		placeholder: "Select an option"
-	      	});
-	      //}
+      	$( 'form:not(.entity-embed-dialog):not(.entity-form-display-form):not(.entity-view-display-form):not(.layout-builder-add-block):not(.layout-builder-update-block) select,.sg-pattern-example select' ).select2({
+      		placeholder: "Select an option"
+      	});
    	});
    }
 };

@@ -1,0 +1,21 @@
+uuid: 92f37b36-e5ae-44f2-b3f2-6a58e78bd762
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.field_authored_placeholder
+field_name: field_authored_placeholder
+entity_type: user
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

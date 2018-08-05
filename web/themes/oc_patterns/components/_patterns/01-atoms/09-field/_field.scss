@@ -1,0 +1,18 @@
+/* ================
+	 FIELD
+============== */
+.field{
+	span.inline-label{
+		font-weight: $heavy;
+		margin-right: .5em;
+		& + div{
+			display: inline;
+			//if multifield
+			&.field-multi-item{
+				& > div{
+					display: inline;
+				}
+			}
+		}
+	}//end inline label
+}//end field
