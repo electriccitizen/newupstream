@@ -65,7 +65,7 @@ slideshow:
       //cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css: { type: external, minified: true }
       //cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css: { type: external, minified: true }
   js:
-    components/_patterns/03-organisms/02-widgets/slideshow/slideshow.js: {}
+    components/_patterns/03-organisms/01-widgets/slideshow/slideshow.js: {}
     //cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js: { type: external, minified: true }
   dependencies:
     - core/jquery
