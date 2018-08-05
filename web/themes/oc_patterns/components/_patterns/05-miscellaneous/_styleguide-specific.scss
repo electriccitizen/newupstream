@@ -95,7 +95,7 @@
 		text-align: center;
 		max-width: 60%;
 		margin: 2em auto;
-		border: 2px solid $redWarning;
+		border: 2px solid $warning;
 		padding: 1em 2em;
 		@include onlySmall{
 			display: none;
@@ -319,7 +319,7 @@
 					font-size: 36px;
 					font-weight: $heavy;
 					line-height: 1;
-					color: $redWarning;
+					color: $warning;
 					position: absolute;
 					left: -30px;
 					top: 0;

@@ -91,7 +91,7 @@
           src: `${themeDir}/components/_patterns/00-base/global/01-colors/_color-vars.scss`,
           dest: `${themeDir}/components/_patterns/00-base/global/01-colors/colors.yml`,
           lineStartsWith: '$',
-          allowVarValues: false,
+          allowVarValues: true,
         },
       ],
     },

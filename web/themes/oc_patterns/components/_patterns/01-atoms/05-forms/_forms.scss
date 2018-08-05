@@ -65,7 +65,7 @@
 @mixin required{
 	&:after{
 		content: '*';
-		color: $redWarning;
+		color: $warning;
 		position: relative;
 		top: -1px;
 		right: -.25em;
@@ -147,7 +147,7 @@ input[type=text], input[type=search], input[type=url], input[type=number], texta
 
 //validation
 .has-error {
-	border-color: $redWarning;
+	border-color: $warning;
 }
 
 

@@ -1,46 +1,38 @@
 items:
-  - name: $body
-    value: '#4d4e4e'
+  - name: $white
+    value: '#fff'
+  - name: $offWhite
+    value: '#f6f6f6'
   - name: $lightGrey
     value: '#ededed'
   - name: $grey
     value: '#ccc'
+  - name: $midGrey
+    value: '#676767'
   - name: $darkGrey
     value: '#4a4a4a'
-  - name: $offWhite
-    value: '#f6f6f6'
-  - name: $white
-    value: '#fff'
+  - name: $lightBlack
+    value: '#222222'
   - name: $black
     value: '#000'
   - name: $highlighter
     value: '#f2dc26'
   - name: $warning
     value: '#dd241b'
+  - name: $red
+    value: '#bf0e0e'
+  - name: $plBlue
+    value: '#017aa2'
   - name: $transWhite
     value: 'rgba(255,255,255,0.7)'
   - name: $transBlack
     value: 'rgba(35,35,35,0.7)'
   - name: $imgOverlay
     value: 'rgba(35,35,35,0.4)'
-  - name: $redWarning
-    value: '#e80212'
   - name: $unpub
     value: '#fff4fa'
   - name: $unpubDark
     value: '#fdd5dd'
-  - name: $siteBack
-    value: '#ffffff'
-  - name: $borderRule
-    value: '#222222'
-  - name: $link
-    value: '#bf0e0e'
-  - name: $activeLink
-    value: '#000000'
-  - name: $hoverLink
-    value: '#676767'
-  - name: $codeString
-    value: '#017aa2'
 meta:
   description: >-
     To add to these items, use Sass variables that start with <code>$</code> in
