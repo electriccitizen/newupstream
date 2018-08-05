@@ -46,12 +46,28 @@
 	position: absolute;
 	top: 0;
 	left: 0;
-	z-index; 20;
+	z-index: 20;
 }
 
 .views-field-entity-browser-select .form-type-checkbox input[type="checkbox"]{
-	height: 16px;
-	width: 16px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	height: 200px;
+	width: 250px;
+	border: 8px solid transparent;
+}
+.views-field-entity-browser-select .form-type-checkbox input[type="checkbox"]:hover,.views-field-entity-browser-select .form-type-checkbox input[type="checkbox"]:focus{
+	border: 8px solid #bf0e0e;
+	outline: none;
+}
+.views-field-entity-browser-select .form-type-checkbox input[type="checkbox"]:checked{
+	border: 8px solid #bf0e0e;
+	outline: none;
+}
+.views-field-entity-browser-select .form-type-checkbox input[type="checkbox"]:checked:hover,.views-field-entity-browser-select .form-type-checkbox input[type="checkbox"]:checked:focus{
+	border: 8px solid #ccc;
+	outline: none;
 }
 
 /* eb select button */
@@ -59,6 +75,7 @@
 	position: fixed;
 	bottom: 0;
 	left: 0;
+	z-index: 30;
 	width: 100%;
 	background: #fff;
 	padding-top: 1em;
@@ -66,34 +83,41 @@
 }
 
 /* CUSTOM MEDIA BROWSER FILE ICONS */
-.eb-media .views-field .file-extension{
-	padding-left: 10px;
-	padding-bottom: 5px;
+.eb-media .views-field .file-extension,.eb-media.view-display-id-embed_browser .views-field-thumbnail__target-id,.view-media.view-display-id-media_page_list{
+	padding-bottom: 10px;
 }
-.eb-media .views-field .file-extension span{
+.eb-media .views-field .file-extension span,.eb-media.view-display-id-embed_browser .views-field-thumbnail__target-id span.doc{
 	display: block;
-	height: 100px;
-	width: 100px;
-	position: relative;
-	color: red;
+	height: 160px;
+	width: 160px;
+	padding-bottom: 40px;
 	background: #eee;
 }
-.eb-media .views-field .file-extension [class$='.pdf']{
+.view-media.view-display-id-media_page_list .views-field-thumbnail__target-id span.doc{
+	display: block;
+	height: 75px;
+	width: 60px;
+	background: #eee;
+}
+.eb-media.view-display-id-embed_browser .views-field-thumbnail__target-id span.doc img,.view-media.view-display-id-media_page_list .views-field-thumbnail__target-id span.doc img{
+	display: none;
+}
+.eb-media .views-field .file-extension [class$='.pdf'],.eb-media.view-display-id-embed_browser .views-field-thumbnail__target-id span.doc[class$='pdf'],.view-media.view-display-id-media_page_list .views-field-thumbnail__target-id span.doc[class$='pdf']{
 	background: url(../icons/file-icons/file-pdf.svg) no-repeat;
 	background-position: center;
 	background-size: contain;
 }
-.eb-media .views-field .file-extension [class$='.doc'],.eb-media .views-field .file-extension [class$='.docx']{
+.eb-media .views-field .file-extension [class$='.doc'],.eb-media .views-field .file-extension [class$='.docx'],.eb-media.view-display-id-embed_browser .views-field-thumbnail__target-id span.doc[class$='doc'],.eb-media.view-display-id-embed_browser .views-field-thumbnail__target-id span.doc[class$='docx'],.view-media.view-display-id-media_page_list .views-field-thumbnail__target-id span.doc[class$='doc'],.view-media.view-display-id-media_page_list .views-field-thumbnail__target-id span.doc[class$='docx']{
 	background: url(../icons/file-icons/file-word.svg) no-repeat;
 	background-position: center;
 	background-size: contain;
 }
-.eb-media .views-field .file-extension [class$='.xls'],.eb-media .views-field .file-extension [class$='.xlsx']{
+.eb-media .views-field .file-extension [class$='.xls'],.eb-media .views-field .file-extension [class$='.xlsx'],.eb-media.view-display-id-embed_browser .views-field-thumbnail__target-id span.doc[class$='xls'],.eb-media.view-display-id-embed_browser .views-field-thumbnail__target-id span.doc[class$='xlsx'],.view-media.view-display-id-media_page_list .views-field-thumbnail__target-id span.doc[class$='xls'],.view-media.view-display-id-media_page_list .views-field-thumbnail__target-id span.doc[class$='xls']{
 	background: url(../icons/file-icons/file-xls.svg) no-repeat;
 	background-position: center;
 	background-size: contain;
 }
-.eb-media .views-field .file-extension [class$='.ppt'],.eb-media .views-field .file-extension [class$='.pptx']{
+.eb-media .views-field .file-extension [class$='.ppt'],.eb-media .views-field .file-extension [class$='.pptx'],.eb-media.view-display-id-embed_browser .views-field-thumbnail__target-id span.doc[class$='ppt'],.eb-media.view-display-id-embed_browser .views-field-thumbnail__target-id span.doc[class$='pptx'],.view-media.view-display-id-media_page_list .views-field-thumbnail__target-id span.doc[class$='ppt'],.view-media.view-display-id-media_page_list .views-field-thumbnail__target-id span.doc[class$='pptx']{
 	background: url(../icons/file-icons/file-ppt.svg) no-repeat;
 	background-position: center;
 	background-size: contain;
