@@ -6,7 +6,7 @@
 	background: $offWhite;
 	& > div{
 		padding: 10px 20px;
-		@include paddedContent;
+		max-width: $contentStop + 40px;
 		@include auto;
 		position: relative;
 		@include safeFlex(row,wrap,null,center);

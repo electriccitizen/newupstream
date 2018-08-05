@@ -375,8 +375,6 @@
 
 /* LAYOUT MIXINS
 -------------------- */
-$contentW: $contentStop;
-$textW: $textMax;
 
 ///mixin - auto
 @mixin auto{
@@ -404,21 +402,6 @@ $textW: $textMax;
 		display: table;
 	}
 }
-
-///mixin - paddedContent
-@mixin paddedContent{
-	@include calc(max-width, "#{$contentW} + 40px");
-	padding-left: 20px;
-	padding-right: 20px;
-}
-
-///mixin - paddedText
-@mixin paddedText{
-	@include calc(max-width, "#{$textW} + 40px");
-	padding-left: 20px;
-	padding-right: 20px;
-}
-
 
 ///mixin safe-flex
 @mixin safeFlex($direction, $wrap, $justify, $align){
