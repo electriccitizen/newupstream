@@ -73,6 +73,9 @@
 	//slider container overrides layout padding on mobile
 	.field-oc-image-multi{
 		@include widgetFull;
+		img{
+			width: 100%;
+		}
 	}
 	
 }//end slideshow widget

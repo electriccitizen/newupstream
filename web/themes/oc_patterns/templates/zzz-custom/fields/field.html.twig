@@ -37,23 +37,20 @@
  */
 #}
 
-{%
-set classes = field_name|clean_class
-%}
 {% if label_hidden %}
   {% if multiple %}
-    <div class="field {{classes}}">
+    <div class="field {{ field_name|clean_class }} {{ field_type|clean_class }}">
       {% for item in items %}
         <div{{ item.attributes }}>{{ item.content }}</div>
       {% endfor %}
     </div>
   {% else %}
     {% for item in items %}
-      <div class="field {{classes}}">{{ item.content }}</div>
+      <div class="field {{ field_name|clean_class }} {{ field_type|clean_class }}">{{ item.content }}</div>
     {% endfor %}
   {% endif %}
 {% else %}
-  <div class="field {{classes}}">
+  <div class="field {{ field_name|clean_class }} {{ field_type|clean_class }}">
     {% if (label_display == 'inline') %}
       <span class="label">{{ label }}:</span>
     {% else %}
