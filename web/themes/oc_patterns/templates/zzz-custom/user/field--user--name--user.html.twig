@@ -37,49 +37,8 @@
  */
 #}
 
-{# no label #}
-{% if label_hidden %}
-  {# multi block with no label #}
-  {% if multiple %}
-    <div class="field {{ field_name|clean_class }} {{ field_type|clean_class }}">
-        {% for item in items %}
-          <div{{ item.attributes }}>
-            {% block fieldMultiNo %}
-              {{ item.content }}
-            {% endblock %}
-          </div>
-        {% endfor %}
-    </div>
-  {# single block with no label #}
-  {% else %}
-    <div class="field {{ field_name|clean_class }} {{ field_type|clean_class }}">
-      {% for item in items %}
-        {% block fieldSingleNo %}
-          {{ item.content }}
-        {% endblock %}
-      {% endfor %}
-    </div>
-  {% endif %}
-{% else %}
-  {# block with label #}
-  <div class="field {{ field_name|clean_class }} {{ field_type|clean_class }}">
-    {% if (label_display == 'inline') %}
-      <span class="inline-label">{{ label }}:</span>
-    {% else %}
-      <div class="label">{{ label }}</div>
-    {% endif %}
-    {% if multiple %}
-      <div class="field-multi-item">
-    {% endif %}
-    {% for item in items %}
-      <div{{ item.attributes }}>
-        {% block fieldLabel %}
-          {{ item.content }}
-        {% endblock %}
-      </div>
-    {% endfor %}
-    {% if multiple %}
-      </div>
-    {% endif %}
-  </div>
-{% endif %}
+{% extends 'field.html.twig' %}
+{% block fieldSingleNo %}
+  <h1>{{ item.content }}</h1>
+{% endblock %}
+

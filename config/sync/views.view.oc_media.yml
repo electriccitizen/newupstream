@@ -9,11 +9,13 @@ dependencies:
     - media_entity.bundle.document
     - media_entity.bundle.image
     - media_entity.bundle.video
+    - taxonomy.vocabulary.media_categories
   module:
     - entity_browser
     - file
     - image
     - media_entity
+    - taxonomy
     - user
     - views_infinite_scroll
 _core:
@@ -1261,6 +1263,53 @@ display:
           entity_type: media
           entity_field: name
           plugin_id: string
+        field_media_categories_target_id:
+          id: field_media_categories_target_id
+          table: media__field_media_categories
+          field: field_media_categories_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_media_categories_target_id_op
+            label: 'Media Category'
+            description: ''
+            use_operator: false
+            operator: field_media_categories_target_id_op
+            identifier: field_media_categories_target_id
+            required: false
+            remember: false
+            multiple: true
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              senior_editor: '0'
+              editor: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: true
+          type: select
+          limit: true
+          vid: media_categories
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
       filter_groups:
         operator: AND
         groups:
@@ -1294,6 +1343,7 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
+        - user
         - user.permissions
       tags:
         - 'config:field.storage.media.field_media_file'
@@ -1587,6 +1637,53 @@ display:
           entity_type: media
           entity_field: bundle
           plugin_id: bundle
+        field_media_categories_target_id:
+          id: field_media_categories_target_id
+          table: media__field_media_categories
+          field: field_media_categories_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_media_categories_target_id_op
+            label: 'Media Category'
+            description: ''
+            use_operator: false
+            operator: field_media_categories_target_id_op
+            identifier: field_media_categories_target_id
+            required: false
+            remember: false
+            multiple: true
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              senior_editor: '0'
+              editor: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: true
+          type: select
+          limit: true
+          vid: media_categories
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
       filter_groups:
         operator: AND
         groups:
@@ -1620,6 +1717,7 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
+        - user
         - user.permissions
       tags:
         - 'config:field.storage.media.field_media_file'
@@ -1917,6 +2015,53 @@ display:
           entity_type: media
           entity_field: bundle
           plugin_id: bundle
+        field_media_categories_target_id:
+          id: field_media_categories_target_id
+          table: media__field_media_categories
+          field: field_media_categories_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_media_categories_target_id_op
+            label: 'Media Category'
+            description: ''
+            use_operator: false
+            operator: field_media_categories_target_id_op
+            identifier: field_media_categories_target_id
+            required: false
+            remember: false
+            multiple: true
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              senior_editor: '0'
+              editor: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: true
+          type: select
+          limit: true
+          vid: media_categories
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
       filter_groups:
         operator: AND
         groups:
@@ -1950,6 +2095,7 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
+        - user
         - user.permissions
       tags: {  }
   video_browser:
@@ -2246,6 +2392,53 @@ display:
           entity_type: media
           entity_field: bundle
           plugin_id: bundle
+        field_media_categories_target_id:
+          id: field_media_categories_target_id
+          table: media__field_media_categories
+          field: field_media_categories_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_media_categories_target_id_op
+            label: 'Media Category'
+            description: ''
+            use_operator: false
+            operator: field_media_categories_target_id_op
+            identifier: field_media_categories_target_id
+            required: false
+            remember: false
+            multiple: true
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              senior_editor: '0'
+              editor: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: true
+          type: select
+          limit: true
+          vid: media_categories
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
       filter_groups:
         operator: AND
         groups:
@@ -2279,5 +2472,6 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
+        - user
         - user.permissions
       tags: {  }

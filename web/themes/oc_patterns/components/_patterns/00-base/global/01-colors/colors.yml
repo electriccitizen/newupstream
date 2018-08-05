@@ -33,6 +33,20 @@ items:
     value: '#fff4fa'
   - name: $unpubDark
     value: '#fdd5dd'
+  - name: $siteBack
+    value: $white
+  - name: $body
+    value: $darkGrey
+  - name: $borderRule
+    value: $lightBlack
+  - name: $link
+    value: $red
+  - name: $activeLink
+    value: $black
+  - name: $hoverLink
+    value: $midGrey
+  - name: $codeString
+    value: $plBlue
 meta:
   description: >-
     To add to these items, use Sass variables that start with <code>$</code> in

@@ -3,13 +3,15 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.user.user.user_picture
-    - image.style.thumbnail
+    - field.field.user.user.field_authored_placeholder
+    - field.field.user.user.field_user_image
+    - views.view.user_dashboard
+    - views.view.user_links
   module:
-    - image
     - layout_builder
     - layout_discovery
     - user
+    - views
 third_party_settings:
   layout_builder:
     sections:
@@ -17,23 +19,130 @@ third_party_settings:
         layout_id: layout_onecol
         layout_settings: {  }
         components:
-          960bc8cd-e457-4ea9-bba9-fcf687903441:
-            uuid: 960bc8cd-e457-4ea9-bba9-fcf687903441
+          fa2f7cf5-5e65-4e87-8007-6c149d4b747d:
+            uuid: fa2f7cf5-5e65-4e87-8007-6c149d4b747d
             region: content
             configuration:
-              id: 'field_block:user:user:user_picture'
-              label_display: ''
+              id: 'field_block:user:user:name'
+              label: Name
+              provider: layout_builder
+              label_display: '0'
               formatter:
-                type: image
-                settings:
-                  image_style: thumbnail
-                  image_link: content
-                third_party_settings: {  }
                 label: hidden
+                type: string
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
               context_mapping:
-                entity: layout_builder.entity
+                entity: '@user.current_user_context:current_user'
+            additional: {  }
+            weight: 1
+          15bb0817-5a8c-4d8b-ab0c-f68dffd9a15d:
+            uuid: 15bb0817-5a8c-4d8b-ab0c-f68dffd9a15d
+            region: content
+            configuration:
+              id: 'field_block:user:user:created'
+              label: Created
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: timestamp
+                settings:
+                  date_format: oc_text_date_only
+                  custom_date_format: ''
+                  timezone: UTC
+                third_party_settings: {  }
+              context_mapping:
+                entity: '@user.current_user_context:current_user'
+            additional: {  }
+            weight: 2
+          b0b52c41-e875-4d7c-bbe1-19ed8cb87f72:
+            uuid: b0b52c41-e875-4d7c-bbe1-19ed8cb87f72
+            region: content
+            configuration:
+              id: 'field_block:user:user:roles'
+              label: Roles
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: inline
+                type: entity_reference_label
+                settings:
+                  link: false
+                third_party_settings: {  }
+              context_mapping:
+                entity: '@user.current_user_context:current_user'
+            additional: {  }
+            weight: 3
+          fad33807-db64-4118-bd3c-f961fe16c847:
+            uuid: fad33807-db64-4118-bd3c-f961fe16c847
+            region: content
+            configuration:
+              id: 'field_block:user:user:field_user_image'
+              label: 'User Image'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: square
+                third_party_settings: {  }
+              context_mapping:
+                entity: '@user.current_user_context:current_user'
             additional: {  }
             weight: 0
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          c3d0a6e5-73d8-4aec-acd5-9370ea8fdcee:
+            uuid: c3d0a6e5-73d8-4aec-acd5-9370ea8fdcee
+            region: content
+            configuration:
+              id: 'views_block:user_links-user_quick_links'
+              label: ''
+              provider: views
+              label_display: visible
+              views_label: ''
+              items_per_page: none
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
+          b2c13a60-40eb-4d82-89e2-af019f383d3b:
+            uuid: b2c13a60-40eb-4d82-89e2-af019f383d3b
+            region: content
+            configuration:
+              id: 'field_block:user:user:field_authored_placeholder'
+              label: 'Authored Placeholder'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: string
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+              context_mapping:
+                entity: '@user.current_user_context:current_user'
+            additional: {  }
+            weight: 1
+          2e789ad4-26bc-45a5-aa84-d554c82b3b50:
+            uuid: 2e789ad4-26bc-45a5-aa84-d554c82b3b50
+            region: content
+            configuration:
+              id: 'views_block:user_dashboard-authored'
+              label: ''
+              provider: views
+              label_display: visible
+              views_label: ''
+              items_per_page: none
+              context_mapping: {  }
+            additional: {  }
+            weight: 2
+    allow_custom: false
+    is_enabled: true
 _core:
   default_config_hash: 0sOXnIcH_JtE2G5afKzcPVW7VTs6WbUK7DfESmhJJ0s
 id: user.user.default
@@ -41,18 +150,25 @@ targetEntityType: user
 bundle: user
 mode: default
 content:
+  field_authored_placeholder:
+    weight: 7
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_user_image:
+    weight: 6
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
   member_for:
     weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
-  user_picture:
-    type: image
-    weight: 0
-    settings:
-      image_style: thumbnail
-      image_link: content
-    third_party_settings: {  }
-    label: hidden
-    region: content
 hidden: {  }

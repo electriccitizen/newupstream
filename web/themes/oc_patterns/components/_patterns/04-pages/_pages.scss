@@ -25,3 +25,66 @@ html > body:not(.is-front):not(.path-node):not(.node-type-page){
 		margin-top: 2em;
 	}//banner section
 }//end front
+
+
+/* USER DASHBOARD
+----------------------- */
+.user-dashboard{
+	margin-top: -3em;
+	//image, username, since, roles
+	& > .layout--onecol:first-child{
+		position: relative;
+		padding: 3em 0;
+		@include spacer(2);
+		&:after{
+			@include fullBack($lightGrey);
+		}
+		.layout__region--content{
+			max-width: $textMax;
+			@include auto;
+			@include clearFix;
+		}
+		.block-field-user-image{
+			width: 250px;
+			@include onlySmall{
+				@include spacer(1);
+				@include auto;
+			}
+			@include tab{
+				float: left;
+			}
+		}
+	}//end image username since roles
+
+	.block-field.block-name{
+		@include tab{
+			@include calc(width, "100% - 310px");
+			margin-left: 310px;
+		}
+	}
+
+	.block-field.block-created{
+		@include tab{
+			@include calc(width, "100% - 310px");
+			margin-left: 310px;
+		}
+	}
+
+	.block-field.block-roles{
+		@include tab{
+			@include calc(width, "100% - 310px");
+			margin-left: 310px;
+		}
+	}
+
+	//hide member for
+	& > .js-form-type-item{
+		display: none;
+	}
+}//end user dashboard
+
+
+
+
+
+
