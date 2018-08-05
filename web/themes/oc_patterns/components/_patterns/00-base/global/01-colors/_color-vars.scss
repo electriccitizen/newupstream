@@ -1,37 +1,42 @@
 /* base colors */
-$body       : #4d4e4e;
-$lightGrey : #ededed;
-$grey       : #ccc;
-$darkGrey  : #4a4a4a;
-$offWhite  : #f6f6f6;
-$white      : #fff;
-$black      : #000;
-$highlighter: #f2dc26;
-$warning    : #dd241b;
+$white       : #fff;
+$offWhite    : #f6f6f6;
+$lightGrey   : #ededed;
+$grey        : #ccc;
+$midGrey     : #676767;
+$darkGrey    : #4a4a4a;
+$lightBlack  : #222222;
+$black       : #000;
+$highlighter : #f2dc26;
+$warning     : #dd241b;
+$red         : #bf0e0e;
+$plBlue      : #017aa2;
 
 
 /* transparents */
 $transWhite  : rgba(255,255,255,0.7);
 $transBlack  : rgba(35,35,35,0.7);
-$imgOverlay      : rgba(35,35,35,0.4);
+$imgOverlay  : rgba(35,35,35,0.4);
 
 
 /* Randos */
-$redWarning : #e80212;
 $unpub : #fff4fa;
 $unpubDark : #fdd5dd;
 
 
-/*  Client Colors */
-$siteBack: #ffffff;
-$borderRule: #222222;
+/* CLIENT SITE SPECIFIC COLORS 
+----------------------    */
+$siteBack   : $white;
+$body       : $darkGrey;
+$borderRule : $lightBlack;
+$link        : $red;
+$activeLink  : $black;
+$hoverLink   : $midGrey;
 
 
-/* Link COLORS */
-$link        : #bf0e0e;
-$activeLink : #000000;
-$hoverLink  : #676767;
+
+/* PL SPECIFIC COLORS
+----------------------- */
+$codeString  : $plBlue;
 
 
-/* PL colors */
-$codeString   :  #017aa2;
