@@ -181,9 +181,6 @@
       },
       "drupal/core":{
         "Layout Builder optout": "https://www.drupal.org/files/issues/2018-07-28/2936358-opt_in-2936358-64-do-not-test.patch"
-      },
-      "drupal/core":{
-        "Layout Builder context issues": "https://www.drupal.org/files/issues/2921626-layout-45.patch"
       }
     },
     "enable-patching": true
