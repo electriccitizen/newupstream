@@ -39,6 +39,21 @@
 
 {% extends 'field.html.twig' %}
 {% block fieldSingleNo %}
+<div class="user-created">
   <span class="inline-label">User Since:</span> {{ item.content }}
+  
+</div>
+<div class="user-roles">
+	<span class="inline-label">Role(s):</span>
+	{% if 'administrator' in user.getroles %}
+		<span class="role">Administrator</span>
+	{% endif %}
+	{% if 'senior_editor' in user.getroles %}
+		<span class="role">Senior Editor</span>
+	{% endif %}
+	{% if 'editor' in user.getroles %}
+		<span class="role">Editor</span>
+	{% endif %}
+</div>
 {% endblock %}
 

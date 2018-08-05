@@ -89,6 +89,7 @@ $h6Sm: 18px;
 	text-transform: uppercase;
 	text-align: center;
 	max-width: $contentStop;
+	@include spacer(1.5);
 	@include auto;
 }
 
