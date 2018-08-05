@@ -85,7 +85,7 @@
     "drupal/stage_file_proxy": "^1.0@alpha",
     "drupal/superfish": "~1",
     "drupal/token": "^1.0@RC",
-    "drupal/twig_tweak": "^1.6",
+    "drupal/twig_tweak": "^2.0",
     "drupal/video_embed_field": "^1.4",
     "drupal/video_embed_media": "^1.4",
     "drupal/views_infinite_scroll": "^1.5",
