@@ -8,7 +8,7 @@ dependencies:
 id: user_dashboard
 label: 'User Dashboard'
 module: views
-description: ''
+description: 'Logged In User Dashboard Blocks'
 tag: ''
 base_table: users_field_data
 base_field: uid
@@ -110,7 +110,7 @@ display:
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
-          hide_empty: false
+          hide_empty: true
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
@@ -130,7 +130,51 @@ display:
           entity_type: node
           entity_field: title
           plugin_id: field
-      filters: {  }
+      filters:
+        nid:
+          id: nid
+          table: node_field_data
+          field: nid
+          relationship: uid
+          group_type: group
+          admin_label: ''
+          operator: 'not empty'
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: node
+          entity_field: nid
+          plugin_id: numeric
       sorts:
         uid:
           id: uid
@@ -148,7 +192,18 @@ display:
           plugin_id: standard
       header: {  }
       footer: {  }
-      empty: {  }
+      empty:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content: "You have not created any content. Use the quick links buttons to add content or <a href=\"/node/add\">click here</a>.\n"
+          plugin_id: text_custom
       relationships:
         uid:
           id: uid
@@ -199,7 +254,7 @@ display:
           entity_field: uid
           plugin_id: user_uid
       display_extenders: {  }
-      title: Authored
+      title: 'Recently Authored'
       filter_groups:
         operator: AND
         groups: {  }

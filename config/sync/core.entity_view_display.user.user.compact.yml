@@ -23,4 +23,6 @@ bundle: user
 mode: compact
 content: {  }
 hidden:
+  field_authored_placeholder: true
+  field_user_image: true
   member_for: true
