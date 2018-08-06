@@ -59,15 +59,19 @@ article.user-dashboard{
 
 	.block-field.block-name{
 		@include tab{
-			@include calc(width, "100% - 310px");
-			margin-left: 310px;
+			&:nth-child(2){
+				@include calc(width, "100% - 310px");
+				margin-left: 310px;
+			}
 		}
 	}
 
 	.block-field.block-created{
 		@include tab{
-			@include calc(width, "100% - 310px");
-			margin-left: 310px;
+			&:nth-child(3){
+				@include calc(width, "100% - 310px");
+				margin-left: 310px;
+			}
 		}
 		.user-created{
 			@include spacer(.5);
