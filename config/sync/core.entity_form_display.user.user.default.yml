@@ -4,8 +4,8 @@ status: true
 dependencies:
   config:
     - core.entity_form_mode.media.background_image
-    - field.field.user.user.field_authored_placeholder
     - field.field.user.user.field_user_image
+    - field.field.user.user.field_user_quick_links
   module:
     - entity_browser_entity_form
     - inline_entity_form
@@ -25,14 +25,6 @@ content:
   contact:
     weight: 5
     region: content
-  field_authored_placeholder:
-    weight: 6
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_user_image:
     weight: 1
     settings:
@@ -50,6 +42,14 @@ content:
       entity_browser_entity_form:
         entity_browser_id: image_browser
     type: inline_entity_form_complex
+    region: content
+  field_user_quick_links:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
 hidden:
   language: true
