@@ -49,63 +49,59 @@
 			& > li{
 				font-size: 20px;
 			}
-		}//end first level ul
-	}//end page menu wrapper
-
-
-	//global menu items
-	li{
-		padding-top: 4px;
-		padding-bottom: 4px;
-		list-style: none;
-		//shift non parents over to match expander spacing
-		&:not(.parent){
-			padding-left: .8em;
-		}
-
-		//parents
-		&.parent{
-			.expander{
-				@include browserWipe;
-				color: $link;
-				border: 0;
-				padding: 0;
-				background: none;
-				cursor: pointer;
-				&:hover,&:focus,&:active{
-					color: $hoverLink;
-				}
-				&:before{
-					content: "+";
-				}
-			}
-			&.expanded{
-				.expander{
-					color: $hoverLink;
-					&:before{
-						content: "–";
-					}
-				}
-				//show next menu level
-				& > ul:not(.contextual-links){
-					display: block;
-					height: 0;
-					@include animation(slideDown .2s 1 forwards);
-					@include backfaceVisibility(hidden);
-				}
-				& > a{
+			//global menu items
+			li{
+				padding-top: 4px;
+				padding-bottom: 4px;
+				list-style: none;
+				//active link
+				a.is-active{
 					color: $black;
 				}
-			}//end when expanded
-		}//end parent
+				//shift non parents over to match expander spacing
+				&:not(.parent){
+					padding-left: .8em;
+				}
 
-	}//end global li
+				//parents
+				&.parent{
+					& > .expander{
+						@include browserWipe;
+						color: $link;
+						border: 0;
+						padding: 0;
+						background: none;
+						cursor: pointer;
+						&:hover,&:focus,&:active{
+							color: $hoverLink;
+						}
+						&:before{
+							content: "+";
+						}
+					}
+					&.expanded{
+						& > .expander{
+							color: $hoverLink;
+							&:before{
+								content: "–";
+							}
+						}
+						//show next menu level
+						& > ul:not(.contextual-links){
+							display: block;
+							height: 0;
+							@include animation(slideDown .2s 1 forwards);
+							@include backfaceVisibility(hidden);
+						}
+						& > a{
+							color: $black;
+						}
+					}//end when expanded
+				}//end parent
 
-	//active link
-	a.is-active{
-		color: $black;
-	}
-
+			}//end global li
+		}//end first level ul
+	}//end page menu wrapper
 	
 }//end .block--system-menu.page-menu nav
 

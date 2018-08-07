@@ -31,22 +31,19 @@
  * http://www.w3.org/TR/WCAG-TECHS/H42.html for more information.
  */
 #}
-
+{% set heading_id = 'block-' ~ content['#menu_name'] ~ '-menu' %}
 {% set attributes = attributes.addClass('block--system-menu') %}
 
 {% if configuration.label %}
   {% set blockTitle = configuration.label|clean_class %}
 {% endif %}
 {{ attach_library('oc_patterns/page-menu') }}
-<nav role="navigation" aria-labelledby="block-page-menu" id="block-page-menu"{{ attributes|without('role', 'aria-labelledby', 'id').addClass(blockTitle,heading_id, 'page-menu') }}>
+<nav role="navigation" aria-labelledby="{{ heading_id }}" id="{{ heading_id }}"{{ attributes|without('role', 'aria-labelledby', 'id').addClass(blockTitle,heading_id) }}>
   {# Label. If not displayed, we still provide it for screen readers. #}
-  {{ title_prefix }}
-  <h2 class="block-title{% if not configuration.label_display %} visually-hidden{% endif %}"><a href="#" class="page-menu-toggle" aria-controls="page-menu-wrapper" aria-expanded="false"><i class="fa fa-bars" aria-hidden="true"></i></a>{{ configuration.label }}</h2>
-  {{ title_suffix }}
+  <h2 class="block-title{% if not configuration.label_display %} visually-hidden{% endif %}">{{ configuration.label }}</h2>
+
   {# Menu. #}
   {% block content %}
-    <div id="page-menu-wrapper" aria-hidden="true">
-      {{ content }}
-    </div>
+    {{ content }}
   {% endblock %}
 </nav>

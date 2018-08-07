@@ -54,7 +54,7 @@
 		font-size: 16px;
 		text-indent: 9000px;
 		width: 23px;
-		height: 21px;
+		height: 22px;
 		cursor: pointer;
 		display: block;
 		@include searchOpenToggle; 
@@ -144,19 +144,12 @@
 			max-width: 800px;
 			@include auto;
 			label{
-				text-align: left;
-				font-size: 36px;
-				color: $white;
-				font-family: $header;
-				@include spacer(.25);
-				@include tab{
-					font-size: 42px;
-				}
+				@include visuallyHidden;
 			}
 			input{
 				width: 100%;
 				background: transparent;
-				padding: 9px 0;
+				padding: 9px 5px;
 				border: none;
 				color: $white;
 				font-family: $serif;
@@ -171,6 +164,7 @@
 					font-size: 22px;
 				}
 				&:focus{
+					outline: 1px solid $white;
 					@extend %searchBlockPlaceholderFocus;
 				}
 			}

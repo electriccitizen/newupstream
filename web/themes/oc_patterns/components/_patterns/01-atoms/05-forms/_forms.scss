@@ -190,8 +190,10 @@ fieldset{
 		@include larger;
 		margin-bottom: .5em;
 	}
-	.fieldset-wrapper{
-		margin: 0 1em;
+	&:not(.js-webform-type-radios){
+		.fieldset-wrapper{
+			margin: 0 1em;
+		}
 	}
 }
 

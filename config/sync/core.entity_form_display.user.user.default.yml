@@ -43,15 +43,8 @@ content:
         entity_browser_id: image_browser
     type: inline_entity_form_complex
     region: content
-  field_user_quick_links:
-    weight: 6
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
 hidden:
+  field_user_quick_links: true
   language: true
   path: true
   timezone: true

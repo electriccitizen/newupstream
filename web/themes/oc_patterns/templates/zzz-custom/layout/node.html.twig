@@ -95,10 +95,10 @@
     </footer>
   {% endif %}
 
-  <div{{ content_attributes.addClass('main-node-content') }} role="main">
+  <div{{ content_attributes.addClass('main-node-content') }}>
     {% if content._layout_builder %}
       {% for layoutSection in content._layout_builder %}
-        <section id="section-{{ loop.index }}" class="node-section" role="complementary">
+        <section id="section-{{ loop.index }}" class="node-section" role="region">
           {{ layoutSection }}
         </section>
       {% endfor %}

@@ -2,34 +2,37 @@
 	 CHECKBOX
 	 =============== */
 
-
-//move checkbox options inline
-.form-checkboxes{
-	margin-bottom: 0;
-	@include safeFlex(row,wrap,null,null);
-	fieldset &{
-		margin-left: -1em;
-		margin-right: -1em;
-	}
-}
-
-
-//move input inline with label
-.js-form-type-checkbox{
-	width: auto;
-	margin-right: 1em;
-	label,input{
-		display: inline-block;
-	}
-	label{
-		font-weight: $regular;
+form:not(.layout-builder-add-block):not(.layout-builder-update-block){
+	//move checkbox options inline
+	.form-checkboxes{
 		margin-bottom: 0;
+		@include safeFlex(row,wrap,null,null);
+		fieldset &{
+			margin-left: -1em;
+			margin-right: -1em;
+		}
 	}
-	input[type="checkbox"]{
-		margin-right: .3em;
+
+	//move input inline with label
+	.js-form-type-checkbox{
+		width: auto;
+		margin-right: 1em;
+		label,input{
+			display: inline-block;
+		}
+		label{
+			font-weight: $regular;
+			margin-bottom: 0;
+		}
+		input[type="checkbox"]{
+			margin-right: .3em;
+		}
+		
 	}
 	// custom checkboxes (defined in forms.scss, set with variable from macros.twig)
-	.custom-options &{
-		@include customOptions;
+	.custom-options{
+		.js-form-type-checkbox{
+			@include customOptions;
+		}
 	}
-}
+}//end form
