@@ -40,7 +40,7 @@
 <div{{ attributes.addClass(classes) }}>
 	<h1>Site Search</h1>
 	
-	{{ drupal_block('exposedformsite_searchsearch_results', false) }}
+	{{ drupal_entity('block', 'exposedformsite_searchsearch_results', check_access=false) }}
 
 	{% if header %}
 		<div class="view-header">
