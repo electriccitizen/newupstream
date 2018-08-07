@@ -67,6 +67,11 @@
 /* MAIN NAVIGATION BLOCK
 ------------------------ */
 .block-superfishmain{
+	@include mobileMenu{
+		&.contextual-region{
+			position: static;
+		}
+	}
 	//desktop position
 	@include deskMenu{
 		position: absolute;
