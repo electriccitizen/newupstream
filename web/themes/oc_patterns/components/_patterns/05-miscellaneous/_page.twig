@@ -53,6 +53,12 @@
 
 	{% block pageHeader %}
 		<header role="banner">
+			<a href="#main-navigation" class="visually-hidden focusable">
+				{{ 'Skip to main navigation'|t }}
+			</a>
+			<a href="#main-content" class="visually-hidden focusable">
+				{{ 'Skip to main content'|t }}
+			</a>
 			{{ page.header }}
 		</header>
 	{% endblock %}
