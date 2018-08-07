@@ -7,6 +7,6 @@ dependencies:
 _core:
   default_config_hash: lsTYZ2NQVxcQzUuj2PETSES29L8bbeEgidH3730ZUYc
 id: media.background_image
-label: 'Background Image'
+label: Non-caption
 targetEntityType: media
 cache: true
