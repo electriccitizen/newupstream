@@ -15,18 +15,6 @@
 		}
 	};
 
-	/* SUPERFISH SCRIPTS
- ---------------------- */
-	Drupal.behaviors.superColumns = {
-		attach: function attach(context, settings) {
-			$("#superfish-main", context).once('justify').each(function () {
-				$('a.justify', this).closest('li.menuparent').addClass('justification');
-				$('a.three-column', this).closest('li.menuparent').addClass('three-column');
-				$('a.two-column', this).closest('li.menuparent').addClass('three-column');
-			});
-		}
-	};
-
 	Drupal.behaviors.removeEmpty = {
 		attach: function attach(context, settings) {
 			$("#superfish-main", context).once('removeEmpty').each(function () {

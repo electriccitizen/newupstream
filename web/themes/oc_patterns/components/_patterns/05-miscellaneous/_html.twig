@@ -59,18 +59,12 @@
 	</head>
 	<body {{ attributes.addClass(body_classes) }}>
 		<div class="overflow-guard">
-			<a href="#main-navigation" class="visually-hidden focusable">
-				{{ 'Skip to main navigation'|t }}
-			</a>
-			<a href="#main-content" class="visually-hidden focusable">
-				{{ 'Skip to main content'|t }}
-			</a>
 			{{ page_top }}
 			{{ page }}
 			{{ page_bottom }}
 			{% block bottomInsert %}
 				{# place for any site or page specific additions (like fixed modals) #}
-				<div class="back-anchor"><a href="#">Back to Table of Contents</a></div>
+				
 			{% endblock %}
 		</div>
 		<js-bottom-placeholder token="{{ placeholder_token|raw }}">
