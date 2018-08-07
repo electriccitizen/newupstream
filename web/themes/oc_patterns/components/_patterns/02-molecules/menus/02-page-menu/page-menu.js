@@ -21,13 +21,12 @@ Drupal.behaviors.pageMenu = {
 					$('.is-active', this).parentsUntil('#page-menu-wrapper > ul').addClass('active-trail expanded');
 
 					//find nested lists and set their parents and expanders
-					if(($('#page-menu-wrapper > ul', this).length) && (!$('.expander:first', this).length) ){
-					  $(this).addClass('parent').prepend('<button class="expander" aria-expanded="false"></button>');
+					if(($('ul', this).length) && (!$('.expander:first', this).length) ){
+					  $(this).addClass('parent').prepend('<button class="expander" aria-expanded="false"></button>').find(' > ul').attr('aria-hidden', 'true');
 					}
 
-
 					//find active-trail li and add aria expanded role
-					$('li.active-trail > .expander').attr('aria-expanded', "true");
+					$('li.active-trail > .expander').attr('aria-expanded', "true").siblings('ul').attr('aria-hidden', 'false');
 				});
 
 				//set button roles, tab indexes and keypresses on sidebar links
@@ -49,9 +48,9 @@ Drupal.behaviors.pageMenu = {
 				$('.expander').click(function(){
 					$(this).closest('li').toggleClass('expanded');
 					if($(this).attr('aria-expanded') == 'false'){
-						$(this).attr('aria-expanded', "true");
+						$(this).attr('aria-expanded', "true").siblings('ul').attr('aria-hidden', 'false');
 					}else{
-						$(this).attr('aria-expanded', "false");
+						$(this).attr('aria-expanded', "false").siblings('ul').attr('aria-hidden', 'true');
 					}
 				});
 			});
