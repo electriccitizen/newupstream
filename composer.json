@@ -61,7 +61,6 @@
     "drupal/environment_indicator": "~3",
     "drupal/eu_cookie_compliance": "^1.0",
     "drupal/field_group": "^1.0@RC",
-    "drupal/flexslider": "^2.0@beta",
     "drupal/flippy": "1.x-dev",
     "drupal/focal_point": "~1",
     "drupal/geolocation": "^1.11",
