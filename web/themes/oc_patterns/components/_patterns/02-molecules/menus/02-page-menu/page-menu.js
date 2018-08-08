@@ -5,25 +5,29 @@ Drupal.behaviors.pageMenu = {
 			//mobile toggle
 			$('.page-menu-toggle').click(function(e){
 				e.preventDefault();
-				if($('.page-menu-toggle.open').length){
-					$('#page-menu-wrapper').slideUp(300).attr('aria-hidden', 'true');
-					$('.page-menu-toggle').find('i').removeClass('fa-times-circle').addClass('fa-bars').end().attr('aria-expanded', 'false').removeClass('open');
-				}else{
-					$('#page-menu-wrapper').slideDown(300).attr('aria-hidden', 'false');
-					$('.page-menu-toggle').find('i').removeClass('fa-bars').addClass('fa-times-circle').end().attr('aria-expanded', 'true').addClass('open');
-				}
+		      if($(window).outerWidth() < 760){
+		        if($(this).is('.active-nav')){
+		          $(this).attr('aria-expanded', 'false').removeClass('active-nav').find('i').removeClass('fa-times-circle').addClass('fa-bars').closest('#page-menu-title').next('#page-menu-wrapper').attr('aria-hidden', 'true').slideUp(500);
+		        }else{
+		          $(this).attr('aria-expanded', 'true').addClass('active-nav').find('i').removeClass('fa-bars').addClass('fa-times-circle').closest('#page-menu-title').next('#page-menu-wrapper').attr('aria-hidden', 'false').slideDown(500);
+		        }
+		      }
 			});
+
+			$(window).on('resize',  _.debounce( mobilePagenav, 10 )).trigger('resize');
 					
 			//need doc ready because active-class script fires after theme scripts
 			$(document).ready(function(){
-				$('#page-menu-wrapper ul li').each(function(){			
-					//find active links and set the active trail
-					$('.is-active', this).parentsUntil('#page-menu-wrapper > ul').addClass('active-trail expanded');
+				$('#page-menu-wrapper ul li').each(function(){
 
 					//find nested lists and set their parents and expanders
 					if(($('ul', this).length) && (!$('.expander:first', this).length) ){
-					  $(this).addClass('parent').prepend('<button class="expander" aria-expanded="false"></button>').find(' > ul').attr('aria-hidden', 'true');
+					  $(this).addClass('parent').prepend('<button class="expander" aria-expanded="false"></button>').find(' > a').attr('aria-expanded', 'false').next('ul').attr('aria-hidden', 'true');
 					}
+
+					//find active links and set the active trail
+					$('.is-active', this).attr('aria-expanded', 'true').siblings('ul').slideDown(100).attr('aria-hidden', 'false').parentsUntil('#page-menu-wrapper > ul').addClass('active-trail expanded');
+
 
 					//find active-trail li and add aria expanded role
 					$('li.active-trail > .expander').attr('aria-expanded', "true").siblings('ul').attr('aria-hidden', 'false');
@@ -48,15 +52,34 @@ Drupal.behaviors.pageMenu = {
 				$('.expander').click(function(){
 					$(this).closest('li').toggleClass('expanded');
 					if($(this).attr('aria-expanded') == 'false'){
-						$(this).attr('aria-expanded', "true").siblings('ul').attr('aria-hidden', 'false');
+						$(this).attr('aria-expanded', "true").siblings('ul').slideDown(500).attr('aria-hidden', 'false');
 					}else{
-						$(this).attr('aria-expanded', "false").siblings('ul').attr('aria-hidden', 'true');
+						$(this).attr('aria-expanded', "false").siblings('ul').slideUp(500).attr('aria-hidden', 'true');
 					}
 				});
 			});
-
-			
 		});
 	}
-}
+}//end page menu function
+
+function mobilePagenav() {
+  var wwidth = $(window).outerWidth();
+  if (wwidth < 760) {
+    //add aria roles to menu title and wrapper if not already set by click above 
+    if(!$('.page-menu-toggle').attr('aria-controls')){
+      $('.page-menu-toggle').attr({
+        'aria-controls': 'page-menu-wrapper', 
+        'aria-expanded': 'false', 
+        'role': 'button'
+      });
+      $('#page-menu-wrapper').attr('aria-hidden', 'true');
+    } 
+  }else{
+    //strip all aria roles & prevent click
+    $('.page-menu-toggle').removeAttr('aria-controls aria-expanded role');
+    $('#page-menu-wrapper').removeAttr('aria-hidden');
+  }
+};
+
+
 })(jQuery, Drupal);

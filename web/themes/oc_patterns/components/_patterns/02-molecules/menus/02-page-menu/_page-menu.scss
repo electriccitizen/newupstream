@@ -37,6 +37,8 @@
 				display: none;
 				padding-left: 12px;
 				@include transAll(.3s);
+				ul{
+				}
 				li{
 					//reset sub menus to base font size
 					@include baseFontSize;
@@ -85,13 +87,6 @@
 							&:before{
 								content: "–";
 							}
-						}
-						//show next menu level
-						& > ul:not(.contextual-links){
-							display: block;
-							height: 0;
-							@include animation(slideDown .2s 1 forwards);
-							@include backfaceVisibility(hidden);
 						}
 						& > a{
 							color: $black;

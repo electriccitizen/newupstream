@@ -88,7 +88,7 @@ $h6Sm: 18px;
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	text-align: center;
-	max-width: $contentStop;
+	max-width: $textMax;
 	@include spacer(1.5);
 	@include auto;
 }
@@ -100,7 +100,7 @@ h1 {
 	@include heading1;
 }
 
-h2:not(.block-title):not(.section-title){
+h2{
 	@include heading2;
 }
 
