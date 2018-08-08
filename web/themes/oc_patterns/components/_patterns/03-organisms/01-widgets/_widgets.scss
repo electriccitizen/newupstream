@@ -46,8 +46,14 @@ SECTION LAYOUTS
 		padding-top: 3em;
 	}
 
+	.field-section-title{
+		padding-left: 20px;
+		padding-right: 20px;
+	}
 	.field-section-intro{
 		max-width: $textMax;
+		padding-left: 20px;
+		padding-right: 20px;
 		@include auto;
 		@include spacer(1.5);
 	}
@@ -155,28 +161,22 @@ SECTION LAYOUTS
 	text-align: center;
 	position: relative;
 	z-index: 1;
-	@include spacer(2);
 	@include auto;
 	&:after{
 		@include fullBack($grey);
 	}
-	@include onlySmall{
-		h2:not(.block-title):not(.widget-title){
+	h2#toc-title{			
+		margin-bottom: 0;
+		@include tab{
+			@include visuallyHidden;
+		}
+		a{
 			font-size: 24px;
 			color: $black;
-			cursor: pointer;
 			font-weight: $regular;
-			margin-bottom: 0;
-			span{
-				font-size: 36px;
-				margin-right: .25em;
+			i{
+				margin-right: .5em;
 			}
-		}
-	}
-	@include tab{
-		margin-bottom: 2em;
-		h2{
-			display: none;
 		}
 	}
 	.anchors{
@@ -225,8 +225,8 @@ SECTION LAYOUTS
 	}//end a 
 
 	//snug up first section if it has a background
-	& + .field--name-field-oc-widgets > .section:first-child.background{
-		margin-top: -2em;
+	& + .field--name-field-oc-widgets > .section:first-child:not(.background){
+		margin-top: 2em;
 	}
 
 }//end widget anchors (in this section)
