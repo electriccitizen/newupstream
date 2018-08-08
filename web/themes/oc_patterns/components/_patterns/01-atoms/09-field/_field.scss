@@ -15,4 +15,7 @@
 			}
 		}
 	}//end inline label
+	&.long-text,&.text-with-summary{
+		@include clearFix;
+	}
 }//end field

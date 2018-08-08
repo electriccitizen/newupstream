@@ -72,3 +72,35 @@ img{
 		width: 100% !important;
 	}
 }//end oc-media
+
+
+/* DOCUMENT ICONS
+---------------------- */
+.media-document .file{
+	&:hover,&:focus{
+		i{
+			@include opacity(.7);
+		}
+	}
+	i{
+		margin-right: .5em;
+		color: $body;
+		font-size: 18px;
+		position: relative;
+		top: -2px;
+		&.fa-file-pdf-o{
+			color: #e80723;
+		}
+		&.fa-file-word-o{
+			color: #0077c0;
+		}
+		&.fa-file-excel-o{
+			color: #438406;
+		}
+		&.fa-file-powerpoint-o{
+			color: #b85c00;
+		}
+	}//end i
+}//end file
+
+

@@ -51,7 +51,6 @@
 		float: none;
 	}
 
-
 	/* ====  sf main links ==== */
 	&.sf-main{
 		@include safeFlex(row,wrap,end,null);
@@ -85,6 +84,7 @@
 		& > ul{
 			padding: 20px 0 0;
 			top: 100%;
+			min-width: 280px;
 			@extend %menuDropdown;
 			& > li{ 
 				padding: 0;
@@ -102,27 +102,23 @@
 		//global toggles
 		a.menuparent{
 			&:after{
-				content: '';
+				content: '\f105';
+				font-family: FontAwesome;
 				display: inline-block;
-				@include deskMenuArrow;
 				padding: 0;
 				position: relative;
 				right: -10px;
 				opacity: 1;
-			}
-			&:hover{
-				&:after{
-					@include deskMenuArrowActive;
-				}
 			}
 		}
 
 		//level 2 togglers only
 		& > a.menuparent{
 			&:after{
-				top: 4px;
+				top: 1px;
 				height: 18px;
 				width: 18px;
+				font-size: 26px;
 			}
 		}
 
@@ -143,6 +139,9 @@
 	.sf-depth-1 .sf-depth-2{
 		ul{
 			@extend %menuDropdown;
+			left: 100%;
+			top: -1px;
+			min-width: 240px;
 			border-top: 1px solid $grey;
 		}
 	}
@@ -159,15 +158,7 @@
 				padding: 8px 40px;
 				//downsizing for all toggler 3 and below
 				&:after{
-					@include deskSubSize;
-					height: 15px;
-					width: 15px;
-					top: 2px;
-				}
-				&:hover,&:focus{
-					&:after{
-						@include deskSubSize;
-					}
+					font-size: 20px;
 				}
 			}
 		}
@@ -219,17 +210,11 @@ ul.sf-menu.sf-accordion{
 				top: 50%;
 				left: 50%;
 				margin: 0;
+				font-family: FontAwesome;
 				@include translate(-50%, -50%);
-				content: '';
+				content: '\f107';
 				background-color: transparent;
-				height: 18px;
-				width: 18px;
-				@include mobileMenuOpen;
-			}
-			&:hover{
-				&:after{
-					@include mobileMenuActive;
-				}
+				font-size: 30px;
 			}
 		}//end accordion button
 
@@ -241,20 +226,10 @@ ul.sf-menu.sf-accordion{
 					@include calc(width, "100% - 60px");
 				}
 			}
-		}//end menuparent
-
-		&.active-trail > .sf-accordion-button{
-			&:after{
-				@include mobileMenuActive;
-			}
-			&:hover:after{
-				@include mobileMenuOpen;
-			} 
-		}
+		}//end menupareny
 		&.sf-expanded > .sf-accordion-button{
-			&:after,&:hover:after{
-				content: '';
-				@include mobileMenuClose;
+			&:after{
+				content: '\f106';
 			}
 		}
 	}//end li
@@ -262,7 +237,7 @@ ul.sf-menu.sf-accordion{
 	
 
 	li.sf-expanded > ul{
-		padding: 0 10px 10px;
+		padding: 0 0 10px;
 	}
 
 
@@ -276,6 +251,9 @@ ul.sf-menu.sf-accordion{
 				color: $hoverLink;
 				background: $lightGrey;
 				border-bottom: 3px solid $transBlack;
+			}
+			& > ul{
+				padding: 10px 0;
 			}
 		}
 	}//end level 1
@@ -307,6 +285,11 @@ ul.sf-menu.sf-accordion{
 		a{
 			font-size: 15px;
 			padding: 10px 30px;
+			&.sf-accordion-button{
+				&:after{
+					font-size: 22px;
+				}
+			}
 			&:not(.sf-accordion-button){
 				padding: 10px 30px 10px 50px;
 			}

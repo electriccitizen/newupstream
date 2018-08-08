@@ -7,6 +7,11 @@
 ------------------ */
 .path-site-search{
 
+	//move superfish toggle over because no search icon
+	#superfish-main-toggle{
+		right: 20px;
+	}
+
 	//prevent contextual links interference when logged in
 	.views-element-container{
 		position: static;
@@ -42,6 +47,7 @@
 					width: 100%;
 					left: 0;
 					top: 0;
+					z-index: 2;
 				}
 
 				#views-exposed-form-site-search-search-results{
@@ -74,10 +80,21 @@
 							height: 24px;
 							width: 24px;
 							top: -42px;
-							@include searchSubmitMobile;
 							right: 18px;
 							&:hover,&:active,&:focus{
-								@include opacity(.4);
+								& + i{
+									@include opacity(.4);
+								}
+							}
+						}
+						i{
+							top: -42px;
+							right: 18px;
+							font-size: 24px;
+							color: $black;
+							@include tab{
+								top: -46px;
+								font-size: 26px;
 							}
 						}
 					}
