@@ -133,6 +133,7 @@ h2.block-title{
 h2.section-title{
 	@include blockTitle;
 	font-size: 24px;
+	max-width: $textMax + 40px;
 }
 h3.widget-title{
 	@include blockTitle;

@@ -51,7 +51,7 @@ SECTION LAYOUTS
 		padding-right: 20px;
 	}
 	.field-section-intro{
-		max-width: $textMax;
+		max-width: $textMax + 40px;
 		padding-left: 20px;
 		padding-right: 20px;
 		@include auto;
