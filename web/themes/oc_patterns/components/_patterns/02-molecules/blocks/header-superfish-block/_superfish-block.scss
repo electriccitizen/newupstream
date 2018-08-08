@@ -13,14 +13,15 @@
 		display: none;
 	}
 	&:before{
-		content: '';
+		content: '\f0c9';
 		display: block;
 		position: absolute;
 		top: 0;
 		right: 0;
-		height: 24px;
-		width: 24px;
-		@include hamburger;
+		font-family: FontAwesome;
+		font-size: 28px;
+		color: $black;
+		line-height: 28px;
 	}
 	&:hover,&:focus{
 		&:after{
@@ -36,7 +37,7 @@
 	}
 	&.sf-expanded{
 		&:before{
-			@include hamburger-expanded;
+			content: '\f057';
 		}
 	}
 }//end superfish-main-toggle

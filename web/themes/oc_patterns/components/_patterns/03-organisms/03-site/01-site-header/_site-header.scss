@@ -54,11 +54,11 @@
 	//search toggler
 	.t-search{
 		position: absolute;
-		top: 17px;
+		top: 15px;
 		right: 20px;
 		@include deskMenu{
-			right: 25px;
 			top: 13px;
+			right: 25px;
 		}
 	}
 }//end search block

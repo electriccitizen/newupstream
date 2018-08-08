@@ -51,26 +51,26 @@
 
 	//search icon
 	.t-search{
-		font-size: 16px;
-		text-indent: 9000px;
-		width: 23px;
-		height: 22px;
-		cursor: pointer;
-		display: block;
-		@include searchOpenToggle; 
 		border: 1px solid transparent;
-	}
-	.t-search-wrapper{
-		&:hover{
-			background: $grey;
-			.t-search{
-				@include searchCloseToggle;
-			}
+		color: $black;
+		i{
+			position: relative;
+			font-size: 22px;
 		}
 	}
-
-	.t-search:focus{
-		border: 1px solid $black;
+	.t-search-wrapper{
+		&:hover,&:focus{
+			i:after{
+				content: '';
+				display: block;
+				position: absolute;
+				bottom: -7px;
+				right: 0;
+				width: 24px;
+				height: 1px;
+				background: $black;
+			}
+		}
 	}
 
 	//close search
@@ -168,29 +168,43 @@
 					@extend %searchBlockPlaceholderFocus;
 				}
 			}
-		}
+		}//end fulltext search
 
 		//search submit button
 		.form-actions{
 			position: relative;
 			@include auto;
 			max-width: 800px;
-		}
-		.form-submit{
-			position: absolute;
-			right: 8px;
-			top: -46px;
-			color: $white;
-			text-indent: 9000px;
-			border: none;
-			height: 25px;
-			width: 25px;
-			@include searchSubmitMobile;
-			padding: 0;
-			&:hover{
-				@include opacity(.7);
+			.form-submit{
+				position: absolute;
+				top: -43px;
+				right: 8px;
+				height: 25px;
+				width: 25px;
+				background: transparent;
+				z-index: 2;
+				text-indent: -9000px;
+				cursor: pointer;
+				&:focus,&:hover{
+					& + i{
+						color: $link;
+					}
+				}
+			}//end form submit
+			i{
+				position: absolute;
+				top: -45px;
+				right: 8px;
+				font-size: 24px;
+				color: $white;
+				cursor: pointer;
+				@include tab{
+					font-size: 28px;
+					top: -48px;
+					right: 12px;
+				}
 			}
-		}
+		}//end form-actions
 	}//end search block form
 
 }//end search block
