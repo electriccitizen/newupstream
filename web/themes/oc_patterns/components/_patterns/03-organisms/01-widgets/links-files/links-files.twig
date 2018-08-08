@@ -22,16 +22,6 @@
 			{% endfor %}
 		</div>
 	{% endblock %}
-
-	{% block files %}
-		<div class="field field-oc-file-multi">
-		{% for file in files %}
-			<div>
-				<a href="{{file.file_url}}">{{file.file_text}}</a>
-			</div>
-		{% endfor %}
-		</div>
-	{% endblock %}
 				
 {% block plwidgetclose %}				
 	</div>

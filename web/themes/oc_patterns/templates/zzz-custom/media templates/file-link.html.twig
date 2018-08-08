@@ -1,0 +1,14 @@
+{#
+/**
+ * @file
+ * Theme override for a link to a file.
+ *
+ * Available variables:
+ * - attributes: The HTML attributes for the containing element.
+ * - link: A link to the file.
+ *
+ * @see template_preprocess_file_link()
+ */
+#}
+{# set file icons based on type #}
+<span{{ attributes }}><i class="fa {% if 'file--application-pdf' in attributes.class %}fa-file-pdf-o{% elseif 'file--x-office-document' in attributes.class %}fa-file-word-o{% elseif 'file--x-office-spreadsheet' in attributes.class %}fa-file-excel-o{% elseif 'file--x-office-presentation' in attributes.class %}fa-file-powerpoint-o{% else %}fa-file-text-0{% endif %}" aria-hidden="true"></i>{{ link }}</span>
