@@ -6,7 +6,7 @@
 	.addtoany_list > a{
 		padding: 0 0 0 1px;
 		&:hover,&:focus{
-			@include opacity(.7); 
+			opacity: .7; 
 			@include transAll(.3s);
 		}
 	}

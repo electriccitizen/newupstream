@@ -83,7 +83,7 @@
 							right: 18px;
 							&:hover,&:active,&:focus{
 								& + i{
-									@include opacity(.4);
+									opacity: .4;
 								}
 							}
 						}

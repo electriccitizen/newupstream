@@ -95,14 +95,14 @@
 //zoom in
 @include keyframes(zoomIn){
 	from{
-		@include opacity(0);
+		opacity: 0;
 		@include scale3d(.3, .3, .3);
 	}
 	50%{
-		@include opacity(1);
+		opacity: 1;
 	}
 	100%{
-		@include opacity(1);
+		opacity: 1;
 		@include scale3d(1, 1, 1);
 	}
 }
@@ -110,41 +110,15 @@
 //delayed fade in
 @include keyframes(fadeIn){
 	from{
-		@include opacity(0);
+		opacity: 0;
 	}
 	50%{
-		@include opacity(.5);
+		opacity: .5;
 	}
 	100%{
-		@include opacity(1);
+		opacity: 1;
 	}
 }
-
-//flip in vertical axis
-@include keyframes(flipY){
-	from{
-		//perspective is needed anytime you play with the Y axis to set depth. The larger the number, the greater the foreshortening
-		@include perspective(400);
-		//rotate3d(X-axis, Y-axis, Z-axis, degree of turn)
-		@include rotate3d(0, 1, 0, 90deg);
-		
-	}
-	40%{
-		@include perspective(400);
-		@include rotate3d(0, 1, 0, 45deg);
-	}
-	60%{
-		@include perspective(400);
-		@include rotate3d(0, 1, 0, 0deg);
-	}
-	to{
-		@include perspective(400);
-		@include opacity(1);
-	}
-}
-
-
-
 
 //expandDown
 @include keyframes(expandDown){
@@ -153,14 +127,14 @@
 	}
 	20%{
 		@include translateY(100%);
-		@include opacity(0);
+		opacity: 0;
 	}
 	30%{
 		height: auto;
 	}
 	to {
 		@include translateY(0);
-		@include opacity(100%);
+		opacity: 1;
 	}
 }
 
@@ -208,7 +182,4 @@
 .fi-delay{
 	@include animation('fadeIn 3s 1');
 }
-.flipY{
-	@include backfaceVisibility(visible);
-	@include animation('flipY 1.5s 1 ease-in forwards');
-}
+

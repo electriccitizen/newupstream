@@ -79,7 +79,7 @@ img{
 .media-document .file{
 	&:hover,&:focus{
 		i{
-			@include opacity(.7);
+			opacity: .7;
 		}
 	}
 	i{
