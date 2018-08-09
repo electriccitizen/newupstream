@@ -216,6 +216,7 @@ input[value="Add new media"],input[value="Add existing media"]{
 --------------- */
 body .select2-container{
 	min-width: 150px;
+	margin-bottom: .5em;
 }
 body .select2-container--default.select2--container--focus{
 	box-shadow: 0 2px 2px rgba(35,35,35,0.3);
@@ -329,7 +330,13 @@ body .select2-container--default.select2-container--open select2-selection--mult
 .select2-container--default .select2-results__option--highlighted[aria-selected]{
 	background-color: #0074bd; 
 }
-
+body select{
+	border-radius: 0;
+	background: url(../icons/admin-icons/caret-down.svg) no-repeat 99% 63%, #fff;
+}
+body select:hover,body select:focus{
+	background: url(../icons/admin-icons/caret-down.svg) no-repeat 99% 63%, #ececec;
+}
 
 /* OTHER FORM ELEMENTS
 --------------------- */
@@ -372,17 +379,24 @@ body .select2-container--default.select2-container--open select2-selection--mult
 
 input[type="submit"].button{
 	padding: 7px 1.5em;
-	margin-top: 17px;
 	border-radius: 0;
 	border-color: #676767;
+	margin-bottom: .5em;
 }
-
 body .button--primary{
 	border-radius: 0;
 	padding: 9px 1em;
 }
 body .button--primary.button--small{
 	padding: 6px 1em;
+}
+
+#edit-clear-cache input[type="submit"].button{
+	background: #e71101;
+	color: #fff;
+}
+#edit-clear-cache input[type="submit"].button:hover,#edit-clear-cache input[type="submit"].button:focus{
+	background: #820a01;
 }
 
  /* DRUPAL MODALS

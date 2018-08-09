@@ -13,6 +13,9 @@
 	}
 }
 
+body select,body select:hover,body select:focus{
+	background: none;
+}
 
 /* SELECT STYLING
 ------------------- */
@@ -31,7 +34,9 @@ optgroup:empty{
 	width: 100% !important;
 	max-width: 250px;
 }
-
+body .select2-container{
+	@include spacer(0);
+}
 
 /* SINGLE SELECT 2
 ----------------- */
