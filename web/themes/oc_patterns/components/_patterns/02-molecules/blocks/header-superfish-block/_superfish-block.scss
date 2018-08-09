@@ -13,12 +13,11 @@
 		display: none;
 	}
 	&:before{
-		content: '\f0c9';
+		@include fontAwesome('\f0c9');
 		display: block;
 		position: absolute;
 		top: 0;
 		right: 0;
-		font-family: FontAwesome;
 		font-size: 28px;
 		color: $black;
 		line-height: 28px;

@@ -156,18 +156,15 @@ body {
 		height: 50px;
 		background: rgba(35,35,35,0.85);
 		border-radius: 50%;
-		text-indent: -300vw;
 		position: relative;
-		&:after{
-			content: '';
-			display: block;
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			@include translate(-50%,-50%);
-			width: 30px;
-			height: 30px;
-			@include backAnchorArrow;
+		text-align: center;
+		i{
+			color: $white;
+			font-size: 45px;
+			line-height: 45px;
+		}
+		span{
+			@include visuallyHidden;
 		}
 	}
 }//end back anchor

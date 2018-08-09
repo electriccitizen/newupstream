@@ -3,6 +3,29 @@
  * Visual styles non-node form css.
  */
 
+/* GLOBAL NON-FORM ELEMENTS
+--------------------- */
+header.content-header{
+	background: #1c2c3f;
+	color: #fff;
+	min-height: 60px;
+}
+
+header.content-header .shortcut-action__icon{
+	background: transparent url(../icons/admin-icons/shortcut-star.svg) no-repeat left top;
+}
+header.content-header .shortcut-action--add:hover .shortcut-action__icon,header.content-header .shortcut-action--add:focus .shortcut-action__icon{
+	background: transparent url(../icons/admin-icons/shortcut-star.svg) no-repeat left top;
+	opacity: .6;
+}
+header.content-header .shortcut-action--remove .shortcut-action__icon{
+	background: transparent url(../icons/admin-icons/shortcut-star-remove.svg) no-repeat left top;
+}
+header.content-header .shortcut-action--remove:hover .shortcut-action__icon,header.content-header .shortcut-action--remove:focus .shortcut-action__icon{
+	background: transparent url(../icons/admin-icons/shortcut-star-remove.svg) no-repeat left top;
+	opacity: .6;
+}
+
 /* ADMIN CONTENT VIEW
 -------------------- */
 .view-content.view-display-id-page_1,.view-display-id-media_page_list,.view-files.view-display-id-page_1{
@@ -51,7 +74,7 @@
 }
 
 .view-content.view-display-id-page_1 .view-filters .form-actions input,.view-display-id-media_page_list .view-filters .form-actions input,.view-files.view-display-id-page_1 .view-filters .form-actions input{
-	margin-top: 16px;
+	margin-top: 17px;
 }
 
 .view-content.view-display-id-page_1 .views-form > form > .form-actions,.view-display-id-media_page_list .views-form > form > .form-actions,.view-files.view-display-id-page_1 .views-form > form > .form-actions{
@@ -191,10 +214,190 @@ input[value="Add new media"],input[value="Add existing media"]{
 
 /* SELECT 2
 --------------- */
-.select2-container{
+body .select2-container{
 	min-width: 150px;
+	margin-bottom: .5em;
+}
+body .select2-container--default.select2--container--focus{
+	box-shadow: 0 2px 2px rgba(35,35,35,0.3);
+}
+body .select2-container--default .select2-selection--single,body .select2-container--default .select2-selection--multiple{
+	width: 100%;
+	font-size: 13px;
+	border: 1px solid #676767;
+	border-radius: 0;
+	height: auto;
+}
+body .select2-container--default .select2-selection--single .select2-selection__choice__remove,body .select2-container--default .select2-selection--multiple .select2-selection__choice__remove{
+	position: relative;
+	z-index: 999;
+}
+body .select2-container--default .select2-selection--single .select2-selection__rendered{
+	padding: 1px 32px 1px 10px;
+	color: #676767;
+	text-align: left;
+}
+body .select2-container--default .select2-selection--single .select2-selection__arrow{
+	width: 0;
+	height: 0;
+	-webkit-transform: rotate(0.05deg);
+	-moz-transform: scale(1.1);
+	transform: rotate(0.05deg);
+	border-right: 5px double rgba(0,0,0,0);
+	border-left: 5px double rgba(0,0,0,0);
+	border-top: 8px solid #676767;
+	top: 14px;
+	right: 10px;
+	cursor: pointer;
+}
+body .select2-container--default .select2-selection--single .select2-selection__arrow b{
+	display: none;
+}
+body .select2-container--default .select2-selection--multiple .select2-search--inline{
+	position: relative;
+	float: none;
+	padding: 1px 3px;
+}
+body .select2-container--default .select2-selection--multiple .select2-search--inline:after{
+	content: '';
+	display: block;
+	position: absolute;
+	top: 10px;
+	right: 2px;
+	cursor: pointer;
+	height: 0;
+	width: 0;
+	-webkit-transform: rotate(0.05deg);
+	-moz-transform: scale(1.1);
+	transform: rotate(0.05deg);
+	border-right: 5px double rgba(0,0,0,0);
+	border-left: 5px double rgba(0,0,0,0);
+	border-top: 8px solid #676767;
+}
+body .select2-container--default .select2-selection--multiple .select2-search--inline input.select2-search__field{
+	color: #676767;
+}
+body .select2-container--default .select2-selection--multiple .select2-search--inline input.select2-search__field::-webkit-placeholder{
+	opacity: .4;
+	color: #454545;
+}
+body .select2-container--default .select2-selection--multiple .select2-search--inline input.select2-search__field::-moz-placeholder{
+	opacity: .4;
+	color: #454545;
+}
+body .select2-container--default .select2-selection--multiple .select2-search--inline input.select2-search__field:-ms-input-placeholder{
+	opacity: .4;
+	color: #454545;
+}
+body .select2-container--default .select2-selection--multiple .select2-search--inline input.select2-search__field::-webkit-input-placeholder{
+	opacity: .4;
+	color: #454545;
+}
+body .select2-container--default .select2-selection--multiple .select2-search--inline input.select2-search__field:focus::-webkit-placeholder{
+	opacity: .2;
+
+}
+body .select2-container--default .select2-selection--multiple .select2-search--inline input.select2-search__field:focus::-moz-placeholder{
+	opacity: .2;
+}
+body .select2-container--default .select2-selection--multiple .select2-search--inline input.select2-search__field:focus:-ms-input-placeholder{
+	opacity: .2;
+}
+body .select2-container--default .select2-selection--multiple .select2-search--inline input.select2-search__field:focus::-webkit-input-placeholder{
+	opacity: .2;
+}
+body .select2-container--default .select2-selection--multiple .select2-selection__choice{
+	border-radius: 0;
+	background: #efefef;
+}
+body .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow,body .select2-container--default.select2-container--open.select2-container--focus .select2-selection--single .select2-selection__arrow{
+	border-top: 0;
+	border-bottom: 8px solid #676767;
+}
+body .select2-container--default.select2-container--open select2-selection--multiple .select2-search--inline:after,body .select2-container--default.select2-container--open.select2-container--focus select2-selection--multiple .select2-search--inline:after{
+	border-top: 0;
+	border-bottom: 8px solid #676767;
+}
+.select2-container .select2-dropdown{
+	border: 1px solid #676767;
+	border-radius: 0;
+	border-top: 0;
+	padding: 0;
+}
+.select2-container--default .select2-results__option[aria-selected="true"]{
+	background-color: #efefef;
+}
+.select2-container--default .select2-results__option--highlighted[aria-selected]{
+	background-color: #0074bd; 
+}
+body select{
+	border-radius: 0;
+	background: url(../icons/admin-icons/caret-down.svg) no-repeat 99% 63%, #fff;
+}
+body select:hover,body select:focus{
+	background: url(../icons/admin-icons/caret-down.svg) no-repeat 99% 63%, #ececec;
 }
 
+/* OTHER FORM ELEMENTS
+--------------------- */
+.js-form-type-textfield input.form-text,.js-form-type-email input.form-email,.js-form-type-password input.form-text,.js-form-type-tel input.form-tel,.js-form-type-search input.form-search,.js-form-type-textarea textarea.form-textarea{
+	border: 1px solid #676767;
+	border-radius: 0;
+	font-size: 13px;
+	padding: 7px 6px;
+}
+
+.js-form-type-search input.form-search::-webkit-placeholder{
+	opacity: .4;
+	color: #454545;
+}
+.js-form-type-search input.form-search::-moz-placeholder{
+	opacity: .4;
+	color: #454545;
+}
+.js-form-type-search input.form-search:-ms-input-placeholder{
+	opacity: .4;
+	color: #454545;
+}
+.js-form-type-search input.form-search::-webkit-input-placeholder{
+	opacity: .4;
+	color: #454545;
+}
+.js-form-type-search input.form-search:focus::-webkit-placeholder{
+	opacity: .2;
+}
+.js-form-type-search input.form-search:focus::-moz-placeholder{
+	opacity: .2;
+}
+.js-form-type-search input.form-search:focus:-ms-input-placeholder{
+	opacity: .2;
+}
+.js-form-type-search input.form-search:focus::-webkit-input-placeholder{
+	opacity: .2;
+}
+
+
+input[type="submit"].button{
+	padding: 7px 1.5em;
+	border-radius: 0;
+	border-color: #676767;
+	margin-bottom: .5em;
+}
+body .button--primary{
+	border-radius: 0;
+	padding: 9px 1em;
+}
+body .button--primary.button--small{
+	padding: 6px 1em;
+}
+
+#edit-clear-cache input[type="submit"].button{
+	background: #e71101;
+	color: #fff;
+}
+#edit-clear-cache input[type="submit"].button:hover,#edit-clear-cache input[type="submit"].button:focus{
+	background: #820a01;
+}
 
  /* DRUPAL MODALS
 ------------------- */

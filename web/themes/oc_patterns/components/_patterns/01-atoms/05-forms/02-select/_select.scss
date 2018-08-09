@@ -13,6 +13,9 @@
 	}
 }
 
+body select,body select:hover,body select:focus{
+	background: none;
+}
 
 /* SELECT STYLING
 ------------------- */
@@ -31,7 +34,9 @@ optgroup:empty{
 	width: 100% !important;
 	max-width: 250px;
 }
-
+body .select2-container{
+	@include spacer(0);
+}
 
 /* SINGLE SELECT 2
 ----------------- */
@@ -50,11 +55,8 @@ body .select2-container--default{
 			text-align: left;
 		}
 		.select2-selection__arrow{
-			width: 15px;
-			height: 15px;
-			background: $link;
-			@include dropArrow;
-			top: 11px;
+			@include triangle(down,12px,16px,$midGrey);
+			top: 14px;
 			right: 10px;
 			//hide default select2 arrow
 			b{
@@ -88,13 +90,10 @@ body .select2-container--default{
 				display: block;
 				height: 100%;
 				position: absolute;
-				top: 6px;
+				top: 10px;
 				right: 2px;
 				cursor: pointer;
-				width: 15px;
-				height: 15px;
-				background-color: $link;
-				@include dropArrow;
+				@include triangle(down,12px,16px,$midGrey);
 			}
 			input.select2-search__field{
 				color: $darkGrey;
@@ -122,7 +121,8 @@ body .select2-container--default{
 		//single
 		.select2-selection--single{
 			.select2-selection__arrow{
-				@include dropArrowActive;
+				border-top: 0;
+				border-bottom: 12px solid $midGrey;
 			}
 		}
 
@@ -130,7 +130,8 @@ body .select2-container--default{
 		.select2-selection--multiple{			
 			.select2-search--inline{ 
 				&:after{
-					@include dropArrowActive;
+					border-top: 0;
+					border-bottom: 12px solid $midGrey;
 				}
 				input.select2-search__field{
 					@include placeholder;

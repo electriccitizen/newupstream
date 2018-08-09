@@ -2,7 +2,7 @@
    SUBMIT
 =============== */
 
-input[type="submit"]{
+input[type="submit"].button{
 	@include formSubmit;
 	font-size: 15px;
 }
