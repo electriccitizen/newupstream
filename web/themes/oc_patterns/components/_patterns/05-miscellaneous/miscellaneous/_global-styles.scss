@@ -203,7 +203,7 @@ body {
 			&:focus,&:hover {
 				background-color: $offWhite;
 				color: $black;
-				@include opacity(.8);
+				opacity: .8;
 			}
 		}
 	}// end tabs
