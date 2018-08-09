@@ -72,7 +72,12 @@
 	
 	//slider container overrides layout padding on mobile
 	.field-oc-image-multi{
-		@include widgetFull;
+		@include edgeToEdge;
+		@include calc(width, "100% + 40px");
+		@include contentStop{
+			@include edgeReset;
+			width: 100%;
+		}
 		img{
 			width: 100%;
 		}

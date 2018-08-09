@@ -10,7 +10,7 @@
 /* HELPER MIXINS (used as a basis for other mixins or for browser prefixing)
 ----------------- */
 
-///mixin - transform
+// initiate transforms
 @mixin transform($transforms) {
 	-moz-transform: $transforms;
 	-o-transform: $transforms;
@@ -19,7 +19,7 @@
 	transform: $transforms;
 }
 
-///mixin - translate
+// move an element horizontally or vertically relative to its initial position
 @mixin translate ($x, $y) {
 	@include transform(translate($x, $y));
 }
@@ -33,12 +33,13 @@
 	@include transform(translate3d($x, $y, $z));
 }
 
-///mixin - skew
+
+//skew and element horizontally and vertically
 @mixin skew ($x, $y) {
 	@include transform(skew(#{$x}deg, #{$y}deg));
 }
 
-///mixin - scale
+//change the scale of an element relative to its original state
 @mixin scale($scalex, $scaley) {
 	@include transform(scale($scalex, $scaley));
 }
@@ -46,7 +47,7 @@
 	@include transform(scale($scalex, $scaley, $scalez));
 }
 
-///mixin - rotate
+//rotate an element on its center axis
 @mixin rotate ($deg) {
 	@include transform(rotate(#{$deg}deg));
 }
@@ -54,12 +55,12 @@
 	@include transform(rotate3d($rotx, $roty, $rotz, #{$deg}deg));
 }
 
-///mixin - perspective
+//change the perspective of an element
 @mixin perspective ($perspective) {
 	@include transform(perspective(#{$perspective}));
 }
 
-///mixin - transform-origin
+// transform an element from its origin
 @mixin transformOrigin ($origin) {
 	-moz-transform-origin: $origin;
 	-o-transform-origin: $origin;
@@ -68,19 +69,19 @@
 	transform-origin: $origin;
 }
 
-///mixin - backface-visibility
+// use backface visiblity to smooth transitions
 @mixin backfaceVisibility($backface){
 	-webkit-backface-visiblity: $backface;
 	-moz-backface-visiblity: $backface;
 	backface-visiblity: $backface;
 }
 
-///mixin - backgroundSize
+// sets the background size of an element
 @mixin backgroundSize($back-width, $back-height){
 	background-size: #{$back-width} #{$back-height};
 }
 
-///mixin - transition
+// performs a transition
 @mixin transition($transition-property, $transition-time, $method) {
 	-webkit-transition: $transition-property $transition-time $method;
 	-moz-transition: $transition-property $transition-time $method;
@@ -90,13 +91,13 @@
 	backface-visibility: hidden;
 }
 
-///mixin - opacity
+// set opacity that will work cross browser
 @mixin opacity($opacity){
 	opacity: #{$opacity};
 	filter: Alpha(opacity=($opacity * 100));
 }
 
-///mixin - column-count
+// CSS columns short hand with number or columns and gutter
 @mixin cssColumns($columns, $gap){
 	-webkit-column-count: #{$columns};
 	-moz-column-count: #{$columns};
@@ -107,14 +108,14 @@
 }
 
 
-///mixin - calc
+// Calc shorthand that works cross browser
 @mixin calc($property, $expression) {
 	#{$property}: -webkit-calc(#{$expression});
 	#{$property}: -moz-calc(#{$expression});
 	#{$property}: calc(#{$expression});
 }
 
-///mixin - calcForce
+// Calc short hand that works cross browser with !important
 @mixin calcForce($property, $expression) {
 	#{$property}: -webkit-calc(#{$expression}) !important;
 	#{$property}: -moz-calc(#{$expression}) !important;
@@ -126,13 +127,14 @@
 /*  STYLE MIXINS
 ------------------- */
 
-/// mixin - browserWipe
+// erase preset browser styling
 @mixin browserWipe{
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
 }
 
+// erase browser button theming
 @mixin buttonWipe{
 	@include browserWipe;
 	background: none;
@@ -140,7 +142,7 @@
 	color: inherit;
 }
 
-///mixin - visually hidden
+// visually hide something but allow screen reader access
 @mixin visuallyHidden{
 	position: absolute;
 	width: 1px;
@@ -150,7 +152,7 @@
 }
 
 
-/// mixin - overlay
+// overlay a dark transparent tint
 @mixin overlay{
 	&:before{
 		content: '';
@@ -165,7 +167,7 @@
 	}
 }
 
-///mixin - imageHover
+// fade an image link and set a border on hover or focus
 @mixin imageHover{
 	border: 1px solid $lightGrey;
 	&:hover,&:focus{
@@ -175,8 +177,7 @@
 	}
 }
 
-
-///mixin - listReset
+// remove default ul padding margin, list style
 @mixin listReset {
 	list-style: none;
 	margin: 0;
@@ -185,7 +186,7 @@
 
 
 
-///mixin - fullback
+// create a full screen background the height of the parent element (set on :after)
 @mixin fullBack($fullback){
 	content: '';
 	display: block;
@@ -198,7 +199,7 @@
 	background: $fullback;
 }
 
-///mixin - fullBack
+// create a full height background that extends to left or right side of screen from parent (use on :after)
 @mixin halfBack($backColor,$backSide){
 	content: '';
 	display: block;
@@ -215,7 +216,7 @@
 	}
 }
 
-///mixin - vert rule
+// create a vertical rule to the left or right and choose height and color (use in psuedo)
 @mixin vertRule($rulePosition,$ruleHeight,$ruleColor) {
 	content: '';
 	display: block;
@@ -227,7 +228,7 @@
 	background: $ruleColor;
 }
 
-///mixin - gradient
+// define a background gradient with direct, start color and stop color
 @mixin gradient($grad-direction,$grad-start,$grad-stop) {
 	background: -moz-linear-gradient($grad-direction, $grad-start 0%,$grad-stop 100%); /* FF3.6+ */
 	background: -webkit-linear-gradient($grad-direction, $grad-start 0%,$grad-stop 100%); /* Chrome10+,Safari5.1+ */
@@ -245,7 +246,7 @@
 
 }
 
-
+// create a triangle out of borders-can choose direction, size, color
 @mixin triangle($triDirection,$triHeight,$triWidth,$triColor){
 	width: 0;
 	height: 0;
@@ -273,23 +274,6 @@
 	}
 }
 
-///mixin - gradient
-@mixin gradient($gradDirection,$gradStart,$gradStop) {
-	background: -moz-linear-gradient($gradDirection, $gradStart 0%,$gradStop 100%); /* FF3.6+ */
-	background: -webkit-linear-gradient($gradDirection, $gradStart 0%,$gradStop 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient($gradDirection, $gradStart 0%,$gradStop 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient($gradDirection, $gradStart 0%,$gradStop 100%); /* IE10+ */
-	@if $gradDirection == 'top'{
-		background: linear-gradient(to bottom, $gradStart 0%,$gradStop 100%); /* W3C */
-	}@else if $gradDirection == 'bottom'{
-		background: linear-gradient(to top, $gradStart 0%,$gradStop 100%); /* W3C */
-	}@else if $gradDirection == 'left'{
-		background: linear-gradient(to right, $gradStart 0%,$gradStop 100%); /* W3C */
-	}@else if $gradDirection == 'right'{
-		background: linear-gradient(to left, $gradStart 0%,$gradStop 100%); /* W3C */
-	}
-
-}
 
 // move arrows outside of slick and change color
 @mixin outsideSliderArrows{
@@ -322,7 +306,7 @@
 	}
 }
 
-
+// color interior elements when on a light background
 @mixin lightBack {
 	h2,h3,h4,h5,h6,p,div {
 		color: $black;
@@ -352,6 +336,7 @@
 	}
 }
 
+// color interior elements when on a dark background
 @mixin darkBack {
 	h2,h3,h4,h5,h6,p,div {
 		color: $white;
@@ -385,25 +370,25 @@
 /* LAYOUT MIXINS
 -------------------- */
 
-///mixin - auto
+// center something with auto left and right margins
 @mixin auto{
 	margin-left: auto;
 	margin-right: auto;
 }
 
-///mixin - edgeToEdge
+// set left and right margins to ignore side padding of main container
 @mixin edgeToEdge {
 	margin-left:-20px;
 	margin-right:-20px;
 }
 
-///mixin - edgeToEdge
+// reset left and right margins to 0
 @mixin edgeReset {
 	margin-left:0;
 	margin-right:0;
 }
 
-///mixin - clearfix
+// clear floats (used on parent container)
 @mixin clearFix {
 	&::after {
 		clear: both;
@@ -412,7 +397,7 @@
 	}
 }
 
-///mixin safe-flex
+// set ie friendly flex layout with direction, wrap, inline, and perpendicular alignment
 @mixin safeFlex($direction, $wrap, $justify, $align){
 	display: flex;
 	display: -ms-flexbox;
@@ -457,19 +442,20 @@
 }//end safe-flex
 
 
-///mixin safe flex size
+// IE friendly mixin for flex size shorthand
 @mixin safeFlexSize($grow, $shrink, $size){
 	flex: $grow $shrink $size;
 	-ms-flex: $grow $shrink $size;
 }
 
 
-///mixin safe flex order
+// IE friendly mixin for flex order
 @mixin safeFlexOrder($order){
 	order: $order;
 	-ms-flex-order: $order;
 }
 
+// set child elements into 2 columns using flex and bleed
 @mixin twoColumn($xAlign,$yAlign,$colSpace){
 	width: 100%;
 	@include bleed($colSpace);
@@ -484,7 +470,7 @@
 	}
 }
 
-///mixin - three-column
+// set child elements into three columns using flex and bleed
 @mixin threeColumn($xAlign,$yAlign,$colSpace){
 	width: 100%;
 	@include bleed($colSpace);
@@ -502,7 +488,7 @@
 	}
 }
 
-///mixin - three-column
+//set child elements into four columns using flex and bleed
 @mixin fourColumn($xAlign,$yAlign,$colSpace){
 	width: 100%;
 	@include bleed($colSpace);
@@ -523,30 +509,12 @@
 	}
 }
 
-
-/// mixin widget Full
-@mixin widgetFull{
-	@include edgeToEdge;
-	@include calc(max-width, "100% + 40px");
-	.beaker &,.bunsen &{
-		@include tab{
-			@include edgeReset;
-			max-width: 100%;
-		}
-	}
-	.kermit &{
-		@include contentStop{
-			@include edgeReset;
-			max-width: 100%;
-		}
-	}
-}
-
-
+//set bottom spacing as a multiple of ems
 @mixin spacer($spaceMultiplier){
 	margin-bottom: 1em * $spaceMultiplier;
 }
 
+// set negative edges on a parent to allow children to have equal space between without overflowing edges
 @mixin bleed($bleedWidth){
 	margin-left: $bleedWidth * -0.5;
 	margin-right: $bleedWidth * -0.5;
