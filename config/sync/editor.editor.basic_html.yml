@@ -26,12 +26,13 @@ settings:
             - JustifyLeft
             - JustifyCenter
             - JustifyRight
-            - Indent
         -
           name: Lists
           items:
             - BulletedList
             - NumberedList
+            - Indent
+            - Outdent
         -
           name: Media
           items:
@@ -51,6 +52,14 @@ settings:
             - RemoveFormat
             - Undo
             - Redo
+        -
+          name: Pasting
+          items:
+            - Cut
+            - Copy
+            - Paste
+            - PasteFromWord
+            - PasteText
         -
           name: 'Block Formatting'
           items:
