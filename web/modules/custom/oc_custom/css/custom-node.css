@@ -158,9 +158,10 @@
 }
 
 /* WIDGET ADMIN DESCRIPTION */
-.field--name-field-admin-description,.field--name-field-admin-description .field-item{
+.field--name-field-admin-description,.field--name-field-admin-description .field-item,.paragraph--view-mode--preview .field--name-field-accordion-header{
   color: #ec2f10;
 }
+
  
 /* GENERAL */
 .fieldset-wrapper .fieldset-description{

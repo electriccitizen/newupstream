@@ -26,6 +26,13 @@ header.content-header .shortcut-action--remove:hover .shortcut-action__icon,head
 	opacity: .6;
 }
 
+#block-seven-primary-local-tasks .tabs__tab a{
+ 	color: #244c7b;
+}
+#block-seven-primary-local-tasks .tabs__tab.is-active a{
+	color: #0074bd;
+}
+
 /* ADMIN CONTENT VIEW
 -------------------- */
 .view-content.view-display-id-page_1,.view-display-id-media_page_list,.view-files.view-display-id-page_1{
