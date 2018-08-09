@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.accordion_item.field_accordion_header
-    - field.field.paragraph.accordion_item.field_admin_description
     - field.field.paragraph.accordion_item.field_oc_long_text
     - paragraphs.paragraphs_type.accordion_item
   module:
@@ -71,5 +70,4 @@ content:
     third_party_settings: {  }
     type: text_default
     region: content
-hidden:
-  field_admin_description: true
+hidden: {  }
