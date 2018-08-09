@@ -392,11 +392,11 @@ body .button--primary.button--small{
 }
 
 #edit-clear-cache input[type="submit"].button{
-	background: #e71101;
+	background: #24850a;
 	color: #fff;
 }
 #edit-clear-cache input[type="submit"].button:hover,#edit-clear-cache input[type="submit"].button:focus{
-	background: #820a01;
+	background: #0f4500;
 }
 
  /* DRUPAL MODALS
