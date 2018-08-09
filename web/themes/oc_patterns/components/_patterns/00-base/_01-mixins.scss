@@ -131,7 +131,6 @@
 	clip: rect(1px, 1px, 1px, 1px);
 }
 
-
 // overlay a dark transparent tint
 @mixin overlay{
 	&:before{
@@ -288,7 +287,7 @@
 			}
 		}
 	}
-}
+}//end outside slider arrows
 
 // color interior elements when on a light background
 @mixin lightBack {
@@ -318,7 +317,7 @@
 	figcaption {
 		color: $darkGrey;
 	}
-}
+}//end lightBack
 
 // color interior elements when on a dark background
 @mixin darkBack {
@@ -348,7 +347,7 @@
 	figcaption {
 		color: $white;
 	}
-}
+}//end darkBack
 
 
 /* LAYOUT MIXINS
