@@ -42,8 +42,8 @@
   color: #dd241b ;
 }
 
-.field--widget-paragraphs .paragraphs-tabs-wrapper input.field-add-more-submit:not([value="Add another item"]){
-  padding-left: 30px;
+.field--widget-paragraphs .paragraphs-tabs-wrapper input.button.field-add-more-submit:not([value="Add another item"]){
+  padding: 6px 8px 6px 34px;
   border: 2px solid #02acd7;
   color: #535353;
   border-radius: 0;

@@ -177,14 +177,19 @@
 			max-width: 800px;
 			.form-submit{
 				position: absolute;
-				top: -43px;
-				right: 8px;
-				height: 25px;
-				width: 25px;
+				top: -46px;
+				right: 5px;
+				height: 30px;
+				width: 30px;
 				background: transparent;
 				z-index: 2;
 				text-indent: -9000px;
 				cursor: pointer;
+				padding: 0;
+				@include tab{
+					top: -48px;
+					right: 10px;
+				}
 				&:focus,&:hover{
 					& + i{
 						color: $link;
