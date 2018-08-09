@@ -102,8 +102,7 @@
 		//global toggles
 		a.menuparent{
 			&:after{
-				content: '\f105';
-				font-family: FontAwesome;
+				@include fontAwesome('\f105');
 				display: inline-block;
 				padding: 0;
 				position: relative;
@@ -210,9 +209,8 @@ ul.sf-menu.sf-accordion{
 				top: 50%;
 				left: 50%;
 				margin: 0;
-				font-family: FontAwesome;
+				@include fontAwesome('\f107');
 				@include translate(-50%, -50%);
-				content: '\f107';
 				background-color: transparent;
 				font-size: 30px;
 			}
