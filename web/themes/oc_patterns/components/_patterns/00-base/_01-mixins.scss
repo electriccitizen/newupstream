@@ -184,7 +184,11 @@
 	padding: 0;
 }
 
-
+// use a Font Awesome icon in a psuedo element
+@mixin fontAwesome($faCode){
+	content: '#{$faCode}';
+	font-family: FontAwesome;
+}
 
 // create a full screen background the height of the parent element (set on :after)
 @mixin fullBack($fullback){
