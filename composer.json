@@ -53,6 +53,7 @@
     "drupal/console": "~1",
     "drupal/contact_storage": "^1.0@beta",
     "drupal/core": "~8",
+    "drupal/crop": "^2.0",
     "drupal/ctools": "^3.0@alpha",
     "drupal/default_content": "^1.0.0@alpha",
     "drupal/devel": "1.x-dev",
