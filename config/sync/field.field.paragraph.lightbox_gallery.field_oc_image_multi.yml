@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.field_oc_image_multi
-    - media_entity.bundle.image
+    - media.type.image
     - paragraphs.paragraphs_type.lightbox_gallery
 _core:
   default_config_hash: 7N8zzoIY7_ySdXkDit-7rA9FZHLy1_BAUYV_zhWilbM

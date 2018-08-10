@@ -6,15 +6,15 @@ dependencies:
     - field.storage.media.field_media_file
     - image.style.oc_thumbnail_large
     - image.style.thumbnail
-    - media_entity.bundle.document
-    - media_entity.bundle.image
-    - media_entity.bundle.video
+    - media.type.document
+    - media.type.image
+    - media.type.video
     - taxonomy.vocabulary.media_categories
   module:
     - entity_browser
     - file
     - image
-    - media_entity
+    - media
     - taxonomy
     - user
     - views_infinite_scroll

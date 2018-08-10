@@ -5,7 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.media.medium
     - field.field.media.video.field_media_video_embed_field
-    - media_entity.bundle.video
+    - media.type.video
   module:
     - layout_builder
     - layout_discovery

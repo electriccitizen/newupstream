@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   module:
-    - media_entity
+    - media
     - node
 _core:
   default_config_hash: I70de5MZZychz19Pj8W6doapspR01joSKK8Ey1Nm2kU

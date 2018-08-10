@@ -9,7 +9,7 @@ dependencies:
   module:
     - file
     - image
-    - media_entity
+    - media
     - taxonomy
     - user
 _core:
