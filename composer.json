@@ -43,6 +43,7 @@
     "drupal/addanother": "^1.0@RC",
     "drupal/addtoany": "~1",
     "drupal/admin_toolbar": "~1",
+    "drupal/advagg": "^3.5",
     "drupal/auto_entitylabel": "^2.0@beta",
     "drupal/components": "^1.0",
     "drupal/config_devel": "^1.2",
