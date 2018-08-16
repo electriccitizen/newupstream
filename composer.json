@@ -77,7 +77,6 @@
     "drupal/linkit": "^4.3",
     "drupal/media_entity": "^2.0",
     "drupal/media_entity_actions": "^1.0@alpha",
-    "drupal/media_entity_browser": "^2.0",
     "drupal/media_entity_document": "^1.1",
     "drupal/media_entity_generic": "^1.0@alpha",
     "drupal/media_entity_image": "^1.2",
