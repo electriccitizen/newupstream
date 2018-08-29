@@ -7,12 +7,35 @@ dependencies:
     - field.field.node.landing_page.field_banner
     - field.field.node.landing_page.field_metatags
     - field.field.node.landing_page.field_oc_widgets
-    - field.field.node.landing_page.field_use_as_background
-    - field.field.node.landing_page.panelizer
     - node.type.landing_page
   module:
+    - layout_builder
+    - layout_discovery
     - text
     - user
+third_party_settings:
+  layout_builder:
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          eebf7538-444f-4066-8968-37b326afcd81:
+            uuid: eebf7538-444f-4066-8968-37b326afcd81
+            region: content
+            configuration:
+              id: 'field_block:node:landing_page:body'
+              label_display: ''
+              formatter:
+                label: hidden
+                type: text_summary_or_trimmed
+                settings:
+                  trim_length: 600
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
 id: node.landing_page.teaser
 targetEntityType: node
 bundle: landing_page
@@ -29,10 +52,10 @@ content:
   links:
     weight: 100
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   addtoany: true
   field_banner: true
   field_metatags: true
   field_oc_widgets: true
-  field_use_as_background: true
-  panelizer: true

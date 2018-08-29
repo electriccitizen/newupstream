@@ -2,12 +2,11 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_form_mode.media.media_browser
+    - core.entity_form_mode.media.background_image
     - field.field.node.news.body
     - field.field.node.news.field_banner
     - field.field.node.news.field_category
     - field.field.node.news.field_metatags
-    - field.field.node.news.panelizer
     - node.type.news
   module:
     - entity_browser_entity_form
@@ -32,7 +31,7 @@ content:
   field_banner:
     weight: 1
     settings:
-      form_mode: media_browser
+      form_mode: background_image
       label_singular: ''
       label_plural: ''
       allow_new: true
@@ -69,6 +68,13 @@ content:
     weight: 5
     third_party_settings: {  }
     region: content
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 120
+    region: content
+    third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
@@ -84,7 +90,9 @@ content:
       placeholder: ''
     third_party_settings: {  }
     region: content
+  url_redirects:
+    weight: 50
+    region: content
 hidden:
   created: true
-  panelizer: true
   uid: true

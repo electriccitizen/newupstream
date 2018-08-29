@@ -5,8 +5,9 @@ dependencies:
     - menu_ui
 third_party_settings:
   menu_ui:
-    available_menus: {  }
-    parent: ''
+    available_menus:
+      - support-book
+    parent: 'support-book:'
 name: 'Support Book'
 type: support_book
 description: 'Add support pages.'

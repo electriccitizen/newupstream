@@ -3,33 +3,57 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.video.field_admin_description
-    - field.field.paragraph.video.field_layout
-    - field.field.paragraph.video.field_oc_long_text
     - field.field.paragraph.video.field_oc_video
     - field.field.paragraph.video.field_widget_title
     - paragraphs.paragraphs_type.video
   module:
-    - options
-    - text
+    - layout_builder
+    - layout_discovery
+third_party_settings:
+  layout_builder:
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          0d76da5e-a53d-4625-81d7-51cb59fe6ac8:
+            uuid: 0d76da5e-a53d-4625-81d7-51cb59fe6ac8
+            region: content
+            configuration:
+              id: 'field_block:paragraph:video:field_widget_title'
+              label_display: ''
+              formatter:
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+                type: string
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+          b481691a-e0fb-4471-92ab-604b65906c74:
+            uuid: b481691a-e0fb-4471-92ab-604b65906c74
+            region: content
+            configuration:
+              id: 'field_block:paragraph:video:field_oc_video'
+              label_display: ''
+              formatter:
+                label: hidden
+                settings:
+                  view_mode: default
+                  link: false
+                third_party_settings: {  }
+                type: entity_reference_entity_view
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 1
 id: paragraph.video.default
 targetEntityType: paragraph
 bundle: video
 mode: default
 content:
-  field_layout:
-    weight: 1
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: list_key
-    region: content
-  field_oc_long_text:
-    weight: 3
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
-    region: content
   field_oc_video:
     weight: 2
     label: hidden

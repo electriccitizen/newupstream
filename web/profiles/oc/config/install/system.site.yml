@@ -1,11 +1,12 @@
-name: 'OC Patterns'
+name: Upstream
 mail: info@electriccitizen.com
-slogan: ''
+slogan: 'The bird'
 page:
   403: ''
-  404: /search404
-  front: /node
+  404: /node/2
+  front: /node/3
 admin_compact_mode: false
 weight_select_max: 100
 langcode: en
 default_langcode: en
+mail_notification: ''

@@ -3,45 +3,78 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.call_to_action.field_admin_description
-    - field.field.paragraph.call_to_action.field_background_image
-    - field.field.paragraph.call_to_action.field_background_style
-    - field.field.paragraph.call_to_action.field_layout
     - field.field.paragraph.call_to_action.field_oc_link
     - field.field.paragraph.call_to_action.field_oc_long_text
     - field.field.paragraph.call_to_action.field_widget_title
     - paragraphs.paragraphs_type.call_to_action
   module:
+    - layout_builder
+    - layout_discovery
     - link
-    - options
     - text
+third_party_settings:
+  layout_builder:
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          e636d5e5-8d6a-4fdb-aab0-3f48776f51d1:
+            uuid: e636d5e5-8d6a-4fdb-aab0-3f48776f51d1
+            region: content
+            configuration:
+              id: 'field_block:paragraph:call_to_action:field_widget_title'
+              label_display: ''
+              formatter:
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+                type: string
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+          de4a2794-99eb-4372-8fa5-2b203ef3764f:
+            uuid: de4a2794-99eb-4372-8fa5-2b203ef3764f
+            region: content
+            configuration:
+              id: 'field_block:paragraph:call_to_action:field_oc_long_text'
+              label_display: ''
+              formatter:
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+                type: text_default
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 1
+          464511e5-efc1-4c56-b84d-e9999434c611:
+            uuid: 464511e5-efc1-4c56-b84d-e9999434c611
+            region: content
+            configuration:
+              id: 'field_block:paragraph:call_to_action:field_oc_link'
+              label_display: ''
+              formatter:
+                label: hidden
+                settings:
+                  trim_length: 80
+                  url_only: false
+                  url_plain: false
+                  rel: ''
+                  target: ''
+                third_party_settings: {  }
+                type: link
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 2
 id: paragraph.call_to_action.default
 targetEntityType: paragraph
 bundle: call_to_action
 mode: default
 content:
-  field_background_image:
-    weight: 5
-    label: hidden
-    settings:
-      link: true
-      view_mode: default
-    third_party_settings: {  }
-    type: entity_reference_entity_view
-    region: content
-  field_background_style:
-    weight: 4
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: list_key
-    region: content
-  field_layout:
-    weight: 1
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: list_key
-    region: content
   field_oc_link:
     weight: 3
     label: hidden

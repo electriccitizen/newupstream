@@ -4,12 +4,35 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.support_book.body
-    - field.field.node.support_book.field_oc_widgets
-    - field.field.node.support_book.panelizer
     - node.type.support_book
   module:
+    - layout_builder
+    - layout_discovery
     - text
     - user
+third_party_settings:
+  layout_builder:
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          f05c4bc2-9f63-4a0c-9fad-287fb9756cb2:
+            uuid: f05c4bc2-9f63-4a0c-9fad-287fb9756cb2
+            region: content
+            configuration:
+              id: 'field_block:node:support_book:body'
+              label_display: ''
+              formatter:
+                label: hidden
+                type: text_summary_or_trimmed
+                settings:
+                  trim_length: 600
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
 id: node.support_book.teaser
 targetEntityType: node
 bundle: support_book
@@ -26,7 +49,7 @@ content:
   links:
     weight: 100
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   addtoany: true
-  field_oc_widgets: true
-  panelizer: true

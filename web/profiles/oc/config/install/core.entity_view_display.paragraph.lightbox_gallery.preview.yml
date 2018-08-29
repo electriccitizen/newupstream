@@ -4,12 +4,35 @@ dependencies:
   config:
     - core.entity_view_mode.paragraph.preview
     - field.field.paragraph.lightbox_gallery.field_admin_description
-    - field.field.paragraph.lightbox_gallery.field_layout
     - field.field.paragraph.lightbox_gallery.field_oc_image_multi
     - field.field.paragraph.lightbox_gallery.field_widget_title
     - paragraphs.paragraphs_type.lightbox_gallery
   module:
-    - options
+    - layout_builder
+    - layout_discovery
+third_party_settings:
+  layout_builder:
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          8717e177-f26e-4a61-b525-a12fe665ae12:
+            uuid: 8717e177-f26e-4a61-b525-a12fe665ae12
+            region: content
+            configuration:
+              id: 'field_block:paragraph:lightbox_gallery:field_admin_description'
+              label_display: ''
+              formatter:
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+                type: string
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
 id: paragraph.lightbox_gallery.preview
 targetEntityType: paragraph
 bundle: lightbox_gallery
@@ -22,13 +45,6 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
-    region: content
-  field_layout:
-    weight: 1
-    label: inline
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
     region: content
 hidden:
   field_oc_image_multi: true

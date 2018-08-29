@@ -2,11 +2,12 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.user.user.user_picture
-    - image.style.thumbnail
+    - core.entity_form_mode.media.background_image
+    - field.field.user.user.field_user_image
+    - field.field.user.user.field_user_quick_links
   module:
-    - image
-    - path
+    - entity_browser_entity_form
+    - inline_entity_form
     - user
 id: user.user.default
 targetEntityType: user
@@ -14,29 +15,33 @@ bundle: user
 mode: default
 content:
   account:
-    weight: -10
-    region: content
-  contact:
-    weight: 5
-    region: content
-  language:
     weight: 0
-    region: content
-  path:
-    type: path
-    weight: 30
     region: content
     settings: {  }
     third_party_settings: {  }
-  timezone:
-    weight: 6
+  contact:
+    weight: 5
     region: content
-  user_picture:
-    type: image_image
+  field_user_image:
+    weight: 1
     settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    weight: -1
+      form_mode: background_image
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      override_labels: false
+      collapsible: false
+      collapsed: false
+      allow_duplicate: false
+    third_party_settings:
+      entity_browser_entity_form:
+        entity_browser_id: image_browser
+    type: inline_entity_form_complex
     region: content
-hidden: {  }
+hidden:
+  field_user_quick_links: true
+  language: true
+  path: true
+  timezone: true

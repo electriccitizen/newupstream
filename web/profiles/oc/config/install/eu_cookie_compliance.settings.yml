@@ -1,0 +1,57 @@
+cookie_lifetime: 200
+domain: ''
+domains_option: 1
+domains_list: ''
+eu_only: null
+eu_only_js: null
+exclude_paths: "/admin\r\n/admin/*\r\n/batch\r\n/node/add*\r\n/node/*/*\r\n/user/*/*"
+exclude_admin_theme: false
+langcode: en
+popup_agreed:
+  value: '<h2>Thank you for accepting cookies</h2><p>You can now hide this message or find out more about cookies.</p>'
+  format: restricted_html
+popup_agree_button_message: 'I Agree'
+popup_agreed_enabled: false
+popup_bg_hex: ''
+popup_clicking_confirmation: true
+popup_scrolling_confirmation: false
+popup_delay: 500
+show_disagree_button: true
+popup_disagree_button_message: 'More Info'
+popup_enabled: true
+popup_find_more_button_message: 'More Info'
+popup_height: null
+popup_hide_agreed: true
+popup_hide_button_message: Hide
+popup_info:
+  value: '<h2>We use cookies on this site to enhance your user experience.</h2><p>By clicking any link on this page you are giving your consent for us to set cookies.</p>'
+  format: restricted_html
+mobile_popup_info:
+  value: ''
+  format: basic_html
+mobile_breakpoint: 768
+popup_link: /node/8
+popup_link_new_window: true
+popup_position: true
+fixed_top_position: true
+popup_text_hex: ''
+popup_width: ''
+use_bare_css: true
+disagree_do_not_show_popup: false
+reload_page: false
+cookie_name: ''
+exclude_uid_1: false
+better_support_for_screen_readers: false
+use_mobile_message: false
+cookie_session: 0
+method: default
+disagree_button_label: 'No, thanks'
+whitelisted_cookies: ''
+disabled_javascripts: ''
+consent_storage_method: do_not_store
+withdraw_message:
+  value: '<h2>We use cookies on this site to enhance your user experience</h2><p>You have given your consent for us to set cookies.</p>'
+  format: full_html
+withdraw_action_button_label: 'Withdraw consent'
+withdraw_tab_button_label: 'Privacy settings'
+withdraw_enabled: false

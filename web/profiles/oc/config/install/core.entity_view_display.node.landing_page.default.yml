@@ -6,150 +6,118 @@ dependencies:
     - field.field.node.landing_page.field_banner
     - field.field.node.landing_page.field_metatags
     - field.field.node.landing_page.field_oc_widgets
-    - field.field.node.landing_page.field_use_as_background
-    - field.field.node.landing_page.panelizer
     - node.type.landing_page
   module:
     - entity_reference_revisions
+    - layout_builder
+    - layout_discovery
     - metatag
-    - panelizer
+    - system
     - text
     - user
 third_party_settings:
-  panelizer:
-    enable: true
-    custom: true
-    allow: true
-    default: default
-    displays:
-      default:
-        blocks:
-          cc5ec35d-5181-40ba-85de-37f989a4fd42:
-            id: 'entity_field:node:title'
-            label: Title
-            provider: ctools_block
-            label_display: '0'
-            formatter:
-              label: hidden
-              type: string
-              settings:
-                link_to_entity: false
-              third_party_settings: {  }
-              weight: 0
-              region: content
-            region: top
-            weight: -1
-            context_mapping:
-              entity: '@panelizer.entity_context:entity'
-            uuid: cc5ec35d-5181-40ba-85de-37f989a4fd42
-          af93de64-c923-429c-b4fd-7641fd362112:
-            id: 'entity_field:node:body'
-            label: Body
-            provider: ctools_block
-            label_display: '0'
-            formatter:
-              label: hidden
-              type: text_default
-              settings: {  }
-              third_party_settings: {  }
-              weight: 0
-              region: content
-            region: main
-            weight: -2
-            context_mapping:
-              entity: '@panelizer.entity_context:entity'
-            uuid: af93de64-c923-429c-b4fd-7641fd362112
-          bed98e09-b5a4-4ce0-810b-a5ad26e28c90:
-            id: 'entity_field:node:field_banner'
-            label: Banner
-            provider: ctools_block
-            label_display: '0'
-            formatter:
-              label: hidden
-              type: entity_reference_entity_view
-              settings:
-                view_mode: banner_tall
-              third_party_settings: {  }
-              weight: 0
-              region: content
-            region: top
-            weight: -3
-            context_mapping:
-              entity: '@panelizer.entity_context:entity'
-            uuid: bed98e09-b5a4-4ce0-810b-a5ad26e28c90
-          2546e9ea-3be3-42fd-87d4-63e2f45c4ef3:
-            id: 'entity_field:node:field_oc_widgets'
-            label: Widgets
-            provider: ctools_block
-            label_display: '0'
-            formatter:
-              label: hidden
-              type: entity_reference_revisions_entity_view
-              settings:
-                view_mode: default
-              third_party_settings: {  }
-              weight: 0
-              region: content
-            region: main
-            weight: -1
-            context_mapping:
-              entity: '@panelizer.entity_context:entity'
-            uuid: 2546e9ea-3be3-42fd-87d4-63e2f45c4ef3
-          eadec068-631a-4617-8992-e92000011881:
-            id: 'entity_field:node:field_use_as_background'
-            label: 'Use as Background'
-            provider: ctools_block
-            label_display: '0'
-            formatter:
-              label: hidden
-              type: boolean
-              settings:
-                format: default
-                format_custom_true: ''
-                format_custom_false: ''
-              third_party_settings: {  }
-              weight: 0
-              region: content
-            region: top
-            weight: 0
-            context_mapping:
-              entity: '@panelizer.entity_context:entity'
-            uuid: eadec068-631a-4617-8992-e92000011881
-          6bc4426f-84e4-480e-bdfa-44eef6803301:
-            id: 'menu_block:main'
-            label: 'Main navigation'
-            provider: menu_block
-            label_display: '0'
-            level: 1
-            depth: 0
-            expand: 1
-            parent: 'main:'
-            suggestion: main
-            region: top
-            weight: 1
-            uuid: 6bc4426f-84e4-480e-bdfa-44eef6803301
-            context_mapping: {  }
-          b097564e-29f7-4ffe-9efe-5f086d3cdffd:
-            id: system_breadcrumb_block
-            label: Breadcrumbs
-            provider: system
-            label_display: '0'
-            region: top
-            weight: -2
-            uuid: b097564e-29f7-4ffe-9efe-5f086d3cdffd
-            context_mapping: {  }
-        id: panels_variant
-        label: Default
-        uuid: cfb3f498-2997-474e-81fc-71ef6ef23762
-        weight: 0
-        layout: kermit
+  layout_builder:
+    sections:
+      -
+        layout_id: layout_onecol
         layout_settings: {  }
-        page_title: null
-        storage_type: panelizer_default
-        storage_id: 'node:landing_page:default:default'
-        builder: ipe
-        pattern: panelizer
-        static_context: {  }
+        components:
+          d6a1eb18-ea64-4550-9cb4-9e9d91664720:
+            uuid: d6a1eb18-ea64-4550-9cb4-9e9d91664720
+            region: content
+            configuration:
+              id: system_breadcrumb_block
+              label: Breadcrumbs
+              provider: system
+              label_display: '0'
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          02d32b97-5752-4d0f-8eb3-de3413b50d8b:
+            uuid: 02d32b97-5752-4d0f-8eb3-de3413b50d8b
+            region: content
+            configuration:
+              id: 'field_block:node:landing_page:field_banner'
+              label: Banner
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: banner
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 1
+          2d62265e-ae58-4309-8608-eadd292e3358:
+            uuid: 2d62265e-ae58-4309-8608-eadd292e3358
+            region: content
+            configuration:
+              id: 'field_block:node:landing_page:title'
+              label: Title
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: string
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 2
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          76bf8cbb-ca39-45d8-9276-f923e8550fc4:
+            uuid: 76bf8cbb-ca39-45d8-9276-f923e8550fc4
+            region: content
+            configuration:
+              id: 'field_block:node:landing_page:body'
+              label: Body
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          9fd7c5d5-6dd2-4880-96e2-943963f774ee:
+            uuid: 9fd7c5d5-6dd2-4880-96e2-943963f774ee
+            region: content
+            configuration:
+              id: 'field_block:node:landing_page:field_oc_widgets'
+              label: Widgets
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_revisions_entity_view
+                settings:
+                  view_mode: default
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+    allow_custom: false
+    is_enabled: true
 id: node.landing_page.default
 targetEntityType: node
 bundle: landing_page
@@ -186,16 +154,6 @@ content:
     third_party_settings: {  }
     type: entity_reference_revisions_entity_view
     region: content
-  field_use_as_background:
-    weight: 104
-    label: above
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    type: boolean
-    region: content
   links:
     weight: 100
     region: content
@@ -203,4 +161,4 @@ content:
     third_party_settings: {  }
 hidden:
   addtoany: true
-  panelizer: true
+  layout_builder__layout: true

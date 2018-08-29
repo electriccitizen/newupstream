@@ -5,13 +5,36 @@ dependencies:
     - core.entity_view_mode.paragraph.preview
     - field.field.paragraph.admin_view_placer.field_admin_description
     - field.field.paragraph.admin_view_placer.field_display_machine_name
-    - field.field.paragraph.admin_view_placer.field_layout
     - field.field.paragraph.admin_view_placer.field_view_machine_name
     - field.field.paragraph.admin_view_placer.field_viewfield
     - field.field.paragraph.admin_view_placer.field_widget_title
     - paragraphs.paragraphs_type.admin_view_placer
   module:
-    - options
+    - layout_builder
+    - layout_discovery
+third_party_settings:
+  layout_builder:
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          456df00e-be27-4253-8f66-dec792b62b05:
+            uuid: 456df00e-be27-4253-8f66-dec792b62b05
+            region: content
+            configuration:
+              id: 'field_block:paragraph:admin_view_placer:field_admin_description'
+              label_display: ''
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
 id: paragraph.admin_view_placer.preview
 targetEntityType: paragraph
 bundle: admin_view_placer
@@ -24,13 +47,6 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    region: content
-  field_layout:
-    weight: 1
-    label: inline
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
     region: content
 hidden:
   field_display_machine_name: true

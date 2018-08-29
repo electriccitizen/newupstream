@@ -4,16 +4,36 @@ dependencies:
   config:
     - core.entity_view_mode.paragraph.preview
     - field.field.paragraph.links_files.field_admin_description
-    - field.field.paragraph.links_files.field_background_image
-    - field.field.paragraph.links_files.field_background_style
-    - field.field.paragraph.links_files.field_layout
     - field.field.paragraph.links_files.field_oc_file_multi
     - field.field.paragraph.links_files.field_oc_link_multi
-    - field.field.paragraph.links_files.field_oc_long_text
     - field.field.paragraph.links_files.field_widget_title
     - paragraphs.paragraphs_type.links_files
   module:
-    - options
+    - layout_builder
+    - layout_discovery
+third_party_settings:
+  layout_builder:
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          686b542b-711c-41b9-8972-39550ad31597:
+            uuid: 686b542b-711c-41b9-8972-39550ad31597
+            region: content
+            configuration:
+              id: 'field_block:paragraph:links_files:field_admin_description'
+              label_display: ''
+              formatter:
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+                type: string
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
 id: paragraph.links_files.preview
 targetEntityType: paragraph
 bundle: links_files
@@ -27,17 +47,7 @@ content:
     third_party_settings: {  }
     type: string
     region: content
-  field_layout:
-    weight: 1
-    label: inline
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: content
 hidden:
-  field_background_image: true
-  field_background_style: true
   field_oc_file_multi: true
   field_oc_link_multi: true
-  field_oc_long_text: true
   field_widget_title: true

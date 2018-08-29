@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: support-book
+label: 'Support Book'
+description: 'Support book sidebar menu'
+locked: false

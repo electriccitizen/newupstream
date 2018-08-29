@@ -12,16 +12,10 @@ settings:
   allowed_values:
     -
       value: grey
-      label: grey
-    -
-      value: blue
-      label: blue
-    -
-      value: orange
-      label: orange
+      label: Grey
     -
       value: image
-      label: image
+      label: Image
   allowed_values_function: ''
 module: options
 locked: false

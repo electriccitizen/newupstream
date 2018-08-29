@@ -4,13 +4,35 @@ dependencies:
   config:
     - core.entity_view_mode.paragraph.preview
     - field.field.paragraph.form.field_admin_description
-    - field.field.paragraph.form.field_layout
     - field.field.paragraph.form.field_oc_form
-    - field.field.paragraph.form.field_oc_long_text
     - field.field.paragraph.form.field_widget_title
     - paragraphs.paragraphs_type.form
   module:
-    - options
+    - layout_builder
+    - layout_discovery
+third_party_settings:
+  layout_builder:
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          e4b52277-b5d6-4950-9e83-e09610010b72:
+            uuid: e4b52277-b5d6-4950-9e83-e09610010b72
+            region: content
+            configuration:
+              id: 'field_block:paragraph:form:field_admin_description'
+              label_display: ''
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
 id: paragraph.form.preview
 targetEntityType: paragraph
 bundle: form
@@ -24,14 +46,6 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     region: content
-  field_layout:
-    weight: 1
-    label: inline
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: content
 hidden:
   field_oc_form: true
-  field_oc_long_text: true
   field_widget_title: true

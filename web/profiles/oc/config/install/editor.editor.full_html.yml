@@ -29,6 +29,8 @@ settings:
           items:
             - BulletedList
             - NumberedList
+            - Indent
+            - Outdent
         -
           name: Media
           items:
@@ -36,17 +38,26 @@ settings:
         -
           name: Miscellaneous
           items:
-            - Linkit
-            - DrupalUnlink
             - Table
             - HorizontalRule
-            - Blockquote
+            - Linkit
+            - DrupalUnlink
             - Maximize
         -
           name: Tools
           items:
             - RemoveFormat
             - Source
+            - Undo
+            - Redo
+        -
+          name: Pasting
+          items:
+            - Cut
+            - Copy
+            - Paste
+            - PasteFromWord
+            - PasteText
         -
           name: 'Block Formatting'
           items:
@@ -56,10 +67,10 @@ settings:
           items:
             - Styles
   plugins:
+    stylescombo:
+      styles: "span.highlight|Highlight\r\ndiv.warning|Warning\r\nsmall|Small"
     language:
       language_list: un
-    stylescombo:
-      styles: span.highlight|highlight
     linkit:
       linkit_profile: wysiwyg
 image_upload:

@@ -4,22 +4,30 @@ dependencies:
   config:
     - core.entity_view_mode.paragraph.preview
     - field.field.paragraph.accordion_item.field_accordion_header
-    - field.field.paragraph.accordion_item.field_admin_description
     - field.field.paragraph.accordion_item.field_oc_long_text
     - paragraphs.paragraphs_type.accordion_item
+  module:
+    - layout_builder
+    - layout_discovery
+third_party_settings:
+  layout_builder:
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components: {  }
 id: paragraph.accordion_item.preview
 targetEntityType: paragraph
 bundle: accordion_item
 mode: preview
 content:
-  field_admin_description:
+  field_accordion_header:
     type: string
     weight: 0
+    region: content
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    region: content
 hidden:
-  field_accordion_header: true
   field_oc_long_text: true

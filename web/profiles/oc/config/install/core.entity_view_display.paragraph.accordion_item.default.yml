@@ -3,11 +3,50 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.accordion_item.field_accordion_header
-    - field.field.paragraph.accordion_item.field_admin_description
     - field.field.paragraph.accordion_item.field_oc_long_text
     - paragraphs.paragraphs_type.accordion_item
   module:
+    - layout_builder
+    - layout_discovery
     - text
+third_party_settings:
+  layout_builder:
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          3dc09d3a-0ffb-4fe6-9db7-f04501124379:
+            uuid: 3dc09d3a-0ffb-4fe6-9db7-f04501124379
+            region: content
+            configuration:
+              id: 'field_block:paragraph:accordion_item:field_accordion_header'
+              label_display: ''
+              formatter:
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+                type: string
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+          c15bb32c-a2a2-4b23-aa65-2b83172f8348:
+            uuid: c15bb32c-a2a2-4b23-aa65-2b83172f8348
+            region: content
+            configuration:
+              id: 'field_block:paragraph:accordion_item:field_oc_long_text'
+              label_display: ''
+              formatter:
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+                type: text_default
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 1
 id: paragraph.accordion_item.default
 targetEntityType: paragraph
 bundle: accordion_item
@@ -28,5 +67,4 @@ content:
     third_party_settings: {  }
     type: text_default
     region: content
-hidden:
-  field_admin_description: true
+hidden: {  }

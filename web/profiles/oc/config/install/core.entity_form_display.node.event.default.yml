@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_form_mode.media.media_browser
+    - core.entity_form_mode.media.background_image
     - field.field.node.event.body
     - field.field.node.event.field_banner
     - field.field.node.event.field_category
@@ -10,7 +10,6 @@ dependencies:
     - field.field.node.event.field_event_pin_info
     - field.field.node.event.field_metatags
     - field.field.node.event.field_oc_date
-    - field.field.node.event.panelizer
     - node.type.event
   module:
     - datetime
@@ -37,7 +36,7 @@ content:
   field_banner:
     weight: 1
     settings:
-      form_mode: media_browser
+      form_mode: background_image
       label_singular: ''
       label_plural: ''
       allow_new: true
@@ -56,7 +55,7 @@ content:
     type: options_select
     region: content
   field_event_location:
-    weight: 6
+    weight: 5
     settings:
       default_longitude: ''
       default_latitude: ''
@@ -75,7 +74,7 @@ content:
         fullscreenControl: 1
         gestureHandling: auto
         draggable: 1
-        style: '[{"featureType":"administrative","elementType":"geometry","stylers":[{"saturation":"1"}]},{"featureType":"administrative.country","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"administrative.country","elementType":"labels","stylers":[{"saturation":"-100"}]},{"featureType":"administrative.province","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"administrative.province","elementType":"labels","stylers":[{"lightness":"1"},{"saturation":"-100"}]},{"featureType":"administrative.locality","elementType":"geometry","stylers":[{"saturation":"-100"},{"visibility":"off"},{"hue":"#ff0000"}]},{"featureType":"administrative.locality","elementType":"geometry.fill","stylers":[{"saturation":"4"}]},{"featureType":"administrative.locality","elementType":"labels","stylers":[{"saturation":"-100"}]},{"featureType":"administrative.neighborhood","elementType":"geometry","stylers":[{"saturation":"-100"}]},{"featureType":"administrative.neighborhood","elementType":"labels","stylers":[{"saturation":"-100"}]},{"featureType":"administrative.land_parcel","elementType":"geometry","stylers":[{"saturation":"-100"}]},{"featureType":"administrative.land_parcel","elementType":"labels","stylers":[{"saturation":"-100"}]},{"featureType":"landscape","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"visibility":"off"},{"saturation":"-100"}]},{"featureType":"landscape","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#ffffff"}]},{"featureType":"landscape","elementType":"geometry.stroke","stylers":[{"visibility":"on"}]},{"featureType":"landscape.man_made","elementType":"all","stylers":[{"saturation":"4"}]},{"featureType":"landscape.man_made","elementType":"geometry","stylers":[{"saturation":"-100"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi.attraction","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"lightness":"16"},{"saturation":"-7"}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"saturation":"0"}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"saturation":"-100"}]},{"featureType":"water","elementType":"all","stylers":[{"visibility":"on"},{"color":"#002855"}]},{"featureType":"water","elementType":"geometry","stylers":[{"weight":"1.12"}]},{"featureType":"water","elementType":"geometry.fill","stylers":[{"lightness":"0"}]},{"featureType":"water","elementType":"geometry.stroke","stylers":[{"weight":"0.50"},{"lightness":"0"}]},{"featureType":"water","elementType":"labels","stylers":[{"weight":"0.50"},{"color":"#ffffff"}]}]'
+        style: '[{"featureType":"all","elementType":"labels.text.fill","stylers":[{"color":"#736c68"}]},{"featureType":"landscape.man_made","elementType":"geometry.fill","stylers":[{"color":"#e7e6e5"}]},{"featureType":"landscape.natural","elementType":"all","stylers":[{"visibility":"on"},{"color":"#d4e4d3"}]},{"featureType":"poi","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#f5f5f5"}]},{"featureType":"poi.park","elementType":"geometry.fill","stylers":[{"color":"#d4e4d3"}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"color":"#f5f5f5"}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"color":"#e7e6e5"},{"gamma":"0.65"},{"lightness":"0"}]},{"featureType":"transit","elementType":"labels.text","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#aad5df"}]}]'
         info_auto_display: 1
         marker_icon_path: ''
         disableAutoPan: 1
@@ -91,7 +90,7 @@ content:
     type: geolocation_googlegeocoder
     region: content
   field_event_pin_info:
-    weight: 5
+    weight: 6
     settings:
       rows: 5
       placeholder: ''
@@ -99,7 +98,7 @@ content:
     type: text_textarea
     region: content
   field_metatags:
-    weight: 26
+    weight: 10
     settings: {  }
     third_party_settings: {  }
     type: metatag_firehose
@@ -123,6 +122,13 @@ content:
     weight: 7
     third_party_settings: {  }
     region: content
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 11
+    region: content
+    third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
@@ -138,7 +144,11 @@ content:
       placeholder: ''
     third_party_settings: {  }
     region: content
+  url_redirects:
+    weight: 50
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   created: true
-  panelizer: true
   uid: true

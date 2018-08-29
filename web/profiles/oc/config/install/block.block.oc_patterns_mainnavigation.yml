@@ -10,7 +10,7 @@ dependencies:
 id: oc_patterns_mainnavigation
 theme: oc_patterns
 region: header
-weight: -3
+weight: -2
 provider: null
 plugin: 'superfish:main'
 settings:

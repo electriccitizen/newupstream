@@ -1,0 +1,10 @@
+ignored_config_entities:
+  0: 'webform.webform.*'
+  2: 'xmlsitemap.*'
+  4: xmlsitemap_engines.settings
+  6: system.performance.yml
+  8: advagg_bundler.settings.yml
+  10: advagg_css_minify.settings.yml
+  12: advagg_js_minify.settings.yml
+  14: advagg_mod.settings.yml
+  16: advagg.settings.yml

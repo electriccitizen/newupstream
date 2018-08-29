@@ -2,8 +2,8 @@ langcode: en
 status: true
 dependencies:
   module:
-    - media_entity
+    - media
 id: media.background_image
-label: 'Background Image'
+label: Non-caption
 targetEntityType: media
 cache: true

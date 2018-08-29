@@ -3,10 +3,36 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.media.small
+    - field.field.media.document.field_media_categories
     - field.field.media.document.field_media_file
-    - media_entity.bundle.document
+    - media.type.document
   module:
     - file
+    - layout_builder
+    - layout_discovery
+third_party_settings:
+  layout_builder:
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          6e4ce8ba-9595-455b-8af9-fc1938024fd0:
+            uuid: 6e4ce8ba-9595-455b-8af9-fc1938024fd0
+            region: content
+            configuration:
+              id: 'field_block:media:document:field_media_file'
+              label_display: ''
+              formatter:
+                type: file_default
+                label: hidden
+                settings:
+                  use_description_as_link_text: true
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
 id: media.document.small
 targetEntityType: media
 bundle: document
@@ -16,11 +42,13 @@ content:
     type: file_default
     weight: 0
     label: hidden
-    settings: {  }
+    settings:
+      use_description_as_link_text: true
     third_party_settings: {  }
     region: content
 hidden:
   created: true
+  field_media_categories: true
   name: true
   thumbnail: true
   uid: true
