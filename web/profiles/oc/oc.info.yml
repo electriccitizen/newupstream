@@ -64,7 +64,6 @@ dependencies:
   - linkit
   - media
   - media_entity_actions
-  - media_generic
   - menu_block
   - menu_ui
   - metatag
