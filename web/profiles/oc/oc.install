@@ -47,13 +47,13 @@ function oc_standard_install() {
 
   // Enable the Contact link in the footer menu.
   /** @var \Drupal\Core\Menu\MenuLinkManagerInterface $menu_link_manager */
-  $menu_link_manager = \Drupal::service('plugin.manager.menu.link');
-  $menu_link_manager->updateDefinition('contact.site_page', ['enabled' => TRUE]);
+  //$menu_link_manager = \Drupal::service('plugin.manager.menu.link');
+  //$menu_link_manager->updateDefinition('contact.site_page', ['enabled' => TRUE]);
 
   // Create a home link in main menu.
   /** @var \Drupal\Core\Menu\MenuLinkManagerInterface $menu_link_manager */
-  $menu_link_manager = \Drupal::service('plugin.manager.menu.link');
-  $menu_link_manager->updateDefinition('contact.site_page', ['enabled' => TRUE]);
+  //$menu_link_manager = \Drupal::service('plugin.manager.menu.link');
+  //$menu_link_manager->updateDefinition('contact.site_page', ['enabled' => TRUE]);
 
 
   user_role_grant_permissions(RoleInterface::ANONYMOUS_ID, ['access site-wide contact form']);
