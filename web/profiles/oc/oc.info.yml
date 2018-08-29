@@ -59,6 +59,7 @@ dependencies:
   - link
   - link_attributes
   - linkit
+  - media
   - menu_block
   - menu_ui
   - metatag
