@@ -5,7 +5,6 @@ dependencies:
     - 'file:file:5f1a7629-2f9c-4257-a0b1-6027d71e574c'
   module:
     - entity_embed
-    - media_entity
   config:
     - core.entity_view_mode.media.full
     - core.entity_view_mode.media.large

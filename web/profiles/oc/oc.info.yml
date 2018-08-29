@@ -10,11 +10,13 @@ dependencies:
   - auto_entitylabel
   - automated_cron
   - block
+  - block_content
   - breakpoint
   - ckeditor
   - color
   - components
   - config
+  - config_split
   - config_update
   - config_update
   - config_update_ui
@@ -35,6 +37,7 @@ dependencies:
   - entity_browser_entity_form
   - entity_embed
   - entity_reference_revisions
+  - environment_indicator
   - field
   - field_group
   - field_ui
@@ -50,6 +53,7 @@ dependencies:
   - image_style_quality
   - inline_entity_form
   - kint
+  - layout_builder
   - layout_discovery
   - libraries
   - link
@@ -79,6 +83,7 @@ dependencies:
   - text
   - token
   - toolbar
+  - tour
   - twig_tweak
   - user
   - video_embed_field
