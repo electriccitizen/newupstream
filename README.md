@@ -1,10 +1,10 @@
-# Newupstream
+# New Upstream
 
 [![CircleCI](https://circleci.com/gh/electriccitizen/newupstream.svg?style=shield)](https://circleci.com/gh/electriccitizen/newupstream)
 [![Dashboard newupstream](https://img.shields.io/badge/dashboard-newupstream-yellow.svg)](https://dashboard.pantheon.io/sites/9ec12d94-c804-44b7-968e-166a0b49fdc0#dev/code)
 [![Dev Site newupstream](https://img.shields.io/badge/site-newupstream-blue.svg)](http://dev-newupstream.pantheonsite.io/)
 
-Newupstream is a Composer-based Drupal 8 application hosted on [Pantheon](http://dashboard.getpantheon.com). Follow this README to create your local environment, and to learn the best practices for effectively contributing to the project.
+New Upstream is a Composer-based Drupal 8 application hosted on [Pantheon](http://dashboard.getpantheon.com). Follow this README to create your local environment, and to learn the best practices for effectively contributing to the project.
 
 ## Onboarding
 
@@ -29,6 +29,18 @@ Once the site is up, you are ready to start working:
 * User: admin/admin (local)
 
 You can run [fin init](docs/commands/INIT.md) any time you want to reset or guarantee that your local environment is in a safe one-to-one state with your upstream environment. 
+
+Here are some other helpful ```fin``` commands that you will likely use in your day-to-day work:
+
+```fin start``` to start your project services (or ```fin up``` if you need to re-load configuration for xdebug etc.)
+
+```fin stop``` to stop your project services (recommended)
+
+See (working with Docksal)[docs/local/DOCKSAL.md] for additional Docksal commands and tips. 
+
+See [troubleshooting Docksal](docs/local/TROUBLESHOOT.md) if things go bad.
+
+
 
 ## Recommended workflow
 

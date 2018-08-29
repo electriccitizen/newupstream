@@ -5,7 +5,7 @@ The ```fin sync``` command is used to reset your local environment against the u
 
 1. ```fin up``` (or ```fin reset```) to verify and recreate Docksal services
 
-2. ```git status``` to check for a clean feature branch
+2. ```git status``` to check for a clean branch
 
 3. ```git pull``` against the upstream branch to make sure you have the latest code
 
@@ -25,7 +25,7 @@ After running ```fin sync``` successfully, you will have an exact clone of the u
 
 **Flags**
 
-```--skipdb``` will allow you to skip the database sync. This cna be helpful if you have sample content you wish to preserve.
+```--skipdb``` will allow you to skip the database sync. This can be helpful if you have sample content you wish to preserve.
 
 ```--skipcim``` will allow you to skip the configuration import. This can be useful if you need to capture active configuration from the upstream site that has not been exported to code.
 
