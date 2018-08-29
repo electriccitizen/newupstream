@@ -1,5 +1,5 @@
 {
-  "name": "pantheon-systems/example-drops-8-composer",
+  "name": "electriccitizen/newupstream",
   "description": "Install drops-8 with Composer on Pantheon using EC build.",
   "type": "project",
   "license": "MIT",
