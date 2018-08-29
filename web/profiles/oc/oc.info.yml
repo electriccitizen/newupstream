@@ -4,6 +4,7 @@ description: 'Pre-configured install for Electric Citizen site builds.'
 version: 1.0
 core: 8.x
 dependencies:
+  - advagg
   - addanother
   - addtoany
   - admin_toolbar
@@ -16,6 +17,7 @@ dependencies:
   - color
   - components
   - config
+  - config_ignore
   - config_split
   - config_update
   - config_update
@@ -38,6 +40,7 @@ dependencies:
   - entity_embed
   - entity_reference_revisions
   - environment_indicator
+  - extlink
   - field
   - field_group
   - field_ui
@@ -60,6 +63,8 @@ dependencies:
   - link_attributes
   - linkit
   - media
+  - media_entity_actions
+  - media_generic
   - menu_block
   - menu_ui
   - metatag
