@@ -34,12 +34,3 @@
 	@include textContent;
 	@include spacer(3);
 }
-
-
-
-/* unpub NODES
----------------------- */
-.node--unpub{
-	background: $unpub;
-	border-top: 20px solid $unpubDark;
-}

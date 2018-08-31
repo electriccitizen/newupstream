@@ -10,8 +10,8 @@ js_adjust_sort_browsers: false
 js_adjust_sort_external: false
 js_async: false
 js_async_in_header: false
-js_defer: 2
-js_preprocess: true
+js_defer: 0
+js_preprocess: false
 prefetch: null
 _core:
   default_config_hash: DIsgflQr3uh-j0GWnPgGhZn0yCXGdImu4-u1m2Uv9IY

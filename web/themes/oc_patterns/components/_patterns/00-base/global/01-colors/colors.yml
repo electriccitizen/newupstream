@@ -30,7 +30,7 @@ items:
   - name: $imgOverlay
     value: 'rgba(35,35,35,0.4)'
   - name: $unpub
-    value: '#fff4fa'
+    value: '#f8e8f1'
   - name: $unpubDark
     value: '#fdd5dd'
   - name: $siteBack

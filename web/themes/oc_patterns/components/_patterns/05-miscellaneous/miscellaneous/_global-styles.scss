@@ -13,6 +13,12 @@ body {
 			box-sizing: inherit;
 		}
 	}
+	&.unpublished{
+		background: $unpub;
+		.node-content{
+			border-top: 20px solid $unpubDark;
+		}
+	}
 }
 
 .container-inline div{
@@ -177,7 +183,6 @@ body {
 	padding: 30px 20px 20px;
 	position: relative;
 	@include auto;
-	@include spacer(1);
 	&:after{
 		@include fullBack($darkGrey);
 	}

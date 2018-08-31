@@ -24,3 +24,13 @@
 	}
 }//end layout builder section region
 
+//style entity block links different than normal block links in settings tray
+#drupal-off-canvas{
+	.block-categories{
+		.links{
+			a[href*="content/entity_field"]{
+				opacity: .4;
+			}
+		}
+	}
+}
