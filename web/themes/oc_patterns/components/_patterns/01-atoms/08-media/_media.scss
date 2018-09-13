@@ -78,11 +78,11 @@ img{
 ---------------------- */
 .media-document .file{
 	&:hover,&:focus{
-		i{
+		.fa{
 			opacity: .7;
 		}
 	}
-	i{
+	.fa{
 		margin-right: .5em;
 		color: $body;
 		font-size: 18px;
