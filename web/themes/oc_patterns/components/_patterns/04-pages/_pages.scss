@@ -113,9 +113,11 @@ article.user-dashboard{
 				@include spacer(1);
 				a{
 					width: 240px;
-					height: 75px;
+					height: 55px;
 					display: table-cell;
 					vertical-align: middle;
+					font-size: 16px;
+					padding: 0;
 				}
 			}
 		}
