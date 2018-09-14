@@ -41,16 +41,16 @@
 	<h2 class="block-title">Quick Links</h2>
 	<div class="links-list">
 		<ul>
-			<li><a href="/admin/content" role="button" class="button">All Content</a></li>
-			<li><a href="/node/add" role="button" class="button">Add Content</a></li>
-			<li><a href="/admin/structure/block/block-content" role="button" class="button">Custom Block Library</a></li>
+			<li><a href="/admin/content" role="button" class="button-outline">All Content</a></li>
+			<li><a href="/node/add" role="button" class="button-outline">Add Content</a></li>
+			<li><a href="/admin/structure/block/block-content" role="button" class="button-outline">Custom Block Library</a></li>
 			{% if 'administrator' in user.getroles %}
-				<li><a href="/admin/structure" role="button" class="button">Structure</a></li>
-				<li><a href="/admin/config/development/performance" role="button" class="button">Performance</a></li>
-				<li><a href="/admin/reports" role="button" class="button">Reports</a></li>
+				<li><a href="/admin/structure" role="button" class="button-outline">Structure</a></li>
+				<li><a href="/admin/config/development/performance" role="button" class="button-outline">Performance</a></li>
+				<li><a href="/admin/reports" role="button" class="button-outline">Reports</a></li>
 			{% elseif 'senior_editor' in user.getroles %}
-				<li><a href="/admin/structure/taxonomy" role="button" class="button">Taxonomy</a></li>
-				<li><a href="/admin/structure/webform" role="button" class="button">Webforms</a></li>
+				<li><a href="/admin/structure/taxonomy" role="button" class="button-outline">Taxonomy</a></li>
+				<li><a href="/admin/structure/webform" role="button" class="button-outline">Webforms</a></li>
 			{% endif %}
 		</ul>
 	</div>
