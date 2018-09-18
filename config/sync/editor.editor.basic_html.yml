@@ -26,6 +26,7 @@ settings:
             - JustifyLeft
             - JustifyCenter
             - JustifyRight
+            - Blockquote
         -
           name: Lists
           items:
@@ -58,8 +59,8 @@ settings:
             - Cut
             - Copy
             - Paste
-            - PasteFromWord
             - PasteText
+            - PasteFromWord
         -
           name: 'Block Formatting'
           items:
@@ -69,10 +70,10 @@ settings:
           items:
             - Styles
   plugins:
-    stylescombo:
-      styles: "span.highlight|Highlight\r\ndiv.warning|Warning\r\nsmall|Small"
     language:
       language_list: un
+    stylescombo:
+      styles: "span.highlight|Highlight\r\ndiv.warning|Warning\r\nsmall|Small\r\nspan.button|Button"
     linkit:
       linkit_profile: wysiwyg
 image_upload:

@@ -32,6 +32,39 @@
 	font-family: $serif;
 }
 
+/// mixin - quote styling
+@mixin quote{
+	margin: 0;
+	max-width: 740px;
+	position: relative;
+	font-family: $serif;
+	font-style: italic;
+	font-size: 28px;
+	padding-bottom:10px;
+	@include tab{
+		font-size: 42px;
+		padding-bottom:0;
+	}
+	p{
+		display: inline;
+	}
+	&:before{
+		color: $transBlack;
+		content: "“";
+		font-size: 3em;
+		line-height: .1em;
+		margin-right: .25em;
+		vertical-align: -.4em;
+	}
+	&:after{
+		color: $transBlack;
+		content: "”";
+		font-size: 3em;
+		line-height: .1em;
+		margin-right: .25em;
+		vertical-align: -.44em;
+	}
+}
 
 /* TYPE STYLES
 --------------- */
@@ -42,7 +75,7 @@ html,code{
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	font-kerning: normal;
-	font-synthesis: none; 
+	font-synthesis: none;
 }
 
 body {
@@ -104,6 +137,10 @@ span.highlight{
 	color: currentColor;
 }
 
+
+blockquote{
+	@include quote;
+}
 
 /* PATTERN LAB ONLY
 -------------------- */
