@@ -20,13 +20,16 @@
  */
 #}
 
+{% extends 'field.html.twig' %}
+
+{% block fieldSingleNo %}
 <h1{{ attributes }}>
-	{{ element.0['#context'].value }}
+	{{- element.0['#context'].value -}}
 </h1>
 <div class="metatext">
-	<span class="date">{{ element['#object'].created.value|date("F j, Y") }}</span>
+	<span class="date">{{- element['#object'].created.value|date("F j, Y") -}}</span>
 	{% if author %}
-		<span class="author"> by {{ element['#object'].field_author.entity.title.value }}</span>
+		<span class="author"> by {{- element['#object'].field_author.entity.title.value -}}</span>
 	{% endif %}
 </div>
-
+{% endblock %}
