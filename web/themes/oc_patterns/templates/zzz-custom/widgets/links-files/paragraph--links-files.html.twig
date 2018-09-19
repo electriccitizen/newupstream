@@ -61,7 +61,7 @@
 			{%- if content.field_oc_link_multi.0 or content.field_oc_file_multi.0 -%}
 				<div class="field links-files">
 					{%- for key, link in content.field_oc_link_multi if key|first != "#" -%}
-						<div class="lf-item"><a href="{{ link['#url'] }}"{% if content.field_oc_link.0['#options'].external == 'true' %} target="_blank"{% endif %}>{{ link['#title'] }}</a></div>
+						<div class="lf-item"><a href="{{ link['#url'] }}">{{ link['#title'] }}</a></div>
 					{%- endfor -%}
 					{%- for key, file in content.field_oc_file_multi['#items'] if key|first != "#" -%}
 						<div class="lf-item">{{ drupal_entity('media', file.entity.id, 'default') }}</div>
