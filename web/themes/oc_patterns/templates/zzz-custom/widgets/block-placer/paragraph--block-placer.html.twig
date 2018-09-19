@@ -50,10 +50,10 @@
 {# NOTE: No content is allowed outside of {% block widgetContent %} #}
 {% block widgetContent %}
 
-	{{ content.field_widget_title }}
+	{{- content.field_widget_title -}}
 
 	<div class="block block-{{ content.field_block.0['#block_content'].label|clean_class }} block-{{ content.field_block.0['#block_content'].bundle|clean_class }}">
-		{{ content.field_block }}
+		{{- content.field_block -}}
 	</div>
 	
 {# NOTE: No content allowed past this point #}
