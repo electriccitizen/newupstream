@@ -186,6 +186,9 @@
       },
       "drupal/core":{
         "Layout Builder optout": "https://www.drupal.org/files/issues/2018-07-28/2936358-opt_in-2936358-64-do-not-test.patch"
+      },
+      "drupal/video_embed_field":{
+        "Provide title attribute in iframe tag for accessibility": "https://www.drupal.org/files/issues/2018-05-14/video_embed_field-title_attribute-2913598-21-8.x-2.x.patch"
       }
     },
     "enable-patching": true

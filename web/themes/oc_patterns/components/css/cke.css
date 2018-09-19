@@ -53,6 +53,12 @@ small{
 	font-size: 80%;
 }
 
+span.button{
+		background: #bf0e0e;
+		color: #fff;
+		padding: 10px;
+}
+
 table th, table td{
 	min-width: 40px;
 	padding: 2px 6px;
@@ -88,6 +94,3 @@ h5{
 h6{
 	font-size: 18px;
 }
-
-
-
