@@ -13,4 +13,4 @@
  This is identical to core/modules/system/templates/container.html.twig
 #}
 {% import "@base/global/05-macros/macros.twig" as styles %}
-<div{{ attributes.addClass('form-checkboxes', styles.checkboxElements) }}>{{ children }}</div>
+<div{{ attributes.addClass('form-checkboxes', styles.checkboxElements) }}>{{- children -}}</div>

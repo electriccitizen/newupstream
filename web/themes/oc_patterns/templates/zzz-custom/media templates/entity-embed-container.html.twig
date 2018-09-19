@@ -19,11 +19,11 @@
 {% set bundle = element['#entity'].bundle() %}
 
 
-{% if (bundle == 'document') %}
-	{{ children }}
-{% else %}
+{%- if (bundle == 'document') -%}
+	{{- children -}}
+{%- else -%}
 {{ attach_library('oc_patterns/media-js') }}
 <div class="oc-media {{ display }} {{ align }}">
-	{{ children }}
+	{{- children -}}
 </div>
-{% endif %}
+{%- endif -%}
