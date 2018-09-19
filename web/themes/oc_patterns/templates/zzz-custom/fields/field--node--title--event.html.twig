@@ -20,10 +20,13 @@
  */
 #}
 
+{% extends 'field.html.twig' %}
+
+{% block fieldSingleNo %}
 <h1{{ attributes }}>
-	{{ element.0['#context'].value }}
+	{{- element.0['#context'].value -}}
 </h1>
 <div class="metatext">
-	<span class="date">{{ element['#object'].field_oc_date.value|date("F j, Y \\a\\t g:ia") }}</span>
+	<span class="date">{{- element['#object'].field_oc_date.value|date("F j, Y \\a\\t g:ia") -}}</span>
 </div>
-
+{% endblock %}
