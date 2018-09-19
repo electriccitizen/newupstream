@@ -57,7 +57,7 @@ function oc_custom_preprocess_html(&$variables){
   /* Find the current user */
   $user = \Drupal::currentUser();
   $userRole = $user->getRoles();
-  foreach($userRole as &$role ){
+  foreach($userRole as $role ){
     if($role != 'authenticated'){
       $variables['attributes']['class'][] = 'role-' . $role;
     }
