@@ -30,7 +30,7 @@
  */
 #}
 <div class="event-item">
-	<h4><a href="{{ fields.path.content|striptags|trim }}">{{ fields.title.content }}</a></h4>
-	{{ fields.field_oc_date.content }}
-	{{ fields.body.content }}
+	<h4><a href="{{ fields.path.content|striptags|trim }}">{{- fields.title.content -}}</a></h4>
+	{{- fields.field_oc_date.content -}}
+	{{- fields.body.content -}}
 </div>

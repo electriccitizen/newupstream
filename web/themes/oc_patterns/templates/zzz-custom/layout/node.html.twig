@@ -78,33 +78,41 @@
 <article{{ attributes.addClass(classes) }}>
 
   {{ title_prefix }}
-  {% if not page %}
-    <h2{{ title_attributes }}>
-      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-    </h2>
-  {% endif %}
+  {%- if not page -%}
+    {% block nodeTitle %}
+      <h2{{ title_attributes }}>
+        <a href="{{- url -}}" rel="bookmark">{{- label -}}</a>
+      </h2>
+    {% endblock %}
+  {%- endif -%}
   {{ title_suffix }}
 
-  {% if display_submitted %}
+  {%- if display_submitted -%}
     <footer>
-      {{ author_picture }}
-      <div{{ author_attributes }}>
-        {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
-        {{ metadata }}
-      </div>
+      {% block footerContent %}
+        {{- author_picture -}}
+        <div{{ author_attributes }}>
+          {%- trans -%}Submitted by {{- author_name -}} on {{- date -}}{%- endtrans -%}
+          {{- metadata -}}
+        </div>
+      {% endblock %}
     </footer>
-  {% endif %}
+  {%- endif -%}
 
   <div{{ content_attributes.addClass('main-node-content') }}>
-    {% if content._layout_builder %}
-      {% for layoutSection in content._layout_builder %}
-        <section id="section-{{ loop.index }}" class="node-section" role="region">
-          {{ layoutSection }}
-        </section>
-      {% endfor %}
-    {% else %}
-      {{ content }}
-    {% endif %}
+    {%- if content._layout_builder -%}
+      {%- for layoutSection in content._layout_builder -%}
+        {% block layoutSectionContent %}
+          <section id="section-{{ loop.index }}" class="node-section" role="region">
+            {{- layoutSection -}}
+          </section>
+        {% endblock %}
+      {%- endfor -%}
+    {%- else -%}
+      {% block nodeContent %}
+        {{- content -}}
+      {% endblock %}
+    {%- endif -%}
   </div>
 
 </article>

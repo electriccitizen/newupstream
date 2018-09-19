@@ -48,9 +48,9 @@
 
 {# check if a user is authenticated and replace the support page content if they are not #}
 {% block pageMain %}
-	{% if logged_in %}
+	{%- if logged_in -%}
 		{{ parent() }}
-	{% else %}
+	{%- else -%}
 		<main role="main">
 
 	      <div class="layout-content">
@@ -58,7 +58,7 @@
 	      </div>{# /.layout-content #}
 
 	    </main>
-	{% endif %}
+	{%- endif -%}
 {% endblock %}
   
 

@@ -41,11 +41,11 @@
 {% block widgetContent %}
 	{{ attach_library('oc_patterns/accordion') }}
 
-	{{ content.field_widget_title }}
+	{{= content.field_widget_title =}}
 
 	<div class="wrapper">
 		<div class="field field-accordion-item" aria-label="Accordion">
-			{% for key, accordion in content.field_accordion_item if key|first != '#' %}
+			{%- for key, accordion in content.field_accordion_item if key|first != '#' -%}
 				{% set control = 'accordion-content-' ~ paragraph.id() ~ '-' ~ (key + 1) %}
 				{% set text = {
 					'#type': 'processed_text',
@@ -59,7 +59,7 @@
 						accordion_control: control
 					}
 				%}
-			{% endfor %}
+			{%- endfor -%}
 		</div>
 	</div>
 {% endblock %}

@@ -53,25 +53,24 @@ set classes = [
   {% endif %}
 {% endfor %}
 
-{% if count > 0 %}
+{%- if count > 0 -%}
    <nav class="widget-anchors" role="navigation" aria-labelledby="toc-title">
 		<h2 id="toc-title"><a href="#" class="toc-toggle"><i class="fa fa-bars" aria-hidden="true"></i>On This Page</a></h2>
 		<div id="toc-anchor-wrapper" class="anchors">
-	      {% for anchor in items %}
-				{% if anchor.content['#paragraph'].field_anchor_link.0.value %}
-	            <a href="#anchor-{{ anchor.content['#paragraph'].field_anchor_link.0.value|clean_id }}">{{ anchor.content['#paragraph'].field_anchor_link.0.value }}</a>
-	         {% endif %}
-	      {% endfor %}
+	      {%- for anchor in items -%}
+				{%- if anchor.content['#paragraph'].field_anchor_link.0.value -%}
+	            <a href="#anchor-{{ anchor.content['#paragraph'].field_anchor_link.0.value|clean_id }}">{{- anchor.content['#paragraph'].field_anchor_link.0.value -}}</a>
+	         {%- endif -%}
+	      {%- endfor -%}
 	   </div>
-	</div>
-  
-{% endif %}
+	</div>  
+{%- endif -%}
 <div{{ attributes.addClass(classes) }}>
-	{% for item in items %}
+	{%- for item in items -%}
 		<div class="section{% if (item.content['#paragraph'].field_background_style.0.value) %} background {{ item.content['#paragraph'].field_background_style.0.value }}{% else %} backless{% endif %} {{ item.content['#paragraph'].field_layout.0.value }}"{% if (item.content['#paragraph'].field_background_style.0.value == 'image') and (item.content['#paragraph'].field_background_image.0) %} style="background:url({{ file_url(item.content['#paragraph'].field_background_image.0.entity.field_media_image.entity.fileuri) }}) no-repeat;background-size: cover;"{% endif %}>
 			{% set anchor = item.content['#paragraph'].field_anchor_link.0.value|clean_id %}
-			{% if anchor %}<a name="anchor-{{ anchor }}" id="anchor-{{ anchor }}"></a>{% endif %}
-			{{ item.content }}
+			{%- if anchor -%}<a name="anchor-{{ anchor }}" id="anchor-{{ anchor }}"></a>{%- endif -%}
+			{{- item.content -}}
 		</div>
-	{% endfor %}
+	{%- endfor -%}
 </div>

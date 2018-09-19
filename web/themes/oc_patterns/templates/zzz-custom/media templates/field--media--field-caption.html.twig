@@ -38,6 +38,6 @@
  * @ingroup themeable
  */
 #}
-{% for item in items %}
-	<figcaption>{{ item.content }}</figcaption>
-{% endfor %}
+{%- for item in items -%}
+	<figcaption>{{- item.content -}}</figcaption>
+{%- endfor -%}

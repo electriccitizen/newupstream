@@ -46,8 +46,8 @@ set classes = [
 {{ attach_library('oc_patterns/widgets') }}
 
 <div{{ attributes.addClass(classes) }}>
-	{% for item in items %}
-		{{ item.content }}
-	{% endfor %}
+	{%- for item in items -%}
+		{{- item.content -}}
+	{%- endfor -%}
 </div>
 

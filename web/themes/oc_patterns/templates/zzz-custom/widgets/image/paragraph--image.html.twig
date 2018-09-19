@@ -44,28 +44,28 @@
 
 
 {# Define image style based on picker #}
-{% if (style == 'small') %}
+{%- if (style == 'small') -%}
 	{% set image =  drupal_entity('media', paragraph.field_oc_image.0.target_id, 'small') %}
 
-{% elseif (style == 'medium') %}
+{%- elseif (style == 'medium') -%}
 	{% set image =  drupal_entity('media', paragraph.field_oc_image.0.target_id, 'medium') %}
 
-{% elseif (style == 'large') %}
+{%- elseif (style == 'large') -%}
 	{% set image =  drupal_entity('media', paragraph.field_oc_image.0.target_id, 'large') %}
 
-{% elseif (style == 'full') %}
+{%- elseif (style == 'full') -%}
 	{% set image =  drupal_entity('media', paragraph.field_oc_image.0.target_id, 'full') %}
 
-{% elseif (style == 'square') %}
+{%- elseif (style == 'square') -%}
 	{% set image =  drupal_entity('media', paragraph.field_oc_image.0.target_id, 'square') %}
 
-{% elseif (style == 'banner') %}
+{%- elseif (style == 'banner')-%}
 	{% set image =  drupal_entity('media', paragraph.field_oc_image.0.target_id, 'banner') %}
 
-{% elseif (style == 'default') %}
+{%- elseif (style == 'default') -%}
 	{% set image =  drupal_entity('media', paragraph.field_oc_image.0.target_id, 'default') %}
 
-{% endif %}
+{%- endif -%}
 
 
 
@@ -85,7 +85,7 @@
 		{# block image is wrapped in block imageWrapper in pattern lab to detect if it is linked 
 		we need the extra block to strip out pattern lab html structure and use drupal rendered entities #}
 		{% block image %}
-			{{ image }}
+			{{- image -}}
 		{% endblock %}
 
 		{% block plwidgetclose %}{# patternlab specifc html #}{% endblock %}

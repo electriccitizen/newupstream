@@ -42,33 +42,33 @@
 	
 	{{ drupal_entity('block', 'exposedformsite_searchsearch_results', check_access=false) }}
 
-	{% if header %}
+	{%- if header -%}
 		<div class="view-header">
-			{{ header }}
+			{{- header -}}
 		</div>
-	{% endif %}
+	{%- endif -%}
 
-	{{ attachment_before }}
-	{% if rows %}
+	{{- attachment_before -}}
+	{%- if rows -%}
 		<div class="view-content">
-			{{ rows }}
+			{{- rows -}}
 		</div>
-	{% endif %}
-	{% if empty %}
+	{%- endif -%}
+	{%- if empty -%}
 		<div class="view-empty">
-			{{ empty }}
+			{{- empty -}}
 		</div>
-	{% endif %}
+	{%- endif -%}
 
-	{{ pager }}
+	{{- pager -}}
 
-	{{ attachment_after }}
-	{{ more }}
+	{{- attachment_after -}}
+	{{- more -}}
 
-	{% if footer %}
+	{%- if footer -%}
 		<div class="view-footer">
-			{{ footer }}
+			{{- footer -}}
 		</div>
-	{% endif %}
+	{%- endif -%}
 
 </div>

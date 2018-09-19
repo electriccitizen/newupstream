@@ -60,13 +60,12 @@
 
 		{% block cta %}
 			
-			{{ content.field_oc_long_text }}
-			{% if content.field_oc_link.0 %}
+			{{- content.field_oc_long_text -}}
+			{%- if content.field_oc_link.0 -%}
 				<div class="field field-oc-link">
-					
-					<a href="{{ buttonUrl }}"{% if content.field_oc_link.0['#options'].external == 'true' %} target="_blank"{% endif %}>{{ content.field_oc_link.0['#title'] }}</a>
+					<a href="{{ buttonUrl }}">{{- content.field_oc_link.0['#title'] -}}</a>
 				</div>
-			{% endif %}
+			{%- endif -%}
 		{% endblock %}
 
 	{% block plwidgetclose %}{# patternlab specifc html #}{% endblock %}

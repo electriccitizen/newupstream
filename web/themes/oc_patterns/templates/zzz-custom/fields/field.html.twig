@@ -38,48 +38,48 @@
 #}
 
 {# no label #}
-{% if label_hidden %}
+{%- if label_hidden -%}
   {# multi block with no label #}
-  {% if multiple %}
+  {%- if multiple -%}
     <div class="field {{ field_name|clean_class }} {{ field_type|clean_class }}">
-        {% for item in items %}
+        {%- for item in items -%}
           <div{{ item.attributes }}>
             {% block fieldMultiNo %}
-              {{ item.content }}
+              {{- item.content -}}
             {% endblock %}
           </div>
-        {% endfor %}
+        {%- endfor -%}
     </div>
   {# single block with no label #}
-  {% else %}
+  {%- else -%}
     <div class="field {{ field_name|clean_class }} {{ field_type|clean_class }}">
-      {% for item in items %}
+      {%- for item in items -%}
         {% block fieldSingleNo %}
-          {{ item.content }}
+          {{- item.content -}}
         {% endblock %}
-      {% endfor %}
+      {%- endfor -%}
     </div>
-  {% endif %}
-{% else %}
+  {%- endif -%}
+{%- else -%}
   {# block with label #}
   <div class="field {{ field_name|clean_class }} {{ field_type|clean_class }}">
-    {% if (label_display == 'inline') %}
-      <span class="inline-label">{{ label }}:</span>
-    {% else %}
-      <div class="label">{{ label }}</div>
-    {% endif %}
-    {% if multiple %}
+    {%- if (label_display == 'inline') -%}
+      <span class="inline-label">{{- label -}}:</span>
+    {%- else -%}
+      <div class="label">{{- label -}}</div>
+    {%- endif -%}
+    {%- if multiple -%}
       <div class="field-multi-item">
-    {% endif %}
-    {% for item in items %}
+    {%- endif -%}
+    {%- for item in items -%}
       <div{{ item.attributes }}>
         {% block fieldLabel %}
-          {{ item.content }}
+          {{- item.content -}}
         {% endblock %}
       </div>
-    {% endfor %}
-    {% if multiple %}
+    {%- endfor -%}
+    {%- if multiple -%}
       </div>
-    {% endif %}
+    {%- endif -%}
   </div>
-{% endif %}
+{%- endif -%}
