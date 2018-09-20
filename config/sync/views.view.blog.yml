@@ -383,7 +383,17 @@ display:
       filters: {  }
       sorts: {  }
       header: {  }
-      footer: {  }
+      footer:
+        result:
+          id: result
+          table: views
+          field: result
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          content: 'Displaying @start - @end of @total'
+          plugin_id: result
       empty: {  }
       relationships: {  }
       arguments:
@@ -466,7 +476,7 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
-          quantity: 9
+          quantity: 5
       defaults:
         pager: false
         fields: false

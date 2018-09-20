@@ -11,7 +11,7 @@ field_name: field_media_categories
 entity_type: media
 bundle: image
 label: 'Media Categories'
-description: 'Select a category for this media. <strong>NOTE:</strong> You may add media categories by <a href="/admin/structure/taxonomy/manage/media_categories/add">clicking here</a>.'
+description: "Select media categories from the list. If the media category you wish to add does not exist, you can create it <a href=\"/admin/structure/taxonomy/manage/media_categories/add\" target=\"_blank\">here</a>. <strong>NOTE:</strong> You will need to save this page and refresh for your newly created media category to appear in the list.\r\n\r\n"
 required: false
 translatable: false
 default_value: {  }

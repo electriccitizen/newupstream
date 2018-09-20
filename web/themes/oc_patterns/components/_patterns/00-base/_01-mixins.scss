@@ -92,6 +92,7 @@
 @mixin calc($property, $expression) {
 	#{$property}: -webkit-calc(#{$expression});
 	#{$property}: -moz-calc(#{$expression});
+	#{$property}: -o-calc(#{$expression});
 	#{$property}: calc(#{$expression});
 }
 
@@ -99,6 +100,7 @@
 @mixin calcForce($property, $expression) {
 	#{$property}: -webkit-calc(#{$expression}) !important;
 	#{$property}: -moz-calc(#{$expression}) !important;
+	#{$property}: -o-calc(#{$expression}) !important;
 	#{$property}: calc(#{$expression}) !important;
 }
 

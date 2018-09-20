@@ -8,7 +8,7 @@ PAGERS
 
 $pager-line: 24px;
 
-///mixin - pagerTiemStyle
+///mixin - pagerItemStyle
 @mixin pagerItemStyle{
 	display: block;
 	width: 26px;
@@ -25,7 +25,63 @@ $pager-line: 24px;
 	}
 }
 
+///mixin - pagerNumbers
+@mixin pagerNumbers{
+	@include safeFlexSize(0,0,100%);
+	text-align: center;
+	@include tab{
+		border-top: 1px solid $borderRule;
+		border-bottom: 1px solid $borderRule;
+		@include safeFlexSize(1,1,auto);
+	}
+	.pager{
+		position: relative;
+		padding: 6px 0 26px;
+		.pager__item a{
+			font-family: $header;
+			font-weight: $heavy;
+		}
+		.pager__item:not(.pager__item--first):not(.pager__item--previous):not(.pager__item--next):not(.pager__item--last) a{
+			font-family: $header;
+			font-weight: $heavy;
+		}
+		@include tab{
+			padding: 20px 0 18px;
+			.js-pager__items{
+				@include safeFlex(row,wrap,end,start);
+			}
+		}
+	}
+}
 
+///mixin - pagerResults
+@mixin pagerResults{
+	border-top: 1px solid $borderRule;
+	border-bottom: 1px solid $borderRule;
+	@include calc(width, "100% + 40px");
+	@include spacer(1);
+	@include edgeToEdge;
+	div{
+		position: relative;
+		padding: 20px 0;
+		text-align: center;
+		font-size: 18px;
+		font-family: $header;
+		color: $darkGrey;
+		span{
+			text-transform: uppercase;
+		}
+	}
+	@include tab{
+		width: 200px;
+		@include spacer(0);
+		@include edgeReset;
+		div{
+			padding: 20px 0 18px;
+			text-align: left;
+		}
+	}
+}
 
 /* GLOBAL PAGER STYLING
 -------------------- */
@@ -78,12 +134,12 @@ $pager-line: 24px;
 }//end full .pager
 
 
-/* MINI PAGER 
+/* MINI PAGER
 ---------------- */
 nav:not(.pager){
 	.js-pager__items{
 		li{
-			color: $black;  
+			color: $black;
 			margin: 0 .5em;
 			@include larger;
 			line-height: 26px;
