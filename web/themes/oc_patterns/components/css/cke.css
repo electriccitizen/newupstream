@@ -53,10 +53,18 @@ small{
 	font-size: 80%;
 }
 
-span.button{
+div.button{
 		background: #bf0e0e;
 		color: #fff;
 		padding: 10px;
+		margin: .5em 0;
+		display: block;
+		position: relative;
+		text-align: center;
+}
+div.button a{
+	color: #fff;
+	text-decoration: none;
 }
 
 table th, table td{
@@ -93,4 +101,37 @@ h5{
 
 h6{
 	font-size: 18px;
+}
+
+blockquote{
+	margin: 0 auto !important;
+	max-width: 740px;
+	position: relative;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-style: italic;
+	font-size: 28px;
+	line-height: 30px;
+	padding-bottom:10px;
+}
+
+blockquote:before{
+	color: $transBlack;
+	content: "“";
+	font-size: 3em;
+	line-height: .1em;
+	margin-right: .25em;
+	vertical-align: -.4em;
+}
+
+blockquote:after{
+	color: $transBlack;
+	content: "”";
+	font-size: 3em;
+	line-height: .1em;
+	margin-right: .25em;
+	vertical-align: -.44em;
+}
+
+blockquote p{
+	display: inline;
 }

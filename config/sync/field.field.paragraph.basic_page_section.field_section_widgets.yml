@@ -64,9 +64,6 @@ settings:
       form:
         enabled: true
         weight: -33
-      horizontal_rule:
-        enabled: true
-        weight: -32
       image:
         enabled: true
         weight: -31

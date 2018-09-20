@@ -36,7 +36,7 @@ header.content-header .shortcut-action--remove:hover .shortcut-action__icon,head
 /* ADMIN CONTENT VIEW
 -------------------- */
 .view-content.view-display-id-page_1,.view-display-id-media_page_list,.view-files.view-display-id-page_1{
-	margin-bottom: -80px;	
+	margin-bottom: -80px;
 }
 
 .view-content.view-display-id-page_1 .view-filters,.view-display-id-media_page_list .view-filters,.view-files.view-display-id-page_1 .view-filters{
@@ -109,7 +109,7 @@ header.content-header .shortcut-action--remove:hover .shortcut-action__icon,head
 }
 
 
-/* ENTITY BROWSER 
+/* ENTITY BROWSER
 ------------------------ */
 .eb-media{
 	padding-bottom: 30px;
@@ -160,7 +160,7 @@ header.content-header .shortcut-action--remove:hover .shortcut-action__icon,head
 	margin: 0;
 }
 
-/* CUSTOM MEDIA BROWSER FILE ICONS 
+/* CUSTOM MEDIA BROWSER FILE ICONS
 ------------------------------- */
 .eb-media .views-field .file-extension,.eb-media.view-display-id-embed_browser .views-field-thumbnail__target-id,.view-media.view-display-id-media_page_list{
 	padding-bottom: 10px;
@@ -335,7 +335,7 @@ body .select2-container--default.select2-container--open select2-selection--mult
 	background-color: #efefef;
 }
 .select2-container--default .select2-results__option--highlighted[aria-selected]{
-	background-color: #0074bd; 
+	background-color: #0074bd;
 }
 body select{
 	border-radius: 0;
@@ -411,7 +411,7 @@ body .button--primary.button--small{
 #drupal-modal .captcha-admin-links{
 	display: none;
 }
- 
+
 /* ADMIN TOOLBAR
 ------------------ */
 .toolbar-tray-horizontal .menu-item--expanded{
@@ -436,6 +436,14 @@ body .button--primary.button--small{
 	display: none;
 }
 
+/* REMOVE REVISION FROM MEDIA REFERENCE FIELD
+--------------------------------------------- */
+.field--type-entity-reference .field--name-revision-log-message{
+	display: none;
+}
 
-
-
+/* REMOVE RELATIONS FIELD FROM TAXONOMY TERMS
+----------------------------------------------- */
+.taxonomy-term-form #edit-relations{
+	display: none;
+}

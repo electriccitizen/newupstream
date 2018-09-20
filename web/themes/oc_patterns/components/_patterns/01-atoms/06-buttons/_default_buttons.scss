@@ -18,11 +18,19 @@
 	text-transform: uppercase;
 	font-family: $header;
 	font-weight: $heavy;
-	margin-bottom: .5em;
+	margin-bottom: 1.5em;
+	cursor: pointer;
 	&:hover,&:focus {
 		color: $white;
 		background-color: $hoverLink;
 		@include transAll(.3s);
+		a{
+			color: $white;
+			text-decoration: none;
+		}
+	}
+	a{
+		color: $white;
 	}
 }
 
