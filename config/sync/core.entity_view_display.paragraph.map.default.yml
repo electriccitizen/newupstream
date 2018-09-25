@@ -84,7 +84,7 @@ bundle: map
 mode: default
 content:
   field_location:
-    weight: 2
+    weight: 0
     label: hidden
     settings:
       set_marker: '1'
@@ -116,14 +116,7 @@ content:
     third_party_settings: {  }
     type: geolocation_map
     region: content
-  field_widget_title:
-    weight: 0
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
 hidden:
   field_admin_description: true
   field_pin_info: true
+  field_widget_title: true

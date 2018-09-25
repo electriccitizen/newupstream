@@ -6,7 +6,6 @@ dependencies:
     - field.field.node.support_book.body
     - node.type.support_book
   module:
-    - path
     - text
 _core:
   default_config_hash: zMriXaHU0C-Ha0dCwYsn3WJlse80UEu3GKrXfM2-0W0
@@ -24,17 +23,11 @@ content:
       placeholder: ''
     third_party_settings: {  }
     region: content
-  path:
-    type: path
-    weight: 3
-    settings: {  }
-    third_party_settings: {  }
-    region: content
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 120
+    weight: 2
     region: content
     third_party_settings: {  }
   title:
@@ -45,11 +38,10 @@ content:
       placeholder: ''
     third_party_settings: {  }
     region: content
-  url_redirects:
-    weight: 50
-    region: content
 hidden:
   created: true
+  path: true
   promote: true
   sticky: true
   uid: true
+  url_redirects: true

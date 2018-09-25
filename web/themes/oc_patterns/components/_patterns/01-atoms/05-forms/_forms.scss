@@ -53,6 +53,7 @@
 @mixin textInput{
 	border: 1px solid $borderRule;
 	font-size: 15px;
+	font-family: $bodyFont;
 	padding: 10px 6px 11px;
 	width: 100%;
 	@include placeholder;
@@ -206,5 +207,3 @@ fieldset{
 		max-width: 400px;
 	}
 }
-
-
