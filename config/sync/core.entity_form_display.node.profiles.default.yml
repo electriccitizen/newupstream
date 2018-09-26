@@ -15,7 +15,6 @@ dependencies:
   module:
     - entity_browser_entity_form
     - inline_entity_form
-    - path
     - telephone
     - text
 _core:
@@ -83,30 +82,26 @@ content:
       allow_existing: true
       match_operator: CONTAINS
       override_labels: false
+      collapsible: false
+      collapsed: false
+      allow_duplicate: false
     third_party_settings:
       entity_browser_entity_form:
         entity_browser_id: image_browser
     type: inline_entity_form_complex
     region: content
-  path:
-    type: path
-    weight: 7
-    settings: {  }
-    third_party_settings: {  }
-    region: content
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 8
+    weight: 7
     region: content
     third_party_settings: {  }
-  url_redirects:
-    weight: 50
-    region: content
 hidden:
   created: true
+  path: true
   promote: true
   sticky: true
   title: true
   uid: true
+  url_redirects: true

@@ -30,47 +30,7 @@
  * @see template_preprocess_views_view()
  */
 #}
-{%
-  set classes = [
-    'view',
-    css_name|clean_class,
-    view.current_display|clean_class
-  ]
-%}
-<div{{ attributes.addClass(classes) }}>
-  {{ title_prefix }}
-  {{ title }}
-  {{ title_suffix }}
 
-  {% if header %}
-    <div class="view-header">
-      {{ header }}
-    </div>
-  {% endif %}
 
-  {{ exposed }}
-  {{ attachment_before }}
-  {% if rows %}
-    <div class="view-content">
-      {{ rows }}
-    </div>
-  {% endif %}
-  {% if empty %}
-    <div class="view-empty">
-      {{ empty }}
-    </div>
-  {% endif %}
-
-  {{ pager }}
-
-  {{ attachment_after }}
-  {{ more }}
-
-  {% if footer %}
-    <div class="view-footer">
-      {{ footer }}
-    </div>
-  {% endif %}
-
-  {{ feed_icons }}
-</div>
+{% extends 'views-view.html.twig' %}
+testing views

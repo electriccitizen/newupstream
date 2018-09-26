@@ -18,7 +18,6 @@ dependencies:
     - geolocation
     - inline_entity_form
     - metatag
-    - path
     - text
 _core:
   default_config_hash: BFvVE_TAhfYDa9zIJpis4phuabuu5iPKKQtUnfJb1sE
@@ -46,6 +45,9 @@ content:
       allow_existing: true
       match_operator: CONTAINS
       override_labels: false
+      collapsible: false
+      collapsed: false
+      allow_duplicate: false
     third_party_settings:
       entity_browser_entity_form:
         entity_browser_id: image_browser
@@ -101,7 +103,7 @@ content:
     type: text_textarea
     region: content
   field_metatags:
-    weight: 10
+    weight: 9
     settings: {  }
     third_party_settings: {  }
     type: metatag_firehose
@@ -111,12 +113,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
-    region: content
-  path:
-    type: path
-    weight: 9
-    settings: {  }
-    third_party_settings: {  }
     region: content
   promote:
     type: boolean_checkbox
@@ -129,7 +125,7 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 11
+    weight: 10
     region: content
     third_party_settings: {  }
   sticky:
@@ -147,11 +143,8 @@ content:
       placeholder: ''
     third_party_settings: {  }
     region: content
-  url_redirects:
-    weight: 50
-    region: content
-    settings: {  }
-    third_party_settings: {  }
 hidden:
   created: true
+  path: true
   uid: true
+  url_redirects: true

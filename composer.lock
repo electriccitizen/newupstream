@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cb6e9366fac048e7c552d7c30f7a06c9",
+    "content-hash": "c57480234c718504240787e376af9ca0",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1378,6 +1378,53 @@
                 "source": "https://cgit.drupalcode.org/advagg",
                 "issues": "https://drupal.org/project/issues/advagg",
                 "irc": "irc://irc.freenode.org/drupal-contribute"
+            }
+        },
+        {
+            "name": "drupal/antibot",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/antibot",
+                "reference": "8.x-1.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/antibot-8.x-1.2.zip",
+                "reference": "8.x-1.2",
+                "shasum": "4cb067e77929984c8cf5b05a84734c62d6fd19b3"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.2",
+                    "datestamp": "1522335671",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "mstef",
+                    "homepage": "https://www.drupal.org/user/107190"
+                }
+            ],
+            "description": "Prevent forms from being submitted without JavaScript enabled",
+            "homepage": "https://www.drupal.org/project/antibot",
+            "support": {
+                "source": "http://cgit.drupalcode.org/antibot"
             }
         },
         {
@@ -3159,57 +3206,6 @@
             "homepage": "https://www.drupal.org/project/entity_reference_revisions",
             "support": {
                 "source": "http://cgit.drupalcode.org/entity_reference_revisions"
-            }
-        },
-        {
-            "name": "drupal/environment_indicator",
-            "version": "3.3.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/environment_indicator",
-                "reference": "8.x-3.3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/environment_indicator-8.x-3.3.zip",
-                "reference": "8.x-3.3",
-                "shasum": "3059b8d4fb2b87af4842c45b9770d927e640eb30"
-            },
-            "require": {
-                "drupal/core": "*"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-3.x": "3.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-3.3",
-                    "datestamp": "1518331981",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "e0ipso",
-                    "homepage": "https://www.drupal.org/user/550110"
-                },
-                {
-                    "name": "mrfelton",
-                    "homepage": "https://www.drupal.org/user/305669"
-                }
-            ],
-            "description": "Adds a color indicator for the different environments.",
-            "homepage": "https://www.drupal.org/project/environment_indicator",
-            "support": {
-                "source": "http://cgit.drupalcode.org/environment_indicator"
             }
         },
         {
@@ -5006,6 +5002,9 @@
                         "message": "Covered by Drupal's security advisory policy"
                     },
                     "package": "Field types"
+                },
+                "patches_applied": {
+                    "Provide title attribute in iframe tag for accessibility": "https://www.drupal.org/files/issues/2018-05-14/video_embed_field-title_attribute-2913598-21-8.x-2.x.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",

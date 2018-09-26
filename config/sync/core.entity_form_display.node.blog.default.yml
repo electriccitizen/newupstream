@@ -14,7 +14,6 @@ dependencies:
     - entity_browser_entity_form
     - inline_entity_form
     - metatag
-    - path
     - text
 _core:
   default_config_hash: u8NMvwI52JTxXIGVLyAbGG564bO2eRlEjVfToB0dF68
@@ -48,34 +47,31 @@ content:
       allow_existing: true
       match_operator: CONTAINS
       override_labels: false
+      collapsible: false
+      collapsed: false
+      allow_duplicate: false
     third_party_settings:
       entity_browser_entity_form:
         entity_browser_id: image_browser
     type: inline_entity_form_complex
     region: content
   field_metatags:
-    weight: 26
+    weight: 5
     settings: {  }
     third_party_settings: {  }
     type: metatag_firehose
     region: content
   field_tags:
-    weight: 5
+    weight: 4
     settings: {  }
     third_party_settings: {  }
     type: options_select
-    region: content
-  path:
-    type: path
-    weight: 6
-    settings: {  }
-    third_party_settings: {  }
     region: content
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 120
+    weight: 6
     region: content
     third_party_settings: {  }
   title:
@@ -86,11 +82,10 @@ content:
       placeholder: ''
     third_party_settings: {  }
     region: content
-  url_redirects:
-    weight: 50
-    region: content
 hidden:
   created: true
+  path: true
   promote: true
   sticky: true
   uid: true
+  url_redirects: true

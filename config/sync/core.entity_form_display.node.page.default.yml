@@ -14,7 +14,6 @@ dependencies:
     - inline_entity_form
     - metatag
     - paragraphs
-    - path
     - text
 _core:
   default_config_hash: Cy5cg2L6ghXtZRwpVMt1QUd7AmwVXOq5F_y4ZUJa_TI
@@ -43,12 +42,15 @@ content:
       allow_existing: true
       match_operator: CONTAINS
       override_labels: false
+      collapsible: false
+      collapsed: false
+      allow_duplicate: false
     third_party_settings:
       entity_browser_entity_form:
         entity_browser_id: image_browser
     region: content
   field_metatags:
-    weight: 5
+    weight: 4
     settings: {  }
     third_party_settings: {  }
     type: metatag_firehose
@@ -65,19 +67,16 @@ content:
       add_mode: button
       form_display_mode: default
       default_paragraph_type: _none
-    third_party_settings: {  }
-    region: content
-  path:
-    type: path
-    weight: 4
-    settings: {  }
+      features:
+        duplicate: duplicate
+        collapse_edit_all: collapse_edit_all
     third_party_settings: {  }
     region: content
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 6
+    weight: 5
     region: content
     third_party_settings: {  }
   title:
@@ -88,11 +87,10 @@ content:
       placeholder: ''
     third_party_settings: {  }
     region: content
-  url_redirects:
-    weight: 50
-    region: content
 hidden:
   created: true
+  path: true
   promote: true
   sticky: true
   uid: true
+  url_redirects: true
