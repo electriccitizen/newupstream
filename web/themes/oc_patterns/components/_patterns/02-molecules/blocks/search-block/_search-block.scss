@@ -63,17 +63,20 @@
 				background: $black;
 			}
 		}
+		.box &{
+			@include deskMenu{
+				display: none;
+			}
+		}
+		.search-page-block &{
+			display: none;
+		}
 		.t-search{
 			border: 1px solid transparent;
 			color: $black;
 			i{
 				position: relative;
 				font-size: 22px;
-			}
-		}
-		.box &{
-			@include deskMenu{
-				display: none;
 			}
 		}
 	}//end t-search-wrapper
@@ -87,6 +90,14 @@
 		width: 50px;
 		display: none;
 		z-index: 502;
+		.box &{
+			@include deskMenu{
+				display: none;
+			}
+		}
+		.search-page-block &{
+			display: none;
+		}
 		.close-search{
 			font-family: $header;
 			display: block;
@@ -113,11 +124,6 @@
 			width: 100%;
 			text-align: center;
 		}
-		.box &{
-			@include deskMenu{
-				display: none;
-			}
-		}
 	}//end search close
 
 
@@ -137,9 +143,16 @@
 			@include deskMenu{
 				display: block !important;
 				left: auto;
-				right: 0;
+				right: 18px;
 				max-width: 280px;
 			}
+		}
+		.search-page-block &{
+			display: block;
+			position: relative;
+			left: auto;
+			margin: 2em 0;
+			max-width: 100%;
 		}
 	}//end search-form-wrapper
 
@@ -159,9 +172,19 @@
 				background: none;
 			}
 		}
+		.search-page-block &{
+			padding: 60px 20px;
+			background: $lightGrey;
+			max-width: 1200px;
+			@include edgeToEdge;
+			@include calc(width, "100% + 40px");
+			@include contentStop{
+				@include edgeReset;
+			}
+		}
 
 		//search box input
-		.js-form-type-search,.js-form-item-search-api-fulltext{
+		.js-form-item-search-api-fulltext{
 			padding: 10px 0;
 			width: 100%;
 			margin-bottom: 0;
@@ -203,7 +226,16 @@
 						}
 					}
 				}
-			}
+				.search-page-block &{
+					color: $black;
+					border-bottom-color: $black;
+					@include placeholder;
+					&:focus{
+						outline: 1px solid $grey;
+						@include placeholderFocus;
+					}
+				}
+			}//end input
 		}//end fulltext search
 
 		//search submit button
@@ -252,7 +284,10 @@
 						right: 8px;
 					}
 				}
-			}
+				.search-page-block &{
+					color: $black;
+				}
+			}//end i
 		}//end form-actions
 	}//end search block form
 

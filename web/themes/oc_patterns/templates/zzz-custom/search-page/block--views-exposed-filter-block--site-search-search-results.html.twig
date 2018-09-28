@@ -12,7 +12,7 @@
 
 {% extends '@molecules/blocks/search-block/search-block.twig' %}
 
-{% block instructions %}{# remove pl instructions #}{% endblock %}
+{% block instructions %}{{ title_suffix }}{% endblock %}
 
 {% block drupalWrapperStart %}
 	{{ attach_library('oc_patterns/search-block') }}
