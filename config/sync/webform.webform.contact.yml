@@ -15,6 +15,7 @@ _core:
   default_config_hash: oZIx_IHS7gdveuJ3iSbhNY-A1FwlieWPdjJEJz4Wlb4
 open: null
 close: null
+weight: 0
 uid: null
 template: false
 archive: false
@@ -127,6 +128,8 @@ settings:
   preview_prev_button_attributes: {  }
   draft_button_label: ''
   draft_button_attributes: {  }
+  wizard_progress_link: false
+  wizard_preview_link: false
 access:
   create:
     roles:

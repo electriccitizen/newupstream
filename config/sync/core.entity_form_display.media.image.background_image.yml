@@ -46,4 +46,5 @@ hidden:
   created: true
   field_caption: true
   path: true
+  status: true
   uid: true

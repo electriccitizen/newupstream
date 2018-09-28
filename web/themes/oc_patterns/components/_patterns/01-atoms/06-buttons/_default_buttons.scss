@@ -52,6 +52,11 @@
 //button class
 .button {
 	@include button;
+	max-width: 260px;
+	position: relative;
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 1.5em;
 }
 
 //outlineButtons
