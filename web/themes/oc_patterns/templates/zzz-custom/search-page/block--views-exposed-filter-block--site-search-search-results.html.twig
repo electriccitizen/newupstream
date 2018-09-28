@@ -1,16 +1,23 @@
 {#
 /**
  * @file
- * Theme override of a views exposed form.
+ * Theme override of a views exposed form block.
  *
  * Available variables:
  * - form: A render element representing the form.
- *
- * @see template_preprocess_views_exposed_form()
  */
 #}
 
+{# this template extends from pattern lab #}
+
 {% extends '@molecules/blocks/search-block/search-block.twig' %}
+
+{% block instructions %}{# remove pl instructions #}{% endblock %}
+
+{% block drupalWrapperStart %}
+	{{ attach_library('oc_patterns/search-block') }}
+	<div class="search-block-inner">
+{% endblock %}
 
 {% block searchInput %}
 	{{- content.search_api_fulltext -}}

@@ -78,15 +78,4 @@ function oc_custom_page_attachments(array &$attachments){
     $attachments['#attached']['library'][] = 'oc_custom/custom-global';
 }
 
-/* SEARCH FORM
------------------ */
 
-function oc_custom_form_views_exposed_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
-  //set placeholder for site search block
-  if ($form['#id'] == 'views-exposed-form-site-search-search-results'){
-    $form['search_api_fulltext']['#attributes']['placeholder'] = 'enter search phrase';
-  }
-  if ($form['#id'] == 'views-exposed-form-research-library-research-library'){
-    $form['search_api_fulltext']['#attributes']['placeholder'] = 'enter search terms';
-  }
-}
