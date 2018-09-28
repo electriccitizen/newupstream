@@ -16,27 +16,9 @@ dependencies:
     - user
 third_party_settings:
   layout_builder:
-    sections:
-      -
-        layout_id: layout_onecol
-        layout_settings: {  }
-        components:
-          93eb38ef-1c72-4f55-8a3a-887ec00cfe02:
-            uuid: 93eb38ef-1c72-4f55-8a3a-887ec00cfe02
-            region: content
-            configuration:
-              id: 'field_block:node:news:body'
-              label_display: ''
-              formatter:
-                label: hidden
-                type: text_summary_or_trimmed
-                settings:
-                  trim_length: 600
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
-            weight: 0
+    sections: {  }
+    enabled: false
+    allow_custom: false
 _core:
   default_config_hash: e0kH4Flgqj1A2pNhZvbdMZwE5mW65HRDE6liMMYou2o
 id: node.news.teaser

@@ -89,6 +89,7 @@ third_party_settings:
                 entity: layout_builder.entity
             additional: {  }
             weight: 3
+    enabled: true
 _core:
   default_config_hash: PHhLLLj6YmRcABcCpA7IPF0V6heixIIh1aH27EYUudc
 id: node.profiles.teaser

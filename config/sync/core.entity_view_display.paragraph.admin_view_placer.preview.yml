@@ -15,27 +15,9 @@ dependencies:
     - layout_discovery
 third_party_settings:
   layout_builder:
-    sections:
-      -
-        layout_id: layout_onecol
-        layout_settings: {  }
-        components:
-          456df00e-be27-4253-8f66-dec792b62b05:
-            uuid: 456df00e-be27-4253-8f66-dec792b62b05
-            region: content
-            configuration:
-              id: 'field_block:paragraph:admin_view_placer:field_admin_description'
-              label_display: ''
-              formatter:
-                type: string
-                label: hidden
-                settings:
-                  link_to_entity: false
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
-            weight: 0
+    sections: {  }
+    enabled: false
+    allow_custom: false
 _core:
   default_config_hash: toiTH3tSeF1oCW7V9T5TPMQ6W_qSqmHrgccJpgx8tOo
 id: paragraph.admin_view_placer.preview

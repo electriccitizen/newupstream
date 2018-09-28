@@ -13,27 +13,9 @@ dependencies:
     - layout_discovery
 third_party_settings:
   layout_builder:
-    sections:
-      -
-        layout_id: layout_onecol
-        layout_settings: {  }
-        components:
-          8717e177-f26e-4a61-b525-a12fe665ae12:
-            uuid: 8717e177-f26e-4a61-b525-a12fe665ae12
-            region: content
-            configuration:
-              id: 'field_block:paragraph:lightbox_gallery:field_admin_description'
-              label_display: ''
-              formatter:
-                label: hidden
-                settings:
-                  link_to_entity: false
-                third_party_settings: {  }
-                type: string
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
-            weight: 0
+    sections: {  }
+    enabled: false
+    allow_custom: false
 _core:
   default_config_hash: Ou1W4YuHSN7eSegM3x9TWpZpukzzsSEAvpYyMEB4HR4
 id: paragraph.lightbox_gallery.preview

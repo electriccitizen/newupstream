@@ -12,44 +12,9 @@ dependencies:
     - layout_discovery
 third_party_settings:
   layout_builder:
-    sections:
-      -
-        layout_id: layout_onecol
-        layout_settings: {  }
-        components:
-          2bc136ea-bb1e-4182-8ed5-53add62e8fb0:
-            uuid: 2bc136ea-bb1e-4182-8ed5-53add62e8fb0
-            region: content
-            configuration:
-              id: 'field_block:paragraph:slideshow:field_widget_title'
-              label_display: ''
-              formatter:
-                label: hidden
-                settings:
-                  link_to_entity: false
-                third_party_settings: {  }
-                type: string
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
-            weight: 0
-          d948ed00-a667-495e-9ca7-83d0d355ae1b:
-            uuid: d948ed00-a667-495e-9ca7-83d0d355ae1b
-            region: content
-            configuration:
-              id: 'field_block:paragraph:slideshow:field_oc_image_multi'
-              label_display: ''
-              formatter:
-                type: entity_reference_entity_view
-                label: hidden
-                settings:
-                  view_mode: full
-                  link: false
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
-            weight: 1
+    sections: {  }
+    enabled: false
+    allow_custom: false
 _core:
   default_config_hash: nssYWgY6HAl60m8YV2ayrIk83LZLKV-C5j3AsWpNLPQ
 id: paragraph.slideshow.default

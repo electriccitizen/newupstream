@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.media.full
     - field.field.media.image.field_caption
+    - field.field.media.image.field_media_categories
     - field.field.media.image.field_media_image
     - media.type.image
     - responsive_image.styles.full_1200
@@ -14,44 +15,9 @@ dependencies:
     - responsive_image
 third_party_settings:
   layout_builder:
-    sections:
-      -
-        layout_id: layout_onecol
-        layout_settings: {  }
-        components:
-          cbb3190c-c1b6-47b0-8217-421c349833fc:
-            uuid: cbb3190c-c1b6-47b0-8217-421c349833fc
-            region: content
-            configuration:
-              id: 'field_block:media:image:field_media_image'
-              label_display: ''
-              formatter:
-                type: responsive_image
-                label: hidden
-                settings:
-                  responsive_image_style: full_1200
-                  image_link: ''
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
-            weight: 0
-          cd1cc444-0679-4bed-94bd-7fc9b4648acb:
-            uuid: cd1cc444-0679-4bed-94bd-7fc9b4648acb
-            region: content
-            configuration:
-              id: 'field_block:media:image:field_caption'
-              label_display: ''
-              formatter:
-                type: string
-                label: hidden
-                settings:
-                  link_to_entity: false
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
-            weight: 1
+    sections: {  }
+    enabled: false
+    allow_custom: false
 _core:
   default_config_hash: QNTUI1YiZ8ZojaMkIVsTblnpJDXq_mzx8bNBFIrR9ls
 id: media.image.full
@@ -79,6 +45,7 @@ content:
 hidden:
   addtoany: true
   created: true
+  field_media_categories: true
   name: true
   thumbnail: true
   uid: true

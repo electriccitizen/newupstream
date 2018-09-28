@@ -12,11 +12,9 @@ dependencies:
     - layout_discovery
 third_party_settings:
   layout_builder:
-    sections:
-      -
-        layout_id: layout_onecol
-        layout_settings: {  }
-        components: {  }
+    sections: {  }
+    enabled: false
+    allow_custom: false
 _core:
   default_config_hash: sEaO-zlYqBFt6R4vgMl2yKHRz-dTN2ISkaN_nYv9wCU
 id: paragraph.accordion_item.preview

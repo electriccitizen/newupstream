@@ -14,68 +14,9 @@ dependencies:
     - layout_discovery
 third_party_settings:
   layout_builder:
-    sections:
-      -
-        layout_id: layout_onecol
-        layout_settings: {  }
-        components:
-          2c6ba7c3-d26b-42a5-b28f-1d739103fd7d:
-            uuid: 2c6ba7c3-d26b-42a5-b28f-1d739103fd7d
-            region: content
-            configuration:
-              id: 'field_block:paragraph:map:field_widget_title'
-              label_display: ''
-              formatter:
-                label: hidden
-                settings:
-                  link_to_entity: false
-                third_party_settings: {  }
-                type: string
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
-            weight: 0
-          9f63e50d-6266-4f69-9329-e1babfbde694:
-            uuid: 9f63e50d-6266-4f69-9329-e1babfbde694
-            region: content
-            configuration:
-              id: 'field_block:paragraph:map:field_location'
-              label_display: ''
-              formatter:
-                label: hidden
-                settings:
-                  set_marker: '1'
-                  title: '[paragraph:field_widget_title]'
-                  info_text: '[paragraph:field_pin_info]'
-                  google_map_settings:
-                    height: 400px
-                    width: 100%
-                    type: ROADMAP
-                    zoom: '12'
-                    maxZoom: 18
-                    minZoom: 0
-                    mapTypeControl: 1
-                    streetViewControl: 1
-                    zoomControl: 1
-                    fullscreenControl: 1
-                    gestureHandling: auto
-                    draggable: 1
-                    style: '[{"featureType":"all","elementType":"labels.text.fill","stylers":[{"color":"#736c68"}]},{"featureType":"landscape.man_made","elementType":"geometry.fill","stylers":[{"color":"#e7e6e5"}]},{"featureType":"landscape.natural","elementType":"all","stylers":[{"visibility":"on"},{"color":"#d4e4d3"}]},{"featureType":"poi","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#f5f5f5"}]},{"featureType":"poi.park","elementType":"geometry.fill","stylers":[{"color":"#d4e4d3"}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"color":"#f5f5f5"}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"color":"#e7e6e5"},{"gamma":"0.65"},{"lightness":"0"}]},{"featureType":"transit","elementType":"labels.text","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#aad5df"}]}]'
-                    marker_icon_path: ''
-                    disableAutoPan: 1
-                    rotateControl: 0
-                    scrollwheel: 0
-                    preferScrollingToZooming: 0
-                    disableDoubleClickZoom: 0
-                    info_auto_display: 0
-                  use_overridden_map_settings: 1
-                  common_map: ''
-                third_party_settings: {  }
-                type: geolocation_map
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
-            weight: 1
+    sections: {  }
+    enabled: false
+    allow_custom: false
 _core:
   default_config_hash: fQaEoneAvRw1QiKd5gRRKWDtf3aBGLz6s1tIbWaBwvI
 id: paragraph.map.default
