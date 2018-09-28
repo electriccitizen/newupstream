@@ -18,7 +18,7 @@
 			<div class="t-search-close"><a href="#" class="close-search" role="button" aria-label="toggle-search-close">X</a><span class="close-text">close</span></div>
 		{% endif %}
 		<div class="search-form-wrapper" {% if styles.searchBox == 'toggle' %}aria-expanded="false"{% endif %}>
-			<form action="/search/node" method="get" id="search-block-form" accept-charset="UTF-8" data-drupal-form-fields="edit-keys">
+			<form action="/site-search" method="get" id="views-exposed-form-site-search-search-results" accept-charset="UTF-8" data-drupal-form-fields="edit-search-api-fulltext">
 
 				{% block searchInput %}
 				<div class="js-form-item form-item js-form-type-search form-item-keys js-form-item-keys form-no-label">
