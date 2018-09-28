@@ -12,31 +12,39 @@
 	<div data-drupal-selector="search-block-form" id="block-search-form" class="block block-search-form-block {{ styles.searchBox }}">
 {% endblock %}
 
-	{% block searchForm %}
-		{% if styles.searchBox == 'toggle' %}
-			<div class="t-search-wrapper"><a href="#" class="t-search" role="button" aria-label="toggle-search"><i class="fa fa-search" aria-hidden="true"></i></a></div>
-			<div class="t-search-close"><a href="#" class="close-search" role="button" aria-label="toggle-search-close">X</a><span class="close-text">close</span></div>
-		{% endif %}
-		<div class="search-form-wrapper" {% if styles.searchBox == 'toggle' %}aria-expanded="false"{% endif %}>
-			<form action="/site-search" method="get" id="views-exposed-form-site-search-search-results" accept-charset="UTF-8" data-drupal-form-fields="edit-search-api-fulltext">
+	{% block drupalWrapperStart %}
+		<div>
+	{% endblock %}
 
-				{% block searchInput %}
-				<div class="js-form-item form-item js-form-type-search form-item-keys js-form-item-keys form-no-label">
-					<label for="edit-keys" class="visually-hidden">Search</label>
-					<input title="Enter the terms you wish to search for." placeholder="enter keywords" data-drupal-selector="edit-keys" type="search" id="edit-keys" name="keys" value-size="15" max-length="128" class="form-search">
-				</div>
-				{% endblock %}
+		{% block searchForm %}
+			{% if styles.searchBox == 'toggle' %}
+				<div class="t-search-wrapper"><a href="#" class="t-search" role="button" aria-label="toggle-search"><i class="fa fa-search" aria-hidden="true"></i></a></div>
+				<div class="t-search-close"><a href="#" class="close-search" role="button" aria-label="toggle-search-close">X</a><span class="close-text">close</span></div>
+			{% endif %}
+			<div class="search-form-wrapper" {% if styles.searchBox == 'toggle' %}aria-expanded="false"{% endif %}>
+				<form action="/site-search" method="get" id="views-exposed-form-site-search-search-results" accept-charset="UTF-8" data-drupal-form-fields="edit-search-api-fulltext">
 
-				{% block searchActions %}
-				<div data-drupal-selector="edit-actions" id="edit-site-search-actions" class="form-actions js-form-wrapper form-wrapper">
-					<input id="edit-submit-site-search" class="button js-form-submit form-submit" data-drupal-selector="edit-submit-site-search" value="search" type="submit">
-					<i class="fa fa-search" aria-hidden="true"></i>
-				</div>
-				{% endblock %}
+					{% block searchInput %}
+					<div class="js-form-item form-item js-form-type-search form-item-keys js-form-item-keys form-no-label">
+						<label for="edit-keys" class="visually-hidden">Search</label>
+						<input title="Enter the terms you wish to search for." placeholder="enter keywords" data-drupal-selector="edit-keys" type="search" id="edit-keys" name="keys" value-size="15" max-length="128" class="form-search">
+					</div>
+					{% endblock %}
 
-			</form>
+					{% block searchActions %}
+					<div data-drupal-selector="edit-actions" id="edit-site-search-actions" class="form-actions js-form-wrapper form-wrapper">
+						<input id="edit-submit-site-search" class="button js-form-submit form-submit" data-drupal-selector="edit-submit-site-search" value="search" type="submit">
+						<i class="fa fa-search" aria-hidden="true"></i>
+					</div>
+					{% endblock %}
+
+				</form>
+			</div>
+
+		{% endblock %}
+
+	{% block drupalWrapperEnd %}
 		</div>
-
 	{% endblock %}
 
 {% block searchBlockEnd %}
