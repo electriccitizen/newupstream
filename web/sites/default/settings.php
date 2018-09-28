@@ -27,22 +27,13 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
     case 'live':
       // $config['config_split.config_split.live']['status'] = TRUE;
       // $config['config_split.config_split.excluded']['status'] = TRUE;
-      $config['environment_indicator.indicator']['bg_color'] = '#990000';
-      $config['environment_indicator.indicator']['fg_color'] = '#fff';
-      $config['environment_indicator.indicator']['name'] = 'Live';
       break;
     case 'test':
       // $config['config_split.config_split.test']['status'] = TRUE;
       // $config['config_split.config_split.excluded']['status'] = TRUE;
-      $config['environment_indicator.indicator']['bg_color'] = '#ff9900';
-      $config['environment_indicator.indicator']['fg_color'] = '#fff';
-      $config['environment_indicator.indicator']['name'] = 'Test';
       break;
     case 'dev':
       $config['config_split.config_split.dev']['status'] = TRUE;
-      $config['environment_indicator.indicator']['bg_color'] = '#006600';
-      $config['environment_indicator.indicator']['fg_color'] = '#fff';
-      $config['environment_indicator.indicator']['name'] = 'Dev';
       break;
     default:
       $config['config_split.config_split.local']['status'] = TRUE;
