@@ -15,9 +15,7 @@
 {% block instructions %}{# remove pl instructions #}{% endblock %}
 
 {% block drupalWrapperStart %}
-	{% if styles.searchBox == 'toggle' %}
-		{{ attach_library('oc_patterns/search-block') }}
-	{% endif %}
+	{{ attach_library('oc_patterns/search-block') }}
 	<div class="search-block-inner">
 {% endblock %}
 
