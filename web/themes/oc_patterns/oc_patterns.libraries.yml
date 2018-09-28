@@ -6,7 +6,7 @@ global-styling:
       https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css: {type: external, minified: true }
   js:
     components/_patterns/00-base/global/global.js: {}
-    components/_patterns/02-molecules/blocks/header-search-block/search-block.js: {}
+    components/_patterns/02-molecules/blocks/search-block/search-block.js: {}
     components/js/stacktable/stacktable.min.js: {}
   dependencies:
     - core/jquery
