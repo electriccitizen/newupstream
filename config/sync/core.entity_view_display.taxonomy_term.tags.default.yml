@@ -30,6 +30,7 @@ third_party_settings:
                 entity: layout_builder.entity
             additional: {  }
             weight: 0
+    enabled: true
 _core:
   default_config_hash: FZRvIfZfyUVyc9lNDXmNEESpI9EUKfwqb96sx0bPD44
 id: taxonomy_term.tags.default

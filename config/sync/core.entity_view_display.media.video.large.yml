@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.media.large
+    - field.field.media.video.field_media_categories
     - field.field.media.video.field_media_video_embed_field
     - media.type.video
   module:
@@ -12,30 +13,9 @@ dependencies:
     - video_embed_field
 third_party_settings:
   layout_builder:
-    sections:
-      -
-        layout_id: layout_onecol
-        layout_settings: {  }
-        components:
-          e4cf33b6-ef2c-4dd4-8a58-8b15de3fb34d:
-            uuid: e4cf33b6-ef2c-4dd4-8a58-8b15de3fb34d
-            region: content
-            configuration:
-              id: 'field_block:media:video:field_media_video_embed_field'
-              label_display: ''
-              formatter:
-                type: video_embed_field_video
-                label: hidden
-                settings:
-                  responsive: true
-                  width: 854
-                  height: 480
-                  autoplay: false
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
-            weight: 0
+    sections: {  }
+    enabled: false
+    allow_custom: false
 _core:
   default_config_hash: qZ05fsUlyWcLrP9NIhsniAYnRaIZtQousS1eiLKP6wI
 id: media.video.large
@@ -56,6 +36,7 @@ content:
     region: content
 hidden:
   created: true
+  field_media_categories: true
   name: true
   thumbnail: true
   uid: true

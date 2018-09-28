@@ -15,42 +15,9 @@ dependencies:
     - options
 third_party_settings:
   layout_builder:
-    sections:
-      -
-        layout_id: layout_onecol
-        layout_settings: {  }
-        components:
-          de7fb0ed-ee9a-4608-a766-54a746fe4aa5:
-            uuid: de7fb0ed-ee9a-4608-a766-54a746fe4aa5
-            region: content
-            configuration:
-              id: 'field_block:paragraph:event_by_category:field_widget_title'
-              label_display: ''
-              formatter:
-                label: hidden
-                settings:
-                  link_to_entity: false
-                third_party_settings: {  }
-                type: string
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
-            weight: 0
-          e8b1030c-99e8-4335-8ffe-dc006124f26e:
-            uuid: e8b1030c-99e8-4335-8ffe-dc006124f26e
-            region: content
-            configuration:
-              id: 'field_block:paragraph:event_by_category:field_viewfield'
-              label_display: ''
-              formatter:
-                label: hidden
-                settings: {  }
-                third_party_settings: {  }
-                type: list_default
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
-            weight: 1
+    sections: {  }
+    enabled: false
+    allow_custom: false
 _core:
   default_config_hash: nmdLijFQIE_R6l7OwiwPLhJ1jg5la2dN6DHh6cWfU1s
 id: paragraph.event_by_category.default

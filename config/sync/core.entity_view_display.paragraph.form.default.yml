@@ -13,43 +13,9 @@ dependencies:
     - webform
 third_party_settings:
   layout_builder:
-    sections:
-      -
-        layout_id: layout_onecol
-        layout_settings: {  }
-        components:
-          f0ddc2d0-0434-4ec8-abc8-d9b50af71249:
-            uuid: f0ddc2d0-0434-4ec8-abc8-d9b50af71249
-            region: content
-            configuration:
-              id: 'field_block:paragraph:form:field_widget_title'
-              label_display: ''
-              formatter:
-                label: hidden
-                settings:
-                  link_to_entity: false
-                third_party_settings: {  }
-                type: string
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
-            weight: 0
-          f2567d2c-c575-459c-9be8-416cf93617b3:
-            uuid: f2567d2c-c575-459c-9be8-416cf93617b3
-            region: content
-            configuration:
-              id: 'field_block:paragraph:form:field_oc_form'
-              label_display: ''
-              formatter:
-                label: hidden
-                settings:
-                  source_entity: true
-                third_party_settings: {  }
-                type: webform_entity_reference_entity_view
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
-            weight: 1
+    sections: {  }
+    enabled: false
+    allow_custom: false
 _core:
   default_config_hash: gs1OJ_9PAoyVHNHPgwsh_01Dcds15Jf4PItQvovZt8w
 id: paragraph.form.default

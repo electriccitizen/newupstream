@@ -19,43 +19,9 @@ dependencies:
     - user
 third_party_settings:
   layout_builder:
-    sections:
-      -
-        layout_id: layout_onecol
-        layout_settings: {  }
-        components:
-          d2a990dc-eadd-43cc-9250-523df4a584e0:
-            uuid: d2a990dc-eadd-43cc-9250-523df4a584e0
-            region: content
-            configuration:
-              id: 'field_block:node:profiles:field_profile_image'
-              label_display: ''
-              formatter:
-                type: entity_reference_entity_view
-                label: hidden
-                settings:
-                  view_mode: square
-                  link: false
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
-            weight: 0
-          36c88a91-63d3-4197-a2c4-e5b73120dcb6:
-            uuid: 36c88a91-63d3-4197-a2c4-e5b73120dcb6
-            region: content
-            configuration:
-              id: 'field_block:node:profiles:body'
-              label_display: ''
-              formatter:
-                label: hidden
-                type: text_default
-                settings: {  }
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
-            weight: 1
+    sections: {  }
+    enabled: false
+    allow_custom: false
 _core:
   default_config_hash: yEzqEb7C6A6TP_PNv0eyXt60eASAOz-yAJvXXASv1GY
 id: node.profiles.blog_author

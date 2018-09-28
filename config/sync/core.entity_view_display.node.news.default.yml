@@ -33,6 +33,26 @@ third_party_settings:
               context_mapping: {  }
             additional: {  }
             weight: 0
+          c23f15d9-3235-4c77-b8b7-8fe4b43f5c3c:
+            uuid: c23f15d9-3235-4c77-b8b7-8fe4b43f5c3c
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:node:news:links'
+            additional: {  }
+            weight: 1
+          8eecb86b-ab14-4108-973c-853d9fcafe0f:
+            uuid: 8eecb86b-ab14-4108-973c-853d9fcafe0f
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:node:news:links'
+            additional: {  }
+            weight: 2
       -
         layout_id: layout_onecol
         layout_settings: {  }
@@ -96,6 +116,7 @@ third_party_settings:
             weight: 0
     allow_custom: false
     is_enabled: true
+    enabled: true
 _core:
   default_config_hash: IzGVDPFbjzJk7jOlCGQethnQwH5go6PqUDOtPSpXuRM
 id: node.news.default
