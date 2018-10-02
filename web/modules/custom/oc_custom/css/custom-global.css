@@ -39,7 +39,7 @@ header.content-header .shortcut-action--remove:hover .shortcut-action__icon,head
 	margin-bottom: -80px;
 }
 
-.view-content.view-display-id-page_1 .view-filters,.view-display-id-media_page_list .view-filters,.view-files.view-display-id-page_1 .view-filters{
+.view-content.view-display-id-page_1 .view-filters,.view-display-id-media_page_list .view-filters,.view-files.view-display-id-page_1 .view-filters,.view-paragraphs-library.view-display-id-widget_library .view-filters{
 	background: #dbe4e4;
 	padding: 1em 2.5em 2em;
 	margin-left: -2.5em;
@@ -52,18 +52,18 @@ header.content-header .shortcut-action--remove:hover .shortcut-action__icon,head
 	z-index: 20;
 	margin-bottom: -1px;
 }
-.view-content.view-display-id-page_1 .view-content,.view-display-id-media_page_list .view-content,.view-files.view-display-id-page_1 .view-content{
+.view-content.view-display-id-page_1 .view-content,.view-display-id-media_page_list .view-content,.view-files.view-display-id-page_1 .view-content,.view-paragraphs-library.view-display-id-widget_library .view-content{
 	position: relative;
 }
 @media screen and (min-width: 1000px){
-	.view-content.view-display-id-page_1 .view-content:before,.view-display-id-media_page_list .view-content:before,.view-files.view-display-id-page_1 .view-content:before{
+	.view-content.view-display-id-page_1 .view-content:before,.view-display-id-media_page_list .view-content:before,.view-files.view-display-id-page_1 .view-content:before,.view-paragraphs-library.view-display-id-widget_library .view-content:before{
 		content: '';
 		display: block;
 		position: absolute;
 		top: 0;
-		left: -50vw;
+		left: -2.5em;
 		z-index: -1;
-		width: 200vw;
+		width: 100vw;
 		height: 41px;
 		background: #f5f5f2;
 		border-bottom: 1px solid #bfbfba;
@@ -75,20 +75,20 @@ header.content-header .shortcut-action--remove:hover .shortcut-action__icon,head
 	margin-right: 20px;
 }
 
-.view-content.view-display-id-page_1 .view-filters .form-actions,.view-display-id-media_page_list .view-filters .form-actions,.view-files.view-display-id-page_1 .view-filters .form-actions{
+.view-content.view-display-id-page_1 .view-filters .form-actions,.view-display-id-media_page_list .view-filters .form-actions,.view-files.view-display-id-page_1 .view-filters .form-actions,.view-paragraphs-library.view-display-id-widget_library .view-filters .form-actions{
   clear: none;
   float: left;
 }
 
-.view-content.view-display-id-page_1 .view-filters .form-actions input,.view-display-id-media_page_list .view-filters .form-actions input,.view-files.view-display-id-page_1 .view-filters .form-actions input{
+.view-content.view-display-id-page_1 .view-filters .form-actions input,.view-display-id-media_page_list .view-filters .form-actions input,.view-files.view-display-id-page_1 .view-filters .form-actions input,.view-paragraphs-library.view-display-id-widget_library .view-filters .form-actions input{
 	margin-top: 17px;
 }
 
-.view-content.view-display-id-page_1 .views-form > form > .form-actions,.view-display-id-media_page_list .views-form > form > .form-actions,.view-files.view-display-id-page_1 .views-form > form > .form-actions{
+.view-content.view-display-id-page_1 .views-form > form > .form-actions,.view-display-id-media_page_list .views-form > form > .form-actions,.view-files.view-display-id-page_1 .views-form > form > .form-actions,.view-paragraphs-library.view-display-id-widget_library .views-form > form > .form-actions{
 	display: none;
 }
 
-.view-content.view-display-id-page_1 .views-form > form,.view-display-id-media_page_list .views-form > form{
+.view-content.view-display-id-page_1 .views-form > form,.view-display-id-media_page_list .views-form > form,.view-paragraphs-library.view-display-id-widget_library .views-form > form{
 	display: flex;
 	display: -ms-flexbox;
 	flex-direction: column;
@@ -97,12 +97,12 @@ header.content-header .shortcut-action--remove:hover .shortcut-action__icon,head
 	-ms-flex-wrap: none;
 }
 
-.view-content.view-display-id-page_1 .views-form > form > #edit-header,.view-display-id-media_page_list .views-form > form > #edit-header,.view-files.view-display-id-page_1 .views-form > form > #edit-header{
+.view-content.view-display-id-page_1 .views-form > form > #edit-header,.view-display-id-media_page_list .views-form > form > #edit-header,.view-files.view-display-id-page_1 .views-form > form > #edit-header,.view-paragraphs-library.view-display-id-widget_library .views-form > form > #edit-header{
 	order: 99;
 	-ms-flex-order: 99;
 }
 
-#views-form-content-page-1 #edit-header.form-wrapper,#views-form-media-media-page-list #edit-header.form-wrapper,.view-files.view-display-id-page_1 #edit-header.form-wrapper{
+#views-form-content-page-1 #edit-header.form-wrapper,#views-form-media-media-page-list #edit-header.form-wrapper,.view-files.view-display-id-page_1 #edit-header.form-wrapper,.view-paragraphs-library.view-display-id-widget_library #edit-header.form-wrapper{
 	padding: 0 0 3em;
 	width:  100%;
 	max-width: 300px;

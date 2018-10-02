@@ -43,6 +43,7 @@ permissions:
   - 'administer panelizer node page layout'
   - 'administer panelizer node profiles content'
   - 'administer panelizer node profiles layout'
+  - 'administer paragraphs library'
   - 'administer redirects'
   - 'administer taxonomy'
   - 'administer url aliases'

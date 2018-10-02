@@ -1,0 +1,17 @@
+uuid: 3a922d8b-2954-4951-a304-1d615699ceb6
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.from_library.field_reusable_paragraph
+    - paragraphs.paragraphs_type.from_library
+_core:
+  default_config_hash: cwuIPYXF5vCbzfY8wjj_shzx513Cwc122DIqGh2Uqho
+id: paragraph.from_library.preview
+targetEntityType: paragraph
+bundle: from_library
+mode: preview
+content: {  }
+hidden:
+  field_reusable_paragraph: true
