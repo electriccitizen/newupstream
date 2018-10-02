@@ -90,6 +90,10 @@
   background: url(../icons/form.svg) no-repeat;
 }
 
+.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add From library"]{
+  background: url(../icons/library.svg) no-repeat;
+}
+
 .field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Horizontal Rule"]{
   background: url(../icons/hr.svg) no-repeat;
 }
