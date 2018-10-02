@@ -4,6 +4,11 @@ status: true
 dependencies:
   content:
     - 'file:file:cb77aac9-796c-466e-9b29-828a8bf79ee7'
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
 _core:
   default_config_hash: QwfMOirJ441xsk8khq6haDomEqeAZSxtRMSvYiWMjvs
 id: links_files

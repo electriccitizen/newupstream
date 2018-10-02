@@ -4,6 +4,11 @@ status: true
 dependencies:
   content:
     - 'file:file:161fea28-9d32-4849-895c-63276bcb69a0'
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
 _core:
   default_config_hash: 47hihzuEY5ceNAMirMxTik3XB3rfG0nIhGIz3QYfmjk
 id: lightbox_gallery
