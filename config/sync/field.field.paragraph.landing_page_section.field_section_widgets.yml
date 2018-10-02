@@ -7,7 +7,6 @@ dependencies:
     - paragraphs.paragraphs_type.accordion_group
     - paragraphs.paragraphs_type.admin_view_placer
     - paragraphs.paragraphs_type.block_placer
-    - paragraphs.paragraphs_type.call_to_action
     - paragraphs.paragraphs_type.event_by_category
     - paragraphs.paragraphs_type.form
     - paragraphs.paragraphs_type.image
@@ -28,7 +27,7 @@ entity_type: paragraph
 bundle: landing_page_section
 label: 'Section Widgets'
 description: ''
-required: true
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
@@ -39,7 +38,6 @@ settings:
     target_bundles:
       accordion_group: accordion_group
       block_placer: block_placer
-      call_to_action: call_to_action
       event_by_category: event_by_category
       form: form
       image: image
@@ -66,17 +64,14 @@ settings:
         enabled: true
         weight: -36
       call_to_action:
-        enabled: true
         weight: -35
+        enabled: false
       event_by_category:
         enabled: true
         weight: -34
       form:
         enabled: true
         weight: -33
-      horizontal_rule:
-        enabled: true
-        weight: -32
       image:
         enabled: true
         weight: -31
