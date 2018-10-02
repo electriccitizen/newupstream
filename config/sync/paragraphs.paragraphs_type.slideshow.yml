@@ -14,5 +14,5 @@ _core:
 id: slideshow
 label: Slideshow
 icon_uuid: 3e91c741-de7a-4720-8028-09dd9fc2b6f1
-description: ''
+description: 'Uses Slick.js to create a slideshow of full width images'
 behavior_plugins: {  }

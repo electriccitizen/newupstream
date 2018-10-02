@@ -7,5 +7,5 @@ dependencies:
 id: block_placer
 label: 'Block Placer'
 icon_uuid: 9035179c-5e0f-43d7-8282-aa9d375cd4aa
-description: ''
+description: 'References blocks from the custom block library'
 behavior_plugins: {  }

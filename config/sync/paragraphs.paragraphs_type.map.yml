@@ -14,5 +14,5 @@ _core:
 id: map
 label: Map
 icon_uuid: 18ea36d4-3fd3-4894-9149-6017c3150757
-description: ''
+description: 'Creates a geolocation map Google Map embed based on the entered address'
 behavior_plugins: {  }

@@ -7,5 +7,5 @@ _core:
 id: from_library
 label: 'From library'
 icon_uuid: null
-description: null
+description: 'Access reusable paragraphs from the paragraphs library'
 behavior_plugins: {  }
