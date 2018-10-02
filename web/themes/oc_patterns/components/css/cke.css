@@ -68,7 +68,9 @@ div.button a{
 	color: #fff;
 	text-decoration: none;
 }
-
+a{
+	color: #bf0e0e;
+}
 table th, table td{
 	min-width: 40px;
 	padding: 2px 6px;
@@ -137,3 +139,41 @@ blockquote:after{
 blockquote p{
 	display: inline;
 }
+
+/* DOCUMENT ICONS
+------------------ */
+a[href$='.pdf'],a[href$='.doc'],a[href$=".docx"],a[href$='.xls'],a[href$=".xlsx"],a[href$='.ppt'],a[href$=".pptx"]{
+	position: relative;
+	padding-left: 22px;
+	display: inline-block;
+}
+a[href$='.pdf']:before,a[href$='.doc']:before,a[href$=".docx"]:before,a[href$='.xls']:before,a[href$=".xlsx"]:before,a[href$='.ppt']:before,a[href$=".pptx"]:before{
+	content: '';
+	display: block;
+	position: absolute;
+	top: 4px;
+	left: 0;
+	width: 18px;
+	height: 18px;
+}
+a[href$='.pdf']:before{
+	background: url(../../images/icons/src/pdf.svg) no-repeat;
+	background-size: contain;
+	background-position: center;
+}
+a[href$='.doc']:before,a[href$=".docx"]:before{
+	background: url(../../images/icons/src/word.svg) no-repeat;
+	background-size: contain;
+	background-position: center;
+}
+a[href$='.xls']:before,a[href$=".xlsx"]:before{
+	background: url(../../images/icons/src/word.svg) no-repeat;
+	background-size: contain;
+	background-position: center;
+}
+a[href$='.ppt']:before,a[href$=".pptx"]:before{
+	background: url(../../images/icons/src/word.svg) no-repeat;
+	background-size: contain;
+	background-position: center;
+}
+

@@ -16,4 +16,16 @@ items:
   5:
     name: "YouTube"
     value: "youtube"
+  6:
+    name: "PDF"
+    value: "pdf"
+  7:
+    name: "Word"
+    value: "word"
+  8:
+    name: "Excel"
+    value: "excel"
+  9:
+    name: "Powerpoint"
+    value: "powerpoint"
   

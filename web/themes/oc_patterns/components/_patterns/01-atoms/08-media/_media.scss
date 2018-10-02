@@ -74,33 +74,53 @@ img{
 }//end oc-media
 
 
-/* DOCUMENT ICONS
----------------------- */
-.media-document .file{
-	&:hover,&:focus{
-		.fa{
-			opacity: .7;
+/* WYSIWYG DOC ICONS
+---------------------------------------- */
+%docIcons{
+	position: relative;
+	padding-left: 22px;
+	&:hover:before,&:focus:before{
+		opacity: .7;
+	}
+	&:before{
+		content:'';
+		display: block;
+		position: absolute;
+		top: 4px;
+		left: 0px;
+		width: 18px;
+		height: 18px;
+	}
+}
+.field.text-with-summary,.field.text-long,span.file{
+	a[href$='.pdf']{
+		@extend %docIcons;
+		&:before{			
+			@include docPDF;
+		}	
+	}
+
+	//word
+	a[href$='.doc'],a[href$=".docx"]{
+		@extend %docIcons;
+		&:before{
+			@include docWord;
 		}
 	}
-	.fa{
-		margin-right: .5em;
-		color: $body;
-		font-size: 18px;
-		position: relative;
-		top: -2px;
-		&.fa-file-pdf-o{
-			color: #e80723;
+	//excel
+	a[href$='.xls'],a[href$=".xlsx"]{
+		@extend %docIcons;
+		&:before{
+			@include docExcel;
 		}
-		&.fa-file-word-o{
-			color: #0077c0;
+	}
+	//powerpoint
+	a[href$='.ppt'],a[href$=".pptx"]{
+		@extend %docIcons;
+		&:before{
+			@include docPowerpoint;
 		}
-		&.fa-file-excel-o{
-			color: #438406;
-		}
-		&.fa-file-powerpoint-o{
-			color: #b85c00;
-		}
-	}//end i
-}//end file
+	}
+}//end wysiwyg fields
 
 
