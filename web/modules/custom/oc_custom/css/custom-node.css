@@ -151,6 +151,11 @@
   margin: .5em 0 .5em 1em;
 }
 
+/* Hide FROM LIBRARY paragraph preview since not rendering correct */
+.paragraph--type--from-library.paragraph--view-mode--preview .paragraph{
+  display: none;
+}
+
 /* CUSTOM WARNINGS
 ------------------ */
 .node-form .custom-warning{
