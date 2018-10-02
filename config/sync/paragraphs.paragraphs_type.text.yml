@@ -14,5 +14,5 @@ _core:
 id: text
 label: Text
 icon_uuid: a4c7075f-9fa2-494e-b616-9a3e55642a47
-description: ''
+description: 'Allows WYSIWYG text'
 behavior_plugins: {  }

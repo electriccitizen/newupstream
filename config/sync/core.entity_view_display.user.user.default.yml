@@ -74,26 +74,6 @@ third_party_settings:
                 entity: '@user.current_user_context:current_user'
             additional: {  }
             weight: 0
-          7d6c8519-2aef-420b-805a-ad651a030379:
-            uuid: 7d6c8519-2aef-420b-805a-ad651a030379
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'extra_field_block:user:user:member_for'
-            additional: {  }
-            weight: 3
-          76fa6bbb-c852-4b86-81f3-e3e639ebef2a:
-            uuid: 76fa6bbb-c852-4b86-81f3-e3e639ebef2a
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'extra_field_block:user:user:member_for'
-            additional: {  }
-            weight: 4
       -
         layout_id: layout_onecol
         layout_settings: {  }

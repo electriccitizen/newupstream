@@ -14,5 +14,5 @@ _core:
 id: video
 label: Video
 icon_uuid: 20d5d2e0-efbf-468c-abfc-b023ed6e1870
-description: ''
+description: 'Display a responsive Youtube or Vimeo video from the web or media library'
 behavior_plugins: {  }

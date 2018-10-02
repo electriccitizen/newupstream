@@ -14,5 +14,5 @@ _core:
 id: pullquote
 label: Pullquote
 icon_uuid: ff1d5535-d91c-4ca3-a60f-9cc76a45e1c5
-description: ''
+description: 'Displays text with stylized quotation marks and an optional source'
 behavior_plugins: {  }

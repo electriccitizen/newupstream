@@ -9,5 +9,5 @@ _core:
 id: news_by_category
 label: 'News by Category'
 icon_uuid: a1c43756-6b62-473b-bcb2-2eff9f5500ac
-description: ''
+description: 'Shows a view of news by category taxonomy'
 behavior_plugins: {  }
