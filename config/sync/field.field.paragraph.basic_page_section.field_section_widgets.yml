@@ -7,6 +7,7 @@ dependencies:
     - paragraphs.paragraphs_type.accordion_group
     - paragraphs.paragraphs_type.basic_page_section
     - paragraphs.paragraphs_type.form
+    - paragraphs.paragraphs_type.from_library
     - paragraphs.paragraphs_type.image
     - paragraphs.paragraphs_type.lightbox_gallery
     - paragraphs.paragraphs_type.links_files
@@ -42,6 +43,7 @@ settings:
       slideshow: slideshow
       text: text
       video: video
+      from_library: from_library
     target_bundles_drag_drop:
       accordion_group:
         enabled: true
@@ -97,4 +99,7 @@ settings:
       admin_view_placer:
         weight: -21
         enabled: false
+      from_library:
+        enabled: true
+        weight: 28
 field_type: entity_reference_revisions

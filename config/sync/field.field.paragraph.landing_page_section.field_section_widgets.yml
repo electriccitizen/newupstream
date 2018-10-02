@@ -9,6 +9,7 @@ dependencies:
     - paragraphs.paragraphs_type.block_placer
     - paragraphs.paragraphs_type.event_by_category
     - paragraphs.paragraphs_type.form
+    - paragraphs.paragraphs_type.from_library
     - paragraphs.paragraphs_type.image
     - paragraphs.paragraphs_type.landing_page_section
     - paragraphs.paragraphs_type.lightbox_gallery
@@ -50,6 +51,7 @@ settings:
       text: text
       video: video
       admin_view_placer: admin_view_placer
+      from_library: from_library
     target_bundles_drag_drop:
       accordion_group:
         enabled: true
@@ -105,4 +107,7 @@ settings:
       admin_view_placer:
         enabled: true
         weight: -21
+      from_library:
+        enabled: true
+        weight: 29
 field_type: entity_reference_revisions

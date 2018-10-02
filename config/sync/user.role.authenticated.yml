@@ -30,6 +30,7 @@ permissions:
   - 'view paragraph content custom_code'
   - 'view paragraph content event_by_category'
   - 'view paragraph content form'
+  - 'view paragraph content from_library'
   - 'view paragraph content horizontal_rule'
   - 'view paragraph content image'
   - 'view paragraph content landing_page_section'
