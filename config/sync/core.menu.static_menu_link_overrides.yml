@@ -1,0 +1,7 @@
+definitions:
+  paragraphs_library__paragraphs_library_item__collection:
+    weight: -97
+    menu_name: admin
+    parent: system.admin_content
+    expanded: false
+    enabled: false

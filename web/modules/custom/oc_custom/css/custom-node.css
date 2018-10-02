@@ -142,6 +142,15 @@
   background: url(../icons/video.svg) no-repeat;
 }
 
+.field--name-field-reusable-paragraph .entities-list .item-container{
+  display: block;
+}
+
+.field--name-field-reusable-paragraph .entities-list .item-container input{
+  display: inline-block;
+  margin: .5em 0 .5em 1em;
+}
+
 /* CUSTOM WARNINGS
 ------------------ */
 .node-form .custom-warning{
