@@ -206,4 +206,10 @@ fieldset{
 	.form-item input:not([type="submit"]){
 		max-width: 400px;
 	}
-}
+	.description{
+		font-size: 14px;
+	}
+	#edit-submit.button{
+		margin: 0;
+	}
+}//end user login form
