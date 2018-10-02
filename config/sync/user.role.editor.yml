@@ -118,7 +118,6 @@ permissions:
   - 'edit own profiles content'
   - 'edit own video media'
   - 'edit own webform submission'
-  - 'edit paragraph library item'
   - 'edit terms in categories'
   - 'edit terms in position'
   - 'edit terms in tags'
