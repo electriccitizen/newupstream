@@ -21,8 +21,6 @@ items:
     value: '#dd241b'
   - name: $red
     value: '#bf0e0e'
-  - name: $plBlue
-    value: '#017aa2'
   - name: $transWhite
     value: 'rgba(255,255,255,0.7)'
   - name: $transBlack
@@ -45,8 +43,6 @@ items:
     value: $black
   - name: $hoverLink
     value: $midGrey
-  - name: $codeString
-    value: $plBlue
 meta:
   description: >-
     To add to these items, use Sass variables that start with <code>$</code> in
