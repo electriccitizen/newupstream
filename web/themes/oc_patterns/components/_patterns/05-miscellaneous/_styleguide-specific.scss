@@ -2,6 +2,15 @@
 	 STELYGUIDE ONLY SCSS
 ==================== */
 
+/* PL SPECIFIC COLORS
+----------------------- */
+$plBlue  : #017aa2;
+$plGrey  : #787878;
+$plDkGrey: #4a4a4a;
+$plBlack : #000000;
+$plLink  : #bf0e0e;
+$plBorder: #333333;
+
 .pl {
 	.sg-main{
 		padding-top: 2em;
@@ -45,8 +54,8 @@
 		& > h2{
 			margin-bottom: 0;
 			padding: .5em 0;
-			border-top: 2px solid $borderRule;
-			border-bottom: 2px solid $borderRule;
+			border-top: 2px solid $plBorder;
+			border-bottom: 2px solid $plBorder;
 			& > a{
 				cursor: default;
 				pointer-events: none;
@@ -95,7 +104,7 @@
 		text-align: center;
 		max-width: 60%;
 		margin: 2em auto;
-		border: 2px solid $warning;
+		border: 2px solid $plLink;
 		padding: 1em 2em;
 		@include onlySmall{
 			display: none;
@@ -104,7 +113,7 @@
 
 	//layout region placeholders
 	.region-placeholder{
-		background: $lightGrey;
+		background: #ddd;
 		width: 100%;
 		height: 100%;
 		@include safeFlex(column,null,center,null);
@@ -125,7 +134,7 @@
 ---------------- */
 .pl #base-grid{
 	strong{
-		color: $codeString;
+		color: $plBlue;
 	}
 }
 
@@ -158,7 +167,7 @@
 		ul{
 			@include listReset;
 			.include-tag{
-				color: $codeString;
+				color: $plBlue;
 			}
 			.similar{
 				margin-top: .5em;
@@ -252,14 +261,14 @@
 	.doc-section{
 		@include spacer(4);
 		.doc-section-title{
-			color: $link;
+			color: $plLink;
 			background: #dedede;
 			padding: .25em 1.5em;
 			@include spacer(2);
 		}
 		.doc-section-inner{
+			max-width: 800px;
 			@include auto;
-			max-width: $textMax;
 		}
 	}
 	ol,ul{
@@ -271,24 +280,24 @@
 					background: #efefef;
 				}
 				& > a{
-					font-weight: $heavy;
-					color: $black;
+					font-weight: 700;
+					color: $plBlack;
 					@include larger;
 					&:hover,&:focus{
-						color: $link;
+						color: $plLink;
 					}
 				}
 				ol,ul{
 					background: none;
-					color: $body;
+					color: $plDkGrey;
 					padding-top: .5em;
 				}
 				li{
 					@include spacer(.5);
 					a{
-						color: $grey;
+						color: $plGrey;
 						&:hover,&:focus{
-							color: $link;
+							color: $plLink;
 						}
 					}
 				}
@@ -317,13 +326,13 @@
 					counter-increment: item-counter;
 					margin-right: 1em;
 					font-size: 36px;
-					font-weight: $heavy;
+					font-weight: 700;
 					line-height: 1;
-					color: $warning;
+					color: $plLink;
 					position: absolute;
 					left: -30px;
 					top: 0;
-					font-family: $serif;
+					font-family: Georgia, "Times New Roman", Times, serif;
 					@include tab{
 						font-size: 54px;
 						left: -40px;
@@ -386,7 +395,7 @@
 	}
 
 	span.code{
-		color: $codeString;
+		color: $plBlue;
 	}
 
 	p.subtext{
