@@ -18,11 +18,6 @@ accordion:
   version: 1.0
   js:
     components/_patterns/03-organisms/01-widgets/accordion/accordion.js: {}
-  dependencies:
-    - core/jquery
-    - core/drupal
-    - core/drupalSettings
-    - core/jquery.once
 lightbox:
   version: 3.0
   css:
@@ -33,39 +28,18 @@ lightbox:
     components/_patterns/03-organisms/01-widgets/lightbox/lightbox.js: {}
     https://cdn.rawgit.com/noelboss/featherlight/1.7.12/release/featherlight.min.js: { type: external, minified: true }
     https://cdn.rawgit.com/noelboss/featherlight/1.7.12/release/featherlight.gallery.min.js: { type: external, minified: true }
-  dependencies:
-    - core/jquery
-    - core/drupal
-    - core/drupalSettings
-    - core/jquery.once
 media-js:
   version: 1.0
   js:
     components/_patterns/01-atoms/08-media/media.js: {}
-  dependencies:
-    - core/jquery
-    - core/drupal
-    - core/drupalSettings
-    - core/jquery.once
 page-menu:
   version: 1.0
   js:
     components/_patterns/02-molecules/menus/02-page-menu/page-menu.js: {}
-  dependencies:
-    - core/jquery
-    - core/drupal
-    - core/underscore
-    - core/drupalSettings
-    - core/jquery.once
 search-block:
   version: 1.0
   js:
     components/_patterns/02-molecules/blocks/search-block/search-block.js: {}
-  dependencies:
-    - core/jquery
-    - core/drupal
-    - core/drupalSettings
-    - core/jquery.once
 slideshow:
   version: 3.0
   css:
@@ -75,20 +49,10 @@ slideshow:
   js:
     components/_patterns/03-organisms/01-widgets/slideshow/slideshow.js: {}
     //cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js: { type: external, minified: true }
-  dependencies:
-    - core/jquery
-    - core/drupal
-    - core/drupalSettings
-    - core/jquery.once
 widgets:
   version: 3.0
   js:
     components/_patterns/03-organisms/01-widgets/widgets.js: {}
-  dependencies:
-    - core/jquery
-    - core/drupal
-    - core/drupalSettings
-    - core/jquery.once
 fonts:
   css:
     theme:
