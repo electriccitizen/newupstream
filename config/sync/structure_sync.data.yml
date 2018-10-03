@@ -1,0 +1,25 @@
+menus:
+  -
+    menu_name: admin
+    title: 'Custom Block Library'
+    parent: system.admin_content
+    uri: 'internal:/admin/structure/block/block-content'
+    link_title: ''
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '-100'
+    langcode: en
+    uuid: 8cbb8a57-edc4-4117-a0b6-4f33dc84fb40
+  -
+    menu_name: admin
+    title: 'Widget Library'
+    parent: system.admin_content
+    uri: 'internal:/admin/content/paragraphs'
+    link_title: ''
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '-99'
+    langcode: en
+    uuid: 963c1388-d4ff-44de-8088-17c37176cfaf

@@ -89,6 +89,7 @@
     "drupal/redirect": "~1",
     "drupal/search_api": "~1",
     "drupal/stage_file_proxy": "^1.0@alpha",
+    "drupal/structure_sync": "^1.13",
     "drupal/superfish": "~1",
     "drupal/token": "^1.0@RC",
     "drupal/twig_tweak": "^2.0",
