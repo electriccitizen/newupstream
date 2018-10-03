@@ -1,0 +1,25 @@
+uuid: ef4ae018-001a-41e8-8d07-be755ec6e069
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:f8b4a8e0-34e5-4fcc-98d9-9d6f3ac939d0'
+  module:
+    - block_content
+  theme:
+    - oc_patterns
+id: testsyncblock
+theme: oc_patterns
+region: prefooter
+weight: 0
+provider: null
+plugin: 'block_content:f8b4a8e0-34e5-4fcc-98d9-9d6f3ac939d0'
+settings:
+  id: 'block_content:f8b4a8e0-34e5-4fcc-98d9-9d6f3ac939d0'
+  label: 'Test sync block'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
