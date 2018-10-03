@@ -4,7 +4,6 @@
 
 /* PLACEHOLDERS
 ------------ */
-
 %menuDropdown{
 	background: $white;
 	border-left: 1px solid $grey;
@@ -66,14 +65,31 @@
 				font-size: 20px;
 				display: block;
 				position: relative;
+				&:hover,&:focus{
+					background: $white;
+				}
 			}
 			&.active-trail > a{
 				color: $link;
 			}
-			&:hover,&:focus{
-				background: $white;
-			}
 		}
+		//spotlight functionality
+		.spotlight &{
+			&:hover{
+				& > li > a{
+					opacity: .4;
+					&:hover{
+						opacity: 1;
+						color: $link;
+						background: none;
+					}
+				}
+				& > li.sfHover > a{
+					opacity: 1;
+					color: $link;
+				}
+			}
+		}//edn spotlight function
 	}//end main links
 
 
