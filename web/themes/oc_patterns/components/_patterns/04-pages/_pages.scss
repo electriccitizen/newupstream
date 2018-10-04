@@ -30,7 +30,7 @@ html > body:not(.is-front):not(.path-node):not(.node-type-page){
 /* USER DASHBOARD
 ----------------------- */
 article.user-dashboard{
-	margin-top: -3em;
+	margin-top: -2em;
 	@include spacer(3);
 	//image, username, since, roles
 	& > .layout--onecol:first-child{

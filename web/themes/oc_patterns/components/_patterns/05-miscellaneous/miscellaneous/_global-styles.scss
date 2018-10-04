@@ -180,7 +180,7 @@ body {
 ----------------- */
 #block-oc-patterns-local-tasks{
 	max-width: $contentStop;
-	padding: 30px 20px 20px;
+	padding: 30px 20px 0;
 	position: relative;
 	@include auto;
 	&:after{

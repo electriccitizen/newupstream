@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "05816931d3658ac7313f1fecae835a79",
+    "content-hash": "cc9b5a056fa18fd5144bcb0c3e8f5e0e",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -3270,6 +3270,72 @@
                 "source": "http://cgit.drupalcode.org/entity_usage",
                 "issues": "http://drupal.org/project/issues/entity_usage"
             }
+        },
+        {
+            "name": "drupal/environment",
+            "version": "dev-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/environment",
+                "reference": "bc06deb991baa1396d57e3a5b45318d4296b4d38"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.x-dev",
+                    "datestamp": "1439832239",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Garrett Albright",
+                    "homepage": "https://www.drupal.org/user/191212"
+                },
+                {
+                    "name": "Grayside",
+                    "homepage": "https://www.drupal.org/user/346868"
+                },
+                {
+                    "name": "arknoll",
+                    "homepage": "https://www.drupal.org/user/853506"
+                },
+                {
+                    "name": "ceardach",
+                    "homepage": "https://www.drupal.org/user/79082"
+                },
+                {
+                    "name": "hefox",
+                    "homepage": "https://www.drupal.org/user/426416"
+                },
+                {
+                    "name": "mlncn",
+                    "homepage": "https://www.drupal.org/user/64383"
+                },
+                {
+                    "name": "techninja",
+                    "homepage": "https://www.drupal.org/user/132895"
+                }
+            ],
+            "description": "Sets the environment variable for a site instance",
+            "homepage": "https://www.drupal.org/project/environment",
+            "support": {
+                "source": "http://cgit.drupalcode.org/environment"
+            },
+            "time": "2015-08-17T16:56:01+00:00"
         },
         {
             "name": "drupal/eu_cookie_compliance",
@@ -11053,6 +11119,7 @@
         "drupal/devel": 20,
         "drupal/entity_embed": 10,
         "drupal/entity_usage": 15,
+        "drupal/environment": 20,
         "drupal/field_group": 5,
         "drupal/flippy": 20,
         "drupal/inline_entity_form": 10,
