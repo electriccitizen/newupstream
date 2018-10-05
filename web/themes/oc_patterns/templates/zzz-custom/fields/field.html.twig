@@ -65,6 +65,8 @@
   <div class="field {{ field_name|clean_class }} {{ field_type|clean_class }}">
     {%- if (label_display == 'inline') -%}
       <span class="inline-label">{{- label -}}:</span>
+    {% elseif (label_display == 'visually_hidden') %}
+      <div class="label visually-hidden">{{- label -}}</div>
     {%- else -%}
       <div class="label">{{- label -}}</div>
     {%- endif -%}
