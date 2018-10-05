@@ -47,6 +47,7 @@
 <div{{ attributes.addClass(classes) }}>
   {% block blockContent %}
     {{ title_prefix }}
+    <div class="builder-label">{{ configuration.label }}</div>
     {% if label %}
       <h2 class="block-title">{{ label }}</h2>
     {% endif %}

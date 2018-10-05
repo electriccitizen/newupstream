@@ -1,6 +1,10 @@
 /* ===============
    layout builder admin theming
 =================== */
+//hide the builder label and only show it later when in layout builder
+.builder-label{
+	display: none;
+}
 .layout-section .layout-builder--layout__region{
 	.draggable{
 		@include spacer(2);
@@ -21,6 +25,14 @@
 		.section:first-child{
 			margin-top: 0 !important;
 		}
+	}
+	//show visually hidden labels
+	.builder-label{
+		display: inline-block;
+		color: #ffffff;
+		background: #bf0e0e;
+		padding: 4px 8px;
+		@include spacer(.25);
 	}
 }//end layout builder section region
 
