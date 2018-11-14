@@ -45,3 +45,11 @@ ignore_words: 'a, an, as, at, before, but, by, for, from, is, in, into, like, of
 update_action: 2
 _core:
   default_config_hash: gAGAl399f7ahPUFVYKzuZIjik16jZJPCKe7ZgYYR_w4
+safe_tokens:
+  - alias
+  - alias
+  - path
+  - join-path
+  - login-url
+  - url
+  - url-brief
