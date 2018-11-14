@@ -34,11 +34,37 @@
           "reference": "1.3.1"
         }
       }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "d3/d3",
+        "version": "v3.5.17",
+        "type": "drupal-library",
+        "dist": {
+          "url": "https://github.com/d3/d3/archive/v3.5.17.zip",
+          "type": "zip"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "components/highlightjs",
+        "version": "9.7.0",
+        "type": "drupal-library",
+        "dist": {
+          "url": "https://github.com/components/highlightjs/archive/9.7.0.zip",
+          "type": "zip"
+        }
+      }
     }
   ],
     "require": {
+    "components/highlightjs": "9.7.*",
     "composer/installers": "^1.6",
     "cweagans/composer-patches": "^1.0",
+    "d3/d3": "3.5.*",
     "drupal-composer/drupal-scaffold": "^2.0.1",
     "drupal/addanother": "^1.0@RC",
     "drupal/addtoany": "~1",
