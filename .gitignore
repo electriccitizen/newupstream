@@ -10,6 +10,7 @@
 /web/themes/contrib/
 /web/profiles/contrib/
 /web/private/scripts/quicksilver
+/web/libraries/
 
 # ignore lando
 .ht.router.php 
@@ -119,3 +120,5 @@ Thumbs.db
 !web/core/**/*.gz
 /web/sites/sites.php
 /.vagrant
+
+/web/sites/default/drushrc.php
