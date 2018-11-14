@@ -119,3 +119,5 @@ Thumbs.db
 !web/core/**/*.gz
 /web/sites/sites.php
 /.vagrant
+
+/web/sites/default/drushrc.php
