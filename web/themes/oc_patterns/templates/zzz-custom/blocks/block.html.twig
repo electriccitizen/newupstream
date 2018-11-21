@@ -34,27 +34,28 @@
 {% if content['#block_content'].info.0.value %}
   {% set titleClass = 'block-' ~ content['#block_content'].info.0.value|clean_class %}
 {% endif %}
-{% if content['#block_content'].id.0.value %}
-  {% set idClass = 'block-' ~ content['#block_content'].id.0.value %}
+{% if elements.content['#block_content'].id() %}
+  {% set idClass = 'block-' ~ elements.content['#block_content'].id() %}
 {% endif %}
 
-
 {% set classes = [
-    'block',
-    pluginClass,
-    bundleClass,
-    titleClass,
-    idClass
+  'block',
+  pluginClass,
+  bundleClass,
+  titleClass,
+  idClass
 ] %}
 
 <div{{ attributes.addClass(classes) }}>
-  {% block blockContent %}
+  {% block blockSetup %}
     {{ title_prefix }}
-    {% if label %}
-      <h2 class="block-title">{{ label }}</h2>
-    {% endif %}
+    {% block blockLabel %}
+      {% if label %}
+        <h2 class="block-title">{{ label }}</h2>
+      {% endif %}
+    {% endblock %}
     {{ title_suffix }}
-    {% block content %}
+    {% block blockContent %}
       {{ content }}
     {% endblock %}
   {% endblock %}
