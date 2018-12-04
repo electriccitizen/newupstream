@@ -11,15 +11,15 @@ $pager-line: 2.4rem;
 ///mixin - pagerItemStyle
 @mixin pagerItemStyle{
 	display: block;
-	width: 26px;
+	min-width: 26px;
 	height: 26px;
+	padding: 0px 3px;
 	line-height: $pager-line;
-	border: 1px solid $link;
+	font-weight: bold;
 	text-align: center;
 	border-radius: 6px;
 	&:hover,&:focus{
-		color: $white;
-		background: $hoverLink;
+		color: $hoverLink;
 		text-decoration: none;
 		@include transAll(.3s);
 	}
@@ -101,6 +101,49 @@ $pager-line: 2.4rem;
 
 /* FULL PAGER
 ---------------- */
+.pager-bar{
+	@include safeFlex(row,wrap,null,null);
+	margin-top: 20px;
+	.view-footer{
+		width: 200px;
+		margin-bottom: 0;
+		margin-left: 0;
+		margin-right: 0;
+		@include onlySmall{
+			width: calc(100% + 40px);
+			margin-bottom: 1em;
+			margin-left: -20px;
+			margin-right: -20px;
+		}
+		.footer-inner{
+			padding: 20px 0 18px;
+			text-align: left;
+			border-top: 1px solid $borderRule;
+    	border-bottom: 1px solid $borderRule;
+			@include onlySmall{
+				text-align: center;
+			}
+		}
+	}
+	.bottom-pager{
+		border-top: 1px solid $borderRule;
+		border-bottom: 1px solid $borderRule;
+		-webkit-box-flex: 1;
+		flex: 1 1 auto;
+		-ms-flex: 1 1 auto;
+		@include onlySmall{
+			border: 0px;
+		}
+		.js-pager__items{
+			@include safeFlex(row,wrap,end,start);
+      padding: 20px 0 18px;
+			@include onlySmall{
+				@include safeFlex(row,wrap,center,start);
+			}
+		}
+	}
+}
+
 .pager{
 	//page number styling;
 	.pager__item:not(.pager__item--first):not(.pager__item--previous):not(.pager__item--next):not(.pager__item--last){

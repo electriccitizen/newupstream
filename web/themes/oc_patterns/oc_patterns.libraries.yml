@@ -17,16 +17,26 @@ accordion:
   version: 1.0
   js:
     components/_patterns/03-organisms/01-widgets/accordion/accordion.js: {}
-lightbox:
-  version: 3.0
+featherlight:
+  version: 1.0
   css:
     theme:
       https://cdn.rawgit.com/noelboss/featherlight/1.7.12/release/featherlight.min.css: { type: external, minified: true }
       https://cdn.rawgit.com/noelboss/featherlight/1.7.12/release/featherlight.gallery.min.css: { type: external, minified: true }
   js:
-    components/_patterns/03-organisms/01-widgets/lightbox/lightbox.js: {}
+    components/_patterns/03-organisms/01-widgets/gallery/gallery.js: {}
     https://cdn.rawgit.com/noelboss/featherlight/1.7.12/release/featherlight.min.js: { type: external, minified: true }
     https://cdn.rawgit.com/noelboss/featherlight/1.7.12/release/featherlight.gallery.min.js: { type: external, minified: true }
+galleries:
+  js:
+    components/_patterns/03-organisms/01-widgets/gallery/gallery.js: {}
+  dependencies:
+  - core/jquery
+  - core/drupal.ajax
+  - core/drupal
+  - core/underscore
+  - core/drupalSettings
+  - core/jquery.once
 media-js:
   version: 1.0
   js:
@@ -39,14 +49,14 @@ search-block:
   version: 1.0
   js:
     components/_patterns/02-molecules/blocks/search-block/search-block.js: {}
-slideshow:
+slick:
   version: 3.0
   css:
     theme:
       //cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css: { type: external, minified: true }
       //cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css: { type: external, minified: true }
   js:
-    components/_patterns/03-organisms/01-widgets/slideshow/slideshow.js: {}
+    components/_patterns/03-organisms/01-widgets/gallery/gallery.js: {}
     //cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js: { type: external, minified: true }
 widgets:
   version: 3.0
