@@ -72,6 +72,7 @@ function oc_patterns_theme_suggestions_block_alter(array &$suggestions, array $v
     $block_name = str_replace(' ','_',strtolower($variables['elements']['content']['#block_content']->label()));
     array_splice($suggestions, 1, 0, 'block__' . $variables['elements']['content']['#block_content']->bundle());
     array_splice($suggestions, 2, 0, 'block__' . $block_name);
+    array_splice($suggestions, 3, 0, 'block__' . $variables['elements']['content']['#block_content']->id());
   }
 }
 

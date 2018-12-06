@@ -46,7 +46,9 @@
   idClass
 ] %}
 
-<div{{ attributes.addClass(classes) }}>
+{% block blockAttributes %}
+  <div{{ attributes.addClass(classes) }}>
+{% endblock %}
   {% block blockSetup %}
     {{ title_prefix }}
     {% block blockLabel %}
