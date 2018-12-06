@@ -72,9 +72,9 @@ display:
       row:
         type: fields
       fields:
-        title_1:
-          id: title_1
-          table: search_api_datasource_nodes_entity_node
+        title:
+          id: title
+          table: search_api_index_nodes
           field: title
           relationship: none
           group_type: group
@@ -108,7 +108,7 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: h2
+          element_type: h3
           element_class: ''
           element_label_type: ''
           element_label_class: ''
@@ -138,13 +138,13 @@ display:
           fallback_handler: search_api
           fallback_options:
             link_to_item: false
+            use_highlighting: false
             multi_type: separator
             multi_separator: ', '
-          entity_type: node
           plugin_id: search_api_field
-        body:
-          id: body
-          table: search_api_datasource_nodes_entity_node
+        body_1:
+          id: body_1
+          table: search_api_index_nodes
           field: body
           relationship: none
           group_type: group
@@ -208,9 +208,9 @@ display:
           fallback_handler: search_api
           fallback_options:
             link_to_item: false
+            use_highlighting: false
             multi_type: separator
             multi_separator: ', '
-          entity_type: node
           plugin_id: search_api_field
       filters:
         search_api_fulltext:
