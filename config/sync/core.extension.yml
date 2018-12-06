@@ -45,7 +45,6 @@ module:
   hal: 0
   help: 0
   history: 0
-  honeypot: 0
   image: 0
   image_style_quality: 0
   inline_entity_form: 0
