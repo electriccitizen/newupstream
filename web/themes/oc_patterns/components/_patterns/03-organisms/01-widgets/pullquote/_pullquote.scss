@@ -5,7 +5,7 @@
 	max-width: $textMax;
 	@include auto;
 	.widget-title{
-		@include spacer(1.5);
+		margin-bottom: $spaceMd;
 	}
 	//quote text
 	.field-oc-long-text{

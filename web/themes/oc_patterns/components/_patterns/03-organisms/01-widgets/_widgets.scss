@@ -12,8 +12,7 @@
 	.beaker .main &,.bunsen .main &{
 		overflow: hidden;
 		@include tab{
-			margin-left: 0;
-			margin-right: 0;
+			@include edgeReset;
 		}
 	}	
 }
@@ -30,32 +29,32 @@ SECTION LAYOUTS
 --------------------- */
 .section{
 	width: 100%;
-	padding-left: 20px;
-	padding-right: 20px;
+	padding-left: $siteMarginMobile;
+	padding-right: $siteMarginMobile;
 	position: relative;
 
 	&:not(.background){
-		padding-top: 3em;
-		padding-bottom: 3em;
+		padding-top: $spaceXl;
+		padding-bottom: $spaceXl;
 		& + .section:not(.background){
 			padding-top: 0;
 		}
 	}
 	&.background{
-		padding-bottom: 3em;
-		padding-top: 3em;
+		padding-bottom: $spaceXl;
+		padding-top: $spaceXl;
 	}
 
 	.field-section-title{
-		padding-left: 20px;
-		padding-right: 20px;
+		padding-left: $siteMarginMobile;
+		padding-right: $siteMarginMobile;
 	}
 	.field-section-intro{
 		max-width: $textMax + 40px;
-		padding-left: 20px;
-		padding-right: 20px;
+		padding-left: $siteMarginMobile;
+		padding-right: $siteMarginMobile;
+		margin-bottom: $spaceMd;
 		@include auto;
-		@include spacer(1.5);
 	}
 
 	//default section layout
@@ -64,8 +63,8 @@ SECTION LAYOUTS
 		z-index: 4;
 		@include safeFlex(row,wrap,null,null);
 		max-width: $contentStop + 40px;
-		padding-left: 20px;
-		padding-right: 20px;
+		padding-left: $siteMarginMobile;
+		padding-right: $siteMarginMobile;
 		@include auto;
 		& > .section-item{
 			width: 100%;
@@ -73,7 +72,7 @@ SECTION LAYOUTS
 			min-height: 0;
 			min-width: 0;
 			&:not(:last-child){
-				@include spacer(2);
+				margin-bottom: $spaceLg;
 			}
 		}
 	}//end field section widgets
@@ -90,7 +89,7 @@ SECTION LAYOUTS
 						padding-left: 30px;
 					}
 					&:nth-last-child(2){
-						@include spacer(0);
+						margin-bottom: 0;
 					}
 				}
 			}
@@ -154,8 +153,8 @@ SECTION LAYOUTS
 //Anchor Links
 .widget-anchors{
 	max-width: $contentStop;
-	padding-left: 20px;
-	padding-right: 20px;
+	padding-left: $siteMarginMobile;
+	padding-right: $siteMarginMobile;
 	padding-top: 1em;
 	padding-bottom: 1em;	
 	text-align: center;
@@ -226,7 +225,7 @@ SECTION LAYOUTS
 
 	//snug up first section if it has a background
 	& + .field--name-field-oc-widgets > .section:first-child:not(.background){
-		margin-top: 2em;
+		margin-top: $spaceLg;
 	}
 
 }//end widget anchors (in this section)

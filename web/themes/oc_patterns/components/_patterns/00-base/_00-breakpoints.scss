@@ -16,6 +16,17 @@ $mobileMenu:max-width 979px;
 $deskMenu:min-width 980px;
 
 
+/* SPACING VARIABLES 
+----------------------------- */
+$spaceXs: 1em;
+$spaceSm: 1em;
+$spaceMd: 1.5em;
+$spaceLg: 2em;
+$spaceXl: 3em;
+
+$siteMarginMobile: 20px;
+$siteMarginDesk: 60px;
+
 
 /// mixin - smallTab
 @mixin smallTab {

@@ -10,7 +10,7 @@
 	.field-oc-long-text{
 		max-width: $textMax;
 		@include auto;
-		margin-top: 1em;
+		margin-top: $spaceSm;
 	}
 }//end video widget
 

@@ -5,13 +5,13 @@ html > body:not(.is-front):not(.path-node):not(.node-type-page){
 	.layout-content{
 		max-width: $contentStop + 40px;
 		@include auto;
-		padding: 0 20px 3em;
+		padding: 0 $siteMarginMobile 3em;
 	}
 	#block-oc-patterns-content{
-		padding-top: 2em;
+		padding-top: $spaceLg;
 	}
 	.block-page-title-block{
-		margin-bottom: 2em;
+		margin-bottom: $spaceLg;
 	}
 
 }//system pages
@@ -22,7 +22,7 @@ html > body:not(.is-front):not(.path-node):not(.node-type-page){
 .is-front{
 	//end banner section
 	.node-section#section-2{
-		margin-top: 2em;
+		margin-top: $spaceLg;
 	}//banner section
 }//end front
 
@@ -31,12 +31,12 @@ html > body:not(.is-front):not(.path-node):not(.node-type-page){
 ----------------------- */
 article.user-dashboard{
 	margin-top: -2em;
-	@include spacer(3);
+	margin-bottom: $spaceXl;
 	//image, username, since, roles
 	& > .layout--onecol:first-child{
 		position: relative;
-		padding: 3em 0;
-		@include spacer(2);
+		padding: $spaceXl 0;
+		margin-bottom: $spaceLg;
 		&:after{
 			@include fullBack($lightGrey);
 		}
@@ -48,7 +48,7 @@ article.user-dashboard{
 		.block-field-user-image{
 			width: 250px;
 			@include onlySmall{
-				@include spacer(1);
+				margin-bottom: $spaceSm;
 				@include auto;
 			}
 			@include tab{
@@ -74,7 +74,7 @@ article.user-dashboard{
 			}
 		}
 		.user-created{
-			@include spacer(.5);
+			margin-bottom: $spaceXs;
 		}
 		.user-roles{
 			span.role:not(:last-child){
@@ -97,7 +97,7 @@ article.user-dashboard{
 
 	//quicklinks
 	.block-field-user-quick-links{
-		@include spacer(2);
+		margin-bottom: $spaceLg;
 		width: 100%;
 		@include contentStop{
 			width: 50%;
@@ -110,7 +110,7 @@ article.user-dashboard{
 			li{
 				padding-left: 10px;
 				padding-right: 10px;
-				@include spacer(1);
+				margin-bottom: $spaceSm;
 				a{
 					width: 240px;
 					height: 55px;
@@ -133,7 +133,7 @@ article.user-dashboard{
 		.view.user-dashboard{
 			text-align: center;
 			.views-row{
-				@include spacer(.5);
+				margin-bottom: $spaceSm;
 			}
 		}
 	}//end recently added

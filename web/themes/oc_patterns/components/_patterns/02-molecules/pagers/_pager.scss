@@ -58,8 +58,8 @@ $pager-line: 24px;
 @mixin pagerResults{
 	border-top: 1px solid $borderRule;
 	border-bottom: 1px solid $borderRule;
+	margin-bottom: $spaceSm;
 	@include calc(width, "100% + 40px");
-	@include spacer(1);
 	@include edgeToEdge;
 	div{
 		position: relative;
@@ -74,7 +74,7 @@ $pager-line: 24px;
 	}
 	@include tab{
 		width: 200px;
-		@include spacer(0);
+		margin-bottom: 0;
 		@include edgeReset;
 		div{
 			padding: 20px 0 18px;

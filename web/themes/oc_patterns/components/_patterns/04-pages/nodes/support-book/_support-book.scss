@@ -9,8 +9,8 @@
 
 	//nav section
 	.node-section#section-2{
-		padding-left: 20px;
-		padding-right: 20px;
+		padding-left: $siteMarginMobile;
+		padding-right: $siteMarginMobile;
 		@include tab{
 			float: left;
 			width: 350px;
@@ -19,8 +19,8 @@
 
 	//main-content section
 	.node-section#section-3{
-		padding-left: 20px;
-		padding-right: 20px;
+		padding-left: $siteMarginMobile;
+		padding-right: $siteMarginMobile;
 		@include tab{
 			float: left;
 			@include calc(width, "100% - 350px");

@@ -151,7 +151,7 @@
 			display: block;
 			position: relative;
 			left: auto;
-			margin: 2em 0;
+			margin: $spaceLg 0;
 			max-width: 100%;
 		}
 	}//end search-form-wrapper
@@ -160,11 +160,11 @@
 	#views-exposed-form-site-search-search-results {
 		position: relative;
 		width: 100%;
-		padding: 80px 20px;
+		padding: 80px $siteMarginMobile;
 		text-align: center;
 		background: rgba(35,35,35,0.97);
 		@include deskMenu{
-			padding: 160px 20px;
+			padding: 160px $siteMarginMobile;
 		}
 		.box &{
 			@include deskMenu{

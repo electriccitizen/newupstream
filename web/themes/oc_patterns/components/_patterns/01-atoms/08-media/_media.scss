@@ -9,7 +9,7 @@ img{
 }
 
 .field-media-image + figcaption{
-	margin-top: .5em;
+	margin-top: $spaceXs;
 }
 
 //constrain images with smaller sizes (commonly embedded)
@@ -50,7 +50,7 @@ img{
 /* MEDIA IN WYSIWYG 
 ------------------- */
 .oc-media{
-	margin-bottom: 2em;
+	margin-bottom: $spaceLg;
 
 	//embedded alignment (images only )
 	&.right:not(.has-video){

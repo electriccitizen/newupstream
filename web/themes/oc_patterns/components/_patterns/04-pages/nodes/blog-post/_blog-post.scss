@@ -7,29 +7,29 @@
 	.block-field.block-title{
 		@include centerTitle;
 		h1{
-			@include spacer(.25);
+			margin-bottom: .25em;
 		}
 		.metatext{
 			@include textDate;
-			padding: 0 20px;
-			margin-bottom: 1.5em;
+			padding: 0 $siteMarginMobile;
+			margin-bottom: $spaceMd;
 		}
 	}//end title block
 	
 	//add to any block positioning
 	.block-addtoany_block{
-		padding: 0 20px;
+		padding: 0 $siteMarginMobile;
 		text-align: right;
 		margin-top: -3px;
 		@include sectionLimit;
-		@include spacer(2);
+		margin-bottom: $spaceLg;
 	}
 
 	//tags
 	.block-field-tags{
 		font-size: 16px;
 		@include textContent;
-		@include spacer(.5);
+		margin-bottom: $spaceXs;
 		.label{
 			font-weight: $heavy;
 			margin-right: .5em;
@@ -52,7 +52,7 @@
 
 	.block-flippy-block{
 		@include sectionLimit;
-		@include spacer(2);
+		margin-bottom: $spaceLg;
 	}
 
 

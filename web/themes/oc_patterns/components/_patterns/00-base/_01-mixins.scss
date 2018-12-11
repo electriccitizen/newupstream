@@ -262,8 +262,8 @@
 
 // move arrows outside of slick and change color
 @mixin outsideSliderArrows{
-	padding-left: 20px;
-	padding-right: 20px;
+	padding-left: $siteMarginMobile;
+	padding-right: $siteMarginMobile;
 
 	//override arrow padding then there are not enough slick items to have slider / have buttons
 	.slick-list:only-child{
@@ -363,14 +363,14 @@
 
 // set left and right margins to ignore side padding of main container
 @mixin edgeToEdge {
-	margin-left:-20px;
-	margin-right:-20px;
+	margin-left: $siteMarginMobile * -1;
+	margin-right: $siteMarginMobile * -1;
 }
 
 // reset left and right margins to 0
 @mixin edgeReset {
-	margin-left:0;
-	margin-right:0;
+	margin-left: 0;
+	margin-right: 0;
 }
 
 // clear floats (used on parent container)
@@ -492,11 +492,6 @@
 			width: 25%;
 		}
 	}
-}
-
-//set bottom spacing as a multiple of ems
-@mixin spacer($spaceMultiplier){
-	margin-bottom: 1em * $spaceMultiplier;
 }
 
 // set negative edges on a parent to allow children to have equal space between without overflowing edges

@@ -28,7 +28,7 @@ $h6Sm: 18px;
 ------------------ */
 @mixin headerGlobals{
 	line-height: 1.15em;
-	margin-bottom: .5em;
+	margin-bottom: $spaceXs;
 	margin-top: 0;
 	font-weight: $heavy;
 	font-family: $header;
@@ -89,7 +89,7 @@ $h6Sm: 18px;
 	text-transform: uppercase;
 	text-align: center;
 	max-width: $textMax;
-	@include spacer(1.5);
+	margin-bottom: $spaceMd;
 	@include auto;
 }
 

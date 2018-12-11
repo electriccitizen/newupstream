@@ -2,8 +2,8 @@
    NODES GLOBAL
 =================== */
 @mixin centerTitle{
-	padding-left: 20px;
-	padding-right: 20px;
+	padding-left: $siteMarginMobile;
+	padding-right: $siteMarginMobile;
 	max-width: $contentStop;
 	text-align: center;
 	@include auto;
@@ -22,8 +22,8 @@
 
 @mixin textContent{
 	max-width: $textMax + 40px;
-	padding-left: 20px;
-	padding-right: 20px;
+	padding-left: $siteMarginMobile;
+	padding-right: $siteMarginMobile;
 	@include auto;
 }
 
@@ -32,5 +32,5 @@
 -------------- */
 .node-content .block-body{
 	@include textContent;
-	@include spacer(3);
+	margin-bottom: $spaceXs;
 }

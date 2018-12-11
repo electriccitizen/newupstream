@@ -5,7 +5,7 @@
 .layout-container > header {
 	background: $offWhite;
 	& > div{
-		padding: 10px 20px;
+		padding: 10px $siteMarginMobile;
 		max-width: $contentStop + 40px;
 		@include auto;
 		position: relative;

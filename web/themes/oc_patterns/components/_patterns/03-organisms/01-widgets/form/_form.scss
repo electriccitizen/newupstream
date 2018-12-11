@@ -7,7 +7,7 @@
 	@include auto;
 	form{
 		& > .js-form-item{
-			margin-bottom: 1em;
+			margin-bottom: $spaceSm;
 			label{
 				margin-bottom: .25em;
 				display: inline-block;

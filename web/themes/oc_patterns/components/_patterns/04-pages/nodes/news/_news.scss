@@ -6,7 +6,7 @@
 	//image, title, post date
 	.node-section#section-2{
 		.layout__region--content{
-			@include spacer(2);
+			margin-bottom: $spaceLg;
 			@include textContent;
 			@include safeFlex(row,wrap,center,null);
 		}
@@ -14,7 +14,7 @@
 	.block-field-banner{
 		width: 350px;
 		@include onlySmall{
-			@include spacer(1.5);
+			margin-bottom: $spaceMd;
 		}
 	}
 	.block-field.block-title{
@@ -28,7 +28,7 @@
 			}
 		}
 		h1{
-			@include spacer(.25);
+			margin-bottom: .25em;
 		}
 		.metatext{
 			@include textDate;

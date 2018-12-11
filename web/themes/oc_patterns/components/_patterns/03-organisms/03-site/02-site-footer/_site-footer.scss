@@ -8,9 +8,9 @@ footer {
 		background: $darkGrey;
 		color: $offWhite;
 		min-height: 289px;
-		padding: 30px 20px 30px;
+		padding: 30px $siteMarginMobile;
 		@include tab{
-			padding: 30px 20px 50px;
+			padding: 30px $siteMarginMobile 50px;
 			min-height: 0;
 		}
 

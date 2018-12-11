@@ -5,17 +5,17 @@
 .view{
 	.item-list > ul{
 		@include listReset;
-		li{
+		& > li{
 			width: 100%;
 			&:not(:last-child){
-				@include spacer(1.5);
+				margin-bottom: $spaceMd;
 			}
 		}
 	}
 	.views-row{
 		width: 100%;
 		&:not(:last-child){
-			@include spacer(1.5);
+			margin-bottom: $spaceMd;
 		}
 	}
 }//end view

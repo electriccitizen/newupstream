@@ -8,7 +8,7 @@
 	width: 100%;
 	caption{
 		font-weight: $heavy;
-		margin-bottom: .5em;
+		margin-bottom: $spaceXs;
 	}
 
 	td,th{
@@ -34,7 +34,7 @@
 		//give a bit extra room in the row on mobile
 		@include onlySmall{
 			td{
-				padding: .5em 20px;
+				padding: .5em $siteMarginMobile;
 			}
 			//style headers
 			& > td.st-key{
@@ -51,7 +51,7 @@
 .body,.field-oc-long-text{
 	table{
 		@include table;
-		@include spacer(1.5);
+		margin-bottom: $spaceMd;
 	} 
 }
 
@@ -99,7 +99,7 @@ table{
 		&.small-only{
 			display: table;
 			width: 100%;
-			margin-bottom: .5em;
+			margin-bottom: $spaceXs;
 			td{
 				display: inline-block;
 			}

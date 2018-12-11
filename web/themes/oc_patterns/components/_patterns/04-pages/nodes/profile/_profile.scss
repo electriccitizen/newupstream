@@ -1,12 +1,23 @@
 /* =============
    PROFILE NODE
 ================== */
+
+%mainImageShim{
+	.has-main-image &{
+		@include tab{
+			margin-left: 250px;
+			padding-left: 40px;
+			@include calc(width, "100% - 250px");
+		}
+	}
+}
+
 .node-profiles.node-content{
 
 	//image title position email phone
 	.node-section#section-2{
 		.layout__region--content{
-			@include spacer(1.5);
+			margin-bottom: $spaceMd;
 			@include textContent;
 			@include tab{
 				@include clearFix;
@@ -16,7 +27,7 @@
 
 	.block-field-profile-image{
 		width: 250px;
-		@include spacer(1);
+		margin-bottom: $spaceSm;
 		@include onlySmall{
 			@include auto;
 		}
@@ -26,35 +37,17 @@
 	}//end profile-image
 
 	.block-field-email{
-		@include spacer(.5);
-		.has-main-image &{
-			@include tab{
-				margin-left: 250px;
-				padding-left: 40px;
-				@include calc(width, "100% - 250px");
-			}
-		}
+		margin-bottom: $spaceXs;
+		@extend %mainImageShim;
 	}//end email
 
 	.block-field-phone{
-		@include spacer(.5);
-		.has-main-image &{
-			@include tab{
-				margin-left: 250px;
-				padding-left: 40px;
-				@include calc(width, "100% - 250px");
-			}
-		}
+		margin-bottom: $spaceXs;
+		@extend %mainImageShim;
 	}//end phone
 
 	.block-field.block-title{
-		.has-main-image &{
-			@include tab{
-				margin-left: 250px;
-				padding-left: 40px;
-				@include calc(width, "100% - 250px");
-			}
-		}
+		@extend %mainImageShim;
 		h1{
 			margin-bottom: 10px;
 			font-size: 32px;
@@ -65,14 +58,8 @@
 	}//end title
 
 	.block-field-position{
-		@include spacer(.5);
-		.has-main-image &{
-			@include tab{
-				margin-left: 250px;
-				padding-left: 40px;
-				@include calc(width, "100% - 250px");
-			}
-		}
+		margin-bottom: $spaceXs;
+		@extend %mainImageShim;
 		.field-position{
 			font-size: 21px;
 			@include tab{

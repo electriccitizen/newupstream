@@ -4,7 +4,7 @@
 .node-page.node-content{
 	
 	.block-field-banner{
-		@include spacer(2);
+		margin-bottom: $spaceLg;
 	}
 	.block-field.block-title{
 		@include centerTitle;

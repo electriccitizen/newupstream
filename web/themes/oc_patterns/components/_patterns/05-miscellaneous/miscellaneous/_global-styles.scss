@@ -28,6 +28,7 @@ body {
 
 /* COOKIES ACCEPTANCE
 ------------------------ */
+/*
 #sliding-popup{
 	background: $offWhite;
 	border-bottom: 6px solid $transBlack;
@@ -95,7 +96,7 @@ body {
 		}
 	}
 }//end sliding popup
-
+*/
 
 /* MAP PINS
 -------------- */
@@ -180,7 +181,7 @@ body {
 ----------------- */
 #block-oc-patterns-local-tasks{
 	max-width: $contentStop;
-	padding: 30px 20px 0;
+	padding: 30px $siteMarginMobile 0;
 	position: relative;
 	@include auto;
 	&:after{

@@ -13,7 +13,7 @@
 	.views-row{
 		width: 100%;
 		@include safeFlexSize(0,0,auto);
-		margin-bottom: 2em;
+		margin-bottom: $spaceLg;
 		@include tab{
 			width: 50%;
 			&:nth-child(odd){
@@ -26,7 +26,7 @@
 	}
 
 	.views-field-field-banner{
-		margin-bottom: 1em;
+		margin-bottom: $spaceXs;
 		img{
 			display: block;
 		}
@@ -36,7 +36,7 @@
 	.views-field-nothing{
 		.metatext{
 			@include textDate;
-			margin-bottom: 1em;
+			margin-bottom: $spaceXs;
 		}
 	}
 }//end all posts

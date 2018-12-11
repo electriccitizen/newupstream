@@ -120,7 +120,7 @@
 		width: 100%;
 		padding-left: 26px;
 		position: relative;
-		margin-bottom: 10px;
+		margin-bottom: $spaceXs;
 		//create custom boxes before the label
 		&:before{
 			content: '';
@@ -155,11 +155,11 @@ input[type=text], input[type=search], input[type=url], input[type=number], texta
 // generic form-item
 .form-item{
 	width: 100%;
-	margin-bottom: 1.5em;
+	margin-bottom: $spaceMd;
 	label{
 		font-weight: $heavy;
 		display: block;
-		margin-bottom: .5em;
+		margin-bottom: $spaceXs;
 		padding-bottom: 0;
 	}
 }//end form item
@@ -177,7 +177,7 @@ input[type=text], input[type=search], input[type=url], input[type=number], texta
 	@include smaller;
 }
 input + .description{
-	padding-top: .5em;
+	padding-top: $spaceXs;
 }
 
 
@@ -189,7 +189,7 @@ fieldset{
 	legend{
 		font-weight: $heavy;
 		@include larger;
-		margin-bottom: .5em;
+		margin-bottom: $spaceXs;
 	}
 	&:not(.js-webform-type-radios){
 		.fieldset-wrapper{

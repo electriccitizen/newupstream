@@ -8,12 +8,12 @@
 
 	//add a bit more space before start of view if there is a title
 	h3.widget-title{
-		margin-bottom: 1.5em;
+		margin-bottom: $spaceMd;
 	}
 
 	.date{
 		@include textDate;
-		@include spacer(.5);
+		margin-bottom: $spaceXs;
 	}
 	
 }//end news by category

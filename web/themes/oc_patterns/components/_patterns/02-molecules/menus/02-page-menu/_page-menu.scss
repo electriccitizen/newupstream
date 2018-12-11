@@ -5,11 +5,11 @@
 
 .block--system-menu.page-menu{
 	@include onlySmall{
-		@include spacer(2);
+		margin-bottom: $spaceLg;
 	}
 	h2.block-title{
 		position: relative;
-		padding: .5em 1em;
+		padding: .5em $siteMarginMobile;
 		background: $lightGrey;
 		@include onlySmall{
 			padding: 1em;

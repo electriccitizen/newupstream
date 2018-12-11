@@ -34,17 +34,16 @@
 
 /// mixin - quote styling
 @mixin quote{
-	margin: 0;
+	margin: 0 0 $spaceXs;
 	max-width: 740px;
 	position: relative;
 	font-family: $serif;
 	font-style: italic;
 	font-size: 28px;
-	padding-bottom:10px;
-	margin-bottom: .5em;
+	padding-bottom: 10px;
 	@include tab{
 		font-size: 42px;
-		padding-bottom:0;
+		padding-bottom: 0;
 	}
 	p{
 		display: inline;
@@ -94,7 +93,7 @@ body {
 p{
 	margin-top: 0;
 	&:not(:last-child){
-		margin-bottom: 1.5em;
+		margin-bottom: $spaceMd;
 	}
 	&:last-child{
 		margin-bottom: 0;
@@ -126,7 +125,7 @@ span.highlight{
 .warning{
 	background: none;
 	padding: .5em 1em;
-	margin-bottom: 1.5em;
+	margin-bottom: $spaceMd;
 	color: $warning;
 	border: 1px solid $warning;
 	text-align: center;

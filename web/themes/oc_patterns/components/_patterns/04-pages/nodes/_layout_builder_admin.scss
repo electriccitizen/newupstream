@@ -7,7 +7,7 @@
 }
 .layout-section .layout-builder--layout__region{
 	.draggable{
-		@include spacer(2);
+		margin-bottom: $spaceLg;
 		max-height: 500px;
 		overflow: hidden;
 		min-height: 90px;
@@ -32,7 +32,7 @@
 		color: #ffffff;
 		background: #bf0e0e;
 		padding: 4px 8px;
-		@include spacer(.25);
+		margin-bottom: .25em;
 	}
 }//end layout builder section region
 

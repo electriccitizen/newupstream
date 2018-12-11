@@ -35,7 +35,7 @@ optgroup:empty{
 	max-width: 250px;
 }
 body .select2-container{
-	@include spacer(0);
+	margin-bottom: 0;
 }
 
 /* SINGLE SELECT 2

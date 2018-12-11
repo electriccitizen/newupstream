@@ -22,7 +22,7 @@
 	}
 
 	.layout-content{
-		padding: 2em 20px 0 !important; 
+		padding: 2em $siteMarginMobile 0 !important; 
 		.site-search{
 			h1{
 				@include tab{
@@ -30,7 +30,7 @@
 				}
 			}
 			.search-page-block{
-				@include spacer(2);
+				margin-bottom: $spaceLg;
 			}
 			h2.results-header{
 				width: 100%;
@@ -38,13 +38,13 @@
 				@include auto;
 				padding-bottom: .5em;
 				border-bottom: 1px solid $borderRule;
-				margin-bottom: .5em;
+				margin-bottom: $spaceXs;
 			}
 			.view-content,.view-empty{
 				width: 100%;
 				max-width: $textMax;
 				@include auto;
-				margin-bottom: 3em;
+				margin-bottom: $spaceXl;
 			}
 		}//site-search
 	}//layout content
