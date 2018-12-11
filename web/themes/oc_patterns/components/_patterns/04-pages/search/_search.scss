@@ -29,16 +29,21 @@
 					color: $black;
 				}
 			}
-
+			.search-page-block{
+				@include spacer(2);
+			}
 			h2.results-header{
-				margin-top: 2em;
-				@include safeFlexSize(0,0,100%);
+				width: 100%;
+				max-width: $textMax;
+				@include auto;
 				padding-bottom: .5em;
 				border-bottom: 1px solid $borderRule;
 				margin-bottom: .5em;
 			}
 			.view-content,.view-empty{
-				@include safeFlexSize(0,0,100%);
+				width: 100%;
+				max-width: $textMax;
+				@include auto;
 				margin-bottom: 3em;
 			}
 		}//site-search

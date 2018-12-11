@@ -5,6 +5,7 @@
  * Contains oc_custom.module.
  */
 
+use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Routing\RouteMatchInterface;
 
 /**
@@ -33,6 +34,11 @@ function oc_custom_theme() {
     'oc_custom' => [
       'template' => 'oc_custom',
       'render element' => 'children',
+    ],
+    'site_search' => [
+      'variables' => [
+        'title' => 'Site Search',
+      ],
     ],
   ];
 }
@@ -79,3 +85,27 @@ function oc_custom_page_attachments(array &$attachments){
 }
 
 
+/**
+ * Implements hook_preprocess_HOOK() for block templates.
+ */
+function oc_custom_preprocess_block(&$variables) {
+  if ($variables['plugin_id'] == 'site_search') {
+    $variables['attributes']['role'] = 'search';
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter() for the search_block_form form.
+ *
+ * Since the exposed form is a GET form, we don't want it to send the form
+ * tokens. However, you cannot make this happen in the form builder function
+ * itself, because the tokens are added to the form after the builder function
+ * is called. So, we have to do it in a form_alter.
+ *
+ * @see \Drupal\search\Form\SearchBlockForm
+ */
+function oc_custom_form_site_search_form_alter(&$form, FormStateInterface $form_state) {
+  $form['form_build_id']['#access'] = FALSE;
+  $form['form_token']['#access'] = FALSE;
+  $form['form_id']['#access'] = FALSE;
+}

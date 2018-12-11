@@ -16,7 +16,7 @@
 
 /* BRANDING BLOCK PLACEMENT
 ------------------- */
-.block--system-branding{
+.block-system-branding-block{
 	//leave room for search toogle and menu hamburger on mobile
 	@include calc(width, "100% - 70px");
 	position: relative;

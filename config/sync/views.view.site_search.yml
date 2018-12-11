@@ -230,7 +230,7 @@ display:
             description: ''
             use_operator: false
             operator: search_api_fulltext_op
-            identifier: search_api_fulltext
+            identifier: site_search_api_fulltext
             required: false
             remember: false
             multiple: false
@@ -319,7 +319,7 @@ display:
       display_extenders: {  }
       path: site-search
       display_description: ''
-      exposed_block: true
+      exposed_block: false
     cache_metadata:
       max-age: -1
       contexts:

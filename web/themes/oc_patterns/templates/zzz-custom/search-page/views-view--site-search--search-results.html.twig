@@ -41,7 +41,9 @@
 	<h1>Site Search</h1>
 	
 	<div class="search-page-block">
-		{{ drupal_entity('block', 'exposedformsite_searchsearch_results', check_access=false) }}
+		<div class="search-form-outer">
+			{{ exposed }}
+		</div>
 	</div>
 
 	{%- if header -%}

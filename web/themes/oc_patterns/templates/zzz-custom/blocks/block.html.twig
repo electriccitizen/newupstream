@@ -26,7 +26,7 @@
  */
 #}
 {% if plugin_id %}
-  {% set pluginClass = 'block-' ~ plugin_id %}
+  {% set pluginClass = 'block-' ~ plugin_id|clean_class %}
 {% endif %}
 {% if content['#block_content'].bundle %}
   {% set bundleClass = 'block-' ~ content['#block_content'].bundle|clean_class %}

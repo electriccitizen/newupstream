@@ -127,10 +127,10 @@
 // visually hide something but allow screen reader access
 @mixin visuallyHidden{
 	position: absolute;
-	width: 1px;
-	height: 1px;
-	overflow: hidden;
-	clip: rect(1px, 1px, 1px, 1px);
+	left: -900vw;
+	top: 0;
+	font-size: 1px;
+	opacity: .1;
 }
 
 // overlay a dark transparent tint

@@ -52,7 +52,7 @@
 
 	{{- content.field_widget_title -}}
 
-	<div class="block block-{{ content.field_block.0['#block_content'].label|clean_class }} block-{{ content.field_block.0['#block_content'].bundle|clean_class }}">
+	<div data-quickedit-entity-id="{{ content.field_block.0['#attributes']['data-quickedit-entity-id'] }}" class="block block-{{ content.field_block.0['#block_content'].label|clean_class }} block-{{ content.field_block.0['#block_content'].bundle|clean_class }}">
 		{{- content.field_block -}}
 	</div>
 	
