@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.storage.node.field_oc_widgets
     - node.type.landing_page
-    - paragraphs.paragraphs_type.admin_view_placer
     - paragraphs.paragraphs_type.landing_page_section
   module:
     - entity_reference_revisions
@@ -26,19 +25,15 @@ settings:
   handler_settings:
     negate: 0
     target_bundles:
-      admin_view_placer: admin_view_placer
       landing_page_section: landing_page_section
     target_bundles_drag_drop:
       accordion_group:
         weight: -45
         enabled: false
       admin_view_placer:
-        enabled: true
-        weight: -45
-      block_placer:
         weight: -45
         enabled: false
-      call_to_action:
+      block_placer:
         weight: -45
         enabled: false
       accordion_item:
@@ -83,4 +78,7 @@ settings:
       landing_page_section:
         enabled: true
         weight: 23
+      from_library:
+        weight: 26
+        enabled: false
 field_type: entity_reference_revisions

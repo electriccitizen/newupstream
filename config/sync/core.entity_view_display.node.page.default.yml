@@ -8,11 +8,14 @@ dependencies:
     - field.field.node.page.field_metatags
     - field.field.node.page.field_oc_widgets
     - node.type.page
+    - system.menu.main
   module:
     - entity_reference_revisions
     - layout_builder
     - layout_discovery
+    - menu_block
     - metatag
+    - oc_patterns
     - system
     - text
     - user
@@ -75,7 +78,7 @@ third_party_settings:
             additional: {  }
             weight: 1
       -
-        layout_id: layout_onecol
+        layout_id: two_column_sidebar_left
         layout_settings: {  }
         components:
           1eaee1a1-cd33-4dbf-ad13-921a03d7286f:
@@ -93,6 +96,26 @@ third_party_settings:
                 third_party_settings: {  }
               context_mapping:
                 entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+          8da88ecb-2331-491f-b491-9843b55a1c40:
+            uuid: 8da88ecb-2331-491f-b491-9843b55a1c40
+            region: first
+            configuration:
+              id: 'menu_block:main'
+              label: 'Section Menu'
+              provider: menu_block
+              label_display: visible
+              follow: 0
+              follow_parent: active
+              level: 2
+              depth: 0
+              expand: 1
+              parent: 'main:'
+              label_type: root
+              label_link: 0
+              suggestion: page_menu
+              context_mapping: {  }
             additional: {  }
             weight: 0
       -

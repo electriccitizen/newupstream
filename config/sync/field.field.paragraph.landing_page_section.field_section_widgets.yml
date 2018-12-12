@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.storage.paragraph.field_section_widgets
     - paragraphs.paragraphs_type.accordion_group
-    - paragraphs.paragraphs_type.admin_view_placer
     - paragraphs.paragraphs_type.block_placer
     - paragraphs.paragraphs_type.event_by_category
     - paragraphs.paragraphs_type.form
@@ -50,7 +49,6 @@ settings:
       slideshow: slideshow
       text: text
       video: video
-      admin_view_placer: admin_view_placer
       from_library: from_library
     target_bundles_drag_drop:
       accordion_group:
@@ -65,9 +63,6 @@ settings:
       block_placer:
         enabled: true
         weight: -36
-      call_to_action:
-        weight: -35
-        enabled: false
       event_by_category:
         enabled: true
         weight: -34
@@ -105,8 +100,8 @@ settings:
         enabled: true
         weight: -22
       admin_view_placer:
-        enabled: true
         weight: -21
+        enabled: false
       from_library:
         enabled: true
         weight: 29
