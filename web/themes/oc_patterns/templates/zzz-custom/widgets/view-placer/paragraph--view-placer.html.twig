@@ -38,10 +38,6 @@
 #}
 
 {% extends "paragraph.html.twig" %}
-{# NOTES
-------------
-
-#}
 
 {# print the content without the styling fields #}
 {% block widgetContent %}
@@ -50,7 +46,6 @@
 	{% set displayName = content.field_display_machine_name.0['#context'].value|clean_class %}
 	<div class="view-widget {{ viewName }} {{ displayName }}">
 		{# print the content without the styling fields #}
-	    {{- viewfield -}}
+	    {{- content.field_display_machine_name -}}
 	</div>			
-{% endblock %}
-		
+{% endblock %}	
