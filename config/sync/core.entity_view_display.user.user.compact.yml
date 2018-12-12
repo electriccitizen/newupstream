@@ -26,4 +26,5 @@ content: {  }
 hidden:
   field_authored_placeholder: true
   field_user_image: true
+  field_user_quick_links: true
   member_for: true

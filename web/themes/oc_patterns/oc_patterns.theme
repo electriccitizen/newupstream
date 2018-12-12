@@ -36,7 +36,7 @@ function oc_patterns_preprocess_html(&$variables) {
  * Implements hook_preprocess_field.
  */
 function oc_patterns_preprocess_field(&$variables, $hook) {
-  if ($variables['element']['#object']->bundle() == 'admin_view_placer') {
+  if ($variables['element']['#object']->bundle() == 'view_placer') {
         $view_name = str_replace(' ','_',strtolower($variables['element']['#object']->get('field_view_machine_name')->value));
         $display_name = str_replace(' ','_',strtolower($variables['element']['#object']->get('field_display_machine_name')->value)); 
         $view = views_embed_view($view_name,$display_name);  

@@ -51,6 +51,7 @@ content:
     region: content
 hidden:
   created: true
+  field_media_categories: true
   name: true
   thumbnail: true
   uid: true

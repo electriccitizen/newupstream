@@ -6,11 +6,8 @@ dependencies:
     - field.field.node.landing_page.body
     - field.field.node.landing_page.field_banner
     - field.field.node.landing_page.field_metatags
-    - field.field.node.landing_page.field_oc_widgets
-    - field.field.node.landing_page.layout_builder__layout
     - node.type.landing_page
   module:
-    - entity_reference_revisions
     - layout_builder
     - layout_discovery
     - metatag
@@ -24,8 +21,8 @@ third_party_settings:
         layout_id: layout_onecol
         layout_settings: {  }
         components:
-          d6a1eb18-ea64-4550-9cb4-9e9d91664720:
-            uuid: d6a1eb18-ea64-4550-9cb4-9e9d91664720
+          e7c8008c-ac48-4fc3-9cd0-fac0f399aae8:
+            uuid: e7c8008c-ac48-4fc3-9cd0-fac0f399aae8
             region: content
             configuration:
               id: system_breadcrumb_block
@@ -39,8 +36,8 @@ third_party_settings:
         layout_id: layout_onecol
         layout_settings: {  }
         components:
-          02d32b97-5752-4d0f-8eb3-de3413b50d8b:
-            uuid: 02d32b97-5752-4d0f-8eb3-de3413b50d8b
+          6636b530-ecca-4bda-959f-f544b04a7422:
+            uuid: 6636b530-ecca-4bda-959f-f544b04a7422
             region: content
             configuration:
               id: 'field_block:node:landing_page:field_banner'
@@ -57,8 +54,8 @@ third_party_settings:
                 entity: layout_builder.entity
             additional: {  }
             weight: 1
-          2d62265e-ae58-4309-8608-eadd292e3358:
-            uuid: 2d62265e-ae58-4309-8608-eadd292e3358
+          11fc59af-3b1c-416d-b540-331daaab65da:
+            uuid: 11fc59af-3b1c-416d-b540-331daaab65da
             region: content
             configuration:
               id: 'field_block:node:landing_page:title'
@@ -79,8 +76,8 @@ third_party_settings:
         layout_id: layout_onecol
         layout_settings: {  }
         components:
-          76bf8cbb-ca39-45d8-9276-f923e8550fc4:
-            uuid: 76bf8cbb-ca39-45d8-9276-f923e8550fc4
+          ab701efe-a35e-4a00-ab4b-8033dccc4554:
+            uuid: ab701efe-a35e-4a00-ab4b-8033dccc4554
             region: content
             configuration:
               id: 'field_block:node:landing_page:body'
@@ -96,29 +93,7 @@ third_party_settings:
                 entity: layout_builder.entity
             additional: {  }
             weight: 0
-      -
-        layout_id: layout_onecol
-        layout_settings: {  }
-        components:
-          9fd7c5d5-6dd2-4880-96e2-943963f774ee:
-            uuid: 9fd7c5d5-6dd2-4880-96e2-943963f774ee
-            region: content
-            configuration:
-              id: 'field_block:node:landing_page:field_oc_widgets'
-              label: Widgets
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: hidden
-                type: entity_reference_revisions_entity_view
-                settings:
-                  view_mode: default
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
-            weight: 0
-    allow_custom: true
+    allow_custom: false
     is_enabled: true
     enabled: true
 _core:
@@ -149,15 +124,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: metatag_empty_formatter
-    region: content
-  field_oc_widgets:
-    weight: 105
-    label: above
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
-    type: entity_reference_revisions_entity_view
     region: content
   links:
     weight: 100
