@@ -19,6 +19,7 @@ dependencies:
     - paragraphs.paragraphs_type.slideshow
     - paragraphs.paragraphs_type.text
     - paragraphs.paragraphs_type.video
+    - paragraphs.paragraphs_type.view_placer
   module:
     - entity_reference_revisions
 id: paragraph.landing_page_section.field_section_widgets
@@ -49,26 +50,27 @@ settings:
       slideshow: slideshow
       text: text
       video: video
+      view_placer: view_placer
       from_library: from_library
     target_bundles_drag_drop:
       accordion_group:
         enabled: true
-        weight: -39
+        weight: -37
       accordion_item:
-        weight: -38
+        weight: -36
         enabled: false
       basic_page_section:
-        weight: -37
+        weight: -35
         enabled: false
       block_placer:
         enabled: true
-        weight: -36
+        weight: -34
       event_by_category:
         enabled: true
-        weight: -34
+        weight: -33
       form:
         enabled: true
-        weight: -33
+        weight: -32
       image:
         enabled: true
         weight: -31
@@ -99,10 +101,10 @@ settings:
       video:
         enabled: true
         weight: -22
-      admin_view_placer:
+      view_placer:
+        enabled: true
         weight: -21
-        enabled: false
       from_library:
         enabled: true
-        weight: 29
+        weight: -20
 field_type: entity_reference_revisions

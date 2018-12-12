@@ -119,32 +119,6 @@ third_party_settings:
               context_mapping: {  }
             additional: {  }
             weight: 0
-      -
-        layout_id: layout_onecol
-        layout_settings: {  }
-        components:
-          fbf05665-dac7-4ace-b3dc-77510e014c2b:
-            uuid: fbf05665-dac7-4ace-b3dc-77510e014c2b
-            region: content
-            configuration:
-              id: 'field_block:node:page:field_oc_widgets'
-              label: Widgets
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: hidden
-                type: entity_reference_revisions_entity_view
-                settings:
-                  view_mode: default
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
-            weight: 0
-      -
-        layout_id: two_column_sidebar_left
-        layout_settings: {  }
-        components: {  }
     allow_custom: false
     is_enabled: true
     enabled: true
