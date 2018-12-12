@@ -1,6 +1,6 @@
 two_column_sidebar_left:
   label: Two Column Sidebar Left
-  category: MNDOR Layouts
+  category: OC Patterns Layouts
   path: templates/layout
   template: layout--twocol-sideleft
   default_region: content
