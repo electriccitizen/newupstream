@@ -7,11 +7,13 @@ dependencies:
     - field.field.node.landing_page.body
     - field.field.node.landing_page.field_banner
     - field.field.node.landing_page.field_metatags
+    - field.field.node.landing_page.field_oc_widgets
     - node.type.landing_page
   module:
     - entity_browser_entity_form
     - inline_entity_form
     - metatag
+    - paragraphs
     - path
     - text
 _core:
@@ -53,6 +55,25 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: metatag_firehose
+    region: content
+  field_oc_widgets:
+    weight: 3
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      closed_mode: preview
+      autocollapse: all
+      closed_mode_threshold: 0
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: landing_page_section
+      features:
+        duplicate: duplicate
+        collapse_edit_all: collapse_edit_all
+        add_above: '0'
+    third_party_settings: {  }
+    type: paragraphs
     region: content
   path:
     type: path

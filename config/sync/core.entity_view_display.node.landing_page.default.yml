@@ -6,8 +6,11 @@ dependencies:
     - field.field.node.landing_page.body
     - field.field.node.landing_page.field_banner
     - field.field.node.landing_page.field_metatags
+    - field.field.node.landing_page.field_oc_widgets
+    - field.field.node.landing_page.layout_builder__layout
     - node.type.landing_page
   module:
+    - entity_reference_revisions
     - layout_builder
     - layout_discovery
     - metatag
@@ -71,7 +74,7 @@ third_party_settings:
               context_mapping:
                 entity: layout_builder.entity
             additional: {  }
-            weight: 2
+            weight: 3
       -
         layout_id: layout_onecol
         layout_settings: {  }
@@ -93,7 +96,25 @@ third_party_settings:
                 entity: layout_builder.entity
             additional: {  }
             weight: 0
-    allow_custom: false
+          80c41edc-6693-4697-a38d-a60fc16d51a2:
+            uuid: 80c41edc-6693-4697-a38d-a60fc16d51a2
+            region: content
+            configuration:
+              id: 'field_block:node:landing_page:field_oc_widgets'
+              label: Widgets
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_revisions_entity_view
+                settings:
+                  view_mode: default
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 1
+    allow_custom: true
     is_enabled: true
     enabled: true
 _core:
@@ -124,6 +145,15 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: metatag_empty_formatter
+    region: content
+  field_oc_widgets:
+    weight: 104
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
     region: content
   links:
     weight: 100
