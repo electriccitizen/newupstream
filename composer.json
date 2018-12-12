@@ -210,6 +210,9 @@
       }
     },
     "patches": {
+      "drupal/core": {
+        "PluginDependencyTrait does not handle theme dependencies": "https://www.drupal.org/files/issues/2018-10-25/2904550-plugin_dependency-63.patch"
+      },
       "drupal/addanother":{
         "URL doesnt match machine name": "https://www.drupal.org/files/issues/addanother-url-doesnt-match-machine-name-2851584-3.patch"
       },

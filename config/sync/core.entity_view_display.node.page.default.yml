@@ -15,10 +15,11 @@ dependencies:
     - layout_discovery
     - menu_block
     - metatag
-    - oc_patterns
     - system
     - text
     - user
+  theme:
+    - oc_patterns
 third_party_settings:
   layout_builder:
     sections:
