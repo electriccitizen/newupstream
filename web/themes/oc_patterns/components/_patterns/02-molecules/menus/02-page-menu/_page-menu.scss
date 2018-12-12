@@ -25,7 +25,13 @@
 	//top level
 	#page-menu-wrapper{
 		display: none;
-		@include tab{
+		@include onlySmall{
+			padding-left: $siteMarginMobile;
+			padding-right: $siteMarginMobile;
+			max-width: 440px;
+			@include auto;
+		}
+		@include deskMenu{
 			display: block !important;
 		}
 		& > ul:not(.contextual-links){
@@ -36,17 +42,11 @@
 				margin: .25em 0;
 				display: none;
 				padding-left: 12px;
-				@include transAll(.3s);
-				ul{
-				}
-				li{
-					//reset sub menus to base font size
-					@include baseFontSize;
-					a:hover{
-						@include transAll(.3s);
-					}
+				&.expanded{
+					display: block;
 				}
 			}
+
 			//set first livel to larger size
 			& > li{
 				font-size: 20px;
@@ -56,40 +56,34 @@
 				padding-top: 4px;
 				padding-bottom: 4px;
 				list-style: none;
+				position: relative;
+				padding-left: 1.25em;
 				//active link
-				a.is-active{
-					color: $black;
+				a{
+					text-decoration: none;
+					display: block;
+					&.is-active{
+						color: $black;
+						&:hover,&:focus{
+							color: $hoverLink;
+						}
+					}
 				}
-				//shift non parents over to match expander spacing
-				&:not(.parent){
-					padding-left: .8em;
-				}
-
 				//parents
 				&.parent{
 					& > .expander{
-						@include browserWipe;
-						color: $link;
-						border: 0;
-						padding: 0;
-						background: none;
-						cursor: pointer;
-						&:hover,&:focus,&:active{
-							color: $hoverLink;
-						}
+						position: absolute;
+						top: 2px;
+						left: 0;
 						&:before{
 							content: "+";
 						}
 					}
 					&.expanded{
 						& > .expander{
-							color: $hoverLink;
 							&:before{
 								content: "–";
 							}
-						}
-						& > a{
-							color: $black;
 						}
 					}//end when expanded
 				}//end parent

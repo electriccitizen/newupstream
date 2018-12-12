@@ -22,41 +22,27 @@ Drupal.behaviors.pageMenu = {
 
 					//find nested lists and set their parents and expanders
 					if(($('ul', this).length) && (!$('.expander:first', this).length) ){
-					  $(this).addClass('parent').prepend('<button class="expander" aria-expanded="false"></button>').find(' > a').attr('aria-expanded', 'false').next('ul').attr('aria-hidden', 'true');
+					  $(this).addClass('parent').prepend('<a href="#" class="expander" aria-expanded="false" role="button"></a>').find(' > a:not(.expander)').next('ul').attr('aria-hidden', 'true');
 					}
 
 					//find active links and set the active trail
-					$('.is-active', this).attr('aria-expanded', 'true').siblings('ul').slideDown(100).attr('aria-hidden', 'false').parentsUntil('#page-menu-wrapper > ul').addClass('active-trail expanded');
+					$('.is-active', this).attr('aria-expanded', 'true').siblings('ul').slideDown(100).attr('aria-hidden', 'false').end().parentsUntil('#page-menu-wrapper > ul').addClass('active-trail expanded');
 
-
-					//find active-trail li and add aria expanded role
+					//find active-trail li and add aria expanded role to the expander
 					$('li.active-trail > .expander').attr('aria-expanded', "true").siblings('ul').attr('aria-hidden', 'false');
 				});
 
 				//set button roles, tab indexes and keypresses on sidebar links
-				$('#page-menu-wrapper a').each(function(i){
-					//find heirarchies in the menu and add a class to each link
-					$(this).addClass('level-' + $(this).parents('.page-menu ul').length);
-					$(this).attr('tabindex', '0');
-					$(this).attr('role', 'button');
-					$(this).focusin(function(e){
-						$(this).keydown(function(e) {
-							if((e.which === 13) && (e.target === this)){  //on enter
-								document.location = $('a:first-child', this).attr('href');
-							}
-						});
-					});
+				$(document).on('click','#page-menu-wrapper .expander',function(e){
+					e.preventDefault();
+          $(this).closest('li').toggleClass('expanded');
+          if($(this).attr('aria-expanded') == 'false'){
+            $(this).attr('aria-expanded', "true").siblings('ul').slideDown(500).attr('aria-hidden', 'false').end().closest('li').removeClass('expanded');
+          }else{
+            $(this).attr('aria-expanded', "false").siblings('ul').slideUp(500).attr('aria-hidden', 'true');
+          }
 				});
 
-				//change expanded class and aria-roles on expander click
-				$('.expander').click(function(){
-					$(this).closest('li').toggleClass('expanded');
-					if($(this).attr('aria-expanded') == 'false'){
-						$(this).attr('aria-expanded', "true").siblings('ul').slideDown(500).attr('aria-hidden', 'false');
-					}else{
-						$(this).attr('aria-expanded', "false").siblings('ul').slideUp(500).attr('aria-hidden', 'true');
-					}
-				});
 			});
 		});
 	}
@@ -64,7 +50,7 @@ Drupal.behaviors.pageMenu = {
 
 function mobilePagenav() {
   var wwidth = $(window).outerWidth();
-  if (wwidth < 760) {
+  if (wwidth < 980) {
     //add aria roles to menu title and wrapper if not already set by click above 
     if(!$('.page-menu-toggle').attr('aria-controls')){
       $('.page-menu-toggle').attr({

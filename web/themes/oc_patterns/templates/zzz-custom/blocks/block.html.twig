@@ -47,7 +47,7 @@
 ] %}
 
 {% block blockAttributes %}
-  <div{{ attributes.addClass(classes) }}>
+  <div{% if (content['#block_content'].bundle|clean_class == 'basic') or (content['#block_content'].bundle|clean_class == 'teaser-block-type') or (content['#block_content'].bundle|clean_class == 'contact-accordion-block') or (content['#block_content'].bundle|clean_class == 'paragraphs') %} data-quickedit-entity-id="block_content/{{ elements.content['#block_content'].id() }}"{% endif %}{{ attributes.addClass(classes) }}>
 {% endblock %}
   {% block blockSetup %}
     {{ title_prefix }}

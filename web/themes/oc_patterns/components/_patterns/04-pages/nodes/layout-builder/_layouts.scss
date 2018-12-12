@@ -1,0 +1,26 @@
+/* ===============
+   Section Layouts
+=================== */
+
+/* TWO COLUMN SIDEBAR LEFT */
+.layout--twocol-sideleft{
+	width: 100%;
+	max-width: $contentStop;
+	@include auto;
+	@include safeFlex(row,wrap,null,start);
+	.layout__region--first{
+		width: 100%;
+		@include deskMenu{
+			width: 320px;
+		}
+	}//end layout region second
+	.layout__region--content{
+		width: 100%;
+		@include deskMenu{
+			@include calc(width, "100% - 320px");
+			&:not(.ui-sortable){
+				padding-left: 60px;
+			}
+		}
+	}
+}//end layout-twocol-sideleft

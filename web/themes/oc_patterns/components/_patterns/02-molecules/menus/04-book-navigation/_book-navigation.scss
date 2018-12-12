@@ -3,21 +3,7 @@
 =================== */
 
 .block-book-navigation{
-	h2.block-title{
-		a{
-			color: $black;
-			&:hover,&:focus{
-				color: $link;
-				@include transAll(.3s);
-			}
-		}
-	}
-	ul{
-		@include listReset;
-		a:hover,a:focus{
-			@include transAll(.3s);
-		}
-	}
+	@extend .block--system-menu.page-menu;
 }//end book navigation
 
 

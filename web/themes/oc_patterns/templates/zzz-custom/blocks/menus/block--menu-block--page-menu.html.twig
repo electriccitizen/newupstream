@@ -38,7 +38,7 @@
   {% set blockTitle = configuration.label|clean_class %}
 {% endif %}
 {{ attach_library('oc_patterns/page-menu') }}
-<nav role="navigation" aria-labelledby="page-menu-title" id="block-page-menu"{{ attributes|without('role', 'aria-labelledby', 'id').addClass(blockTitle,heading_id, 'page-menu') }}>
+<nav aria-labelledby="page-menu-title" id="block-page-menu"{{ attributes|without('role', 'aria-labelledby', 'id').addClass(blockTitle,heading_id, 'page-menu') }}>
   {# Label. If not displayed, we still provide it for screen readers. #}
   {{ title_prefix }}
   <h2 id="page-menu-title" class="block-title{% if not configuration.label_display %} visually-hidden{% endif %}"><a href="#" class="page-menu-toggle"><i class="fa fa-bars" aria-hidden="true"></i></a>{{ configuration.label }}</h2>
