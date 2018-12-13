@@ -118,7 +118,7 @@
 		//global toggles
 		a.menuparent{
 			&:after{
-				@include fontAwesome('\f105');
+				@include faSolid($fa-var-angle-right,inherit);
 				display: inline-block;
 				padding: 0;
 				position: relative;
@@ -225,10 +225,9 @@ ul.sf-menu.sf-accordion{
 				top: 50%;
 				left: 50%;
 				margin: 0;
-				@include fontAwesome('\f107');
+				@include faSolid($fa-var-angle-right,30px);
 				@include translate(-50%, -50%);
 				background-color: transparent;
-				font-size: 30px;
 			}
 		}//end accordion button
 

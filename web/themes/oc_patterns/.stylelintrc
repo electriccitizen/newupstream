@@ -13,7 +13,10 @@
         "each",
         "content",
         "for",
-        "else"
+        "else",
+	"support",
+	"function",
+	"return"
       ]
     }],
      "indentation": tab,

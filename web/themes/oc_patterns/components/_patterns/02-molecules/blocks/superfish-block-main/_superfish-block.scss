@@ -13,12 +13,11 @@
 		display: none;
 	}
 	&:before{
-		@include fontAwesome('\f0c9');
+		@include faSolid($fa-var-bars,28px);
 		display: block;
 		position: absolute;
 		top: 0;
 		right: 0;
-		font-size: 28px;
 		color: $black;
 		line-height: 28px;
 	}
