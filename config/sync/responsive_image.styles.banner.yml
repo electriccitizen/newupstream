@@ -6,8 +6,10 @@ dependencies:
     - image.style.banner_big_desk
     - image.style.banner_desk
     - image.style.banner_mobile
+    - image.style.banner_mobile_1_5x
     - image.style.banner_mobile_2x
     - image.style.banner_tablet
+    - image.style.banner_tablet_1_5x
     - image.style.banner_tablet_2x
   theme:
     - oc_patterns
@@ -17,34 +19,44 @@ id: banner
 label: Banner
 image_style_mappings:
   -
-    breakpoint_id: oc_patterns.images.bigdesk
+    breakpoint_id: oc_patterns.bigdesk
     multiplier: 1x
     image_mapping_type: image_style
     image_mapping: banner_big_desk
   -
-    breakpoint_id: oc_patterns.images.desk
+    breakpoint_id: oc_patterns.desk
     multiplier: 1x
     image_mapping_type: image_style
     image_mapping: banner_desk
   -
-    breakpoint_id: oc_patterns.images.tablet
+    breakpoint_id: oc_patterns.tablet
+    multiplier: 1.5x
+    image_mapping_type: image_style
+    image_mapping: banner_tablet_1_5x
+  -
+    breakpoint_id: oc_patterns.tablet
     multiplier: 1x
     image_mapping_type: image_style
     image_mapping: banner_tablet
   -
-    breakpoint_id: oc_patterns.images.tablet
+    breakpoint_id: oc_patterns.tablet
     multiplier: 2x
     image_mapping_type: image_style
     image_mapping: banner_tablet_2x
   -
-    breakpoint_id: oc_patterns.images.mobile
+    breakpoint_id: oc_patterns.mobile
+    multiplier: 1.5x
+    image_mapping_type: image_style
+    image_mapping: banner_mobile_1_5x
+  -
+    breakpoint_id: oc_patterns.mobile
     multiplier: 1x
     image_mapping_type: image_style
     image_mapping: banner_mobile
   -
-    breakpoint_id: oc_patterns.images.mobile
+    breakpoint_id: oc_patterns.mobile
     multiplier: 2x
     image_mapping_type: image_style
     image_mapping: banner_mobile_2x
 breakpoint_group: oc_patterns
-fallback_image_style: banner_big_desk
+fallback_image_style: banner_desk

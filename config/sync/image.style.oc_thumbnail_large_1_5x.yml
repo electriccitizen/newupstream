@@ -1,0 +1,24 @@
+uuid: a9697c00-0fde-47a4-b1ec-bf6a53f74daa
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+    - image_style_quality
+name: oc_thumbnail_large_1_5x
+label: 'OC Thumbnail Large 1.5x'
+effects:
+  c1e9d9ec-32de-4278-a6ca-9e8db268bf92:
+    uuid: c1e9d9ec-32de-4278-a6ca-9e8db268bf92
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 375
+      height: 300
+      crop_type: focal_point
+  ddcc8efd-4ddc-4922-865c-9ef19c22368b:
+    uuid: ddcc8efd-4ddc-4922-865c-9ef19c22368b
+    id: image_style_quality
+    weight: 2
+    data:
+      quality: 45
