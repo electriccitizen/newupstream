@@ -5,36 +5,37 @@ html {
 	font-family: Helvetica, Arial, sans-serif;
 }
 
-.cke_widget_element img{
+
+
+.media--type-image img{
 	max-width: 100%;
 	height: auto;
 }
-.cke_widget_element[data-align="right"]  {
+
+.align-right > .media {
 	float: right;
 	margin:0 0 20px 20px;
 	clear:both;
 }
-
-.cke_widget_element[data-align="left"]  {
+.align-left > .media  {
 	float: left;
 	margin:0 20px 20px 0;
 	clear:both;
 }
-.cke_widget_element[data-align="center"]  {
+.align-center > .media {
 	margin: 2em auto 1em;
-	display: inline;
 	text-align: center;
 	clear:both;
 }
 
-.cke_widget_element[data-entity-embed-display="view_mode:media.small"]{
+.media--view-mode-small-embed{
 	width: 300px;
 	max-width: 50%;
 }
-.cke_widget_element[data-entity-embed-display="view_mode:media.medium"]{
+.media--view-mode-medium-embed{
 	width: 500px;
 }
-.cke_widget_element[data-entity-embed-display="view_mode:media.large"]{
+.media--view-mode-large-embed{
 	width: 800px;
 }
 

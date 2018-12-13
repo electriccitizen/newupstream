@@ -8,7 +8,7 @@ oc_patterns.mobile:
     - 2x
 oc_patterns.tablet:
   label: Tablet
-  mediaQuery: 'all and (min-width: 400px) and (max-width: 759px)'
+  mediaQuery: '(min-width:400px)'
   weight: 1
   multipliers:
     - 1x
@@ -16,13 +16,13 @@ oc_patterns.tablet:
     - 2x
 oc_patterns.desk:
   label: Desk
-  mediaQuery: 'all and (min-width: 760px) and (max-width: 1199px)'
+  mediaQuery: 'min-width:760px)'
   weight: 2
   multipliers:
     - 1x
 oc_patterns.bigdesk:
   label: Big Desk
-  mediaQuery: 'all and (min-width: 1200px)'
+  mediaQuery: '(min-width:1200px)'
   weight: 3
   multipliers:
     - 1x

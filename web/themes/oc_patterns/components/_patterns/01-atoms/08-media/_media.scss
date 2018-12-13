@@ -13,7 +13,7 @@ img{
 }
 
 //constrain images with smaller sizes (commonly embedded)
-.view-modemediasmall,.view-mode-small{
+.view-modemediasmall,.view-mode-small,.view-modemediasmall-embed{
 	width: 300px;
 	max-width: 100%;
 	&.left,&.right{
@@ -22,7 +22,7 @@ img{
 		}
 	}
 }
-.view-modemediamedium,.view-mode-medium{
+.view-modemediamedium,.view-mode-medium,.view-modemediamedium-embed{
 	max-width: 500px;
 	&.left,&.right{
 		@include tab{
@@ -38,7 +38,7 @@ img{
 		}
 	}
 }
-.view-modemedialarge,.view-mode-large{
+.view-modemedialarge,.view-mode-large,.view-modemedialarge-embed{
 	max-width: 800px;
 	&.left,&.right{
 		@include tab{

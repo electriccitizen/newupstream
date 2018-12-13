@@ -9,7 +9,6 @@ dependencies:
   module:
     - file
     - layout_builder
-    - layout_discovery
 third_party_settings:
   layout_builder:
     sections: {  }

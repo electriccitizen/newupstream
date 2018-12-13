@@ -1,6 +1,6 @@
 uuid: d80db195-abc4-42aa-95ea-0714e3884b4e
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - core.entity_view_mode.media.large
@@ -9,7 +9,6 @@ dependencies:
     - media.type.video
   module:
     - layout_builder
-    - layout_discovery
     - video_embed_field
 third_party_settings:
   layout_builder:

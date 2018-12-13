@@ -47,4 +47,4 @@ image_style_mappings:
     image_mapping_type: image_style
     image_mapping: small_300_2x
 breakpoint_group: oc_patterns
-fallback_image_style: medium_500_2x
+fallback_image_style: medium_500

@@ -16,10 +16,10 @@ type_settings:
   entity_type: media
   bundles: {  }
   display_plugins:
-    - 'view_mode:media.full'
-    - 'view_mode:media.large'
-    - 'view_mode:media.medium'
-    - 'view_mode:media.small'
+    - 'view_mode:media.full_embed'
+    - 'view_mode:media.large_embed'
+    - 'view_mode:media.medium_embed'
+    - 'view_mode:media.small_embed'
   entity_browser: embedded_browser
   entity_browser_settings:
     display_review: false

@@ -1,9 +1,9 @@
-uuid: 9307a459-7dc0-4643-9dec-2ffeb23d95ae
+uuid: 24774d9e-4408-4ebc-bd0c-7d1e209efe1f
 langcode: en
-status: false
+status: true
 dependencies:
   config:
-    - core.entity_view_mode.media.full
+    - core.entity_view_mode.media.small_embed
     - field.field.media.video.field_media_categories
     - field.field.media.video.field_media_video_embed_field
     - media.type.video
@@ -16,11 +16,11 @@ third_party_settings:
     enabled: false
     allow_custom: false
 _core:
-  default_config_hash: TUO4aETIQY4ejgv9Kk9szb1HvVtFkdHIo1joWAMhn0Q
-id: media.video.full
+  default_config_hash: ddOtogk2XqTPEjjKQwjzrMFapqhS7lTvNDSJltR6xz8
+id: media.video.small_embed
 targetEntityType: media
 bundle: video
-mode: full
+mode: small_embed
 content:
   field_media_video_embed_field:
     type: video_embed_field_video
