@@ -17,9 +17,11 @@
 	.layout__region--content{
 		width: 100%;
 		@include deskMenu{
-			@include calc(width, "100% - 320px");
-			&:not(.ui-sortable){
-				padding-left: 60px;
+			&:not(:only-child){
+				@include calc(width, "100% - 320px");
+				&:not(.ui-sortable){
+					padding-left: 60px;
+				}
 			}
 		}
 	}

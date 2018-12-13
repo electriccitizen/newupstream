@@ -13,7 +13,8 @@ Drupal.behaviors.stackTable = {
 	}
 };
 
-
+/* SUPERSFISH
+------------------ */
 Drupal.behaviors.removeEmpty = {
 	attach: function (context, settings) {
 		$("#superfish-main", context).once('removeEmpty').each(function(){  
@@ -30,12 +31,21 @@ Drupal.behaviors.removeEmpty = {
 	}
 }
 
-//////// end superfish /////////
+/* LAYOUT 
+------------------ */
+Drupal.behaviors.removeEmptyRegions = {
+  attach: function (context, settings) {
+    $(".layout > .layout__region:not(.ui-sortable)", context).once('removeEmpty').each(function(){  
+      if(!$(this).children().length){
+        $(this).remove();
+      }
+    });
+  }
+}
 
 
 /* BACK TO TOP
 ------------------ */
-
 Drupal.behaviors.backToTop = {
   attach: function (context, settings) {
     $("html.js", context).once('backTop').each(function(){
