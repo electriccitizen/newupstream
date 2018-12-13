@@ -9,7 +9,7 @@
 	.links-files{
 		margin-top: 1em;
 		@include smallTab{
-			@include cssColumns(2,2em);
+			@include cssColumns(2,2em,nobreak);
 		}
 		& > div{
 			margin-bottom: .25em;

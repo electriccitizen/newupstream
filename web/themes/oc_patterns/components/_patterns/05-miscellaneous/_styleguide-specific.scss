@@ -351,7 +351,7 @@ $plBorder: #333333;
 
 	.two-col-vert{
 		@include tab{
-			@include cssColumns(2,40px);
+			@include cssColumns(2,40px,nobreak);
 			& > li{
 				display: inline-block;
 				width: 100%;
@@ -372,7 +372,7 @@ $plBorder: #333333;
 
 	.three-col-vert{
 		@include tab{
-			@include cssColumns(3,40px);
+			@include cssColumns(3,40px,nobreak);
 			& > li{
 				width: 100%;
 				display: inline-block;

@@ -78,13 +78,22 @@
 }
 
 // CSS columns short hand with number or columns and gutter
-@mixin cssColumns($columns, $gap){
+@mixin cssColumns($columns, $gap, $break){
 	-webkit-column-count: #{$columns};
 	-moz-column-count: #{$columns};
 	column-count: #{$columns};
 	-webkit-column-gap: #{$gap};
 	-moz-column-gap: #{$gap};
 	column-gap: #{$gap};
+	@if $break == 'nobreak'{
+		& > *{
+			display: block;
+			-webkit-column-break-inside: avoid;
+			page-break-inside: avoid;
+			break-inside: avoid;
+			overflow: hidden;
+		}
+	}
 }
 
 
