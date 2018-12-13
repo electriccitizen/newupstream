@@ -1,6 +1,6 @@
 uuid: 0b9aa23a-140e-4485-9b54-a027c96d9efe
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
@@ -11,7 +11,6 @@ dependencies:
     - node.type.page
   module:
     - layout_builder
-    - layout_discovery
     - text
     - user
 third_party_settings:

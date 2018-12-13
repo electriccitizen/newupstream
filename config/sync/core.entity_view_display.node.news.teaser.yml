@@ -1,6 +1,6 @@
 uuid: da1b6deb-b2a3-48ba-beb7-84cb0a3d977b
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
@@ -11,7 +11,6 @@ dependencies:
     - node.type.news
   module:
     - layout_builder
-    - layout_discovery
     - text
     - user
 third_party_settings:

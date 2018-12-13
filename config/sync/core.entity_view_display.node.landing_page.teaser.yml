@@ -1,12 +1,14 @@
 uuid: d89c6196-9c3d-4857-b404-bc2e0c4f3fb0
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.landing_page.body
     - field.field.node.landing_page.field_banner
     - field.field.node.landing_page.field_metatags
+    - field.field.node.landing_page.field_oc_widgets
+    - field.field.node.landing_page.layout_builder__layout
     - node.type.landing_page
   module:
     - layout_builder
@@ -72,3 +74,5 @@ hidden:
   addtoany: true
   field_banner: true
   field_metatags: true
+  field_oc_widgets: true
+  layout_builder__layout: true

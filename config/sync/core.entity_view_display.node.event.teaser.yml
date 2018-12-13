@@ -1,6 +1,6 @@
 uuid: ad70b87c-fbfa-4f56-8b06-0ece2315fced
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
@@ -14,7 +14,6 @@ dependencies:
     - node.type.event
   module:
     - layout_builder
-    - layout_discovery
     - text
     - user
 third_party_settings:
