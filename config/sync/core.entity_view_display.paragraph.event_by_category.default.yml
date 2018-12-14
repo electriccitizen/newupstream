@@ -3,16 +3,12 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.event_by_category.field_admin_description
     - field.field.paragraph.event_by_category.field_category
     - field.field.paragraph.event_by_category.field_number_of_items
-    - field.field.paragraph.event_by_category.field_viewfield
     - field.field.paragraph.event_by_category.field_widget_title
     - paragraphs.paragraphs_type.event_by_category
   module:
     - layout_builder
-    - layout_discovery
-    - options
 third_party_settings:
   layout_builder:
     sections: {  }
@@ -25,13 +21,13 @@ targetEntityType: paragraph
 bundle: event_by_category
 mode: default
 content:
-  field_viewfield:
-    weight: 2
+  field_category:
+    type: entity_reference_entity_id
+    weight: 1
+    region: content
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: list_default
-    region: content
   field_widget_title:
     weight: 0
     label: hidden
@@ -41,6 +37,4 @@ content:
     type: string
     region: content
 hidden:
-  field_admin_description: true
-  field_category: true
   field_number_of_items: true
