@@ -56,13 +56,13 @@ img{
 	&.right:not(.has-video){
 		@include tab {
 			float: right;
-			margin-left: 1em;
+			margin-left: 2rem;
 		}
 	}
 	&.left:not(.has-video){
 		@include tab {
 			float: left;
-			margin-right: 1em;
+			margin-right: 2rem;
 		}
 	}
 	&.center{

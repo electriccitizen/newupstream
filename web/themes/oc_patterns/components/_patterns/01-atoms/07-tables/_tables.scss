@@ -12,7 +12,7 @@
 	}
 
 	td,th{
-		padding: .25em .5em;
+		padding: .5rem 1rem;
 	}
 	thead th{
 		background: $darkGrey;
@@ -34,7 +34,7 @@
 		//give a bit extra room in the row on mobile
 		@include onlySmall{
 			td{
-				padding: .5em $siteMarginMobile;
+				padding: 1rem $siteMarginMobile;
 			}
 			//style headers
 			& > td.st-key{

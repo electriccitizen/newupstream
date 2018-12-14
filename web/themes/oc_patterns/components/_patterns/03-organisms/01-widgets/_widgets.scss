@@ -155,8 +155,8 @@ SECTION LAYOUTS
 	max-width: $contentStop;
 	padding-left: $siteMarginMobile;
 	padding-right: $siteMarginMobile;
-	padding-top: 1em;
-	padding-bottom: 1em;	
+	padding-top: 2rem;
+	padding-bottom: 2rem;	
 	text-align: center;
 	position: relative;
 	z-index: 1;
@@ -170,21 +170,21 @@ SECTION LAYOUTS
 			@include visuallyHidden;
 		}
 		a{
-			font-size: 24px;
+			font-size: 2.4rem;
 			color: $black;
 			font-weight: $regular;
 			i{
-				margin-right: .5em;
+				margin-right: 1rem;
 			}
 		}
 	}
 	.anchors{
 		display: none;
-		padding-top: 1em;
+		padding-top: 2rem;
 		@include tab{
 			display: block !important;
 			@include bleed(20px);
-			padding-bottom: 1em;
+			padding-bottom: 2rem;
 		}
 	}
 	a{
@@ -209,7 +209,7 @@ SECTION LAYOUTS
 		@include tab{
 			display: inline-block;
 			padding: 0 10px;
-			font-size: 22px;
+			font-size: 2.2rem;
 			&:not(:last-child):after{
 				height: 70%;
 				width: 1px;
@@ -219,7 +219,7 @@ SECTION LAYOUTS
 			}
 		}
 		@include contentStop{
-			font-size: 24px;
+			font-size: 2.4rem;
 		}
 	}//end a 
 

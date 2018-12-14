@@ -62,7 +62,7 @@
 			& > a{
 				color: $black;
 				padding: 20px 15px !important;
-				font-size: 20px;
+				font-size: 2rem;
 				display: block;
 				position: relative;
 				&:hover,&:focus{
@@ -133,7 +133,7 @@
 				top: 1px;
 				height: 18px;
 				width: 18px;
-				font-size: 26px;
+				font-size: 2.6rem;
 			}
 		}
 
@@ -142,8 +142,7 @@
 
 	/* ====  Level 2 ==== */
 	a.sf-depth-2{
-		font-size: 20px;
-		line-height: 1em;
+		line-height: 1;
 		padding: 12px 20px;
 	}
 	 
@@ -163,8 +162,8 @@
 
 	//level 3
 	li.sf-depth-2 li{
-		font-size: 17px;
-		line-height: 1em;
+		font-size: 1.7rem;
+		line-height: 1;
 		@extend %childDrop;
 		& > a{
 			padding-left: 40px;
@@ -173,7 +172,7 @@
 				padding: 8px 40px;
 				//downsizing for all toggler 3 and below
 				&:after{
-					font-size: 20px;
+					font-size: 2rem;
 				}
 			}
 		}
@@ -325,7 +324,7 @@ ul.sf-menu.sf-accordion{
 		display: none;
 	}
 	.faux-header{
-		padding: 2em 20px;
+		padding: 40px 20px;
 		background: $offWhite; 
 	}
 

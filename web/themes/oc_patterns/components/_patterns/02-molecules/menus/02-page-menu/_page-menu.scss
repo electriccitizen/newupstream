@@ -9,14 +9,14 @@
 	}
 	h2.block-title{
 		position: relative;
-		padding: .5em $siteMarginMobile;
+		padding: .1rem $siteMarginMobile;
 		background: $lightGrey;
 		@include onlySmall{
-			padding: 1em;
+			padding: 2rem;
 			@include edgeToEdge;
 		}	 
 		a.page-menu-toggle{
-			margin-right: 1em;
+			margin-right: 2rem;
 			@include tab{
 				display: none;
 			}
@@ -39,17 +39,12 @@
 
 			//child menus
 			ul:not(.contextual-links){
-				margin: .25em 0;
+				margin: .5rem 0;
 				display: none;
 				padding-left: 12px;
 				&.expanded{
 					display: block;
 				}
-			}
-
-			//set first livel to larger size
-			& > li{
-				font-size: 20px;
 			}
 			//global menu items
 			li{
@@ -57,7 +52,7 @@
 				padding-bottom: 4px;
 				list-style: none;
 				position: relative;
-				padding-left: 1.25em;
+				padding-left: 2.5rem;
 				//active link
 				a{
 					text-decoration: none;

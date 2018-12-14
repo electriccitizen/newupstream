@@ -27,7 +27,7 @@ $h6Sm: 18px;
 /* HEADING MIXINS
 ------------------ */
 @mixin headerGlobals{
-	line-height: 1.15em;
+	line-height: 1.15;
 	margin-bottom: $spaceXs;
 	margin-top: 0;
 	font-weight: $heavy;
@@ -40,6 +40,7 @@ $h6Sm: 18px;
 	@include headerGlobals;
 	font-family: $displayHeader;
 	font-size: $h1Sm;
+	margin-bottom: $spaceXl;
 	@include tab{
 		font-size: $h1Mid;
 	}
@@ -84,7 +85,7 @@ $h6Sm: 18px;
 
 @mixin blockTitle{
 	@include headerGlobals;
-	font-size: 20px;
+	font-size: 2rem;
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	text-align: center;
@@ -132,10 +133,10 @@ h2.block-title{
 }
 h2.section-title{
 	@include blockTitle;
-	font-size: 24px;
+	font-size: 2.4rem;
 	max-width: $textMax + 40px;
 }
-h3.widget-title{
+.widget-title{
 	@include blockTitle;
 	letter-spacing: 0;
 	text-transform: none;

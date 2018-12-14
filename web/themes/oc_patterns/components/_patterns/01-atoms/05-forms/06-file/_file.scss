@@ -7,12 +7,12 @@
 		input.js-form-submit,input.form-submit{
 			@include formSubmit;
 			font-size: 13px;
-			padding: .5em 2em;
+			padding: 1rem 4rem;
 		}
 		//allowed upload file types description
 		.description{
 			@include xSmaller;
-			line-height: 1.25em;
+			line-height: 1.25;
 			opacity: .7;
 			margin-bottom: $spaceXs;
 		}

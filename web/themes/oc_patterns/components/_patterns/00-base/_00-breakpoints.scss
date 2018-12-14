@@ -2,6 +2,8 @@
 	BREAKPOINTS & GRID VARIABLES
 ======================= */
 
+$em-base: 10px;
+
 /* BREAKPOINT VARIABLES
 ------------------------ */
 $smallTab: 500px;
@@ -18,14 +20,14 @@ $deskMenu:min-width 980px;
 
 /* SPACING VARIABLES 
 ----------------------------- */
-$spaceXs: 1em;
-$spaceSm: 1em;
-$spaceMd: 1.5em;
-$spaceLg: 2em;
-$spaceXl: 3em;
+$spaceXs: 1rem;
+$spaceSm: 2rem;
+$spaceMd: 3rem;
+$spaceLg: 4rem;
+$spaceXl: 6rem;
 
-$siteMarginMobile: 20px;
-$siteMarginDesk: 60px;
+$siteMarginMobile: 2rem;
+$siteMarginDesk: 6rem;
 
 
 /// mixin - smallTab

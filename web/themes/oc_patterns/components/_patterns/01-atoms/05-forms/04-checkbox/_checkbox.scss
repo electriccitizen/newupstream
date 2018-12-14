@@ -8,15 +8,15 @@ form:not(.layout-builder-add-block):not(.layout-builder-update-block){
 		margin-bottom: 0;
 		@include safeFlex(row,wrap,null,null);
 		fieldset &{
-			margin-left: -1em;
-			margin-right: -1em;
+			margin-left: -2rem;
+			margin-right: -2rem;
 		}
 	}
 
 	//move input inline with label
 	.js-form-type-checkbox{
 		width: auto;
-		margin-right: 1em;
+		margin-right: 2rem;
 		label,input{
 			display: inline-block;
 		}
@@ -25,7 +25,7 @@ form:not(.layout-builder-add-block):not(.layout-builder-update-block){
 			margin-bottom: 0;
 		}
 		input[type="checkbox"]{
-			margin-right: .3em;
+			margin-right: .6rem;
 		}
 		
 	}

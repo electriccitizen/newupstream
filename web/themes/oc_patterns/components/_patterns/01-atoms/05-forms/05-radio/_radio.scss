@@ -11,7 +11,7 @@ form:not(.layout-builder-add-block):not(.layout-builder-update-block){
 	//move input inline with label
 	.js-form-type-radio{
 		width: auto;
-		margin-right: 1em;
+		margin-right: 2rem;
 		label,input{
 			display: inline-block;
 		}
@@ -20,7 +20,7 @@ form:not(.layout-builder-add-block):not(.layout-builder-update-block){
 			margin-bottom: 0;
 		}
 		input[type="radio"]{
-			margin-right: .3em;
+			margin-right: .6rem;
 			position: relative;
 			top: -2px;
 		}

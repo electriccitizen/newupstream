@@ -7,7 +7,7 @@
 
 /// mixin - baseFontSize
 @mixin baseFontSize{
-	font-size: 20px;
+	font-size: 2rem;
 }
 
 /// mixin - xSmaller
@@ -39,10 +39,10 @@
 	position: relative;
 	font-family: $serif;
 	font-style: italic;
-	font-size: 28px;
+	font-size: 2.8rem;
 	padding-bottom: 10px;
 	@include tab{
-		font-size: 42px;
+		font-size: 4.2rem;
 		padding-bottom: 0;
 	}
 	p{
@@ -51,18 +51,18 @@
 	&:before{
 		color: $transBlack;
 		content: "“";
-		font-size: 3em;
-		line-height: .1em;
-		margin-right: .25em;
-		vertical-align: -.4em;
+		font-size: 14rem;
+		line-height: .1rem;
+		margin-right: 2rem;
+		vertical-align: -5.8rem;
 	}
 	&:after{
 		color: $transBlack;
 		content: "”";
-		font-size: 3em;
-		line-height: .1em;
-		margin-right: .25em;
-		vertical-align: -.44em;
+		font-size: 12rem;
+		line-height: .1rem;
+		margin-right: 2rem;
+		vertical-align: -4.8rem;
 	}
 }
 
@@ -70,7 +70,7 @@
 --------------- */
 html,code{
 	font-family: $bodyFont;
-	@include baseFontSize;
+	font-size: $em-base;
 	line-height: 1.4;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -81,6 +81,7 @@ html,code{
 body {
 	color: $body;
 	margin: 0;
+	@include baseFontSize;
 }
 
 //clear flaots in common long text fields
@@ -110,7 +111,7 @@ strong{
 figcaption {
 	text-align: center;
 	color: $body;
-	font-size: 15px;
+	font-size: 1.5rem;
 	font-style: italic;
 }
 
@@ -124,7 +125,7 @@ span.highlight{
 
 .warning{
 	background: none;
-	padding: .5em 1em;
+	padding: 1rem 2rem;
 	margin-bottom: $spaceMd;
 	color: $warning;
 	border: 1px solid $warning;

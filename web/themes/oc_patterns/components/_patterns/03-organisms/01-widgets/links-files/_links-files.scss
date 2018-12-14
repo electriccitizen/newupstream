@@ -7,12 +7,12 @@
 	@include auto;
 	//set margins for links and files lists
 	.links-files{
-		margin-top: 1em;
+		margin-top: 2rem;
 		@include smallTab{
-			@include cssColumns(2,2em,nobreak);
+			@include cssColumns(2,4rem,nobreak);
 		}
 		& > div{
-			margin-bottom: .25em;
+			margin-bottom: .5rem;
 		}
 	}
 }//end links-files widget

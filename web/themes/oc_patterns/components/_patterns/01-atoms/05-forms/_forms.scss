@@ -52,7 +52,7 @@
 ///mixin textInput
 @mixin textInput{
 	border: 1px solid $borderRule;
-	font-size: 15px;
+	font-size: 1.6rem;
 	font-family: $bodyFont;
 	padding: 10px 6px 11px;
 	width: 100%;
@@ -69,7 +69,7 @@
 		color: $warning;
 		position: relative;
 		top: -1px;
-		right: -.25em;
+		right: -.5rem;
 		@include xSmaller;
 	}
 }
@@ -81,7 +81,7 @@
 	font-weight: $heavy;
 	font-family: $header;
 	text-transform: uppercase;
-	padding: .75em 3em;
+	padding: 1.5rem 6rem;
 	width: auto;
 	border-radius: 0;
 	border: 0;
@@ -133,7 +133,7 @@
 			top: 3px;
 			left: 0;
 			z-index: 20;
-			margin-right: .5em;
+			margin-right: 1rem;
 		}
 	}
 }//end custom options
@@ -193,7 +193,7 @@ fieldset{
 	}
 	&:not(.js-webform-type-radios){
 		.fieldset-wrapper{
-			margin: 0 1em;
+			margin: 0 2rem;
 		}
 	}
 }
@@ -207,7 +207,7 @@ fieldset{
 		max-width: 400px;
 	}
 	.description{
-		font-size: 14px;
+		font-size: 1.4rem;
 	}
 	#edit-submit.button{
 		margin: 0;

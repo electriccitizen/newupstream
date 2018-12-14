@@ -5,7 +5,7 @@ html > body:not(.is-front):not(.path-node):not(.node-type-page){
 	.layout-content{
 		max-width: $contentStop + 40px;
 		@include auto;
-		padding: 0 $siteMarginMobile 3em;
+		padding: 0 $siteMarginMobile 6rem;
 	}
 	#block-oc-patterns-content{
 		padding-top: $spaceLg;
@@ -30,7 +30,7 @@ html > body:not(.is-front):not(.path-node):not(.node-type-page){
 /* USER DASHBOARD
 ----------------------- */
 article.user-dashboard{
-	margin-top: -2em;
+	margin-top: -4rem;
 	margin-bottom: $spaceXl;
 	//image, username, since, roles
 	& > .layout--onecol:first-child{
@@ -78,9 +78,9 @@ article.user-dashboard{
 		}
 		.user-roles{
 			span.role:not(:last-child){
-				margin-right: .35em;
+				margin-right: .7rem;
 				position: relative;
-				padding-right: .5em;
+				padding-right: 1rem;
 				&:after{
 					@include vertRule(right,80%,$borderRule);
 				}
@@ -116,7 +116,7 @@ article.user-dashboard{
 					height: 55px;
 					display: table-cell;
 					vertical-align: middle;
-					font-size: 16px;
+					font-size: 1.6rem;
 					padding: 0;
 				}
 			}

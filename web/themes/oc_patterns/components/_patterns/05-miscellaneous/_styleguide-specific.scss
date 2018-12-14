@@ -36,19 +36,19 @@ $plBorder: #333333;
 		clear: left;
 		margin-bottom: 0;
 		padding-bottom: $spaceLg;
-		padding-left: .5em;
-		padding-right: .5em;
+		padding-left: 1rem;
+		padding-right: 1rem;
 		&:not(#organisms-reveal-group){
 			background: $siteBack;
 		}
 	}
 	.sg-subtype{
 		background: $siteBack;
-		padding-left: .5em;
-		padding-right: .5em;
+		padding-left: 1rem;
+		padding-right: 1rem;
 		& > h2{
 			margin-bottom: 0;
-			padding: .5em 0;
+			padding: 1rem 0;
 			border-top: 2px solid $plBorder;
 			border-bottom: 2px solid $plBorder;
 			& > a{
@@ -100,7 +100,7 @@ $plBorder: #333333;
 		max-width: 60%;
 		margin: $spaceLg auto;
 		border: 2px solid $plLink;
-		padding: 1em 2em;
+		padding: 2rem 4rem;
 		@include onlySmall{
 			display: none;
 		}
@@ -258,7 +258,7 @@ $plBorder: #333333;
 		.doc-section-title{
 			color: $plLink;
 			background: #dedede;
-			padding: .25em 1.5em;
+			padding: .5rem 3em;
 			margin-bottom: $spaceLg;
 		}
 		.doc-section-inner{
@@ -270,7 +270,7 @@ $plBorder: #333333;
 		&.themed{
 			& > li{
 				margin-bottom: $spaceSm;
-				padding: .5em 1em;
+				padding: 1rem 2rem;
 				&:hover{
 					background: #efefef;
 				}
@@ -285,7 +285,7 @@ $plBorder: #333333;
 				ol,ul{
 					background: none;
 					color: $plDkGrey;
-					padding-top: .5em;
+					padding-top: 1rem;
 				}
 				li{
 					margin-bottom: $spaceXs;
@@ -319,8 +319,8 @@ $plBorder: #333333;
 				&:before{
 					content: counter(item-counter, decimal) ".";
 					counter-increment: item-counter;
-					margin-right: 1em;
-					font-size: 36px;
+					margin-right: 2rem;
+					font-size: 3.6rem;
 					font-weight: 700;
 					line-height: 1;
 					color: $plLink;
@@ -329,7 +329,7 @@ $plBorder: #333333;
 					top: 0;
 					font-family: Georgia, "Times New Roman", Times, serif;
 					@include tab{
-						font-size: 54px;
+						font-size: 5.4rem;
 						left: -40px;
 						top: -8px;
 					}
@@ -385,7 +385,7 @@ $plBorder: #333333;
 		& > li:before{
 			content: counter(item-counter, decimal) ".";
 			counter-increment: item-counter;
-			margin-right: 1em;
+			margin-right: 2rem;
 		}
 	}
 
