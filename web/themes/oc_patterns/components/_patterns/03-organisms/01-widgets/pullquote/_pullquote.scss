@@ -20,10 +20,10 @@
 		text-transform: uppercase;
 		&:before{
 			content: '–';
-			left: -1.25em;
+			left: -2.5rem;
 		}
 		@include tab{
-			font-size: 18px;
+			font-size: 1.8rem;
 		}
 	}
 }//end pullquote widget

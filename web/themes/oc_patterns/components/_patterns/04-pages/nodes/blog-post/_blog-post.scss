@@ -7,7 +7,7 @@
 	.block-field.block-title{
 		@include centerTitle;
 		h1{
-			margin-bottom: .25em;
+			margin-bottom: .5rem;
 		}
 		.metatext{
 			@include textDate;
@@ -27,12 +27,12 @@
 
 	//tags
 	.block-field-tags{
-		font-size: 16px;
+		font-size: 1.6rem;
 		@include textContent;
 		margin-bottom: $spaceXs;
 		.label{
 			font-weight: $heavy;
-			margin-right: .5em;
+			margin-right: 1rem;
 		}
 		div{
 			display: inline;
@@ -80,5 +80,5 @@
 				}
 			}
 		}
-	}
-}
+	}//end add to any block
+}//end pl

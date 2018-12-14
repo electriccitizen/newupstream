@@ -6,7 +6,7 @@ PAGERS
 /* MIXINS
 ------------- */
 
-$pager-line: 24px;
+$pager-line: 2.4rem;
 
 ///mixin - pagerItemStyle
 @mixin pagerItemStyle{
@@ -94,7 +94,7 @@ $pager-line: 24px;
 			line-height: $pager-line;
 		}
 		&:not(:first-child):not(:last-child){
-			margin: 0 .25em;
+			margin: 0 .5rem;
 		}
 	}
 }
@@ -140,9 +140,9 @@ nav:not(.pager){
 	.js-pager__items{
 		li{
 			color: $black;
-			margin: 0 .5em;
+			margin: 0 1rem;
 			@include larger;
-			line-height: 26px;
+			line-height: 2.6rem;
 		}
 		//pager controls
 		li a{

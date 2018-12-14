@@ -36,7 +36,7 @@
 				width: 100%;
 				max-width: $textMax;
 				@include auto;
-				padding-bottom: .5em;
+				padding-bottom: 1rem;
 				border-bottom: 1px solid $borderRule;
 				margin-bottom: $spaceXs;
 			}

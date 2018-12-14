@@ -54,7 +54,7 @@
 			min-width: 60px;
 			span{
 				display: block;
-				font-size: 40px;
+				font-size: 4rem;
 				width: 60px;
 				height: 80px;
 				left: 0;
@@ -75,7 +75,7 @@
 			min-width: 60px;
 			span{
 				display: block;
-				font-size: 40px;
+				font-size: 4rem;
 				width: 60px;
 				height: 80px;
 				left: auto;
@@ -101,12 +101,12 @@
 			z-index: 30;
 			background: rgba(35,35,35,0.6);
 			color: $white;
-			padding: .5em 1em;
+			padding: 1rem 2rem;
 		}
 
 		.gallery-text{
 			max-width: $textMax;
-			padding: 2em 3em;
+			padding: 4rem 6rem;
 		}
 	}//end featherlight content
 

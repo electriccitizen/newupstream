@@ -18,19 +18,19 @@
 		position: relative;
 		margin-top: -1px;
 		color: $darkGrey;
-		font-size: 22px;
+		font-size: 2.2rem;
 		border: 1px solid;
 		border-color: $darkGrey;
 		z-index: 3;
 		a{
-			padding: 10px 10px 10px 30px;
+			padding: 1rem 1rem 1rem 3rem;
 			display: block;
 			color: inherit;
 		}
 		&:after{
 			position: absolute;
-			right: 30px;
-			top: 10px;
+			right: 3rem;
+			top: 1rem;
 			z-index: -1;
 			content: "+";
 		}
@@ -44,7 +44,7 @@
 	//accordion content
 	.field-oc-long-text{
 		display: none;
-		padding: 1em 2em;
+		padding: 2rem 4rem;
 	}
 
 	//active accordion
@@ -76,11 +76,11 @@
 .pl{
 	.accordion-item{
 		max-width: 800px;
-		margin: 2em auto 0;
+		margin: 4rem auto 0;
 	}
 }
 .pl #organisms-accordion-group .sg-pattern-example > .flex-wrap{
-	padding: 1em 0;
+	padding: 2rem 0;
 	.accordion-item{
 		margin: 0 auto;
 	}
