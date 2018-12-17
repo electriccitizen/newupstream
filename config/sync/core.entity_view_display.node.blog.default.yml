@@ -13,6 +13,7 @@ dependencies:
     - addtoany
     - flippy
     - layout_builder
+    - layout_builder_restrictions
     - layout_discovery
     - metatag
     - system
@@ -144,6 +145,23 @@ third_party_settings:
     allow_custom: false
     is_enabled: true
     enabled: true
+  layout_builder_restrictions:
+    allowed_blocks:
+      'Chaos tools': {  }
+      core: {  }
+      'Custom Blocks': {  }
+      Devel: {  }
+      Forms: {  }
+      Help: {  }
+      'Inline blocks': {  }
+      Menus: {  }
+      Superfish: {  }
+      System:
+        - system_breadcrumb_block
+      User: {  }
+      Webform: {  }
+    allowed_layouts:
+      - layout_onecol
 _core:
   default_config_hash: Xu1s1fWGlIX5L7AeMiRTydm1tunLJGrAodp6YJMZ5Sw
 id: node.blog.default

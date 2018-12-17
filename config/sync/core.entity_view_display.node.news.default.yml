@@ -10,6 +10,7 @@ dependencies:
     - node.type.news
   module:
     - layout_builder
+    - layout_builder_restrictions
     - layout_discovery
     - metatag
     - system
@@ -117,6 +118,23 @@ third_party_settings:
     allow_custom: false
     is_enabled: true
     enabled: true
+  layout_builder_restrictions:
+    allowed_blocks:
+      'Chaos tools': {  }
+      core: {  }
+      'Custom Blocks': {  }
+      Devel: {  }
+      Flippy: {  }
+      Forms: {  }
+      Help: {  }
+      'Inline blocks': {  }
+      Menus: {  }
+      Superfish: {  }
+      System: {  }
+      User: {  }
+      Webform: {  }
+    allowed_layouts:
+      - layout_onecol
 _core:
   default_config_hash: IzGVDPFbjzJk7jOlCGQethnQwH5go6PqUDOtPSpXuRM
 id: node.news.default

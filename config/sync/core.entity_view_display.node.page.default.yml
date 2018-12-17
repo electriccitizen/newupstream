@@ -12,6 +12,7 @@ dependencies:
   module:
     - entity_reference_revisions
     - layout_builder
+    - layout_builder_restrictions
     - layout_discovery
     - menu_block
     - metatag
@@ -144,6 +145,26 @@ third_party_settings:
     allow_custom: false
     is_enabled: true
     enabled: true
+  layout_builder_restrictions:
+    allowed_blocks:
+      AddToAny: {  }
+      'Chaos tools': {  }
+      core: {  }
+      Devel: {  }
+      Flippy: {  }
+      Forms: {  }
+      Help: {  }
+      'Lists (Views)': {  }
+      Menus:
+        - 'menu_block:main'
+      Superfish: {  }
+      System:
+        - system_breadcrumb_block
+      User: {  }
+      Webform: {  }
+    allowed_layouts:
+      - layout_onecol
+      - two_column_sidebar_left
 _core:
   default_config_hash: 6cLH5reWp4HB-2AJp7PY1kXioC8KrzluoED6Q9UGPHw
 id: node.page.default
