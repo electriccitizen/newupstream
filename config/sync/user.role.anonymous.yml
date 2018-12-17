@@ -45,3 +45,4 @@ permissions:
   - 'view paragraph content text'
   - 'view paragraph content tile_image'
   - 'view paragraph content video'
+  - 'view paragraph content view_placer'

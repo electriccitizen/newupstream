@@ -7,18 +7,33 @@
 .profiles.all-staff{
 	.view-content{
 		@include safeFlex(row,wrap,null,null);
+		@include bleed(30px);
+		padding-bottom: 6rem;
 	}
-	.views-field-title{
-		h3{
-			font-size: 2rem;
+	.view-empty{
+		padding-bottom: 6rem;
+	}
+	.views-row{
+		width: 100%;
+		margin-bottom: $spaceLg;
+		padding-right: 15px;
+		padding-left: 15px;
+		text-align: center;
+		@include smallTab{
+			width: 50%;
 		}
-	}	
+		@include tab{
+			width: 33.33%;
+		}
+		@include deskMenu{
+			width: 25%;
+		}
+	}
+
 	.views-field-field-profile-image{
-		.view-mode-square{ 
-			@include auto;
-			img{
-				display: block;
-			}
+		margin-bottom: $spaceMd;
+		img{
+			display: block;
 		}
 	}
 }//end profiles

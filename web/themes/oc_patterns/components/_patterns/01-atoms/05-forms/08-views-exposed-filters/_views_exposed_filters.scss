@@ -14,6 +14,9 @@
 	input.form-submit.button{
 		background: $link;
 		color: $white;
+		margin: 0 2rem 2rem 0;
+		width: 180px;
+		display: inline-block;
 		&:hover,&:focus{
 			background: $hoverLink;
 			@include transAll(.3s);
@@ -26,7 +29,7 @@
 			}
 		}
 	}
-	&+ .view-content{
+	& + .view-content{
 		margin-top: 4rem;
 	}
 }//end views exposed form

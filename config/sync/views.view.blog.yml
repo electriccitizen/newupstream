@@ -6,6 +6,7 @@ dependencies:
     - field.storage.node.body
     - field.storage.node.field_author
     - field.storage.node.field_banner
+    - field.storage.node.field_tags
     - node.type.blog
     - taxonomy.vocabulary.tags
   module:
@@ -49,7 +50,7 @@ display:
         type: basic
         options:
           submit_button: Apply
-          reset_button: false
+          reset_button: true
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
           expose_sort_order: true
@@ -745,6 +746,69 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
+        field_tags:
+          id: field_tags
+          table: node__field_tags
+          field: field_tags
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: true
+            text: '<a href="blog?combine=&field_tags_target_id%5B%5D={{ field_tags__target_id }}">{{ field_tags }}</a>'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: true
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: false
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
         field_banner:
           id: field_banner
           table: node__field_banner
@@ -819,7 +883,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<h3>{{ title }}</h3>\r\n<div class=\"metatext\"><span class=\"date\">{{ created }}</span>{{ field_author }}</div>\r\n{{body}}"
+            text: "<h2>{{ title }}</h2>\r\n<div class=\"metatext\"><span class=\"date\">{{ created }}</span>{{ field_author }}</div>\r\n{% if body %}\r\n<div class=\"views-field-body\">{{ body }}</div>\r\n{% endif %}\r\n{% if field_tags %}\r\n<div class=\"views-field-field-tags\">\r\n <span class=\"views-field-label inline-label\">Tags:</span>\r\n  {{ field_tags }}\r\n</div>\r\n{% endif %}"
             make_link: false
             path: ''
             absolute: false
@@ -1077,3 +1141,4 @@ display:
         - 'config:field.storage.node.body'
         - 'config:field.storage.node.field_author'
         - 'config:field.storage.node.field_banner'
+        - 'config:field.storage.node.field_tags'

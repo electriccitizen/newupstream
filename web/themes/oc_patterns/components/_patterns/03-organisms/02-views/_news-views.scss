@@ -1,11 +1,24 @@
 /* ==================
-    NEWS VIEWS
+		NEWS VIEWS
 ==================== */
 
 /* ALL NEWS
 ------------- */
 .news.all-news{
-	.view-content{
-		@include safeFlex(row,wrap,null,null);
+	@include safeFlex(row,wrap,start,start);
+	& > *{
+		width: 100%;
 	}
-}
+	.view-content,.view-empty{
+		padding-bottom: 6rem;
+		.views-row{
+			@include inlineImageRow;
+			.views-field-nothing{
+				.date{
+					@include textDate;
+					margin-bottom: $spaceXs;
+				}
+			}
+		}
+	}
+}//end all news

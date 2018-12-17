@@ -9,24 +9,27 @@
 
 	.view-content{
 		@include safeFlex(row,wrap,null,null);
+		@include bleed(30px);
+		padding-bottom: 6rem;
+	}
+	.view-empty{
+		padding-bottom: 6rem;
 	}
 	.views-row{
 		width: 100%;
-		@include safeFlexSize(0,0,auto);
 		margin-bottom: $spaceLg;
-		@include tab{
+		padding-right: 15px;
+		padding-left: 15px;
+		@include smallTab{
 			width: 50%;
-			&:nth-child(odd){
-				padding-right: 15px;
-			}
-			&:nth-child(even){
-				padding-left: 15px;
-			}
+		}
+		@include tab{
+			width: 33.33%;
 		}
 	}
 
 	.views-field-field-banner{
-		margin-bottom: $spaceXs;
+		margin-bottom: $spaceMd;
 		img{
 			display: block;
 		}
@@ -37,6 +40,18 @@
 		.metatext{
 			@include textDate;
 			margin-bottom: $spaceXs;
+		}
+		.views-field-body{
+			&:not(:last-child){
+				margin-bottom: $spaceXs;
+			}
+		}
+		.views-field-field-tags{
+			@include smaller;
+			.inline-label{
+				font-weight: $heavy;
+				margin-right: 1rem;
+			}
 		}
 	}
 }//end all posts

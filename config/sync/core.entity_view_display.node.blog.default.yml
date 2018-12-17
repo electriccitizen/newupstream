@@ -36,46 +36,6 @@ third_party_settings:
               context_mapping: {  }
             additional: {  }
             weight: 0
-          ff474361-bdfb-4116-bb5a-d2f7c9c4897e:
-            uuid: ff474361-bdfb-4116-bb5a-d2f7c9c4897e
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'extra_field_block:node:blog:flippy_pager'
-            additional: {  }
-            weight: 1
-          6c1d849e-f112-481e-867a-f2484c275039:
-            uuid: 6c1d849e-f112-481e-867a-f2484c275039
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'extra_field_block:node:blog:links'
-            additional: {  }
-            weight: 2
-          d066cfe7-0cb1-4ee1-b3db-edd86720ac40:
-            uuid: d066cfe7-0cb1-4ee1-b3db-edd86720ac40
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'extra_field_block:node:blog:flippy_pager'
-            additional: {  }
-            weight: 3
-          45cbdf61-4950-42b3-93fc-01a6056d63d4:
-            uuid: 45cbdf61-4950-42b3-93fc-01a6056d63d4
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'extra_field_block:node:blog:links'
-            additional: {  }
-            weight: 4
       -
         layout_id: layout_onecol
         layout_settings: {  }
@@ -141,9 +101,9 @@ third_party_settings:
               label_display: '0'
               formatter:
                 label: inline
-                type: entity_reference_label
+                type: entity_reference_entity_view
                 settings:
-                  link: false
+                  view_mode: default
                 third_party_settings: {  }
               context_mapping:
                 entity: layout_builder.entity

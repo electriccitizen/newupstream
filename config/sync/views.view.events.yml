@@ -357,7 +357,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<h3>{{ title }}</h3>\r\n{{ field_oc_date }}\r\n{{ body }}"
+            text: "<h2>{{ title }}</h2>\r\n{{ field_oc_date }}\r\n{{ body }}"
             make_link: false
             path: ''
             absolute: false

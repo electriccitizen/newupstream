@@ -1,0 +1,57 @@
+/* ==================
+    global views settings
+==================== */
+
+@mixin inlineImageRow{
+	@include safeFlex(row,wrap,start,start);
+	.views-field{
+		width: 100%;
+		&.views-field-field-banner{
+			margin-bottom: $spaceMd;
+			img{
+				display: block;
+			}
+		}	
+		@include smallTab{
+			&.views-field-field-banner{
+				width: 35%;
+				padding-right: 40px;
+			}
+			&.views-field:not(.views-field-field-banner){
+				width: 65%;
+			}
+		}
+		@include tab{
+			&.views-field-field-banner{
+				width: 290px;
+				padding-right: 40px;
+			}
+			&.views-field:not(.views-field-field-banner){
+				@include calc(width,"100% - 290px");
+			}
+		}
+	}
+}//end inline image row
+
+.view{
+	.item-list > ul{
+		@include listReset;
+		& > li{
+			width: 100%;
+			&:not(:last-child){
+				margin-bottom: $spaceMd;
+			}
+		}
+	}
+	.views-row{
+		width: 100%;
+		&:not(:last-child){
+			margin-bottom: $spaceMd;
+		}
+		.views-field-title,.views-field-nothing{
+			h2{
+				@include heading3;
+			}
+		}
+	}
+}//end view

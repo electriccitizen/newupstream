@@ -27,24 +27,15 @@
 
 	//tags
 	.block-field-tags{
-		font-size: 1.6rem;
+		@include smaller;
 		@include textContent;
 		margin-bottom: $spaceXs;
 		.label{
 			font-weight: $heavy;
 			margin-right: 1rem;
 		}
-		div{
-			display: inline;
-			div{
-				&:not(:last-child){
-					&:after{
-						content: ",";
-					}
-				}
-			}
+		.tag-list{
 			a{
-				@include smaller;
 				@include transAll(.3s);
 			}
 		}

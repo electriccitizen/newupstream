@@ -24,8 +24,8 @@ third_party_settings:
         layout_id: layout_onecol
         layout_settings: {  }
         components:
-          e7c8008c-ac48-4fc3-9cd0-fac0f399aae8:
-            uuid: e7c8008c-ac48-4fc3-9cd0-fac0f399aae8
+          697f9831-8be0-4ba4-8734-cdd641a7fe10:
+            uuid: 697f9831-8be0-4ba4-8734-cdd641a7fe10
             region: content
             configuration:
               id: system_breadcrumb_block

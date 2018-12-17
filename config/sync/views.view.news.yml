@@ -358,7 +358,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<h3>{{ title }}</h3>\r\n{{ created }}\r\n{{ body }}\r\n"
+            text: "<h2>{{ title }}</h2>\r\n{{ created }}\r\n{{ body }}\r\n"
             make_link: false
             path: ''
             absolute: false
