@@ -575,7 +575,7 @@ display:
           group_type: group
           admin_label: ''
           empty: false
-          content: 'Displaying @start - @end of @total'
+          content: 'Results: Page @current_page – @page_count'
           plugin_id: result
       empty:
         area_text_custom:
