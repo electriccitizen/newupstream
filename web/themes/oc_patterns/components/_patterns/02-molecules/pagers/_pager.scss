@@ -92,6 +92,8 @@ $pager-line: 2.4rem;
 	li{
 		*{
 			line-height: $pager-line;
+			display: block;
+			font-weight: $heavy;
 		}
 		&:not(:first-child):not(:last-child){
 			margin: 0 .5rem;
@@ -153,7 +155,7 @@ $pager-line: 2.4rem;
 		&.is-active{
 			a{
 				color: $white;
-				background: darken($link, 12%);
+				background: $link;
 				&:hover,&:focus{
 					background: $hoverLink;
 				}
