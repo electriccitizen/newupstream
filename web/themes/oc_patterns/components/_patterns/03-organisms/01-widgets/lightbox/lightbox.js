@@ -1,4 +1,5 @@
-/*(function($, Drupal) {
+
+(function($, Drupal) {
 
 //Swipebox script for lightbox images.
 Drupal.behaviors.lightbox = {
@@ -16,4 +17,3 @@ Drupal.behaviors.lightbox = {
 
 
 })(jQuery, Drupal);
-*/
