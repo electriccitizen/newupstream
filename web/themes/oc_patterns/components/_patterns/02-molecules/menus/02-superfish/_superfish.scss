@@ -207,16 +207,20 @@ ul.sf-menu.sf-accordion{
 	/* ====  global links ====*/
 	a{
 		padding: 20px 30px;
+		line-height: 1.15;
 	}
 
 	//parents, expanders & dropdowns
 	&.sf-accordion-with-buttons li{
+		position: relative;
 		& > .sf-accordion-button{
 			width: 60px;
-			height: 100%;
-			float: right;
+			height: 60px;
 			text-indent: 9000px;
-			position: relative;
+			position: absolute;
+			top: 0;
+			right: 0;
+			z-index: 1;
 			//expander toggle
 			&:after{
 				text-indent: 0;
@@ -230,12 +234,11 @@ ul.sf-menu.sf-accordion{
 			}
 		}//end accordion button
 
-		&.menuparent{
-			@include clearFix;
+		&.menuparent{;
 			a{
+				display: block;
 				&:not(.sf-accordion-button){
-					padding-right: 0;
-					@include calc(width, "100% - 60px");
+					width: 100%;
 				}
 			}
 		}//end menupareny
@@ -262,7 +265,9 @@ ul.sf-menu.sf-accordion{
 			& > a{
 				color: $hoverLink;
 				background: $lightGrey;
-				border-bottom: 3px solid $transBlack;
+				&:not(.sf-accordion-button){
+					border-bottom: 3px solid $transBlack;
+				}
 			}
 			& > ul{
 				padding: 10px 0;
@@ -282,7 +287,9 @@ ul.sf-menu.sf-accordion{
 		}
 		//inset level2 and those below
 		& > a{
-			padding: 10px 30px;
+			&.sf-accordion-button{
+				height: 40px;
+			}
 			&:not(.sf-accordion-button){
 				padding: 10px 30px 10px 40px;
 			}
