@@ -1,29 +1,25 @@
 /* globals module */
 
-(function () {
-  'use strict';
-
-  var themeDir = './';
-  var paths = {
-    js: themeDir + '/components/_patterns/00-base/global/*.js',
-    styleguide_js: [
-      themeDir + '/js/**/*.js',
-      themeDir + '/components/_patterns/**/*.js'
-    ],
-    dist_js: themeDir + '/dist',
+(() => {
+  const themeDir = './';
+  const paths = {
+    js: `${themeDir}/components/_patterns/**/*.js`,
+    dist_js: `${themeDir}/dist`,
     sass: themeDir,
-    img: themeDir + '/images',
-    dist_css: themeDir + '/dist/css',
-    dist_img: themeDir + '/dist/img',
-    pattern_lab: themeDir + '/pattern-lab/public'
-  };
-
-  
+    icons: `${themeDir}/images/icons/src`,
+    img: [
+      `${themeDir}/images/**/*`,
+      `${themeDir}/components/_patterns/**/*.{jpg, gif, png, svg}`,
+    ],
+    dist_css: `${themeDir}/dist/css`,
+    pattern_lab: `${themeDir}/pattern-lab/public`,
+    logo: `${themeDir}/logo.png`,
+  };  
 
   module.exports = {
     host: 'http://127.0.0.1:8888/',
-    themeDir: themeDir,
-    paths: paths,
+    themeDir,
+    paths,
     sassOptions: {
       outputStyle: 'expanded',
       eyeglass: {
@@ -31,32 +27,31 @@
       }
     },
     cssConfig: {
-      enabled: true,
-      src: themeDir + '/components/_patterns/**/*.scss',
-      dest: themeDir + '/dist/',
+      src: `${themeDir}/components/_patterns/**/*.scss`,
+      dest: `${themeDir}/dist/`,
       flattenDestOutput: true,
       lint: {
         enabled: false,
         failOnError: true
       },
+      cleanCSS: {
+        enabled: true,
+        options: {
+          compatibility: '*',
+          format: false,
+          inline: 'local',
+          inlineTimeout: 5000,
+          level: 1,
+          rebase: true,
+          sourceMap: false,
+          sourceMapInlineSources: false
+        }
+      },
       sourceComments: false,
       sourceMapEmbed: false,
       outputStyle: 'expanded',
-      autoPrefixerBrowsers: [
-        'last 2 versions',
-        'IE >= 9'
-      ],
-      includePaths: (['./node_modules']),
-      sassdoc: {
-        enabled: true,
-        dest: themeDir + '/dist/sassdoc',
-        verbose: false,
-        sort: [
-          'file',
-          'group',
-          'line'
-        ]
-      }
+      autoPrefixerBrowsers: ['last 2 versions', 'IE >= 11'],
+      includePaths: ['./node_modules'],
     },
     iconConfig: {
       shape: {
@@ -96,17 +91,23 @@
       ],
     },
     browserSync: {
-      ui: false,
       enabled: true,
       baseDir: './',
-      startPath: themeDir + 'pattern-lab/public/',
+      startPath: 'pattern-lab/public/',
       // Uncomment below if using a specific local url
       // domain: 'emulsify.dev',
+      notify: false,
       openBrowserAtStart: true,
-      browser: "google chrome",
-      online: true,
-      reloadDelay: 50,
-      reloadDebounce: 750
+      reloadOnRestart: true,
+      ui: false,
+      // Clicks, Scrolls & Form inputs on any device will be mirrored to all others.
+      // ghostMode: false to turn all off
+      ghostMode: {
+        clicks: true,
+        forms: true,
+        scroll: true,
+        location: true
+      }
     },
     wpt: {
       // WebPageTest API key https://www.webpagetest.org/getkey.php

@@ -66,9 +66,9 @@ web/web.config
 # Ignore Drupal's file directory
 web/sites/default/files
 
-# Ignore node_modules
+# Ignore node_modules & and generated theme images
 web/themes/*/node_modules/
-
+web/themes/*/images/core/
 
 # Pantheon commits a settings.php for environment-specific settings.
 # Place local settings in settings.local.php

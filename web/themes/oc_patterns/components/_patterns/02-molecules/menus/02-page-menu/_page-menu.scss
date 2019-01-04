@@ -2,14 +2,13 @@
 	 PAGE MENU
 ===================== */
 
-
 .block--system-menu.page-menu{
 	@include onlySmall{
 		margin-bottom: $spaceLg;
 	}
 	h2.block-title{
 		position: relative;
-		padding: .1rem $siteMarginMobile;
+		padding: 1rem $siteMarginMobile;
 		background: $lightGrey;
 		@include onlySmall{
 			padding: 2rem;
