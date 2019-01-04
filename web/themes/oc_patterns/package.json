@@ -10,5 +10,10 @@
     "start": "gulp compile && gulp theme",
     "build": "gulp build",
     "postinstall": "rm -rf pattern-lab && composer create-project -n pattern-lab/edition-twig-standard pattern-lab && rm -rf pattern-lab/source && ln -s ../components pattern-lab/source"
+  },
+  "dependencies": {
+    "natives": "^1.1.6",
+    "pa11y": "^5.1.0",
+    "postcss": "^7.0.7"
   }
 }

@@ -4,28 +4,14 @@
 .node-support-book.node-content{
 	.main-node-content{
 		@include sectionLimit;
-		@include clearFix;
-	}
-
-	//nav section
-	.node-section#section-2{
-		padding-left: $siteMarginMobile;
-		padding-right: $siteMarginMobile;
-		@include tab{
-			float: left;
-			width: 350px;
+		.node-section{
+			padding-left: $siteMarginMobile;
+			padding-right: $siteMarginMobile;
 		}
 	}
 
-	//main-content section
-	.node-section#section-3{
-		padding-left: $siteMarginMobile;
-		padding-right: $siteMarginMobile;
-		@include tab{
-			float: left;
-			@include calc(width, "100% - 350px");
-			padding-left: 40px;
-		}
+	.block-field.block-title{
+		max-width: $textMax;
 	}
 
 	//body field

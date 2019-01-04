@@ -121,7 +121,7 @@ $pager-line: 2.4rem;
 			padding: 20px 0 18px;
 			text-align: left;
 			border-top: 1px solid $borderRule;
-    	border-bottom: 1px solid $borderRule;
+			border-bottom: 1px solid $borderRule;
 			@include onlySmall{
 				text-align: center;
 			}
@@ -138,7 +138,7 @@ $pager-line: 2.4rem;
 		}
 		.js-pager__items{
 			@include safeFlex(row,wrap,end,start);
-      padding: 20px 0 18px;
+			padding: 20px 0 18px;
 			@include onlySmall{
 				@include safeFlex(row,wrap,center,start);
 			}
