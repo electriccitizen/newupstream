@@ -62,6 +62,7 @@ div.button{
 		margin: 1em auto;
 }
 div.button a{
+	display: block;
 	color: #fff;
 	background: #bf0e0e;
 	padding: 10px 40px;
