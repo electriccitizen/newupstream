@@ -11,7 +11,6 @@ dependencies:
     - paragraphs.paragraphs_type.image
     - paragraphs.paragraphs_type.lightbox_gallery
     - paragraphs.paragraphs_type.links_files
-    - paragraphs.paragraphs_type.map
     - paragraphs.paragraphs_type.pullquote
     - paragraphs.paragraphs_type.slideshow
     - paragraphs.paragraphs_type.text
@@ -38,7 +37,6 @@ settings:
       image: image
       lightbox_gallery: lightbox_gallery
       links_files: links_files
-      map: map
       pullquote: pullquote
       slideshow: slideshow
       text: text
