@@ -2,7 +2,7 @@
 
 (function ($, Drupal) {
 
-  //Slideup animation for cta content when on a background
+  //Slideup animation for content when on a background
   Drupal.behaviors.masonryGallery = {
     attach: function attach(context, settings) {
       $(".paragraph--type--mosaic-gallery", context).once('masonryGallery').each(function () {
