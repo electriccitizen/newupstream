@@ -53,13 +53,13 @@ img{
 	margin-bottom: $spaceLg;
 
 	//embedded alignment (images only )
-	&.right:not(.has-video){
+	&.right{
 		@include tab {
 			float: right;
 			margin-left: 2rem;
 		}
 	}
-	&.left:not(.has-video){
+	&.left{
 		@include tab {
 			float: left;
 			margin-right: 2rem;

@@ -26,5 +26,6 @@
 .js-form-type-textarea{
 	textarea.form-textarea{
 		@include textInput;
+		line-height: 1.4;
 	}
 }
