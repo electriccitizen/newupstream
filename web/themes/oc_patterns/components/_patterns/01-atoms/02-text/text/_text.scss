@@ -132,17 +132,13 @@ blockquote{
 	@include quote;
 }
 
-//clear floats in common long text fields
-.field.body,.field-oc-long-text{
-	& + *{
-		clear: both;
-	}
-} 
-
-//remove bottom margin on last child of long text fields
-.text-long,.text-with-summary{
+//clear floats in common long text fields, remove bottom margin from last child
+.text-with-summary,.text-long{
 	& > *:last-child{
 		margin-bottom: 0;
+	}
+	& + *{
+		clear: both;
 	}
 }
 
