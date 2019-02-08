@@ -1,6 +1,6 @@
 blog_post_instructions:
-  "STYLEGUIDE ONLY: This template is not used in Drupal, however, 
-  the Drupal blog node title field template is customized to add the necessary wrappers 
+  "STYLEGUIDE ONLY: This template is not used in Drupal, however,
+  the Drupal blog node title field template is customized to add the necessary wrappers
   and elements for the title, author, date overlay. Add to Any is a placeholder only."
 post_title:
   "PL Blog Post Example"
@@ -21,21 +21,7 @@ body:
 
 addtoany:
   "yes"
-
-# CALL TO ACTION WIDGET ON POST
-widget_title:
-  "Call To Action"
-cta_back_color:
-  
-cta_back_img:
-  "http://placeimg.com/1800/600/nature"
-cta_text:
-  "Quae sequuntur igitur? Sin dicit obscurari quaedam nec apparere, quia valde parva sint, nos quoque concedimus;"
-cta_url:
-  "http://www.google.com"
-cta_link_text:
-  "Click Me"  
-
+xs
 
 # POST AUTHOR
 profile_img:
@@ -63,7 +49,3 @@ tags:
       "#"
     tag_text:
       "Pablo Escobar"
-
-
-
-

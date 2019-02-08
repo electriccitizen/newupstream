@@ -13,7 +13,6 @@ dependencies:
     - paragraphs.paragraphs_type.landing_page_section
     - paragraphs.paragraphs_type.lightbox_gallery
     - paragraphs.paragraphs_type.links_files
-    - paragraphs.paragraphs_type.map
     - paragraphs.paragraphs_type.news_by_category
     - paragraphs.paragraphs_type.pullquote
     - paragraphs.paragraphs_type.slideshow
@@ -44,7 +43,6 @@ settings:
       image: image
       lightbox_gallery: lightbox_gallery
       links_files: links_files
-      map: map
       news_by_category: news_by_category
       pullquote: pullquote
       slideshow: slideshow

@@ -1,5 +1,5 @@
 landing_page_instructions:
-  "STYLEGUIDE ONLY: This template is not carried into Drupal. 
+  "STYLEGUIDE ONLY: This template is not carried into Drupal.
   However, the Drupal landing-page page template is customized to attach the node.js script file."
 
 banner_style:
@@ -10,7 +10,7 @@ banner_img:
 
 basic_page_title:
   "Landing Page Example"
-  
+
 
 body:
   1:
@@ -54,33 +54,3 @@ sidebar_menu:
       "#"
     link_parent:
       "no"
-
-
-cta:
-  1:
-    widget_title:
-      "Learn More About Pattern Lab"
-    cta_back_color:
-      "orange"
-    cta_text:
-      "Read documenation to learn more about the power of the Pattern Lab styleguide engine."
-    cta_url:
-      "http://patternlab.io/docs/"
-    cta_link_text:
-      "Pattern Lab Documentation"
-  2:
-    widget_title:
-      "Website User Guide"
-    cta_back_color:
-      "grey"
-    cta_text:
-      "Introduce yourself to Drupal 8 and Open Citizen editing functionality with our handy Website User Guide."
-    cta_url:
-      "#"
-    cta_link_text:
-      "User Guide"
-
-
-
-
-  

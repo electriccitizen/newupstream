@@ -71,14 +71,6 @@ STYLEGUIDE ONLY: This template is not used in Drupal, however, the Drupal blog n
 					</div>
 				</div>
 
-			{% if cta_text %}
-				<div class="block block-entity-fieldnodefield-oc-widgets">
-					<div class="field--name-field-oc-widgets">
-						{% include "@organisms/01-widgets/call-to-action/call_to_action.twig"%}
-					</div>
-				</div>
-			{% endif %}
-
 			<div class="block block-entity-fieldnodefield-author">
 				<div class="field field-author">
 					<div class="profile-teaser">
@@ -109,7 +101,7 @@ STYLEGUIDE ONLY: This template is not used in Drupal, however, the Drupal blog n
 					<span class="label">Tags:</span>
 					<div>
 						{% for tag in tags %}
-							<div>	
+							<div>
 								<a href="{{ tag.tag_url }}">{{ tag.tag_text }}</a>
 							</div>
 						{% endfor %}
@@ -140,5 +132,3 @@ STYLEGUIDE ONLY: This template is not used in Drupal, however, the Drupal blog n
 		</article>
 	{% endblock %}
 {% endembed %}
-
-
