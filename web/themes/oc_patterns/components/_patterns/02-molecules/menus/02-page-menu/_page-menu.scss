@@ -30,7 +30,7 @@
 			max-width: 440px;
 			@include auto;
 		}
-		@include deskMenu{
+		@include desk{
 			display: block !important;
 		}
 		& > ul:not(.contextual-links){

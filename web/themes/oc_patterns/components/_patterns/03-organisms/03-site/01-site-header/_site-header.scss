@@ -23,7 +23,7 @@
 	z-index: 10;
 
 	//set width at desktop
-	@include deskMenu{
+	@include desk{
 		width: 240px;
 	}
 
@@ -31,7 +31,7 @@
 		img{
 			max-width: 160px;
 			margin-right: 5px;
-			@include deskMenu{
+			@include desk{
 				max-width: 100%;
 			}
 		}
@@ -47,7 +47,7 @@ header .block-search-form-block{
 	text-align: right;
 
 	//set width at desktop
-	@include deskMenu{
+	@include desk{
 		@include calc(width, "100% - 240px");
 	}
 
@@ -56,7 +56,7 @@ header .block-search-form-block{
 		position: absolute;
 		top: 15px;
 		right: 20px;
-		@include deskMenu{
+		@include desk{
 			top: 13px;
 			right: 25px;
 		}
@@ -67,19 +67,19 @@ header .block-search-form-block{
 /* MAIN NAVIGATION BLOCK
 ------------------------ */
 .block-superfishmain{
-	@include mobileMenu{
+	@include mobileStop{
 		&.contextual-region{
 			position: static;
 		}
 	}
 	//desktop position
-	@include deskMenu{
+	@include desk{
 		position: absolute;
 		right: 0;
 		bottom: 0;
 		width: 100%;
 		padding-left: 280px;
-	}//end deskMenu
+	}//end desk
 	
 }//end main nav
 
