@@ -9,16 +9,16 @@ _core:
 id: basic_pages
 label: 'Basic Pages'
 type: 'canonical_entities:node'
-pattern: '[node:menu-link:parents:join-path]/[node:title]'
+pattern: '[node:menu-link:parents:join:/]/[node:title]'
 selection_criteria:
-  399db19d-71d2-4759-9801-06c3feae1ad2:
+  76b1c99e-b64c-4bf7-90b3-194a0b38a2df:
     id: node_type
     bundles:
       page: page
     negate: false
     context_mapping:
       node: node
-    uuid: 399db19d-71d2-4759-9801-06c3feae1ad2
+    uuid: 76b1c99e-b64c-4bf7-90b3-194a0b38a2df
 selection_logic: and
 weight: -5
 relationships: {  }
