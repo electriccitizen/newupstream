@@ -137,10 +137,10 @@ blockquote{
 	& + *{
 		clear: both;
 	}
-}
+} 
 
 //remove bottom margin on last child of long text fields
-.field-oc-long-text{
+.text-long,.text-with-summary{
 	& > *:last-child{
 		margin-bottom: 0;
 	}
