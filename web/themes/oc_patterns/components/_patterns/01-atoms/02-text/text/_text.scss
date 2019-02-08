@@ -84,20 +84,10 @@ body {
 	@include baseFontSize;
 }
 
-//clear flaots in common long text fields
-.field.body,.field-oc-long-text{
-	& + *{
-		clear: both;
-	}
-}
-
 p{
 	margin-top: 0;
 	&:not(:last-child){
 		margin-bottom: $spaceMd;
-	}
-	&:last-child{
-		margin-bottom: 0;
 	}
 }
 
@@ -138,9 +128,18 @@ span.highlight{
 	color: currentColor;
 }
 
-
 blockquote{
 	@include quote;
+}
+
+//clear floats in common long text fields, remove bottom margin from last child
+.text-with-summary,.text-long{
+	& > *:last-child{
+		margin-bottom: 0;
+	}
+	& + *{
+		clear: both;
+	}
 }
 
 /* PATTERN LAB ONLY
