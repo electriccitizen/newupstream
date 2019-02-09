@@ -13,7 +13,7 @@ field_name: field_oc_widgets
 entity_type: node
 bundle: landing_page
 label: Widgets
-description: ''
+description: 'Add paragraphs to this node. Use the layout option on each paragraph to set its width and use the draggable handles to set the order to create custom paragraph grids. <strong>NOTE:</strong> When customizing the layout via Layout Builder you cannot re-order paragraphs, you can only move the whole field itself.'
 required: false
 translatable: true
 default_value: {  }
@@ -57,9 +57,6 @@ settings:
         enabled: false
       links_files:
         weight: 29
-        enabled: false
-      map:
-        weight: 30
         enabled: false
       news_by_category:
         weight: 31

@@ -57,6 +57,30 @@
 	}
 }
 
+@mixin submitButton{
+	@include button;
+	background: $link;
+	color: $white;
+	height: 43px;
+	&:hover,&:focus{
+		background: $grey;
+		border-color: $grey;
+		color: $black;
+	}
+}
+
+@mixin resetButton{
+	@include button;
+	background: $darkGrey;
+	color: $white;
+	border-color: $darkGrey;
+	height: 43px;
+	&:hover,&:focus{
+		background: $grey;
+		border-color: $grey;
+		color: $black;
+	}
+}
 
 //button class
 .button {
