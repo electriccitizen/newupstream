@@ -97,6 +97,20 @@
 	@include outlineButton($link);
 }
 
+/* LAYOUT BUILDER BUTTONS
+------------------ */
+#block-oc-patterns-local-tasks .tabs.secondary a{
+	background: $link !important;
+	border-color: $link;
+	color: $white;
+	padding: 5px 10px;
+	font-weight: bold;
+	&:hover, &:focus, &.is-active{
+		background: $white !important;
+		color: $link;
+		border-color: $link;
+	}
+}
 
 /* PATTERN LAB ONLY
 --------------- */
