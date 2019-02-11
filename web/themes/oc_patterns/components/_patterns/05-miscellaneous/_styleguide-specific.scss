@@ -230,12 +230,12 @@ $plBorder: #333333;
 /* SITE HEADER
 ------------------ */
 .pl .layout-container > header{
-	@include mobileMenu{
+	@include mobileStop{
 		.sf-horizontal{
 			display: none;
 		}
 	}
-	@include deskMenu{
+	@include desk{
 		.sf-accordion-toggle{
 			display: none;
 		}

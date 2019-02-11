@@ -10,13 +10,13 @@
 	@include safeFlex(row,wrap,null,start);
 	.layout__region--first{
 		width: 100%;
-		@include deskMenu{
+		@include desk{
 			width: 320px;
 		}
 	}//end layout region second
 	.layout__region--content{
 		width: 100%;
-		@include deskMenu{
+		@include desk{
 			&:not(:only-child){
 				@include calc(width, "100% - 320px");
 				&:not(.ui-sortable){
