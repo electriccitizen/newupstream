@@ -46,10 +46,10 @@ body {
 			padding-right: 20px;
 			max-width: 100%;
 			line-height: 1.15;
-			@include mobileMenu{
+			@include mobileStop{
 				float: none;
 			}
-			@include deskMenu{
+			@include desk{
 				@include calc(max-width, "100% - 150px");
 			}
 			.eu-cookie-compliance-more-button{
@@ -83,7 +83,7 @@ body {
 	}
 	.eu-cookie-compliance-buttons{
 		max-width: none;
-		@include mobileMenu{
+		@include mobileStop{
 			float: none;
 			margin-top: 1em;
 		}

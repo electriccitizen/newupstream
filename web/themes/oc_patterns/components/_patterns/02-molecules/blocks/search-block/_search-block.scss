@@ -64,7 +64,7 @@
 			}
 		}
 		.box &{
-			@include deskMenu{
+			@include desk{
 				display: none;
 			}
 		}
@@ -91,7 +91,7 @@
 		display: none;
 		z-index: 502;
 		.box &{
-			@include deskMenu{
+			@include desk{
 				display: none;
 			}
 		}
@@ -140,7 +140,7 @@
 			width: 100vw;
 		}
 		.box &{
-			@include deskMenu{
+			@include desk{
 				display: block !important;
 				left: auto;
 				right: 18px;
@@ -163,11 +163,11 @@
 		padding: 80px $siteMarginMobile;
 		text-align: center;
 		background: rgba(35,35,35,0.97);
-		@include deskMenu{
+		@include desk{
 			padding: 160px $siteMarginMobile;
 		}
 		.box &{
-			@include deskMenu{
+			@include desk{
 				padding: 0;
 				background: none;
 			}
@@ -215,7 +215,7 @@
 					@extend %searchBlockPlaceholderFocus;
 				}
 				.box &{
-					@include deskMenu{
+					@include desk{
 						color: $black;
 						border-bottom-color: $black;
 						font-size: 1.6rem;
@@ -277,7 +277,7 @@
 					right: 12px;
 				}
 				.box &{
-					@include deskMenu{
+					@include desk{
 						color: $black;
 						font-size: 24px;
 						top: -42px;
@@ -318,7 +318,7 @@
 			.js-form-type-search input{
 				width: 100%;
 			}
-			@include deskMenu{
+			@include desk{
 				left: auto;
 			}
 		}

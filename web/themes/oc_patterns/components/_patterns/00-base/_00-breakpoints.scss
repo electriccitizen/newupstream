@@ -8,17 +8,16 @@ $em-base: 10px;
 ------------------------ */
 $smallTab: 500px;
 $tab: 760px;
-$desk: 900px;
+$desk: 980px;
 $contentStop: 1200px;
 $textMax: 800px;
 $onlyTab: 760px 899px;
 $onlySmall: max-width 759px;
-$onlyPhone: max-width 499px; 
-$mobileMenu:max-width 979px;
-$deskMenu:min-width 980px;
+$onlyPhone: max-width 499px;
+$mobileStop:max-width 979px;
 
 
-/* SPACING VARIABLES 
+/* SPACING VARIABLES
 ----------------------------- */
 $spaceXs: 1rem;
 $spaceSm: 2rem;
@@ -81,16 +80,16 @@ $siteMarginDesk: 6rem;
 	}
 }
 
-///mixin - mobileMenu
-@mixin mobileMenu {
-	@include breakpoint($mobileMenu) {
+///mixin - mobileStop
+@mixin mobileStop {
+	@include breakpoint($mobileStop) {
 		@content;
 	}
 }
 
-///mixin - deskMenu
-@mixin deskMenu {
-	@include breakpoint($deskMenu) {
+///mixin - desk
+@mixin desk {
+	@include breakpoint($desk) {
 		@content;
 	}
 }
