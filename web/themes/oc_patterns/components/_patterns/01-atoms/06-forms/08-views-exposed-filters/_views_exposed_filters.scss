@@ -14,6 +14,9 @@
 		}
 		.select2-container--default{
 			max-width: 100%;
+			.select2-selection__choice{
+				margin-top: 4px;
+			}
 		}
 	}
 	.form-actions{
@@ -23,9 +26,14 @@
 		}
 		input.form-submit.button{
 			@include submitButton;
-			margin: 0px 10px;
+			@include smallTab{
+				margin: 0px 10px;
+			}
 			&#edit-reset{
 				@include resetButton;
+				@include smallTab{
+					margin: 10px 0px;
+				}
 			}
 		}
 	}
