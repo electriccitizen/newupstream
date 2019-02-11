@@ -15,7 +15,7 @@ field_name: field_oc_widgets
 entity_type: node
 bundle: page
 label: Widgets
-description: 'Add widgets to this node. Use the layout option on each widget to set it''s width and use the draggable handles to set the order to create custom layout grids. <strong>NOTE:</strong> When using Manage Content through IPE, you will not be able to re-order widgets, just this entire field itself.'
+description: 'Add paragraphs to this node. Use the layout option on each paragraph to set its width and use the draggable handles to set the order to create custom paragraph grids.'
 required: false
 translatable: false
 default_value: {  }
@@ -30,29 +30,14 @@ settings:
       accordion_group:
         weight: -47
         enabled: false
-      accordion_item:
-        weight: -47
-        enabled: false
-      admin_view_placer:
-        weight: -47
-        enabled: false
       block_placer:
         weight: -47
         enabled: false
-      buttons:
+      accordion_item:
         weight: -47
-        enabled: false
-      call_to_action:
-        weight: -46
-        enabled: false
-      custom_code:
-        weight: -45
         enabled: false
       form:
         weight: -44
-        enabled: false
-      horizontal_rule:
-        weight: -43
         enabled: false
       image:
         weight: -42
@@ -62,9 +47,6 @@ settings:
         enabled: false
       links_files:
         weight: -40
-        enabled: false
-      map:
-        weight: -39
         enabled: false
       slideshow:
         weight: -38
@@ -78,12 +60,6 @@ settings:
       pullquote:
         weight: -35
         enabled: false
-      social_media:
-        weight: -34
-        enabled: false
-      social_platform:
-        weight: -33
-        enabled: false
       event_by_category:
         weight: -32
         enabled: false
@@ -93,6 +69,12 @@ settings:
       basic_page_section:
         enabled: true
         weight: 24
+      from_library:
+        weight: 24
+        enabled: false
+      view_placer:
+        weight: 34
+        enabled: false
       landing_page_section:
         weight: 36
         enabled: false

@@ -57,6 +57,30 @@
 	}
 }
 
+@mixin submitButton{
+	@include button;
+	background: $link;
+	color: $white;
+	height: 43px;
+	&:hover,&:focus{
+		background: $grey;
+		border-color: $grey;
+		color: $black;
+	}
+}
+
+@mixin resetButton{
+	@include button;
+	background: $darkGrey;
+	color: $white;
+	border-color: $darkGrey;
+	height: 43px;
+	&:hover,&:focus{
+		background: $grey;
+		border-color: $grey;
+		color: $black;
+	}
+}
 
 //button class
 .button {
@@ -73,6 +97,20 @@
 	@include outlineButton($link);
 }
 
+/* LAYOUT BUILDER BUTTONS
+------------------ */
+#block-oc-patterns-local-tasks .tabs.secondary a{
+	background: $link !important;
+	border-color: $link;
+	color: $white;
+	padding: 5px 10px;
+	font-weight: bold;
+	&:hover, &:focus, &.is-active{
+		background: $white !important;
+		color: $link;
+		border-color: $link;
+	}
+}
 
 /* PATTERN LAB ONLY
 --------------- */

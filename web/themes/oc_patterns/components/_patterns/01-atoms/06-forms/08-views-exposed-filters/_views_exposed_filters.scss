@@ -1,0 +1,47 @@
+/* ================
+   VIEWS EXPOSED FILTERS
+======================= */
+
+.views-exposed-form{
+	@include safeFlex(row,wrap,start,start);
+	@include bleed(40px);
+	.form-item{
+		width: 100%;
+		padding:0px 20px;
+		@include smallTab{
+			width: 50%;
+		}
+	}
+	.select2-container--default{
+		max-width: 100% !important;
+	}
+	.form-actions{
+		@include auto;
+		@include smallTab{
+			margin: initial;
+		}
+		input.form-submit.button{
+			@include submitButton;
+			margin: 0px 20px;
+			&#edit-reset{
+				@include resetButton;
+			}
+		}
+	}
+	& + .view-content{
+		margin-top: 4rem;
+	}
+}//end views exposed form
+
+
+
+/* PATTERN LAB ONLY
+---------------------- */
+.pl{
+	.form-item-combine,.form-item-field-category-target-id{
+		max-width: 300px;
+	}
+	input.form-submit{
+		margin-bottom: 60px;
+	}
+}
