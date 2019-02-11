@@ -3,26 +3,27 @@
 ======================= */
 
 .views-exposed-form{
-	@include safeFlex(row,wrap,start,start);
-	@include bleed(40px);
+	@include safeFlex(row,wrap,start,center);
+	@include bleed(20px);
 	.form-item{
 		width: 100%;
-		padding:0px 20px;
+		padding:0px 10px;
 		@include smallTab{
 			width: 50%;
+			max-width: 300px;
 		}
-	}
-	.select2-container--default{
-		max-width: 100% !important;
+		.select2-container--default{
+			max-width: 100%;
+		}
 	}
 	.form-actions{
 		@include auto;
 		@include smallTab{
-			margin: initial;
+			margin: 8px 0px 0px 0px;
 		}
 		input.form-submit.button{
 			@include submitButton;
-			margin: 0px 20px;
+			margin: 0px 10px;
 			&#edit-reset{
 				@include resetButton;
 			}
