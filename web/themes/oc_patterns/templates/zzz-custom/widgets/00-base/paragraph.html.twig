@@ -58,7 +58,7 @@ view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
 
 {# add a wrapper if not a main section widget (used for in-section layout) #}
 {%- if 'section' not in paragraph.bundle|clean_class -%}
-	<div class="section-item"> 
+	<div class="section-item">
 {%- endif -%}
 	{% block widget %}
 		{# set the default paragraph classes #}
@@ -79,7 +79,7 @@ view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
 	    				</div>
 	    			{%- endif -%}
 	    		{% endblock %}
-    			
+
     		{% endblock %}
 		</div>
 	{% endblock %}

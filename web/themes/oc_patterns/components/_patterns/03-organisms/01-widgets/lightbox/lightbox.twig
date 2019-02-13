@@ -12,13 +12,13 @@
 				<h3 class="widget-title">{{widget_title}}</h3>
 			{% endif %}
 		{% endblock %}
-		
+
 		<div class="gallery-wrapper">
 			{% block lightboxContent %}
 				{% for image in images %}
 					<div class="featherlight-gal image-gal" href="#item{{image.id}}">
 						<img src="{{image.src}}" />
-			
+
 						<div class="featherlight-hidden" id="item{{image.id}}">
 							<img src="{{image.src}}" />
 						</div>

@@ -1,0 +1,28 @@
+uuid: 2fa9ca9a-8f8c-4336-b408-19bd55b87c76
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_oc_image_multi
+    - media.type.image
+    - paragraphs.paragraphs_type.gallery
+id: paragraph.gallery.field_oc_image_multi
+field_name: field_oc_image_multi
+entity_type: paragraph
+bundle: gallery
+label: Images
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

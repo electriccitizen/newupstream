@@ -69,7 +69,7 @@
 	.wrapper{
 		max-width: $contentStop !important;
 	}
-	
+
 	//slider container overrides layout padding on mobile
 	.field-oc-image-multi{
 		@include edgeToEdge;
@@ -82,6 +82,5 @@
 			width: 100%;
 		}
 	}
-	
-}//end slideshow widget
 
+}//end slideshow widget
