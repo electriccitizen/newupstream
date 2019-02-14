@@ -244,7 +244,7 @@ ul.sf-menu.sf-accordion{
 		}//end menupareny
 		&.sf-expanded > .sf-accordion-button{
 			&:after{
-				content: '\f106';
+				@include faSolid($fa-var-angle-left,30px);
 			}
 		}
 	}//end li
