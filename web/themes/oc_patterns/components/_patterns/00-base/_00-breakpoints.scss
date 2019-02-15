@@ -28,6 +28,11 @@ $spaceXl: 6rem;
 $siteMarginMobile: 2rem;
 $siteMarginDesk: 6rem;
 
+/* LAYOUT VARIABLES
+-------------------- */
+$elementSpace: 4rem;
+$sideBar: 320px;
+$sectionGutter: 60px;
 
 /// mixin - smallTab
 @mixin smallTab {

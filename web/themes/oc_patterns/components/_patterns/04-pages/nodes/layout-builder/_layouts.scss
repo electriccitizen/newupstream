@@ -2,27 +2,58 @@
    Section Layouts
 =================== */
 
+.layout__region{
+	& > *{
+		margin-bottom: $elementSpace;
+	}
+}
+
 /* TWO COLUMN SIDEBAR LEFT */
 .layout--twocol-sideleft{
 	width: 100%;
 	max-width: $contentStop;
 	@include auto;
-	@include safeFlex(row,wrap,null,start);
+	@include safeFlex(row,wrap,start,start);
 	.layout__region--first{
 		width: 100%;
 		@include desk{
-			width: 320px;
+			width: $sideBar;
 		}
 	}//end layout region second
 	.layout__region--content{
 		width: 100%;
 		@include desk{
 			&:not(:only-child){
-				@include calc(width, "100% - 320px");
+				@include calc(width, 100% - #{$sideBar});
 				&:not(.ui-sortable){
-					padding-left: 60px;
+					padding-left: $sectionGutter;
 				}
 			}
 		}
 	}
+}//end layout-twocol-sideleft
+
+/* TWO COLUMN SIDEBAR RIGHT */
+.layout--twocol-sideright{
+	width: 100%;
+	max-width: $contentStop;
+	@include auto;
+	@include safeFlex(row,wrap,start,start);
+	.layout__region--content{
+		width: 100%;
+		@include desk{
+			&:not(:only-child){
+				@include calc(width, 100% - #{$sideBar});
+				&:not(.ui-sortable){
+					padding-right: $sectionGutter;
+				}
+			}
+		}
+	}
+	.layout__region--second{
+		width: 100%;
+		@include desk{
+			width: $sideBar;
+		}
+	}//end layout region second
 }//end layout-twocol-sideleft

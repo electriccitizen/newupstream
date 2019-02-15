@@ -135,6 +135,7 @@ third_party_settings:
       Webform: {  }
     allowed_layouts:
       - layout_onecol
+      - two_column_sidebar_right
 _core:
   default_config_hash: 1h2sEQ222bYyFk67-1xEhAMXEdbzEI367eTDmO2XiM8
 id: node.landing_page.default
