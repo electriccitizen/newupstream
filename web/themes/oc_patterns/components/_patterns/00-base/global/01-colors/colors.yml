@@ -31,18 +31,6 @@ items:
     value: '#f8e8f1'
   - name: $unpubDark
     value: '#fdd5dd'
-  - name: $siteBack
-    value: $white
-  - name: $body
-    value: $darkGrey
-  - name: $borderRule
-    value: $lightBlack
-  - name: $link
-    value: $red
-  - name: $activeLink
-    value: $black
-  - name: $hoverLink
-    value: $midGrey
 meta:
   description: >-
     To add to these items, use Sass variables that start with <code>$</code> in
