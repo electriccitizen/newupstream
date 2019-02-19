@@ -36,12 +36,12 @@ content:
       form_mode: default
       label_singular: ''
       label_plural: ''
+      collapsible: true
+      collapsed: true
       allow_new: true
       allow_existing: true
       match_operator: CONTAINS
       override_labels: false
-      collapsible: false
-      collapsed: false
       allow_duplicate: false
     third_party_settings:
       entity_browser_entity_form:

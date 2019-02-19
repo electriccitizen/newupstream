@@ -29,25 +29,7 @@ search-block:
   version: 1.0
   js:
     components/_patterns/02-molecules/blocks/search-block/search-block.js: {}
-slideshow:
-  version: 3.0
-  css:
-    theme:
-      //cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css: { type: external, minified: true }
-      //cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css: { type: external, minified: true }
-  js:
-    components/_patterns/03-organisms/01-widgets/slideshow/slideshow.js: {}
-    //cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js: { type: external, minified: true }
-lightbox:
-  version: 3.0
-  css:
-    theme:
-      https://cdn.rawgit.com/noelboss/featherlight/1.7.12/release/featherlight.min.css: { type: external, minified: true }
-      https://cdn.rawgit.com/noelboss/featherlight/1.7.12/release/featherlight.gallery.min.css: { type: external, minified: true }
-  js:
-    components/_patterns/03-organisms/01-widgets/lightbox/lightbox.js: {}
-    https://cdn.rawgit.com/noelboss/featherlight/1.7.12/release/featherlight.min.js: { type: external, minified: true }
-    https://cdn.rawgit.com/noelboss/featherlight/1.7.12/release/featherlight.gallery.min.js: { type: external, minified: true }
+
 featherlight:
   version: 3.0
   css:

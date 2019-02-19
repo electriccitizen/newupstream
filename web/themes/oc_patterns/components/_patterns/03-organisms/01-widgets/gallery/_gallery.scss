@@ -1,136 +1,135 @@
 /* ===============
    LIGHTBOX GALLERY WIDGET
 ==================== */
-.gallery-type.Lightbox{
+.gallery-type.Lightbox {
 	text-align: center;
-
 	//hide the content before lightbox
-	.featherlight-hidden{
+	.featherlight-hidden {
 		display: none;
 	}
 	//Image lighbox
-	.image-gal{
+	.image-gal {
 		margin: 0 10px 20px;
 		max-width: 250px;
 		display: inline-block;
 		overflow: hidden;
 		cursor: pointer;
-		img{
+		img {
 			width: 100%;
 			@include imageHover;
 		}
 
 	}//end image lightbox
-    //FEATHERLIGHT OVERLAY THEMING
-    	.featherlight-content{
-    		background: $siteBack;
-    		padding: 0;
-    		border-bottom: 0;
-    		margin-left: 5%;
-    		margin-right: 5%;
+	//FEATHERLIGHT OVERLAY THEMING
+	.featherlight-content {
+		background: $siteBack;
+		padding: 0;
+		border-bottom: 0;
+		margin-left: 5%;
+		margin-right: 5%;
+		//controls
+		.featherlight-close-icon {
+			background: none;
+			font-size: 24px;
+			color: $white;
+			text-shadow: 2px 2px 3px $transBlack;
+			height: 32px;
+			width: 32px;
+			font-family: $bodyFont;
+			&:hover {
+				background: rgba(255,255,255,0.15);
+				text-shadow: 2px 2px 3px $black;
+			}
+		}
+		.featherlight-previous {
+			left: 0;
+			top: 0;
+			right: auto;
+			width: 15%;
+			min-width: 60px;
+			span {
+				display: block;
+				font-size: 4rem;
+				width: 60px;
+				height: 80px;
+				left: 0;
+				text-shadow: 2px 2px 2px $transBlack;
+			}
+			&:hover {
+				background: rgba(255,255,255,0.15);
+				span {
+					text-shadow: 2px 2px 3px $black;
+				}
+			}
+		}
+		//end previous
+		.featherlight-next {
+			right: 0;
+			top: 0;
+			left: auto;
+			width: 15%;
+			min-width: 60px;
+			span {
+				display: block;
+				font-size: 4rem;
+				width: 60px;
+				height: 80px;
+				left: auto;
+				right: 0;
+				text-shadow: 2px 2px 2px $transBlack;
+			}
+			&:hover {
+				background: rgba(255,255,255,0.15);
+				span {
+					text-shadow: 2px 2px 3px $black;
+				}
+			}
+		}
+		//end next
+		img {
+			display: block;
+		}
+		figcaption {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			z-index: 30;
+			background: rgba(35,35,35,0.6);
+			color: $white;
+			padding: 1rem 2rem;
+		}
 
-    		//controls
-    		.featherlight-close-icon{
-    			background: none;
-    			font-size: 24px;
-    			color: $white;
-    			text-shadow: 2px 2px 3px $transBlack;
-    			height: 32px;
-    			width: 32px;
-    			font-family: $bodyFont;
-    			&:hover{
-    				background: rgba(255,255,255,0.15);
-    				text-shadow: 2px 2px 3px $black;
-    			}
-    		}
-    		.featherlight-previous{
-    			left: 0;
-    			top: 0;
-    			right: auto;
-    			width: 15%;
-    			min-width: 60px;
-    			span{
-    				display: block;
-    				font-size: 4rem;
-    				width: 60px;
-    				height: 80px;
-    				left: 0;
-    				text-shadow: 2px 2px 2px $transBlack;
-    			}
-    			&:hover{
-    				background: rgba(255,255,255,0.15);
-    				span{
-    					text-shadow: 2px 2px 3px $black;
-    				}
-    			}
-    		}//end previous
-    		.featherlight-next{
-    			right: 0;
-    			top: 0;
-    			left: auto;
-    			width: 15%;
-    			min-width: 60px;
-    			span{
-    				display: block;
-    				font-size: 4rem;
-    				width: 60px;
-    				height: 80px;
-    				left: auto;
-    				right: 0;
-    				text-shadow: 2px 2px 2px $transBlack;
-    			}
-    			&:hover{
-    				background: rgba(255,255,255,0.15);
-    				span{
-    					text-shadow: 2px 2px 3px $black;
-    				}
-    			}
-    		}//end next
-
-    		img{
-    			display: block;
-    		}
-    		figcaption{
-    			position: absolute;
-    			bottom: 0;
-    			left: 0;
-    			width: 100%;
-    			z-index: 30;
-    			background: rgba(35,35,35,0.6);
-    			color: $white;
-    			padding: 1rem 2rem;
-    		}
-
-    		.gallery-text{
-    			max-width: $textMax;
-    			padding: 4rem 6rem;
-    		}
-    	}//end featherlight content
-
-    	//switch controls to dark for text galleries
-    	&.darken{
-    		.featherlight-content{
-    			.featherlight-close-icon,.featherlight-previous,.featherlight-next{
-    				color: rgba(35,35,35,0.6);
-    				text-shadow: 2px 2px 3px $lightGrey;
-    				span{
-    					color: rgba(35,35,35,0.6);
-    					text-shadow: 2px 2px 3px $lightGrey;
-    				}
-    				&:hover{
-    					color: $black;
-    					text-shadow: 2px 2px 3px rgba(35,35,35,0.6);
-    					span{
-    						color: $black;
-    						text-shadow: 2px 2px 3px rgba(35,35,35,0.6);
-    					}
-    				}
-    			}
-    		}
-    	}//end darken
+		.gallery-text {
+			max-width: $textMax;
+			padding: 4rem 6rem;
+		}
+	}
+	//end featherlight content
+	//switch controls to dark for text galleries
+	&.darken {
+		.featherlight-content {
+			.featherlight-close-icon,
+			.featherlight-next,
+			.featherlight-previous {
+				color: rgba(35,35,35,0.6);
+				text-shadow: 2px 2px 3px $lightGrey;
+				span {
+					color: rgba(35,35,35,0.6);
+					text-shadow: 2px 2px 3px $lightGrey;
+				}
+				&:hover {
+					color: $black;
+					text-shadow: 2px 2px 3px rgba(35,35,35,0.6);
+					span {
+						color: $black;
+						text-shadow: 2px 2px 3px rgba(35,35,35,0.6);
+					}
+				}
+			}
+		}
+	}//end darken
 }//end lightbox
-
-
 
 /* ================
    Slideshow
@@ -142,86 +141,82 @@
 /* SLIDER MIXINS
 ------------- */
 /// TRIANGLE ARROWS
-@mixin sliderTriangle{
-	.slick-arrow{
+@mixin sliderTriangle {
+	.slick-arrow {
 		height: 40px;
-		&:before{
+		&:before {
 			content: '' !important;
 			display: block;
 		}
-		&.slick-prev:before{
+		&.slick-prev:before {
 			@include triangle(left,24px,12px,$white);
-			@include tab{
+			@include tab {
 				@include triangle(left,40px,20px,$white);
 			}
 		}
-		&.slick-next:before{
+		&.slick-next:before {
 			@include triangle(right,24px,12px,$white);
 			float: right;
-			@include tab{
+			@include tab {
 				@include triangle(right,40px,20px,$white);
 			}
 		}
-		&.slick-next:hover,&.slick-next:focus{
-			&:before{
+		&.slick-next:focus,
+		&.slick-next:hover {
+			&:before {
 				border-left-color: $link;
-				@include transition(border-left-color, .3s, ease);
+				@include transition(border-left-color, 0.3s, ease);
 			}
 		}
-		&.slick-prev:hover,&.slick-prev:focus{
-			&:before{
+		&.slick-prev:focus,
+		&.slick-prev:hover {
+			&:before {
 				border-right-color: $link;
-				@include transition(border-right-color, .3s, ease);
+				@include transition(border-right-color, 0.3s, ease);
 			}
 		}
 	}//end a
 }//end triangle
 
-
 /* SLIDER STYLING
 -------------- */
-.slick-slider{
+.slick-slider {
 	@include sliderTriangle;
-	.slick-list{
+	.slick-list {
 		@include listReset;
 	}
-
-	.slick-arrow{
+	.slick-arrow {
 		z-index: 1;
-		&.slick-prev{
+		&.slick-prev {
 			left: 20px;
 		}
-		&.slick-next{
+		&.slick-next {
 			right: 20px;
 		}
 	}
 
 }//end slick-slider
 
-
-.gallery-type.Slider{
-	.gallery-wrapper{
+.gallery-type.Slider {
+	.gallery-wrapper {
 		max-width: $contentStop !important;
 	}
-
 	//slider container overrides layout padding on mobile
-	.field-oc-image-multi{
+	.field-oc-image-multi {
 		@include edgeToEdge;
 		@include calc(width, "100% + 40px");
-		@include contentStop{
+		@include contentStop {
 			@include edgeReset;
 			width: 100%;
 		}
-		img{
+		img {
 			width: 100%;
 		}
 	}
-
 }//end slideshow widget
-
 
 /* PATTERN LAB ONLY
 -------------------- */
-.pl .image-gal{
+.pl .image-gal {
 	max-width: 250px;
 }

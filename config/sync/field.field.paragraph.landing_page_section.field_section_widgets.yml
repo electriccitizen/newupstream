@@ -11,10 +11,8 @@ dependencies:
     - paragraphs.paragraphs_type.gallery
     - paragraphs.paragraphs_type.image
     - paragraphs.paragraphs_type.landing_page_section
-    - paragraphs.paragraphs_type.lightbox_gallery
     - paragraphs.paragraphs_type.links_files
     - paragraphs.paragraphs_type.pullquote
-    - paragraphs.paragraphs_type.slideshow
     - paragraphs.paragraphs_type.text
     - paragraphs.paragraphs_type.video
     - paragraphs.paragraphs_type.view_placer
@@ -40,10 +38,8 @@ settings:
       form: form
       gallery: gallery
       image: image
-      lightbox_gallery: lightbox_gallery
       links_files: links_files
       pullquote: pullquote
-      slideshow: slideshow
       text: text
       video: video
       view_placer: view_placer
@@ -74,8 +70,8 @@ settings:
         weight: -26
         enabled: false
       lightbox_gallery:
-        enabled: true
         weight: -25
+        enabled: false
       links_files:
         enabled: true
         weight: -24
@@ -83,8 +79,8 @@ settings:
         enabled: true
         weight: -23
       slideshow:
-        enabled: true
         weight: -22
+        enabled: false
       text:
         enabled: true
         weight: -21

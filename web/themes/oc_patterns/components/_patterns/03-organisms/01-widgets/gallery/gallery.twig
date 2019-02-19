@@ -4,6 +4,7 @@
 
 
 {% block plGalleryStart %}
+	{{ gallery_instructions }}
     <div class="paragraph--gallery">
 {% endblock %}
 
@@ -13,12 +14,10 @@
         <h3 class="widget-title">{{widget_title}}</h3>
     {% endif %}
 
-
-        <div class="gallery-type {{gallery_type}}" >
-
+    <div class="gallery-type {{gallery_type}}" >
         <div class="gallery-wrapper">
-            {% if 'Lightbox' in gallery_type %}
 
+            {% if 'Lightbox' in gallery_type %}
                 {% block lightboxContent %}
                     {% for image in images %}
                         <div class="featherlight-gal image-gal" href="#item{{image.id}}">
@@ -29,18 +28,12 @@
                         </div>
                     {% endfor %}
                 {% endblock %}
-
             {% else %}
-
-            etst
                 {% block sliderContent %}
-
-                test
-
-            =
-
+                    {% for image in images %}
+                        <div class="slider-image"><img src="{{ image.src }}"></div>
+                    {% endfor %}
                 {% endblock %}
-
             {% endif %}
 
         </div> {# end gallery-wrapper #}
