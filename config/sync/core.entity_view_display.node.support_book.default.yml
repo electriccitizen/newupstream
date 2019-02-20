@@ -52,12 +52,12 @@ third_party_settings:
             additional: {  }
             weight: 1
       -
-        layout_id: two_column_sidebar_left
+        layout_id: two_column_sidebar
         layout_settings: {  }
         components:
           c0ba77d7-9652-490e-b90a-575248950d2c:
             uuid: c0ba77d7-9652-490e-b90a-575248950d2c
-            region: first
+            region: sidebar
             configuration:
               id: 'menu_block:support-book'
               label: 'Web Editor Guide'

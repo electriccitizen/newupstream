@@ -24,3 +24,16 @@ two_column_sidebar_right:
       label: Content
     second:
       label: Second
+two_column_sidebar:
+  label: Two Column Sidebar
+  category: OC Patterns Layouts
+  path: templates/layout
+  template: layout--twocol-sidebar
+  default_region: content
+  icon_map:
+    - [content, content, content, sidebar]
+  regions:
+    content:
+      label: Content
+    sidebar:
+      label: Sidebar

@@ -11,9 +11,9 @@ dependencies:
     - node.type.page
   module:
     - entity_browser_entity_form
-    - entity_reference_revisions
     - inline_entity_form
     - metatag
+    - paragraphs
     - text
 _core:
   default_config_hash: Cy5cg2L6ghXtZRwpVMt1QUd7AmwVXOq5F_y4ZUJa_TI
@@ -58,11 +58,21 @@ content:
   field_oc_widgets:
     weight: 26
     settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      closed_mode: preview
+      autocollapse: all
+      closed_mode_threshold: 0
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: _none
+      features:
+        collapse_edit_all: collapse_edit_all
+        duplicate: '0'
+        add_above: '0'
     third_party_settings: {  }
-    type: entity_reference_revisions_autocomplete
+    type: paragraphs
     region: content
   status:
     type: boolean_checkbox

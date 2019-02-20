@@ -33,16 +33,16 @@ SECTION LAYOUTS
 	padding-right: $siteMarginMobile;
 	position: relative;
 
-	&:not(.background){
-		padding-top: $spaceXl;
-		padding-bottom: $spaceXl;
+	&:not(.background):not(:first-child){
+		padding-top: $spaceMd;
+		padding-bottom: $spaceMd;
 		& + .section:not(.background){
 			padding-top: 0;
 		}
 	}
 	&.background{
-		padding-bottom: $spaceXl;
-		padding-top: $spaceXl;
+		padding-bottom: $spaceMd;
+		padding-top: $spaceMd;
 	}
 
 	.field-section-title{

@@ -8,14 +8,18 @@ dependencies:
     - field.field.node.page.field_metatags
     - field.field.node.page.field_oc_widgets
     - node.type.page
+    - system.menu.main
   module:
     - entity_reference_revisions
     - layout_builder
     - layout_builder_restrictions
     - layout_discovery
+    - menu_block
     - system
     - text
     - user
+  theme:
+    - oc_patterns
 third_party_settings:
   layout_builder:
     sections:
@@ -70,8 +74,49 @@ third_party_settings:
                 entity: layout_builder.entity
             additional: {  }
             weight: 2
-          d13c2993-f3be-410f-8849-7ab706babc5d:
-            uuid: d13c2993-f3be-410f-8849-7ab706babc5d
+      -
+        layout_id: two_column_sidebar
+        layout_settings: {  }
+        components:
+          d041ea8a-9c4a-40d1-b362-edeeebca2edd:
+            uuid: d041ea8a-9c4a-40d1-b362-edeeebca2edd
+            region: content
+            configuration:
+              id: 'field_block:node:page:body'
+              label: Body
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+          db3c2d13-9730-4fcf-8964-9e63f1b7cf6a:
+            uuid: db3c2d13-9730-4fcf-8964-9e63f1b7cf6a
+            region: sidebar
+            configuration:
+              id: 'menu_block:main'
+              label: 'Main navigation'
+              provider: menu_block
+              label_display: visible
+              follow: 0
+              follow_parent: child
+              level: 1
+              depth: 3
+              expand: 1
+              parent: 'main:'
+              label_type: root
+              label_link: 1
+              suggestion: page_menu
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
+          eb8c61aa-c3d4-446d-9537-8e0acf30924b:
+            uuid: eb8c61aa-c3d4-446d-9537-8e0acf30924b
             region: content
             configuration:
               id: 'field_block:node:page:field_oc_widgets'
@@ -87,7 +132,7 @@ third_party_settings:
               context_mapping:
                 entity: layout_builder.entity
             additional: {  }
-            weight: 3
+            weight: 1
     allow_custom: false
     is_enabled: true
     enabled: true
@@ -103,8 +148,8 @@ third_party_settings:
       Help: {  }
       'Inline blocks': {  }
       Menus:
-        - 'system_menu_block:main'
         - 'menu_block:main'
+        - 'system_menu_block:main'
       Superfish: {  }
       System:
         - system_breadcrumb_block
@@ -113,8 +158,7 @@ third_party_settings:
       Webform: {  }
     allowed_layouts:
       - layout_onecol
-      - two_column_sidebar_left
-      - two_column_sidebar_right
+      - two_column_sidebar
 _core:
   default_config_hash: 6cLH5reWp4HB-2AJp7PY1kXioC8KrzluoED6Q9UGPHw
 id: node.page.default

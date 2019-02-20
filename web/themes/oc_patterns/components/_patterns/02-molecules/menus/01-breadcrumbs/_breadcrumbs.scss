@@ -5,7 +5,7 @@
 .breadcrumb{
 	max-width: $contentStop;
 	@include auto;
-	padding: $spaceXs 0 $spaceSm;
+	padding: $spaceMd 0 $spaceSm;
 	ol {
 		@include listReset;
 	}
