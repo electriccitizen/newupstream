@@ -1,0 +1,25 @@
+uuid: 78a63e65-b678-4de0-94c5-acd3d2e26bf6
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:2ed87386-5a05-45c6-8fca-f5c0d676d1d2'
+  module:
+    - block_content
+  theme:
+    - oc_patterns
+id: newsletter
+theme: oc_patterns
+region: footer
+weight: -4
+provider: null
+plugin: 'block_content:2ed87386-5a05-45c6-8fca-f5c0d676d1d2'
+settings:
+  id: 'block_content:2ed87386-5a05-45c6-8fca-f5c0d676d1d2'
+  label: Newsletter
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

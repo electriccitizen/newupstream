@@ -3,13 +3,18 @@
 =================== */
 
 .layout-container > header {
-	background: $offWhite;
+	background: $headerBack;
 	& > div{
-		padding: 10px $siteMarginMobile;
+		padding: 20px $siteMarginMobile;
 		max-width: $contentStop + 40px;
 		@include auto;
 		position: relative;
 		@include safeFlex(row,wrap,null,center);
+	}
+	&.nav-left,&.nav-center{
+		& > div{
+			padding: 20px $siteMarginMobile 0;
+		}
 	}
 }//end layout container
 
@@ -41,7 +46,7 @@
 
 /* SEARCH BLOCK PLACEMENT
 ------------------- */
-header .block-search-form-block{
+.block-search-form-block{
 	position: static;
 	display: inline-block;
 	text-align: right;
@@ -49,6 +54,10 @@ header .block-search-form-block{
 	//set width at desktop
 	@include desk{
 		@include calc(width, "100% - 240px");
+		.nav-inline &{
+			@include safeFlexOrder(99);
+			width: 240px;
+		}
 	}
 
 	//search toggler
@@ -59,6 +68,9 @@ header .block-search-form-block{
 		@include desk{
 			top: 13px;
 			right: 25px;
+			.nav-inline &{
+				top: 42px;
+			}
 		}
 	}
 }//end search block
@@ -79,6 +91,17 @@ header .block-search-form-block{
 		bottom: 0;
 		width: 100%;
 		padding-left: 280px;
+		.nav-left &,.nav-center &{
+			position: relative;
+			padding-left: 0;
+			margin-top: 20px;
+		}
+		.nav-inline &{
+			position: relative;
+			@include calc(width, "100% - 480px");
+			padding-left: 0;
+			margin-top: -10px;
+		}
 	}//end desk
 	
 }//end main nav

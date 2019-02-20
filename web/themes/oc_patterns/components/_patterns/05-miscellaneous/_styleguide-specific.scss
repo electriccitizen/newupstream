@@ -11,6 +11,8 @@ $plBlack : #000000;
 $plLink  : #bf0e0e;
 $plBorder: #333333;
 
+
+
 .pl {
 	.sg-main{
 		padding-top: $spaceLg;
@@ -79,10 +81,12 @@ $plBorder: #333333;
 		opacity: .8;
 		font-style: italic;
 		margin-bottom: $spaceLg;
+		width: 100%;
 	}
 
 	.flex-holder{
-		@include safeFlex(row,wrap,null,start);
+		@include safeFlex(row,wrap,start,start);
+		width: 100%;
 		.flex-half{
 			width: 50%;
 			padding: 0 $siteMarginMobile;
@@ -202,6 +206,9 @@ $plBorder: #333333;
 			display: none;
 		}
 	}//end sf-desk
+	.flex-half.sf-dropdown{
+		@include safeFlex(row,wrap,start,start);
+	}
 }//end pl
 
 

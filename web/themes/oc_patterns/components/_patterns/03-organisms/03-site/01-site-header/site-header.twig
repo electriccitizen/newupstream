@@ -2,12 +2,14 @@
 	 STYLEGUIDE ONLY: This template is not used in Drupal.
 #}
 
+{% import "@base/global/05-macros/macros.twig" as styles %}
+
 {% block headerOpen %}
 {{ header_instructions }}
 <div class="layout-container pl-spacer">
 {% endblock %}
 
-<header role="banner">
+<header role="banner" class="nav-{{ styles.mainNavStyle }}">
   <div>
 
 		{% include "@molecules/blocks/header-branding-block/branding-block.twig" 

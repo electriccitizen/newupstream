@@ -1,0 +1,37 @@
+@import '_color-vars.scss';
+
+/* ===========================
+    COMPONENT SPECIFIC COLORS
+=============================   */
+
+/* GENERAL COLORS
+---------------------- */
+
+$siteBack   : $white;
+$headerBack : $offWhite;
+$body       : $darkGrey;
+$borderRule : $lightBlack;
+$link        : $red;
+$activeLink  : $black;
+$hoverLink   : $midGrey;
+
+
+/* SUPERFISH COLORS
+---------------------- */
+//no background or light background
+$sfTopLink:       $black;
+$sfTopBackHover:  $white;
+$sfTopActive:      $link;
+$sfChildLink:     $link;
+$sfChildActive:    $black;
+$sfDropdown:       $white;
+
+//dark background
+$navBack:            $midGrey;
+$sfTopBackHoverRev:  $darkGrey;
+$sfTopLinkRev:       $white;
+$sfTopActiveRev:     $link;
+$sfChildLinkRev:     $offWhite;
+$sfChildActiveRev:   $white;
+$sfDropdownRev:      $darkGrey;
+

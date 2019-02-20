@@ -5,15 +5,9 @@
 /* PLACEHOLDERS
 ------------ */
 %menuDropdown{
-	background: $white;
-}
-
-%childDrop{
-	&.menuparent{
-		& > ul{
-			background: $white;
-			border: 1px dotted $borderRule;
-		}
+	background: $sfDropdown;
+	.background &{
+		background: $sfDropdownRev;
 	}
 }
 
@@ -22,16 +16,28 @@
 	----------------- */
 .sf-main li{
 	a{
-		color: $link;
+		color: $sfChildLink;
 		text-align: left;
+		.background &{
+			color: $sfChildLinkRev;
+		}
 		&:hover,&:focus{
 			color: $hoverLink;
+			.background &{
+				color: $white;
+			}
 		}
 	}
 	&.active-trail > a{
-		color: $black;
+		color: $sfChildActive;
+		.background &{
+			color: $sfChildActiveRev;
+		}
 		&:hover,&:focus{
 			color: $hoverLink;
+			.background &{
+				color: $offWhite;
+			}
 		}
 	}
 }
@@ -41,7 +47,12 @@
 /* DESK FISH
 ---------------- */
 .sf-menu.sf-horizontal{
-
+	.background &{
+		position: relative;
+		&:after{
+			@include fullBack($navBack);
+		}
+	}
 	//override deafult floats
 	li{
 		float: none;
@@ -50,6 +61,21 @@
 	/* ====  sf main links ==== */
 	&.sf-main{
 		@include safeFlex(row,wrap,end,null);
+		.left &{
+			@include safeFlex(row,wrap,start,null);
+			border-top: 1px solid $borderRule;
+		}
+		.center &{
+			@include safeFlex(row,wrap,center,null);
+			border-top: 1px solid $borderRule;
+		}
+		.inline &{
+			@include safeFlex(row,wrap,start,null);
+			padding-left: 80px;
+		}
+		.background &{
+			border-top: none;
+		}
 		& > li{
 			&:not(.sfHover){
 				& > ul{
@@ -57,36 +83,28 @@
 				}
 			}
 			& > a{
-				color: $black;
+				color: $sfTopLink;
 				padding: 20px 15px !important;
 				font-size: 2rem;
 				display: block;
 				position: relative;
+				.background &{
+					color: $sfTopLinkRev;
+				}
 				&:hover,&:focus{
-					background: $white;
+					background: $sfTopBackHover;
+					.background &{
+						background: $sfTopBackHoverRev;
+					}
 				}
 			}
 			&.active-trail > a{
-				color: $link;
+				color: $sfTopActive;
+				.background &{
+					color: $sfTopActiveRev;
+				}
 			}
 		}
-		//spotlight functionality
-		.spotlight &{
-			&:hover{
-				& > li > a{
-					opacity: .4;
-					&:hover{
-						opacity: 1;
-						color: $link;
-						background: none;
-					}
-				}
-				& > li.sfHover > a{
-					opacity: 1;
-					color: $link;
-				}
-			}
-		}//edn spotlight function
 	}//end main links
 
 
@@ -161,7 +179,6 @@
 	li.sf-depth-2 li{
 		font-size: 1.7rem;
 		line-height: 1;
-		@extend %childDrop;
 		& > a{
 			padding-left: 40px;
 			padding: 8px 20px 8px 40px;
@@ -174,11 +191,6 @@
 			}
 		}
 	}//end a.level 3
-
-	/* ====  Level 4 ==== */
-	li.sf-depth-4{
-		@extend %childDrop;
-	}
 
 
 }//end .sf-menu.sf-horizontal.sf-main
@@ -327,16 +339,9 @@ ul.sf-menu.sf-accordion{
 	.sf-hidden{
 		display: none;
 	}
-	.faux-header{
-		padding: 40px 20px;
-		background: $offWhite; 
-	}
-
 	.sf-dropdown{
 		margin-bottom: 100px;
 		.sf-main{
-			padding: 10px 20px;
-			background: $white;
 			li.sf-depth-1{
 				max-width: 200px;
 				background: $white;
