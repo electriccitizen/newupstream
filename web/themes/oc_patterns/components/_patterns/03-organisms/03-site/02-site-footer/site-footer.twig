@@ -12,15 +12,16 @@ Available macro variables: fixed, non-fixed.
 {% endblock %}
 
 {% block footerContent %}
-<footer role="contentinfo" class="pl-spacer">
+{% import "@base/global/05-macros/macros.twig" as styles %}
+<footer role="contentinfo" class="pl-spacer {{ styles.footer }}">
 	<div class="footer-inner">	
 		<div>
 		{% if menu %}
-			{% include "@molecules/blocks/footer-menu/_footer-menu.twig" %}
+			{% include "@molecules/blocks/footer-blocks/_footer-menu.twig" %}
 		{% endif %}
 
 		{% if copyright %}
-			{% include "@molecules/blocks/footer-copyright/_footer-copyright.twig" %}
+			{% include "@molecules/blocks/footer-blocks/_footer-copyright.twig" %}
 		{% endif %}
 		</div>
 	</div>

@@ -2,27 +2,64 @@
    SITE FOOTER
 =============== */
 footer {
-
+	background: $darkGrey;
+	color: $offWhite;
 	//set style for footer (need inner for fixed footer script)
 	.footer-inner{
-		background: $darkGrey;
-		color: $offWhite;
 		min-height: 289px;
 		padding: 30px $siteMarginMobile;
+		max-width: $contentStop;
+		@include auto;
+		position: relative;
 		@include tab{
-			padding: 30px $siteMarginMobile 50px;
+			padding: 0 $siteMarginMobile 50px;
 			min-height: 0;
 		}
 
 		//limit footer content to max-width and set flex parenting
 		& > div{
-			position: relative;
-			max-width: $contentStop;
-			@include auto;
-			@include safeFlex(row,wrap,null,null);
+			@include tab{
+				@include bleed(40px);
+			}
+			& > *{
+				&:not(:last-child){
+					margin-bottom: $spaceMd;
+				}
+				@include tab{
+					padding-left: 20px;
+					padding-right: 20px;
+				}
+				h2.block-title{
+					text-align: left;
+					margin-bottom: 1.5rem;
+				}
+			}
 		}
 
 	}//end footer-inner
+
+	&.footer-v1{
+		& > .footer-inner{
+			@include clearFix;
+			padding: 30px $siteMarginMobile 0;
+			@include tab{
+				padding: 30px $siteMarginMobile 0;
+			}
+			& > div{
+				@include onlySmall{
+					@include safeFlex(column,nowrap,start,start);
+				}
+			}
+		}
+	}//end footer v1
+
+	&.footer-v2{
+		& > .footer-inner{
+			& > div{
+				@include safeFlex(row,wrap,start,start);
+			}
+		}
+	}//end footer v2
 
 }//end footer
 

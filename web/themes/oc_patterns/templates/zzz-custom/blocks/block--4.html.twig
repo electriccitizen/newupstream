@@ -25,13 +25,13 @@
  * @see template_preprocess_block()
  */
 #}
+{% embed '@molecules/blocks/footer-blocks/_footer-newsletter.twig' 
+	with{
+		modalScripts: attach_library('oc_patterns/modal')
+	}
+%}
+	{% block dLabel %}
+		{{ label }}
+	{% endblock %}
 
-{% extends '@molecules/blocks/block.twig' %}
-
-{% block dLabel %}
-	{{ label }}
-{% endblock %}
-
-{% block blockContent %}
-	{{ content }}
-{% endblock %}
+{% endembed %}

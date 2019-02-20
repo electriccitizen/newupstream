@@ -53,6 +53,6 @@ function oc_patterns_theme_suggestions_paragraph_alter(array &$suggestions, arra
  */
 function oc_patterns_form_alter(&$form, FormStateInterface $form_state) {
   if(($form['#id'] == 'views-exposed-form-site-search-search-results') || ($form['#id'] == 'site-search-form')){
-    $form['actions']['submit']['#suffix'] = '<i class="fa fa-search-test"></i>';
+    $form['actions']['submit']['#suffix'] = '<i class="fa fa-search"></i>';
   }
 }

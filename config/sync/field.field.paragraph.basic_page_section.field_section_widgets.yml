@@ -7,7 +7,6 @@ dependencies:
     - paragraphs.paragraphs_type.accordion_group
     - paragraphs.paragraphs_type.basic_page_section
     - paragraphs.paragraphs_type.form
-    - paragraphs.paragraphs_type.from_library
     - paragraphs.paragraphs_type.image
     - paragraphs.paragraphs_type.lightbox_gallery
     - paragraphs.paragraphs_type.links_files
@@ -41,7 +40,6 @@ settings:
       slideshow: slideshow
       text: text
       video: video
-      from_library: from_library
     target_bundles_drag_drop:
       accordion_group:
         enabled: true
@@ -54,12 +52,6 @@ settings:
         enabled: false
       block_placer:
         weight: -36
-        enabled: false
-      call_to_action:
-        weight: -35
-        enabled: false
-      event_by_category:
-        weight: -34
         enabled: false
       form:
         enabled: true
@@ -76,12 +68,6 @@ settings:
       links_files:
         enabled: true
         weight: -28
-      map:
-        enabled: true
-        weight: -27
-      news_by_category:
-        weight: -26
-        enabled: false
       pullquote:
         enabled: true
         weight: -25
@@ -94,10 +80,10 @@ settings:
       video:
         enabled: true
         weight: -22
-      admin_view_placer:
-        weight: -21
-        enabled: false
       from_library:
-        enabled: true
         weight: 28
+        enabled: false
+      view_placer:
+        weight: 30
+        enabled: false
 field_type: entity_reference_revisions

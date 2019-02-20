@@ -145,6 +145,17 @@
 				left: auto;
 				right: 18px;
 				max-width: 280px;
+				top: 15px;
+			}
+		}
+		.nav-inline .box &{
+			@include desk{
+				top: 28px;
+			}
+		}
+		.nav-right .box &{
+			@include desk{
+				top: 10px;
 			}
 		}
 		.search-page-block &{
@@ -217,12 +228,12 @@
 				.box &{
 					@include desk{
 						color: $black;
-						border-bottom-color: $black;
+						border: 1px solid $black;
 						font-size: 1.6rem;
 						@include placeholder;
 						&:focus{
-							outline: 1px solid $grey;
 							@include placeholderFocus;
+							outline: 1px solid $black;
 						}
 					}
 				}
@@ -231,8 +242,8 @@
 					border-bottom-color: $black;
 					@include placeholder;
 					&:focus{
-						outline: 1px solid $grey;
 						@include placeholderFocus;
+						outline: 1px solid $black;
 					}
 				}
 			}//end input

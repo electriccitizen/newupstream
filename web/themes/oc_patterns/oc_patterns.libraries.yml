@@ -31,6 +31,10 @@ media-js:
   version: 1.0
   js:
     components/_patterns/01-atoms/08-media/media.js: {}
+modal:
+  version: 1.0
+  js:
+    components/_patterns/05-miscellaneous/modal.js: {}
 page-menu:
   version: 1.0
   js:

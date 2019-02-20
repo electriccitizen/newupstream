@@ -25,13 +25,8 @@
  * @see template_preprocess_block()
  */
 #}
-
-{% extends '@molecules/blocks/block.twig' %}
+{% extends '@molecules/blocks/footer-blocks/_footer-connect.twig' %}
 
 {% block dLabel %}
 	{{ label }}
-{% endblock %}
-
-{% block blockContent %}
-	{{ content }}
 {% endblock %}

@@ -8,19 +8,14 @@ dependencies:
     - field.field.node.page.field_metatags
     - field.field.node.page.field_oc_widgets
     - node.type.page
-    - system.menu.main
   module:
     - entity_reference_revisions
     - layout_builder
     - layout_builder_restrictions
     - layout_discovery
-    - menu_block
-    - metatag
     - system
     - text
     - user
-  theme:
-    - oc_patterns
 third_party_settings:
   layout_builder:
     sections:
@@ -28,8 +23,8 @@ third_party_settings:
         layout_id: layout_onecol
         layout_settings: {  }
         components:
-          850dbc2a-28e4-4d2c-856c-7a4350e133c9:
-            uuid: 850dbc2a-28e4-4d2c-856c-7a4350e133c9
+          ca1122ff-a530-4198-9ab8-9bcc434bc479:
+            uuid: ca1122ff-a530-4198-9ab8-9bcc434bc479
             region: content
             configuration:
               id: system_breadcrumb_block
@@ -39,12 +34,8 @@ third_party_settings:
               context_mapping: {  }
             additional: {  }
             weight: 0
-      -
-        layout_id: layout_onecol
-        layout_settings: {  }
-        components:
-          57031955-b249-4a7e-8e30-08f9a620ff2e:
-            uuid: 57031955-b249-4a7e-8e30-08f9a620ff2e
+          f555d803-fcd3-451b-9db8-00ad95324560:
+            uuid: f555d803-fcd3-451b-9db8-00ad95324560
             region: content
             configuration:
               id: 'field_block:node:page:field_banner'
@@ -60,9 +51,9 @@ third_party_settings:
               context_mapping:
                 entity: layout_builder.entity
             additional: {  }
-            weight: 0
-          73e38ea3-00cf-4122-bcb1-43c1373e9723:
-            uuid: 73e38ea3-00cf-4122-bcb1-43c1373e9723
+            weight: 1
+          0ac9ec65-852f-4fa6-9a1d-ab023bea5078:
+            uuid: 0ac9ec65-852f-4fa6-9a1d-ab023bea5078
             region: content
             configuration:
               id: 'field_block:node:page:title'
@@ -78,54 +69,9 @@ third_party_settings:
               context_mapping:
                 entity: layout_builder.entity
             additional: {  }
-            weight: 1
-      -
-        layout_id: two_column_sidebar_left
-        layout_settings: {  }
-        components:
-          1eaee1a1-cd33-4dbf-ad13-921a03d7286f:
-            uuid: 1eaee1a1-cd33-4dbf-ad13-921a03d7286f
-            region: content
-            configuration:
-              id: 'field_block:node:page:body'
-              label: Body
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: hidden
-                type: text_default
-                settings: {  }
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
-            weight: 0
-          8da88ecb-2331-491f-b491-9843b55a1c40:
-            uuid: 8da88ecb-2331-491f-b491-9843b55a1c40
-            region: first
-            configuration:
-              id: 'menu_block:main'
-              label: 'Section Menu'
-              provider: menu_block
-              label_display: visible
-              follow: 0
-              follow_parent: active
-              level: 2
-              depth: 0
-              expand: 1
-              parent: 'main:'
-              label_type: root
-              label_link: 0
-              suggestion: page_menu
-              context_mapping: {  }
-            additional: {  }
-            weight: 0
-      -
-        layout_id: layout_onecol
-        layout_settings: {  }
-        components:
-          87486534-a5c9-4c3a-a462-8b37ba581c28:
-            uuid: 87486534-a5c9-4c3a-a462-8b37ba581c28
+            weight: 2
+          d13c2993-f3be-410f-8849-7ab706babc5d:
+            uuid: d13c2993-f3be-410f-8849-7ab706babc5d
             region: content
             configuration:
               id: 'field_block:node:page:field_oc_widgets'
@@ -141,7 +87,7 @@ third_party_settings:
               context_mapping:
                 entity: layout_builder.entity
             additional: {  }
-            weight: 0
+            weight: 3
     allow_custom: false
     is_enabled: true
     enabled: true
@@ -149,22 +95,26 @@ third_party_settings:
     allowed_blocks:
       AddToAny: {  }
       'Chaos tools': {  }
+      Content: {  }
       core: {  }
-      Devel: {  }
+      'Custom Blocks': {  }
       Flippy: {  }
       Forms: {  }
       Help: {  }
-      'Lists (Views)': {  }
+      'Inline blocks': {  }
       Menus:
+        - 'system_menu_block:main'
         - 'menu_block:main'
       Superfish: {  }
       System:
         - system_breadcrumb_block
       User: {  }
+      'User fields': {  }
       Webform: {  }
     allowed_layouts:
       - layout_onecol
       - two_column_sidebar_left
+      - two_column_sidebar_right
 _core:
   default_config_hash: 6cLH5reWp4HB-2AJp7PY1kXioC8KrzluoED6Q9UGPHw
 id: node.page.default
@@ -180,7 +130,7 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 2
+    weight: 1
     settings: {  }
     third_party_settings: {  }
     region: content
@@ -193,21 +143,15 @@ content:
       link: false
     third_party_settings: {  }
     region: content
-  field_metatags:
-    weight: 4
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: metatag_empty_formatter
-    region: content
   field_oc_widgets:
-    type: entity_reference_revisions_entity_view
-    weight: 3
-    label: hidden
+    weight: 102
+    label: above
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
     region: content
 hidden:
+  field_metatags: true
   links: true

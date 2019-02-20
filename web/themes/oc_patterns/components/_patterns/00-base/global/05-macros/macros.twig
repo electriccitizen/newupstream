@@ -16,7 +16,7 @@
 	Current= right
 </p>
 </div>
-{% macro mainNavStyle() %}center background{% endmacro %}
+{% macro mainNavStyle() %}right{% endmacro %}
 
 
 {#######  SEARCH VARIABLES  #######}
@@ -26,7 +26,7 @@
 	Current= toggle
 </p>
 </div>
-{% macro searchBox() %}toggle{% endmacro %}
+{% macro searchBox() %}box{% endmacro %}
 
 
 {#######  FORM VARIABLES  #######}
@@ -45,6 +45,43 @@
 </p>
 </div>
 {% macro checkboxElements() %}custom-options{% endmacro %}
+
+{#######  LAYOUT VARIABLES  #######}
+<div class="macro-tile">
+<p><strong>Sidebar Position</strong></br>
+	VARIABLES= side-left, side-right</br>
+	Current= side-right
+</p>
+</div>
+{% macro sidebar() %}side-right{% endmacro %}
+
+{#######  FOOTER VARIABLES  #######}
+<div class="macro-tile">
+<p><strong>Footer Version</strong></br>
+	VARIABLES= footer-v1, footer-v2</br>
+	Current= footer-v1
+</p>
+</div>
+{% macro footer() %}footer-v2{% endmacro %}
+
+
+<div class="macro-tile">
+<p><strong>Newsletter Form Type</strong></br>
+	VARIABLES= mailchimp, constant</br>
+	Current= constant
+</p>
+</div>
+{% macro newsletter() %}constant{% endmacro %}
+
+<div class="macro-tile">
+<p><strong>Newsletter Display</strong></br>
+	VARIABLES= form, modal</br>
+	Current= modal
+</p>
+</div>
+{% macro newsletterDisplay() %}modal{% endmacro %}
+
+
 
 
 {#######  SVG VIEWBOX POSITIONS  ########}

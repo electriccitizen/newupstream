@@ -1,0 +1,209 @@
+/* =================
+   FOOTER BLOCKS BLOCK
+=================== */
+
+/* ABOUT
+-------------- */
+.block-2{
+	@include onlySmall{
+		@include safeFlexOrder(1);
+	}
+	.footer-v1 &{
+		@include tab{
+			width: 33.33%;
+			float: left;
+		}
+	}
+	.footer-v2 &{
+		@include tab{
+			@include safeFlexOrder(2);
+			width: 50%;
+		}
+	}
+}//end block-2 about
+
+/* CONNECT
+-------------- */
+.block-3{
+	@include onlySmall{
+		@include safeFlexOrder(4);
+	}
+	.footer-v1 &{
+		@include tab{
+			width: 33.33%;
+			margin-left: 66.66%;
+		}
+	}
+	.footer-v2 &{
+		@include tab{
+			@include safeFlexOrder(5);
+			width: 50%;
+		}
+	}
+	.social-links{
+		@include listReset;
+		li{
+			display: inline-block;
+			margin-right: 10px;
+			a{
+				color: $grey;
+				font-size: 32px;
+				&:hover,&:focus{
+					color: $white;
+				}
+			}
+		}
+	}
+}//end block-3 connect
+
+/* NEWSLETTER
+-------------- */
+.block-4{
+	@include safeFlexOrder(3);
+	.footer-v1 &{
+		@include tab{
+			width: 33.33%;
+			margin-left: 66.66%;
+		}
+	}
+	.footer-v2 &{
+		@include tab{
+			width: 50%;
+		}
+	}
+	p{
+		a{
+			color: $grey;
+			text-decoration: underline;
+			&:hover,&:focus{
+				color: $white;
+				text-decoration: none;
+			}
+		}
+	}
+	#mc_embed_signup{
+		background: none;
+		font: inherit;
+		width: 100%;
+		#mc-embedded-subscribe-form{
+			padding: 0;
+		}
+		#mce-EMAIL{
+			@include textInput;
+		}
+		#mc-embedded-subscribe{
+			@include submitButton;
+			width: auto;
+		}
+	}
+}//end block-4 newsletter
+
+/* FOOTER MENU
+-------------- */
+.block-footer-menu{
+	width: 100%;
+	@include onlySmall{
+		@include safeFlexOrder(2);
+	}
+	.footer-v1 &{
+		float: left;
+		width: 33.33%;
+	}
+	.footer-v2 &{
+		h2.block-title{
+			display: none;
+		}
+		@include tab{
+			@include safeFlexOrder(1);
+			position: relative;
+			padding-top: 15px;
+			padding-bottom: 15px;
+			z-index: 2;
+			&:after{
+				@include fullBack(darken($darkGrey, 5%));
+			}	
+		}
+	}
+	
+	ul:not(.contextual-links){
+		@include listReset;
+		@include safeFlex(row,wrap,center,null);
+		@include tab{
+			.footer-v1 &{
+				@include safeFlex(row,wrap,start,start);
+				li{
+					width: 50%;
+					&:not(:first-child){
+						padding-left: 0
+					}
+					&:not(:last-child){
+						padding-right: 0 !important;
+						&:after{
+							content: none;
+						}
+					}
+				}
+			}//end footer v1
+		}//end tab
+		li{
+			position: relative;
+			a{
+				display: block;
+				color: $grey;
+				.footer-v1 &{
+					text-decoration: underline;
+				}
+				&:hover,&:focus{
+					color: $white;
+					@include transAll(.3s);
+					.footer-v1 &{
+						text-decoration: none;
+					}
+				}
+			}
+			&:not(:first-child){
+				padding-left: 6px;
+			}
+			&:not(:last-child){
+				padding-right: 8px;
+				&:after{
+					@include vertRule(right,60%,$white);
+				}
+			}
+		}//end li
+	}//end ul
+}//end footer-menu
+
+
+/* COPYRIGHT
+-------------- */
+.block-1{
+	width: 100%;
+	text-align: center;
+	.footer-v1 &{
+		position: relative;
+		z-index: 2;
+		padding-top: 30px;
+		padding-bottom: 30px;
+		clear: both;
+		&:after{
+			@include fullBack($black);
+		}
+	}
+	@include onlySmall{
+		@include safeFlexOrder(5);
+	}
+	@include tab{
+		width: 100%;
+		.footer-v2 &{
+			width: 50%;
+			@include safeFlexOrder(4);
+			text-align: left;
+		}
+	}
+	p{
+		margin:0;
+		font-size: 1.5rem;
+		color: $transWhite;
+	}
+}//end footer-copyright
