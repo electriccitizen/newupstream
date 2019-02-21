@@ -332,74 +332,74 @@ ul.sf-menu.sf-accordion{
 
 /* PATTERN LAB ONLY
 ------------------- */
-.pl #molecules-superfish,.pl #molecules-superfish-mobile{
+.pl #superfish-main,.pl #superfish-main-accordion{
 	li{
 		list-style: none;
 	}
 	.sf-hidden{
 		display: none;
 	}
-	.sf-dropdown{
-		margin-bottom: 100px;
-		.sf-main{
-			li.sf-depth-1{
-				max-width: 200px;
-				background: $white;
-				&:after{
-					background: $white;
-				}
-				a{
-					display: inline-block;
-				}
-			}
-		}
-		.menuparent{
-			position: relative;
-			& > ul{
-				@include listReset;
-				margin-top: 10px;
-				position: absolute;
-				top: 100%;
-				left: 0;
-				min-width: 300px;
-			}
-		}
-	}//end sf-dropdown
-
-	.sf-mobile{
-		max-width: 500px;
-		padding: 10px 20px 30px;
-		background: $offWhite;
-		a{
-			display: block;
-		}
-		.sf-hidden{
-			display: none;
-		}
-		ul{
-			@include listReset;
-			&.sf-main{
-				position: relative;
-			}
-		}
-		.sf-accordion-button{
-			width: 60px;
-			height: 100%;
-			float: right;
-			text-indent: -9000px;
-			position: relative;
-			&:after{
-				content: '';
-				text-indent: 0;
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				margin: 0;
-				display: block;
-				@include translate(-50%, -50%);
-			}
-		}
-	}
 
 }//end pl
 
+.pl .sf-dropdown{
+	margin-bottom: 100px;
+	.sf-main{
+		display: block;
+		li.sf-depth-1{
+			max-width: 200px;
+			background: $white;
+			&:after{
+				background: $white;
+			}
+			a{
+				display: inline-block;
+			}
+		}
+	}
+	.menuparent{
+		position: relative;
+		& > ul{
+			@include listReset;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			min-width: 300px;
+		}
+	}
+}//end sf-dropdown
+
+.pl .sf-mobile{
+	max-width: 500px;
+	padding: 10px 20px 30px;
+	background: $offWhite;
+	a{
+		display: block;
+	}
+	.sf-hidden{
+		display: none;
+	}
+	ul{
+		@include listReset;
+		&.sf-main{
+			position: relative;
+		}
+	}
+	.sf-accordion-button{
+		width: 60px;
+		height: 100%;
+		float: right;
+		text-indent: -9000px;
+		position: relative;
+		&:after{
+			content: '';
+			text-indent: 0;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin: 0;
+			display: block;
+			@include translate(-50%, -50%);
+		}
+	}
+}

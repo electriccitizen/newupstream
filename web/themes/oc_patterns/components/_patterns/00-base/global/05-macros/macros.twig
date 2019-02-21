@@ -16,7 +16,7 @@
 	Current= right
 </p>
 </div>
-{% macro mainNavStyle() %}right{% endmacro %}
+{% macro mainNavStyle() %}left background{% endmacro %}
 
 
 {#######  SEARCH VARIABLES  #######}
@@ -53,7 +53,7 @@
 	Current= side-right			
 </p>
 </div>
-{% macro sidebar() %}side-right{% endmacro %}
+{% macro sidebar() %}side-left{% endmacro %}
 
 {#######  FOOTER VARIABLES  #######}
 <div class="macro-tile">
@@ -68,18 +68,18 @@
 <div class="macro-tile">
 <p><strong>Newsletter Form Type</strong></br>
 	VARIABLES= mailchimp, constant</br>
-	Current= constant
+	Current= mailchimp
 </p>
 </div>
-{% macro newsletter() %}constant{% endmacro %}
+{% macro newsletter() %}mailchimp{% endmacro %}
 
 <div class="macro-tile">
 <p><strong>Newsletter Display</strong></br>
 	VARIABLES= form, modal</br>
-	Current= modal
+	Current= form
 </p>
 </div>
-{% macro newsletterDisplay() %}modal{% endmacro %}
+{% macro newsletterDisplay() %}form{% endmacro %}
 
 
 
