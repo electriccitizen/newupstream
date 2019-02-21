@@ -96,6 +96,11 @@
 			width: auto;
 		}
 	}
+	.ctct-form-custom{
+		.grecaptcha-badge{
+			display: none !important;
+		}
+	}
 }//end block-4 newsletter
 
 /* FOOTER MENU

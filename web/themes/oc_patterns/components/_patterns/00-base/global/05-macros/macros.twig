@@ -13,17 +13,15 @@
 <div class="macro-tile">
 <p><strong>Main nav alignment & Background</strong></br>
 	VARIABLES= left, right, center, inline, background</br>
-	Current= right
 </p>
 </div>
-{% macro mainNavStyle() %}left background{% endmacro %}
+{% macro mainNavStyle() %}right{% endmacro %}
 
 
 {#######  SEARCH VARIABLES  #######}
 <div class="macro-tile">
 <p><strong>Search Block Style</strong></br>
 	VARIABLES= toggle, box</br>
-	Current= toggle
 </p>
 </div>
 {% macro searchBox() %}toggle{% endmacro %}
@@ -33,7 +31,6 @@
 <div class="macro-tile">
 <p><strong>Radio Form Elements</strong></br>
 	VARIABLES= default, custom-options</br>
-	Current= custom-options
 </p>
 </div>
 {% macro radioElements() %}custom-options{% endmacro %}
@@ -41,7 +38,6 @@
 <div class="macro-tile">
 <p><strong>Checkbox Form Elements</strong></br>
 	VARIABLES= default, custom-options</br>
-	Current= custom-options
 </p>
 </div>
 {% macro checkboxElements() %}custom-options{% endmacro %}
@@ -49,17 +45,15 @@
 {#######  LAYOUT VARIABLES  #######}
 <div class="macro-tile">
 <p><strong>Sidebar Position</strong></br>
-	VARIABLES= side-left, side-right</br>
-	Current= side-right			
+	VARIABLES= side-left, side-right</br>		
 </p>
 </div>
-{% macro sidebar() %}side-left{% endmacro %}
+{% macro sidebar() %}side-right{% endmacro %}
 
 {#######  FOOTER VARIABLES  #######}
 <div class="macro-tile">
 <p><strong>Footer Version</strong></br>
-	VARIABLES= footer-v1, footer-v2</br>
-	Current= footer-v1
+	VARIABLES= footer-v1, footer-v1</br>
 </p>
 </div>
 {% macro footer() %}footer-v2{% endmacro %}
@@ -68,18 +62,16 @@
 <div class="macro-tile">
 <p><strong>Newsletter Form Type</strong></br>
 	VARIABLES= mailchimp, constant</br>
-	Current= mailchimp
 </p>
 </div>
-{% macro newsletter() %}mailchimp{% endmacro %}
+{% macro newsletter() %}constant{% endmacro %}
 
 <div class="macro-tile">
 <p><strong>Newsletter Display</strong></br>
 	VARIABLES= form, modal</br>
-	Current= form
 </p>
 </div>
-{% macro newsletterDisplay() %}form{% endmacro %}
+{% macro newsletterDisplay() %}modal{% endmacro %}
 
 
 
