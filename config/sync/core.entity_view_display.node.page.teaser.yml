@@ -45,3 +45,4 @@ content:
 hidden:
   field_banner: true
   field_metatags: true
+  field_oc_widgets: true

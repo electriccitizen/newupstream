@@ -18,9 +18,9 @@ provider: null
 plugin: 'menu_block:footer'
 settings:
   id: 'menu_block:footer'
-  label: Footer
+  label: Quicklinks
   provider: menu_block
-  label_display: '0'
+  label_display: visible
   follow: 0
   follow_parent: child
   level: 1
