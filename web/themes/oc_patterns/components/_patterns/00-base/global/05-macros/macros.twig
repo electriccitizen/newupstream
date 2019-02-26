@@ -15,7 +15,7 @@
 	VARIABLES= left, right, center, inline, background</br>
 </p>
 </div>
-{% macro mainNavStyle() %}right{% endmacro %}
+{% macro mainNavStyle() %}center background{% endmacro %}
 
 
 {#######  SEARCH VARIABLES  #######}
@@ -24,7 +24,7 @@
 	VARIABLES= toggle, box</br>
 </p>
 </div>
-{% macro searchBox() %}toggle{% endmacro %}
+{% macro searchBox() %}box{% endmacro %}
 
 
 {#######  FORM VARIABLES  #######}
@@ -48,7 +48,7 @@
 	VARIABLES= side-left, side-right</br>		
 </p>
 </div>
-{% macro sidebar() %}side-right{% endmacro %}
+{% macro sidebar() %}side-left{% endmacro %}
 
 {#######  FOOTER VARIABLES  #######}
 <div class="macro-tile">
@@ -56,7 +56,7 @@
 	VARIABLES= footer-v1, footer-v2</br>
 </p>
 </div>
-{% macro footer() %}footer-v1{% endmacro %}
+{% macro footer() %}footer-v2{% endmacro %}
 
 
 <div class="macro-tile">
@@ -64,14 +64,14 @@
 	VARIABLES= mailchimp, constant</br>
 </p>
 </div>
-{% macro newsletter() %}constant{% endmacro %}
+{% macro newsletter() %}mailchimp{% endmacro %}
 
 <div class="macro-tile">
 <p><strong>Newsletter Display</strong></br>
 	VARIABLES= form, modal</br>
 </p>
 </div>
-{% macro newsletterDisplay() %}modal{% endmacro %}
+{% macro newsletterDisplay() %}form{% endmacro %}
 
 
 

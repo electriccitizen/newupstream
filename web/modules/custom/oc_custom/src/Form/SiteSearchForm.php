@@ -67,7 +67,7 @@ class SiteSearchForm extends FormBase {
       '#name' => 'site_search_api_fulltext',
       '#size' => 30,
       '#default_value' => '',
-      '#placeholder' => 'Search',
+      '#placeholder' => 'Enter keyword(s)',
     ];
 
     $form['actions'] = [
