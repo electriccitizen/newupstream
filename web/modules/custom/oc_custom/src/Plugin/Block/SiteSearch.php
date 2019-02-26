@@ -13,7 +13,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  * @Block(
  *   id = "site_search",
  *   admin_label = @Translation("Site Search"),
- *   category = @Translation("Custom Search")
+ *   category = @Translation("Site Search")
  * )
  */
 class SiteSearch extends BlockBase implements ContainerFactoryPluginInterface {
