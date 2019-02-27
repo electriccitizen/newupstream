@@ -8,7 +8,6 @@ dependencies:
     - paragraphs.paragraphs_type.basic_page_section
     - paragraphs.paragraphs_type.form
     - paragraphs.paragraphs_type.from_library
-    - paragraphs.paragraphs_type.gallery
     - paragraphs.paragraphs_type.image
     - paragraphs.paragraphs_type.links_files
     - paragraphs.paragraphs_type.pullquote
@@ -38,7 +37,6 @@ settings:
       pullquote: pullquote
       text: text
       video: video
-      gallery: gallery
       from_library: from_library
     target_bundles_drag_drop:
       accordion_group:
@@ -62,18 +60,12 @@ settings:
       landing_page_section:
         weight: -30
         enabled: false
-      lightbox_gallery:
-        weight: -29
-        enabled: false
       links_files:
         enabled: true
         weight: -28
       pullquote:
         enabled: true
         weight: -25
-      slideshow:
-        weight: -24
-        enabled: false
       text:
         enabled: true
         weight: -23
@@ -81,8 +73,8 @@ settings:
         enabled: true
         weight: -22
       gallery:
-        enabled: true
         weight: 23
+        enabled: false
       from_library:
         enabled: true
         weight: 28
