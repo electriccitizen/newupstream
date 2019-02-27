@@ -5,9 +5,10 @@
 {{ accordion_instructions }}
 
 <div class="accordion-item" aria-label="Accordion">
-	<h3 class="accordion-header"><a href="#" role="button" aria-controls="{{ accordion_control }}" aria-expanded="false">{{accordion_header}}</a></h3>
+	<div class="accordion-header">
+        <a href="#" role="button" aria-controls="{{ accordion_control }}" aria-expanded="false">{{accordion_header}}</a>
+    </div>
 	<div class="field field-oc-long-text" id="{{ accordion_control }}" aria-hidden="true">
 		{{accordion_content}}
 	</div>
 </div>
-			

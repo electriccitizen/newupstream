@@ -17,30 +17,26 @@
 
 	//accordion header bar
 	.accordion-header{
-		margin-bottom: 0;
-		position: relative;
-		margin-top: -1px;
-		color: $darkGrey;
-		font-size: 2.2rem;
-		border: 1px solid;
-		border-color: $darkGrey;
-		z-index: 3;
 		a{
 			padding: 1rem 1rem 1rem 3rem;
 			display: block;
 			color: inherit;
-		}
-		&:after{
-			position: absolute;
-			right: 3rem;
-			top: 1rem;
-			z-index: -1;
-			content: "+";
-		}
-		&:hover,&:focus{
-			color: $white;
-			background: $darkGrey;
-			@include transAll(.3s);
+			font-weight: $heavy;
+			position: relative;
+			font-size: 2.2rem;
+			border: 1px solid $darkGrey;
+			margin-top: -1px;
+			&:after{
+				position: absolute;
+				right: 3rem;
+				top: 1rem;
+				content: "+";
+			}
+			&:hover,&:focus{
+				color: $white;
+				background: $darkGrey;
+				@include transAll(.3s);
+			}
 		}
 	}
 
@@ -53,11 +49,14 @@
 	//active accordion
 	&.accord-active{
 		.accordion-header{
-			color: $white;
-			background: $darkGrey;
-			border-bottom: 0;
-			&:after{
-				content: "–";
+			a{
+				color: $white;
+				background: $darkGrey;
+				border-bottom: 0;
+				&:after{
+					content: "–";
+
+				}
 			}
 		}
 	}//end active
@@ -88,7 +87,3 @@
 		margin: 0 auto;
 	}
 }
-
-
-
-

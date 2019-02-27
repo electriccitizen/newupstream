@@ -2,7 +2,7 @@
 
 Drupal.behaviors.accordion = {
     attach: function (context, settings) {
-      $(".accordion-item", context).once('accordion').each(function(){  
+      $(".accordion-item", context).once('accordion').each(function(){
         //open and shut accordions on click
         $('.accordion-header a', this).click(function(e){
           e.preventDefault();
@@ -24,7 +24,7 @@ Drupal.behaviors.accordion = {
               }
             }, 510);
           }
-        }); 
+        });
       });
     }
 }
