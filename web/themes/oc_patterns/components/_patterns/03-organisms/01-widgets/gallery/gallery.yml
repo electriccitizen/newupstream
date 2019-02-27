@@ -1,6 +1,9 @@
 widget_title:
   "Lightbox Widget"
 
+gallery_type:
+    "Lightbox"
+
 #images thumb_src and large_src will be replaced with drupal images and need to have their sizes set manually
 images:
   1:
@@ -27,5 +30,3 @@ images:
 
 lightbox_instructions:
   "DRUPAL: This template is embedded in the drupal lightbox gallery paragraph template."
-
-  

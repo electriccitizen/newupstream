@@ -9,16 +9,16 @@ _core:
 id: support
 label: Support
 type: 'canonical_entities:node'
-pattern: 'web-editor-guide/[node:title]'
+pattern: ' [node:menu-link:parents:join:/]/[node:title]'
 selection_criteria:
-  3864154f-40ce-4f24-af42-3a99893b9c64:
+  1b73d7a4-3fb3-4e1e-8d20-9f7eb05fc500:
     id: node_type
     bundles:
       support_book: support_book
     negate: false
     context_mapping:
       node: node
-    uuid: 3864154f-40ce-4f24-af42-3a99893b9c64
+    uuid: 1b73d7a4-3fb3-4e1e-8d20-9f7eb05fc500
 selection_logic: and
 weight: -5
 relationships: {  }

@@ -8,6 +8,7 @@ dependencies:
     - paragraphs.paragraphs_type.block_placer
     - paragraphs.paragraphs_type.form
     - paragraphs.paragraphs_type.from_library
+    - paragraphs.paragraphs_type.gallery
     - paragraphs.paragraphs_type.image
     - paragraphs.paragraphs_type.landing_page_section
     - paragraphs.paragraphs_type.links_files
@@ -35,6 +36,7 @@ settings:
       accordion_group: accordion_group
       block_placer: block_placer
       form: form
+      gallery: gallery
       image: image
       links_files: links_files
       pullquote: pullquote
@@ -45,53 +47,50 @@ settings:
     target_bundles_drag_drop:
       accordion_group:
         enabled: true
-        weight: -37
+        weight: -33
       accordion_item:
-        weight: -36
+        weight: -32
         enabled: false
       basic_page_section:
-        weight: -35
+        weight: -31
         enabled: false
       block_placer:
         enabled: true
-        weight: -34
-      event_by_category:
-        enabled: true
-        weight: -33
+        weight: -30
       form:
         enabled: true
-        weight: -32
-      image:
-        enabled: true
-        weight: -31
-      landing_page_section:
-        weight: -30
-        enabled: false
-      lightbox_gallery:
-        enabled: true
         weight: -29
-      links_files:
+      gallery:
         enabled: true
         weight: -28
-      news_by_category:
+      image:
         enabled: true
+        weight: -27
+      landing_page_section:
         weight: -26
-      pullquote:
-        enabled: true
+        enabled: false
+      lightbox_gallery:
         weight: -25
-      slideshow:
+        enabled: false
+      links_files:
         enabled: true
         weight: -24
-      text:
+      pullquote:
         enabled: true
         weight: -23
-      video:
-        enabled: true
+      slideshow:
         weight: -22
-      view_placer:
+        enabled: false
+      text:
         enabled: true
         weight: -21
-      from_library:
+      video:
         enabled: true
         weight: -20
+      view_placer:
+        enabled: true
+        weight: -19
+      from_library:
+        enabled: true
+        weight: -18
 field_type: entity_reference_revisions
