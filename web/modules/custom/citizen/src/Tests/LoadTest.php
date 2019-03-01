@@ -8,7 +8,7 @@ use Drupal\simpletest\WebTestBase;
 /**
  * Simple test to ensure that main page loads with module enabled.
  *
- * @group oc_custom
+ * @group citizen
  */
 class LoadTest extends WebTestBase{
 

@@ -44,7 +44,7 @@ class SiteSearch extends BlockBase implements ContainerFactoryPluginInterface {
    * {@inheritdoc}
    */
   public function build() {
-    $form = $this->formBuilder->getForm('Drupal\oc_custom\Form\SiteSearchForm');
+    $form = $this->formBuilder->getForm('Drupal\citizen\Form\SiteSearchForm');
     return $form;
   }
 
