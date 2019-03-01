@@ -240,7 +240,7 @@ display:
               administrator: '0'
               senior_editor: '0'
               editor: '0'
-            placeholder: ''
+            placeholder: 'Enter keyword(s)'
           is_grouped: false
           group_info:
             label: ''

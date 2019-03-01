@@ -31,6 +31,14 @@
 			}
 			.search-page-block{
 				margin-bottom: $spaceLg;
+				.search-form-outer{
+					#views-exposed-form-site-search-search-results{
+						display: block;
+						.form-actions{
+							margin: 0 auto;
+						}
+					}
+				}
 			}
 			h2.results-header{
 				width: 100%;
