@@ -8,18 +8,14 @@ dependencies:
     - field.field.node.page.field_metatags
     - field.field.node.page.field_paragraphs
     - node.type.page
-    - system.menu.main
   module:
     - entity_reference_revisions
     - layout_builder
     - layout_builder_restrictions
     - layout_discovery
-    - menu_block
     - system
     - text
     - user
-  theme:
-    - oc_patterns
 third_party_settings:
   layout_builder:
     sections:
@@ -74,65 +70,6 @@ third_party_settings:
                 entity: layout_builder.entity
             additional: {  }
             weight: 2
-      -
-        layout_id: two_column_sidebar
-        layout_settings: {  }
-        components:
-          d041ea8a-9c4a-40d1-b362-edeeebca2edd:
-            uuid: d041ea8a-9c4a-40d1-b362-edeeebca2edd
-            region: content
-            configuration:
-              id: 'field_block:node:page:body'
-              label: Body
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: hidden
-                type: text_default
-                settings: {  }
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
-            weight: 0
-          db3c2d13-9730-4fcf-8964-9e63f1b7cf6a:
-            uuid: db3c2d13-9730-4fcf-8964-9e63f1b7cf6a
-            region: sidebar
-            configuration:
-              id: 'menu_block:main'
-              label: 'Main navigation'
-              provider: menu_block
-              label_display: visible
-              follow: 0
-              follow_parent: child
-              level: 1
-              depth: 3
-              expand: 1
-              parent: 'main:'
-              label_type: root
-              label_link: 1
-              suggestion: page_menu
-              context_mapping: {  }
-            additional: {  }
-            weight: 0
-          0962c4dd-fade-41fa-a98d-e9fbe2c6d1ea:
-            uuid: 0962c4dd-fade-41fa-a98d-e9fbe2c6d1ea
-            region: content
-            configuration:
-              id: 'field_block:node:page:field_paragraphs'
-              label: Paragraphs
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: hidden
-                type: entity_reference_revisions_entity_view
-                settings:
-                  view_mode: default
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
-            weight: 1
     allow_custom: false
     is_enabled: true
     enabled: true

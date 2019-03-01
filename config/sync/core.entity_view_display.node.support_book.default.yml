@@ -5,16 +5,12 @@ dependencies:
   config:
     - field.field.node.support_book.body
     - node.type.support_book
-    - system.menu.support-book
   module:
     - layout_builder
     - layout_discovery
-    - menu_block
     - system
     - text
     - user
-  theme:
-    - oc_patterns
 third_party_settings:
   layout_builder:
     sections:
@@ -51,43 +47,6 @@ third_party_settings:
                 entity: layout_builder.entity
             additional: {  }
             weight: 1
-      -
-        layout_id: two_column_sidebar
-        layout_settings: {  }
-        components:
-          c0ba77d7-9652-490e-b90a-575248950d2c:
-            uuid: c0ba77d7-9652-490e-b90a-575248950d2c
-            region: sidebar
-            configuration:
-              id: 'menu_block:support-book'
-              label: 'Web Editor Guide'
-              provider: menu_block
-              label_display: visible
-              level: 1
-              depth: 0
-              expand: 1
-              parent: 'support-book:'
-              suggestion: page_menu
-              context_mapping: {  }
-            additional: {  }
-            weight: 0
-          9378ea9d-cbcb-4ea7-ad2f-7de2e8e4f7c8:
-            uuid: 9378ea9d-cbcb-4ea7-ad2f-7de2e8e4f7c8
-            region: content
-            configuration:
-              id: 'field_block:node:support_book:body'
-              label: Body
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: hidden
-                type: text_default
-                settings: {  }
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
-            weight: 0
     allow_custom: false
     is_enabled: true
     enabled: true

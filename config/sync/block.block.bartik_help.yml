@@ -1,15 +1,15 @@
-uuid: 57c2f56a-b3b0-4d3b-9514-41c638d7b044
+uuid: bb25c023-815a-424c-97b6-f2499a287aea
 langcode: en
 status: true
 dependencies:
   module:
     - help
   theme:
-    - oc_patterns
+    - bartik
 _core:
   default_config_hash: 8PUPaExj33TzDw8YtjstWZ--M6tVgzsLctnXL91zo6E
-id: oc_patterns_help
-theme: oc_patterns
+id: bartik_help
+theme: bartik
 region: content
 weight: -4
 provider: null

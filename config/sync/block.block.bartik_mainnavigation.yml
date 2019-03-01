@@ -1,4 +1,4 @@
-uuid: 589d0eff-6962-4115-b554-8374aaf440af
+uuid: b6241aef-d0b0-44a1-b7c0-b0b6e81e462f
 langcode: en
 status: true
 dependencies:
@@ -7,11 +7,11 @@ dependencies:
   module:
     - superfish
   theme:
-    - oc_patterns
+    - bartik
 _core:
   default_config_hash: dmbdaj9fA3pjeDrX4K4M29aElVNYPhCYd0PwtE8NASQ
-id: oc_patterns_mainnavigation
-theme: oc_patterns
+id: bartik_mainnavigation
+theme: bartik
 region: header
 weight: -4
 provider: null

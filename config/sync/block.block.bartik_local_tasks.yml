@@ -1,13 +1,13 @@
-uuid: edeea191-6c77-438e-8849-176e913e7bd4
+uuid: a9b602aa-0ac1-4ae6-b8c5-4fef98e21d89
 langcode: en
 status: true
 dependencies:
   theme:
-    - oc_patterns
+    - bartik
 _core:
   default_config_hash: WXKa88JhqD3yh-0H8tvRwIBg2UBhSC0zWmcrVfxxpd0
-id: oc_patterns_local_tasks
-theme: oc_patterns
+id: bartik_local_tasks
+theme: bartik
 region: content
 weight: -5
 provider: null

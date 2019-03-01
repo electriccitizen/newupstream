@@ -8,11 +8,8 @@ dependencies:
     - field.field.media.image.field_media_categories
     - field.field.media.image.field_media_image
     - media.type.image
-    - responsive_image.styles.banner
   module:
     - layout_builder
-    - layout_discovery
-    - responsive_image
 third_party_settings:
   layout_builder:
     sections: {  }
@@ -24,20 +21,12 @@ id: media.image.banner
 targetEntityType: media
 bundle: image
 mode: banner
-content:
-  field_media_image:
-    type: responsive_image
-    weight: 0
-    region: content
-    label: hidden
-    settings:
-      responsive_image_style: banner
-      image_link: ''
-    third_party_settings: {  }
+content: {  }
 hidden:
   created: true
   field_caption: true
   field_media_categories: true
+  field_media_image: true
   name: true
   thumbnail: true
   uid: true

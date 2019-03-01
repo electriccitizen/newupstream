@@ -1,4 +1,4 @@
-uuid: 6310ffa6-07a2-478e-866a-d7cc962e7f05
+uuid: 4601633e-6981-476f-9ace-5a61b8f929f6
 langcode: en
 status: true
 dependencies:
@@ -6,9 +6,9 @@ dependencies:
     - citizen
     - system
   theme:
-    - oc_patterns
-id: sitesearch
-theme: oc_patterns
+    - bartik
+id: bartik_sitesearch
+theme: bartik
 region: header
 weight: -5
 provider: null

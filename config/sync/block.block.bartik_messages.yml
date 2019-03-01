@@ -1,15 +1,15 @@
-uuid: 2425ad40-5f21-487f-b171-f13c2c213ac3
+uuid: cd84fbd7-f500-403e-b78b-b77d2af74d79
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - oc_patterns
+    - bartik
 _core:
   default_config_hash: psgE0SDIZ6onpRJppjdVSm4mXmrQJHBMrw9LQCwMij0
-id: oc_patterns_messages
-theme: oc_patterns
+id: bartik_messages
+theme: bartik
 region: content
 weight: -5
 provider: null

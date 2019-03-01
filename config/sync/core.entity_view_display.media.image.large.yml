@@ -8,11 +8,8 @@ dependencies:
     - field.field.media.image.field_media_categories
     - field.field.media.image.field_media_image
     - media.type.image
-    - responsive_image.styles.large_800
   module:
     - layout_builder
-    - layout_discovery
-    - responsive_image
 third_party_settings:
   layout_builder:
     sections: {  }
@@ -33,19 +30,11 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     region: content
-  field_media_image:
-    weight: 0
-    label: hidden
-    settings:
-      responsive_image_style: large_800
-      image_link: ''
-    third_party_settings: {  }
-    type: responsive_image
-    region: content
 hidden:
   addtoany: true
   created: true
   field_media_categories: true
+  field_media_image: true
   name: true
   thumbnail: true
   uid: true

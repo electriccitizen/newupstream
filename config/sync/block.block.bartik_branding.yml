@@ -1,15 +1,15 @@
-uuid: 97d2899a-2a3c-4384-9d6d-a9dca901bb4f
+uuid: dfae1211-b365-4845-81a1-a5d1260ed6c6
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - oc_patterns
+    - bartik
 _core:
   default_config_hash: 7GmkZFxF8OfPIs2aNkve5uhX_A2PA_bM4fOQE6NhJwE
-id: oc_patterns_branding
-theme: oc_patterns
+id: bartik_branding
+theme: bartik
 region: header
 weight: -6
 provider: null

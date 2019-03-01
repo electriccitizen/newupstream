@@ -1,4 +1,4 @@
-uuid: 87d8a1e3-9bcf-470a-b7f3-450bae0fc928
+uuid: 50b720eb-6e71-475f-a63e-cc339112a1f7
 langcode: en
 status: true
 dependencies:
@@ -7,10 +7,10 @@ dependencies:
   module:
     - block_content
   theme:
-    - oc_patterns
-id: copyright
-theme: oc_patterns
-region: footer
+    - bartik
+id: bartik_copyright
+theme: bartik
+region: header
 weight: -2
 provider: null
 plugin: 'block_content:27de869c-2ba8-4187-b40e-31c99519f508'
