@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\oc_custom\Plugin\Block;
+namespace Drupal\citizen\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Form\FormBuilderInterface;

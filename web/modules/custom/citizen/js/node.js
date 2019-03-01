@@ -2,7 +2,7 @@
 
 Drupal.behaviors.admin_bkimage = {
 	attach: function (context, settings) {
-		$(".field--name-field-oc-widgets", context).once('style').each(function(){  
+		$(".field--name-field-paragraphs", context).once('style').each(function(){  
 			$(document).ajaxComplete(function() {
 				$('.field--name-field-background-style').each(function(){
 					var styler = $(this);

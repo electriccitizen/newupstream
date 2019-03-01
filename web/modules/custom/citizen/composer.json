@@ -1,0 +1,14 @@
+{
+  "name": "drupal/citizen",
+  "type": "drupal-module",
+  "description": "Custom glue module for Electric Citizen sites",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/citizen",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/citizen",
+    "source": "http://cgit.drupalcode.org/citizen"
+  },
+  "require": { }
+}

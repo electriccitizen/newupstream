@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Contains oc_custom.module.
+ * Contains citizen.module.
  */
 
 use Drupal\Core\Form\FormStateInterface;
@@ -11,13 +11,13 @@ use Drupal\Core\Routing\RouteMatchInterface;
 /**
  * Implements hook_help().
  */
-function oc_custom_help($route_name, RouteMatchInterface $route_match) {
+function citizen_help($route_name, RouteMatchInterface $route_match) {
   switch ($route_name) {
-    // Main module help for the oc_custom module.
-    case 'help.page.oc_custom':
+    // Main module help for the citizen module.
+    case 'help.page.citizen':
       $output = '';
       $output .= '<h3>' . t('About') . '</h3>';
-      $output .= '<p>' . t('Custom glue module for Open Citizen sites') . '</p>';
+      $output .= '<p>' . t('Custom glue module for Electric Citizen sites') . '</p>';
       return $output;
 
     default:
@@ -29,10 +29,10 @@ function oc_custom_help($route_name, RouteMatchInterface $route_match) {
 /**
  * Implements hook_theme().
  */
-function oc_custom_theme() {
+function citizen_theme() {
   return [
-    'oc_custom' => [
-      'template' => 'oc_custom',
+    'citizen' => [
+      'template' => 'citizen',
       'render element' => 'children',
     ],
     'site_search' => [
@@ -49,7 +49,7 @@ function oc_custom_theme() {
  * @param array $variables
  *   Template variables.
  */
-function oc_custom_preprocess_views_view_grid__media(array &$variables) {
+function citizen_preprocess_views_view_grid__media(array &$variables) {
   foreach ($variables['items'] as &$item) {
     foreach ($item['content'] as &$column) {
       $column['attributes']['data-selectable'] = 'true';
@@ -59,7 +59,7 @@ function oc_custom_preprocess_views_view_grid__media(array &$variables) {
 
 /* ADD USER ROLE CLASSES
 ------------------------*/
-function oc_custom_preprocess_html(&$variables){
+function citizen_preprocess_html(&$variables){
   /* Find the current user */
   $user = \Drupal::currentUser();
   $userRole = $user->getRoles();
@@ -73,22 +73,22 @@ function oc_custom_preprocess_html(&$variables){
 /*
  * attach css and custom.js to node form only
  */
-function oc_custom_form_node_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
-    $form['#attached']['library'][] = 'oc_custom/custom';
+function citizen_form_node_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+    $form['#attached']['library'][] = 'citizen/node';
 }
 
 /*
  * attach SELECT2 globally
  */
-function oc_custom_page_attachments(array &$attachments){
-    $attachments['#attached']['library'][] = 'oc_custom/custom-global';
+function citizen_page_attachments(array &$attachments){
+    $attachments['#attached']['library'][] = 'citizen/global';
 }
 
 
 /**
  * Implements hook_preprocess_HOOK() for block templates.
  */
-function oc_custom_preprocess_block(&$variables) {
+function citizen_preprocess_block(&$variables) {
   if ($variables['plugin_id'] == 'site_search') {
     $variables['attributes']['role'] = 'search';
   }
@@ -104,7 +104,7 @@ function oc_custom_preprocess_block(&$variables) {
  *
  * @see \Drupal\search\Form\SearchBlockForm
  */
-function oc_custom_form_site_search_form_alter(&$form, FormStateInterface $form_state) {
+function citizen_form_site_search_form_alter(&$form, FormStateInterface $form_state) {
   $form['form_build_id']['#access'] = FALSE;
   $form['form_token']['#access'] = FALSE;
   $form['form_id']['#access'] = FALSE;

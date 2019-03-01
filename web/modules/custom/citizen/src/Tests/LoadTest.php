@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\oc_custom\Tests;
+namespace Drupal\citizen\Tests;
 
 use Drupal\Core\Url;
 use Drupal\simpletest\WebTestBase;
@@ -17,7 +17,7 @@ class LoadTest extends WebTestBase{
    *
    * @var array
    */
-  public static $modules = ['oc_custom'];
+  public static $modules = ['citizen'];
 
   /**
    * A user with permission to administer site configuration.
