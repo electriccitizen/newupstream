@@ -73,4 +73,5 @@ hidden:
   addtoany: true
   field_banner: true
   field_metatags: true
+  field_paragraphs: true
   layout_builder__layout: true

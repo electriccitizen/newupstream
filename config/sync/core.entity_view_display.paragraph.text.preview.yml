@@ -30,4 +30,5 @@ content:
     type: string
     region: content
 hidden:
+  field_long_text: true
   field_widget_title: true

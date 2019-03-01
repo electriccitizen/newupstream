@@ -30,4 +30,6 @@ content:
     type: string
     region: content
 hidden:
+  field_quote: true
+  field_source: true
   field_widget_title: true
