@@ -4,8 +4,8 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.links_files.field_admin_description
-    - field.field.paragraph.links_files.field_oc_file_multi
-    - field.field.paragraph.links_files.field_oc_link_multi
+    - field.field.paragraph.links_files.field_file_multi
+    - field.field.paragraph.links_files.field_link_multi
     - field.field.paragraph.links_files.field_widget_title
     - paragraphs.paragraphs_type.links_files
   module:
@@ -27,8 +27,8 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_oc_file_multi:
-    weight: 5
+  field_file_multi:
+    weight: 3
     settings:
       form_mode: default
       label_singular: ''
@@ -45,8 +45,8 @@ content:
         entity_browser_id: file_browser
     type: inline_entity_form_complex
     region: content
-  field_oc_link_multi:
-    weight: 4
+  field_link_multi:
+    weight: 2
     settings:
       placeholder_url: ''
       placeholder_title: ''

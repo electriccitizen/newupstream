@@ -4,13 +4,12 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.links_files.field_admin_description
-    - field.field.paragraph.links_files.field_oc_file_multi
-    - field.field.paragraph.links_files.field_oc_link_multi
+    - field.field.paragraph.links_files.field_file_multi
+    - field.field.paragraph.links_files.field_link_multi
     - field.field.paragraph.links_files.field_widget_title
     - paragraphs.paragraphs_type.links_files
   module:
     - layout_builder
-    - layout_discovery
     - link
 third_party_settings:
   layout_builder:
@@ -24,17 +23,17 @@ targetEntityType: paragraph
 bundle: links_files
 mode: default
 content:
-  field_oc_file_multi:
-    weight: 4
+  field_file_multi:
+    type: entity_reference_entity_view
+    weight: 2
     label: hidden
     settings:
-      link: true
       view_mode: default
+      link: false
     third_party_settings: {  }
-    type: entity_reference_entity_view
     region: content
-  field_oc_link_multi:
-    weight: 3
+  field_link_multi:
+    weight: 1
     label: hidden
     settings:
       trim_length: 80

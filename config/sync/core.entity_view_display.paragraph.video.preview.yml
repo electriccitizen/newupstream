@@ -5,12 +5,11 @@ dependencies:
   config:
     - core.entity_view_mode.paragraph.preview
     - field.field.paragraph.video.field_admin_description
-    - field.field.paragraph.video.field_oc_video
+    - field.field.paragraph.video.field_video
     - field.field.paragraph.video.field_widget_title
     - paragraphs.paragraphs_type.video
   module:
     - layout_builder
-    - layout_discovery
 third_party_settings:
   layout_builder:
     sections: {  }
@@ -32,5 +31,5 @@ content:
     type: string
     region: content
 hidden:
-  field_oc_video: true
+  field_video: true
   field_widget_title: true

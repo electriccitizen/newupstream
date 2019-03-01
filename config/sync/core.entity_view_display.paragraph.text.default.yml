@@ -4,13 +4,11 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.text.field_admin_description
-    - field.field.paragraph.text.field_oc_long_text
+    - field.field.paragraph.text.field_long_text
     - field.field.paragraph.text.field_widget_title
     - paragraphs.paragraphs_type.text
   module:
-    - ctools_block
     - layout_builder
-    - layout_discovery
     - text
 third_party_settings:
   layout_builder:
@@ -24,7 +22,7 @@ targetEntityType: paragraph
 bundle: text
 mode: default
 content:
-  field_oc_long_text:
+  field_long_text:
     weight: 1
     label: hidden
     settings: {  }

@@ -1,16 +1,14 @@
-uuid: 5e911e36-62b3-4ae7-821d-e5d33c37f725
+uuid: b0f182d7-eeaa-48f9-9e69-3f3f32d283cb
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_oc_long_text
+    - field.storage.paragraph.field_long_text
     - paragraphs.paragraphs_type.text
   module:
     - text
-_core:
-  default_config_hash: HnZCTiue4s_z7l0WiN-QHq43Dk4iRcQxX227Y4g-gt4
-id: paragraph.text.field_oc_long_text
-field_name: field_oc_long_text
+id: paragraph.text.field_long_text
+field_name: field_long_text
 entity_type: paragraph
 bundle: text
 label: Text

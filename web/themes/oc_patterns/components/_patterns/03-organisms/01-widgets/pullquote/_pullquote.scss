@@ -8,12 +8,11 @@
 		margin-bottom: $spaceMd;
 	}
 	//quote text
-	.field-oc-long-text{
+	.field-quote{
 		@include quote;
 	}//end long text
-
 	//source
-	.field-oc-short-text{
+	.field-source{
 		text-align: right;
 		position: relative;
 		font-weight: bold;

@@ -1,15 +1,13 @@
-uuid: 8fff9b18-6585-4b01-95a0-9d8914706ebc
+uuid: 7f8af6a3-af53-41a7-b489-d5df94204a0c
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_oc_file_multi
+    - field.storage.paragraph.field_file_multi
     - media.type.document
     - paragraphs.paragraphs_type.links_files
-_core:
-  default_config_hash: jqljGMBPYQ698Rs81SIeCj47LAMJJYDwfahuD4WxLs0
-id: paragraph.links_files.field_oc_file_multi
-field_name: field_oc_file_multi
+id: paragraph.links_files.field_file_multi
+field_name: field_file_multi
 entity_type: paragraph
 bundle: links_files
 label: Files

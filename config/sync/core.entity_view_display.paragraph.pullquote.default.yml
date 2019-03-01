@@ -4,13 +4,12 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.pullquote.field_admin_description
-    - field.field.paragraph.pullquote.field_oc_long_text
-    - field.field.paragraph.pullquote.field_oc_short_text
+    - field.field.paragraph.pullquote.field_quote
+    - field.field.paragraph.pullquote.field_source
     - field.field.paragraph.pullquote.field_widget_title
     - paragraphs.paragraphs_type.pullquote
   module:
     - layout_builder
-    - layout_discovery
     - text
 third_party_settings:
   layout_builder:
@@ -24,14 +23,14 @@ targetEntityType: paragraph
 bundle: pullquote
 mode: default
 content:
-  field_oc_long_text:
+  field_quote:
     weight: 1
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
-  field_oc_short_text:
+  field_source:
     weight: 2
     label: hidden
     settings:

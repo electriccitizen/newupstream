@@ -5,13 +5,11 @@ dependencies:
   config:
     - core.entity_view_mode.paragraph.preview
     - field.field.paragraph.links_files.field_admin_description
-    - field.field.paragraph.links_files.field_oc_file_multi
-    - field.field.paragraph.links_files.field_oc_link_multi
+    - field.field.paragraph.links_files.field_file_multi
     - field.field.paragraph.links_files.field_widget_title
     - paragraphs.paragraphs_type.links_files
   module:
     - layout_builder
-    - layout_discovery
 third_party_settings:
   layout_builder:
     sections: {  }
@@ -33,6 +31,5 @@ content:
     type: string
     region: content
 hidden:
-  field_oc_file_multi: true
-  field_oc_link_multi: true
+  field_file_multi: true
   field_widget_title: true

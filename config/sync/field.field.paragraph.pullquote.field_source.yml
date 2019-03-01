@@ -1,14 +1,12 @@
-uuid: 90be6d8a-e24d-466a-99bb-6f30efd9ef5e
+uuid: 73e2fcb9-39c8-4680-aac8-8b1e232e6907
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_oc_short_text
+    - field.storage.paragraph.field_source
     - paragraphs.paragraphs_type.pullquote
-_core:
-  default_config_hash: NVL0t0kffvy2cqXxwx_13Tu1n7HbHg5RLlMB3HnzzSo
-id: paragraph.pullquote.field_oc_short_text
-field_name: field_oc_short_text
+id: paragraph.pullquote.field_source
+field_name: field_source
 entity_type: paragraph
 bundle: pullquote
 label: Source

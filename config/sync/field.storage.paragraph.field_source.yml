@@ -1,13 +1,11 @@
-uuid: 97c975fc-150b-498e-979b-e296da92bcb8
+uuid: d651d8a9-2417-4f7d-95bc-57c3dfbc4cc8
 langcode: en
 status: true
 dependencies:
   module:
     - paragraphs
-_core:
-  default_config_hash: lfQr5CRmK-5Z32iJaPbTD3g8lNQok61fLKYtLQ3gy2A
-id: paragraph.field_oc_short_text
-field_name: field_oc_short_text
+id: paragraph.field_source
+field_name: field_source
 entity_type: paragraph
 type: string
 settings:

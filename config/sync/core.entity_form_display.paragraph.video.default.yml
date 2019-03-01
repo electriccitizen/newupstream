@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.video.field_admin_description
-    - field.field.paragraph.video.field_oc_video
+    - field.field.paragraph.video.field_video
     - field.field.paragraph.video.field_widget_title
     - paragraphs.paragraphs_type.video
   module:
@@ -25,8 +25,8 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_oc_video:
-    weight: 3
+  field_video:
+    weight: 2
     settings:
       form_mode: default
       label_singular: ''
@@ -35,6 +35,9 @@ content:
       allow_existing: true
       match_operator: CONTAINS
       override_labels: false
+      collapsible: false
+      collapsed: false
+      allow_duplicate: false
     third_party_settings:
       entity_browser_entity_form:
         entity_browser_id: video_browser

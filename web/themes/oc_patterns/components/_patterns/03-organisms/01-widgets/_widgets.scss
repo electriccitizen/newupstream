@@ -33,16 +33,20 @@ SECTION LAYOUTS
 	padding-right: $siteMarginMobile;
 	position: relative;
 
-	&:not(.background):not(:first-child){
-		padding-top: $spaceMd;
-		padding-bottom: $spaceMd;
+	&:not(.background){
+		&:not(:first-child){
+			padding-top: $spaceLg;
+		}
+		&:not(:last-child){
+			padding-bottom: $spaceLg;
+		}
 		& + .section:not(.background){
 			padding-top: 0;
 		}
 	}
 	&.background{
-		padding-bottom: $spaceMd;
-		padding-top: $spaceMd;
+		padding-bottom: $spaceLg;
+		padding-top: $spaceLg;
 	}
 
 	.field-section-title{
@@ -53,7 +57,7 @@ SECTION LAYOUTS
 		max-width: $textMax + 40px;
 		padding-left: $siteMarginMobile;
 		padding-right: $siteMarginMobile;
-		margin-bottom: $spaceMd;
+		margin-bottom: $spaceLg;
 		@include auto;
 	}
 
@@ -191,7 +195,7 @@ SECTION LAYOUTS
 		padding: 15px 10px;
 		position: relative;
 		display: block;
-		font-family: $header;s
+		font-family: $header;
 		&:hover,&:focus{
 			color: $hoverLink;
 		}

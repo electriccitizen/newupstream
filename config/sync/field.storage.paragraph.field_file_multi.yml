@@ -1,14 +1,12 @@
-uuid: 36d9da02-85b8-4d40-87f4-ff1227bc1cca
+uuid: c54e0852-cb4a-4726-9d64-bc34f545c322
 langcode: en
 status: true
 dependencies:
   module:
     - media
     - paragraphs
-_core:
-  default_config_hash: BZaJOZNDbWszWFEeRgeEegSHM6rtS6to-0U9k1MXpbE
-id: paragraph.field_oc_file_multi
-field_name: field_oc_file_multi
+id: paragraph.field_file_multi
+field_name: field_file_multi
 entity_type: paragraph
 type: entity_reference
 settings:

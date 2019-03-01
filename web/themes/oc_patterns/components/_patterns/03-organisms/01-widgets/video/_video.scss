@@ -3,14 +3,8 @@
 ================= */
 
 .paragraph--type--video{
-	.wrapper{
-		max-width: $contentStop !important;
-	}
-	//video summary
-	.field-oc-long-text{
-		max-width: $textMax;
-		@include auto;
-		margin-top: $spaceSm;
+	.field-video{
+		@include animation('fadeIn 1.5s 1');
 	}
 }//end video widget
 

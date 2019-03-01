@@ -5,7 +5,6 @@ dependencies:
   config:
     - core.entity_view_mode.paragraph.preview
     - field.field.paragraph.text.field_admin_description
-    - field.field.paragraph.text.field_oc_long_text
     - field.field.paragraph.text.field_widget_title
     - paragraphs.paragraphs_type.text
   module:
@@ -31,5 +30,4 @@ content:
     type: string
     region: content
 hidden:
-  field_oc_long_text: true
   field_widget_title: true

@@ -1,19 +1,17 @@
-uuid: 9204da9b-4a15-4ad7-bbfb-a99bccda5ec1
+uuid: fe79abf3-cb0c-4669-a7cc-4131057487ca
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_oc_video
+    - field.storage.paragraph.field_video
     - media.type.video
     - paragraphs.paragraphs_type.video
-_core:
-  default_config_hash: G3SEn6Xilf0CKce9aNHXeeKQVi8ej9O8g3gmtXbkEyA
-id: paragraph.video.field_oc_video
-field_name: field_oc_video
+id: paragraph.video.field_video
+field_name: field_video
 entity_type: paragraph
 bundle: video
 label: Video
-description: 'Add a video from youtube or vimeo by pasting a url in the Add from Web field or select an existing video from the Video Library.'
+description: 'Add a video from youtube by pasting the url or select an existing video from the Video Library.'
 required: true
 translatable: false
 default_value: {  }

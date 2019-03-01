@@ -13,11 +13,15 @@
 	{% endif %}
 
 	{% block links %}
-		<div class="field field-oc-link-multi">
+		<div class="field field-link-multi">
 			{% for link in links %}
-
-				<div>
+				<div class="lf-item">
 					<a href="{{link.link_url}}">{{link.link_text}}</a>
+				</div>
+			{% endfor %}
+			{% for file in files %}
+				<div class="lf-item">
+					<a href="{{file.file_url}}">{{file.file_text}}</a>
 				</div>
 			{% endfor %}
 		</div>

@@ -346,7 +346,7 @@
 		}
 	}
 	:before,:after{
-		color: $white;
+		color: $white !important;
 	}
 	a{
 		color: $transWhite;

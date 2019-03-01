@@ -4,8 +4,8 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.pullquote.field_admin_description
-    - field.field.paragraph.pullquote.field_oc_long_text
-    - field.field.paragraph.pullquote.field_oc_short_text
+    - field.field.paragraph.pullquote.field_quote
+    - field.field.paragraph.pullquote.field_source
     - field.field.paragraph.pullquote.field_widget_title
     - paragraphs.paragraphs_type.pullquote
   module:
@@ -25,16 +25,16 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_oc_long_text:
-    weight: 3
+  field_quote:
+    weight: 2
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
     region: content
-  field_oc_short_text:
-    weight: 4
+  field_source:
+    weight: 3
     settings:
       size: 60
       placeholder: ''

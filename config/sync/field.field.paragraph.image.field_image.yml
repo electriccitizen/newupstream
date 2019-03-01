@@ -1,15 +1,13 @@
-uuid: 820742e6-a4c2-42fb-886e-52d9fed615ec
+uuid: c4d922de-7909-46fe-8897-2ef641300abb
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_oc_image
+    - field.storage.paragraph.field_image
     - media.type.image
     - paragraphs.paragraphs_type.image
-_core:
-  default_config_hash: IYcPivO54ZpwhICu-VnrlZda3z6168QG9pOcu5_Tw-k
-id: paragraph.image.field_oc_image
-field_name: field_oc_image
+id: paragraph.image.field_image
+field_name: field_image
 entity_type: paragraph
 bundle: image
 label: Image
