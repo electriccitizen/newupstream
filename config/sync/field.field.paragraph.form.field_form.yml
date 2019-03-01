@@ -1,16 +1,14 @@
-uuid: 4f4ab643-85e0-4dee-86a0-3a39030e5390
+uuid: a494062a-f69e-409b-9e60-8de5dadb856a
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_oc_form
+    - field.storage.paragraph.field_form
     - paragraphs.paragraphs_type.form
   module:
     - webform
-_core:
-  default_config_hash: FM_DftOs-bKWBCt_OmFZWZtTH85G378K7OArBO9CorQ
-id: paragraph.form.field_oc_form
-field_name: field_oc_form
+id: paragraph.form.field_form
+field_name: field_form
 entity_type: paragraph
 bundle: form
 label: Form

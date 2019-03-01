@@ -15,7 +15,7 @@
 			});
 			//Slider
 			$(".gallery-type.Slider", context).once('slider').each(function(){
-				$('.field-oc-image-multi', this).slick({
+				$('.field-image-multi', this).slick({
 					adaptiveHeight: true,
 					autoplay: true,
 					autoplaySpeed: 5000

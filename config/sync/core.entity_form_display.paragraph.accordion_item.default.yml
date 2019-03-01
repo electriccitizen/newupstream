@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.accordion_item.field_accordion_header
-    - field.field.paragraph.accordion_item.field_oc_long_text
+    - field.field.paragraph.accordion_item.field_long_text
     - paragraphs.paragraphs_type.accordion_item
   module:
     - text
@@ -23,7 +23,7 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_oc_long_text:
+  field_long_text:
     weight: 2
     settings:
       rows: 5

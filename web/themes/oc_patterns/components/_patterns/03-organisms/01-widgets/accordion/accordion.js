@@ -11,7 +11,7 @@ Drupal.behaviors.accordion = {
             $('.accord-active').removeClass('accord-active');
             activeHeader.next().slideUp(500).attr('aria-hidden', 'true').end().find('a').attr('aria-expanded', "false");
           }else{
-            $('.accord-active').find('.field-oc-long-text').slideUp(500).attr('aria-hidden', 'true').end().removeClass('accord-active').find('.accordion-header a').attr('aria-expanded', 'false');
+            $('.accord-active').find('.field-long-text').slideUp(500).attr('aria-hidden', 'true').end().removeClass('accord-active').find('.accordion-header a').attr('aria-expanded', 'false');
             activeHeader.parent('.accordion-item').addClass('accord-active').end().next().slideDown(500).attr('aria-hidden', 'false').end().find('a').attr('aria-expanded', "true");
             //detect if accordion top is offscreen and scroll to it if it is
             setTimeout(function() {

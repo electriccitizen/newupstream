@@ -49,8 +49,8 @@
 				{% set control = 'accordion-content-' ~ paragraph.id() ~ '-' ~ (key + 1) %}
 				{% set text = {
 					'#type': 'processed_text',
-					'#text': accordion['#paragraph'].field_oc_long_text.0.value,
-					'#format': accordion['#paragraph'].field_oc_long_text.0.format
+					'#text': accordion['#paragraph'].field_long_text.0.value,
+					'#format': accordion['#paragraph'].field_long_text.0.format
 				 } %}
 				{% include "@organisms/01-widgets/accordion/01-accordion.twig"
 					with{

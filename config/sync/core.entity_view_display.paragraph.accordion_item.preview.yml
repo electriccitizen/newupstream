@@ -5,11 +5,9 @@ dependencies:
   config:
     - core.entity_view_mode.paragraph.preview
     - field.field.paragraph.accordion_item.field_accordion_header
-    - field.field.paragraph.accordion_item.field_oc_long_text
     - paragraphs.paragraphs_type.accordion_item
   module:
     - layout_builder
-    - layout_discovery
 third_party_settings:
   layout_builder:
     sections: {  }
@@ -30,5 +28,4 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-hidden:
-  field_oc_long_text: true
+hidden: {  }

@@ -1,14 +1,12 @@
-uuid: 8a52f999-4feb-406f-846f-2efddc7db9b9
+uuid: 038d03fc-8512-4b28-b9b4-00e4bbe07f39
 langcode: en
 status: true
 dependencies:
   module:
     - paragraphs
     - webform
-_core:
-  default_config_hash: yUoQyCOg4VEYYUqiRt9-ddis8rVJP1YDZ-L6PEJbfUs
-id: paragraph.field_oc_form
-field_name: field_oc_form
+id: paragraph.field_form
+field_name: field_form
 entity_type: paragraph
 type: webform
 settings:

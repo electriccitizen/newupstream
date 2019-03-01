@@ -1,14 +1,12 @@
-uuid: ab634e6f-71ea-41f0-9583-6c41bad5d8e2
+uuid: 7de740c1-c381-43bb-b5ce-431a0ced7481
 langcode: en
 status: true
 dependencies:
   module:
     - media
     - paragraphs
-_core:
-  default_config_hash: 64yhdZmqJ-Uxk4pm0yW2FryQFqhl-XGjTUvX26srjqY
-id: paragraph.field_oc_image_multi
-field_name: field_oc_image_multi
+id: paragraph.field_image_multi
+field_name: field_image_multi
 entity_type: paragraph
 type: entity_reference
 settings:

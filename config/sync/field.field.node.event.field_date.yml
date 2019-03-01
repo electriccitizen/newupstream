@@ -1,21 +1,19 @@
-uuid: 83220b5a-eff2-448d-9e75-0f2d029ac94e
+uuid: b7af2727-9953-4e7f-bfdd-1d21f8f9cd1f
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_oc_date
+    - field.storage.node.field_date
     - node.type.event
   module:
     - datetime
-_core:
-  default_config_hash: iWIJEDM0rmANZe6ynYLmRY2OdDueHfBAhAT7a2nNiVs
-id: node.event.field_oc_date
-field_name: field_oc_date
+id: node.event.field_date
+field_name: field_date
 entity_type: node
 bundle: event
 label: Date
 description: ''
-required: true
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''

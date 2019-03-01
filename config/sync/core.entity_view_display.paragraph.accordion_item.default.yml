@@ -4,11 +4,10 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.accordion_item.field_accordion_header
-    - field.field.paragraph.accordion_item.field_oc_long_text
+    - field.field.paragraph.accordion_item.field_long_text
     - paragraphs.paragraphs_type.accordion_item
   module:
     - layout_builder
-    - layout_discovery
     - text
 third_party_settings:
   layout_builder:
@@ -30,8 +29,8 @@ content:
     third_party_settings: {  }
     type: string
     region: content
-  field_oc_long_text:
-    weight: 1
+  field_long_text:
+    weight: 2
     label: hidden
     settings: {  }
     third_party_settings: {  }

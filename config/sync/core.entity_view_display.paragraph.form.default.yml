@@ -3,13 +3,11 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.form.field_admin_description
-    - field.field.paragraph.form.field_oc_form
+    - field.field.paragraph.form.field_form
     - field.field.paragraph.form.field_widget_title
     - paragraphs.paragraphs_type.form
   module:
     - layout_builder
-    - layout_discovery
     - webform
 third_party_settings:
   layout_builder:
@@ -23,8 +21,8 @@ targetEntityType: paragraph
 bundle: form
 mode: default
 content:
-  field_oc_form:
-    weight: 3
+  field_form:
+    weight: 1
     label: hidden
     settings:
       source_entity: true
@@ -39,5 +37,4 @@ content:
     third_party_settings: {  }
     type: string
     region: content
-hidden:
-  field_admin_description: true
+hidden: {  }

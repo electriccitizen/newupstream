@@ -202,7 +202,7 @@
 		max-width: $contentStop !important;
 	}
 	//slider container overrides layout padding on mobile
-	.field-oc-image-multi {
+	.field-image-multi {
 		@include edgeToEdge;
 		@include calc(width, "100% + 40px");
 		@include contentStop {
