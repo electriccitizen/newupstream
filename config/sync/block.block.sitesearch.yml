@@ -1,0 +1,26 @@
+uuid: 6310ffa6-07a2-478e-866a-d7cc962e7f05
+langcode: en
+status: true
+dependencies:
+  module:
+    - citizen
+    - system
+  theme:
+    - oc_patterns
+id: sitesearch
+theme: oc_patterns
+region: header
+weight: -5
+provider: null
+plugin: site_search
+settings:
+  id: site_search
+  label: 'Site Search'
+  provider: citizen
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: /site-search
+    negate: true
+    context_mapping: {  }
