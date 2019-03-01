@@ -1,0 +1,269 @@
+/* ==============
+	 GLOBAL STYLES
+================= */
+body {
+	background: $siteBack;
+	& > .overflow-guard{
+		overflow-x: hidden;
+	}
+	div{
+		box-sizing: border-box;
+		
+		*{
+			box-sizing: inherit;
+		}
+	}
+	&.unpublished{
+		background: $unpub;
+		.node-content{
+			border-top: 20px solid $unpubDark;
+		}
+	}
+}
+
+.container-inline div{
+	display: inline;
+}
+
+
+/* COOKIES ACCEPTANCE
+------------------------ */
+/*
+#sliding-popup{
+	background: $offWhite;
+	border-bottom: 6px solid $transBlack;
+	.logged-in &{
+		top: 84px !important;
+	}
+	.eu-cookie-compliance-content{
+		max-width: 100%;
+	}
+	.eu-cookie-compliance-banner{
+		max-width: $desk;
+		@include auto;
+		padding: 20px 40px;
+		.eu-cookie-compliance-message{
+			padding-right: 20px;
+			max-width: 100%;
+			line-height: 1.15;
+			@include mobileStop{
+				float: none;
+			}
+			@include desk{
+				@include calc(max-width, "100% - 150px");
+			}
+			.eu-cookie-compliance-more-button{
+				@include buttonWipe;
+				color: $link;
+				font-size: 15px;
+				font-family: $bodyFont;
+				text-decoration: underline;
+				display: inline-block;
+				padding: 0;
+				margin: 0;
+				text-align: left;
+				&:hover,&:focus{
+					color: $hoverLink;
+					text-decoration: none;
+				}
+				//hide more info on privacy page
+				.page-node-XX &{
+					display: none;
+				}
+			}
+		}
+		h2{
+			font-family: $header;
+			font-size: 21px;
+		}
+		p{
+			font-size: 15px;
+			margin-bottom: .5em;
+		}
+	}
+	.eu-cookie-compliance-buttons{
+		max-width: none;
+		@include mobileStop{
+			float: none;
+			margin-top: 1em;
+		}
+		button{
+			@include buttonWipe;
+			@include outlineButton($link);
+			display: block;
+			width: 150px;
+			font-size: 15px;
+		}
+	}
+}//end sliding popup
+*/
+
+/* MAP PINS
+-------------- */
+//google api map pins
+.gm-style-iw{
+	strong{
+		font-weight: $heavy;
+	}
+	em{
+		font-style: italic;
+	}
+	h2{
+		font-size: 1.6rem;
+	}
+	h3{
+		font-size: 1.4rem;
+	}
+}
+
+
+/* SKIP NAV
+------------- */
+.overflow-guard > a.focusable{
+	&:focus{
+		position: fixed !important;
+		top: 0;
+		left: 0;
+		z-index: 9999;
+		display: block;
+		width: 100%;
+		background: $white;
+		padding: .5rem 2rem;
+	}
+}
+
+
+/* KINTING
+-------------- */
+.kint{
+	position: fixed;
+	z-index: 9999;
+	top: 200px;
+	right: 5%;
+	width: 90%;
+	max-width: 800px;
+	@include calc(max-height, "90% - 200px");
+	overflow: scroll;
+}
+
+/* BACK TO TOP
+----------------- */
+//back to table of contents option
+.back-anchor{
+	display: none;
+	position: fixed;
+	bottom: 3%;
+	right: 3%;
+	box-shadow: 3px 3px 5px rgba(35,35,35, 0.35);
+	z-index: 9999;
+	border-radius: 50%;
+	a{
+		display: block;
+		width: 50px;
+		height: 50px;
+		background: rgba(35,35,35,0.85);
+		border-radius: 50%;
+		position: relative;
+		text-align: center;
+		i{
+			color: $white;
+			font-size: 45px;
+			line-height: 45px;
+		}
+	}
+}//end back anchor
+
+
+/* ADMIN NODE EDIT TABS
+----------------- */
+#block-citizen-patterns-local-tasks{
+	max-width: $contentStop;
+	padding: 30px $siteMarginMobile 0;
+	position: relative;
+	@include auto;
+	&:after{
+		@include fullBack($darkGrey);
+	}
+	.tabs {
+		@include listReset;
+		@include safeFlex(row,wrap,null,null);
+		@include bleed(10px);
+		li {
+			padding: 0 10px;
+			@include onlySmall{
+				width: 100%;
+			}
+		}
+		a {
+			@include outlineButton($white);
+			text-transform: none;
+			padding: 0 12px;
+			display: block;
+			&.is-active {
+				background-color: $white;
+				color: $black;
+			}
+			&:focus,&:hover {
+				background-color: $offWhite;
+				color: $black;
+				opacity: .8;
+			}
+		}
+	}// end tabs
+}//end local tasks
+
+/* MODALS
+----------------- */
+.modal-element{
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 500;
+	background: $transBlack;
+	.modal-inner{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 90vw;
+		max-width: 640px;
+		height: auto;
+		max-height: 800px;
+		@include translate(-50%,-50%);
+		background: $white;
+		& > .contextual .trigger{
+			right: -12px;
+		}
+	}
+	.modal-header{
+		position: relative;
+		h2{
+			padding: 1.5rem 2rem;
+			background: $offWhite;
+			@include heading4;
+			color: $black;
+		}//end block title
+		.modal-close{
+			color: $black;
+			font-size: 28px;
+			position: absolute;
+			top: 1rem;
+			right: 2rem;
+			&:hover,&:focus{
+				opacity: .6;
+			}
+		}
+	}//end modal-header
+	.modal-content{
+		display: none;
+		overflow-y: scroll;
+		padding: 2rem 2rem 4rem;
+		overflow-x: hidden;
+		input:focus{
+			cursor: pointer;
+		}
+	}
+}//end modal-element
+

@@ -1,0 +1,76 @@
+{#
+/**
+ * @file
+ * Default theme implementation for a field.
+ *
+ * To override output, copy the "field.html.twig" from the templates directory
+ * to your theme's directory and customize it, just like customizing other
+ * Drupal templates such as page.html.twig or node.html.twig.
+ *
+ * Instead of overriding the theming for all fields, you can also just override
+ * theming for a subset of fields using
+ * @link themeable Theme hook suggestions. @endlink For example,
+ * here are some theme hook suggestions that can be used for a field_foo field
+ * on an article node type:
+ * - field--node--field-foo--article.html.twig
+ * - field--node--field-foo.html.twig
+ * - field--node--article.html.twig
+ * - field--field-foo.html.twig
+ * - field--text-with-summary.html.twig
+ * - field.html.twig
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the containing element.
+ * - label_hidden: Whether to show the field label or not.
+ * - title_attributes: HTML attributes for the title.
+ * - label: The label for the field.
+ * - multiple: TRUE if a field can contain multiple items.
+ * - items: List of all the field items. Each item contains:
+ *   - attributes: List of HTML attributes for each item.
+ *   - content: The field item's content.
+ * - entity_type: The entity type to which the field belongs.
+ * - field_name: The name of the field.
+ * - field_type: The type of the field.
+ * - label_display: The display settings for the label.
+ *
+ * @see template_preprocess_field()
+ *
+ * @ingroup themeable
+ */
+#}
+{%
+set classes = [
+'field field-paragraphs paragraph-reference',
+]
+%}
+
+{{ attach_library('citizen_patterns/widgets') }}
+{# anchor links #}
+{% set count = 0 %}
+{% for anchor in items %}
+  {% if anchor.content['#paragraph'].field_anchor_link.0.value %}
+    {% set count = count + 1 %}
+  {% endif %}
+{% endfor %}
+
+{%- if count > 0 -%}
+  <nav class="widget-anchors" aria-labelledby="toc-title">
+		<h2 id="toc-title"><a href="#" class="toc-toggle"><i class="fa fa-bars" aria-hidden="true"></i>On This Page</a></h2>
+		<div id="toc-anchor-wrapper" class="anchors">
+      {%- for anchor in items -%}
+			{%- if anchor.content['#paragraph'].field_anchor_link.0.value -%}
+            <a href="#anchor-{{ anchor.content['#paragraph'].field_anchor_link.0.value|clean_id }}">{{- anchor.content['#paragraph'].field_anchor_link.0.value -}}</a>
+         {%- endif -%}
+      {%- endfor -%}
+	  </div>
+	</nav>  
+{%- endif -%}
+<div{{ attributes.addClass(classes) }}>
+	{%- for item in items -%}
+		<div class="section{% if (item.content['#paragraph'].field_background_style.0.value) %} background {{ item.content['#paragraph'].field_background_style.0.value }}{% else %} backless{% endif %}{% if item.content['#paragraph'].field_layout.0 %} {{ item.content['#paragraph'].field_layout.0.value }}{% endif %}"{% if (item.content['#paragraph'].field_background_style.0.value == 'image') and (item.content['#paragraph'].field_background_image.0) %} style="background:url({{ file_url(item.content['#paragraph'].field_background_image.0.entity.field_media_image.entity.fileuri) }}) no-repeat;background-size: cover;"{% endif %}>
+			{% set anchor = item.content['#paragraph'].field_anchor_link.0.value|clean_id %}
+			{%- if anchor -%}<a name="anchor-{{ anchor }}" id="anchor-{{ anchor }}"></a>{%- endif -%}
+			{{- item.content -}}
+		</div>
+	{%- endfor -%}
+</div>

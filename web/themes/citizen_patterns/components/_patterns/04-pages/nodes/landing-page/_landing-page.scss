@@ -1,0 +1,27 @@
+/* ===============
+   LANDING PAGE NODE
+==================== */
+
+.node-landing-page.node-content{
+
+	.block-field-banner{
+		opacity: 0;
+		@include animation('fadeIn 1.2s 1 forwards');
+		margin-bottom: $spaceLg;
+	}
+	.block-title{
+		@include centerTitle;
+	}
+
+}//end landing-page
+
+
+/* PATTERN LAB ONLY
+-------------------- */
+.pl .node--type-landing_page{
+	.field--name-field-paragraphs{
+		.pl-spacer{
+			margin-top: 0;
+		}
+	}
+}
