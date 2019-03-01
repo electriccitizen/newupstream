@@ -6,7 +6,7 @@ dependencies:
     - field.field.node.page.body
     - field.field.node.page.field_banner
     - field.field.node.page.field_metatags
-    - field.field.node.page.field_oc_widgets
+    - field.field.node.page.field_paragraphs
     - node.type.page
     - system.menu.main
   module:
@@ -115,12 +115,12 @@ third_party_settings:
               context_mapping: {  }
             additional: {  }
             weight: 0
-          eb8c61aa-c3d4-446d-9537-8e0acf30924b:
-            uuid: eb8c61aa-c3d4-446d-9537-8e0acf30924b
+          0962c4dd-fade-41fa-a98d-e9fbe2c6d1ea:
+            uuid: 0962c4dd-fade-41fa-a98d-e9fbe2c6d1ea
             region: content
             configuration:
-              id: 'field_block:node:page:field_oc_widgets'
-              label: Widgets
+              id: 'field_block:node:page:field_paragraphs'
+              label: Paragraphs
               provider: layout_builder
               label_display: '0'
               formatter:
@@ -139,10 +139,8 @@ third_party_settings:
   layout_builder_restrictions:
     allowed_blocks:
       AddToAny: {  }
-      'Chaos tools': {  }
       Content: {  }
       core: {  }
-      'Custom Blocks': {  }
       Flippy: {  }
       Forms: {  }
       Help: {  }
@@ -187,14 +185,14 @@ content:
       link: false
     third_party_settings: {  }
     region: content
-  field_oc_widgets:
+  field_paragraphs:
+    type: entity_reference_revisions_entity_view
     weight: 102
     label: above
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    type: entity_reference_revisions_entity_view
     region: content
 hidden:
   field_metatags: true

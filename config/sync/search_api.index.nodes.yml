@@ -2,20 +2,12 @@ uuid: b3c2ab3f-4d52-4b2c-b35f-4dc6d9673b00
 langcode: en
 status: true
 dependencies:
-  module:
-    - node
-    - paragraphs
-    - search_api
   config:
     - field.storage.node.body
-    - field.storage.node.field_oc_widgets
-    - field.storage.paragraph.field_section_intro
-    - field.storage.paragraph.field_section_title
-    - field.storage.paragraph.field_section_widgets
-    - field.storage.paragraph.field_widget_title
-    - field.storage.paragraph.field_accordion_item
-    - field.storage.paragraph.field_accordion_header
     - search_api.server.local
+  module:
+    - node
+    - search_api
 _core:
   default_config_hash: 4xFhn8nKQAWjrpZDlNwBbMHvO2ixm6zAt2HjtJDCaKw
 id: nodes
@@ -32,60 +24,6 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.body
-  field_accordion_header:
-    label: 'Accordion Header'
-    datasource_id: 'entity:node'
-    property_path: 'field_oc_widgets:entity:field_section_widgets:entity:field_accordion_item:entity:field_accordion_header'
-    type: text
-    boost: !!float 3
-    dependencies:
-      config:
-        - field.storage.node.field_oc_widgets
-        - field.storage.paragraph.field_section_widgets
-        - field.storage.paragraph.field_accordion_item
-        - field.storage.paragraph.field_accordion_header
-      module:
-        - paragraphs
-        - paragraphs
-        - paragraphs
-  field_section_intro:
-    label: 'Section Intro'
-    datasource_id: 'entity:node'
-    property_path: 'field_oc_widgets:entity:field_section_intro'
-    type: text
-    boost: !!float 3
-    dependencies:
-      config:
-        - field.storage.node.field_oc_widgets
-        - field.storage.paragraph.field_section_intro
-      module:
-        - paragraphs
-  field_section_title:
-    label: 'Section Title'
-    datasource_id: 'entity:node'
-    property_path: 'field_oc_widgets:entity:field_section_title'
-    type: text
-    boost: !!float 13
-    dependencies:
-      config:
-        - field.storage.node.field_oc_widgets
-        - field.storage.paragraph.field_section_title
-      module:
-        - paragraphs
-  field_widget_title:
-    label: 'Widget Title'
-    datasource_id: 'entity:node'
-    property_path: 'field_oc_widgets:entity:field_section_widgets:entity:field_widget_title'
-    type: text
-    boost: !!float 8
-    dependencies:
-      config:
-        - field.storage.node.field_oc_widgets
-        - field.storage.paragraph.field_section_widgets
-        - field.storage.paragraph.field_widget_title
-      module:
-        - paragraphs
-        - paragraphs
   title:
     label: Title
     datasource_id: 'entity:node'
@@ -112,7 +50,6 @@ processor_settings:
     all_fields: false
     fields:
       - body
-      - field_section_intro
     title: true
     alt: true
     tags:
@@ -131,10 +68,6 @@ processor_settings:
     all_fields: true
     fields:
       - body
-      - field_accordion_header
-      - field_section_intro
-      - field_section_title
-      - field_widget_title
       - title
     weights:
       preprocess_index: -48
@@ -144,10 +77,6 @@ processor_settings:
     all_fields: true
     fields:
       - body
-      - field_accordion_header
-      - field_section_intro
-      - field_section_title
-      - field_widget_title
       - title
     exceptions:
       mexican: mexic
@@ -159,10 +88,6 @@ processor_settings:
     all_fields: true
     fields:
       - body
-      - field_accordion_header
-      - field_section_intro
-      - field_section_title
-      - field_widget_title
       - title
     spaces: ''
     overlap_cjk: 1

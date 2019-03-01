@@ -7,7 +7,7 @@ dependencies:
     - field.field.node.page.body
     - field.field.node.page.field_banner
     - field.field.node.page.field_metatags
-    - field.field.node.page.field_oc_widgets
+    - field.field.node.page.field_paragraphs
     - node.type.page
   module:
     - entity_browser_entity_form
@@ -55,8 +55,9 @@ content:
     third_party_settings: {  }
     type: metatag_firehose
     region: content
-  field_oc_widgets:
-    weight: 26
+  field_paragraphs:
+    type: paragraphs
+    weight: 3
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -72,7 +73,6 @@ content:
         duplicate: '0'
         add_above: '0'
     third_party_settings: {  }
-    type: paragraphs
     region: content
   status:
     type: boolean_checkbox

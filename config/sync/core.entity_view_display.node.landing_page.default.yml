@@ -6,7 +6,7 @@ dependencies:
     - field.field.node.landing_page.body
     - field.field.node.landing_page.field_banner
     - field.field.node.landing_page.field_metatags
-    - field.field.node.landing_page.field_oc_widgets
+    - field.field.node.landing_page.field_paragraphs
     - field.field.node.landing_page.layout_builder__layout
     - node.type.landing_page
   module:
@@ -97,12 +97,16 @@ third_party_settings:
                 entity: layout_builder.entity
             additional: {  }
             weight: 0
-          80c41edc-6693-4697-a38d-a60fc16d51a2:
-            uuid: 80c41edc-6693-4697-a38d-a60fc16d51a2
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          93488de5-d12a-4299-978f-55447109f0fe:
+            uuid: 93488de5-d12a-4299-978f-55447109f0fe
             region: content
             configuration:
-              id: 'field_block:node:landing_page:field_oc_widgets'
-              label: Widgets
+              id: 'field_block:node:landing_page:field_paragraphs'
+              label: Sections
               provider: layout_builder
               label_display: '0'
               formatter:
@@ -114,16 +118,14 @@ third_party_settings:
               context_mapping:
                 entity: layout_builder.entity
             additional: {  }
-            weight: 1
+            weight: 0
     allow_custom: true
     is_enabled: true
     enabled: true
   layout_builder_restrictions:
     allowed_blocks:
       AddToAny: {  }
-      'Chaos tools': {  }
       core: {  }
-      Devel: {  }
       Flippy: {  }
       Forms: {  }
       Help: {  }
@@ -164,7 +166,7 @@ content:
     third_party_settings: {  }
     type: metatag_empty_formatter
     region: content
-  field_oc_widgets:
+  field_paragraphs:
     weight: 104
     label: above
     settings:

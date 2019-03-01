@@ -1,4 +1,4 @@
-uuid: 6f91c83c-3cbb-42a1-b089-6d303446e6b3
+uuid: 29e4eea3-a924-4eed-9143-b5dc157f0c69
 langcode: en
 status: true
 dependencies:
@@ -6,10 +6,8 @@ dependencies:
     - entity_reference_revisions
     - node
     - paragraphs
-_core:
-  default_config_hash: YfYF0733mHSb0-X5TvmvX7dg9fkOVMZdwEg4ge1a-40
-id: node.field_oc_widgets
-field_name: field_oc_widgets
+id: node.field_paragraphs
+field_name: field_paragraphs
 entity_type: node
 type: entity_reference_revisions
 settings:

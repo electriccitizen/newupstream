@@ -3,7 +3,7 @@
 ===================== */
 
 //widgets parent field
-.field--name-field-oc-widgets {
+.field-paragraphs{
 	//use flex to support layout field
 	@include safeFlex(row,wrap,null,null);
 	//override layout padding
@@ -228,7 +228,7 @@ SECTION LAYOUTS
 	}//end a 
 
 	//snug up first section if it has a background
-	& + .field--name-field-oc-widgets > .section:first-child:not(.background){
+	& + .field-paragraphs > .section:first-child:not(.background){
 		margin-top: $spaceLg;
 	}
 

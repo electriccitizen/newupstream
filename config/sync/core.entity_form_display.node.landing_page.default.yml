@@ -7,7 +7,7 @@ dependencies:
     - field.field.node.landing_page.body
     - field.field.node.landing_page.field_banner
     - field.field.node.landing_page.field_metatags
-    - field.field.node.landing_page.field_oc_widgets
+    - field.field.node.landing_page.field_paragraphs
     - field.field.node.landing_page.layout_builder__layout
     - node.type.landing_page
   module:
@@ -57,7 +57,7 @@ content:
     third_party_settings: {  }
     type: metatag_firehose
     region: content
-  field_oc_widgets:
+  field_paragraphs:
     weight: 3
     settings:
       title: Paragraph
@@ -70,8 +70,8 @@ content:
       form_display_mode: default
       default_paragraph_type: _none
       features:
-        duplicate: duplicate
         collapse_edit_all: collapse_edit_all
+        duplicate: '0'
         add_above: '0'
     third_party_settings: {  }
     type: paragraphs
