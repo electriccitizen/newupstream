@@ -9,7 +9,7 @@
 	//override layout padding
 	@include edgeToEdge;
 	// preserve layout padding and prevent backgrounds from overflowing when next to sidebars
-	.beaker .main &,.bunsen .main &{
+	.layout:not(.layout--twocol-sidebar) &{
 		overflow: hidden;
 		@include tab{
 			@include edgeReset;

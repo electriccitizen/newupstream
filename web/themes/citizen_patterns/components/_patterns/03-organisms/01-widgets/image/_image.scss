@@ -19,7 +19,7 @@
 		}
 		&.large{
 			max-width: 800px;
-			.beaker .main &,.bunsen .main &{
+			.layout:not(.layout--twocol-sidebar) &{
 				max-width: 100%;
 			}
 		}
