@@ -38,11 +38,18 @@
 
 //style entity block links different than normal block links in settings tray
 #drupal-off-canvas{
-	.block-categories{
-		.links{
-			a[href*="/entity_field"]{
-				opacity: .4;
+	.ui-autocomplete{
+		.ui-menu-item{
+			background: $white;
+			a{
+				background: none;
 			}
 		}
 	}
 }
+
+//Allow text to wrap down so user can see entire message
+.ui-dialog .ui-dialog-title{
+	white-space: normal;
+}
+
