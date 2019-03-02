@@ -4,6 +4,9 @@
 footer {
 	background: $darkGrey;
 	color: $offWhite;
+	.modal-content{
+		color: $body;
+	}
 	//set style for footer (need inner for fixed footer script)
 	.footer-inner{
 		min-height: 289px;

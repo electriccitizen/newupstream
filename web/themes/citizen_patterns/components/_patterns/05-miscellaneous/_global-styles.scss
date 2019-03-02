@@ -3,6 +3,7 @@
 ================= */
 body {
 	background: $siteBack;
+	width: 100%;
 	& > .overflow-guard{
 		overflow-x: hidden;
 	}

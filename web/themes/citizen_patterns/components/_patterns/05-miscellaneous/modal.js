@@ -31,29 +31,31 @@ Drupal.behaviors.modal = {
         $('body').css('position','static');
         $(document).scrollTop(modalTrigger.offset().top - 200); 
       });
+
+      
+      //trap focus
+      window.onload = function() {
+        setTimeout(function(){
+          var firstAnchor = document.getElementById("m-close"),
+              lastAnchor = document.querySelector('.modal-content *[type="submit"]:last-of-type');
+
+          function keydownHandler(e) {
+            var evt = e || window.event;
+            var keyCode = evt.which || evt.keyCode;
+            if(keyCode === 9) { // TAB pressed
+                if(evt.preventDefault) evt.preventDefault();
+                else evt.returnValue = false;
+                firstAnchor.focus();
+            }
+          }
+
+          if(lastAnchor.addEventListener) lastAnchor.addEventListener('keydown', keydownHandler, false);
+          else if(lastAnchor.attachEvent) lastAnchor.attachEvent('onkeydown', keydownHandler);
+        }, 300);
+      }
 		});
 	}
 };
 
-//trap focus
-window.onload = function() {
-  setTimeout(function(){
-    var firstAnchor = document.getElementById("m-close"),
-        lastAnchor = document.querySelector('.modal-content *[type="submit"]:last-of-type');
-
-    function keydownHandler(e) {
-      var evt = e || window.event;
-      var keyCode = evt.which || evt.keyCode;
-      if(keyCode === 9) { // TAB pressed
-          if(evt.preventDefault) evt.preventDefault();
-          else evt.returnValue = false;
-          firstAnchor.focus();
-      }
-    }
-
-    if(lastAnchor.addEventListener) lastAnchor.addEventListener('keydown', keydownHandler, false);
-    else if(lastAnchor.attachEvent) lastAnchor.attachEvent('onkeydown', keydownHandler);
-  }, 300);
-}
 
 })(jQuery, Drupal);
