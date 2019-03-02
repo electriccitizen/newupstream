@@ -33,25 +33,3 @@
 	}
 }//end inline image row
 
-.view{
-	.item-list > ul{
-		@include listReset;
-		& > li{
-			width: 100%;
-			&:not(:last-child){
-				margin-bottom: $spaceMd;
-			}
-		}
-	}
-	.views-row{
-		width: 100%;
-		&:not(:last-child){
-			margin-bottom: $spaceMd;
-		}
-		.views-field-title,.views-field-nothing{
-			h2{
-				@include heading3;
-			}
-		}
-	}
-}//end view
