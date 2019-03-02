@@ -1,17 +1,17 @@
 <a name="pl-non-pl-files" id="pl-non-pl-files"></a>
 
 <div class="doc-text">
-	<p>OC Patterns uses both Pattern Lab files held in the theme/components folder and non-pl files (Drupal & Pattern Lab related files) held outside the /components folders.</p>
+	<p>Citizen Patterns uses both Pattern Lab files held in the theme/components folder and non-pl files (Drupal & Pattern Lab related files) held outside the /components folders.</p>
 	<div class="doc-section">
 		<h4 class="doc-section-title">Theme Root Files</h4>
 		<div class="doc-section-inner">
 			<p><strong>.stylelintrc—</strong> Sets Sass lint rules.</p>
 			<p><strong>gulpfile.js—</strong> Requires both the local.gulp-config.js file and the Emulsify Gulp npm package in order to define gulp tasks to run the theme.</p>
-			<p><strong>local.gulp-config.js—</strong> Overwrites gulp tasks from the default Emulsify Gulp npm package and holds any new custom OC Patterns gulp tasks.</p>
+			<p><strong>local.gulp-config.js—</strong> Overwrites gulp tasks from the default Emulsify Gulp npm package and holds any new custom Citizen Patterns gulp tasks.</p>
 			<p><strong>logo.svg—</strong> Sets the site logo that appears in the header.</p>
-			<p><strong>citizen_patterns.breakpoints.yml—</strong> Defines the OC Patterns custom breakpoint widths and 1x & 2x multipliers for responsive image styles.</p>
+			<p><strong>citizen_patterns.breakpoints.yml—</strong> Defines the Citizen Patterns custom breakpoint widths and 1x & 2x multipliers for responsive image styles.</p>
 			<p><strong>citizen_pattern.info.yml</strong> Outlines all the theme information and sets the block layout regions and Pattern Lab component top level folders that can be inherited into Drupal.</p>
-			<p><strong>citizen_patterns.layouts.yml—</strong> Defines the custom OC Patterns templates and their regions.</p>
+			<p><strong>citizen_patterns.layouts.yml—</strong> Defines the custom Citizen Patterns templates and their regions.</p>
 			<p><strong>citizen_patterns.libraries.yml—</strong> Sets the libraries that can be attached to Twig templates in Drupal. (Fonts, CSS, JS) <strong>External libraries added here should be brought in through CDN whenever possible.</strong></p>
 			<p><strong>citizen_patterns.theme—</strong> Provides theme level PHP functions and hooks.</p>
 			<p><strong>package-lock.json—</strong> Automatic file generated from package.json on <span class="code">npm install</span>. Defines all package dependencies.</p>
@@ -25,7 +25,7 @@
 		<div class="doc-section-inner">
 			<p><strong>/components—</strong> The components folder holds all the files that run Pattern Lab. These are compiled in the /theme/pattern-lab folder (for gulp deploy and the browser local Pattern Lab instance) and the /dist folder (holds the styles.css, style maps, all js files, and the svg sprite) for use in Drupal.</p>
 			<p><strong>/components/patterns—</strong> 95% of all theming is done in the /components/_patterns folder. This is where all Scss files, and nearly all Twig and JS files are stored. compiled from and attached from.</p>
-			<p><strong>/components/layouts—</strong> This folder holds the Drupal-specific OC Patterns layouts and related files for Panelizer.</p>
+			<p><strong>/components/layouts—</strong> This folder holds the Drupal-specific Citizen Patterns layouts and related files for Layout Builder.</p>
 			<p><strong>/components/meta—</strong> Holds Pattern Lab specific head and foot info.</p>
 			<p><strong>/components/css—</strong> Houses the CKEditor custom stylesheet cke.css and the Pattern Lab scaffolding style sheets (which should never be edited). <strong>Only the cke.css stylesheet should ever be edited in this folder.</strong> And that should only happen when adding new custom styles to CKEditor.</p>
 			<p><strong>/components/images—</strong> This folder holds any images that need to be loaded into Pattern Lab and don't come from <a href="http://placeimg.com" target="_blank">Place Img</a>.</p>
@@ -44,7 +44,7 @@
 	<div class="doc-section">
 		<h4 class="doc-section-title">Fonts Folder</h4>
 		<div class="doc-section-inner">
-			<p>Holds OC icon font archived from previous themes. NO LONGER USED.</p>
+			<p>Holds the font awesome webfont files and any custom self-hosted fonts for the site.</p>
 		</div>
 	</div>
 	<div class="doc-section">
@@ -57,13 +57,13 @@
 	<div class="doc-section">
 		<h4 class="doc-section-title">JS Folder</h4>
 		<div class="doc-section-inner">
-			<p>Holds the oc-patterns.js file. This file is automatically written from an unused example PL file and should not be edited or deleted. All JS should be housed in component js files.</p>
+			<p>Holds the citizen-patterns.js file. This file is automatically written from an unused example PL file and should not be edited or deleted. All JS should be housed in component js files.</p>
 		</div>
 	</div>
 	<div class="doc-section">
 		<h4 class="doc-section-title">Node_modules Folder</h4>
 		<div class="doc-section-inner">
-			<p>Automatically generated on <span class="code">npm start</span> and holds all theme packages.</p>
+			<p>Automatically generated on <span class="code">npm install</span> and holds all theme packages.</p>
 		</div>
 	</div>
 	<div class="doc-section">

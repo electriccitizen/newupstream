@@ -25,7 +25,6 @@
 			<p>New blocks should created on an as needed basis for elements with content that is repeated throughout the site. Example: A photo, text and button element is used as a call to action above the footer in multiple areas of the site. This would be a new custom block type with a block created for that element which could them be inserted where needed using the block placer widget.</p>
 			<p><strong>Custom Block Types—</strong> Custom block types in DB are fieldable entities that are re-usable through the site. They can be added to pages either through the Block Layout UI, Panelizer, or the block placer paragraph widget. <strong>When a new custom block type is created, it must be added to the allowed blocks in the block placer paragraph bundle block field in order for it to be used by editors.</strong></p>
 			<p><strong>Basic Blocks—</strong> Basic blocks are the default blocks in Drupal that allow just a description (block title) and a body field. These are generally just used simple bits of repeatable text.</p>
-			<p><strong>Restricted Blocks—</strong> Restricted blocks are blocks custom to OC Patterns base build. They are just like Basic Blocks, except they are not available to editors through the block placer widget and editors can never change their descriptions (because block descriptions are turned into theme classes). These blocks are used for site-wide content like the footer address, copyright, mission statement, etc.</p>
 		</div>
 	</div>
 	<div class="doc-section">
@@ -40,18 +39,18 @@
 					<li>Add Another: Leave as is</li>
 					<li>Menu: Add to main menu only if directed by the Project Manager.</li>
 				</ul>
-			Add your fields in manage fields and set the display as needed. If the content type is going to be displayed to an end user, it should always be panelized. You may need to <a href="#templates-layouts">create a new Panelizer layout</a> for it, depending on design.
+			Add your fields in manage fields and set the display as needed. If the content type is going to be displayed to an end user, it should always use Layout Builder. You may need to <a href="#templates-layouts">create a new layout</a> for it, depending on design.
 			</p>
 			<p>New content types that are going to be shown to an end user also need to have URL Pattern set. This can be created in Configuration > URL Aliases > Patterns. Add a new pattern and set it following the existing conventions. Usually the pattern is <span class="code">content-type-name/[node:title])</span> unless it is in a menu. Then use <span class="code">[node:menu-link:parents:join-path]/[node:title]</span>.</p>
 			<p>New content types also need to have their editing permissions set in People > Permissions. Follow the existing conventions for nodes—unless directed otherwise.</p>
-			<p><strong>Unused default content types—</strong> Not every site needs all of the default OC Patterns content types. Best practice is not to delete them (as some are tied into the site through dependencies so heavily that you can crash the site by deleting them). The client may also later want one they did not originally need. Instead just turn off non-admin editing permissions for all unneeded content types. No client will ever have administrator roles so they will never see them.</p>
+			<p><strong>Unused default content types—</strong> Not every site needs all of the default Citizen Patterns content types. Best practice is not to delete them (as some are tied into the site through dependencies so heavily that you can crash the site by deleting them). The client may also later want one they did not originally need. Instead just turn off non-admin editing permissions for all unneeded content types. No client will ever have administrator roles so they will never see them.</p>
 		</div>
 	</div>
 	<div class="doc-section">
 		<h4 class="doc-section-title">Paragraphs (widgets)</h4>
 		<div class="doc-section-inner">
 			{% set widgetContent = '{% block widgetContent %}' %}
-			<p>The bulk of new elements created for a site are paragraphs (interchangeably called widgets). Some paragraphs may even be created that an editor will never use solely to ease the life of the site builder (such as View Placer & Custom Code).</p>
+			<p>The bulk of new elements created for a site are paragraphs (interchangeably called widgets). Some paragraphs may even be created that an editor will never use solely to ease the life of the site builder (such as View Placer).</p>
 			<p><strong>New Widgets—</strong> New widgets can be created at Structure > Paragraph types. Add the fields you need (pretty much every widget uses a Widget Title field and an Admin description field), set the form display and display settings you need. NOTE: you should always create a Preview display that shows only the Admin description and any special styling choices.</p>
 			<p>New paragraph types also need to have their permissions set in People > permissions. All roles use the View Content permission and Admins, Senior Editors, and Editors generally all can Create, Edit and Delete each widget—unless it is for site building use only (then just admins get these permissions).</p>
 			<p>Next, each new paragraph gets added the OC Widgets field on the content types it will be used in.</p>
@@ -72,7 +71,6 @@
 			<p><strong>Media View Modes—</strong> After you create you image styles and responsive image styles, you need to create a Media View Mode in order to display the images on the site. View modes can be created in Structure > Display Modes > View Modes. The view mode should be named some similar to the image/responsive image style.</p>
 			<p><strong>Media Bundles—</strong> Once the view mode for the new style is created, you must add it to the display settings in the Image Media Bundle. This is the media entity that controls how images are displayed on the site. You can added new fields here (example: media categories), change the form display for new images and define the view modes they can be displayed as. To use your new style on a field, create a new Custom Display by checking the box for your view mode on the Default tab of the image media bundle. Save, then you can edit your new display setting to display either the image style or the responsive image style you create. You can choose to display a caption (or other fields) or not. Most images do not display captions. NOTE: Documents and Video can have their display settings set in the same method (though they do not use image styles).</p>
 			<p><strong>Display new image styles on a field—</strong> Once the display mode is set up in the image bundle, you can set the display settings for and image field to be: Rendered Entity > Your New Display. To set the new display in a custom template use the Twig Tweak function: <span class="code">{{ mediaEntity }}</span>.</p>
-			<p>Learn more about the <a href="https://www.electriccitizen.com/blog/media-libraries-drupal-8" target="_blank">OC Patterns media setup</a>.</p>
 		</div>
 	</div>
 	

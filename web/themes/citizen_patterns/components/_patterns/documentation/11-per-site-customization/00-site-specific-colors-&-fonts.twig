@@ -4,7 +4,7 @@
 	<div class="doc-section">
 		<h4 class="doc-section-title">Site Specific Colors</h4>
 		<div class="doc-section-inner">
-			<p>OC Patterns has some base colors in place that are needed for Pattern Lab theming and testing in between Drupal site spin ups. Obviously, these need to get changed for each site.</p>
+			<p>Citizen Patterns has some base colors in place that are needed for Pattern Lab theming and testing in between Drupal site spin ups. Obviously, these need to get changed for each site.</p>
 			<p><strong>Site Colors—</strong> Site colors come from the Design Direction sheet provided by the design and from mock-ups as they become finalized. All colors are entered in the 00-base/global/01-colors/_color-vars.scss file as variables. <strong>There should never be a color used on the site that is not a variable.</strong> When a color is added to (or changed in) _color-vars.scss as a variable, it will automatically be picked up by Gulp and added to the colors.yml file which displays the color reference palette in Pattern Lab.</p>
 			<p>Colors should stick with non-fancy color names with light/mid/dark options added as needed (<span class="code">$red</span> and <span class="code">$redDark</span> for instance). If you change one of the base colors to use on a specific site (like <span class="code">$grey</span>), move that variable into the /* Client Colors */ section of _colors-vars.scss. It's not really necessary but its good housing keeping and makes all the site-specific colors easier to find later.</p>
 			<p>Some colors use the non-color names but change every site:
@@ -19,14 +19,15 @@
 			</p>
 		</div>
 	</div>
+	<a name="site-specific-fonts" id="site-specific-fonts"></a>
 	<div class="doc-section">
 		<h4 class="doc-section-title">Site Specific Fonts</h4>
 		<div class="doc-section-inner">
 			{% set headerBlock = '{% block headInsert %}' %}
-			<p>OC Patterns loads Open Sans from Google Fonts as the default font for base theming. This font will most likely need to be replaced on a per site basis.</p>
+			<p>Citizen Patterns loads Open Sans from Google Fonts as the default font for base theming. This font will most likely need to be replaced on a per site basis.</p>
 			<p><strong>Loading Fonts—</strong> Depending on where you are getting the site fonts from, they can be loaded in a few different ways:
 				<ol>
-					<li><p>Using the Fonts library: Open citizen_patterns.libraries.yml and scroll all the way to end. You'll see the fonts: library with Open Sans being loaded as a css external sheet from fonts.googleapis.com. If the fonts you are loading use a <span class="code">link rel="stylesheet"</span> header call, you can just replace the Open Sans url with the new font url.</p>
+					<li><p>Using the Fonts library: Open <span class="code">citizen_patterns.libraries.yml</span> and scroll all the way to end. You'll see the fonts: library with Open Sans being loaded as a css external sheet from fonts.googleapis.com. If the fonts you are loading use a <span class="code">link rel="stylesheet"</span> header call, you can just replace the Open Sans url with the new font url.</p>
 					<p>If you need a js script tag in the header to load the fonts, you can add js: to the fonts: library and paste in the url to fonts. Just make sure you have <span class="code">{ type: external }</span> after it. Add <span class="code">minified: true</span> after the external notation if you are using a minified font sheet.</p></br></li>
 					<li>If either of these don't work for some reason, you can add the entire head tag needed for the font into the <span class="code">{{ headerBlock }}</span> placeholder in html.html.twig in /template/zzz-custom/layouts.</li>
 					<li><p>Hosting fonts directly on the site is also possible. Add the font files into the /fonts folder in theme. Add <span class="code">@font-face</span> css at the start of 00-base/global/02-fonts/_fonts-vars.scss:</p>
