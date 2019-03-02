@@ -14,7 +14,7 @@ display_configuration:
   width: ''
   height: '600'
   link_text: 'Select File'
-  auto_open: false
+  auto_open: true
 selection_display: no_display
 selection_display_configuration: {  }
 widget_selector: tabs

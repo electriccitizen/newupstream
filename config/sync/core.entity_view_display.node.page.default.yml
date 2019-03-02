@@ -8,14 +8,18 @@ dependencies:
     - field.field.node.page.field_metatags
     - field.field.node.page.field_paragraphs
     - node.type.page
+    - system.menu.main
   module:
     - entity_reference_revisions
     - layout_builder
     - layout_builder_restrictions
     - layout_discovery
+    - menu_block
     - system
     - text
     - user
+  theme:
+    - citizen_patterns
 third_party_settings:
   layout_builder:
     sections:
@@ -70,6 +74,65 @@ third_party_settings:
                 entity: layout_builder.entity
             additional: {  }
             weight: 2
+      -
+        layout_id: two_column_sidebar
+        layout_settings: {  }
+        components:
+          8b5f525e-0dcc-435f-bbdf-eabc88b5e8b6:
+            uuid: 8b5f525e-0dcc-435f-bbdf-eabc88b5e8b6
+            region: sidebar
+            configuration:
+              id: 'menu_block:main'
+              label: 'In This Section'
+              provider: menu_block
+              label_display: visible
+              follow: 1
+              follow_parent: active
+              level: 1
+              depth: 3
+              expand: 1
+              parent: 'main:'
+              label_type: root
+              label_link: 1
+              suggestion: page_menu
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
+          ba02b3a2-a5e4-4258-945f-f4974f4909ed:
+            uuid: ba02b3a2-a5e4-4258-945f-f4974f4909ed
+            region: content
+            configuration:
+              id: 'field_block:node:page:body'
+              label: Body
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+          4220d5f8-189d-4709-a2bd-877a364e8688:
+            uuid: 4220d5f8-189d-4709-a2bd-877a364e8688
+            region: content
+            configuration:
+              id: 'field_block:node:page:field_paragraphs'
+              label: Sections
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_revisions_entity_view
+                settings:
+                  view_mode: default
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 1
     allow_custom: false
     is_enabled: true
     enabled: true
