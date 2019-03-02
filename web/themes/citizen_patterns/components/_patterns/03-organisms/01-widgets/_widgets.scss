@@ -47,16 +47,15 @@ SECTION LAYOUTS
 	&.background{
 		padding-bottom: $spaceLg;
 		padding-top: $spaceLg;
+	}
+	.field-section-title{
 		.layout:not(.layout--twocol-sidebar) &{
 			max-width: $textMax;
 			@include auto;
 		}
 	}
 	.field-section-intro{
-		.layout:not(.layout--twocol-sidebar) &{
-			max-width: $textMax;
-			@include auto;
-		}
+		@extend .field-section-title;
 		margin-bottom: $spaceLg;
 	}
 
