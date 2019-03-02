@@ -160,6 +160,11 @@ header.content-header .shortcut-action--remove:hover .shortcut-action__icon,head
 	margin: 0;
 }
 
+/* hide media revisions feild */
+#edit-inline-entity-form #edit-inline-entity-form-revision-log-message-wrapper,.media-form .vertical-tabs{
+	display: none;
+}
+
 /* CUSTOM MEDIA BROWSER FILE ICONS
 ------------------------------- */
 .eb-media .views-field .file-extension,.eb-media.view-display-id-embed_browser .views-field-thumbnail__target-id,.view-media.view-display-id-media_page_list{
