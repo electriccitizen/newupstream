@@ -9,6 +9,7 @@ dependencies:
     - paragraphs.paragraphs_type.form
     - paragraphs.paragraphs_type.from_library
     - paragraphs.paragraphs_type.gallery
+    - paragraphs.paragraphs_type.horizontal_rule
     - paragraphs.paragraphs_type.image
     - paragraphs.paragraphs_type.landing_page_section
     - paragraphs.paragraphs_type.links_files
@@ -37,6 +38,7 @@ settings:
       block_placer: block_placer
       form: form
       gallery: gallery
+      horizontal_rule: horizontal_rule
       image: image
       links_files: links_files
       pullquote: pullquote
@@ -47,50 +49,47 @@ settings:
     target_bundles_drag_drop:
       accordion_group:
         enabled: true
-        weight: -33
+        weight: -31
       accordion_item:
-        weight: -32
+        weight: -30
         enabled: false
       basic_page_section:
-        weight: -31
+        weight: -29
         enabled: false
       block_placer:
         enabled: true
-        weight: -30
+        weight: -28
       form:
         enabled: true
-        weight: -29
+        weight: -27
       gallery:
         enabled: true
-        weight: -28
+        weight: -26
+      horizontal_rule:
+        enabled: true
+        weight: -25
       image:
         enabled: true
-        weight: -27
+        weight: -24
       landing_page_section:
-        weight: -26
-        enabled: false
-      lightbox_gallery:
-        weight: -25
+        weight: -23
         enabled: false
       links_files:
         enabled: true
-        weight: -24
+        weight: -22
       pullquote:
         enabled: true
-        weight: -23
-      slideshow:
-        weight: -22
-        enabled: false
+        weight: -21
       text:
         enabled: true
-        weight: -21
+        weight: -20
       video:
         enabled: true
-        weight: -20
+        weight: -19
       view_placer:
         enabled: true
-        weight: -19
+        weight: -18
       from_library:
         enabled: true
-        weight: -18
+        weight: -17
 field_type: entity_reference_revisions

@@ -20,7 +20,7 @@
 		width: 100%;
 		@include desk{
 			&:not(:only-child){
-				@include calc(width, 100% - #{$sideBar});
+				@include calc(width, "100% - "$sideBar);
 				&:not(.ui-sortable){
 					padding-right: $sectionGutter;
 				}
@@ -38,7 +38,8 @@
 			@include safeFlexOrder(2);
 			@include desk{
 				&:not(.ui-sortable){
-					padding-left: $sectionGutter
+					padding-left: $sectionGutter;
+					padding-right: 0;
 				}
 			}
 		}
@@ -62,7 +63,7 @@
 		width: 100%;
 		@include desk{
 			&:not(:only-child){
-				@include calc(width, 100% - #{$sideBar});
+				@include calc(width, "100% - "$sideBar);
 				&:not(.ui-sortable){
 					padding-left: $sectionGutter;
 				}
@@ -81,7 +82,7 @@
 		width: 100%;
 		@include desk{
 			&:not(:only-child){
-				@include calc(width, 100% - #{$sideBar});
+				@include calc(width, "100% - "$sideBar);
 				&:not(.ui-sortable){
 					padding-right: $sectionGutter;
 				}

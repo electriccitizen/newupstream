@@ -4,8 +4,10 @@ status: true
 dependencies:
   config:
     - field.field.node.support_book.body
+    - field.field.node.support_book.field_paragraphs
     - node.type.support_book
   module:
+    - entity_reference_revisions
     - text
 _core:
   default_config_hash: zMriXaHU0C-Ha0dCwYsn3WJlse80UEu3GKrXfM2-0W0
@@ -22,6 +24,15 @@ content:
       summary_rows: 3
       placeholder: ''
     third_party_settings: {  }
+    region: content
+  field_paragraphs:
+    weight: 26
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_autocomplete
     region: content
   status:
     type: boolean_checkbox

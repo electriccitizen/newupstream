@@ -120,18 +120,20 @@ third_party_settings:
     enabled: true
   layout_builder_restrictions:
     allowed_blocks:
-      'Chaos tools': {  }
+      'Chaos Tools': {  }
+      Content: {  }
       core: {  }
-      'Custom Blocks': {  }
-      Devel: {  }
       Flippy: {  }
       Forms: {  }
       Help: {  }
       'Inline blocks': {  }
       Menus: {  }
+      'Site Search': {  }
       Superfish: {  }
-      System: {  }
+      System:
+        - system_breadcrumb_block
       User: {  }
+      'User fields': {  }
       Webform: {  }
     allowed_layouts:
       - layout_onecol

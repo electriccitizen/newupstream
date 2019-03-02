@@ -139,6 +139,7 @@ third_party_settings:
   layout_builder_restrictions:
     allowed_blocks:
       AddToAny: {  }
+      'Chaos Tools': {  }
       Content: {  }
       core: {  }
       Flippy: {  }
@@ -147,13 +148,12 @@ third_party_settings:
       'Inline blocks': {  }
       Menus:
         - 'menu_block:main'
-        - 'system_menu_block:main'
+      'Site Search': {  }
       Superfish: {  }
       System:
         - system_breadcrumb_block
       User: {  }
       'User fields': {  }
-      Webform: {  }
     allowed_layouts:
       - layout_onecol
       - two_column_sidebar

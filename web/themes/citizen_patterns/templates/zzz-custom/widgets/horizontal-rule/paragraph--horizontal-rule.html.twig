@@ -37,53 +37,12 @@
  */
 #}
 
+{% extends "paragraph.html.twig" %}
 
-{# NOTES
-------------
-	This is the parent paragraphs template. Other paragraphs templates can extend this template as needed by
-	inheriting and altering the blocks defined here.
-	Field templates can also overview content set here (example: field--paragraph--field-widget-title.html.twig which sets all titles h2.pane-title)
-#}
+{% block widgetContent %}
+	{% embed "@organisms/01-widgets/horizontal-rule/horizontal-rule.twig" %}
+		{% block plwidgetopen %}{% endblock %}
+		{% block plwidgetclose %}{% endblock %}
+	{% endembed %}
+{% endblock %}
 
-
-{# define default paragraphs classes #}
-{%
-set classes = [
-'paragraph',
-'paragraph--type--' ~ paragraph.bundle|clean_class,
-view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
-'paragraphs-item-' ~ paragraph.id.value
-]
-%}
-
-{# add a wrapper if not a main section widget (used for in-section layout) #}
-{%- if 'section' not in paragraph.bundle|clean_class -%}
-	<div class="section-item">
-{%- endif -%}
-	{% block widget %}
-		{# set the default paragraph classes #}
-		<div{{ attributes.addClass(classes)  }}>
-    		{% block widgetContent %}
-    			{# print section title, intro and widget title outside of inner wrapper #}
-    			{{- content.field_section_title -}}
- 					{{- content.field_section_intro -}}
-    			{{- content.field_widget_title -}}
-
-    			{% block widgetInner %}
-	    			{# print an inner wrapper if not a section field #}
-	    			{%- if 'section' not in paragraph.bundle|clean_class -%}
-	    				<div class="widget-wrapper">
-	    			{%- endif -%}
-	    					{{- content|without('field_widget_title','field_section_title','field_section_intro') -}}
-	    			{%- if 'section' not in paragraph.bundle|clean_class -%}
-	    				</div>
-	    			{%- endif -%}
-	    		{% endblock %}
-
-    		{% endblock %}
-		</div>
-	{% endblock %}
-
-{%- if 'section' not in paragraph.bundle|clean_class -%}
-	</div>
-{%- endif -%}

@@ -147,18 +147,19 @@ third_party_settings:
     enabled: true
   layout_builder_restrictions:
     allowed_blocks:
-      'Chaos tools': {  }
+      'Chaos Tools': {  }
+      Content: {  }
       core: {  }
-      'Custom Blocks': {  }
-      Devel: {  }
       Forms: {  }
       Help: {  }
       'Inline blocks': {  }
       Menus: {  }
+      'Site Search': {  }
       Superfish: {  }
       System:
         - system_breadcrumb_block
       User: {  }
+      'User fields': {  }
       Webform: {  }
     allowed_layouts:
       - layout_onecol
