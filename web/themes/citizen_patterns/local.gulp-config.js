@@ -70,7 +70,7 @@
           prefix: '@mixin sprite-%s',
           render: {
             scss: {
-              dest: '../components/_patterns/01-atoms/04-images/icons/_icon_sprite.scss',
+              dest: '../components/_patterns/01-atoms/04-icons/_icon_sprite.scss',
               template: 'node_modules/emulsify-gulp/gulp-tasks/svg-icons/sprite.scss.handlebars'
             }
           }
