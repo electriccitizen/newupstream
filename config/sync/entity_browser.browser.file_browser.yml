@@ -1,44 +1,42 @@
-uuid: 02f935e7-3854-47ba-acf1-94620fb6c68c
+uuid: 3032d1e9-6c77-4334-8670-157d8d7b8a8f
 langcode: en
 status: true
 dependencies:
   config:
-    - views.view.oc_media
+    - views.view.citizen_media
   module:
     - entity_browser_entity_form
     - views
-_core:
-  default_config_hash: 0oSmGzNYCSNcn92Bj0imtVrjJceQmmgLDxYZZNxbSoY
 name: file_browser
 label: 'File Browser'
 display: modal
 display_configuration:
   width: ''
-  height: '500'
+  height: '600'
   link_text: 'Select File'
-  auto_open: true
+  auto_open: false
 selection_display: no_display
 selection_display_configuration: {  }
 widget_selector: tabs
 widget_selector_configuration: {  }
 widgets:
-  b08e2398-e926-4fba-b6c0-f1059c7b49b4:
+  d225de31-cb54-48ea-b9b2-ef9b0d9cb058:
     settings:
-      view: oc_media
+      view: citizen_media
       view_display: file_browser
-      submit_text: Place
+      submit_text: Use
       auto_select: false
-    uuid: b08e2398-e926-4fba-b6c0-f1059c7b49b4
+    uuid: d225de31-cb54-48ea-b9b2-ef9b0d9cb058
     weight: 1
     label: Library
     id: view
-  dcab6292-5589-4f6c-a4bf-b40ae6522d7e:
+  4d84de48-1e80-4264-93e3-d4067eef41b0:
     settings:
       entity_type: media
       bundle: document
-      form_mode: media_browser
-      submit_text: Save
-    uuid: dcab6292-5589-4f6c-a4bf-b40ae6522d7e
+      form_mode: default
+      submit_text: Use
+    uuid: 4d84de48-1e80-4264-93e3-d4067eef41b0
     weight: 2
-    label: Upload
+    label: 'Add File'
     id: entity_form

@@ -37,22 +37,8 @@
  */
 #}
 
-{% extends 'field.html.twig' %}
-{% block fieldSingleNo %}
-<div class="user-created">
-  <span class="inline-label">User Since:</span> {{- item.content -}}
+{% set image = element['#object'].field_user_image.0.target_id %}
+<div class="user-image" style="background:url({% if image %}{{ file_url(element['#object'].field_user_image.0.entity.field_media_image.entity.fileuri) }}{% else %}/themes/citizen_patterns/images/avatar-circle-gold.png{% endif %}) no-repeat;background-size: cover;background-position: center;">
+	
 </div>
-<div class="user-roles">
-	<span class="inline-label">Role(s):</span>
-	{%- if 'administrator' in element['#object'].getroles -%}
-		<span class="role">Administrator</span>
-	{%- endif -%}
-	{%- if 'senior_editor' in element['#object'].getroles -%}
-		<span class="role">Senior Editor</span>
-	{%- endif -%}
-	{%- if 'editor' in element['#object'].getroles -%}
-		<span class="role">Editor</span>
-	{%- endif -%}
-</div>
-{% endblock %}
 

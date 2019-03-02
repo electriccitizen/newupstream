@@ -45,14 +45,20 @@ article.user-dashboard{
 			@include auto;
 			@include clearFix;
 		}
-		.block-field-user-image{
+		.block-field.block-uid{
 			width: 250px;
+			.user-image{
+				width: 100%;
+				padding-bottom: 100%;
+				border-radius: 50%;
+			}
 			@include onlySmall{
 				margin-bottom: $spaceSm;
 				@include auto;
 			}
 			@include tab{
 				float: left;
+				margin-bottom: 0;
 			}
 		}
 	}//end image username since roles

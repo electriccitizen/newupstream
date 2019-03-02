@@ -8,8 +8,10 @@ dependencies:
     - field.field.media.image.field_media_categories
     - field.field.media.image.field_media_image
     - media.type.image
+    - responsive_image.styles.square
   module:
     - layout_builder
+    - responsive_image
 third_party_settings:
   layout_builder:
     sections: {  }
@@ -30,11 +32,19 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     region: content
+  field_media_image:
+    type: responsive_image
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      responsive_image_style: square
+      image_link: ''
+    third_party_settings: {  }
 hidden:
   addtoany: true
   created: true
   field_media_categories: true
-  field_media_image: true
   name: true
   thumbnail: true
   uid: true

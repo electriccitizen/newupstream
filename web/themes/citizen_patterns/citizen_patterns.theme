@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Functions to support theming in the OC Subtheme.
+ * Functions to support theming in the Citizen Patterns theme.
  */
 require_once dirname(__FILE__) . '/includes/theme_registers.inc';
 

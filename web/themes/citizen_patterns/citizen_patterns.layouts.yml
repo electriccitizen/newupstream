@@ -1,6 +1,6 @@
 two_column_sidebar_left:
   label: Two Column Sidebar Left
-  category: OC Patterns Layouts
+  category: Citizen Patterns Layouts
   path: templates/layout
   template: layout--twocol-sideleft
   default_region: content
@@ -13,7 +13,7 @@ two_column_sidebar_left:
       label: Content
 two_column_sidebar_right:
   label: Two Column Sidebar Right
-  category: OC Patterns Layouts
+  category: Citizen Patterns Layouts
   path: templates/layout
   template: layout--twocol-sideright
   default_region: content
@@ -26,7 +26,7 @@ two_column_sidebar_right:
       label: Second
 two_column_sidebar:
   label: Two Column Sidebar
-  category: OC Patterns Layouts
+  category: Citizen Patterns Layouts
   path: templates/layout
   template: layout--twocol-sidebar
   default_region: content

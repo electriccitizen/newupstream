@@ -1,46 +1,42 @@
-uuid: 3f5f525d-7372-4a00-a257-9965cbc384ce
+uuid: 7632b352-77c8-442b-8879-dfc45a436a6d
 langcode: en
 status: true
 dependencies:
   config:
-    - views.view.oc_media
+    - views.view.citizen_media
   module:
     - entity_browser_entity_form
     - views
-_core:
-  default_config_hash: jl-pdt5m8vOZ_hBGJd9o5IC6T2YI9nhToRh1AjuHgbo
 name: image_browser
 label: 'Image Browser'
 display: modal
 display_configuration:
   width: ''
-  height: '500'
+  height: '600'
   link_text: 'Select Image'
-  auto_open: true
+  auto_open: false
 selection_display: no_display
-selection_display_configuration:
-  view: null
-  view_display: null
+selection_display_configuration: {  }
 widget_selector: tabs
 widget_selector_configuration: {  }
 widgets:
-  afdf7119-d896-4771-beae-64a5d472c2ed:
+  282e3a6e-2d42-46f8-80b7-fb6d9f42108c:
     settings:
-      view: oc_media
+      view: citizen_media
       view_display: image_browser
-      submit_text: Place
+      submit_text: Use
       auto_select: false
-    uuid: afdf7119-d896-4771-beae-64a5d472c2ed
+    uuid: 282e3a6e-2d42-46f8-80b7-fb6d9f42108c
     weight: 1
     label: Library
     id: view
-  44435eab-d7dc-4688-a6c5-4f8b9b912f1c:
+  7812caad-e677-48f5-a3f1-baabd9174ae8:
     settings:
       entity_type: media
       bundle: image
-      form_mode: media_browser
-      submit_text: Save
-    uuid: 44435eab-d7dc-4688-a6c5-4f8b9b912f1c
+      form_mode: default
+      submit_text: Use
+    uuid: 7812caad-e677-48f5-a3f1-baabd9174ae8
     weight: 2
-    label: Upload
+    label: 'Add Image'
     id: entity_form

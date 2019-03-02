@@ -33,9 +33,9 @@ third_party_settings:
                   link_to_entity: false
                 third_party_settings: {  }
               context_mapping:
-                entity: '@user.current_user_context:current_user'
+                entity: layout_builder.entity
             additional: {  }
-            weight: 1
+            weight: 2
           15bb0817-5a8c-4d8b-ab0c-f68dffd9a15d:
             uuid: 15bb0817-5a8c-4d8b-ab0c-f68dffd9a15d
             region: content
@@ -53,27 +53,28 @@ third_party_settings:
                   timezone: UTC
                 third_party_settings: {  }
               context_mapping:
-                entity: '@user.current_user_context:current_user'
+                entity: layout_builder.entity
             additional: {  }
-            weight: 2
-          fad33807-db64-4118-bd3c-f961fe16c847:
-            uuid: fad33807-db64-4118-bd3c-f961fe16c847
+            weight: 3
+          d8b20550-97cf-4509-864c-e07f5f48048d:
+            uuid: d8b20550-97cf-4509-864c-e07f5f48048d
             region: content
             configuration:
-              id: 'field_block:user:user:field_user_image'
-              label: 'User Image'
+              id: 'field_block:user:user:uid'
+              label: 'User ID'
               provider: layout_builder
               label_display: '0'
               formatter:
                 label: hidden
-                type: entity_reference_entity_view
+                type: number_integer
                 settings:
-                  view_mode: square
+                  thousand_separator: ''
+                  prefix_suffix: true
                 third_party_settings: {  }
               context_mapping:
-                entity: '@user.current_user_context:current_user'
+                entity: layout_builder.entity
             additional: {  }
-            weight: 0
+            weight: 1
       -
         layout_id: layout_onecol
         layout_settings: {  }
@@ -93,7 +94,7 @@ third_party_settings:
                   link_to_entity: false
                 third_party_settings: {  }
               context_mapping:
-                entity: '@user.current_user_context:current_user'
+                entity: layout_builder.entity
             additional: {  }
             weight: 0
           0f963135-4282-4c8d-b058-26a5bc59f354:
