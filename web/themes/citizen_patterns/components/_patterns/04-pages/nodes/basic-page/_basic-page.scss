@@ -4,15 +4,10 @@
 .node-page.node-content{
 	
 	.block-field-banner{
-		margin-bottom: $spaceLg;
-	}
-	.block-field.block-title{
-		@include centerTitle;
+		@include edgeToEdge;
 	}
 
 	.block-body{
-		padding-left: 0;
-		padding-right: 0;
 		max-width: 100%;
 	}
 

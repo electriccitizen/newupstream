@@ -2,40 +2,9 @@
    EVENT NODE
 ================ */
 .node-event.node-content{
-	//image, title, event date
-	.node-section#section-2{
-		.layout__region--content{
-			@include textContent;
-			margin-bottom: $spaceLg;
-			@include safeFlex(row,wrap,center,null);
-		}
-	}
-	.block-field-banner{
-		width: 350px;
-		@include onlySmall{
-			margin-bottom: $spaceMd;
-		}
-	}
-	.block-field.block-title{
-		text-align: center;
-		width: 100%;
-		@include tab{
-			text-align: left;
-			.has-main-image &{
-				padding-left: 40px;
-				@include calc(width, "100% - 350px");
-			}
-		}
-		h1{
-			margin-bottom: .25em;
-		}
-		.metatext{
-			@include textDate;
-		}
-	}
+	
 	.block-field-event-location{
 		@include textContent;
-		margin-bottom: $spaceLg;
 		//hide long/lat title
 		.geolocation-google-map{
 			.location-title{
@@ -43,4 +12,5 @@
 			}
 		}
 	}
-}//end news
+
+}//end event

@@ -2,24 +2,7 @@
    SUPPORT BOOK NODE
 ===================== */
 .node-support-book.node-content{
-	.main-node-content{
-		@include sectionLimit;
-		.node-section{
-			padding-left: $siteMarginMobile;
-			padding-right: $siteMarginMobile;
-		}
-	}
-
-	.block-field.block-title{
-		max-width: $textMax;
-	}
-
-	//body field
-	.block-field.block-body{
-		padding-left: 0;
-		padding-right: 0;
-		max-width: none;
-	}
+	
 
 	//restricted access message
 	&:not(.logged-in){

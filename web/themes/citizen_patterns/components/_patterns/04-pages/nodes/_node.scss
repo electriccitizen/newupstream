@@ -1,13 +1,6 @@
 /* ===============
    NODES GLOBAL
 =================== */
-@mixin centerTitle{
-	padding-left: $siteMarginMobile;
-	padding-right: $siteMarginMobile;
-	max-width: $contentStop;
-	text-align: center;
-	@include auto;
-}
 
 /* GLOBAL SECTIONS
 -------------------- */
@@ -21,9 +14,7 @@
 }//end section limit
 
 @mixin textContent{
-	max-width: $textMax + 40px;
-	padding-left: $siteMarginMobile;
-	padding-right: $siteMarginMobile;
+	max-width: $textMax;
 	@include auto;
 }
 

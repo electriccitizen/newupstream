@@ -3,35 +3,5 @@
 ================ */
 .node-news.node-content{
 
-	//image, title, post date
-	.node-section#section-2{
-		.layout__region--content{
-			margin-bottom: $spaceLg;
-			@include textContent;
-			@include safeFlex(row,wrap,center,null);
-		}
-	}
-	.block-field-banner{
-		width: 350px;
-		@include onlySmall{
-			margin-bottom: $spaceMd;
-		}
-	}
-	.block-field.block-title{
-		text-align: center;
-		width: 100%;
-		@include tab{
-			text-align: left;
-			.has-main-image &{
-				padding-left: 40px;
-				@include calc(width, "100% - 350px");
-			}
-		}
-		h1{
-			margin-bottom: 1rem;
-		}
-		.metatext{
-			@include textDate;
-		}
-	}
+	
 }//end news

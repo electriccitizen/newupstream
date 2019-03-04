@@ -3,73 +3,8 @@
 ===================== */
 .node-blog.node-content{
 
-	//title author date
-	.block-field.block-title{
-		@include centerTitle;
-		h1{
-			margin-bottom: .5rem;
-		}
-		.metatext{
-			@include textDate;
-			padding: 0 $siteMarginMobile;
-			margin-bottom: $spaceMd;
-		}
-	}//end title block
 	
-	//add to any block positioning
-	.block-addtoany_block{
-		padding: 0 $siteMarginMobile;
-		text-align: right;
-		margin-top: -3px;
-		@include sectionLimit;
-		margin-bottom: $spaceLg;
-	}
-
-	//tags
-	.block-field-tags{
-		@include smaller;
-		@include textContent;
-		margin-bottom: $spaceXs;
-		.label{
-			font-weight: $heavy;
-			margin-right: 1rem;
-		}
-		.tag-list{
-			a{
-				@include transAll(.3s);
-			}
-		}
-	}//end tags
-
-	.block-flippy-block{
-		@include sectionLimit;
-		margin-bottom: $spaceLg;
-	}
-
 
 }//end blog post
 
 
-/* PATTERN LAB ONLY
----------------- */
-.pl{
-	.block-addtoany-block{
-		@include tab{
-			bottom: 12px !important;
-		}
-		& > span{
-			font-size: 0;
-			margin-top: 2px;
-			span{
-				display: inline-block;
-				font-size: initial;
-				padding: 0 1px; 
-				.icon{
-					height: 32px;
-					width: 32px;
-					@include a2aSize;
-				}
-			}
-		}
-	}//end add to any block
-}//end pl

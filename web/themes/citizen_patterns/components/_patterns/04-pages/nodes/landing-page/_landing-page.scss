@@ -7,12 +7,9 @@
 	.block-field-banner{
 		opacity: 0;
 		@include animation('fadeIn 1.2s 1 forwards');
-		margin-bottom: $spaceLg;
+		@include edgeToEdge;
 	}
-	.block-title{
-		@include centerTitle;
-	}
-
+	
 }//end landing-page
 
 
