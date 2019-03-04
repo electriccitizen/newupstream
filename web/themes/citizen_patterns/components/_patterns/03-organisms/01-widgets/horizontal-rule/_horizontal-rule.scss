@@ -3,6 +3,8 @@
 ==================== */
 
 .paragraph--type--horizontal-rule{
+	max-width: $textMax;
+	@include auto;
 	hr{
 		border-top: 1px solid $borderRule;
 	}
