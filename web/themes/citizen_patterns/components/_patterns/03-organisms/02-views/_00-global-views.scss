@@ -4,6 +4,11 @@
 
 @mixin inlineImageRow{
 	@include safeFlex(row,wrap,start,start);
+	&:not(:last-child){
+		padding-bottom: $spaceLg;
+		border-bottom: 1px solid $borderRule;
+		margin-bottom: $spaceLg;
+	}
 	.views-field{
 		width: 100%;
 		&.views-field-field-banner{
@@ -16,6 +21,7 @@
 			&.views-field-field-banner{
 				width: 35%;
 				padding-right: 40px;
+				margin-bottom: 0;
 			}
 			&.views-field:not(.views-field-field-banner){
 				width: 65%;
