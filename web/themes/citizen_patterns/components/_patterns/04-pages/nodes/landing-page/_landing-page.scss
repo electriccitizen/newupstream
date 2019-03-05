@@ -9,16 +9,8 @@
 		@include animation('fadeIn 1.2s 1 forwards');
 		@include edgeToEdge;
 	}
-	
+
 }//end landing-page
 
 
-/* PATTERN LAB ONLY
--------------------- */
-.pl .node--type-landing_page{
-	.field--name-field-paragraphs{
-		.pl-spacer{
-			margin-top: 0;
-		}
-	}
-}
+
