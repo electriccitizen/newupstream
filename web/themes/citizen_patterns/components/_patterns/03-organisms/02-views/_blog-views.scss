@@ -37,6 +37,10 @@
 
 	//date and author
 	.views-field-nothing{
+		.title{
+			@include heading4;
+			margin-bottom: $spaceXs;
+		}
 		.metatext{
 			@include textDate;
 			margin-bottom: $spaceXs;
@@ -47,7 +51,7 @@
 			}
 		}
 		.views-field-field-tags{
-			@include smaller;
+			font-size: 1.6rem;
 			.inline-label{
 				font-weight: $heavy;
 				margin-right: 1rem;

@@ -106,7 +106,7 @@ body {
 /* ADMIN NODE EDIT TABS
 ----------------- */
 #block-citizen-patterns-local-tasks{
-	max-width: $contentStop;
+	max-width: $contentStop + 40px;
 	padding: 30px $siteMarginMobile 0;
 	position: relative;
 	@include auto;

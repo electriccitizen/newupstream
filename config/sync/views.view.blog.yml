@@ -883,7 +883,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<h2>{{ title }}</h2>\r\n<div class=\"metatext\"><span class=\"date\">{{ created }}</span>{{ field_author }}</div>\r\n{% if body %}\r\n<div class=\"views-field-body\">{{ body }}</div>\r\n{% endif %}\r\n{% if field_tags %}\r\n<div class=\"views-field-field-tags\">\r\n <span class=\"views-field-label inline-label\">Tags:</span>\r\n  {{ field_tags }}\r\n</div>\r\n{% endif %}"
+            text: "<div class=\"title\">{{ title }}</div>\r\n<div class=\"metatext\"><span class=\"date\">{{ created }}</span>{{ field_author }}</div>\r\n{% if body %}\r\n<div class=\"views-field-body\">{{ body }}</div>\r\n{% endif %}\r\n{% if field_tags %}\r\n<div class=\"views-field-field-tags\">\r\n <span class=\"views-field-label inline-label\">Tags:</span>\r\n  {{ field_tags }}\r\n</div>\r\n{% endif %}"
             make_link: false
             path: ''
             absolute: false
