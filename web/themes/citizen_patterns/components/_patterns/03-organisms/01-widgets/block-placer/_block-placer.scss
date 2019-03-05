@@ -4,8 +4,10 @@
 .paragraph--type--block-placer{
 	.field-block{
 		.field.body{
-			max-width: $textMax;
-			@include auto;
+			.layout:not(.layout--twocol-sidebar) &{
+				max-width: $textMax;
+				@include auto;
+			}
 		}
 	}
 }//end paragraph-block-placer

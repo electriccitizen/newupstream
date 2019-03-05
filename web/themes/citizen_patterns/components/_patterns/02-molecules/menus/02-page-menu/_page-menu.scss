@@ -10,7 +10,8 @@
 		position: relative;
 		padding: 1rem $siteMarginMobile;
 		background: $lightGrey;
-		@include onlySmall{
+		max-width: none;
+		@include mobileStop{
 			padding: 2rem;
 			@include edgeToEdge;
 		}	 
@@ -24,7 +25,7 @@
 	//top level
 	#page-menu-wrapper{
 		display: none;
-		@include onlySmall{
+		@include mobileStop{
 			padding-left: $siteMarginMobile;
 			padding-right: $siteMarginMobile;
 			max-width: 440px;

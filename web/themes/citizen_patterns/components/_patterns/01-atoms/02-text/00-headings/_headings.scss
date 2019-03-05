@@ -28,10 +28,9 @@ $h6Sm: 18px;
 ------------------ */
 @mixin headerGlobals{
 	line-height: 1.15;
-	margin-bottom: $spaceXs;
-	margin-top: 0;
 	font-weight: $heavy;
 	font-family: $header;
+	margin: 0;
 	font-feature-settings: "liga", "dlig";
 }
 
@@ -40,7 +39,6 @@ $h6Sm: 18px;
 	@include headerGlobals;
 	font-family: $displayHeader;
 	font-size: $h1Sm;
-	margin-bottom: $spaceXl;
 	@include tab{
 		font-size: $h1Mid;
 	}
@@ -103,18 +101,30 @@ h1 {
 
 h2{
 	@include heading2;
+	.text-long &,.text-with-summary &{
+		margin-bottom: $spaceLg;
+	}
 }
 
 h3{
 	@include heading3;
+	.text-long &,.text-with-summary &{
+		margin-bottom: $spaceMd;
+	}
 }
 
 h4{
 	@include heading4;
+	.text-long &,.text-with-summary &{
+		margin-bottom: $spaceSm;
+	}
 }
 
 h5{
 	@include heading5;
+	.text-long &,.text-with-summary &{
+		margin-bottom: $spaceXs;
+	}
 }
 
 h6{

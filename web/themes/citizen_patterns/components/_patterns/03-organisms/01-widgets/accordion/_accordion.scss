@@ -3,10 +3,9 @@
 ================= */
 
 .paragraph--type--accordion-group{
-	max-width: $textMax;
-	@include auto;
-	.layout:not(.layout--onecol) &{
-		max-width: 100%;
+	.layout:not(.layout--twocol-sidebar) &{
+		max-width: $textMax;
+		@include auto;
 	}
 }
 

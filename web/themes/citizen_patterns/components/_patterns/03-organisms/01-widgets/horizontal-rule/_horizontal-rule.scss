@@ -3,8 +3,10 @@
 ==================== */
 
 .paragraph--type--horizontal-rule{
-	max-width: $textMax;
-	@include auto;
+	.layout:not(.layout--twocol-sidebar) &{
+		max-width: $textMax;
+		@include auto;
+	}
 	hr{
 		border-top: 1px solid $borderRule;
 	}

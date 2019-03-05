@@ -3,8 +3,10 @@
 ================ */
 
 .paragraph--type--form{
-	max-width: $textMax;
-	@include auto;
+	.layout:not(.layout--twocol-sidebar) &{
+		max-width: $textMax;
+		@include auto;
+	}
 	form{
 		& > .js-form-item{
 			margin-bottom: $spaceSm;

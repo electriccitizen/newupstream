@@ -2,7 +2,6 @@
    Section Layouts
 =================== */
 .layout-content{
-	padding-bottom: 5rem;
 	padding-left: $siteMarginMobile;
 	padding-right: $siteMarginMobile;
 }
@@ -11,6 +10,14 @@
 		margin-bottom: $elementSpace;
 	}
 }
+.node-section:last-child{
+	.layout__region:last-child{
+		.section.background:last-child{
+			margin-bottom: -$elementSpace;
+		}
+	}
+}
+
 
 /* ONE COLUMN DEFAULT LAYOUT */
 .layout--onecol{

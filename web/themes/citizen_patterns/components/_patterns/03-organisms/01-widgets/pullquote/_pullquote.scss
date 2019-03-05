@@ -2,8 +2,10 @@
 	PULLQUOTE WIDGET
 ======================= */
 .paragraph--type--pullquote{
-	max-width: $textMax;
-	@include auto;
+	.layout:not(.layout--twocol-sidebar) &{
+		max-width: $textMax;
+		@include auto;
+	}
 	.widget-title{
 		margin-bottom: $spaceMd;
 	}

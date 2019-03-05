@@ -7,6 +7,12 @@
 		@include edgeToEdge;
 	}
 
+	.block-title{
+		max-width: $textMax;
+		@include auto;
+		text-align: center;
+	}
+
 	.block-body{
 		max-width: 100%;
 	}

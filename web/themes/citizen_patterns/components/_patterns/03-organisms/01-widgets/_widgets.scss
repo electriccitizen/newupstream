@@ -4,14 +4,13 @@
 
 //widgets parent field
 .block-field-paragraphs{
-	overflow: hidden;
 	//override layout padding
 	@include edgeToEdge;
 	// preserve layout padding and prevent backgrounds from overflowing when next to sidebars
 	.layout.layout--twocol-sidebar &{
-		@include tab{
-			@include edgeReset;
-		}
+		// @include tab{
+		// 	@include edgeReset;
+		// }
 	}
 	.field-paragraphs{
 		//use flex to support layout field
