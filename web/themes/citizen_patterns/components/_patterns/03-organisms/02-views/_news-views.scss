@@ -14,6 +14,10 @@
 		.views-row{
 			@include inlineImageRow;
 			.views-field-nothing{
+				.title{
+					@include heading4;
+					margin-bottom: $spaceXs;
+				}
 				.date{
 					@include textDate;
 					margin-bottom: $spaceXs;

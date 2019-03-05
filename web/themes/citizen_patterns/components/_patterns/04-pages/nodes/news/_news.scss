@@ -3,5 +3,37 @@
 ================ */
 .node-news.node-content{
 
+	#section-1,#section-2{
+		max-width: $contentStop;
+		@include auto;
+		@include clearFix;
+	}
+	
+	.block-field-banner{
+		max-width: 350px;
+		@include auto;
+		@include tab{
+			float: left;
+			@include edgeReset;
+		}
+	}
+
+	.block-title{
+		.has-main-image &{
+			@include tab{
+				margin-left: 370px;
+			}
+		}
+	}
+
+
+	.block-created{
+		@include textDate;
+		.has-main-image &{
+			@include tab{
+				margin-left: 370px;
+			}
+		}
+	}
 	
 }//end news

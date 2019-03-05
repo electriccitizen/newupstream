@@ -67,18 +67,4 @@ footer {
 }//end footer
 
 
-/* LAYOUT CONTAINER > MAIN
------------------- */
-//set spacing for the main layout container to position footer at bottom on shorter pages
-//(min height to 100vh - header and footer)
-
-.layout-container > main{
-	@include calc(min-height, "100vh - 378px");
-	@include tab{
-		@include calc(min-height, "100vh - 277px");
-	}
-	@include desk{
-		@include calc(min-height, "100vh - 294px");
-	}
-}
 

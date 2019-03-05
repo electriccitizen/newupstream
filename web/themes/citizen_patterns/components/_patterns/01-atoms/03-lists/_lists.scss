@@ -2,7 +2,7 @@
 		LISTS
 ================= */
 
-.field.text-with-summary,.field,.text-long{
+.text-with-summary,.text-long{
 	ul,ol {
 		//overflow hidden is needed for lists next to floated elements
 		overflow: hidden;
