@@ -43,7 +43,7 @@
 		h2.block-title{
 			@include inlineBlockTitle;
 		}
-		&:not(:last-child){
+		&:not(:nth-last-child(2)){
 			margin-bottom: $spaceXs;
 		}
 	}//end email
@@ -54,5 +54,12 @@
 			@include inlineBlockTitle;
 		}
 	}//end phone
+
+	.block-field.block-body{
+		@extend .block-field.block-title;
+		@include tab{
+			margin-right: 0;
+		}
+	}
 
 }//end news

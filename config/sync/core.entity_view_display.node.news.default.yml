@@ -94,10 +94,6 @@ third_party_settings:
                 entity: layout_builder.entity
             additional: {  }
             weight: 2
-      -
-        layout_id: layout_onecol
-        layout_settings: {  }
-        components:
           af8cc179-e79e-4906-b4e9-7f4bf1ee1dea:
             uuid: af8cc179-e79e-4906-b4e9-7f4bf1ee1dea
             region: content
@@ -114,7 +110,7 @@ third_party_settings:
               context_mapping:
                 entity: layout_builder.entity
             additional: {  }
-            weight: 0
+            weight: 3
     allow_custom: false
     is_enabled: true
     enabled: true

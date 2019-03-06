@@ -32,6 +32,13 @@
 		@include textDate;
 	}
 
+	.block-field.block-body{
+		@extend .block-field.block-title;
+		@include tab{
+			margin-right: 0;
+		}
+	}
+
 	.block-field-event-location{
 		@include textContent;
 		//hide long/lat title
