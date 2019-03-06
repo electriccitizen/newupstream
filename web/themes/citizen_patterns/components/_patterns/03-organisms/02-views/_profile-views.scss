@@ -8,10 +8,11 @@
 	.view-content{
 		@include safeFlex(row,wrap,null,null);
 		@include bleed(30px);
-		padding-bottom: 6rem;
+		padding-bottom: 3rem;
+		margin-bottom: -$spaceLg;
 	}
 	.view-empty{
-		padding-bottom: 6rem;
+		padding-bottom: 3rem;
 	}
 	.views-row{
 		width: 100%;
@@ -32,8 +33,13 @@
 
 	.views-field-field-profile-image{
 		margin-bottom: $spaceMd;
-		img{
-			display: block;
-		}
+	}
+
+	.views-field-title{
+		@include heading4;
+	}
+	.views-field-field-position{
+		@include textDate;
 	}
 }//end profiles
+

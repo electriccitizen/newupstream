@@ -18,7 +18,7 @@
 		}
 	}
 
-	.block-title{
+	.block-field.block-title{
 		.has-main-image &{
 			@include tab{
 				margin-left: 370px;
@@ -28,12 +28,8 @@
 
 
 	.block-created{
+		@extend .block-field.block-title;
 		@include textDate;
-		.has-main-image &{
-			@include tab{
-				margin-left: 370px;
-			}
-		}
 	}
 	
 }//end news

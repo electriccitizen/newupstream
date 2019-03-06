@@ -18,7 +18,7 @@
 		}
 	}
 
-	.block-title{
+	.block-field.block-title{
 		.has-main-image &{
 			@include tab{
 				margin-left: 370px;
@@ -28,12 +28,8 @@
 
 
 	.block-field-date{
+		@extend .block-field.block-title;
 		@include textDate;
-		.has-main-image &{
-			@include tab{
-				margin-left: 370px;
-			}
-		}
 	}
 
 	.block-field-event-location{
@@ -44,6 +40,6 @@
 				display: none;
 			}
 		}
-	}
+	}//end event location
 
 }//end event

@@ -7,13 +7,13 @@
 		@include edgeToEdge;
 	}
 
-	.block-title{
+	.block-field.block-title{
 		max-width: $textMax;
 		@include auto;
 		text-align: center;
 	}
 
-	.block-body{
+	.block-field.block-body{
 		max-width: 100%;
 	}
 

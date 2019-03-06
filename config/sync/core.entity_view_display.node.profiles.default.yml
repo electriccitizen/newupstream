@@ -37,26 +37,6 @@ third_party_settings:
               context_mapping: {  }
             additional: {  }
             weight: 0
-          9fbc4896-5302-4642-a4cd-f68eaea8384e:
-            uuid: 9fbc4896-5302-4642-a4cd-f68eaea8384e
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'extra_field_block:node:profiles:links'
-            additional: {  }
-            weight: 1
-          e268c62b-b122-44d3-a7ee-51bdbdc37c52:
-            uuid: e268c62b-b122-44d3-a7ee-51bdbdc37c52
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'extra_field_block:node:profiles:links'
-            additional: {  }
-            weight: 2
       -
         layout_id: layout_onecol
         layout_settings: {  }
@@ -120,9 +100,9 @@ third_party_settings:
             region: content
             configuration:
               id: 'field_block:node:profiles:field_email'
-              label: Email
+              label: 'E:'
               provider: layout_builder
-              label_display: '0'
+              label_display: visible
               formatter:
                 label: hidden
                 type: email_mailto
@@ -137,9 +117,9 @@ third_party_settings:
             region: content
             configuration:
               id: 'field_block:node:profiles:field_phone'
-              label: Phone
+              label: 'P:'
               provider: layout_builder
-              label_display: '0'
+              label_display: visible
               formatter:
                 label: hidden
                 type: telephone_link

@@ -92,6 +92,15 @@ $h6Sm: 18px;
 	@include auto;
 }
 
+@mixin inlineBlockTitle{
+	@include blockTitle;
+	margin-bottom: 0;
+	display: inline-block;
+	& + *{
+		display: inline;
+	}
+}
+
 
 /* HEADING STYLING
 ------------------- */
