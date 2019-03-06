@@ -3,6 +3,15 @@
 ===================== */
 .node-support-book.node-content{
 	
+	.block-field.block-title{
+		max-width: $textMax;
+		@include auto;
+		text-align: center;
+	}
+
+	.block-field.block-body{
+		max-width: 100%;
+	}
 
 	//restricted access message
 	&:not(.logged-in){
@@ -30,14 +39,3 @@
 	}//end restricted access
 
 }//end support book
-
-
-/* PATTERN LAB ONLY
------------------------ */
-.pl .node--type-support_book{
-	.sidebar{
-		.pl-spacer{
-			margin-top: 0;
-		}
-	}
-}

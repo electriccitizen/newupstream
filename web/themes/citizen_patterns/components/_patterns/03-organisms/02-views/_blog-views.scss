@@ -10,10 +10,10 @@
 	.view-content{
 		@include safeFlex(row,wrap,null,null);
 		@include bleed(30px);
-		padding-bottom: 6rem;
+		padding-bottom: $elementSpace;
 	}
 	.view-empty{
-		padding-bottom: 6rem;
+		padding-bottom: $elementSpace;
 	}
 	.views-row{
 		width: 100%;
@@ -29,10 +29,7 @@
 	}
 
 	.views-field-field-banner{
-		margin-bottom: $spaceMd;
-		img{
-			display: block;
-		}
+		margin-bottom: $spaceSm;
 	}
 
 	//date and author

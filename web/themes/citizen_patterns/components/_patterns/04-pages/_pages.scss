@@ -5,23 +5,14 @@ html > body:not(.is-front):not(.path-node):not(.node-type-page){
 	.layout-content{
 		max-width: $contentStop + 40px;
 		@include auto;
-		padding: 0 $siteMarginMobile 6rem;
+		padding: 0 $siteMarginMobile $elementSpace;;
 	}
 	#block-citizen-patterns-content{
-		padding-top: $spaceLg;
+		padding-top: $elementSpace;
 	}
 	.block-page-title-block{
-		margin-bottom: $spaceLg;
+		margin-bottom: $elementSpace;
 	}
 
 }//system pages
 
-
-/* FRONT
--------------- */
-.is-front{
-	//end banner section
-	.node-section#section-2{
-		margin-top: $spaceLg;
-	}//banner section
-}//end front

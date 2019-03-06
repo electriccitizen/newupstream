@@ -25,12 +25,10 @@
 		padding: 2em $siteMarginMobile 0 !important; 
 		.site-search{
 			h1{
-				@include tab{
-					color: $black;
-				}
+				margin-bottom: $elementSpace;
 			}
 			.search-page-block{
-				margin-bottom: $spaceLg;
+				margin-bottom: $elementSpace;
 				.search-form-outer{
 					#views-exposed-form-site-search-search-results{
 						display: block;
@@ -52,7 +50,7 @@
 				width: 100%;
 				max-width: $textMax;
 				@include auto;
-				margin-bottom: $spaceXl;
+				margin-bottom: $elementSpace;
 			}
 		}//site-search
 	}//layout content

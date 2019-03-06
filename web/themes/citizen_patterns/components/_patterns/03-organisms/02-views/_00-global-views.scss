@@ -12,10 +12,7 @@
 	.views-field{
 		width: 100%;
 		&.views-field-field-banner{
-			margin-bottom: $spaceMd;
-			img{
-				display: block;
-			}
+			margin-bottom: $spaceSm;
 		}	
 		@include smallTab{
 			&.views-field-field-banner{
