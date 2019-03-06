@@ -76,6 +76,7 @@ class SiteSearchForm extends FormBase {
     ];
     $form['actions']['submit'] = [
       '#type' => 'submit',
+      '#id' => 'edit-site-search-submit',
       '#value' => $this->t('Search'),
       // Prevent op from showing up in the query string.
       '#name' => '',

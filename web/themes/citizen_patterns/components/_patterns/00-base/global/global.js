@@ -43,6 +43,36 @@ Drupal.behaviors.removeEmptyRegions = {
   }
 }
 
+/* NEWLETTER SIGNUP FORM ACCESSIBILITY EDITS
+------------------ */
+Drupal.behaviors.signUpAccess = {
+  attach: function (context, settings) {
+    $("#mc-embedded-subscribe-form", context).once('mailchimp').each(function(){  
+      $('input[type="text"').attr('aria-label', 'hidden-text');
+    });
+    $(".g-recaptcha", context).once('recaptchaAccess').each(function(){  
+      $(document).ready(function(){
+        setTimeout(function(){
+        $(".g-recaptcha iframe").removeAttr('role');
+        $('#g-recaptcha-response').attr('aria-label', 'Recaptcha Response');
+      }, 20);
+      });
+    });
+  }
+}
+Drupal.behaviors.recaptchaAccess = {
+  attach: function (context, settings) {
+    $(".constant-form", context).once('recaptchaAccess').each(function(){  
+      $(document).ready(function(){
+        setTimeout(function(){
+        $(".g-recaptcha iframe").removeAttr('role');
+        $('#g-recaptcha-response').attr('aria-label', 'Recaptcha Response');
+      }, 20);
+      });
+    });
+  }
+}
+
 
 /* BACK TO TOP
 ------------------ */
