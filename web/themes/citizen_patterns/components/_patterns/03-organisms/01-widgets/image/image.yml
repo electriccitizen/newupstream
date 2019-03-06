@@ -1,11 +1,11 @@
 widget_title:
   "Image Widget"
-image_style:
-  "square"
+image_size:
+  "medium"
 
 #for proper pattern lab styling, enter the drupal dimensions of the image style in the image_src url
 image_src:
-  http://placeimg.com/350/350/people
+  http://placeimg.com/800/500/people
 image_caption:
   "This is the caption"
 image_link:

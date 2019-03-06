@@ -54,7 +54,7 @@ display:
       pager:
         type: full
         options:
-          items_per_page: 5
+          items_per_page: 8
           offset: 0
           id: 0
           total_pages: null
@@ -185,7 +185,7 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: h2
+          element_type: ''
           element_class: ''
           element_label_type: ''
           element_label_class: ''

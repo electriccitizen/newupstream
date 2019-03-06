@@ -1,21 +1,19 @@
-uuid: 83913388-246e-494e-a6ba-608488ed5464
+uuid: b24774e7-d96e-47a1-95e5-e0f58b2aeda1
 langcode: en
 status: true
 dependencies:
   module:
     - options
     - paragraphs
-_core:
-  default_config_hash: UxLojMWFh69NfpjxipDVsfXA1kRIuyLHb47DeJtJZU8
-id: paragraph.field_image_style
-field_name: field_image_style
+id: paragraph.field_image_size
+field_name: field_image_size
 entity_type: paragraph
 type: list_string
 settings:
   allowed_values:
     -
       value: default
-      label: 'Original Image'
+      label: Original
     -
       value: small
       label: Small
@@ -28,12 +26,6 @@ settings:
     -
       value: full
       label: Full
-    -
-      value: square
-      label: Square
-    -
-      value: banner
-      label: Banner
   allowed_values_function: ''
 module: options
 locked: false

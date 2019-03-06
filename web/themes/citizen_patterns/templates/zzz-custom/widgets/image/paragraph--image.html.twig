@@ -39,41 +39,26 @@
 
 {% extends "paragraph.html.twig" %}
 
-{% set style = content.field_image_style[0]['#markup'] %}
+{% set size = content.field_image_size[0]['#markup'] %}
 
-
-
-{# Define image style based on picker #}
-{%- if (style == 'small') -%}
+{# Define image size based on picker #}
+{%- if (size == 'small') -%}
 	{% set image =  drupal_entity('media', paragraph.field_image.0.target_id, 'small') %}
-
-{%- elseif (style == 'medium') -%}
+{%- elseif (size == 'medium') -%}
 	{% set image =  drupal_entity('media', paragraph.field_image.0.target_id, 'medium') %}
-
-{%- elseif (style == 'large') -%}
+{%- elseif (size == 'large') -%}
 	{% set image =  drupal_entity('media', paragraph.field_image.0.target_id, 'large') %}
-
-{%- elseif (style == 'full') -%}
+{%- elseif (size == 'full') -%}
 	{% set image =  drupal_entity('media', paragraph.field_image.0.target_id, 'full') %}
-
-{%- elseif (style == 'square') -%}
-	{% set image =  drupal_entity('media', paragraph.field_image.0.target_id, 'square') %}
-
-{%- elseif (style == 'banner')-%}
-	{% set image =  drupal_entity('media', paragraph.field_image.0.target_id, 'banner') %}
-
-{%- elseif (style == 'default') -%}
+{%- elseif (size == 'default') -%}
 	{% set image =  drupal_entity('media', paragraph.field_image.0.target_id, 'default') %}
-
 {%- endif -%}
-
-
 
 {% block widgetContent %}
 	{% embed "@organisms/01-widgets/image/image.twig" 
 		with{
 			widget_title: content.field_widget_title.0['#context'].value,
-			image_style: style,
+			image_size: size,
 			image_link: content.field_link.0['#url'],
 			image_aria: content.field_link.0['#title'],
 
@@ -91,7 +76,6 @@
 		{% block plwidgetclose %}{# patternlab specifc html #}{% endblock %}
 
 	{% endembed %}
-
 	
 {% endblock %}
 

@@ -5,7 +5,7 @@ dependencies:
   config:
     - field.field.paragraph.image.field_admin_description
     - field.field.paragraph.image.field_image
-    - field.field.paragraph.image.field_image_style
+    - field.field.paragraph.image.field_image_size
     - field.field.paragraph.image.field_link
     - field.field.paragraph.image.field_widget_title
     - paragraphs.paragraphs_type.image
@@ -34,8 +34,8 @@ content:
       link: false
     third_party_settings: {  }
     region: content
-  field_image_style:
-    weight: 2
+  field_image_size:
+    weight: 4
     label: hidden
     settings: {  }
     third_party_settings: {  }

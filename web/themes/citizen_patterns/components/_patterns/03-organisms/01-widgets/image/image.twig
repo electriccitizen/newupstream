@@ -12,12 +12,12 @@
 	{% endif %}
 	
 	{% block imageWrapper %}
-		<div class="image-wrapper {{ image_style }}">
+		<div class="image-wrapper {{ image_size }}">
 			{% if image_link %}
 				<a href="{{ image_link }}" aria-label="Go to {{ image_aria }}">
 			{% endif %}
 				{% block image %}
-					<article class="media media-image view-mode-{{ image_style }} pl-image">
+					<article class="media media-image view-mode-{{ image_size }} pl-image">
 						<div class="field-media-image">
 							<img src="{{ image_src }}" />
 							{% if image_caption %}
