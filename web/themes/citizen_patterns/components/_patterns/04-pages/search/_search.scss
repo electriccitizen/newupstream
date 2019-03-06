@@ -22,7 +22,7 @@
 	}
 
 	.layout-content{
-		padding: 2em $siteMarginMobile 0 !important; 
+		
 		.site-search{
 			h1{
 				margin-bottom: $elementSpace;
@@ -44,13 +44,19 @@
 				@include auto;
 				padding-bottom: 1rem;
 				border-bottom: 1px solid $borderRule;
-				margin-bottom: $spaceXs;
+				margin-bottom: $elementSpace;
 			}
 			.view-content,.view-empty{
 				width: 100%;
 				max-width: $textMax;
 				@include auto;
 				margin-bottom: $elementSpace;
+			}
+
+			.views-row{
+				&:not(:last-child){
+					margin-bottom: $elementSpace;
+				}
 			}
 		}//site-search
 	}//layout content

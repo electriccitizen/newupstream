@@ -4,10 +4,10 @@
 
 @mixin inlineImageRow{
 	@include safeFlex(row,wrap,start,start);
+	margin-bottom: $spaceLg;
 	&:not(:last-child){
 		padding-bottom: $spaceLg;
 		border-bottom: 1px solid $borderRule;
-		margin-bottom: $spaceLg;
 	}
 	.views-field{
 		width: 100%;
