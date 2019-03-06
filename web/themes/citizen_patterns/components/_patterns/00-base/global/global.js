@@ -43,36 +43,29 @@ Drupal.behaviors.removeEmptyRegions = {
   }
 }
 
-/* NEWLETTER SIGNUP FORM ACCESSIBILITY EDITS
+/* ACCESSIBILITY TWEAKS
 ------------------ */
+//add label to hidden text input on mailchimp form
 Drupal.behaviors.signUpAccess = {
   attach: function (context, settings) {
     $("#mc-embedded-subscribe-form", context).once('mailchimp').each(function(){  
       $('input[type="text"').attr('aria-label', 'hidden-text');
     });
-    $(".g-recaptcha", context).once('recaptchaAccess').each(function(){  
-      $(document).ready(function(){
-        setTimeout(function(){
-        $(".g-recaptcha iframe").removeAttr('role');
-        $('#g-recaptcha-response').attr('aria-label', 'Recaptcha Response');
-      }, 20);
-      });
-    });
   }
 }
+//remove bad role and add label to recaptcha elements
 Drupal.behaviors.recaptchaAccess = {
   attach: function (context, settings) {
     $(".constant-form", context).once('recaptchaAccess').each(function(){  
       $(document).ready(function(){
         setTimeout(function(){
-        $(".g-recaptcha iframe").removeAttr('role');
-        $('#g-recaptcha-response').attr('aria-label', 'Recaptcha Response');
-      }, 20);
+          $(".g-recaptcha iframe").removeAttr('role');
+          $('#g-recaptcha-response').attr('aria-label', 'Recaptcha Response');
+        }, 20);
       });
     });
   }
 }
-
 
 /* BACK TO TOP
 ------------------ */
@@ -97,6 +90,5 @@ Drupal.behaviors.backToTop = {
     });
   }
 }
-
 
 })(jQuery, Drupal);

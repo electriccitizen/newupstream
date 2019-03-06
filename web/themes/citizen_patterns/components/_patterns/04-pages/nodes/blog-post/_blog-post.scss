@@ -61,9 +61,14 @@
 		@include auto;
 	}
 
+	.block-field.block-body{
+		max-width: $textMax;
+		@include auto;
+	}
+
 	.block-flippy-block{
 		border-top: 1px solid $borderRule;
-		max-width: $contentStop;
+		max-width: $textMax;
 		@include auto;
 	}
 }//end blog post
