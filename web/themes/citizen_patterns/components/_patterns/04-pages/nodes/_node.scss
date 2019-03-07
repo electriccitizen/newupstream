@@ -19,9 +19,3 @@
 }
 
 
-/* BODY
--------------- */
-.node-content .block-body{
-	@include textContent;
-	margin-bottom: $spaceXl;
-}

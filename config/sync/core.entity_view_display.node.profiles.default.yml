@@ -130,10 +130,6 @@ third_party_settings:
                 entity: layout_builder.entity
             additional: {  }
             weight: 6
-      -
-        layout_id: layout_onecol
-        layout_settings: {  }
-        components:
           541f9fd9-f29e-4237-a157-444200651d41:
             uuid: 541f9fd9-f29e-4237-a157-444200651d41
             region: content
@@ -150,7 +146,11 @@ third_party_settings:
               context_mapping:
                 entity: layout_builder.entity
             additional: {  }
-            weight: 0
+            weight: 7
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components: {  }
     allow_custom: false
     is_enabled: true
     enabled: true

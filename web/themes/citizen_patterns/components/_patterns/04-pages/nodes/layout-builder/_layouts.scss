@@ -10,10 +10,13 @@
 		margin-bottom: $elementSpace;
 	}
 }
+
 .node-section:last-child{
 	.layout__region:last-child{
+		margin-bottom: $siteBottomSpace;
 		.section.background:last-child{
-			margin-bottom: -$elementSpace;
+			margin-bottom: -$siteBottomSpace;
+			padding-bottom: $siteBottomSpace;
 		}
 	}
 }

@@ -9,8 +9,10 @@
 	& > *{
 		width: 100%;
 	}
-	.view-content,.view-empty{
+	.view{
 		padding-bottom: $elementSpace;
+	}
+	.view-content{
 		.views-row{
 			@include inlineImageRow;
 			.views-field-nothing{

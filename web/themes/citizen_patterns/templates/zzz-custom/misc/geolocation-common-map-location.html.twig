@@ -9,7 +9,7 @@
 #}
 <div class="geolocation" data-lat="{{ position.lat }}" data-lng="{{ position.lng }}" {% if icon is not empty %} data-icon="{{ icon }}" {% endif %} {% if location_id is not empty %} data-location-id="{{ location_id }}" {% endif %}>
 	{%- if title -%}
-			<h5 class="location-title">{{- title -}}</h5>
+			<div class="location-title">{{- title -}}</div>
 	{%- endif -%}
 	<div class="location-content">
 		{{- content|raw -}}

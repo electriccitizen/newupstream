@@ -1,3 +1,4 @@
+uuid: bb4d8c1f-afb2-4213-9c6d-bf02b072b18c
 langcode: en
 status: open
 dependencies:
@@ -6,6 +7,11 @@ dependencies:
       - webform
   module:
     - antibot
+third_party_settings:
+  antibot:
+    antibot: true
+_core:
+  default_config_hash: oZIx_IHS7gdveuJ3iSbhNY-A1FwlieWPdjJEJz4Wlb4
 open: null
 close: null
 weight: 0
@@ -96,7 +102,7 @@ settings:
   draft_auto_save: false
   draft_saved_message: ''
   draft_loaded_message: ''
-  confirmation_type: inline
+  confirmation_type: message
   confirmation_title: ''
   confirmation_message: 'Your message has been sent.'
   confirmation_url: '<front>'
@@ -245,9 +251,3 @@ handlers:
       sender_mail: ''
       sender_name: ''
       theme_name: ''
-uuid: bb4d8c1f-afb2-4213-9c6d-bf02b072b18c
-third_party_settings:
-  antibot:
-    antibot: true
-_core:
-  default_config_hash: oZIx_IHS7gdveuJ3iSbhNY-A1FwlieWPdjJEJz4Wlb4

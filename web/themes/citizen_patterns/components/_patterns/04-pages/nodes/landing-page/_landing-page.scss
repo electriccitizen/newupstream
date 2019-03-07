@@ -16,6 +16,11 @@
 		text-align: center;
 	}
 
+	.block-field.block-body{
+		max-width: $textMax;
+		@include auto;
+	}
+
 }//end landing-page
 
 

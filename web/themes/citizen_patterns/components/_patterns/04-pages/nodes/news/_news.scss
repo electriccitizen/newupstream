@@ -26,10 +26,16 @@
 		}
 	}
 
-
 	.block-created{
 		@extend .block-field.block-title;
 		@include textDate;
+	}
+
+	.block-field.block-body{
+		@extend .block-field.block-title;
+		@include tab{
+			margin-right: 0;
+		}
 	}
 	
 }//end news

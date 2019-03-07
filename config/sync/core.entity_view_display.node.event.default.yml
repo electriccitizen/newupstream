@@ -98,10 +98,6 @@ third_party_settings:
                 entity: layout_builder.entity
             additional: {  }
             weight: 3
-      -
-        layout_id: layout_onecol
-        layout_settings: {  }
-        components:
           5157183b-4d56-4741-9dde-4201fd1e702f:
             uuid: 5157183b-4d56-4741-9dde-4201fd1e702f
             region: content
@@ -118,7 +114,11 @@ third_party_settings:
               context_mapping:
                 entity: layout_builder.entity
             additional: {  }
-            weight: 0
+            weight: 4
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
           b7759f63-8c59-4aaf-ac98-dd1de48175e4:
             uuid: b7759f63-8c59-4aaf-ac98-dd1de48175e4
             region: content

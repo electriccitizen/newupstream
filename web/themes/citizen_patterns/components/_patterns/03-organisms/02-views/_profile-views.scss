@@ -5,14 +5,12 @@
 /* ALL STAFF
 ------------- */
 .profiles.all-staff{
+	.view{
+		padding-bottom: $elementSpace;
+	}
 	.view-content{
 		@include safeFlex(row,wrap,null,null);
 		@include bleed(30px);
-		padding-bottom: $elementSpace;
-		margin-bottom: -$spaceLg;
-	}
-	.view-empty{
-		padding-bottom: $elementSpace;
 	}
 	.views-row{
 		width: 100%;
