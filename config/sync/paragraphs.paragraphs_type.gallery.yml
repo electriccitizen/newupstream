@@ -3,9 +3,9 @@ langcode: en
 status: true
 dependencies:
   content:
-    - 'file:file:304b018d-bc6d-4a5c-86b4-b6a2ce79e940'
+    - 'file:file:177bead8-d9b7-4b27-ae00-f40fa33a6ac9'
 id: gallery
 label: Gallery
-icon_uuid: 304b018d-bc6d-4a5c-86b4-b6a2ce79e940
+icon_uuid: 177bead8-d9b7-4b27-ae00-f40fa33a6ac9
 description: 'Create a lightbox or slide show photo gallery.'
 behavior_plugins: {  }
