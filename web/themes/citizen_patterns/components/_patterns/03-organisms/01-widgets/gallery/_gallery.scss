@@ -2,29 +2,45 @@
    LIGHTBOX GALLERY WIDGET
 ==================== */
 .gallery-type.Lightbox {
-	text-align: center;
-	//hide the content before lightbox
-	.featherlight-hidden {
-		display: none;
-	}
-	//Image lighbox
-	.image-gal {
-		margin: 0 10px 20px;
-		max-width: 250px;
-		display: inline-block;
-		overflow: hidden;
-		cursor: pointer;
-		img {
-			width: 100%;
-			@include imageHover;
+	.gallery-wrapper{
+		@include safeFlex(row,wrap,start,start);
+		@include bleed(20px);
+		margin-bottom: -20px;
+		//hide the content before lightbox
+		.featherlight-hidden {
+			display: none;
 		}
+		//Image lighbox
+		.image-gal {
+			padding-left: 10px;
+			padding-right: 10px;
+			margin-bottom: 20px;
+			display: inline-block;
+			overflow: hidden;
+			cursor: pointer;
+			width: 100%;
+			@include smallTab{
+				width: 50%;
+			}
+			@include tab{
+				width: 25%;
+			}
+			img {
+				width: 100%;
+				@include imageHover;
+				border: 0px;
+			}
 
-	}//end image lightbox
-	//FEATHERLIGHT OVERLAY THEMING
+		}//end image lightbox
+	}//end gallery-wrapper
+}//end lightbox
+
+//FEATHERLIGHT OVERLAY THEMING
+.featherlight{
 	.featherlight-content {
 		background: $siteBack;
-		padding: 0;
-		border-bottom: 0;
+		padding: 0px !important;
+		border-bottom: 0px !important;
 		margin-left: 5%;
 		margin-right: 5%;
 		//controls
@@ -104,39 +120,12 @@
 			max-width: $textMax;
 			padding: 4rem 6rem;
 		}
-	}
-	//end featherlight content
-	//switch controls to dark for text galleries
-	&.darken {
-		.featherlight-content {
-			.featherlight-close-icon,
-			.featherlight-next,
-			.featherlight-previous {
-				color: rgba(35,35,35,0.6);
-				text-shadow: 2px 2px 3px $lightGrey;
-				span {
-					color: rgba(35,35,35,0.6);
-					text-shadow: 2px 2px 3px $lightGrey;
-				}
-				&:hover {
-					color: $black;
-					text-shadow: 2px 2px 3px rgba(35,35,35,0.6);
-					span {
-						color: $black;
-						text-shadow: 2px 2px 3px rgba(35,35,35,0.6);
-					}
-				}
-			}
-		}
-	}//end darken
-}//end lightbox
+	}//end featherlight content
+}
 
 /* ================
    Slideshow
 =================== */
-
-/* GLOBAL SLIDERS
--------------------------------- */
 
 /* SLIDER MIXINS
 ------------- */
