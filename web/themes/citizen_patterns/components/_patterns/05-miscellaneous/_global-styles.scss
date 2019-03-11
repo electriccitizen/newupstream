@@ -9,7 +9,7 @@ body {
 	}
 	div{
 		box-sizing: border-box;
-		
+
 		*{
 			box-sizing: inherit;
 		}
@@ -26,6 +26,11 @@ body {
 	display: inline;
 }
 
+#block-citizen-patterns-help{
+	padding: 3rem 2rem;
+	max-width: $contentStop;
+	@include auto;
+}
 
 /* MAP PINS
 -------------- */
@@ -195,4 +200,3 @@ body {
 		}
 	}
 }//end modal-element
-

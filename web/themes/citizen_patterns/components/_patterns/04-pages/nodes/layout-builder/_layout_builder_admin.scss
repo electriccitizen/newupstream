@@ -5,39 +5,71 @@
 .builder-label{
 	display: none;
 }
-.layout-section .layout-builder--layout__region{
-	.draggable{
-		margin-bottom: $spaceLg;
-		max-height: 500px;
-		overflow: hidden;
-		min-height: 90px;
-		*{
-			word-break: break-all;
+.layout-section{
+	.remove-section{
+		margin-left: 10px;
+		top: -6px;
+	}
+	.layout-builder--layout__region{
+		margin-bottom: 2rem;
+		.draggable{
+			margin-bottom: $spaceLg;
+			max-height: 500px;
+			overflow: hidden;
+			min-height: 90px;
+			*{
+				word-break: break-all;
+			}
 		}
-	}
-	//hide widget-anchors
-	.widget-anchors{
-		display: none;
-	}
-	//constrain widgets to editing box
-	.field--name-field-paragraphs{
-		@include edgeReset;
-		.section:first-child{
-			margin-top: 0 !important;
+		//hide widget-anchors
+		.widget-anchors{
+			display: none;
 		}
-	}
-	//show visually hidden labels
-	.builder-label{
-		display: inline-block;
-		color: #ffffff;
-		background: #bf0e0e;
-		padding: 4px 8px;
-		margin-bottom: .5rem;
+		//constrain widgets to editing box
+		.field--name-field-paragraphs{
+			@include edgeReset;
+			.section:first-child{
+				margin-top: 0 !important;
+			}
+		}
+		//show visually hidden labels
+		.builder-label{
+			display: table;
+			color: $white;
+			background: $red;
+			padding: 4px 8px;
+			margin-bottom: .5rem;
+		}
 	}
 }//end layout builder section region
 
+//Allow text to wrap down so user can see entire message
+.ui-dialog .ui-dialog-title{
+	white-space: normal;
+}
+
 //style entity block links different than normal block links in settings tray
 #drupal-off-canvas{
+	.block-categories{
+		.links{
+			margin-top: 1rem;
+			background: none;
+			li{
+				background: none;
+			}
+			a{
+				line-height: 1.15;
+				margin-bottom: .75rem;
+				display: block;
+				font-size: 1.8rem;
+				font-family: $bodyFont;
+				background: none;
+				&:hover,&:focus{
+					opacity: .6;
+				}
+			}
+		}
+	}
 	.ui-autocomplete{
 		.ui-menu-item{
 			background: $white;
@@ -48,8 +80,20 @@
 	}
 }
 
-//Allow text to wrap down so user can see entire message
-.ui-dialog .ui-dialog-title{
-	white-space: normal;
+form.layout-builder-revert-overrides{
+	padding: 0 2rem;
+	max-width: $contentStop;
+	@include auto;
+	.form-actions{
+		padding-top: 2rem;
+		input#edit-submit{
+			@include submitButton;
+			margin-right: 2rem;
+		}
+		a#edit-cancel{
+			@include resetButton;
+			font-size: 1.6rem;
+			line-height: 1.5;
+		}
+	}
 }
-
