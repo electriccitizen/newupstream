@@ -1,0 +1,175 @@
+/* ============
+	TEXT
+============ */
+
+/* TEXT MIXINS
+---------------- */
+@mixin baseFontSize{
+	font-size: 2rem;
+}
+
+@mixin xSmaller{
+	font-size: 80%;
+}
+
+@mixin smaller{
+	font-size: 90%;
+}
+
+@mixin larger{
+	font-size: 120%;
+}
+
+@mixin textDate{
+	@include smaller;
+	font-style: italic;
+	font-family: $serif;
+}
+
+@mixin quote{
+	margin: 0 0 $spaceXs;
+	max-width: 740px;
+	position: relative;
+	font-family: $serif;
+	font-style: italic;
+	font-size: 2.8rem;
+	padding-bottom: 10px;
+	@include tab{
+		font-size: 4.2rem;
+		padding-bottom: 0;
+	}
+	p{
+		display: inline;
+	}
+	&:before{
+		color: $transBlack;
+		content: "“";
+		font-size: 14rem;
+		line-height: .1rem;
+		margin-right: 2rem;
+		vertical-align: -6.4rem;
+	}
+	&:after{
+		color: $transBlack;
+		content: "”";
+		font-size: 8rem;
+		line-height: .1rem;
+		vertical-align: -3.2rem;
+	}
+}
+
+/* TYPE STYLES
+--------------- */
+html,code{
+	font-family: $bodyFont;
+	font-size: $em-base;
+	line-height: 1.4;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-kerning: normal;
+	font-synthesis: none;
+}
+
+body {
+	color: $body;
+	margin: 0;
+	@include baseFontSize;
+}
+
+p{
+	margin-top: 0;
+	&:not(:last-child){
+		margin-bottom: $spaceMd;
+	}
+}
+
+a {
+	color: $link;
+	text-decoration: none;
+	&:hover,&:focus {
+		color: $hoverLink;
+		text-decoration: underline;
+		.text-with-summary &,.text-long &{
+			@include transAll(.3s);
+		}
+	}
+}
+
+em{
+	font-style: italic;
+}
+strong{
+	font-weight: $heavy;
+}
+
+figcaption {
+	text-align: center;
+	color: $body;
+	font-size: 1.5rem;
+	font-style: italic;
+}
+
+small{
+	font-size: 80%;
+}
+
+span.highlight{
+	background: $highlighter;
+}
+
+.warning{
+	background: none;
+	padding: 1rem 2rem;
+	margin-bottom: $spaceMd;
+	color: $warning;
+	border: 1px solid $warning;
+	text-align: center;
+}
+
+.hr {
+	border-style: solid;
+	border-width: 1px 0 0;
+	color: currentColor;
+}
+
+blockquote{
+	@include quote;
+}
+
+//clear floats in common long text fields, remove bottom margin from last child, set list spacing
+.text-with-summary,.text-long{
+	& > *:last-child{
+		margin-bottom: 0;
+	}
+	& + *{
+		clear: both;
+	}
+	ul,ol {
+		//overflow hidden is needed for lists next to floated elements
+		overflow: hidden;
+		margin: $spaceXs 0 $spaceMd;
+		padding: 0 0 0 30px;
+		ul,ol{
+			margin: $spaceXs 0;
+			padding: 0 0 0 20px;
+		}
+	}
+}//end text-with-summary,text-long
+
+/* =================
+		LISTS
+================= */
+
+ul {
+	list-style-type: disc;
+}
+
+ol {
+	list-style-type: decimal;
+	&[type="A"]{
+		list-style-type: lower-alpha;
+	}
+	&[type="I"]{
+		list-style-type: upper-roman;
+	}
+}

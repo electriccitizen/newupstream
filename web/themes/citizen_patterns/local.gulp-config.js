@@ -70,7 +70,7 @@
           prefix: '@mixin sprite-%s',
           render: {
             scss: {
-              dest: '../components/_patterns/01-atoms/04-icons/_icon_sprite.scss',
+              dest: '../components/_patterns/01-atoms/02-icons/_icon_sprite.scss',
               template: 'node_modules/emulsify-gulp/gulp-tasks/svg-icons/sprite.scss.handlebars'
             }
           }
@@ -83,8 +83,8 @@
       watchedExtensions: (['twig', 'json', 'yaml', 'yml', 'md', 'jpg', 'jpeg', 'png']),
       scssToYAML: [
         {
-          src: `${themeDir}/components/_patterns/00-base/global/01-colors/_color-vars.scss`,
-          dest: `${themeDir}/components/_patterns/00-base/global/01-colors/colors.yml`,
+          src: `${themeDir}/components/_patterns/00-base/01-colors/_color-vars.scss`,
+          dest: `${themeDir}/components/_patterns/00-base/01-colors/colors.yml`,
           lineStartsWith: '$',
           allowVarValues: true,
         },

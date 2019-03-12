@@ -5,7 +5,7 @@
 {% extends '@molecules/blocks/block.twig' %}
 {% block dLabel %}Newsletter{% endblock %}
 {% block blockContent %}
-	{% import "@base/global/05-macros/macros.twig" as styles %}
+	{% import "@base/macros.twig" as styles %}
 
 	{% if styles.newsletter == 'mailchimp' %}
 		{% if styles.newsletterDisplay == 'form' %}

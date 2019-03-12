@@ -37,7 +37,7 @@ component-libraries:
       - components/_patterns/03-organisms
   pages:
     paths:
-      - components/_patterns/04-pages
+      - components/_patterns/04-elements
   miscellaneous:
     paths:
       - components/_patterns/05-miscellaneous

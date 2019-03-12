@@ -1,0 +1,9 @@
+items:
+  - name: $header
+    value: '"Open Sans", Helvetica, Arial, sans-serif'
+  - name: $displayHeader
+    value: '"Open Sans", Helvetica, Arial, sans-serif'
+  - name: $bodyFont
+    value: '"Open Sans", Helvetica, Arial, sans-serif'
+  - name: $serif
+    value: 'Georgia, "Times New Roman", Times, serif'

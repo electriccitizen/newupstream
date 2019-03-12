@@ -516,3 +516,84 @@
 	margin-right: $bleedWidth * -0.5;
 	@include calc(width, "100% + "$bleedWidth);
 }
+
+
+/* ================= 
+  ANIMATION MIXINS
+===================== */
+
+///mixin - animation
+@mixin animation($animate...) {
+	$max: length($animate);
+	$animations: '';
+
+	@for $i from 1 through $max {
+		$animations: #{$animations + nth($animate, $i)};
+
+		@if $i < $max {
+			$animations: #{$animations + ", "};
+		}
+	}
+	-webkit-animation: $animations;
+	-moz-animation:    $animations;
+	-o-animation:      $animations;
+	animation:         $animations;
+}
+
+///mixin - keyframes
+@mixin keyframes($animationName) {
+	@-webkit-keyframes #{$animationName} {
+		@content;
+	}
+	@-moz-keyframes #{$animationName} {
+		@content;
+	}
+	@-o-keyframes #{$animationName} {
+		@content;
+	}
+	@keyframes #{$animationName} {
+		@content;
+	}
+}
+
+
+/*  Keyframes setup
+------------ */
+
+//slide in from 150% right (150% of the element height)
+//delayed fade in
+@include keyframes(fadeIn){
+	from{
+		opacity: 0;
+	}
+	50%{
+		opacity: .5;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+
+
+.fadeIn {
+	@include animation('fadeIn 1.5s 1');
+}
+
+
+/* Simple Animations
+----------------- */
+
+///mixin - transAll
+@mixin transAll($time){
+	transition: all $time ease;
+	-moz-transition: all $time ease;
+	-webkit-transition: all $time ease;
+	-webkit-transform: translateZ(0);
+}
+
+///mixin - transAll(.3s)
+@mixin transClear{
+	transition: none;
+	-moz-transition: none;
+	-webkit-transition: none;
+}

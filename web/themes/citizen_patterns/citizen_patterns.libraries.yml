@@ -4,7 +4,7 @@ global-styling:
     theme:
       dist/style.css: {}
   js:
-    components/_patterns/00-base/global/global.js: {}
+    components/_patterns/00-base/global.js: {}
     components/js/stacktable/stacktable.min.js: {}
   dependencies:
     - core/jquery
@@ -20,7 +20,7 @@ accordion:
 media-js:
   version: 1.0
   js:
-    components/_patterns/01-atoms/08-media/media.js: {}
+    components/_patterns/01-atoms/_media.js: {}
 modal:
   version: 1.0
   js:
