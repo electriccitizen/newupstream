@@ -1,6 +1,6 @@
 {
   "ignoreFiles": [
-    "components/_patterns/01-atoms/02-icons/_icon_sprite.scss"
+    "components/_patterns/01-atoms/01-icons/_icon_sprite.scss"
   ],
   "defaultSeverity": "warning",
   "rules": {

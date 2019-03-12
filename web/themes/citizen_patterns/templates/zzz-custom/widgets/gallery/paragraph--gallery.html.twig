@@ -41,7 +41,7 @@
 
 {% block widgetContent %}
     {{ attach_library('citizen_patterns/galleries') }}
-    {% embed "@organisms/01-paragraphs/gallery/gallery.twig"
+    {% embed "@organisms/00-paragraphs/gallery/gallery.twig"
         with{
             gallery_type: content.field_gallery_type.0['#markup'],
 			widget_title: content.field_widget_title.0['#context'].value

@@ -10,8 +10,8 @@
 			<p><strong>New Scss Files—</strong> Pretty much every element should have a new Scss file to itself—even if it doesn't need a template. Depending on the element type, you'll create a Pattern Lab folder and an Scss file for it in the following locations:
 				<ul>
 					<li>Block:  02-molecules/blocks</li>
-					<li>View:  03-organisms/02-views</li>
-					<li>Paragraph (widget):  03-organisms/01-paragraphs</li>
+					<li>View:  03-organisms/01-views</li>
+					<li>Paragraph (widget):  03-organisms/00-paragraphs</li>
 					<li>Layout:  04-pages/layouts</li>
 					<li>Content Type:  04-pages/nodes</li>
 				</ul>
@@ -55,7 +55,7 @@
 			<p>New paragraph types also need to have their permissions set in People > permissions. All roles use the View Content permission and Admins, Senior Editors, and Editors generally all can Create, Edit and Delete each widget—unless it is for site building use only (then just admins get these permissions).</p>
 			<p>Next, each new paragraph gets added the OC Widgets field on the content types it will be used in.</p>
 			<p><strong>Paragraph templates—</strong> Generally, all new paragraphs will get their own custom template in /templates/zzz-custom/widgets. This is so that the HTML structure can be optimized and any special styling keys (select list or boolean fields) can be added as classes for theming. <strong>All new paragraphs templates should inherit the <span class="code">paragraph.html.twig</span> base template.</strong> This ensures that they get the proper flex, type, and id classes needed for theming. All new paragraph content in the template then goes inside the <span class="code">{{ widgetContent }}</span> block. Most new paragraphs don't need a Pattern Lab template unless there is time in the project for a full site-specific style guide.</p>
-			<p><strong>Paragraph Scss & JS files—</strong> All new paragraphs should have their own folder and Scss file Pattern Lab. This file goes in 03-organisms/01-paragraphs. Any specific js file would also go in this folder and would be <a href="#js-component">attached as a library</a> in <span class="code">{{ widgetContent }}</span> in the paragraph template.</p>
+			<p><strong>Paragraph Scss & JS files—</strong> All new paragraphs should have their own folder and Scss file Pattern Lab. This file goes in 03-organisms/00-paragraphs. Any specific js file would also go in this folder and would be <a href="#js-component">attached as a library</a> in <span class="code">{{ widgetContent }}</span> in the paragraph template.</p>
 		</div>
 	</div>
 

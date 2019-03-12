@@ -16,11 +16,11 @@ global-styling:
 accordion:
   version: 1.0
   js:
-    components/_patterns/03-organisms/01-paragraphs/accordion/accordion.js: {}
+    components/_patterns/03-organisms/00-paragraphs/accordion/accordion.js: {}
 media-js:
   version: 1.0
   js:
-    components/_patterns/01-atoms/_media.js: {}
+    components/_patterns/02-molecules/media/_media.js: {}
 modal:
   version: 1.0
   js:
@@ -54,11 +54,11 @@ slick:
 galleries:
   version: 1.0
   js:
-    components/_patterns/03-organisms/01-paragraphs/gallery/gallery.js: {}
+    components/_patterns/03-organisms/00-paragraphs/gallery/gallery.js: {}
 widgets:
   version: 3.0
   js:
-    components/_patterns/03-organisms/01-paragraphs/widgets.js: {}
+    components/_patterns/03-organisms/00-paragraphs/widgets.js: {}
 fonts:
   css:
     theme:

@@ -49,21 +49,26 @@ $plBorder: #333333;
 		padding-left: 1rem;
 		padding-right: 1rem;
 		& > h2{
-			margin-bottom: 0;
-			padding: 1rem 0;
-			border-top: 2px solid $plBorder;
-			border-bottom: 2px solid $plBorder;
-			& > a{
-				cursor: default;
-				pointer-events: none;
-			}
+			display: none;
 		}
 	}
 
-	.sg-pattern-title > a{
-		cursor: default;
-		pointer-events: none;
-	}
+	.sg-pattern-head{
+		.sg-pattern-title{
+			margin-bottom: 0 !important;
+			padding: 1.5rem 0 !important;
+			border-top: 2px solid $plBorder;
+			border-bottom: 2px solid $plBorder;
+			font-size: 2.4rem !important;
+			& > a{
+				cursor: default;
+				pointer-events: none;
+				color: red !important;
+				padding: 0 1rem;
+			}
+		}
+	}//end sg-pattern-head
+
 
 	//icon row
 	#icons {

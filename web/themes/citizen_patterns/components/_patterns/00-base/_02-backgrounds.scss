@@ -1,6 +1,8 @@
 /* =====================
 BACKGROUND SIZE MIXINS
 ====================== */
+@import '../01-atoms/01-icons/_icon_sprite.scss';
+
 //This file holds all background size mixins so they can be easily changed if the sprite is changed.
 //background size is the icons row and column position in the sprite multipled by the intended size.
 $columns: 3;
