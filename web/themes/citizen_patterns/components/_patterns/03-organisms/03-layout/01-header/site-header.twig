@@ -12,7 +12,7 @@
 <header role="banner" class="nav-{{ styles.mainNavStyle }}">
   <div>
 
-		{% include "@molecules/blocks/header-branding-block/branding-block.twig" 
+		{% include "@molecules/blocks/branding/_branding-block.twig" 
 			with{
 				logo: header_logo,
 				sitename: header_sitename
@@ -20,12 +20,12 @@
 		%}
 		 
 		{% if header_search %}
-			{% embed "@molecules/blocks/header-search-block/search-block.twig" %}
+			{% embed "@molecules/blocks/search/search-block.twig" %}
 				{% block searchOpen %}{# remove help searcg toggle descriptor #}{% endblock %}
 			{% endembed %}
 		{% endif %}
 		 
-		{% include "@molecules/blocks/header-superfish-block/_superfish-block.twig" %}
+		{% include "@molecules/blocks/superfish/_superfish-block.twig" %}
 		 
 	</div>
 </header>

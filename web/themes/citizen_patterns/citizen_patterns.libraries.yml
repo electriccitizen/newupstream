@@ -16,7 +16,7 @@ global-styling:
 accordion:
   version: 1.0
   js:
-    components/_patterns/03-organisms/01-widgets/accordion/accordion.js: {}
+    components/_patterns/03-organisms/01-paragraphs/accordion/accordion.js: {}
 media-js:
   version: 1.0
   js:
@@ -25,14 +25,14 @@ modal:
   version: 1.0
   js:
     components/_patterns/05-miscellaneous/modal.js: {}
-page-menu:
+menu-block:
   version: 1.0
   js:
-    components/_patterns/02-molecules/menus/02-page-menu/page-menu.js: {}
+    components/_patterns/02-molecules/menus/menu-block/menu-block.js: {}
 search-block:
   version: 1.0
   js:
-    components/_patterns/02-molecules/blocks/search-block/search-block.js: {}
+    components/_patterns/02-molecules/blocks/search/search-block.js: {}
 
 featherlight:
   version: 3.0
@@ -54,11 +54,11 @@ slick:
 galleries:
   version: 1.0
   js:
-    components/_patterns/03-organisms/01-widgets/gallery/gallery.js: {}
+    components/_patterns/03-organisms/01-paragraphs/gallery/gallery.js: {}
 widgets:
   version: 3.0
   js:
-    components/_patterns/03-organisms/01-widgets/widgets.js: {}
+    components/_patterns/03-organisms/01-paragraphs/widgets.js: {}
 fonts:
   css:
     theme:
