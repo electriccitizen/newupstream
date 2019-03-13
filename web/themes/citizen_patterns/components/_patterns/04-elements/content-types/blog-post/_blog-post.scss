@@ -11,7 +11,9 @@
 	.block-field-banner{
 		opacity: 0;
 		@include animation('fadeIn 1.2s 1 forwards');
-		@include edgeToEdge;
+		body:not(.path-taxonomy) &{
+			@include edgeToEdge;
+		}
 		.field-banner{
 			position: relative;
 			@include tab{

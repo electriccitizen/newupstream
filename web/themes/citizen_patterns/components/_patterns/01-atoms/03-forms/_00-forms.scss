@@ -48,6 +48,7 @@
 	font-family: $bodyFont;
 	padding: 10px 6px 11px;
 	width: 100%;
+	line-height: 1;
 	@include placeholder;
 	&:focus{
 		@include placeholderFocus;
@@ -178,11 +179,11 @@ fieldset{
 
 /* USER LOGIN
 --------------- */
-.user-login-form{
+.user-login-form,#user-pass{
 	.form-item input:not([type="submit"]){
 		max-width: 400px;
 	}
-	.description{
+	.description,p{
 		font-size: 1.4rem;
 	}
 	#edit-submit.button{

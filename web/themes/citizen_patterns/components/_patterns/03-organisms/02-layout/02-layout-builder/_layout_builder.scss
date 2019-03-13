@@ -81,7 +81,7 @@
 }//end drupal canvas
 
 form.layout-builder-revert-overrides{
-	padding: 0 2rem;
+	padding: 0 0 $siteBottomSpace;
 	max-width: $contentStop;
 	@include auto;
 	.form-actions{

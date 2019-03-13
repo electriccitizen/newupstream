@@ -24,7 +24,7 @@ body {
 }
 
 #block-citizen-patterns-help{
-	padding: 3rem 2rem;
+	padding: $elementSpace 0;
 	max-width: $contentStop;
 	@include auto;
 }
@@ -108,8 +108,8 @@ body {
 /* ADMIN NODE EDIT TABS
 ----------------- */
 #block-citizen-patterns-local-tasks{
-	max-width: $contentStop + 40px;
-	padding: 30px $siteMarginMobile 0;
+	max-width: $contentStop;
+	padding: 30px 0 0;
 	position: relative;
 	@include auto;
 	&:after{
@@ -128,7 +128,7 @@ body {
 		a {
 			@include outlineButton($white);
 			text-transform: none;
-			padding: 0 12px;
+			padding: 4px 12px;
 			display: block;
 			&.is-active {
 				background-color: $white;
