@@ -35,10 +35,6 @@ header.content-header .shortcut-action--remove:hover .shortcut-action__icon,head
 
 /* ADMIN CONTENT VIEW
 -------------------- */
-.view-content.view-display-id-page_1,.view-display-id-media_page_list,.view-files.view-display-id-page_1{
-	margin-bottom: -80px;
-}
-
 .view-content.view-display-id-page_1 .view-filters,.view-display-id-media_page_list .view-filters,.view-files.view-display-id-page_1 .view-filters,.view-paragraphs-library.view-display-id-widget_library .view-filters{
 	background: #dbe4e4;
 	padding: 1em 2.5em 2em;
@@ -103,7 +99,6 @@ header.content-header .shortcut-action--remove:hover .shortcut-action__icon,head
 }
 
 #views-form-content-page-1 #edit-header.form-wrapper,#views-form-media-media-page-list #edit-header.form-wrapper,.view-files.view-display-id-page_1 #edit-header.form-wrapper,.view-paragraphs-library.view-display-id-widget_library #edit-header.form-wrapper{
-	padding: 0 0 3em;
 	width:  100%;
 	max-width: 300px;
 }
