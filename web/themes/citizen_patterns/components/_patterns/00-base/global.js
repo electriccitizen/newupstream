@@ -61,7 +61,7 @@ Drupal.behaviors.recaptchaAccess = {
         setTimeout(function(){
           $(".g-recaptcha iframe").removeAttr('role');
           $('#g-recaptcha-response').attr('aria-label', 'Recaptcha Response');
-        }, 20);
+        }, 100);
       });
     });
   }

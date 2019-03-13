@@ -6,13 +6,6 @@ global-styling:
   js:
     components/_patterns/00-base/global.js: {}
     components/js/stacktable/stacktable.min.js: {}
-  dependencies:
-    - core/jquery
-    - core/drupal.ajax
-    - core/drupal
-    - core/underscore
-    - core/drupalSettings
-    - core/jquery.once
 accordion:
   version: 1.0
   js:
@@ -29,11 +22,12 @@ menu-block:
   version: 1.0
   js:
     components/_patterns/02-molecules/menus/menu-block/menu-block.js: {}
+  dependencies:
+    - core/underscore
 search-block:
   version: 1.0
   js:
     components/_patterns/02-molecules/blocks/search/search-block.js: {}
-
 featherlight:
   version: 3.0
   css:
@@ -59,6 +53,8 @@ widgets:
   version: 3.0
   js:
     components/_patterns/03-organisms/00-paragraphs/widgets.js: {}
+  dependencies:
+    - core/underscore
 fonts:
   css:
     theme:
