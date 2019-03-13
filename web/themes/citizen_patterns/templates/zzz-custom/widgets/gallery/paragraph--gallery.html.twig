@@ -64,10 +64,8 @@
     {% endblock %}
 
     {% block sliderContent %}
-      {{ attach_library('citizen_patterns/slick') }}
-      <div class="paragraph paragraph--type--slideshow">
-  	   {{- content.field_image_multi -}}
-      </div>
+     {{ attach_library('citizen_patterns/slick') }}
+  	 {{- content.field_image_multi -}}
     {% endblock %}
 
     {% block plwidgetclose %}{# remove pl only structure #}{% endblock %}

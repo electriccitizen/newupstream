@@ -22,6 +22,9 @@
 				width: 50%;
 			}
 			@include tab{
+				width: 33.33%;
+			}
+			@include desk{
 				width: 25%;
 			}
 			img {
