@@ -12,19 +12,6 @@
     {
       "type": "package",
       "package": {
-        "name": "woothemes/flexslider",
-        "version": "2.6.4",
-        "type": "drupal-library",
-        "source": {
-          "url": "https://github.com/woothemes/FlexSlider.git",
-          "type": "git",
-          "reference": "2.6.4"
-          }
-      }
-    },
-    {
-      "type": "package",
-      "package": {
         "name": "electriccitizen/docksal",
         "version": "1.3.1",
         "type": "drupal-custom-module",
