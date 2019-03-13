@@ -1,0 +1,44 @@
+uuid: 039678a1-f7a1-4287-9d06-b0c4d012d24d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.gallery.field_admin_description
+    - field.field.paragraph.gallery.field_gallery_type
+    - field.field.paragraph.gallery.field_image_multi
+    - field.field.paragraph.gallery.field_widget_title
+    - paragraphs.paragraphs_type.gallery
+  module:
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    sections: {  }
+    allow_custom: false
+    enabled: false
+id: paragraph.gallery.preview
+targetEntityType: paragraph
+bundle: gallery
+mode: preview
+content:
+  field_admin_description:
+    type: string
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_gallery_type:
+    weight: 1
+    label: inline
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+hidden:
+  field_image_multi: true
+  field_widget_title: true
