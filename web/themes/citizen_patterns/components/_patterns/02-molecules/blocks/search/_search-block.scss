@@ -4,45 +4,43 @@
 
 ///mixin placholder
 %searchBlockPlaceholder{
-	$place-tint: 1;
-	$place-color: $white;
+	$placeTint: 1;
 	&::-webkit-placeholder{
-		opacity: $place-tint;
-		color: $place-color;
+		opacity: $placeTint;
+		color: $searchDropPlace;
 	}
 	&::-moz-placeholder{
-		opacity: $place-tint;
-		color: $place-color;
+		opacity: $placeTint;
+		color: $searchDropPlace;
 	}
 	&:-ms-input-placeholder{
-		opacity: $place-tint;
-		color: $place-color;
+		opacity: $placeTint;
+		color: $searchDropPlace;
 	}
 	&::-webkit-input-placeholder{
-		opacity: $place-tint;
-		color: $place-color;
+		opacity: $placeTint;
+		color: $searchDropPlace;
 	}
 }
 
 ///mixin - placeholderFocus
 %searchBlockPlaceholderFocus{
-	$place-focus-tint: .2;
-	$place-focus-color: $white;
+	$placeFocusTint: .2;
 	&::-webkit-placeholder{
-		opacity: $place-focus-tint;
-		color: $place-focus-color;
+		opacity: $placeFocusTint;
+		color: $searchDropPlaceFocus;
 	}
 	&::-moz-placeholder{
-		opacity: $place-focus-tint;
-		color: $place-focus-color;
+		opacity: $placeFocusTint;
+		color: $searchDropPlaceFocus;
 	}
 	&:-ms-input-placeholder{
-		opacity: $place-focus-tint;
-		color: $place-focus-color;
+		opacity: $placeFocusTint;
+		color: $searchDropPlaceFocus;
 	}
 	&::-webkit-input-placeholder{
-		opacity: $place-focus-tint;
-		color: $place-focus-color;
+		opacity: $placeFocusTint;
+		color: $searchDropPlaceFocus;
 	}
 }
 
@@ -51,18 +49,6 @@
 
 	//search icon
 	.t-search-wrapper{
-		&:hover,&:focus{
-			i:after{
-				content: '';
-				display: block;
-				position: absolute;
-				bottom: -7px;
-				right: 0;
-				width: 24px;
-				height: 1px;
-				background: $black;
-			}
-		}
 		.box &{
 			@include desk{
 				display: none;
@@ -73,7 +59,10 @@
 		}
 		.t-search{
 			border: 1px solid transparent;
-			color: $black;
+			color: $searchIcon;
+			&:hover,&:focus{
+				color: $searchIconHover;
+			}
 			i{
 				position: relative;
 				font-size: 2.2rem;
@@ -103,26 +92,16 @@
 			display: block;
 			width: 100%;
 			height: 100%;
-			color: $black;
+			color: $searchClose;
 			font-size: 2.8rem;
-			background: $offWhite;
+			background: $searchCloseBack;
 			cursor: pointer;
 			@include safeFlex(column,null,center,center);
 			&:hover,&:focus{
 				text-decoration: none;
-				background: $black;
-				color: $offWhite;
+				background: $searchCloseBackHover;
+				color: $searchCloseHover;
 			}
-		}
-		.close-text{
-			font-family: $displayHeader;
-			font-size: 18px;
-			color: $white;
-			position: absolute;
-			bottom: -24px;
-			left: 0;
-			width: 100%;
-			text-align: center;
 		}
 	}//end search close
 
@@ -173,7 +152,7 @@
 		width: 100%;
 		padding: 80px $siteMarginMobile;
 		text-align: center;
-		background: rgba(35,35,35,0.97);
+		background: $searchDropBack;
 		@include desk{
 			padding: 160px $siteMarginMobile;
 		}
@@ -209,20 +188,19 @@
 				background: transparent;
 				padding: 9px 5px;
 				border: none;
-				color: $white;
-				font-family: $serif;
-				border-bottom: 1px solid $white;
+				color: $searchDropText;
+				border-bottom: 1px solid $searchDropInputBorder;
 				border-radius: 0;
 				@extend %searchBlockPlaceholder;
 				//prevent yellow chrome autofill inset                                                   
 				&:-webkit-autofill{
-					-webkit-box-shadow: 0 0 0 1000px $white inset;
+					-webkit-box-shadow: 0 0 0 1000px $searchDropInputFocus inset;
 				}
 				@include tab{
 					font-size: 2.2rem;
 				}
 				&:focus{
-					outline: 1px solid $white;
+					outline: 1px solid $searchDropInputFocus;
 					@extend %searchBlockPlaceholderFocus;
 				}
 				.box &{
@@ -271,7 +249,10 @@
 				}
 				&:focus,&:hover{
 					& + i{
-						color: $link;
+						color: $searchDropSearchIconHover;
+						.search-page-block &{
+							color: $hoverLink;
+						}
 					}
 				}
 			}//end form submit
@@ -280,7 +261,7 @@
 				top: -45px;
 				right: 8px;
 				font-size: 24px;
-				color: $white;
+				color: $searchDropSearchIcon;
 				cursor: pointer;
 				@include tab{
 					font-size: 28px;
@@ -303,35 +284,3 @@
 	}//end search block form
 
 }//end search block
-
-
-/* PATTERN LAB ONLY 
-------------------- */
-.pl{
-	#molecules-search-block .sg-pattern-example{
-		position: relative;
-		min-height: 200px;
-
-		.block-search-form-block{
-			position: relative;
-			width: 100%;
-		}
-		.t-search{
-			right: auto;
-			left: 0;
-			overflow: visible;
-			top: 0;
-		}
-		#search-block-form{
-			right: auto;
-			left: 50%;
-			top: 30px;
-			.js-form-type-search input{
-				width: 100%;
-			}
-			@include desk{
-				left: auto;
-			}
-		}
-	}
-}

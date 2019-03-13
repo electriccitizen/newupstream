@@ -2,10 +2,10 @@
    SITE FOOTER
 =============== */
 footer {
-	background: $darkGrey;
-	color: $offWhite;
+	background: $footerBack;
+	color: $footerText;
 	.modal-content{
-		color: $body;
+		color: $baseText;
 	}
 	//set style for footer (need inner for fixed footer script)
 	.footer-inner{

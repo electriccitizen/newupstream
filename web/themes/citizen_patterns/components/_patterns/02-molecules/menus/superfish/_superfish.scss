@@ -22,9 +22,9 @@
 			color: $sfChildLinkRev;
 		}
 		&:hover,&:focus{
-			color: $hoverLink;
+			color: $sfChildLinkHover;
 			.background &{
-				color: $white;
+				color: $sfChildLinkRevHover;
 			}
 		}
 	}
@@ -34,13 +34,13 @@
 			color: $sfChildActiveRev;
 		}
 		&:hover,&:focus{
-			color: $hoverLink;
+			color: $sfChildActiveHover;
 			.background &{
-				color: $offWhite;
+				color: $sfChildActiveRevHover;
 			}
 		}
 	}
-}
+}//end sf-main li
 
 
 
@@ -93,6 +93,7 @@
 				}
 				&:hover,&:focus{
 					background: $sfTopBackHover;
+					color: $sfTopLinkHover;
 					.background &{
 						background: $sfTopBackHoverRev;
 					}
@@ -100,6 +101,9 @@
 			}
 			&.active-trail > a{
 				color: $sfTopActive;
+				&:hover,&:focus{
+					color: $sfTopActiveHover;
+				}
 				.background &{
 					color: $sfTopActiveRev;
 				}
@@ -169,9 +173,8 @@
 		ul{
 			@extend %menuDropdown;
 			left: 100%;
-			top: -1px;
+			top: 0px;
 			min-width: 240px;
-			border-top: 1px solid $grey;
 		}
 	}
 
@@ -209,8 +212,8 @@ ul.sf-menu.sf-accordion{
 		top: 100% !important;
 		text-align: left;
 		overflow: hidden;
-		background: $white;
-		border-bottom: 8px solid $black;
+		background: $sfMobileDrop;
+		border-bottom: 8px solid $sfMobileDropBorder;
 	}
 
 	/* ====  global links ====*/
@@ -267,13 +270,17 @@ ul.sf-menu.sf-accordion{
 
 	/* ====  LEVEL 1  ====*/
 	li.sf-depth-1{
+		& > a{
+			color: $sfMobileTop;
+			background: $sfMobileTopBack;
+		}
 		&:not(:last-child){
-			border-bottom: 1px solid $borderRule;
+			border-bottom: 1px solid $sfMobileItemBorder
 		}
 		&.sf-expanded{
 			& > a{
-				color: $hoverLink;
-				background: $lightGrey;
+				color: $sfMobileTopExpanded;
+				background: $sfMobileTopBackExpanded;
 				&:not(.sf-accordion-button){
 					border-bottom: 3px solid $transBlack;
 				}
@@ -287,15 +294,18 @@ ul.sf-menu.sf-accordion{
 
 	/* ====  LEVEL 2  ====*/
 	li.sf-depth-2{
-
 		&:first-of-type.sf-expanded{
 			border-top: 0;
 		}
 		&:last-of-type.sf-expanded{
 			border-bottom: 0;
 		}
+		&.active-trail > a{
+			color: $sfMobileChildActive;
+		}
 		//inset level2 and those below
 		& > a{
+			color: $sfMobileChild;
 			&.sf-accordion-button{
 				height: 40px;
 			}
@@ -303,14 +313,17 @@ ul.sf-menu.sf-accordion{
 				padding: 10px 30px 10px 40px;
 			}
 		}
-
 	}//end level 2
 
 
 	/* ====  LEVEL 3 & Below ====*/
 	li.sf-depth-3{
 		//font size for level 3 and those below
+		&.active-trail > a{
+			color: $sfMobileChildActive;
+		}
 		a{
+			color: $sfMobileChild;
 			font-size: 15px;
 			padding: 10px 30px;
 			&.sf-accordion-button{
@@ -322,7 +335,7 @@ ul.sf-menu.sf-accordion{
 				padding: 10px 30px 10px 50px;
 			}
 		}
-	}
+	}//end level 3
 
 }//end sf-menu.sf-accordion
 

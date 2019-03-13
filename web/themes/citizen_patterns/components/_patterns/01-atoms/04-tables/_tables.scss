@@ -15,21 +15,27 @@
 		padding: .5rem 1rem;
 	}
 	thead th{
-		background: $darkGrey;
-		color: $white;
+		background: $tableHeaderBack;
+		color: $tableHeaderText;
 	}
 
 	tbody tr{
 		//set table row colors
 		&:nth-of-type(odd){
-			background: $grey;
+			background: $oddRowBack;
+			td{
+				color: $oddRowText;
+			}
 		}
 		&:nth-of-type(even){
-			background: $white;
+			background: $evenRowBack;
+			td{
+				color: $evenRowText;
+			}
 		}
 		th{
-			background: $darkGrey;
-			color: $white;
+			background: $tableHeaderBack;
+			color: $tableHeaderText;
 		}
 		//give a bit extra room in the row on mobile
 		@include onlySmall{

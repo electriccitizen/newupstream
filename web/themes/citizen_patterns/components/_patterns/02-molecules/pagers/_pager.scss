@@ -6,7 +6,7 @@ PAGERS
 /* MIXINS
 ------------- */
 
-$pager-line: 2.4rem;
+$pagerLine: 2.4rem;
 
 ///mixin - pagerItemStyle
 @mixin pagerItemStyle{
@@ -14,12 +14,15 @@ $pager-line: 2.4rem;
 	min-width: 26px;
 	height: 26px;
 	padding: 0px 3px;
-	line-height: $pager-line;
+	line-height: $pagerLine;
 	font-weight: bold;
 	text-align: center;
 	border-radius: 6px;
+	color: $pagerNumber;
+	background: $pagerNumberBack;
 	&:hover,&:focus{
-		color: $hoverLink;
+		color: $pagerNumberHover;
+		background: $pagerNumberBackHover;
 		text-decoration: none;
 		@include transAll(.3s);
 	}
@@ -30,8 +33,9 @@ $pager-line: 2.4rem;
 	@include safeFlexSize(0,0,100%);
 	text-align: center;
 	@include tab{
-		border-top: 1px solid $borderRule;
-		border-bottom: 1px solid $borderRule;
+		border-top: 1px solid $pagerBorder;
+		border-bottom: 1px solid $pagerBorder;
+		background: $pagerBack;
 		@include safeFlexSize(1,1,auto);
 	}
 	.pager{
@@ -56,8 +60,9 @@ $pager-line: 2.4rem;
 
 ///mixin - pagerResults
 @mixin pagerResults{
-	border-top: 1px solid $borderRule;
-	border-bottom: 1px solid $borderRule;
+	border-top: 1px solid $pagerBorder;
+	border-bottom: 1px solid $pagerBorder;
+	background: $pagerBack;
 	margin-bottom: $spaceSm;
 	@include calc(width, "100% + 40px");
 	@include edgeToEdge;
@@ -67,7 +72,7 @@ $pager-line: 2.4rem;
 		text-align: center;
 		font-size: 18px;
 		font-family: $header;
-		color: $darkGrey;
+		color: $resultsText;
 		span{
 			text-transform: uppercase;
 		}
@@ -91,7 +96,7 @@ $pager-line: 2.4rem;
 	@include safeFlex(row,wrap,null,null);
 	li{
 		*{
-			line-height: $pager-line;
+			line-height: $pagerLine;
 			display: block;
 			font-weight: $heavy;
 		}
@@ -107,44 +112,24 @@ $pager-line: 2.4rem;
 	@include safeFlex(row,wrap,null,null);
 	margin-top: 20px;
 	.view-footer{
-		width: 49%;
-		margin-bottom: 0;
-		margin-left: 0;
-		margin-right: 0;
-		@include onlySmall{
-			width: calc(100% + 40px);
-			margin-bottom: 1em;
-			margin-left: -20px;
-			margin-right: -20px;
-		}
-		.footer-inner{
-			padding: 20px 0 18px;
-			text-align: left;
-			border-top: 1px solid $borderRule;
-			border-bottom: 1px solid $borderRule;
-			@include onlySmall{
-				text-align: center;
-			}
-		}
+		@include pagerResults;
 	}
 	.bottom-pager{
 		border-top: 1px solid $borderRule;
 		border-bottom: 1px solid $borderRule;
-		-webkit-box-flex: 1;
-		flex: 1 1 auto;
-		-ms-flex: 1 1 auto;
+		@include safeFlexSize(1,1,auto);
 		@include onlySmall{
 			border: 0px;
 		}
 		.js-pager__items{
 			@include safeFlex(row,wrap,end,start);
-			padding: 20px 0 18px;
+			padding: 20px 0;
 			@include onlySmall{
 				@include safeFlex(row,wrap,center,start);
 			}
 		}
 	}
-}
+}//end pager-bar
 
 .pager{
 	//page number styling;
@@ -154,17 +139,30 @@ $pager-line: 2.4rem;
 		}
 		&.is-active{
 			a{
-				color: $white;
-				background: $link;
+				color: $pagerNumberActive;
+				background: $pagerNumberActiveBack;
 				&:hover,&:focus{
-					background: $hoverLink;
+					color: $pagerNumberActiveHover;
+					background: $pagerNumberActiveBackHover;
 				}
 			}
 		}
 	}//end page number items
 
+	.pager__item--first{
+		a{
+			color: $pagerLink;
+			background: $pagerLinkBack;
+			&:hover,&:focus{
+				color: $pagerLinkHover;
+				background: $pagerLinkBackHover;
+			}
+		}
+	}
+
 	//previous styling
 	.pager__item--previous{
+		@extend .pager__item--first;
 		a{
 			display: none;
 		}
@@ -172,10 +170,17 @@ $pager-line: 2.4rem;
 
 	//next styling
 	.pager__item--next{
+		@extend .pager__item--first;
 		a{
 			display: none;
 		}
 	}
+
+	//last styling
+	.pager__item--last{
+		@extend .pager__item--first;
+	}
+
 }//end full .pager
 
 
@@ -184,10 +189,8 @@ $pager-line: 2.4rem;
 nav:not(.pager){
 	.js-pager__items{
 		li{
-			color: $black;
+			color: $baseText;
 			margin: 0 1rem;
-			@include larger;
-			line-height: 2.6rem;
 		}
 		//pager controls
 		li a{
@@ -207,7 +210,6 @@ ul.flippy{
 	@include listReset;
 	@include safeFlex(row,wrap,null,null);
 	li{
-		@include baseFontSize;
 		padding: 15px 0;
 		width: 50%;
 		&.flippy-next{
@@ -216,11 +218,3 @@ ul.flippy{
 	}
 }//end flippy
 
-
-/* PATTERN LAB ONLY
------------------ */
-.pl{
-	.block-flippy-block{
-		padding: 0 20px;
-	}
-}

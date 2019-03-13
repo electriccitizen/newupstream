@@ -132,19 +132,10 @@ SECTION LAYOUTS
 		position: relative;
 		background-size: cover;
 		@include darkBack;
+		@include overlay;
 		& > *{
 			position: relative;
-			z-index: 1;
-		}
-		&:before{
-			content: '';
-			display: block;
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background: $imgOverlay;
+			z-index: 3;
 		}
 	}
 

@@ -7,9 +7,9 @@
 
 ///mixin - button
 @mixin button{
-	background-color: $link;
+	background-color: $buttonBack;
 	border:none;
-	color: $white;
+	color: $buttonText;
 	line-height: 1.15;
 	padding: 1rem 4rem;
 	display: inline-block;
@@ -27,16 +27,16 @@
 		}
 	}
 	&:hover,&:focus {
-		color: $white;
-		background-color: $hoverLink;
+		color: $buttonTextHover;
+		background-color: $buttonBackHover;
 		@include transAll(.3s);
 		a{
-			color: $white;
+			color: $buttonTextHover;
 			text-decoration: none;
 		}
 	}
 	a{
-		color: $white;
+		color: $buttonText;
 	}
 }//end button mixin
 
@@ -59,26 +59,26 @@
 
 @mixin submitButton{
 	@include button;
-	background: $link;
-	color: $white;
+	background: $submitBack;
+	color: $submitText;
 	height: 43px;
 	&:hover,&:focus{
-		background: $grey;
-		border-color: $grey;
-		color: $black;
+		background: $submitBackHover;
+		border-color: $submitBackHover;
+		color: $submitTextHover;
 	}
 }
 
 @mixin resetButton{
 	@include button;
-	background: $darkGrey;
-	color: $white;
-	border-color: $darkGrey;
+	background: $resetBack;
+	color: $resetText;
+	border-color: $resetBack;
 	height: 43px;
 	&:hover,&:focus{
-		background: $grey;
-		border-color: $grey;
-		color: $black;
+		background: $resetBackHover;
+		border-color: $resetBackHover;
+		color: $resetTextHover;
 	}
 }
 
@@ -110,15 +110,4 @@
 		color: $link;
 		border-color: $link;
 	}
-}
-
-
-/* PATTERN LAB ONLY
---------------- */
-
-//background for outlineButton example
-.pl.background{
-	padding: 4rem 6rem;
-	width: 100%;
-	background: $hoverLink;
 }

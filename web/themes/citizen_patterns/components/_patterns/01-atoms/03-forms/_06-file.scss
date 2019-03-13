@@ -5,7 +5,7 @@
 @mixin fileUpload{
 	.js-form-managed-file,.form-managed-file{
 		input.js-form-submit,input.form-submit{
-			@include formSubmit;
+			@include submitButton;
 			font-size: 13px;
 			padding: 1rem 4rem;
 		}

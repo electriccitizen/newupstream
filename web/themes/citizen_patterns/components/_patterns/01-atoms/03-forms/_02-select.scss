@@ -5,7 +5,7 @@
 @mixin inputSelect{
 	width: 100%;
 	font-size: 1.6rem;
-	border: 1px solid $borderRule;
+	border: 1px solid $formElementBorder;
 	border-radius: 0;
 	height: auto;
 	&.select2--container--focus{
@@ -55,7 +55,7 @@ body .select2-container--default{
 			text-align: left;
 		}
 		.select2-selection__arrow{
-			@include triangle(down,12px,16px,$midGrey);
+			@include triangle(down,12px,16px,$selectArrow);
 			top: 14px;
 			right: 10px;
 			//hide default select2 arrow
@@ -93,7 +93,7 @@ body .select2-container--default{
 				top: 10px;
 				right: 2px;
 				cursor: pointer;
-				@include triangle(down,12px,16px,$midGrey);
+				@include triangle(down,12px,16px,$selectArrow);
 			}
 			input.select2-search__field{
 				color: $darkGrey;
@@ -122,7 +122,7 @@ body .select2-container--default{
 		.select2-selection--single{
 			.select2-selection__arrow{
 				border-top: 0;
-				border-bottom: 12px solid $midGrey;
+				border-bottom: 12px solid $selectArrow;
 			}
 		}
 
@@ -131,7 +131,7 @@ body .select2-container--default{
 			.select2-search--inline{ 
 				&:after{
 					border-top: 0;
-					border-bottom: 12px solid $midGrey;
+					border-bottom: 12px solid $selectArrow;
 				}
 				input.select2-search__field{
 					@include placeholder;
@@ -150,7 +150,7 @@ body .select2-container--default{
 ---------------- */
 .select2-container{
 	.select2-dropdown{
-		border: 1px solid $borderRule;
+		border: 1px solid $formElementBorder;
 		border-radius: 0;
 		border-top: 0;
 		padding: 0;
@@ -160,14 +160,6 @@ body .select2-container--default{
 	background-color: $offWhite;
 }
 .select2-container--default .select2-results__option--highlighted[aria-selected]{
-	background-color: $link !important; 
+	background-color: $selectHighlight !important; 
 }
 
-
-/* PATTERN LAB ONLY
----------------------- */
-.pl .sg-pattern-example{
-	.select2-container{
-		max-width: 400px;
-	}
-}

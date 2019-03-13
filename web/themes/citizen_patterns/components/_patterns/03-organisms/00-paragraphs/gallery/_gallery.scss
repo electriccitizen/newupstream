@@ -15,7 +15,6 @@
 			padding-left: 10px;
 			padding-right: 10px;
 			margin-bottom: 20px;
-			display: inline-block;
 			overflow: hidden;
 			cursor: pointer;
 			width: 100%;
@@ -37,6 +36,7 @@
 
 //FEATHERLIGHT OVERLAY THEMING
 .featherlight{
+	background: $modalBack;
 	.featherlight-content {
 		background: $siteBack;
 		padding: 0px !important;
@@ -47,14 +47,15 @@
 		.featherlight-close-icon {
 			background: none;
 			font-size: 24px;
-			color: $white;
-			text-shadow: 2px 2px 3px $transBlack;
+			color: $modalGalButton;
+			text-shadow: 2px 2px 3px $modalGalButtonShadow;
 			height: 32px;
 			width: 32px;
 			font-family: $bodyFont;
-			&:hover {
-				background: rgba(255,255,255,0.15);
-				text-shadow: 2px 2px 3px $black;
+			&:hover,&:focus{
+				color: $modalGalButtonHover;
+				background: $modalGalButtonBackHover;
+				text-shadow: 2px 2px 3px $modalGalButtonShadowHover;
 			}
 		}
 		.featherlight-previous {
@@ -66,15 +67,17 @@
 			span {
 				display: block;
 				font-size: 4rem;
+				color: $modalGalButton;
 				width: 60px;
 				height: 80px;
 				left: 0;
-				text-shadow: 2px 2px 2px $transBlack;
+				text-shadow: 2px 2px 2px $modalGalButtonShadow;
 			}
-			&:hover {
-				background: rgba(255,255,255,0.15);
+			&:hover,&:focus {
+				background: $modalGalButtonBackHover;
 				span {
-					text-shadow: 2px 2px 3px $black;
+					text-shadow: 2px 2px 3px $modalGalButtonShadowHover;
+					color: $modalGalButtonHover;
 				}
 			}
 		}
@@ -88,16 +91,18 @@
 			span {
 				display: block;
 				font-size: 4rem;
+				color: $modalGalButton;
 				width: 60px;
 				height: 80px;
 				left: auto;
 				right: 0;
-				text-shadow: 2px 2px 2px $transBlack;
+				ext-shadow: 2px 2px 2px $modalGalButtonShadow;
 			}
-			&:hover {
-				background: rgba(255,255,255,0.15);
+			&:hover,&:focus {
+				background: $modalGalButtonBackHover;
 				span {
-					text-shadow: 2px 2px 3px $black;
+					text-shadow: 2px 2px 3px $modalGalButtonShadowHover;
+					color: $modalGalButtonHover;
 				}
 			}
 		}
@@ -115,21 +120,16 @@
 			color: $white;
 			padding: 1rem 2rem;
 		}
-
 		.gallery-text {
 			max-width: $textMax;
 			padding: 4rem 6rem;
 		}
 	}//end featherlight content
-}
+}//end featherlight
 
 /* ================
    Slideshow
 =================== */
-
-/* SLIDER MIXINS
-------------- */
-/// TRIANGLE ARROWS
 @mixin sliderTriangle {
 	.slick-arrow {
 		height: 40px;
@@ -204,8 +204,3 @@
 	}
 }//end slideshow widget
 
-/* PATTERN LAB ONLY
--------------------- */
-.pl .image-gal {
-	max-width: 250px;
-}

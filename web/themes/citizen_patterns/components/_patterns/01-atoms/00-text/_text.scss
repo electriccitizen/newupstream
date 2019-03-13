@@ -71,7 +71,7 @@ html,code{
 }
 
 body {
-	color: $body;
+	color: $baseText;
 	margin: 0;
 	@include baseFontSize;
 }
@@ -104,13 +104,12 @@ strong{
 
 figcaption {
 	text-align: center;
-	color: $body;
 	font-size: 1.5rem;
 	font-style: italic;
 }
 
 small{
-	font-size: 80%;
+	font-size: 1.6rem;
 }
 
 span.highlight{
@@ -121,8 +120,8 @@ span.highlight{
 	background: none;
 	padding: 1rem 2rem;
 	margin-bottom: $spaceMd;
-	color: $warning;
-	border: 1px solid $warning;
+	color: $validation;
+	border: 1px solid $validation;
 	text-align: center;
 }
 

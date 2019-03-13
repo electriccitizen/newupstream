@@ -46,10 +46,10 @@
 			display: inline-block;
 			margin-right: 10px;
 			a{
-				color: $grey;
+				color: $footerIcon;
 				font-size: 32px;
 				&:hover,&:focus{
-					color: $white;
+					color: $footerIconHover;
 				}
 			}
 		}
@@ -73,10 +73,10 @@
 	}
 	p{
 		a{
-			color: $grey;
+			color: $footerLink;
 			text-decoration: underline;
 			&:hover,&:focus{
-				color: $white;
+				color: $footerLinkHover;
 				text-decoration: none;
 			}
 		}
@@ -154,12 +154,12 @@
 			position: relative;
 			a{
 				display: block;
-				color: $grey;
+				color: $footerLink;
 				.footer-v1 &{
 					text-decoration: underline;
 				}
 				&:hover,&:focus{
-					color: $white;
+					color: $footerLinkHover;
 					@include transAll(.3s);
 					.footer-v1 &{
 						text-decoration: none;
@@ -209,6 +209,5 @@
 	p{
 		margin:0;
 		font-size: 1.5rem;
-		color: $transWhite;
 	}
 }//end footer-copyright

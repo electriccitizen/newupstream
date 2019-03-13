@@ -12,14 +12,9 @@ svg{
 
 //default icon links
 a.icon{
-	color: $link;
 	height: 50px;
 	width: 50px;
 	display: block;
-	&:hover,&:focus{
-		color: $hoverLink;
-		@include transAll(.3s);
-	}
 	svg{
 		width: inherit;
 		height: inherit;

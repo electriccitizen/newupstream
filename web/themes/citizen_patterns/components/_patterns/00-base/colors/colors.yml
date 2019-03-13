@@ -15,22 +15,20 @@ items:
     value: '#222222'
   - name: $black
     value: '#000'
-  - name: $highlighter
+  - name: $brightYellow
     value: '#f2dc26'
-  - name: $warning
+  - name: $brightRed
     value: '#dd241b'
   - name: $red
     value: '#bf0e0e'
+  - name: $pink
+    value: '#f8e8f1'
   - name: $transWhite
     value: 'rgba(255,255,255,0.7)'
   - name: $transBlack
     value: 'rgba(35,35,35,0.7)'
-  - name: $imgOverlay
+  - name: $transTint
     value: 'rgba(35,35,35,0.4)'
-  - name: $unpub
-    value: '#f8e8f1'
-  - name: $unpubDark
-    value: '#fdd5dd'
 meta:
   description: >-
     To add to these items, use Sass variables that start with <code>$</code> in

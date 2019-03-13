@@ -24,8 +24,8 @@ form:not(.layout-builder-add-block):not(.layout-builder-update-block){
 			position: relative;
 			top: -2px;
 		}
-		
 	}
+	
 	//custom radio buttons (defined in forms.scss, set with variable from macros.twig)
 	.custom-options{
 		.js-form-type-radio{

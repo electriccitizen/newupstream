@@ -18,24 +18,13 @@
 		position: absolute;
 		top: 0;
 		right: 0;
-		color: $black;
+		color: $hamburger;
 		line-height: 28px;
-	}
-	&:hover,&:focus{
-		&:after{
-			content: '';
-			display: block;
-			position: absolute;
-			bottom: -1px;
-			right: 0;
-			width: 24px;
-			height: 1px;
-			background: $black;
-		}
 	}
 	&.sf-expanded{
 		&:before{
 			content: '\f057';
+			color: $hamburgerActive;
 		}
 	}
 }//end superfish-main-toggle

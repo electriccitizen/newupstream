@@ -16,11 +16,8 @@ body {
 	}
 	&.unpublished{
 		background: $unpub;
-		.node-content{
-			border-top: 20px solid $unpubDark;
-		}
 	}
-}
+}//end body
 
 .container-inline div{
 	display: inline;
@@ -61,7 +58,7 @@ body {
 		z-index: 9999;
 		display: block;
 		width: 100%;
-		background: $white;
+		background: $siteBack;
 		padding: .5rem 2rem;
 	}
 }
@@ -146,6 +143,7 @@ body {
 	}// end tabs
 }//end local tasks
 
+
 /* MODALS
 ----------------- */
 .modal-element{
@@ -156,7 +154,7 @@ body {
 	bottom: 0;
 	right: 0;
 	z-index: 501;
-	background: $transBlack;
+	background: $modalBack;
 	.modal-inner{
 		position: absolute;
 		top: 50%;
@@ -166,7 +164,7 @@ body {
 		height: auto;
 		max-height: 800px;
 		@include translate(-50%,-50%);
-		background: $white;
+		background: $modalContentBack;
 		& > .contextual .trigger{
 			right: -12px;
 		}
@@ -175,18 +173,18 @@ body {
 		position: relative;
 		h2{
 			padding: 1.5rem 2rem;
-			background: $offWhite;
+			background: $modalHeaderBack;
 			@include heading4;
-			color: $black;
+			color: $modalHeader;
 		}//end block title
 		.modal-close{
-			color: $black;
+			color: $modalHeaderClose;
 			font-size: 28px;
 			position: absolute;
 			top: 1rem;
 			right: 2rem;
 			&:hover,&:focus{
-				opacity: .6;
+				color: $modalHeaderCloseHover;
 			}
 		}
 	}//end modal-header
@@ -195,6 +193,7 @@ body {
 		overflow-y: scroll;
 		padding: 2rem 2rem 4rem;
 		overflow-x: hidden;
+		color: $modalContent;
 		input:focus{
 			cursor: pointer;
 		}
@@ -208,7 +207,7 @@ body {
 .drupal-message {
 	margin: 2rem auto;
 	padding: 10px 10px 10px 50px; /* LTR */
-	background-color:$white;
+	background-color: $white;
 	background-image: url("../images/message-24-ok.png");
 	background-position: 8px 8px; /* LTR */
 	background-repeat: no-repeat;

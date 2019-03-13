@@ -2,56 +2,48 @@
    FORMS
 ================= */
 
-/* FORMS MIXINS
------------------ */
-
-///mixin placholder
 @mixin placeholder{
-	$place-tint: .4;
-	$place-color: $body;
+	$placeTint: .4;
 	&::-webkit-placeholder{
-		opacity: $place-tint;
-		color: $place-color;
+		opacity: $placeTint;
+		color: $placeColor;
 	}
 	&::-moz-placeholder{
-		opacity: $place-tint;
-		color: $place-color;
+		opacity: $placeTint;
+		color: $placeColor;
 	}
 	&:-ms-input-placeholder{
-		opacity: $place-tint;
-		color: $place-color;
+		opacity: $placeTint;
+		color: $placeColor;
 	}
 	&::-webkit-input-placeholder{
-		opacity: $place-tint;
-		color: $place-color;
+		opacity: $placeTint;
+		color: $placeColor;
 	}
 }
 
-///mixin - placeholderFocus
 @mixin placeholderFocus{
-	$place-focus-tint: .2;
-	$place-focus-color: $body;
+	$placeFocusTint: .2;
 	&::-webkit-placeholder{
-		opacity: $place-focus-tint;
-		color: $place-focus-color;
+		opacity: $placeFocusTint;
+		color: $placeFocusColor;
 	}
 	&::-moz-placeholder{
-		opacity: $place-focus-tint;
-		color: $place-focus-color;
+		opacity: $placeFocusTint;
+		color: $placeFocusColor;
 	}
 	&:-ms-input-placeholder{
-		opacity: $place-focus-tint;
-		color: $place-focus-color;
+		opacity: $placeFocusTint;
+		color: $placeFocusColor;
 	}
 	&::-webkit-input-placeholder{
-		opacity: $place-focus-tint;
-		color: $place-focus-color;
+		opacity: $placeFocusTint;
+		color: $placeFocusColor;
 	}
 }
 
-///mixin textInput
 @mixin textInput{
-	border: 1px solid $borderRule;
+	border: 1px solid $formElementBorder;
 	font-size: 1.6rem;
 	font-family: $bodyFont;
 	padding: 10px 6px 11px;
@@ -62,11 +54,10 @@
 	}
 }
 
-///mixin - required
 @mixin required{
 	&:after{
 		content: '*';
-		color: $warning;
+		color: $validation;
 		position: relative;
 		top: -1px;
 		right: -.5rem;
@@ -74,25 +65,6 @@
 	}
 }
 
-///mixin - form-submit
-@mixin formSubmit{
-	@include browserWipe;
-	background: $link;
-	font-weight: $heavy;
-	font-family: $header;
-	text-transform: uppercase;
-	padding: 1.5rem 6rem;
-	width: auto;
-	border-radius: 0;
-	border: 0;
-	color: $white;
-	&:hover,&:focus{
-		background: $hoverLink;
-		@include transAll(.3s);
-	}
-}
-
-///mixins - customOptions
 @mixin customOptions{
 	input{
 		//hide the normal inputs
@@ -100,18 +72,18 @@
 		opacity: 0;
 		&:checked{
 			+ label:before{
-				background: $transBlack;
-				border-color: darken($link, 5%);
+				background: $checkBoxCheckedBack;
+				border-color: $checkBoxChecked;
 			}
 			&:hover{
 				& + label:before{
-					background: $black;
+					background: $checkBoxCheckedBackHover;
 				}
 			}
 		}
 		&:focus,&:hover{
 			+ label:before{
-				background: $transBlack;
+				background: $checkBoxBackHover;
 			}
 		}
 	}
@@ -127,7 +99,7 @@
 			display: inline-block;
 			width: 16px;
 			height: 16px;
-			border: 2px solid $link;
+			border: 2px solid $checkBox;
 			cursor: pointer;
 			position: absolute;
 			top: 3px;
@@ -146,9 +118,13 @@ input[type=text], input[type=search], input[type=url], input[type=number], texta
 	@include browserWipe;
 }
 
+input[type="submit"].button{
+	@include submitButton;
+}
+
 //validation
 .has-error {
-	border-color: $warning;
+	border-color: $validation;
 }
 
 
@@ -196,7 +172,7 @@ fieldset{
 			margin: 0 2rem;
 		}
 	}
-}
+}//end fieldset
 
 
 

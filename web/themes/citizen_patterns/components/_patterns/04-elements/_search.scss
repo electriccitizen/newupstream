@@ -63,16 +63,3 @@
 
 }//end search page
 
-
-
-
-/* PATTERN LAB ONLY
------------------- */
-.pl .search-header a{
-	&:hover,&:focus{
-		@include transAll(.3s);
-	}
-}
-
-
-

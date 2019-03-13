@@ -1,23 +1,20 @@
 /* base colors */
-$white       : #fff;
-$offWhite    : #f6f6f6;
-$lightGrey   : #ededed;
-$grey        : #ccc;
-$midGrey     : #676767;
-$darkGrey    : #4a4a4a;
-$lightBlack  : #222222;
-$black       : #000;
-$highlighter : #f2dc26;
-$warning     : #dd241b;
-$red         : #bf0e0e;
+$white        : #fff;
+$offWhite     : #f6f6f6;
+$lightGrey    : #ededed;
+$grey         : #ccc;
+$midGrey      : #676767;
+$darkGrey     : #4a4a4a;
+$lightBlack   : #222222;
+$black        : #000;
+$brightYellow : #f2dc26;
+$brightRed    : #dd241b;
+$red          : #bf0e0e;
+$pink         : #f8e8f1;
 
 
 /* transparents */
 $transWhite  : rgba(255,255,255,0.7);
 $transBlack  : rgba(35,35,35,0.7);
-$imgOverlay  : rgba(35,35,35,0.4);
+$transTint   : rgba(35,35,35,0.4);
 
-
-/* Randos */
-$unpub : #f8e8f1;
-$unpubDark : #fdd5dd;

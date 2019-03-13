@@ -19,12 +19,13 @@
 		a{
 			padding: 1rem 1rem 1rem 3rem;
 			display: block;
-			color: inherit;
+			color: $accordHeader;
 			font-weight: $heavy;
 			position: relative;
 			font-size: 2.2rem;
-			border: 1px solid $darkGrey;
+			border: 1px solid $accordHeaderBorder;
 			margin-top: -1px;
+			background: $accordHeaderBack;
 			&:after{
 				position: absolute;
 				right: 3rem;
@@ -32,8 +33,9 @@
 				content: "+";
 			}
 			&:hover,&:focus{
-				color: $white;
-				background: $darkGrey;
+				color: $accordHeaderHover;
+				background: $accordHeaderBackHover;
+				border-color: $accordHeaderBorderHover;
 				@include transAll(.3s);
 			}
 		}
@@ -43,18 +45,26 @@
 	.field-long-text{
 		display: none;
 		padding: 2rem 4rem;
+		background: $accordContentBack;
+		border-left: 1px solid $accordContentBorder;
+		border-right: 1px solid $accordContentBorder;
 	}
 
 	//active accordion
 	&.accord-active{
 		.accordion-header{
 			a{
-				color: $white;
-				background: $darkGrey;
+				color: $accordActive;
+				background: $accordActiveBack;
+				border-color: $accordActiveBorder;
 				border-bottom: 0;
 				&:after{
 					content: "–";
-
+				}
+				&:hover,&:focus{
+					color: $accordActiveHover;
+					background: $accordActiveBackHover;
+					border-color: $accordActiveBorderHover;
 				}
 			}
 		}
@@ -71,18 +81,3 @@
 
 }//end accordion-item
 
-
-/* PATTERN LAB ONLY
--------------------- */
-.pl{
-	.accordion-item{
-		max-width: 800px;
-		margin: 4rem auto 0;
-	}
-}
-.pl #organisms-accordion-group .sg-pattern-example > .flex-wrap{
-	padding: 2rem 0;
-	.accordion-item{
-		margin: 0 auto;
-	}
-}

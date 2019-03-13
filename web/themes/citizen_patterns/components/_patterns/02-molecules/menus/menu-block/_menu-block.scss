@@ -9,7 +9,8 @@
 	h2.block-title{
 		position: relative;
 		padding: 1rem $siteMarginMobile;
-		background: $lightGrey;
+		background: $menuBlockTitleBack;
+		color: $menuBlockTitle;
 		max-width: none;
 		@include mobileStop{
 			padding: 2rem;
@@ -17,6 +18,10 @@
 		}	 
 		a.page-menu-toggle{
 			margin-right: 2rem;
+			color: $menuBlockTitle;
+			&:hover,&:focus{
+				color: $menuBlockTitleHover;
+			}
 			@include tab{
 				display: none;
 			}
@@ -25,6 +30,7 @@
 	//top level
 	#page-menu-wrapper{
 		display: none;
+		background: $menuBack;
 		@include mobileStop{
 			padding-left: $siteMarginMobile;
 			padding-right: $siteMarginMobile;
@@ -57,13 +63,17 @@
 				a{
 					text-decoration: none;
 					display: block;
+					color: $menuTop;
+					&:hover,&:focus{
+						color: $menuTopHover;
+					}
 					&.is-active{
-						color: $black;
+						color: $menuTopActive;
 						&:hover,&:focus{
-							color: $hoverLink;
+							color: $menuTopActiveHover;
 						}
 					}
-				}
+				}//end a
 				//parents
 				&.parent{
 					& > .expander{
@@ -82,18 +92,22 @@
 						}
 					}//end when expanded
 				}//end parent
-
+				li{
+					a{
+						color: $menuChild;
+						&:hover,&:focus{
+							color: $menuChildHover;
+						}
+						&.is-active{
+							color: $menuChildActive;
+							&:hover,&:focus{
+								color: $menuChildActiveHover;
+							}
+						}
+					}//end a
+				}//end child items
 			}//end global li
 		}//end first level ul
 	}//end page menu wrapper
-	
 }//end .block--system-menu.page-menu nav
 
-
-/* PATTERN LAB ONLY
--------------------- */
-.pl .page-menu{
-	& > ul:not(:first-of-type){
-		display: none;
-	}
-} 
