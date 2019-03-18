@@ -64,4 +64,4 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
  *
  * See: tests/installer-features/installer.feature
  */
-$settings['install_profile'] = 'oc';
+$settings['install_profile'] = 'citizen';

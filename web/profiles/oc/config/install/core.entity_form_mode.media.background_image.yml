@@ -1,9 +1,0 @@
-langcode: en
-status: true
-dependencies:
-  module:
-    - media
-id: media.background_image
-label: Non-caption
-targetEntityType: media
-cache: true

@@ -1,13 +1,11 @@
-uuid: 305cc2d3-e60a-40f1-9b75-1741d768ea37
+uuid: 4d37682a-284d-40b7-9977-7551b53c974b
 langcode: en
 status: true
 dependencies:
-  content:
-    - 'block_content:basic:412a8554-21fa-4bd9-877f-4b001647c54e'
-  module:
-    - block_content
   theme:
     - citizen_patterns
+_core:
+  default_config_hash: p6CF98PoXNtCMPI0q-a4ACppkH05WJEKIR_Cl-tTahA
 id: citizen_patterns_disconnectwithus
 theme: citizen_patterns
 region: footer

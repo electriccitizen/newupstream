@@ -1,11 +1,9 @@
-uuid: a3727f4e-f4e1-4346-b939-c61d30328948
+uuid: 51bed96f-e246-4094-ad86-e299de1fb362
 langcode: en
 status: true
-dependencies:
-  content:
-    - 'file:file:413662c9-c70e-4a0b-bd76-f25e283ac295'
+dependencies: {  }
 _core:
-  default_config_hash: OJUwL6xTTiHbXZy10swc5Fckkr7qhSm4b0nK3326LO8
+  default_config_hash: Ngqoy9ztuwgBS8ZY6artc_pGjODtrHYtKBR3batTXJc
 id: from_library
 label: 'From library'
 icon_uuid: 413662c9-c70e-4a0b-bd76-f25e283ac295

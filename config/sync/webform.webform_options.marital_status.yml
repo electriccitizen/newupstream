@@ -1,4 +1,4 @@
-uuid: 6b732d14-da2d-49f1-98ba-d1db87e7ce69
+uuid: a6e3eb61-18d7-401b-a6d3-0e13a74c5720
 langcode: en
 status: true
 dependencies:
@@ -6,7 +6,7 @@ dependencies:
     module:
       - webform
 _core:
-  default_config_hash: bo-POVCvpUD_3ZtU_xgWe1HHHLWOLzx7CzhqD7LgyeM
+  default_config_hash: cjVDbAE5BlopGrY-tfxsxMoyEibwBBNgdQwDdxOSkow
 id: marital_status
 label: 'Marital status'
 category: Demographic

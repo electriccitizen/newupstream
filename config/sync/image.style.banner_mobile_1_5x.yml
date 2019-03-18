@@ -1,10 +1,12 @@
-uuid: 289284d9-552b-40b2-98f2-b7b957c4705e
+uuid: 73b6963e-9416-436d-bd1c-3e18438e9651
 langcode: en
 status: true
 dependencies:
   module:
     - focal_point
     - image_style_quality
+_core:
+  default_config_hash: 8_oj5THDTraqZzBquewB0SJ5Tpr9Zg2-HJxyXfwcPdc
 name: banner_mobile_1_5x
 label: 'Banner Mobile 1.5x'
 effects:

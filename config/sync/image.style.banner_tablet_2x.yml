@@ -1,4 +1,4 @@
-uuid: c72b428f-1445-4a89-8c2d-97b295092ecb
+uuid: b0ee4434-6db3-43bc-8929-232c906360c0
 langcode: en
 status: true
 dependencies:
@@ -6,7 +6,7 @@ dependencies:
     - focal_point
     - image_style_quality
 _core:
-  default_config_hash: rg1Uge61AWrcbclT84Vqu3Q_AAd2f7w510l3JWjzeTo
+  default_config_hash: _pFHQOFo8eehBGUXOHaTsHI_nMjL4XSbpseVlvka-Fw
 name: banner_tablet_2x
 label: 'Banner Tablet 2x'
 effects:

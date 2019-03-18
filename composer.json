@@ -76,7 +76,7 @@
     "drupal/easy_breadcrumb": "^1.6",
     "drupal/entity": "^1.0.0-rc1",
     "drupal/entity_browser": "^2.0.0",
-    "drupal/entity_embed": "^1.0@beta",
+    "drupal/entity_embed": "1.x-dev",
     "drupal/entity_reference_revisions": "1.6.0",
     "drupal/entity_usage": "^2.0@alpha",
     "drupal/extlink": "^1.1",
@@ -192,7 +192,6 @@
         ".editorconfig",
         ".eslintignore",
         ".eslintrc.json",
-        ".htaccess",
         "web.config"
       ],
       "terminus": {

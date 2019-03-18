@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: from_library
+label: 'From library'
+icon_uuid: 413662c9-c70e-4a0b-bd76-f25e283ac295
+description: 'Access reusable paragraphs from the paragraphs library'
+behavior_plugins: {  }
