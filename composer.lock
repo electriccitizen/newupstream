@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "019e2b676df1d56a164cd932ce3e1ef9",
+    "content-hash": "78c8d8a5b145b610f743e8c48cc690ef",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -10591,7 +10591,6 @@
                 "mock",
                 "xunit"
             ],
-            "abandoned": true,
             "time": "2015-10-02T06:51:40+00:00"
         },
         {
@@ -11047,8 +11046,5 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
-    "platform-dev": [],
-    "platform-overrides": {
-        "php": "7.1.14"
-    }
+    "platform-dev": []
 }
