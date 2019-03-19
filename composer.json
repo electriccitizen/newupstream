@@ -195,7 +195,7 @@
         "web.config"
       ],
       "terminus": {
-        "compatible-version": "^1.4"
+        "compatible-version": "^2.0"
       }
     },
     "patches": {
