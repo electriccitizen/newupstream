@@ -1,0 +1,60 @@
+uuid: 9d3b5710-78c2-4848-9eaf-04620ed6b5af
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.landing_page_section.field_admin_description
+    - field.field.paragraph.landing_page_section.field_anchor_link
+    - field.field.paragraph.landing_page_section.field_background_image
+    - field.field.paragraph.landing_page_section.field_background_style
+    - field.field.paragraph.landing_page_section.field_layout
+    - field.field.paragraph.landing_page_section.field_section_intro
+    - field.field.paragraph.landing_page_section.field_section_title
+    - field.field.paragraph.landing_page_section.field_section_widgets
+    - paragraphs.paragraphs_type.landing_page_section
+  module:
+    - ctools_block
+    - entity_reference_revisions
+    - layout_builder
+    - layout_discovery
+    - text
+third_party_settings:
+  layout_builder:
+    sections: {  }
+    enabled: false
+    allow_custom: false
+id: paragraph.landing_page_section.default
+targetEntityType: paragraph
+bundle: landing_page_section
+mode: default
+content:
+  field_section_intro:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_section_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_section_widgets:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_admin_description: true
+  field_anchor_link: true
+  field_background_image: true
+  field_background_style: true
+  field_layout: true

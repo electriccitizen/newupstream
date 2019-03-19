@@ -1,4 +1,4 @@
-uuid: 9086646d-e093-4114-8793-2dd13bc3e17d
+uuid: dc6874a1-e058-470e-b2c9-e66c253fc988
 langcode: en
 status: true
 dependencies:
@@ -6,7 +6,7 @@ dependencies:
     module:
       - webform
 _core:
-  default_config_hash: LkO63Zl2cP_l9YdjzWI8dWoD9uD0pytkPiUiUM2bo9A
+  default_config_hash: AIyhc8Dfbrc5t1f5Eyg6FtE1-QeqcU3ogQLiCF3vJZ8
 id: phone_types
 label: 'Phone type'
 category: Demographic

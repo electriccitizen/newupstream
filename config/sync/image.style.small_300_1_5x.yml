@@ -1,9 +1,7 @@
-uuid: 5982a254-7185-4c70-b91f-4430a529c02e
+uuid: 0564f728-921f-4b6d-8e2d-c5b0bbd17231
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: YSDxQuefsBJGlyWgAbjVWnWHRb4JJxalAS4jHKwnUvI
 name: small_300_1_5x
 label: 'Small (300) 1.5x'
 effects:

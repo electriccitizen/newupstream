@@ -15,4 +15,4 @@ password_reset_timeout: 86400
 password_strength: true
 langcode: en
 _core:
-  default_config_hash: X-f1BsSrXaYdOWgRN2lUgmUgwpBwPBSu8qVtf5-7Nx8
+  default_config_hash: w314Zp7B4NbrlV4KeeZLNSmTTpdJiv-KwZO2E1fSSK0

@@ -1,4 +1,4 @@
-uuid: 2c43e485-0ace-4547-bd8e-dc7f53f9b16f
+uuid: da23c7b6-b1de-48c7-854e-94ba9326e3e5
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,7 @@ dependencies:
     - paragraphs_library
     - user
 _core:
-  default_config_hash: d7aXzkVXJQb85SCR2ZqPsK-po_HzdSe2NZyD6wv3iF8
+  default_config_hash: 67G2lyvlXJE8P8b1oAheELEdM5i74aipXfDIZCpAsdQ
 id: paragraphs_library
 label: 'Paragraphs library'
 module: views

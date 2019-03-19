@@ -1,12 +1,10 @@
-uuid: 7e15c239-bba5-4e81-ac3d-8826078f7869
+uuid: 08578442-fa18-4dc3-bcde-384634e05171
 langcode: en
 status: true
 dependencies:
   module:
     - focal_point
     - image_style_quality
-_core:
-  default_config_hash: hCruH1PBa03DCQrloc6GN5k6SnBI_j-U2yw3wugyszE
 name: 350x350_1_5x
 label: '350x350 1.5x'
 effects:

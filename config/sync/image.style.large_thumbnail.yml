@@ -1,11 +1,9 @@
-uuid: 05a81df1-350d-4bbf-96bd-4b6955651f9e
+uuid: 7896def5-809e-4e0a-8923-f666ccb765e0
 langcode: en
 status: true
 dependencies:
   module:
     - focal_point
-_core:
-  default_config_hash: V7sVnUOZqHPEzh_95zU1KmDfKN59iXeit7bL6Yq5N8Q
 name: large_thumbnail
 label: 'Large Thumbnail'
 effects:

@@ -1,4 +1,4 @@
-uuid: 58d4bd20-0d57-4c02-85b7-1cdd109ed633
+uuid: 6d4e8ff4-d98f-48cd-a2ac-565316e29786
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,7 @@ dependencies:
   module:
     - entity_browser
 _core:
-  default_config_hash: lYjPW8cUeZTrBXuchgRTuaP6oQSE0aToBCD0wrKNZcI
+  default_config_hash: r4TZydyh5ONZnEbmIQMgY2PeiciP9cSAwBGrDLmxvd8
 id: paragraph.from_library.default
 targetEntityType: paragraph
 bundle: from_library
@@ -19,15 +19,14 @@ content:
     type: entity_browser_entity_reference
     settings:
       entity_browser: paragraphs_library_items
-      open: true
-      field_widget_display: rendered_entity
-      field_widget_display_settings:
-        view_mode: summary
-      field_widget_remove: false
-      field_widget_replace: true
+      field_widget_display: label
       field_widget_edit: true
+      field_widget_remove: true
+      open: true
       selection_mode: selection_append
-    weight: 2
+      field_widget_replace: false
+      field_widget_display_settings: {  }
+    weight: 1
     third_party_settings: {  }
     region: content
 hidden:
