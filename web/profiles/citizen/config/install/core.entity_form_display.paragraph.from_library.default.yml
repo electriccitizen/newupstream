@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - entity_browser.browser.paragraphs_library_items
     - field.field.paragraph.from_library.field_reusable_paragraph
     - paragraphs.paragraphs_type.from_library
   module:
