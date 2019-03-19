@@ -1,6 +1,9 @@
+uuid: 41aae541-404a-4a0c-b597-28a6fd1ae291
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: I_ofJsxkXf03zc7KcTnUg7iZsp8mMrKOAUF_U7KmXms
 id: oc_short_date_only
 label: 'OC Short Date Only'
 locked: false

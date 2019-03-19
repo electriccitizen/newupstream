@@ -1,8 +1,11 @@
+uuid: dce61e3a-c633-49bc-9f34-2c6c497e3b01
 langcode: en
 status: true
 dependencies:
   module:
     - image_style_quality
+_core:
+  default_config_hash: YUWo9rhhyvG-9mIVZit8thfRmzxEV_Ar21oROM3ohlU
 name: small_300_2x
 label: 'Small (300) 2x'
 effects:

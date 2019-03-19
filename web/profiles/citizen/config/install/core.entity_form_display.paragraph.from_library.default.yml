@@ -1,11 +1,15 @@
+uuid: 58d4bd20-0d57-4c02-85b7-1cdd109ed633
 langcode: en
 status: true
 dependencies:
   config:
+    - entity_browser.browser.paragraphs_library_items
     - field.field.paragraph.from_library.field_reusable_paragraph
     - paragraphs.paragraphs_type.from_library
   module:
     - entity_browser
+_core:
+  default_config_hash: lYjPW8cUeZTrBXuchgRTuaP6oQSE0aToBCD0wrKNZcI
 id: paragraph.from_library.default
 targetEntityType: paragraph
 bundle: from_library

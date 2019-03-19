@@ -1,8 +1,11 @@
+uuid: e77618b1-cb8b-4114-a08c-efa3f0079a3a
 langcode: en
 status: true
 dependencies:
   module:
     - image_style_quality
+_core:
+  default_config_hash: v2X7oiyLDgQNYQwh5Z-bfEzAMkNteziVxfTEGcHLHhk
 name: medium_500_1_5x
 label: 'Medium (500) 1.5x'
 effects:

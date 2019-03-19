@@ -5,3 +5,5 @@ scheme_whitelist:
   - internal
 protocol_style: full
 local_paths: "http://newupstream.docksal/\r\nhttp://dev-newupstream.pantheonsite.io/"
+_core:
+  default_config_hash: A2EdM5QyvyuJY3XvUh7EgWef5aBQBMHf9DQ3y4lV-Sg

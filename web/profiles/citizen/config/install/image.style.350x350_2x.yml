@@ -1,9 +1,12 @@
+uuid: 87658fb3-dd64-4981-9382-3985296e8292
 langcode: en
 status: true
 dependencies:
   module:
     - focal_point
     - image_style_quality
+_core:
+  default_config_hash: 13RYl4YMGAcm_yODwYf7hmEd2myEgiUFPY44IQKUvQA
 name: 350x350_2x
 label: '350x350 2x'
 effects:

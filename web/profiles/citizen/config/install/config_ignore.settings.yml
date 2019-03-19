@@ -3,3 +3,5 @@ ignored_config_entities:
   2: 'xmlsitemap.*'
   4: xmlsitemap_engines.settings
   6: system.performance.yml
+_core:
+  default_config_hash: WATeyvAyytJHOgThSIfkliYfl00FxJXGKv5zkxZaRyw

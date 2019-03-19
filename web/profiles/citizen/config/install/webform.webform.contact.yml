@@ -1,3 +1,4 @@
+uuid: 80012861-668b-4c93-b275-8d590f539570
 langcode: en
 status: open
 dependencies:
@@ -9,6 +10,8 @@ dependencies:
 third_party_settings:
   antibot:
     antibot: true
+_core:
+  default_config_hash: nhypGOLLL9aQEY_9wPqAnzFehIdkkA1rN2WbomMDSGE
 open: null
 close: null
 weight: 0

@@ -1,6 +1,9 @@
+uuid: a8421f8c-8a07-48d7-b51c-9ee74664202b
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: 8rJ418pOHyYt-h6Iq6viynbODmtOF1feRW1AaNYubHM
 id: global
 label: Global
 tags:

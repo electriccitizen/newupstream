@@ -42,3 +42,5 @@ tab_edit:
   blog: false
   landing_page: false
   gather_content_node: false
+_core:
+  default_config_hash: 9Z2O3Oc3S2GZbgTY1Ut2nNhRnb0HCM3WZW-4x3eo-i0

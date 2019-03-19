@@ -1,8 +1,11 @@
+uuid: b9bcf773-1642-4f17-bfea-9ea1afd67a49
 langcode: en
 status: true
 dependencies:
   module:
     - image_style_quality
+_core:
+  default_config_hash: omGJaw67u3WasxqYgreG23kuisSdiGxscG04DefIfAA
 name: medium_500_2x
 label: 'Medium (500) 2x'
 effects:

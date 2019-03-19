@@ -1,6 +1,9 @@
+uuid: dee9ec67-b796-4ccb-80c3-60ad031c387c
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: TxEXW8PkUAtvv29x2kpT-HUPqAPQISCI2I3INfP3Cno
 id: authenticated
 label: 'Authenticated user'
 weight: 1

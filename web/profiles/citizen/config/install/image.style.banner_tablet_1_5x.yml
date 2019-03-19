@@ -1,9 +1,12 @@
+uuid: 501e91e0-82f3-4480-b794-91c82aff41b0
 langcode: en
 status: true
 dependencies:
   module:
     - focal_point
     - image_style_quality
+_core:
+  default_config_hash: wGGxHYW9rnmeHSJFmYfH7iZ6-41qFeWqEBSY2aKBa5c
 name: banner_tablet_1_5x
 label: 'Banner Tablet 1.5x'
 effects:

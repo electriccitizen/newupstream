@@ -1,6 +1,9 @@
+uuid: fa6e6c34-a677-4c4f-b885-8d8ca4c4fae7
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: XLkDo-4h12GZyxyURylyAoxMjNBH2FCF0if-ws8brIA
 name: small_300
 label: 'Small (300)'
 effects:

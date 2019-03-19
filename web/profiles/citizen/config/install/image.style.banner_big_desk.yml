@@ -1,8 +1,11 @@
+uuid: 639bf95b-b6da-42c8-a850-5e0214348a0d
 langcode: en
 status: true
 dependencies:
   module:
     - focal_point
+_core:
+  default_config_hash: K1OyspHRV2z_se_cUARG2CLTqU-vPNN67TQtQJNEZjA
 name: banner_big_desk
 label: 'Banner Big Desk'
 effects:

@@ -5,3 +5,5 @@ path:
   public: sites/default/files
   private: sites/default/files/private
 temporary_maximum_age: 21600
+_core:
+  default_config_hash: Pkqqyx5_eSRpiRfNo2VN48dpe7GW9q2xypb7cpYiV3Y

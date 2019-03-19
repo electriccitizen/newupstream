@@ -1,9 +1,12 @@
+uuid: 1ee3de6f-8f7a-47f5-a602-6f533fd90f6a
 langcode: en
 status: true
 dependencies:
   module:
     - focal_point
     - image_style_quality
+_core:
+  default_config_hash: OXExLjdYCqiJ22oFA0sEKiXxPgt62ArFY7s-zWH0w6M
 name: large_thumbnail_1_5x
 label: 'Large Thumbnail 1.5x'
 effects:
