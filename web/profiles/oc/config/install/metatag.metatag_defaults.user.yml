@@ -1,0 +1,12 @@
+uuid: ddc6e804-4b31-4de8-b6f8-7b88398cce56
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Mqo_Dq5FAdq40gT8NcDnra5jWmpxpV7I8Jxq92LhhHg
+id: user
+label: User
+tags:
+  title: '[user:name] | [site:name]'
+  robots: 'noindex, nofollow, noarchive, nosnippet, noodp, noydir, noimageindex, notranslate'
+  description: '[site:name]'

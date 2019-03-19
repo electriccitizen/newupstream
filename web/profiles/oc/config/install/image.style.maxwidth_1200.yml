@@ -1,0 +1,17 @@
+uuid: f775241d-1fc7-4512-b9f3-c4e3af1a5bed
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: MbvJkwbmvKIzcWrMXCOd26r0q6WploXd8W8wOY9_OZk
+name: maxwidth_1200
+label: 'Max Width (1200)'
+effects:
+  ae5ff580-1b59-44dc-8edb-65b722fb37b1:
+    uuid: ae5ff580-1b59-44dc-8edb-65b722fb37b1
+    id: image_scale
+    weight: 1
+    data:
+      width: 1200
+      height: null
+      upscale: true
