@@ -7,7 +7,6 @@ dependencies:
     - paragraphs.paragraphs_type.accordion_group
     - paragraphs.paragraphs_type.basic_page_section
     - paragraphs.paragraphs_type.form
-    - paragraphs.paragraphs_type.from_library
     - paragraphs.paragraphs_type.horizontal_rule
     - paragraphs.paragraphs_type.image
     - paragraphs.paragraphs_type.links_files
@@ -39,7 +38,6 @@ settings:
       pullquote: pullquote
       text: text
       video: video
-      from_library: from_library
     target_bundles_drag_drop:
       accordion_group:
         enabled: true

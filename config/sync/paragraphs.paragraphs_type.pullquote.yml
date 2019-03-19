@@ -4,11 +4,6 @@ status: true
 dependencies:
   content:
     - 'file:file:ff1d5535-d91c-4ca3-a60f-9cc76a45e1c5'
-  module:
-    - paragraphs_library
-third_party_settings:
-  paragraphs_library:
-    allow_library_conversion: true
 _core:
   default_config_hash: gDuVmsYqqJ5O0fWK-BtniYeLfxlreTdd_nxfJ6gxsgk
 id: pullquote

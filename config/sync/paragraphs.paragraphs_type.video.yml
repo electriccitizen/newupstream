@@ -4,11 +4,6 @@ status: true
 dependencies:
   content:
     - 'file:file:20d5d2e0-efbf-468c-abfc-b023ed6e1870'
-  module:
-    - paragraphs_library
-third_party_settings:
-  paragraphs_library:
-    allow_library_conversion: true
 _core:
   default_config_hash: vnFORggcCGo3wRaEO0xMnmqJcK9qm1lCtVO69bl0lbs
 id: video

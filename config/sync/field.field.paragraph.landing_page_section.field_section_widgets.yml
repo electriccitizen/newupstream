@@ -7,7 +7,6 @@ dependencies:
     - paragraphs.paragraphs_type.accordion_group
     - paragraphs.paragraphs_type.block_placer
     - paragraphs.paragraphs_type.form
-    - paragraphs.paragraphs_type.from_library
     - paragraphs.paragraphs_type.gallery
     - paragraphs.paragraphs_type.horizontal_rule
     - paragraphs.paragraphs_type.image
@@ -45,7 +44,6 @@ settings:
       text: text
       video: video
       view_placer: view_placer
-      from_library: from_library
     target_bundles_drag_drop:
       accordion_group:
         enabled: true
