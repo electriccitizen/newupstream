@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   module:
-    - citizen_custom
+    - citizen
     - system
   theme:
     - citizen_patterns
