@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Contains citizen.module.
+ * Contains citizen_custom.module.
  */
 
 use Drupal\Core\Form\FormStateInterface;
@@ -13,8 +13,8 @@ use Drupal\Core\Routing\RouteMatchInterface;
  */
 function citizen_custom_help($route_name, RouteMatchInterface $route_match) {
   switch ($route_name) {
-    // Main module help for the citizen module.
-    case 'help.page.citizen':
+    // Main module help for the citizen custom module.
+    case 'help.page.citizen_custom':
       $output = '';
       $output .= '<h3>' . t('About') . '</h3>';
       $output .= '<p>' . t('Custom glue module for Electric Citizen sites') . '</p>';
@@ -31,8 +31,8 @@ function citizen_custom_help($route_name, RouteMatchInterface $route_match) {
  */
 function citizen_custom_theme() {
   return [
-    'citizen' => [
-      'template' => 'citizen',
+    'citizen_custom' => [
+      'template' => 'citizen_custom',
       'render element' => 'children',
     ],
     'site_search' => [
@@ -74,14 +74,14 @@ function citizen_custom_preprocess_html(&$variables){
  * attach css and custom.js to node form only
  */
 function citizen_custom_form_node_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
-    $form['#attached']['library'][] = 'citizen/node';
+    $form['#attached']['library'][] = 'citizen_custom/node';
 }
 
 /*
  * attach SELECT2 globally
  */
 function citizen_custom_page_attachments(array &$attachments){
-    $attachments['#attached']['library'][] = 'citizen/global';
+    $attachments['#attached']['library'][] = 'citizen_custom/global';
 }
 
 

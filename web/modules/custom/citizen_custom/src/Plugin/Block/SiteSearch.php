@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\citizen\Plugin\Block;
+namespace Drupal\citizen_custom\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Form\FormBuilderInterface;
@@ -44,7 +44,7 @@ class SiteSearch extends BlockBase implements ContainerFactoryPluginInterface {
    * {@inheritdoc}
    */
   public function build() {
-    $form = $this->formBuilder->getForm('Drupal\citizen\Form\SiteSearchForm');
+    $form = $this->formBuilder->getForm('Drupal\citizen_custom\Form\SiteSearchForm');
     return $form;
   }
 
