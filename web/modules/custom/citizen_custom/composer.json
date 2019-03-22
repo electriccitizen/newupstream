@@ -1,5 +1,5 @@
 {
-  "name": "drupal/citizen",
+  "name": "drupal/citizen_custom",
   "type": "drupal-module",
   "description": "Custom glue module for Electric Citizen sites",
   "keywords": ["Drupal"],
