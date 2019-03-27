@@ -25,9 +25,6 @@ header.content-header .shortcut-action--remove:hover .shortcut-action__icon,head
 	background: transparent url(../icons/admin-icons/shortcut-star-remove.svg) no-repeat left top;
 	opacity: .6;
 }
-.region-pre-content #block-seven-primary-local-tasks{
-	padding-bottom: 10px;
-}
 #block-seven-primary-local-tasks .tabs__tab a{
  	color: #244c7b;
 }
@@ -36,6 +33,9 @@ header.content-header .shortcut-action--remove:hover .shortcut-action__icon,head
 }
 .dialog-off-canvas-main-canvas > .layout-container{
 	padding-top: 20px;
+}
+#block-seven-secondary-local-tasks{
+	padding-bottom: 10px;
 }
 #block-seven-breadcrumbs .breadcrumb{
 	padding: 0 0 10px;
