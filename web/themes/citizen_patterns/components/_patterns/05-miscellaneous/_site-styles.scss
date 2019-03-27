@@ -17,6 +17,9 @@ body {
 	&.unpublished{
 		background: $unpub;
 	}
+	.dialog-off-canvas-main-canvas > .layout-container{
+		padding-top: 0;
+	}
 }//end body
 
 .container-inline div{

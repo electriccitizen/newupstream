@@ -4,10 +4,6 @@
 
 /* TEXT MIXINS
 ---------------- */
-@mixin baseFontSize{
-	font-size: 2rem;
-}
-
 @mixin xSmaller{
 	font-size: 80%;
 }
@@ -73,7 +69,7 @@ html,code{
 body {
 	color: $baseText;
 	margin: 0;
-	@include baseFontSize;
+	@include baseSize;
 }
 
 p{

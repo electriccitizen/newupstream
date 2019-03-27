@@ -6,7 +6,7 @@
 /* GLOBAL NON-FORM ELEMENTS
 --------------------- */
 header.content-header{
-	background: #1c2c3f;
+	background: #323b49;
 	color: #fff;
 	min-height: 60px;
 }
@@ -31,6 +31,15 @@ header.content-header .shortcut-action--remove:hover .shortcut-action__icon,head
 }
 #block-seven-primary-local-tasks .tabs__tab.is-active a{
 	color: #0074bd;
+}
+
+.dialog-off-canvas-main-canvas > .layout-container{
+	padding-top: 40px;
+}
+
+#block-seven-breadcrumbs .breadcrumb{
+	padding: 0 0 10px;
+	margin-top: -20px;
 }
 
 /* ADMIN CONTENT VIEW
