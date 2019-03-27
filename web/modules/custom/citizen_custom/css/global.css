@@ -25,21 +25,20 @@ header.content-header .shortcut-action--remove:hover .shortcut-action__icon,head
 	background: transparent url(../icons/admin-icons/shortcut-star-remove.svg) no-repeat left top;
 	opacity: .6;
 }
-
+.region-pre-content #block-seven-primary-local-tasks{
+	padding-bottom: 10px;
+}
 #block-seven-primary-local-tasks .tabs__tab a{
  	color: #244c7b;
 }
 #block-seven-primary-local-tasks .tabs__tab.is-active a{
 	color: #0074bd;
 }
-
 .dialog-off-canvas-main-canvas > .layout-container{
-	padding-top: 40px;
+	padding-top: 20px;
 }
-
 #block-seven-breadcrumbs .breadcrumb{
 	padding: 0 0 10px;
-	margin-top: -20px;
 }
 
 /* ADMIN CONTENT VIEW
