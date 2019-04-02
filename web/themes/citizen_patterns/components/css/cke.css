@@ -5,21 +5,22 @@ html {
 	font-family: Helvetica, Arial, sans-serif;
 }
 
-
 .media--type-image img{
 	max-width: 100%;
 	height: auto;
 }
 
-.align-right > .media {
+.align-right{
 	float: right;
-	margin:0 0 20px 20px;
+	margin:0 0 20px 40px;
 	clear:both;
+	max-width: 50%;
 }
-.align-left > .media  {
+.align-left{
 	float: left;
-	margin:0 20px 20px 0;
+	margin:0 40px 20px 0;
 	clear:both;
+	max-width: 50%;
 }
 .align-center > .media {
 	margin: 2rem auto;
@@ -29,7 +30,6 @@ html {
 
 .media--view-mode-small-embed{
 	width: 300px;
-	max-width: 50%;
 }
 .media--view-mode-medium-embed{
 	width: 500px;

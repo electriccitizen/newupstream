@@ -13,38 +13,17 @@ img{
 }
 
 //constrain images with smaller sizes (commonly embedded)
-.view-modemediasmall,.view-mode-small,.view-modemediasmall-embed{
-	width: 300px;
+	width: 320px;
 	max-width: 100%;
-	&.left,&.right{
-		@include tab{
-			max-width: 50%;
-		}
-	}
 }
-.view-modemediamedium,.view-mode-medium,.view-modemediamedium-embed{
-	max-width: 500px;
-	&.left,&.right{
-		@include tab{
-			max-width: 50%;
-		}
-	}
+.view-modemediamedium-embed{
+	max-width: 460px;
 }
-.view-modemediasquare,.view-mode-square{
+.view-modemediasquare{
 	max-width: 350px;
-	&.left,&.right{
-		@include tab{
-			max-width: 50%;
-		}
-	}
 }
-.view-modemedialarge,.view-mode-large,.view-modemedialarge-embed{
+.view-modemedialarge-embed{
 	max-width: 800px;
-	&.left,&.right{
-		@include tab{
-			max-width: 50%;
-		}
-	}
 }
 
 /* MEDIA IN WYSIWYG 
@@ -57,12 +36,14 @@ img{
 		@include tab {
 			float: right;
 			margin-left: 2rem;
+			max-width: 50%;
 		}
 	}
 	&.left{
 		@include tab {
 			float: left;
 			margin-right: 2rem;
+			max-width: 50%;
 		}
 	}
 	&.center{

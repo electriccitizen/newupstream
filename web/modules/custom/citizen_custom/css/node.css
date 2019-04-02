@@ -77,14 +77,6 @@
   background: url(../icons/block.svg) no-repeat;
 }
 
-.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Call to Action"]{
-  background: url(../icons/cta.svg) no-repeat;
-}
-
-.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Events by Category"]{
-  background: url(../icons/events.svg) no-repeat;
-}
-
 .field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Form"]{
   background: url(../icons/form.svg) no-repeat;
 }
@@ -111,14 +103,6 @@
 
 .field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Links & Files"]{
   background: url(../icons/link.svg) no-repeat;
-}
-
-.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Map"]{
-  background: url(../icons/map.svg) no-repeat;
-}
-
-.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add News by Category"]{
-  background: url(../icons/news.svg) no-repeat;
 }
 
 .field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Pullquote"]{
