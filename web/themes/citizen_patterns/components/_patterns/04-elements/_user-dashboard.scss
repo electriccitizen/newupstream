@@ -3,7 +3,7 @@
 =============== */
 
 article.user-dashboard{
-	margin-top: -4rem;
+	margin-top: -$elementSpace;
 	margin-bottom: $spaceXl;
 	//image, username, since, roles
 	& > .layout--onecol:first-child{

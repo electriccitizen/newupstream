@@ -1,54 +1,60 @@
-uuid: 8243684e-08c5-49d7-bb27-4c49d8dce501
+uuid: 8074a2ca-6b18-4c59-893b-0a31eb4df91f
 langcode: en
 status: true
 dependencies:
   config:
-    - image.style.large_800
-    - image.style.medium_500
-    - image.style.medium_500_1_5x
-    - image.style.medium_500_2x
-    - image.style.small_300
-    - image.style.small_300_1_5x
-    - image.style.small_300_2x
+    - image.style.full_non_crop
+    - image.style.large_non_crop
+    - image.style.medium_non_crop
+    - image.style.medium_non_crop_1_5x
+    - image.style.medium_non_crop_2x
+    - image.style.small_non_crop
+    - image.style.small_non_crop_1_5x
+    - image.style.small_non_crop_2x
   theme:
     - citizen_patterns
-id: large
-label: Large
+id: full_non_crop
+label: 'Full non-crop'
 image_style_mappings:
+  -
+    breakpoint_id: citizen_patterns.middesk
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: full_non_crop
   -
     breakpoint_id: citizen_patterns.desk
     multiplier: 1x
     image_mapping_type: image_style
-    image_mapping: large_800
+    image_mapping: large_non_crop
   -
     breakpoint_id: citizen_patterns.tablet
     multiplier: 1.5x
     image_mapping_type: image_style
-    image_mapping: medium_500_1_5x
+    image_mapping: medium_non_crop_1_5x
   -
     breakpoint_id: citizen_patterns.tablet
     multiplier: 1x
     image_mapping_type: image_style
-    image_mapping: medium_500
+    image_mapping: medium_non_crop
   -
     breakpoint_id: citizen_patterns.tablet
     multiplier: 2x
     image_mapping_type: image_style
-    image_mapping: medium_500_2x
+    image_mapping: medium_non_crop_2x
   -
     breakpoint_id: citizen_patterns.mobile
     multiplier: 1.5x
     image_mapping_type: image_style
-    image_mapping: small_300_1_5x
+    image_mapping: small_non_crop_1_5x
   -
     breakpoint_id: citizen_patterns.mobile
     multiplier: 1x
     image_mapping_type: image_style
-    image_mapping: small_300
+    image_mapping: small_non_crop
   -
     breakpoint_id: citizen_patterns.mobile
     multiplier: 2x
     image_mapping_type: image_style
-    image_mapping: small_300_2x
+    image_mapping: small_non_crop_2x
 breakpoint_group: citizen_patterns
-fallback_image_style: large_800
+fallback_image_style: full_non_crop

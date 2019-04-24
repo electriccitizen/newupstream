@@ -115,6 +115,9 @@ body {
 	padding: 30px 0 0;
 	position: relative;
 	@include auto;
+	body:not(.logged-in) &{
+		display: none;
+	}
 	&:after{
 		@include fullBack($darkGrey);
 	}

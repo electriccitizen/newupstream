@@ -5,6 +5,7 @@ dependencies:
   config:
     - image.style.banner_big_desk
     - image.style.banner_desk
+    - image.style.banner_middesk
     - image.style.banner_mobile
     - image.style.banner_mobile_1_5x
     - image.style.banner_mobile_2x
@@ -21,6 +22,11 @@ image_style_mappings:
     multiplier: 1x
     image_mapping_type: image_style
     image_mapping: banner_big_desk
+  -
+    breakpoint_id: citizen_patterns.middesk
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: banner_middesk
   -
     breakpoint_id: citizen_patterns.desk
     multiplier: 1x

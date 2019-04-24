@@ -9,6 +9,10 @@ dependencies:
     - media.type.image
   module:
     - image
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    sections: {  }
 id: media.image.default
 targetEntityType: media
 bundle: image

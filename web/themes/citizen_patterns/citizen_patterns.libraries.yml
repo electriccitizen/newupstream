@@ -6,28 +6,10 @@ global-styling:
   js:
     components/_patterns/00-base/global.js: {}
     components/js/stacktable/stacktable.min.js: {}
-accordion:
+anchor:
   version: 1.0
   js:
-    components/_patterns/03-organisms/00-paragraphs/accordion/accordion.js: {}
-media-js:
-  version: 1.0
-  js:
-    components/_patterns/02-molecules/media/_media.js: {}
-modal:
-  version: 1.0
-  js:
-    components/_patterns/05-miscellaneous/modal.js: {}
-menu-block:
-  version: 1.0
-  js:
-    components/_patterns/02-molecules/menus/menu-block/menu-block.js: {}
-  dependencies:
-    - core/underscore
-search-block:
-  version: 1.0
-  js:
-    components/_patterns/02-molecules/blocks/search/search-block.js: {}
+    components/_patterns/03-organisms/00-paragraphs/anchor/anchor.js: {}
 featherlight:
   version: 3.0
   css:
@@ -37,6 +19,34 @@ featherlight:
   js:
     https://cdn.rawgit.com/noelboss/featherlight/1.7.12/release/featherlight.min.js: { type: external, minified: true }
     https://cdn.rawgit.com/noelboss/featherlight/1.7.12/release/featherlight.gallery.min.js: { type: external, minified: true }
+forms:
+  version: 1.0
+  js:
+    components/_patterns/01-atoms/03-forms/_forms.js: {}
+galleries:
+  version: 1.0
+  js:
+    components/_patterns/03-organisms/00-paragraphs/gallery/gallery.js: {}
+media-js:
+  version: 1.0
+  js:
+    components/_patterns/02-molecules/media/_media.js: {}
+modal:
+  version: 1.0
+  js:
+    components/_patterns/05-miscellaneous/modal.js: {}
+object-fit:
+  version: 1.0
+  js:
+    components/_patterns/05-miscellaneous/_object-fit.js: {}
+search-block:
+  version: 1.0
+  js:
+    components/_patterns/02-molecules/blocks/search/search-block.js: {}
+search-page:
+  version: 1.0
+  js:
+    components/_patterns/04-elements/_search.js: {}
 slick:
   version: 3.0
   css:
@@ -45,17 +55,14 @@ slick:
       //cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css: { type: external, minified: true }
   js:
     //cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js: { type: external, minified: true }
-galleries:
+views:
   version: 1.0
   js:
-    components/_patterns/03-organisms/00-paragraphs/gallery/gallery.js: {}
-widgets:
-  version: 3.0
-  js:
-    components/_patterns/03-organisms/00-paragraphs/_widgets.js: {}
+    components/_patterns/03-organisms/01-views/_views.js: {}
   dependencies:
     - core/underscore
 fonts:
   css:
     theme:
       https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700: { type: external }
+      https://use.typekit.net/qba1bse.css: { type: external }

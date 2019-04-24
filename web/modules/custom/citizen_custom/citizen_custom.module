@@ -74,7 +74,20 @@ function citizen_custom_preprocess_html(&$variables){
  * attach css and custom.js to node form only
  */
 function citizen_custom_form_node_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
-    $form['#attached']['library'][] = 'citizen_custom/node';
+  $form['#attached']['library'][] = 'citizen_custom/node';
+  $node = $form_state->getFormObject()->getEntity();
+  if ($node->getType() == 'news') {
+    $form['promote']['widget']['value']['#title'] = 'Add to Featured News';
+    $form['promote']['widget']['value']['#description'] = 'Should have a banner image.';
+  }
+  if ($node->getType() == 'event') {
+    $form['promote']['widget']['value']['#title'] = 'Add to Featured Events';
+    $form['promote']['widget']['value']['#description'] = 'Should have a banner image.';
+  }
+  if ($node->getType() == 'blog') {
+    $form['promote']['widget']['value']['#title'] = 'Add to Featured Posts';
+
+  }
 }
 
 /*

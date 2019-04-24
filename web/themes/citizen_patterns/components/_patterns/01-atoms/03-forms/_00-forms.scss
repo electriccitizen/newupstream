@@ -43,7 +43,7 @@
 }
 
 @mixin textInput{
-	border: 1px solid $formElementBorder;
+	border: 2px solid $formElementBorder;
 	font-size: 1.6rem;
 	font-family: $bodyFont;
 	padding: 10px 6px 11px;
@@ -134,7 +134,9 @@ input[type="submit"].button{
 	width: 100%;
 	margin-bottom: $spaceMd;
 	label{
-		font-weight: $heavy;
+		font-family: $header;
+		font-size: $formLabel;
+		color: $black;
 		display: block;
 		margin-bottom: $spaceXs;
 		padding-bottom: 0;
@@ -180,9 +182,36 @@ fieldset{
 /* USER LOGIN
 --------------- */
 .user-login-form,#user-pass{
-	.form-item input:not([type="submit"]){
+	max-width: $desk;
+	@include auto;
+	.form-item:not([type="submit"]){
 		max-width: 400px;
 	}
+	.js-form-type-password{
+		position: relative;
+		.password-reset{
+			position: absolute;
+			top: 12px;
+			right: 0;
+			font-size: 1.5rem;
+		}
+		.show-password{
+			position: absolute;
+			top: 54px;
+			right: 12px;
+			font-size: 1.4rem;
+			color: $midGrey;
+			&:hover,&:focus{
+				color: $hoverLink;
+			}
+		}
+		input#edit-pass{
+			padding-right: 56px;
+		}
+		.description{
+			padding-top: 1rem;
+		}
+	}//end form type password
 	.description,p{
 		font-size: 1.4rem;
 	}

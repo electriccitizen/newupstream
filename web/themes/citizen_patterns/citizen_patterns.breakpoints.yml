@@ -8,7 +8,7 @@ citizen_patterns.mobile:
     - 2x
 citizen_patterns.tablet:
   label: Tablet
-  mediaQuery: '(min-width:400px)'
+  mediaQuery: '(min-width:500px)'
   weight: 1
   multipliers:
     - 1x
@@ -16,14 +16,20 @@ citizen_patterns.tablet:
     - 2x
 citizen_patterns.desk:
   label: Desk
-  mediaQuery: 'min-width:760px)'
+  mediaQuery: '(min-width:760px)'
   weight: 2
+  multipliers:
+    - 1x
+citizen_patterns.middesk:
+  label: Mid Desk
+  mediaQuery: '(min-width:1000px)'
+  weight: 3
   multipliers:
     - 1x
 citizen_patterns.bigdesk:
   label: Big Desk
-  mediaQuery: '(min-width:1200px)'
-  weight: 3
+  mediaQuery: '(min-width:1400px)'
+  weight: 4
   multipliers:
     - 1x
 

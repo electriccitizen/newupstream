@@ -54,8 +54,7 @@ function mobilePagenav() {
     if(!$('.page-menu-toggle').attr('aria-controls')){
       $('.page-menu-toggle').attr({
         'aria-controls': 'page-menu-wrapper', 
-        'aria-expanded': 'false', 
-        'role': 'button'
+        'aria-expanded': 'false'
       });
       $('#page-menu-wrapper').attr('aria-hidden', 'true');
     } 

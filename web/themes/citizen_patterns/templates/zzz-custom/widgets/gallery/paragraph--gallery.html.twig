@@ -56,7 +56,7 @@
           <div class="featherlight-gal image-gal" href="#item{{paragraph.field_image_multi[key].target_id}}" rel="gallery-{{paragraph.id.value}}">
             {{ drupal_entity('media', paragraph.field_image_multi[key].target_id, 'large_thumb') }}
             <div class="featherlight-hidden" id="item{{paragraph.field_image_multi[key].target_id}}">
-                {{ drupal_entity('media', paragraph.field_image_multi[key].target_id, 'large') }}
+              {{ drupal_entity('media', paragraph.field_image_multi[key].target_id, 'large') }}
             </div>
           </div>
         {%- endif -%}
