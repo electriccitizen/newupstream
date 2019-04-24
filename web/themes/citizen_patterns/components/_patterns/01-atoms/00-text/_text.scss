@@ -69,7 +69,7 @@ html,code{
 body {
 	color: $baseText;
 	margin: 0;
-	@include baseSize;
+	font-size: $baseSize;
 }
 
 p{
