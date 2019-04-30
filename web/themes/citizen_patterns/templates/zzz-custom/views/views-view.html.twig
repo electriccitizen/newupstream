@@ -30,51 +30,69 @@
  * @see template_preprocess_views_view()
  */
 #}
+{%
+  set classes = [
+    'view',
+    css_name|clean_class,
+    view.current_display|clean_class,
+    dom_id ? 'js-view-dom-id-' ~ dom_id,
+  ]
+%}
+{% block viewLibrary %}{% endblock %}
+<div{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {{ title }}
+  {{ title_suffix }}
 
-<div{{- attributes.addClass(classes) -}}>
-  {{- title_prefix -}}
-  {{- title -}}
-  {{- title_suffix -}}
-
-  {%- if header -%}
-    <div class="view-header">
-      {{- header -}}
-    </div>
-  {%- endif -%}
-
-  {{- exposed }}
-  {{- attachment_before -}}
-  {%- if rows -%}
-    <div class="view-content">
-      {{- rows -}}
-    </div>
-  {%- endif -%}
-  {%- if empty -%}
-    <div class="view-empty">
-      {{- empty -}}
-    </div>
-  {%- endif -%}
-
-
-  {{- attachment_after }}
-  {{- more -}}
-
-
-  {%- if rows -%}
-    {%- if footer -%}
-      <div class="pager-bar">
-        <div class="view-footer">
-          <div class="footer-inner">
-            {{- footer -}}
-          </div>
-        </div>
-
-        <div class="bottom-pager">
-          {{- pager -}}
-        </div>
+  {% block viewHeader %}
+    {% if header %}
+      <div class="view-header">
+        {{ header }}
       </div>
-    {%- endif -%}
-  {%- endif -%}
+    {% endif %}
+  {% endblock %}
 
-  {{- feed_icons -}}
+  {% block viewExposed %}
+    {{ exposed }}
+  {% endblock %}
+
+  {% block viewAttachBefore %}
+    {{ attachment_before }}
+  {% endblock %}
+
+  {% block viewRows %}
+    {% if rows %}
+      <div class="view-content">
+        {{ rows }}
+      </div>
+    {% endif %}
+  {% endblock %}
+
+  {% block viewEmpty %}
+    {% if empty %}
+      <div class="view-empty">
+        {{ empty }}
+      </div>
+    {% endif %}
+  {% endblock %}
+
+  {% block viewPager %}
+    {{ pager }}
+  {% endblock %}
+
+  {% block viewAttachAfter %}
+    {{ attachment_after }}
+  {% endblock %}
+  
+  {{ more }}
+
+  {% block viewFooter %}
+    {% if footer %}
+      <div class="view-footer">
+        {{ footer }}
+      </div>
+    {% endif %}
+  {% endblock %}
+
+  {{ feed_icons }}
 </div>
