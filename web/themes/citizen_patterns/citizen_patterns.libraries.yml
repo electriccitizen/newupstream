@@ -2,14 +2,13 @@ global-styling:
   version: 1.0
   css:
     theme:
-      dist/style.css: {}
+      dist/style.css.gz: { minified: true }
   js:
-    components/_patterns/00-base/global.js: {}
-    components/js/stacktable/stacktable.min.js: {}
+    dist/00-base/global.min.js.gz: { minified: true }
 anchor:
   version: 1.0
   js:
-    components/_patterns/03-organisms/00-paragraphs/anchor/anchor.js: {}
+    dist/03-organisms/00-paragraphs/anchor/anchor.min.js.gz: { minified: true }
 featherlight:
   version: 3.0
   css:
@@ -17,36 +16,44 @@ featherlight:
       https://cdn.rawgit.com/noelboss/featherlight/1.7.12/release/featherlight.min.css: { type: external, minified: true }
       https://cdn.rawgit.com/noelboss/featherlight/1.7.12/release/featherlight.gallery.min.css: { type: external, minified: true }
   js:
-    https://cdn.rawgit.com/noelboss/featherlight/1.7.12/release/featherlight.min.js: { type: external, minified: true }
-    https://cdn.rawgit.com/noelboss/featherlight/1.7.12/release/featherlight.gallery.min.js: { type: external, minified: true }
+    https://cdn.rawgit.com/noelboss/featherlight/1.7.12/release/featherlight.min.js: { type: external, minified: true, attributes: { defer: true, async: true} }
+    https://cdn.rawgit.com/noelboss/featherlight/1.7.12/release/featherlight.gallery.min.js: { type: external, minified: true, attributes: { defer: true, async: true} }
 forms:
   version: 1.0
   js:
-    components/_patterns/01-atoms/03-forms/_forms.js: {}
+    dist/01-atoms/03-forms/_forms.min.js.gz: { minified: true }
 galleries:
   version: 1.0
   js:
-    components/_patterns/03-organisms/00-paragraphs/gallery/gallery.js: {}
+    dist/03-organisms/00-paragraphs/gallery/gallery.min.js.gz: { minified: true }
 media-js:
   version: 1.0
   js:
-    components/_patterns/02-molecules/media/_media.js: {}
+    dists/02-molecules/media/_media.min.js.gz: { minified: true }
 modal:
   version: 1.0
   js:
-    components/_patterns/05-miscellaneous/modal.js: {}
+    dist/05-miscellaneous/modal.min.js.gz: { minified: true }
 object-fit:
   version: 1.0
   js:
-    components/_patterns/05-miscellaneous/_object-fit.js: {}
+    dist/05-miscellaneous/_object-fit.min.js.gz: { minified: true }
 search-block:
   version: 1.0
   js:
-    components/_patterns/02-molecules/blocks/search/search-block.js: {}
+    dist/02-molecules/blocks/search/search-block.min.js.gz: { minified: true }
 search-page:
   version: 1.0
   js:
-    components/_patterns/04-elements/_search.js: {}
+    dist/04-elements/_search.min.js.gz: { minified: true }
+select:
+  version: 3.0
+  css:
+    theme:
+      /modules/custom/citizen_custom/js/select2/select2.min.css: { minified: true }
+  js:
+    /modules/custom/citizen_custom/js/select2/select2.min.js: { minified: true }
+    /modules/custom/citizen_custom/js/select.js: {}
 slick:
   version: 3.0
   css:
@@ -54,11 +61,16 @@ slick:
       //cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css: { type: external, minified: true }
       //cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css: { type: external, minified: true }
   js:
-    //cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js: { type: external, minified: true }
+    //cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js: { type: external, minified: true, attributes: { defer: true, async: true} }
+table:
+  version: 1.0
+  js:
+    components/js/stacktable/stacktable.min.js: { minified: true }
+    dist/01-atoms/04-tables/tables.min.js.gz: { minified: true }
 views:
   version: 1.0
   js:
-    components/_patterns/03-organisms/01-views/_views.js: {}
+    dist/03-organisms/01-views/_views.min.js.gz: { minified: true }
   dependencies:
     - core/underscore
 fonts:

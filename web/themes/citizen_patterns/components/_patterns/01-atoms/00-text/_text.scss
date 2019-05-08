@@ -133,6 +133,7 @@ blockquote{
 
 //clear floats in common long text fields, remove bottom margin from last child, set list spacing
 .text-with-summary,.text-long{
+	@include clearFix;
 	& > *:last-child{
 		margin-bottom: 0;
 	}

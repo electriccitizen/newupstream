@@ -30,13 +30,6 @@
 		cursor: default;
 	}
 
-	//override layout padding on mobile
-	img{
-		@include onlySmall{
-			@include edgeToEdge;
-			@include calc(max-width, "100% + 40px");
-		}
-	}
 
 	//hover action when link
 	a:hover{

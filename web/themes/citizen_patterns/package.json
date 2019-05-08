@@ -4,14 +4,18 @@
   "version": "1.0.0",
   "devDependencies": {
     "emulsify-gulp": "fourkitchens/emulsify-gulp",
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "gulp-gzip": "^1.4.2",
+    "gulp-uglify": "^3.0.2"
   },
   "scripts": {
     "start": "gulp compile && gulp theme",
+    "zip": "gulp watch",
     "build": "gulp build",
     "postinstall": "rm -rf pattern-lab && composer create-project -n pattern-lab/edition-twig-standard pattern-lab && rm -rf pattern-lab/source && ln -s ../components pattern-lab/source"
   },
   "dependencies": {
+    "gulp-rename": "^1.4.0",
     "natives": "^1.1.6",
     "pa11y": "^5.1.0",
     "postcss": "^7.0.7",

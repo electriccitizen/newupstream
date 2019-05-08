@@ -44,7 +44,7 @@
 	{{ content.field_widget_title }}
 	{% set viewName = content.field_view_machine_name.0['#context'].value|clean_class %}
 	{% set displayName = content.field_display_machine_name.0['#context'].value|clean_class %}
-	<div class="view-widget {{ viewName }} {{ displayName }}">
+	<div class="view-widget widget-{{ viewName }} {{ displayName }}">
 		{# print the content without the styling fields #}
 	    {{- content.field_display_machine_name -}}
 	</div>			

@@ -3,17 +3,22 @@ global:
   header: true
   css:
     theme:
-      js/select2/select2.min.css: {}
       css/global.css: {}
   js:
-    js/select2/select2.min.js: {}
     js/global.js: {}
   dependencies:
-    - core/jquery
-    - core/drupal.ajax
     - core/drupal
     - core/drupalSettings
-    - core/jquery.once
+    - core/jquery
+select:
+  version: 1.0
+  css:
+    theme:
+      js/select2/select2.min.css: { minified: true }
+      css/select.css: {}
+  js:
+    js/select2/select2.min.js: { minified: true }
+    js/select.js: {}
 node:
   version: 1.0
   css:

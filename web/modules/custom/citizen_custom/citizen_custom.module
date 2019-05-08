@@ -91,10 +91,17 @@ function citizen_custom_form_node_form_alter(&$form, \Drupal\Core\Form\FormState
 }
 
 /*
- * attach SELECT2 globally
+ * attach admin js files only if a user is logged in
  */
 function citizen_custom_page_attachments(array &$attachments){
-    $attachments['#attached']['library'][] = 'citizen_custom/global';
+  $user = \Drupal::currentUser();
+  $userRole = $user->getRoles();
+  foreach($userRole as $role ){
+    if($role != 'anonymous'){
+      $attachments['#attached']['library'][] = 'citizen_custom/global';
+      $attachments['#attached']['library'][] = 'citizen_custom/select';
+    }
+  }
 }
 
 

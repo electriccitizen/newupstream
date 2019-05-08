@@ -7,6 +7,15 @@ core: 8.x
 libraries:
   - citizen_patterns/global-styling
   - citizen_patterns/fonts
+libraries-override:
+  citizen_custom/select:
+    css:
+      theme:
+        js/select2/select2.min.css: false
+        css/select.css: false
+    js:
+      js/select2/select2.min.js: false
+      js/select.js: false
 ckeditor_stylesheets:
   - https://fonts.googleapis.com/css?family=Open+Sans
   - components/css/cke.css
