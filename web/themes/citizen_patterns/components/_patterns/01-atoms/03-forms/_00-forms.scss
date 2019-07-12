@@ -67,6 +67,7 @@
 }
 
 @mixin customOptions{
+	position: relative;
 	input{
 		//hide the normal inputs
 		position: absolute;

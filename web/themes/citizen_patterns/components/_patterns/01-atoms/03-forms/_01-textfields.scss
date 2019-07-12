@@ -17,6 +17,12 @@
 		@include textInput;
 	}
 }
+.js-form-type-number{
+	input.form-number{
+		@include textInput;
+		max-width: 150px;
+	}
+}
 .js-form-type-tel.form-tel{
 	input{
 		@include textInput;
