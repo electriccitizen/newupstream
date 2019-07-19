@@ -18,12 +18,6 @@
   }
   require('emulsify-gulp')(gulp, localConfig);
 
-  gulp.task('zipCSS', function() {
-    gulp.src('./dist/*.css')
-    .pipe(gzip())
-    .pipe(gulp.dest('./dist'));
-  });
-
   gulp.task('zipScript', function() {
     gulp.src('./components/_patterns/**/*.js')
     .pipe(uglify())
@@ -32,8 +26,7 @@
     .pipe(gulp.dest('./dist'));
   });
 
-  gulp.task('watch', function() {
-    gulp.watch('./dist/*.css', ['zipCSS']);
+  gulp.task('watchZip', function() {
     gulp.watch('./components/_patterns/**/*.js', ['zipScript']);
   });
 

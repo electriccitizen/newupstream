@@ -2,7 +2,7 @@ global-styling:
   version: 1.0
   css:
     theme:
-      dist/style.css.gz: { minified: true }
+      dist/style.css: { minified: true }
   js:
     dist/00-base/global.min.js.gz: { minified: true }
 anchor:

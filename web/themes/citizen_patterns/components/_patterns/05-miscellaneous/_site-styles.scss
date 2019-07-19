@@ -221,21 +221,18 @@ body {
 	max-width: $contentStop;
 }
 
-.messages--status {
+.messages--status,.status-message {
 	@extend .drupal-message;
-	background-color: #f8fff0;
 	color: #234600;
 }
-.messages--warning {
+.messages--warning,.warning-message {
 	@extend .drupal-message;
-	background-color: #fffce5;
 	color: #840;
 	background-image: url("../images/message-24-warning.png");
 	border-color: #ed5;
 }
-.messages--error {
+.messages--error,.error-message {
 	@extend .drupal-message;
-	background-color: #fef5f1;
 	color: #8c2e0b;
 	background-image: url("../images/message-24-error.png");
 	border-color: #ed541d;
