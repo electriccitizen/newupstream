@@ -8,7 +8,7 @@ img{
 	display: block;
 }
 
-.field-media-image + figcaption{
+.field-media-image + figcaption,.field-media-image + .field-caption{
 	margin-top: $spaceXs;
 }
 

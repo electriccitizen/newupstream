@@ -332,7 +332,7 @@
 			@include transAll(.3s);
 		}
 	}
-	figcaption {
+	figcaption,.field-caption {
 		color: $darkGrey;
 	}
 }//end lightBack
@@ -362,7 +362,7 @@
 			@include transAll(.3s);
 		}
 	}
-	figcaption {
+	figcaption,.field-caption {
 		color: $white;
 	}
 }//end darkBack
