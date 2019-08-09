@@ -17,6 +17,9 @@ function citizen_patterns_theme_suggestions_page_alter(array &$suggestions, arra
   // Try to get the node, so we can check if we're on the node page.
   $node = Drupal::request()->attributes->get('node');
   if ($node) {
+    if ((!$node instanceof NodeInterface) && ($node_revision = \Drupal::routeMatch()->getParameter('node_revision'))) {
+      $node = \Drupal::entityTypeManager()->getStorage('node')->loadRevision($node_revision);
+    }
     $suggestions[] = 'page__' . $node->getTYpe();
   }
   if (\Drupal::routeMatch()->getRouteName() == 'entity.taxonomy_term.canonical' && $tid = \Drupal::routeMatch()->getRawParameter('taxonomy_term')) {
