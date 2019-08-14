@@ -7,5 +7,4 @@ _core:
 name: Tags
 vid: tags
 description: 'Tags for blog posts'
-hierarchy: 0
 weight: 0

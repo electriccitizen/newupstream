@@ -74,6 +74,7 @@ third_party_settings:
                 entity: layout_builder.entity
             additional: {  }
             weight: 2
+        third_party_settings: {  }
       -
         layout_id: two_column_sidebar
         layout_settings: {  }
@@ -133,6 +134,7 @@ third_party_settings:
                 entity: layout_builder.entity
             additional: {  }
             weight: 1
+        third_party_settings: {  }
     allow_custom: false
     is_enabled: true
     enabled: true

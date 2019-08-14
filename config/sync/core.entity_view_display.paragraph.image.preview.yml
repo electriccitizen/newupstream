@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.paragraph.preview
     - field.field.paragraph.image.field_admin_description
     - field.field.paragraph.image.field_image
+    - field.field.paragraph.image.field_image_size
     - field.field.paragraph.image.field_link
     - field.field.paragraph.image.field_widget_title
     - paragraphs.paragraphs_type.image

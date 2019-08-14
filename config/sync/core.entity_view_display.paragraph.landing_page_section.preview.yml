@@ -15,7 +15,6 @@ dependencies:
     - paragraphs.paragraphs_type.landing_page_section
   module:
     - layout_builder
-    - layout_discovery
     - options
 third_party_settings:
   layout_builder:

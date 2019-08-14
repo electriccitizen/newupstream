@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.support_book.body
+    - field.field.node.support_book.field_paragraphs
     - node.type.support_book
   module:
     - layout_builder
@@ -54,6 +55,7 @@ third_party_settings:
               id: 'extra_field_block:node:support_book:links'
             additional: {  }
             weight: 2
+        third_party_settings: {  }
     enabled: true
 _core:
   default_config_hash: c4MWQBRp1yoqAA-79Kr3OTnLCmkemJnbPzcPCx3mfcY
@@ -77,3 +79,4 @@ content:
     third_party_settings: {  }
 hidden:
   addtoany: true
+  field_paragraphs: true

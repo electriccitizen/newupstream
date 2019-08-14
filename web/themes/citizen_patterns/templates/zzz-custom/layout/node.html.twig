@@ -100,7 +100,7 @@
 
   <div{{ content_attributes.addClass('main-node-content') }}>
     {%- if content._layout_builder -%}
-      {%- for layoutSection in content._layout_builder -%}
+      {%- for key, layoutSection in content._layout_builder if key|first != '#' -%}
         {% block layoutSectionContent %}
           <section id="section-{{ loop.index }}" class="node-section">
             {{- layoutSection -}}

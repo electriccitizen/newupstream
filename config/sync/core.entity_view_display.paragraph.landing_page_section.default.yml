@@ -13,10 +13,8 @@ dependencies:
     - field.field.paragraph.landing_page_section.field_section_widgets
     - paragraphs.paragraphs_type.landing_page_section
   module:
-    - ctools_block
     - entity_reference_revisions
     - layout_builder
-    - layout_discovery
     - text
 third_party_settings:
   layout_builder:

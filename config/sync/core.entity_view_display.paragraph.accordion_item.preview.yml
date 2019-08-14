@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.paragraph.preview
     - field.field.paragraph.accordion_item.field_accordion_header
+    - field.field.paragraph.accordion_item.field_long_text
     - paragraphs.paragraphs_type.accordion_item
   module:
     - layout_builder

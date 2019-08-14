@@ -5,5 +5,4 @@ dependencies: {  }
 name: 'Media Categories'
 vid: media_categories
 description: 'Add categories to be used when filtering the media library.'
-hierarchy: 0
 weight: 0

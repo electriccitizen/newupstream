@@ -7,5 +7,4 @@ _core:
 name: Categories
 vid: categories
 description: 'General content categories'
-hierarchy: 0
 weight: 0

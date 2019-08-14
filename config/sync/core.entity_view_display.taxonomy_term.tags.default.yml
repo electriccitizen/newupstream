@@ -6,7 +6,6 @@ dependencies:
     - taxonomy.vocabulary.tags
   module:
     - layout_builder
-    - layout_discovery
     - text
 third_party_settings:
   layout_builder:

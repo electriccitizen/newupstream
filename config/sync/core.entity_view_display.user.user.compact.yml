@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.user.compact
+    - field.field.user.user.field_user_image
+    - field.field.user.user.field_user_quick_links
   module:
     - layout_builder
     - layout_discovery
@@ -15,6 +17,7 @@ third_party_settings:
         layout_id: layout_onecol
         layout_settings: {  }
         components: {  }
+        third_party_settings: {  }
     enabled: true
 _core:
   default_config_hash: 1jV7tW1bYyDddxe_sUIDaD8ZAaGEek8nl3l4Y-Cd3-I
