@@ -117,26 +117,27 @@ third_party_settings:
     is_enabled: true
     enabled: true
   layout_builder_restrictions:
-    allowed_blocks:
-      AddToAny: {  }
-      'Chaos Tools': {  }
-      Content: {  }
-      core: {  }
-      Flippy: {  }
-      Forms: {  }
-      Help: {  }
-      'Inline blocks': {  }
-      Menus:
-        - 'menu_block:support-book'
-      'Site Search': {  }
-      Superfish: {  }
-      System:
-        - system_breadcrumb_block
-      User: {  }
-      'User fields': {  }
-    allowed_layouts:
-      - layout_onecol
-      - two_column_sidebar
+    entity_view_mode_restriction:
+      allowed_blocks:
+        AddToAny: {  }
+        'Chaos Tools': {  }
+        Content: {  }
+        core: {  }
+        Flippy: {  }
+        Forms: {  }
+        Help: {  }
+        'Inline blocks': {  }
+        Menus:
+          - 'menu_block:support-book'
+        'Site Search': {  }
+        Superfish: {  }
+        System:
+          - system_breadcrumb_block
+        User: {  }
+        'User fields': {  }
+      allowed_layouts:
+        - layout_onecol
+        - two_column_sidebar
 _core:
   default_config_hash: zs7lQwC-x3RO8F51uxAs-b0WMoO79Uls3sPCfC8Ggks
 id: node.support_book.default

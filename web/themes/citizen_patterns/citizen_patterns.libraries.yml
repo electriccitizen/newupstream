@@ -29,7 +29,7 @@ galleries:
 media-js:
   version: 1.0
   js:
-    dists/02-molecules/media/_media.min.js.gz: { minified: true }
+    dist/02-molecules/media/_media.min.js.gz: { minified: true }
 modal:
   version: 1.0
   js:

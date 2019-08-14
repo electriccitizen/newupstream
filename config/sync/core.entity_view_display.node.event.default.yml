@@ -168,24 +168,25 @@ third_party_settings:
     is_enabled: true
     enabled: true
   layout_builder_restrictions:
-    allowed_blocks:
-      'Chaos Tools': {  }
-      Content: {  }
-      core: {  }
-      Flippy: {  }
-      Forms: {  }
-      Help: {  }
-      'Inline blocks': {  }
-      Menus: {  }
-      'Site Search': {  }
-      Superfish: {  }
-      System:
-        - system_breadcrumb_block
-      User: {  }
-      'User fields': {  }
-      Webform: {  }
-    allowed_layouts:
-      - layout_onecol
+    entity_view_mode_restriction:
+      allowed_blocks:
+        'Chaos Tools': {  }
+        Content: {  }
+        core: {  }
+        Flippy: {  }
+        Forms: {  }
+        Help: {  }
+        'Inline blocks': {  }
+        Menus: {  }
+        'Site Search': {  }
+        Superfish: {  }
+        System:
+          - system_breadcrumb_block
+        User: {  }
+        'User fields': {  }
+        Webform: {  }
+      allowed_layouts:
+        - layout_onecol
 _core:
   default_config_hash: loMHYsfHZt2ah-BioORO_TAK_v7Gf-b6gCl285D03zk
 id: node.event.default

@@ -146,23 +146,24 @@ third_party_settings:
     is_enabled: true
     enabled: true
   layout_builder_restrictions:
-    allowed_blocks:
-      'Chaos Tools': {  }
-      Content: {  }
-      core: {  }
-      Forms: {  }
-      Help: {  }
-      'Inline blocks': {  }
-      Menus: {  }
-      'Site Search': {  }
-      Superfish: {  }
-      System:
-        - system_breadcrumb_block
-      User: {  }
-      'User fields': {  }
-      Webform: {  }
-    allowed_layouts:
-      - layout_onecol
+    entity_view_mode_restriction:
+      allowed_blocks:
+        'Chaos Tools': {  }
+        Content: {  }
+        core: {  }
+        Forms: {  }
+        Help: {  }
+        'Inline blocks': {  }
+        Menus: {  }
+        'Site Search': {  }
+        Superfish: {  }
+        System:
+          - system_breadcrumb_block
+        User: {  }
+        'User fields': {  }
+        Webform: {  }
+      allowed_layouts:
+        - layout_onecol
 _core:
   default_config_hash: Xu1s1fWGlIX5L7AeMiRTydm1tunLJGrAodp6YJMZ5Sw
 id: node.blog.default
