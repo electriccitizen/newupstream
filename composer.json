@@ -89,7 +89,6 @@
     "drupal/inline_entity_form": "^1.0@beta",
     "drupal/layout_builder_restrictions": "^2.2",
     "drupal/libraries": "^3.0@alpha",
-    "drupal/link_attributes": "^1.5",
     "drupal/linkit": "^4.3",
     "drupal/media_entity": "^2.0",
     "drupal/media_entity_actions": "^1.0@alpha",
