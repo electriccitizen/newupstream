@@ -22,8 +22,8 @@ Drupal.behaviors.searchHighlight = {
           });
         };
 
-        $('.views-field-title a,.views-field-body-1').wrapInTag({
-          tag: 'span class="search-highlight"',
+        $('.views-field-body-1').wrapInTag({
+          tag: 'mark class="search-highlight"',
           words: searchString
         });
       }
