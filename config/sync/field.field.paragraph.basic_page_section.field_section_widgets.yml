@@ -79,8 +79,8 @@ settings:
         weight: -19
         enabled: false
       from_library:
-        enabled: true
         weight: -18
+        enabled: false
       view_placer:
         weight: -17
         enabled: false
