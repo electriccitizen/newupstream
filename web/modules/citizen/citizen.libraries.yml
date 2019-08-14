@@ -1,6 +1,0 @@
-global:
-  version: 1.0
-  dependencies:
-    - core/drupal
-    - core/drupalSettings
-    - core/jquery
