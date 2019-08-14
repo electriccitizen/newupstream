@@ -57,7 +57,7 @@
     "drupal/addtoany": "~1",
     "drupal/admin_toolbar": "~1",
     "drupal/antibot": "^1.2",
-    "drupal/auto_entitylabel": "^2.0@beta",
+    "drupal/auto_entitylabel": "^3.0@beta",
     "drupal/components": "^1.0",
     "drupal/config_devel": "^1.2",
     "drupal/config_direct_save": "^1.0",
