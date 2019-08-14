@@ -81,7 +81,7 @@
     "drupal/extlink": "^1.1",
     "drupal/field_group": "^1.0@RC",
     "drupal/flippy": "1.x-dev",
-    "drupal/focal_point": "~1",
+    "drupal/focal_point": "^1.0",
     "drupal/geolocation": "^1.11",
     "drupal/google_analytics": "^3.0",
     "drupal/hreflang": "^1.1",
