@@ -63,16 +63,19 @@
 		</header>
 	{% endblock %}
 
-	{{ page.primary_menu }}
-	{{ page.secondary_menu }}
+	{% block pageMeta %}
+		{{ page.primary_menu }}
+		{{ page.secondary_menu }}
 
-	{{ page.breadcrumb }}
+		{{ page.breadcrumb }}
 
-	{{ page.highlighted }}
+		{{ page.highlighted }}
 
-	{{ page.help }}
+		{{ page.help }}
 
-	{{ messages }}
+		{{ messages }}
+
+	{% endblock %}
 
 	{% block pageMain %}
 		<main role="main">

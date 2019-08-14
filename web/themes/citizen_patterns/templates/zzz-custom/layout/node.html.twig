@@ -76,9 +76,8 @@
   'node-' ~ node.id
 ] %}
 <article{{ attributes.addClass(classes) }}>
-
   {{ title_prefix }}
-  {%- if not page -%}
+  {% if not page and (view_mode != 'full') %}
     {% block nodeTitle %}
       <h2{{ title_attributes }}>
         <a href="{{- url -}}" rel="bookmark">{{- label -}}</a>

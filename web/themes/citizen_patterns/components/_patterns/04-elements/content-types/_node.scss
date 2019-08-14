@@ -2,6 +2,30 @@
    NODES GLOBAL
 =================== */
 
+/* REVISIONS
+-------------------- */
+.revisions-actions{
+	max-width: $contentStop;
+	@include auto;
+	margin-top: $spaceMd;
+	border-bottom: 1px solid $borderRule;
+}//end revisions actions
+
+.node-revision{
+	.breadcrumb{
+		li{
+			&:nth-last-child(2){
+				&:after{
+					content: none;
+				}
+			}
+			&:last-child{
+				display: none;
+			}
+		}
+	}
+}//end node-revisions
+
 /* GLOBAL SECTIONS
 -------------------- */
 .node-section{
