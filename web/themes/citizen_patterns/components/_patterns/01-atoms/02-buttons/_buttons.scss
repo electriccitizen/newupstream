@@ -25,6 +25,7 @@
 		color: $buttonTextHover;
 		background-color: $buttonBackHover;
 		@include transAll(.3s);
+		text-decoration: none;
 	}
 	&:active{
 		color: $buttonTextActive;

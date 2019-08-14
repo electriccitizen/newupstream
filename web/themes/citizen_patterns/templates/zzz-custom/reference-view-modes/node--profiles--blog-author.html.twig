@@ -86,7 +86,7 @@ This template is used for the author field rendering on posts
 		{{- elements.field_profile_image -}}
 	{%- endif -%}
 	<div class="info">
-		<h3><a href="/node/{{- nid -}}">About the Author:</a></h3>
+		<h3><a href="{{ path('entity.node.canonical', {'node': nid}) }}">About the Author:</a></h3>
 		{%- set text = elements.body|render|striptags -%}
 		<div class="body">
 			{{- text|length > 300 ? text|slice(0, 300) ~ '...' : text -}} 

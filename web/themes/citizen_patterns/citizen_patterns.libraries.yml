@@ -13,11 +13,11 @@ featherlight:
   version: 3.0
   css:
     theme:
-      https://cdn.rawgit.com/noelboss/featherlight/1.7.12/release/featherlight.min.css: { type: external, minified: true }
-      https://cdn.rawgit.com/noelboss/featherlight/1.7.12/release/featherlight.gallery.min.css: { type: external, minified: true }
+      https://cdn.rawgit.com/noelboss/featherlight/1.7.12/release/featherlight.min.css: { type: external, minified: true, preprocess: false }
+      https://cdn.rawgit.com/noelboss/featherlight/1.7.12/release/featherlight.gallery.min.css: { type: external, minified: true, preprocess: false }
   js:
-    https://cdn.rawgit.com/noelboss/featherlight/1.7.12/release/featherlight.min.js: { type: external, minified: true, attributes: { defer: true, async: true} }
-    https://cdn.rawgit.com/noelboss/featherlight/1.7.12/release/featherlight.gallery.min.js: { type: external, minified: true, attributes: { defer: true, async: true} }
+    https://cdn.rawgit.com/noelboss/featherlight/1.7.12/release/featherlight.min.js: { type: external, minified: true, preprocess: false }
+    https://cdn.rawgit.com/noelboss/featherlight/1.7.12/release/featherlight.gallery.min.js: { type: external, minified: true, preprocess: false }
 forms:
   version: 1.0
   js:
@@ -58,15 +58,20 @@ slick:
   version: 3.0
   css:
     theme:
-      //cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css: { type: external, minified: true }
-      //cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css: { type: external, minified: true }
+      https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css: { type: external, preprocess: false }
+      https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css: { type: external, preprocess: false }
   js:
-    //cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js: { type: external, minified: true, attributes: { defer: true, async: true} }
+    https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js: { type: external, minified: true, preprocess: false, attributes: { async: true } }
 table:
   version: 1.0
   js:
     components/js/stacktable/stacktable.min.js: { minified: true }
     dist/01-atoms/04-tables/tables.min.js.gz: { minified: true }
+user:
+  version: 1.0
+  js:
+    dist/04-elements/_user-dashboard.min.js.gz: { minified: true }
+    https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js: { type: external, minified: true, preprocess: false }
 views:
   version: 1.0
   js:
@@ -76,5 +81,4 @@ views:
 fonts:
   css:
     theme:
-      https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700: { type: external }
-      https://use.typekit.net/qba1bse.css: { type: external }
+      https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700: { type: external, preprocess: false }
