@@ -13,7 +13,7 @@ field_name: field_paragraphs
 entity_type: node
 bundle: landing_page
 label: Sections
-description: 'Add paragraphs to this node. Use the layout option on each paragraph to set it''s content widths and use the draggable handles to set the order to create custom paragraph grids. <strong>NOTE:</strong> When customizing the layout via Layout Builder you cannot re-order paragraphs, you can only move the whole field itself.'
+description: ''
 required: false
 translatable: true
 default_value: {  }
@@ -40,10 +40,10 @@ settings:
       form:
         weight: 19
         enabled: false
-      from_library:
-        weight: 20
-        enabled: false
       gallery:
+        weight: 21
+        enabled: false
+      horizontal_rule:
         weight: 21
         enabled: false
       image:
