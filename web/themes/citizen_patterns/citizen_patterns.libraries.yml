@@ -9,10 +9,6 @@ accordion:
   version: 1.0
   js:
     dist/03-organisms/00-paragraphs/accordion/accordion.min.js.gz: { minified: true }
-anchor:
-  version: 1.0
-  js:
-    dist/03-organisms/00-paragraphs/anchor/anchor.min.js.gz: { minified: true }
 featherlight:
   version: 3.0
   css:
@@ -80,6 +76,12 @@ views:
   version: 1.0
   js:
     dist/03-organisms/01-views/_views.min.js.gz: { minified: true }
+  dependencies:
+    - core/underscore
+widgets:
+  version: 1.0
+  js:
+    dist/03-organisms/00-paragraphs/_widgets.min.js.gz: { minified: true }
   dependencies:
     - core/underscore
 fonts:
