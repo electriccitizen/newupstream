@@ -5,6 +5,10 @@ global-styling:
       dist/style.css: { minified: true }
   js:
     dist/00-base/global.min.js.gz: { minified: true }
+accordion:
+  version: 1.0
+  js:
+    dist/03-organisms/00-paragraphs/accordion/accordion.min.js.gz: { minified: true }
 anchor:
   version: 1.0
   js:
