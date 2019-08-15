@@ -206,10 +206,6 @@
         "Enable using active menus as menu block titles": "https://www.drupal.org/files/issues/menu_block-label_configuration-2809699-51.patch",
         "Enable link functionality on menu block titles": "https://www.drupal.org/files/issues/menu_block-title_as_link-1-d8.patch"
       },
-      "drupal/paragraphs":{
-        "Invalid call to member function ID": "https://www.drupal.org/files/issues/2018-04-27/2948778-call-to-a-member-function-id-in-null.patch",
-        "Dual form validation with mutiple media upload": "https://www.drupal.org/files/issues/2019-05-03/3013171-13.patch"
-      }
     },
     "enable-patching": true
   },
