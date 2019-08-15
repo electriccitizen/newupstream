@@ -19,14 +19,13 @@ Drupal.behaviors.pageMenu = {
 			//need doc ready because active-class script fires after theme scripts
 			$(document).ready(function(){
 				$('#page-menu-wrapper ul li').each(function(){
-
 					//find nested lists and set their parents and expanders
 					if(($('ul', this).length) && (!$('.expander:first', this).length) ){
 					  $(this).addClass('parent').prepend('<a href="#" class="expander" aria-expanded="false" role="button" aria-label="Page Submenu Expander"></a>').find(' > a:not(.expander)').next('ul').attr('aria-hidden', 'true');
 					}
 
 					//find active links and set the active trail
-					$('.is-active', this).attr('aria-expanded', 'true').siblings('ul').slideDown(100).attr('aria-hidden', 'false').end().parentsUntil('#page-menu-wrapper > ul').addClass('active-trail expanded');
+					$('.is-active', this).removeAttr('href').siblings('ul').slideDown(100).attr('aria-hidden', 'false').end().parentsUntil('#page-menu-wrapper > ul').addClass('active-trail expanded');
 
 					//find active-trail li and add aria expanded role to the expander
 					$('li.active-trail > .expander').attr('aria-expanded', "true").siblings('ul').attr('aria-hidden', 'false');
@@ -41,7 +40,6 @@ Drupal.behaviors.pageMenu = {
             $(this).attr('aria-expanded', "false").siblings('ul').slideUp(300).attr('aria-hidden', 'true').end().closest('li').removeClass('expanded');
           }
 				});
-
 			});
 		});
 	}

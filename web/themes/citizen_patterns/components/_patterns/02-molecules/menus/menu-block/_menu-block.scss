@@ -69,9 +69,7 @@
 					}
 					&.is-active{
 						color: $menuTopActive;
-						&:hover,&:focus{
-							color: $menuTopActiveHover;
-						}
+						pointer-events: none;
 					}
 				}//end a
 				//parents
@@ -100,9 +98,6 @@
 						}
 						&.is-active{
 							color: $menuChildActive;
-							&:hover,&:focus{
-								color: $menuChildActiveHover;
-							}
 						}
 					}//end a
 				}//end child items

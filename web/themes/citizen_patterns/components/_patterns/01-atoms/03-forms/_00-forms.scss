@@ -49,6 +49,7 @@
 	padding: 8px 6px 9px;
 	width: 100%;
 	line-height: 1;
+	min-height: 44px;
 	@include placeholder;
 	&:focus{
 		@include placeholderFocus;
