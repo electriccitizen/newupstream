@@ -9,6 +9,7 @@ dependencies:
     - field.field.paragraph.landing_page_section.field_section_intro
     - field.field.paragraph.landing_page_section.field_section_title
     - field.field.paragraph.landing_page_section.field_section_widgets
+    - field.field.paragraph.landing_page_section.field_style
     - paragraphs.paragraphs_type.landing_page_section
   module:
     - entity_reference_revisions
@@ -16,7 +17,6 @@ dependencies:
     - text
 third_party_settings:
   layout_builder:
-    sections: {  }
     enabled: false
     allow_custom: false
 id: paragraph.landing_page_section.default
@@ -52,4 +52,5 @@ hidden:
   field_admin_description: true
   field_anchor_link: true
   field_layout: true
+  field_style: true
   search_api_excerpt: true

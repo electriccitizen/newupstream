@@ -23,7 +23,7 @@ field_name: field_section_widgets
 entity_type: paragraph
 bundle: landing_page_section
 label: 'Section Widgets'
-description: 'Add paragraphs to this node. Use the layout option on each paragraph to set it''s width and use the draggable handles to set the order to create custom paragraph grids. <strong>NOTE:</strong> When customizing the layout via Layout Builder you cannot re-order paragraphs, you can only move the whole field itself.'
+description: ''
 required: false
 translatable: false
 default_value: {  }
