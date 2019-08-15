@@ -1,5 +1,6 @@
 global:
   version: 1.0
+  header: true
   css:
     theme:
       css/global.css: {}
