@@ -205,7 +205,7 @@
         "Enable menu block by page functionality": "https://www.drupal.org/files/issues/2018-08-08/menu_block-follow-2756675-55.patch",
         "Enable using active menus as menu block titles": "https://www.drupal.org/files/issues/menu_block-label_configuration-2809699-51.patch",
         "Enable link functionality on menu block titles": "https://www.drupal.org/files/issues/menu_block-title_as_link-1-d8.patch"
-      },
+      }
     },
     "enable-patching": true
   },
