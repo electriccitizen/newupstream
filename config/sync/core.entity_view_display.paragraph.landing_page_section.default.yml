@@ -5,8 +5,6 @@ dependencies:
   config:
     - field.field.paragraph.landing_page_section.field_admin_description
     - field.field.paragraph.landing_page_section.field_anchor_link
-    - field.field.paragraph.landing_page_section.field_background_image
-    - field.field.paragraph.landing_page_section.field_background_style
     - field.field.paragraph.landing_page_section.field_layout
     - field.field.paragraph.landing_page_section.field_section_intro
     - field.field.paragraph.landing_page_section.field_section_title
@@ -53,6 +51,5 @@ content:
 hidden:
   field_admin_description: true
   field_anchor_link: true
-  field_background_image: true
-  field_background_style: true
   field_layout: true
+  search_api_excerpt: true

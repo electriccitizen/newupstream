@@ -6,8 +6,6 @@ dependencies:
     - core.entity_view_mode.paragraph.preview
     - field.field.paragraph.landing_page_section.field_admin_description
     - field.field.paragraph.landing_page_section.field_anchor_link
-    - field.field.paragraph.landing_page_section.field_background_image
-    - field.field.paragraph.landing_page_section.field_background_style
     - field.field.paragraph.landing_page_section.field_layout
     - field.field.paragraph.landing_page_section.field_section_intro
     - field.field.paragraph.landing_page_section.field_section_title
@@ -34,13 +32,6 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-  field_background_style:
-    weight: 2
-    label: inline
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: content
   field_layout:
     weight: 1
     label: inline
@@ -50,7 +41,7 @@ content:
     region: content
 hidden:
   field_anchor_link: true
-  field_background_image: true
   field_section_intro: true
   field_section_title: true
   field_section_widgets: true
+  search_api_excerpt: true
