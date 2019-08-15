@@ -53,6 +53,7 @@ permissions:
   - 'bypass honeypot protection'
   - 'cancel account'
   - 'change own username'
+  - 'configure editable landing_page node layout overrides'
   - 'create blog content'
   - 'create document media'
   - 'create event content'

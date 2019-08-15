@@ -124,7 +124,7 @@
 	}
 }
 
-@mixin resetButton{
+@mixin warningButton{
 	@include submitButton;
 	background: $resetBack;
 	color: $resetText;
@@ -147,7 +147,7 @@
 	@include cautionButton;
 }
 .button-danger-robinson{
-	@include resetButton;
+	@include warningButton;
 }
 .button-outline{
 	@include outlineButton($link);

@@ -30,7 +30,7 @@
 				margin: 0px 10px;
 			}
 			&#edit-reset{
-				@include resetButton;
+				@include warningButton;
 				@include smallTab{
 					margin: 10px 0px;
 				}

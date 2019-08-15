@@ -5,95 +5,68 @@
 .builder-label{
 	display: none;
 }
-.layout-section{
+
+.layout-builder-form{
+	max-width: $contentStop;
+	@include auto;
+	.form-actions{
+		@include safeFlex(row,wrap,start,center);
+		input.button{
+			margin-right: 1rem;
+			min-width: 230px;
+			&:last-of-type{
+				margin-right: 3.5rem;
+			}
+			&#edit-discard-changes{
+				@include cautionButton;
+			}
+			&#edit-revert{
+				@include warningButton;
+			}
+		}
+		.js-form-type-checkbox{
+			@include customOptions;
+		}
+	}//end form actions
+	#layout-builder{
+		overflow-x: hidden;
+	}
 	.remove-section{
 		margin-left: 10px;
 		top: -6px;
 	}
-	.layout-builder--layout__region{
-		margin-bottom: 2rem;
-		.draggable{
-			margin-bottom: $spaceLg;
-			max-height: 500px;
-			overflow: hidden;
-			min-height: 90px;
-			*{
-				word-break: break-all;
-			}
-		}
-		//hide widget-anchors
-		.widget-anchors{
-			display: none;
-		}
-		//constrain widgets to editing box
-		.field--name-field-paragraphs{
-			@include edgeReset;
-			.section:first-child{
-				margin-top: 0 !important;
-			}
-		}
-		//show visually hidden labels
-		.builder-label{
-			display: table;
-			color: $white;
-			background: $red;
-			padding: 4px 8px;
-			margin-bottom: .5rem;
-		}
+	.builder-label{
+		display: table;
+		color: $white;
+		background: $red;
+		padding: 4px 8px;
+		margin-bottom: .5rem;
 	}
-}//end layout builder section region
+	.vertical-tabs{
+		display: none;
+	}
+}//end layout builder form
 
 //Allow text to wrap down so user can see entire message
 .ui-dialog .ui-dialog-title{
 	white-space: normal;
 }
 
-//style entity block links different than normal block links in settings tray
-#drupal-off-canvas{
-	.block-categories{
-		.links{
-			margin-top: 1rem;
-			background: none;
-			li{
-				background: none;
-			}
-			a{
-				line-height: 1.15;
-				margin-bottom: .75rem;
-				display: block;
-				font-size: 1.8rem;
-				font-family: $bodyFont;
-				background: none;
-				&:hover,&:focus{
-					opacity: .6;
-				}
-			}
-		}
-	}//end block categories
-	.ui-autocomplete{
-		.ui-menu-item{
-			background: $white;
-			a{
-				background: none;
-			}
-		}
-	}
-}//end drupal canvas
-
-form.layout-builder-revert-overrides{
-	padding: 0 0 $siteBottomSpace;
+.layout-builder-discard-changes{
 	max-width: $contentStop;
 	@include auto;
 	.form-actions{
-		padding-top: 2rem;
-		input#edit-submit{
-			@include submitButton;
-			margin-right: 2rem;
-		}
-		a#edit-cancel{
-			@include resetButton;
-			font-size: 1.6rem;
-			line-height: 1.5;
+		padding-top: $spaceSm;
+		.button{
+			margin-right: 1rem;
+			min-width: 140px;
+			&#edit-cancel{
+				@include cautionButton;
+			}
 		}
 	}
+}
+
+.layout-builder-revert-overrides{
+	@extend .layout-builder-discard-changes;
 }

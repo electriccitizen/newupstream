@@ -30,6 +30,18 @@ body {
 	padding: $elementSpace 0;
 	max-width: $contentStop;
 	@include auto;
+	h2{
+		margin-bottom: $spaceSm;
+		font-size: 2.4rem;
+	}
+	p{
+		font-size: 1.6rem;
+		margin-bottom: $spaceXs;
+		small{
+			font-size: 1.4rem;
+			font-style: italic;
+		}
+	}
 }
 
 /* MAP PINS
