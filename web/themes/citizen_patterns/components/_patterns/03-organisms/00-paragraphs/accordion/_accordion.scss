@@ -23,8 +23,8 @@
 			font-weight: $heavy;
 			position: relative;
 			font-size: 2.2rem;
-			border: 1px solid $accordHeaderBorder;
-			margin-top: -1px;
+			border: 2px solid $accordHeaderBorder;
+			margin-top: -2px;
 			background: $accordHeaderBack;
 			&:after{
 				position: absolute;

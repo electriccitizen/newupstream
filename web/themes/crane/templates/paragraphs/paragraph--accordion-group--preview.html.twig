@@ -43,12 +43,11 @@
 {% block content %}
   <div class="field field--name-field-accordion-item field--type-string field--label-inline field__items">
     <div class="field__label">
-      Accordions:
+      Accordions
     </div>
     {%- for key, accordion in content.field_accordion_item['#items'] if key|first != "#" -%}
-      {{ dd(accordion) }}
       <div class="field__item">
-        {{ accordion['#paragraph'].field_accordion_header.value }}
+        {{ accordion.entity.field_accordion_header.0.value }}
       </div>
     {%- endfor -%}
   </div>
