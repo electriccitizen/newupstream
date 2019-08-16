@@ -84,8 +84,9 @@ $checkBox                 : $link;
 $checkBoxHover            : $black;
 $checkBoxBackHover        : $transBlack;
 $checkBoxChecked          : darken($checkBox, 5%);
-$checkBoxCheckedBack      : $transBlack;
-$checkBoxCheckedBackHover : $black;
+$checkBoxCheckedHover     : darken($checkBox, 10%);
+$checkBoxCheckedBack      : $link;
+$checkBoxCheckedBackHover : lighten($checkBoxCheckedBack, 10%);
 $selectArrow              : $midGrey;
 $selectHighlight          : $link;
 

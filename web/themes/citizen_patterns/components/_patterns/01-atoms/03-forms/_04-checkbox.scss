@@ -3,7 +3,6 @@
 =============== */
 
 form:not(.layout-builder-add-block):not(.layout-builder-update-block){
-	//move checkbox options inline
 	.form-checkboxes{
 		margin-bottom: 0;
 		@include safeFlex(row,wrap,null,null);
@@ -13,7 +12,12 @@ form:not(.layout-builder-add-block):not(.layout-builder-update-block){
 		}
 	}
 
-	//move input inline with label
+	fieldset.checkboxes--wrapper{
+		.fieldset-wrapper{
+			margin: 0;
+		}
+	}
+
 	.js-form-type-checkbox{
 		width: auto;
 		margin-right: 2rem;
@@ -27,12 +31,8 @@ form:not(.layout-builder-add-block):not(.layout-builder-update-block){
 		input[type="checkbox"]{
 			margin-right: .6rem;
 		}
-		
-	}
-	// custom checkboxes (defined in forms.scss, set with variable from macros.twig)
-	.custom-options{
-		.js-form-type-checkbox{
+		&.custom-options{
 			@include customOptions;
 		}
-	}
+	}//end form type checkbox
 }//end form

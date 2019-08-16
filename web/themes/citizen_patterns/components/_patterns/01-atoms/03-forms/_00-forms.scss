@@ -73,6 +73,12 @@
 		//hide the normal inputs
 		position: absolute;
 		opacity: 0;
+		&:hover,&:focus{
+			+ label:before{
+				background: $checkBoxBackHover;
+				border-color: $checkBoxHover;
+			}
+		}
 		&:checked{
 			+ label:before{
 				background: $checkBoxCheckedBack;
@@ -81,12 +87,12 @@
 			&:hover{
 				& + label:before{
 					background: $checkBoxCheckedBackHover;
+					border-color: $checkBoxCheckedHover;
 				}
 			}
-		}
-		&:focus,&:hover{
-			+ label:before{
-				background: $checkBoxBackHover;
+			&:focus{
+				background: $checkBoxCheckedBack;
+				border-color: $checkBoxChecked;
 			}
 		}
 	}

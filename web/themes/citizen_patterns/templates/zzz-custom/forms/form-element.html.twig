@@ -44,6 +44,7 @@
  * @see template_preprocess_form_element()
  */
 #}
+{% import "@base/macros.twig" as styles %}
 {%
   set classes = [
     'js-form-item',
@@ -54,6 +55,7 @@
     title_display not in ['after', 'before'] ? 'form-no-label',
     disabled == 'disabled' ? 'form-disabled',
     errors ? 'form-item--error',
+    styles.formElements
   ]
 %}
 {%

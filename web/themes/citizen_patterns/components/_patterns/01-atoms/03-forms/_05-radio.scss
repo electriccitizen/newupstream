@@ -3,12 +3,10 @@
 ============== */
 
 form:not(.layout-builder-add-block):not(.layout-builder-update-block){
-	//move radio options inline
 	.js-webform-radios{
 		margin-bottom: 0;
 		@include safeFlex(row,wrap,null,null);
 	}
-	//move input inline with label
 	.js-form-type-radio{
 		width: auto;
 		margin-right: 2rem;
@@ -24,15 +22,11 @@ form:not(.layout-builder-add-block):not(.layout-builder-update-block){
 			position: relative;
 			top: -2px;
 		}
-	}
-	
-	//custom radio buttons (defined in forms.scss, set with variable from macros.twig)
-	.custom-options{
-		.js-form-type-radio{
+		&.custom-options{
 			@include customOptions;
 			label:before{
 				border-radius: 50%;
 			}
 		}
-	}
+	}//end form type radio
 }//end form
