@@ -9,7 +9,7 @@ id: paragraph.view_placer.field_view_machine_name
 field_name: field_view_machine_name
 entity_type: paragraph
 bundle: view_placer
-label: 'View Machine Name'
+label: 'View Name'
 description: 'Add the machine name of the view (the parent view, not the view block or embed).'
 required: true
 translatable: false

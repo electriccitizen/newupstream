@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.accordion_group.field_accordion_item
-    - field.field.paragraph.accordion_group.field_admin_description
     - field.field.paragraph.accordion_group.field_widget_title
     - paragraphs.paragraphs_type.accordion_group
   module:
@@ -29,14 +28,6 @@ content:
       form_display_mode: default
       default_paragraph_type: _none
     third_party_settings: {  }
-    region: content
-  field_admin_description:
-    weight: 1
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
     region: content
   field_widget_title:
     weight: 0

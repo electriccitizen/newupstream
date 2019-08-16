@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.video.field_admin_description
     - field.field.paragraph.video.field_video
     - field.field.paragraph.video.field_widget_title
     - paragraphs.paragraphs_type.video
@@ -17,14 +16,6 @@ targetEntityType: paragraph
 bundle: video
 mode: default
 content:
-  field_admin_description:
-    weight: 1
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_video:
     weight: 2
     settings:

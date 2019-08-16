@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.landing_page_section.field_admin_description
     - field.field.paragraph.landing_page_section.field_anchor_link
     - field.field.paragraph.landing_page_section.field_layout
     - field.field.paragraph.landing_page_section.field_section_intro
@@ -49,7 +48,6 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
-  field_admin_description: true
   field_anchor_link: true
   field_layout: true
   field_style: true

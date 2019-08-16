@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.links_files.field_admin_description
     - field.field.paragraph.links_files.field_file_multi
     - field.field.paragraph.links_files.field_link_multi
     - field.field.paragraph.links_files.field_widget_title
@@ -53,4 +52,4 @@ content:
     type: string
     region: content
 hidden:
-  field_admin_description: true
+  search_api_excerpt: true

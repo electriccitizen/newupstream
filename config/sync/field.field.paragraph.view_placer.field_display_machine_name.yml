@@ -9,7 +9,7 @@ id: paragraph.view_placer.field_display_machine_name
 field_name: field_display_machine_name
 entity_type: paragraph
 bundle: view_placer
-label: 'Display Machine Name'
+label: 'Display Name'
 description: 'Enter the machine name of the view display (view block or embed).'
 required: true
 translatable: false

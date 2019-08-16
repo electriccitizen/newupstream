@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.gallery.field_admin_description
     - field.field.paragraph.gallery.field_gallery_type
     - field.field.paragraph.gallery.field_image_multi
     - field.field.paragraph.gallery.field_widget_title
@@ -16,14 +15,6 @@ targetEntityType: paragraph
 bundle: gallery
 mode: default
 content:
-  field_admin_description:
-    weight: 1
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_gallery_type:
     weight: 3
     settings: {  }

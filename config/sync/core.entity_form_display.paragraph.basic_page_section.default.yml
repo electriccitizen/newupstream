@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.basic_page_section.field_admin_description
     - field.field.paragraph.basic_page_section.field_section_intro
     - field.field.paragraph.basic_page_section.field_section_title
     - field.field.paragraph.basic_page_section.field_section_widgets
@@ -16,14 +15,6 @@ targetEntityType: paragraph
 bundle: basic_page_section
 mode: default
 content:
-  field_admin_description:
-    type: string_textfield
-    weight: 2
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
   field_section_intro:
     weight: 1
     settings:

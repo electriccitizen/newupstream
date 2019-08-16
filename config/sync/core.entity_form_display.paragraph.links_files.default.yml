@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.links_files.field_admin_description
     - field.field.paragraph.links_files.field_file_multi
     - field.field.paragraph.links_files.field_link_multi
     - field.field.paragraph.links_files.field_widget_title
@@ -19,14 +18,6 @@ targetEntityType: paragraph
 bundle: links_files
 mode: default
 content:
-  field_admin_description:
-    weight: 1
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_file_multi:
     weight: 3
     settings:

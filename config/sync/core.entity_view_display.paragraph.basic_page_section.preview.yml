@@ -4,16 +4,15 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.paragraph.preview
-    - field.field.paragraph.basic_page_section.field_admin_description
     - field.field.paragraph.basic_page_section.field_section_intro
     - field.field.paragraph.basic_page_section.field_section_title
     - field.field.paragraph.basic_page_section.field_section_widgets
     - paragraphs.paragraphs_type.basic_page_section
   module:
+    - entity_reference_revisions
     - layout_builder
 third_party_settings:
   layout_builder:
-    sections: {  }
     enabled: false
     allow_custom: false
 id: paragraph.basic_page_section.preview
@@ -21,15 +20,16 @@ targetEntityType: paragraph
 bundle: basic_page_section
 mode: preview
 content:
-  field_admin_description:
+  field_section_widgets:
+    type: entity_reference_revisions_entity_view
     weight: 0
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
     region: content
+    label: above
+    settings:
+      view_mode: preview
+      link: ''
+    third_party_settings: {  }
 hidden:
   field_section_intro: true
   field_section_title: true
-  field_section_widgets: true
+  search_api_excerpt: true

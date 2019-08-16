@@ -12,7 +12,6 @@ dependencies:
     - layout_builder
 third_party_settings:
   layout_builder:
-    sections: {  }
     allow_custom: false
     enabled: false
 id: paragraph.view_placer.preview
@@ -20,21 +19,15 @@ targetEntityType: paragraph
 bundle: view_placer
 mode: preview
 content:
-  field_display_machine_name:
-    weight: 1
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
   field_view_machine_name:
     weight: 0
-    label: hidden
+    label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
 hidden:
+  field_display_machine_name: true
   field_widget_title: true
+  search_api_excerpt: true

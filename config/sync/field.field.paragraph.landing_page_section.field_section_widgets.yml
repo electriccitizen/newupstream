@@ -87,4 +87,7 @@ settings:
       view_placer:
         enabled: true
         weight: -18
+      from_library:
+        weight: 21
+        enabled: false
 field_type: entity_reference_revisions

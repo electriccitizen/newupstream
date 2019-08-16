@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.pullquote.field_admin_description
     - field.field.paragraph.pullquote.field_quote
     - field.field.paragraph.pullquote.field_source
     - field.field.paragraph.pullquote.field_widget_title
@@ -17,14 +16,6 @@ targetEntityType: paragraph
 bundle: pullquote
 mode: default
 content:
-  field_admin_description:
-    weight: 1
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_quote:
     weight: 2
     settings:

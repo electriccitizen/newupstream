@@ -12,7 +12,6 @@ dependencies:
     - webform
 third_party_settings:
   layout_builder:
-    sections: {  }
     enabled: false
     allow_custom: false
 _core:
@@ -26,11 +25,12 @@ content:
     type: webform_entity_reference_link
     weight: 0
     region: content
-    label: hidden
+    label: inline
     settings:
-      label: '[webform:title]'
+      label: 'Go to [webform:title] webform'
       dialog: ''
       attributes: {  }
     third_party_settings: {  }
 hidden:
   field_widget_title: true
+  search_api_excerpt: true

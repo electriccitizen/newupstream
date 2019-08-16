@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.accordion_group.field_accordion_item
-    - field.field.paragraph.accordion_group.field_admin_description
     - field.field.paragraph.accordion_group.field_widget_title
     - paragraphs.paragraphs_type.accordion_group
   module:
@@ -40,4 +39,4 @@ content:
     type: string
     region: content
 hidden:
-  field_admin_description: true
+  search_api_excerpt: true

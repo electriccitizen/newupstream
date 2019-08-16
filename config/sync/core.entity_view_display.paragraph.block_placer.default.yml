@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.block_placer.field_admin_description
     - field.field.paragraph.block_placer.field_block
     - field.field.paragraph.block_placer.field_widget_title
     - paragraphs.paragraphs_type.block_placer
@@ -37,4 +36,4 @@ content:
     type: string
     region: content
 hidden:
-  field_admin_description: true
+  search_api_excerpt: true
