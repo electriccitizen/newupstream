@@ -26,10 +26,6 @@ galleries:
   version: 1.0
   js:
     dist/03-organisms/00-paragraphs/gallery/gallery.min.js.gz: { minified: true }
-media-js:
-  version: 1.0
-  js:
-    dist/02-molecules/media/_media.min.js.gz: { minified: true }
 menu-block:
   version: 1.0
   js:

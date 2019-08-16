@@ -22,7 +22,6 @@
 {%- if (bundle == 'document') -%}
 	{{- children -}}
 {%- else -%}
-{{ attach_library('citizen_patterns/media-js') }}
 <div class="citizen-media {{ display }} {{ align }}">
 	{{- children -}}
 </div>

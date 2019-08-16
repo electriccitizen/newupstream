@@ -15,15 +15,19 @@ img{
 //constrain images with smaller sizes (commonly embedded)
 .view-modemediasmall-embed{
 	max-width: 400px;
+	width: 100%;
 }
 .view-modemediamedium-embed{
 	max-width: 600px;
+	width: 100%;
 }
 .view-modemediasquare{
 	max-width: 400px;
+	width: 100%;
 }
 .view-modemedialarge-embed{
 	max-width: 900px;
+	width: 100%;
 }
 
 /* MEDIA IN WYSIWYG 
@@ -36,9 +40,8 @@ img{
 		@include tab {
 			float: right;
 			margin-left: 2rem;
-			max-width: 50%;
-			&.has-video{
-				width: 100%;
+			&:not(.view-modemediasmall-embed){
+				max-width: 50%;
 			}
 		}
 	}
@@ -46,9 +49,8 @@ img{
 		@include tab {
 			float: left;
 			margin-right: 2rem;
-			max-width: 50%;
-			&.has-video{
-				width: 100%;
+			&:not(.view-modemediasmall-embed){
+				max-width: 50%;
 			}
 		}
 	}
