@@ -47,7 +47,7 @@
     </div>
     {%- for key, accordion in content.field_accordion_item['#items'] if key|first != "#" -%}
       <div class="field__item">
-        {{ accordion.entity.field_accordion_header.0.value }}
+        {{ accordion.entity.field_accordion_header.0.value }}{% if not key|last %}, {% endif %}
       </div>
     {%- endfor -%}
   </div>

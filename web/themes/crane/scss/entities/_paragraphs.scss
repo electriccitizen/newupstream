@@ -1,3 +1,46 @@
 /* ========================
-  NODE FORMS
+  PARAGRAPH PREVIEWS
 ========================== */
+
+.paragraph--view-mode--preview{
+	&.paragraph--type--landing-page-section,&.paragraph--type--basic-page-section{
+		& > *:not(:last-child){
+			margin-bottom: $spaceXxs;
+		}
+	}
+	.field--name-field-section-widgets{
+		padding-top: $spaceXxs;
+		& > .field__label{
+			display: inline-block;
+			margin-bottom: $spaceXxs;
+			padding-right: 4rem;
+			border-bottom: 1px solid $borderRule;
+		}
+		& > .field__items{
+			padding-left: 1rem;
+			& > .field__item{
+				font-size: 1.4rem;
+				&:not(:last-child){
+					margin-bottom: $spaceXxs;
+				}
+				.field__label{
+					color: $darkGrey;
+				}
+			}
+		}
+	}//end section widgets
+
+	a{
+		color: $baseText;
+		pointer-events: none;
+	}
+	img{
+		max-width: 50px;
+	}
+}//end paragraph-preview
+
+.paragraph--type--accordion-group{
+	.field--name-field-accordion-item{
+		@include safeFlex(row,wrap,start,start);
+	}
+}//end accordion group

@@ -31,7 +31,17 @@ function crane_preprocess_html(&$variables) {
     ],
   ];
 
+  $preload = [
+    '#tag' => 'meta',
+    '#attributes' => [
+      'rel' => 'preload',
+      'href' => 'https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&display=swap',
+      'as' => 'style',
+    ],
+  ];
+
   $variables['page']['#attached']['html_head'][] = [$preconnect, 'preconnect'];
+  $variables['page']['#attached']['html_head'][] = [$preload, 'preload'];
 }
 
 function crane_preprocess_page(&$variables) {

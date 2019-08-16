@@ -4303,8 +4303,46 @@ body.crane {
   NODE FORMS
 ========================== */
 /* ========================
-  NODE FORMS
+  PARAGRAPH PREVIEWS
 ========================== */
+.paragraph--view-mode--preview.paragraph--type--landing-page-section > *:not(:last-child), .paragraph--view-mode--preview.paragraph--type--basic-page-section > *:not(:last-child) {
+  margin-bottom: 0.5rem; }
+
+.paragraph--view-mode--preview .field--name-field-section-widgets {
+  padding-top: 0.5rem; }
+  .paragraph--view-mode--preview .field--name-field-section-widgets > .field__label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    padding-right: 4rem;
+    border-bottom: 1px solid #3778c1; }
+  .paragraph--view-mode--preview .field--name-field-section-widgets > .field__items {
+    padding-left: 1rem; }
+    .paragraph--view-mode--preview .field--name-field-section-widgets > .field__items > .field__item {
+      font-size: 1.4rem; }
+      .paragraph--view-mode--preview .field--name-field-section-widgets > .field__items > .field__item:not(:last-child) {
+        margin-bottom: 0.5rem; }
+      .paragraph--view-mode--preview .field--name-field-section-widgets > .field__items > .field__item .field__label {
+        color: #4a4a4a; }
+
+.paragraph--view-mode--preview a {
+  color: #121212;
+  pointer-events: none; }
+
+.paragraph--view-mode--preview img {
+  max-width: 50px; }
+
+.paragraph--type--accordion-group .field--name-field-accordion-item {
+  display: flex;
+  display: -ms-flexbox;
+  flex-direction: row;
+  -ms-flex-direction: row;
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  justify-content: flex-start;
+  -ms-flex-pack: start;
+  align-items: flex-start;
+  -ms-flex-align: start; }
+
 /* ========================
   TABLES
 ========================== */
