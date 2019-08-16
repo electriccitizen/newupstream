@@ -6,7 +6,7 @@ dependencies:
     - core.entity_view_mode.paragraph.preview
     - field.field.paragraph.video.field_video
     - field.field.paragraph.video.field_widget_title
-    - image.style.thumbnail
+    - image.style.paragraph_preview
     - paragraphs.paragraphs_type.video
   module:
     - layout_builder
@@ -28,7 +28,7 @@ content:
     region: content
     label: inline
     settings:
-      image_style: thumbnail
+      image_style: paragraph_preview
       image_link: ''
     third_party_settings: {  }
 hidden:

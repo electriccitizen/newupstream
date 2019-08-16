@@ -22,14 +22,12 @@ bundle: form
 mode: preview
 content:
   field_form:
-    type: webform_entity_reference_link
+    type: webform_entity_reference_entity_view
     weight: 0
     region: content
     label: inline
     settings:
-      label: 'Go to [webform:title] webform'
-      dialog: ''
-      attributes: {  }
+      source_entity: true
     third_party_settings: {  }
 hidden:
   field_widget_title: true

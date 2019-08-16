@@ -23,12 +23,11 @@ bundle: pullquote
 mode: preview
 content:
   field_quote:
-    type: text_trimmed
+    type: text_default
     weight: 0
     region: content
     label: inline
-    settings:
-      trim_length: 140
+    settings: {  }
     third_party_settings: {  }
 hidden:
   field_source: true

@@ -1,8 +1,7 @@
 /* ========================
   PARAGRAPH PREVIEWS
 ========================== */
-
-.paragraph--view-mode--preview{
+.field--widget-paragraphs .paragraph--view-mode--preview{
 	&.paragraph--type--landing-page-section,&.paragraph--type--basic-page-section{
 		& > *:not(:last-child){
 			margin-bottom: $spaceXxs;
@@ -19,6 +18,9 @@
 		& > .field__items{
 			padding-left: 1rem;
 			& > .field__item{
+				clear: left;
+			}
+			.field__item{
 				font-size: 1.4rem;
 				&:not(:last-child){
 					margin-bottom: $spaceXxs;
@@ -27,7 +29,7 @@
 					color: $darkGrey;
 				}
 			}
-		}
+		}//end field items
 	}//end section widgets
 
 	a{
@@ -37,10 +39,82 @@
 	img{
 		max-width: 50px;
 	}
+	p,.field--type-text-long{
+		margin: 0;
+	}
 }//end paragraph-preview
 
+/* ACCORDION GROUP
+---------------------- */
 .paragraph--type--accordion-group{
 	.field--name-field-accordion-item{
 		@include safeFlex(row,wrap,start,start);
+		& > .field__item{
+			padding-right: 0;
+			&:nth-child(n+3){
+				padding-left: .25em;
+			}
+		}
 	}
 }//end accordion group
+
+/* GALLERY
+---------------------- */
+.paragraph--type--gallery{
+	@include safeFlex(row,wrap,start,center);
+	.field--name-field-gallery-type{
+		@include safeFlexSize(0,0,165px);
+	}
+	.field--name-field-image-multi{
+		@include safeFlex(row,wrap,start,start);
+		.field__item{
+			margin-right: 3px;
+		}
+	}
+}//end gallery
+
+/* HORIZONTAL RULE
+------------------- */
+.paragraph--type--horizontal-rule{
+	margin-bottom: $spaceXxs;
+	@include clearFix;
+	.field__item{
+		max-width: 160px;
+		position: relative;
+		top: 10px;
+		hr{
+			background: $borderRule;
+		}
+	}
+}//end image
+
+/* IMAGE
+------------------- */
+.paragraph--type--image{
+	.field--name-field-image{
+		@include safeFlex(row,wrap,start,center);
+	}
+}//end image
+
+/* LINKS & FILES
+------------------- */
+.paragraph--type--links-files{
+	.links-files-list{
+		@include safeFlex(row,wrap,start,start);
+		.lf-item{
+			&:not(:first-child){
+				padding-left: .25em;
+			}
+		}
+	}
+}//end links & files
+
+/* VIDEO
+------------------- */
+.paragraph--type--video{
+	.field--name-field-video{
+		@include safeFlex(row,wrap,start,center);
+	}
+}//end image
+
+

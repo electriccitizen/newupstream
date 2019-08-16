@@ -22,12 +22,11 @@ bundle: text
 mode: preview
 content:
   field_long_text:
-    type: text_trimmed
+    type: text_default
     weight: 0
     region: content
     label: inline
-    settings:
-      trim_length: 140
+    settings: {  }
     third_party_settings: {  }
 hidden:
   field_widget_title: true

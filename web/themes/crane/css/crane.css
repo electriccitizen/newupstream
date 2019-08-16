@@ -4260,7 +4260,10 @@ body.crane {
 /* ========================
   BUTTONS
 ========================== */
-.button {
+.button, .no-touchevents .button--small {
+  font-size: 1.5rem; }
+
+.button-action:before {
   font-size: 1.5rem; }
 
 /* ========================
@@ -4269,6 +4272,11 @@ body.crane {
 /* ========================
   FORM ELEMENTS
 ========================== */
+/* SELECTS
+------------- */
+.form-type-select select {
+  font-size: 1.5rem; }
+
 /* ==============
 	 ADMIN-NAV
 ================== */
@@ -4305,32 +4313,39 @@ body.crane {
 /* ========================
   PARAGRAPH PREVIEWS
 ========================== */
-.paragraph--view-mode--preview.paragraph--type--landing-page-section > *:not(:last-child), .paragraph--view-mode--preview.paragraph--type--basic-page-section > *:not(:last-child) {
+.field--widget-paragraphs .paragraph--view-mode--preview.paragraph--type--landing-page-section > *:not(:last-child), .field--widget-paragraphs .paragraph--view-mode--preview.paragraph--type--basic-page-section > *:not(:last-child) {
   margin-bottom: 0.5rem; }
 
-.paragraph--view-mode--preview .field--name-field-section-widgets {
+.field--widget-paragraphs .paragraph--view-mode--preview .field--name-field-section-widgets {
   padding-top: 0.5rem; }
-  .paragraph--view-mode--preview .field--name-field-section-widgets > .field__label {
+  .field--widget-paragraphs .paragraph--view-mode--preview .field--name-field-section-widgets > .field__label {
     display: inline-block;
     margin-bottom: 0.5rem;
     padding-right: 4rem;
     border-bottom: 1px solid #3778c1; }
-  .paragraph--view-mode--preview .field--name-field-section-widgets > .field__items {
+  .field--widget-paragraphs .paragraph--view-mode--preview .field--name-field-section-widgets > .field__items {
     padding-left: 1rem; }
-    .paragraph--view-mode--preview .field--name-field-section-widgets > .field__items > .field__item {
+    .field--widget-paragraphs .paragraph--view-mode--preview .field--name-field-section-widgets > .field__items > .field__item {
+      clear: left; }
+    .field--widget-paragraphs .paragraph--view-mode--preview .field--name-field-section-widgets > .field__items .field__item {
       font-size: 1.4rem; }
-      .paragraph--view-mode--preview .field--name-field-section-widgets > .field__items > .field__item:not(:last-child) {
+      .field--widget-paragraphs .paragraph--view-mode--preview .field--name-field-section-widgets > .field__items .field__item:not(:last-child) {
         margin-bottom: 0.5rem; }
-      .paragraph--view-mode--preview .field--name-field-section-widgets > .field__items > .field__item .field__label {
+      .field--widget-paragraphs .paragraph--view-mode--preview .field--name-field-section-widgets > .field__items .field__item .field__label {
         color: #4a4a4a; }
 
-.paragraph--view-mode--preview a {
+.field--widget-paragraphs .paragraph--view-mode--preview a {
   color: #121212;
   pointer-events: none; }
 
-.paragraph--view-mode--preview img {
+.field--widget-paragraphs .paragraph--view-mode--preview img {
   max-width: 50px; }
 
+.field--widget-paragraphs .paragraph--view-mode--preview p, .field--widget-paragraphs .paragraph--view-mode--preview .field--type-text-long {
+  margin: 0; }
+
+/* ACCORDION GROUP
+---------------------- */
 .paragraph--type--accordion-group .field--name-field-accordion-item {
   display: flex;
   display: -ms-flexbox;
@@ -4342,6 +4357,99 @@ body.crane {
   -ms-flex-pack: start;
   align-items: flex-start;
   -ms-flex-align: start; }
+  .paragraph--type--accordion-group .field--name-field-accordion-item > .field__item {
+    padding-right: 0; }
+    .paragraph--type--accordion-group .field--name-field-accordion-item > .field__item:nth-child(n+3) {
+      padding-left: .25em; }
+
+/* GALLERY
+---------------------- */
+.paragraph--type--gallery {
+  display: flex;
+  display: -ms-flexbox;
+  flex-direction: row;
+  -ms-flex-direction: row;
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  justify-content: flex-start;
+  -ms-flex-pack: start;
+  align-items: center;
+  -ms-flex-align: center; }
+  .paragraph--type--gallery .field--name-field-gallery-type {
+    flex: 0 0 165px;
+    -ms-flex: 0 0 165px; }
+  .paragraph--type--gallery .field--name-field-image-multi {
+    display: flex;
+    display: -ms-flexbox;
+    flex-direction: row;
+    -ms-flex-direction: row;
+    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    justify-content: flex-start;
+    -ms-flex-pack: start;
+    align-items: flex-start;
+    -ms-flex-align: start; }
+    .paragraph--type--gallery .field--name-field-image-multi .field__item {
+      margin-right: 3px; }
+
+/* HORIZONTAL RULE
+------------------- */
+.paragraph--type--horizontal-rule {
+  margin-bottom: 0.5rem; }
+  .paragraph--type--horizontal-rule::after {
+    clear: both;
+    content: "";
+    display: table; }
+  .paragraph--type--horizontal-rule .field__item {
+    max-width: 160px;
+    position: relative;
+    top: 10px; }
+    .paragraph--type--horizontal-rule .field__item hr {
+      background: #3778c1; }
+
+/* IMAGE
+------------------- */
+.paragraph--type--image .field--name-field-image {
+  display: flex;
+  display: -ms-flexbox;
+  flex-direction: row;
+  -ms-flex-direction: row;
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  justify-content: flex-start;
+  -ms-flex-pack: start;
+  align-items: center;
+  -ms-flex-align: center; }
+
+/* LINKS & FILES
+------------------- */
+.paragraph--type--links-files .links-files-list {
+  display: flex;
+  display: -ms-flexbox;
+  flex-direction: row;
+  -ms-flex-direction: row;
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  justify-content: flex-start;
+  -ms-flex-pack: start;
+  align-items: flex-start;
+  -ms-flex-align: start; }
+  .paragraph--type--links-files .links-files-list .lf-item:not(:first-child) {
+    padding-left: .25em; }
+
+/* VIDEO
+------------------- */
+.paragraph--type--video .field--name-field-video {
+  display: flex;
+  display: -ms-flexbox;
+  flex-direction: row;
+  -ms-flex-direction: row;
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  justify-content: flex-start;
+  -ms-flex-pack: start;
+  align-items: center;
+  -ms-flex-align: center; }
 
 /* ========================
   TABLES

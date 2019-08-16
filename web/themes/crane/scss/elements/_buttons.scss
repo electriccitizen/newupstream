@@ -2,6 +2,12 @@
   BUTTONS
 ========================== */
 
-.button{
+.button,.no-touchevents .button--small{
 	font-size: $baseSize;
+}
+
+.button-action{
+	&:before{
+		font-size: $baseSize;
+	}
 }

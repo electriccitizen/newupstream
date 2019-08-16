@@ -5,14 +5,12 @@
  *
  * Available variables:
  * - paragraph: Full paragraph entity.
- *   Only method names starting with "get", "has", or "is" and a few common
- *   methods such as "id", "label", and "bundle" are available. For example:
- *   - paragraph.getCreatedTime() will return the paragraph creation timestamp.
- *   - paragraph.id(): The paragraph ID.
- *   - paragraph.bundle(): The type of the paragraph, for example, "image" or "text".
- *   - paragraph.getOwnerId(): The user ID of the paragraph author.
- *   See Drupal\paragraphs\Entity\Paragraph for a full list of public properties
- *   and methods for the paragraph object.
+ *   - id: The paragraph ID.
+ *   - bundle: The type of the paragraph, for example, "image" or "text".
+ *   - authorid: The user ID of the paragraph author.
+ *   - createdtime: Formatted creation date. Preprocess functions can
+ *     reformat it by calling format_date() with the desired parameters on
+ *     $variables['paragraph']->getCreatedTime().
  * - content: All paragraph items. Use {{ content }} to print them all,
  *   or print a subset such as {{ content.field_example }}. Use
  *   {{ content|without('field_example') }} to temporarily suppress the printing
@@ -38,16 +36,25 @@
  * @ingroup themeable
  */
 #}
-{% extends 'paragraph--preview.html.twig' %}
+{% extends "paragraph.html.twig" %}
+
 
 {% block content %}
-  <div class="field field--name-field-accordion-item field--type-string field--label-inline field__items">
-    <div class="field__label">Accordions</div>
-    {%- for key, accordion in content.field_accordion_item['#items'] if key|first != "#" -%}
-      {% if loop.index0 > 0 %},{% endif %}
-      <div class="field__item">
-        {{ accordion.entity.field_accordion_header.0.value }}
-      </div>
-    {%- endfor -%}
-  </div>
+	
+	{%- if content.field_link_multi.0 or content.field_file_multi.0 -%}
+		<div class="field links-files field--type-string field--label-inline field__items">
+			<div class="field__label">Links & Files</div>
+	    <div class="links-files-list">
+				{%- for key, link in content.field_link_multi if key|first != "#" -%}
+					{% if loop.index0 > 0 %},{% endif %}<div class="lf-item"><a href="{{ link['#url'] }}">{{ link['#title'] }}</a></div>
+				{%- endfor -%}
+				{%- if content.field_link_multi.0 and content.field_file_multi.0 -%},{%- endif -%}
+				{%- for key, file in content.field_file_multi['#items'] if key|first != "#" -%}
+					{% if loop.index0 > 0  %},{% endif %}<div class="lf-item">{{ drupal_entity('media', file.entity.id, 'default') }}</div>
+				{%- endfor -%}
+			</div>
+		</div>
+	{%- endif -%}
+
 {% endblock %}
+
