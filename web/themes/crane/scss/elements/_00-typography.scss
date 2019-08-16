@@ -1,0 +1,22 @@
+/* ========================
+  TYPOGRAPHY
+========================== */
+
+html,code{
+	font-size: $em-base;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-kerning: normal;
+	font-synthesis: none;
+}
+
+body.crane {
+	font: inherit;
+	color: $baseText;
+	margin: 0;
+	font-size: $baseSize;
+	font-family: $bodyFont;
+	font-weight: $regular;
+	line-height: 1.4;
+	letter-spacing: .02em;
+}

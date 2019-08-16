@@ -1,0 +1,74 @@
+/* ========================
+  FORM ELEMENTS
+========================== */
+@mixin placeholder{
+	$placeTint: .4;
+	&::-webkit-placeholder{
+		opacity: $placeTint;
+		color: $placeColor;
+	}
+	&::-moz-placeholder{
+		opacity: $placeTint;
+		color: $placeColor;
+	}
+	&:-ms-input-placeholder{
+		opacity: $placeTint;
+		color: $placeColor;
+	}
+	&::-webkit-input-placeholder{
+		opacity: $placeTint;
+		color: $placeColor;
+	}
+}
+
+@mixin placeholderFocus{
+	$placeFocusTint: .2;
+	&::-webkit-placeholder{
+		opacity: $placeFocusTint;
+		color: $placeFocusColor;
+	}
+	&::-moz-placeholder{
+		opacity: $placeFocusTint;
+		color: $placeFocusColor;
+	}
+	&:-ms-input-placeholder{
+		opacity: $placeFocusTint;
+		color: $placeFocusColor;
+	}
+	&::-webkit-input-placeholder{
+		opacity: $placeFocusTint;
+		color: $placeFocusColor;
+	}
+}
+
+@mixin textInput{
+	border: 1px solid $formElementBorder;
+	border-radius: 2px;
+	font-size: 1.5rem;
+	font-family: $bodyFont;
+	padding: 6px;
+	width: 100%;
+	line-height: 1;
+	min-height: 34px;
+	@include placeholder;
+	&:focus{
+		@include placeholderFocus;
+	}
+}
+
+@mixin required{
+	position: relative;
+	padding-right: .5rem;
+	margin-right: 3rem;
+	&:after{
+		content: '*';
+		color: $validation;
+		position: absolute;
+		top: -4px;
+		right: -.5rem;
+		font-size: 1.6rem;
+		background: transparent;
+		margin: 0;
+	}
+}
+

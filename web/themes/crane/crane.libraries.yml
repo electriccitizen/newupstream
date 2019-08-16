@@ -1,0 +1,17 @@
+global:
+  version: 1.0
+  css:
+    theme:
+      css/crane.css: {}
+  js:
+    js/crane.js: {}
+  dependencies:
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery
+    - core/jquery.once
+fonts:
+  version: 1.0
+  css:
+    base:
+       https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&display=swap: { type: external, preprocess: false }  
