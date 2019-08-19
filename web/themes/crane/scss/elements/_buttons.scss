@@ -11,3 +11,25 @@
 		font-size: $baseSize;
 	}
 }
+
+input[type="submit"].button{
+	padding: 7px 1.5em;
+	border-radius: 0;
+	border-color: $contrastGrey;
+	margin-bottom: $spaceXs;
+}
+body .button--primary{
+	border-radius: 0;
+	padding: 9px 1em;
+}
+body .button--primary.button--small{
+	padding: 6px 1em;
+}
+
+#edit-clear-cache input[type="submit"].button{
+	background: $green;
+	color: #fff;
+}
+#edit-clear-cache input[type="submit"].button:hover,#edit-clear-cache input[type="submit"].button:focus{
+	background: $midGrey;
+}

@@ -24,3 +24,17 @@
 		width: 100%;
 	}
 }//end widget reference paragraphs
+
+
+/* HIDE REVISIONS FROM INLINE ENTITIES
+--------------------------*/
+#edit-inline-entity-form #edit-inline-entity-form-revision-log-message-wrapper,.media-form .vertical-tabs{
+	display: none;
+}
+
+/* REMOVE REVISION FROM MEDIA REFERENCE FIELD
+--------------------------------------------- */
+.field--type-entity-reference .field--name-revision-log-message{
+	display: none;
+}
+

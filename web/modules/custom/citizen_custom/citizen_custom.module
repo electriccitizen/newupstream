@@ -71,7 +71,6 @@ function citizen_custom_preprocess_html(&$variables){
  * attach css and custom.js to node form only
  */
 function citizen_custom_form_node_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
-  $form['#attached']['library'][] = 'citizen_custom/node';
   $node = $form_state->getFormObject()->getEntity();
   if ($node->getType() == 'news') {
     $form['promote']['widget']['value']['#title'] = 'Add to Featured News';
@@ -86,21 +85,6 @@ function citizen_custom_form_node_form_alter(&$form, \Drupal\Core\Form\FormState
 
   }
 }
-
-/*
- * attach admin js files only if a user is logged in
- */
-function citizen_custom_page_attachments(array &$attachments){
-  $user = \Drupal::currentUser();
-  $userRole = $user->getRoles();
-  foreach($userRole as $role ){
-    if($role != 'anonymous'){
-      $attachments['#attached']['library'][] = 'citizen_custom/global';
-      $attachments['#attached']['library'][] = 'citizen_custom/select';
-    }
-  }
-}
-
 
 /**
  * Implements hook_preprocess_HOOK() for block templates.

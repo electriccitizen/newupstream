@@ -1,4 +1,158 @@
 /* ==============
 	 MEDIA BROWSER
 ================== */
+.eb-media{
+	padding-bottom: $spaceMd;
+	.views-row{
+		.views-col{
+			margin: 0 0 $spaceMd;
+			position: relative;
+		}
+	}//end views-row
+
+	//browser checkbox
+	.views-field-entity-browser-select{
+		.form-type-checkbox{
+			margin: 0;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 20;
+			input[type="checkbox"]{
+				@include browserWipe;
+				height: 200px;
+				width: 250px;
+				border: 8px solid transparent;
+				&:hover,&:focus{
+					border-color: $red;
+					outline: none;
+				}
+				&:checked{
+					border-color: $grey;
+					&:hover,&:focus{
+						border-color: $midGrey;
+					}
+				}
+			}//end checkbox
+		}//end checkbox
+	}//end entity-browser-select
+}//end eb-media
+
+/* ENTITY BROWSER MODAL FORM
+------------------------- */
+.entity-browser-form{
+	& > .form-actions{
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		z-index: 30;
+		width: 100%;
+		background: $white;
+		padding-top: 1em;
+		margin: 0;
+	}
+}//end eb form
+
+/* CUSTOM DOCUMENT ICONS
+----------------------- */
+%customIconWrap{
+	display: block;
+	height: 160px;
+	width: 160px;
+	padding-bottom: $spaceLg;
+	background: $lightGrey;
+}
+%pdf{
+	background: url('../images/icons/file-icons/pdf.svg') no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+%word{
+	background: url('../images/icons/file-icons/word.svg') no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+%excel{
+	background: url('../images/icons/file-icons/excel.svg') no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+%powerpoint{
+	background: url('../images/icons/file-icons/powerpoint.svg') no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+
+//icons in browser
+.eb-media .views-field .file-extension{
+	padding-bottom: $spaceXs;
+	& > span{
+		@extend %customIconWrap;
+		img{
+			display: none;
+		}
+		&[class$='.pdf']{
+			@extend %pdf;
+		}
+		&[class$='.doc'],&[class$='.docx']{
+			@extend %word;
+		}
+		&[class$='.xls'],&[class$='.xlsx']{
+			@extend %excel;
+		}
+		&[class$='.ppt'],&[class$='.pptx']{
+			@extend %powerpoint;
+		}
+	}
+}//end file extension & thumbnail fields
+
+.eb-media.view-display-id-embed_browser .views-field-thumbnail__target-id{
+	padding-bottom: $spaceXs;
+	& > span.doc{
+		@extend %customIconWrap;
+		&[class$='pdf']{
+			@extend %pdf;
+		}
+		&[class$='doc'],&[class$='docx']{
+			@extend %excel;
+		}
+		&[class$='xls'],&[class$='xlsx']{
+			@extend %word;
+		}
+		&[class$='ppt'],&[class$='pptx']{
+			@extend %powerpoint;
+		}
+		img{
+			display: none;
+		}
+	}
+}
+
+//icons on main media view list
+.view-media.view-display-id-media_page_list{
+	padding-bottom: $spaceXs;
+	.views-field-thumbnail__target-id span.doc{
+		display: block;
+		height: 75px;
+		width: 60px;
+		background: $lightGrey;
+		&[class$='pdf']{
+			@extend %pdf;
+		}
+		&[class$='doc'],&[class$='docx']{
+			@extend %excel;
+		}
+		&[class$='xls'],&[class$='xlsx']{
+			@extend %word;
+		}
+		&[class$='ppt'],&[class$='pptx']{
+			@extend %powerpoint;
+		}
+		img{
+			display: none;
+		}
+	}
+}//end media view list
+
+
 

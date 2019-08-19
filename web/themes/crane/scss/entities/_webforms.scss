@@ -1,0 +1,11 @@
+/* ========================
+  WEBFORMS
+========================== */
+
+/* WEBFORMS HOTFIX FOR BROKEN CKE
+------------------------------ */
+.webform-form.webform-ui-element-form{
+	textarea.form-textarea{
+  	visibility: visible !important;
+  }
+}

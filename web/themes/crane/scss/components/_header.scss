@@ -1,3 +1,31 @@
 /* ========================
   HEADER
 ========================== */
+
+header.content-header{
+	background: #323b49;
+	color: #fff;
+	min-height: 60px;
+	.shortcut-action__icon{
+		background: transparent url('../images/icons/admin-icons/shortcut-star.svg') no-repeat left top;
+	}
+	.shortcut-action--add{
+		&:hover,&:focus{
+			.shortcut-action__icon{
+				background: transparent url('../images/icons/admin-icons/shortcut-star.svg') no-repeat left top;
+				opacity: .6;
+			}
+		}
+	}
+	.shortcut-action--remove{
+		.shortcut-action__icon{
+			background: transparent url('../images/icons/admin-icons/shortcut-star-remove.svg') no-repeat left top;
+		}
+		&:hover,&:focus{
+			.shortcut-action__icon{
+				background: transparent url(../icons/admin-icons/shortcut-star-remove.svg) no-repeat left top;
+				opacity: .6;
+			}
+		}
+	}
+}//end content header

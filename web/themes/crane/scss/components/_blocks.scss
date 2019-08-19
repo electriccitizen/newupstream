@@ -2,3 +2,7 @@
 	 BLOCKS
 ================== */
 
+/* Hide restricted block type titles */
+.path-block:not(.role-administrator) #block-content-restricted-edit-form .field--name-info{
+	display: none;
+}

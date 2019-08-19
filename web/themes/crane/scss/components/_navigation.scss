@@ -1,0 +1,96 @@
+/* ==============
+	 NAVIGATION
+================== */
+
+/* ADMIN TOOLBAR
+------------------ */
+#toolbar-bar{
+	position: fixed !important;
+	width: 100%;
+	.toolbar-tab{
+		&.env{
+			span.toolbar-item{
+				padding: 1em 1.333em;
+			  font-weight: $heavy;
+			  display: block;
+			  background: $transWhite;
+			  color: $black !important;
+			  cursor: default;
+			  &:hover,&:focus{
+			  	text-decoration: none;
+			  }
+			}
+		}
+	}//end toolbar tab
+	&.local{
+		background-color: $black;
+		.toolbar-tab{
+			.toolbar-item{
+				color: $grey !important;
+			}
+		}
+	}//end local
+	&.dev{
+		background: $green;
+		.toolbar-tab{
+			.toolbar-item{
+				color: $white !important;
+			}
+		}
+	}//end dev
+	&.test{
+		background: $gold;
+		.toolbar-tab{
+			.toolbar-item{
+				color: $black !important;
+			}
+		}
+	}//end test
+	&.live{
+		background: darken($red, 8%);
+		&.toolbar-tab{
+			.toolbar-item{
+				color: $white !important;
+			}
+		}
+	}
+}//end #toolbar
+.toolbar-tray-horizontal{
+	.menu-item-expanded{
+		background-color: $white !important;
+	}
+	.menu-item{
+		&:hover,&:focus{
+			background-color: $offWhite !important;
+		}
+	}
+}
+
+/* PRIMARY TASKS
+------------------- */
+#block-seven-primary-local-tasks{
+	.tabs__tab{
+		a{
+			color: $midBlue;
+		}
+		&.is-active{
+			a{
+				color: $blue;
+			}
+		}
+	}
+}
+
+/* SECONDARY TASKS
+-------------------- */
+#block-seven-secondary-local-tasks{
+	padding-bottom: $spaceSm;
+}
+
+/* BREADCRUMBS 
+----------------- */
+#block-seven-breadcrumbs{
+	.breadcrumb{
+		padding: 0 0 $spaceSm;
+	}
+}

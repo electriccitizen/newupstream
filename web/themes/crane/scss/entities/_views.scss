@@ -2,3 +2,81 @@
   VIEWS
 ========================== */
 
+/* MAIN CONTENT VIEW
+----------------------- */
+.view-content.view-display-id-page_1{
+	.view-filters{
+		background: $whiteBlue;
+		padding: $spaceXs 2.5em $spaceSm;
+		@include bleed(5em);
+		position: relative;
+		z-index: 20;
+		margin-bottom: -1px;
+		.form-actions{
+			clear: none;
+  		float: left;
+  		input{
+  			margin-top: 17px;
+  		}
+		}
+	}//end views filters
+	.view-content{
+		position: relative;
+		@include contentStop{
+			&:before{
+				content: '';
+				display: block;
+				position: absolute;
+				top: 0;
+				left: -2.5em;
+				z-index: -1;
+				width: 100vw;
+				height: 42px;
+				background: $offWhite;
+				border-bottom: 1px solid $grey;
+			}
+		}
+		.views-form > form{
+			@include safeFlex(column,nowrap,start,start);
+			& > .form-actions{
+				display: none;
+			}
+			& > #edit-header{
+				@include safeFlexOrder(99);
+				&.form-wrapper{
+					width:  100%;
+					max-width: 300px;
+				}
+			}	
+		}
+		table{
+			thead{
+				& > tr{
+					border-bottom: none;
+				}
+				th{
+					background: $offWhite;
+					border-color: $grey;
+				}
+			}
+		}//end table
+	}//end view content
+}//end admin content view
+
+/* MAIN MEDIA VIEW
+-------------------- */
+.view-display-id-media_page_list{
+	@extend .view-content.view-display-id-page_1;
+	.view-filters{
+		.form-item-field-media-categories-target-id{
+			max-width: 300px;
+			margin-right: 20px;
+		}
+	}
+}
+
+/* MAIN FILES VIEW
+--------------------- */
+.view-files.view-display-id-page_1{
+	@extend .view-content.view-display-id-page_1;
+}

@@ -1,3 +1,11 @@
 /* ========================
   GLOBAL
 ========================== */
+
+/* LAYOUT CONTAINER
+--------------------- */
+.dialog-off-canvas-main-canvas{
+	& > .layout-container{
+		padding-top: $spaceSm;
+	}
+}

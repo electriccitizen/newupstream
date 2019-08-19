@@ -5,6 +5,11 @@ global-styling:
       dist/style.css: { minified: true }
   js:
     dist/00-base/global.min.js.gz: { minified: true }
+  dependencies:
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery
+    - core/jquery.once
 accordion:
   version: 1.0
   js:

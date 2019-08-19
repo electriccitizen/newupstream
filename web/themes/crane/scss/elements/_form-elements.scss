@@ -72,6 +72,55 @@
 	}
 }
 
+@mixin selectInput{
+	width: 100%;
+	font-size: 1.3rem;
+	border: 1px solid $formElementBorder;
+	border-radius: 0;
+	height: auto;
+	.select2-selection__choice__remove{
+		position: relative;
+		z-index: 999;
+	}
+}
+
+/* TEXT FIELDS
+----------------- */
+.js-form-type-textfield{
+	input{
+		@include textInput;
+	}
+}
+.js-form-type-email{
+	input{
+		@include textInput;
+	}
+}
+.js-form-type-password{
+	input{
+		@include textInput;
+	}
+}
+.js-form-type-tel{
+	input{
+		@include textInput;
+	}
+}
+.js-form-type-search{
+	input{
+		@include textInput;
+		@include placeholder;
+		&:focus{
+			@include placeholderFocus;
+		}
+	}
+}
+.js-form-type-textarea{
+	textarea{
+		@include textInput;
+	}
+}
+
 /* SELECTS
 ------------- */
 .form-type-select{
@@ -79,4 +128,109 @@
 		font-size: $baseSize;
 	}
 }//end form type select
+
+/* SELECT 2
+--------------- */
+body select,body select:hover,body select:focus{
+	background: none;
+}
+
+//hide optgroup safari bug fix
+optgroup:empty{
+	display: none;
+}
+
+//hide custom optgroup labels (ios10 bug fix)
+.select2-results__group{
+	display: none !important;
+}
+
+body{
+	.select2-container{
+		min-width: 150px;
+		margin-bottom: .5em;
+	}
+	.select2-container--default{
+		.select2-selection--single{
+			@include selectInput;
+			.select2-selection__rendered{
+				padding: 1px 32px 1px 10px;
+				color: $midGrey;
+				text-align: left;
+			}
+			.select2-selection__arrow{
+				top: 14px;
+				right: 10px;
+				cursor: pointer;
+				@include triangle(down,8px,10px,$midGrey);
+				b{
+					display: none;
+				}
+			}
+		}//end single
+		.select2-selection--multiple{
+			@include selectInput;
+			.select2-search--inline{
+				position: relative;
+				float: none;
+				padding: 1px 3px;
+				&:after{
+					content: '';
+					display: block;
+					position: absolute;
+					top: 10px;
+					right: 2px;
+					cursor: pointer;
+					@include triangle(down,8px,10px,$midGrey);
+				}
+				input.select2-search__field{
+					color: $midGrey;
+					@include placeholder;
+					&:focus{
+						@include placeholderFocus;
+					}
+				}
+			}//end search inline
+			.select2-selection__choice{
+				border-radius: 0;
+				background: $lightGrey;
+			}
+		}//end multiple
+		&.select2-container--open,&.select2-container--focus{
+			box-shadow: 0 2px 2px rgba(35,35,35,0.3);
+			.select2-selection--single{
+				.select2-selection__arrow{
+					border-top: 0;
+					border-bottom: 8px solid $midGrey;
+				}
+			}
+			.select2-selection--multiple{
+				.select2-search--inline:after{
+					border-top: 0;
+					border-bottom: 8px solid $midGrey;
+				}
+			}
+		}//end open,focus
+	}//end container--default
+}//end body
+
+.select2-container .select2-dropdown{
+	border: 1px solid $midGrey;
+	border-radius: 0;
+	border-top: 0;
+	padding: 0;
+}
+.select2-container--default .select2-results__option[aria-selected="true"]{
+	background-color: $lightGrey;
+}
+.select2-container--default .select2-results__option--highlighted[aria-selected]{
+	background-color: $blue;
+}
+body select{
+	border-radius: 0;
+	background: url('../images/icons/admin-icons/caret-down.svg') no-repeat 99% 63%, #fff;
+}
+body select:hover,body select:focus{
+	background: url('../images/icons/admin-icons/caret-down.svg') no-repeat 99% 63%, #ececec;
+}
 
