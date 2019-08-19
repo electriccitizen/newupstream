@@ -4269,6 +4269,24 @@ body.crane {
 /* ========================
   FIELD
 ========================== */
+/* GENERAL */
+.fieldset-wrapper .fieldset-description {
+  margin-bottom: 1em; }
+
+/* style media image fields inside admin widgets */
+.field--widget-entity-reference-paragraphs img {
+  max-width: 100%;
+  height: auto; }
+
+.field--widget-entity-reference-paragraphs .item-container.rendered-entity {
+  width: 100%; }
+
+.field--widget-entity-reference-paragraphs .item-container > input {
+  display: inline-block; }
+
+.field--widget-entity-reference-paragraphs .view-mode-media-thumbnail {
+  width: 100%; }
+
 /* ========================
   FORM ELEMENTS
 ========================== */
@@ -4307,12 +4325,112 @@ body.crane {
 /* ========================
   MISC FORMS
 ========================== */
+/* CUSTOM WARNINGS
+------------------ */
+.custom-warning {
+  color: #121212;
+  font-size: 14px;
+  border: 2px solid #bf0e0e;
+  background: rgba(221, 36, 27, 0.2);
+  padding: .25em 1em;
+  display: inline-block; }
+
 /* ========================
   NODE FORMS
 ========================== */
 /* ========================
-  PARAGRAPH PREVIEWS
+  PARAGRAPHS
 ========================== */
+/* PARAGRAPHS BUTTONS
+--------------------------- */
+.field--widget-paragraphs:after {
+  content: '';
+  display: block;
+  clear: both; }
+
+.field--widget-paragraphs .description strong span {
+  color: #dd241b; }
+
+.field--widget-paragraphs .paragraphs-tabs-wrapper input.button.field-add-more-submit:not([value="Add another item"]) {
+  padding: 6px 8px 6px 34px;
+  border: 2px solid #02acd7;
+  color: #535353;
+  border-radius: 0;
+  box-shadow: 3px 3px 0 #d2d2d2;
+  float: left;
+  background-position: 4px 3px !important;
+  background-size: 24px 24px !important;
+  margin-right: 15px; }
+
+.field--widget-paragraphs .paragraphs-tabs-wrapper input.button.field-add-more-submit:hover {
+  border-color: #005b8a !important;
+  background-color: rgba(205, 232, 246, 0.3) !important; }
+
+.field--widget-paragraphs .paragraphs-tabs-wrapper .clearfix {
+  margin-bottom: 2em; }
+
+.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Accordion Group"] {
+  background: url("../images/icons/paragraphs/accordion.svg") no-repeat; }
+
+.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Accordion Item"] {
+  background: url("../images/icons/paragraphs/accordion.svg") no-repeat; }
+
+.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Basic Page Section"] {
+  background: url("../images/icons/paragraphs/section.svg") no-repeat; }
+
+.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Block Placer"] {
+  background: url("../images/icons/paragraphs/block.svg") no-repeat; }
+
+.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Form"] {
+  background: url("../images/icons/paragraphs/form.svg") no-repeat; }
+
+.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Gallery"] {
+  background: url("../images/icons/paragraphs/galleries.svg") no-repeat; }
+
+.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Horizontal Rule"] {
+  background: url("../images/icons/paragraphs/hr.svg") no-repeat; }
+
+.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Image"] {
+  background: url("../images/icons/paragraphs/image.svg") no-repeat; }
+
+.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Landing Page Section"] {
+  background: url("../images/icons/paragraphs/section.svg") no-repeat; }
+
+.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Links & Files"] {
+  background: url("../images/icons/paragraphs/link.svg") no-repeat; }
+
+.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Pullquote"] {
+  background: url("../images/icons/paragraphs/pullquote.svg") no-repeat; }
+
+.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Text"] {
+  background: url("../images/icons/paragraphs/text.svg") no-repeat; }
+
+.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add View Placer"] {
+  background: url("../images/icons/paragraphs/view-placer.svg") no-repeat; }
+
+.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Video"] {
+  background: url("../images/icons/paragraphs/video.svg") no-repeat; }
+
+/* WIDGET CONTENT SPACING
+-------------------------- */
+.paragraphs-content {
+  margin-bottom: 1em; }
+
+.field--name-field-reusable-paragraph .entities-list .item-container {
+  display: block; }
+  .field--name-field-reusable-paragraph .entities-list .item-container input {
+    display: inline-block;
+    margin: .5em 0 .5em 1em; }
+
+/* WIDGET LABEL */
+.js .paragraph-type-top .paragraph-type-title {
+  min-width: 300px; }
+
+.paragraph-type-title .paragraph-type-label {
+  font-weight: bold; }
+
+/* PREVIEWS
+---------------- */
 .field--widget-paragraphs .paragraph--view-mode--preview.paragraph--type--landing-page-section > *:not(:last-child), .field--widget-paragraphs .paragraph--view-mode--preview.paragraph--type--basic-page-section > *:not(:last-child) {
   margin-bottom: 0.5rem; }
 
@@ -4327,11 +4445,11 @@ body.crane {
     padding-left: 1rem; }
     .field--widget-paragraphs .paragraph--view-mode--preview .field--name-field-section-widgets > .field__items > .field__item {
       clear: left; }
-    .field--widget-paragraphs .paragraph--view-mode--preview .field--name-field-section-widgets > .field__items .field__item {
+    .field--widget-paragraphs .paragraph--view-mode--preview .field--name-field-section-widgets > .field__items > .field__item {
       font-size: 1.4rem; }
-      .field--widget-paragraphs .paragraph--view-mode--preview .field--name-field-section-widgets > .field__items .field__item:not(:last-child) {
+      .field--widget-paragraphs .paragraph--view-mode--preview .field--name-field-section-widgets > .field__items > .field__item:not(:last-child) {
         margin-bottom: 0.5rem; }
-      .field--widget-paragraphs .paragraph--view-mode--preview .field--name-field-section-widgets > .field__items .field__item .field__label {
+      .field--widget-paragraphs .paragraph--view-mode--preview .field--name-field-section-widgets > .field__items > .field__item .field__label {
         color: #4a4a4a; }
 
 .field--widget-paragraphs .paragraph--view-mode--preview a {
@@ -4343,6 +4461,13 @@ body.crane {
 
 .field--widget-paragraphs .paragraph--view-mode--preview p, .field--widget-paragraphs .paragraph--view-mode--preview .field--type-text-long {
   margin: 0; }
+
+/* PREVIEW SUBFORM */
+.paragraphs-subform .field--widget-paragraphs .paragraph--view-mode--preview > .field--label-inline > .field__label {
+  display: none; }
+
+.paragraphs-subform .field--widget-paragraphs .paragraph--view-mode--preview > .field--label-inline > .field__item {
+  font-size: 1.4rem; }
 
 /* ACCORDION GROUP
 ---------------------- */
@@ -4361,6 +4486,11 @@ body.crane {
     padding-right: 0; }
     .paragraph--type--accordion-group .field--name-field-accordion-item > .field__item:nth-child(n+3) {
       padding-left: .25em; }
+
+/* FORM
+------------------ */
+.paragraph--type--form .field--name-field-oc-form .js-form-type-select + .js-form-wrapper {
+  display: none; }
 
 /* GALLERY
 ---------------------- */

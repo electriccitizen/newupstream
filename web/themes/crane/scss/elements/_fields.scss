@@ -1,4 +1,26 @@
 /* ========================
   FIELD
 ========================== */
+/* GENERAL */
+.fieldset-wrapper .fieldset-description{
+  margin-bottom: 1em;
+}
 
+/* style media image fields inside admin widgets */
+.field--widget-entity-reference-paragraphs{
+	img{
+  	max-width: 100%;
+  	height: auto;
+	}
+	.item-container{
+		&.rendered-entity{
+			width: 100%;
+		}
+		& > input{
+			display: inline-block;
+		}
+	}
+	.view-mode-media-thumbnail{
+		width: 100%;
+	}
+}//end widget reference paragraphs

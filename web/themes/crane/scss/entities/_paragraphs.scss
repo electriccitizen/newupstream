@@ -1,6 +1,114 @@
 /* ========================
-  PARAGRAPH PREVIEWS
+  PARAGRAPHS
 ========================== */
+
+/* PARAGRAPHS BUTTONS
+--------------------------- */
+
+.field--widget-paragraphs{
+	&:after{
+	  content: '';
+	  display: block;
+	  clear: both;
+	}
+	.description strong span{
+		 color: #dd241b;
+	}
+	//button icons
+	.paragraphs-tabs-wrapper{
+		input.button.field-add-more-submit{
+			&:not([value="Add another item"]){
+				padding: 6px 8px 6px 34px;
+			  border: 2px solid #02acd7;
+			  color: #535353;
+			  border-radius: 0;
+			  box-shadow: 3px 3px 0 #d2d2d2;
+			  float: left;
+			  background-position: 4px 3px !important;
+			  background-size: 24px 24px !important;
+			  margin-right: 15px;
+			}
+			&:hover{
+				border-color: #005b8a !important;
+  			background-color: rgba(205,232,246,0.3) !important;
+			}
+		}
+		.clearfix{
+			margin-bottom: 2em;
+		}
+		input{
+			&[value="Add Accordion Group"]{
+				background: url('../images/icons/paragraphs/accordion.svg') no-repeat;
+			}
+			&[value="Add Accordion Item"]{
+				background: url('../images/icons/paragraphs/accordion.svg') no-repeat;
+			}
+			&[value="Add Basic Page Section"]{
+				background: url('../images/icons/paragraphs/section.svg') no-repeat;
+			}
+			&[value="Add Block Placer"]{
+				background: url('../images/icons/paragraphs/block.svg') no-repeat;
+			}
+			&[value="Add Form"]{
+				background: url('../images/icons/paragraphs/form.svg') no-repeat;
+			}
+			&[value="Add Gallery"]{
+			  background: url('../images/icons/paragraphs/galleries.svg') no-repeat;
+			}
+			&[value="Add Horizontal Rule"]{
+			  background: url('../images/icons/paragraphs/hr.svg') no-repeat;
+			}
+			&[value="Add Image"]{
+			  background: url('../images/icons/paragraphs/image.svg') no-repeat;
+			}
+			&[value="Add Landing Page Section"] {
+			  background: url('../images/icons/paragraphs/section.svg') no-repeat;
+			}
+			&[value="Add Links & Files"]{
+			  background: url('../images/icons/paragraphs/link.svg') no-repeat;
+			}
+			&[value="Add Pullquote"]{
+			  background: url('../images/icons/paragraphs/pullquote.svg') no-repeat;
+			}
+			&[value="Add Text"]{
+			  background: url('../images/icons/paragraphs/text.svg') no-repeat;
+			}
+			&[value="Add View Placer"]{
+			  background: url('../images/icons/paragraphs/view-placer.svg') no-repeat;
+			}
+			&[value="Add Video"]{
+			  background: url('../images/icons/paragraphs/video.svg') no-repeat;
+			}
+		}//end paragraph add button input
+	}//end paragraphs tab wrapper
+}//end field--widget-paragraphs
+
+
+/* WIDGET CONTENT SPACING
+-------------------------- */
+.paragraphs-content{
+  margin-bottom: 1em;
+}
+
+.field--name-field-reusable-paragraph .entities-list .item-container{
+  display: block;
+  input{
+  	display: inline-block;
+  	margin: .5em 0 .5em 1em;
+  }
+}
+
+/* WIDGET LABEL */
+.js .paragraph-type-top .paragraph-type-title{
+  min-width: 300px;
+}
+.paragraph-type-title .paragraph-type-label{
+  font-weight: bold;
+}
+
+
+/* PREVIEWS
+---------------- */
 .field--widget-paragraphs .paragraph--view-mode--preview{
 	&.paragraph--type--landing-page-section,&.paragraph--type--basic-page-section{
 		& > *:not(:last-child){
@@ -20,7 +128,7 @@
 			& > .field__item{
 				clear: left;
 			}
-			.field__item{
+			& > .field__item{
 				font-size: 1.4rem;
 				&:not(:last-child){
 					margin-bottom: $spaceXxs;
@@ -44,6 +152,22 @@
 	}
 }//end paragraph-preview
 
+/* PREVIEW SUBFORM */
+.paragraphs-subform{
+	.field--widget-paragraphs{
+		.paragraph--view-mode--preview{
+			& > .field--label-inline{
+				& > .field__label{
+					display: none;
+				}
+				& > .field__item{
+					font-size: 1.4rem;
+				}
+			}
+		}
+	}
+}
+
 /* ACCORDION GROUP
 ---------------------- */
 .paragraph--type--accordion-group{
@@ -57,6 +181,18 @@
 		}
 	}
 }//end accordion group
+
+/* FORM
+------------------ */
+.paragraph--type--form{
+	.field--name-field-oc-form{
+		.js-form-type-select{
+				& + .js-form-wrapper{
+					display: none;
+			}
+		}
+	}
+}//end form 
 
 /* GALLERY
 ---------------------- */

@@ -41,7 +41,8 @@
 {% block content %}
 	<div class="field field--type-hr field--label-inline">
     <div class="field__label">Form</div>
-			{{ content.field_form['#items'].0.target_id|title }}
+    <div class="field__item">
+			{{- content.field_form['#items'].0.target_id|title|replace('_',' ') -}}
 		</div>
 	</div>
 {% endblock %}
