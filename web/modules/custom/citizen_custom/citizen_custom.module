@@ -136,6 +136,15 @@ function citizen_custom_preprocess_block(&$variables) {
 }
 
 /**
+ * Implements hook_local_tasks_alter().
+ */
+function citizen_custom_local_tasks_alter(&$local_tasks) {
+  if(isset($local_tasks['entity.paragraphs_library_item.collection'])){
+    unset($local_tasks['entity.paragraphs_library_item.collection']);
+  }
+}
+
+/**
  * Implements hook_form_FORM_ID_alter() for the search_block_form form.
  *
  * Since the exposed form is a GET form, we don't want it to send the form
