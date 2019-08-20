@@ -23,11 +23,11 @@ $buttonPadding: 1.15rem 1.5rem 1rem;
 	margin-bottom: $spaceMd;
 	margin-left: 0;
 	margin-right: 0;
+	@include transColor(.3s);
 	&:hover,&:focus {
 		color: $buttonTextHover;
 		background-color: $buttonBackHover;
 		box-shadow: none;
-		@include transColor(.3s);
 		outline: none;
 		padding: $buttonPadding;
 	}
@@ -71,12 +71,9 @@ $buttonPadding: 1.15rem 1.5rem 1rem;
 }
 
 @mixin altButton{
-	@include button;
+	@include submitButton;
 	background: $altBack;
 	color: $altText;
-	height: auto;
-	min-width: 115px;
-	margin-top: 0;
 	&:hover,&:focus{
 		background: $altBackHover;
 		border-color: $altBackHover;
@@ -85,13 +82,10 @@ $buttonPadding: 1.15rem 1.5rem 1rem;
 }
 
 @mixin resetButton{
-	@include button;
+	@include submitButton;
 	background: $resetBack;
 	color: $resetText;
 	border-color: $resetBack;
-	height: auto;
-	min-width: 115px;
-	margin-top: 0;
 	&:hover,&:focus{
 		background: $resetBackHover;
 		border-color: $resetBackHover;
@@ -100,13 +94,10 @@ $buttonPadding: 1.15rem 1.5rem 1rem;
 }
 
 @mixin cautionButton{
-	@include button;
+	@include submitButton;
 	background: $cautionBack;
 	color: $cautionText;
 	border-color: $cautionBack;
-	height: auto;
-	min-width: 115px;
-	margin-top: 0;
 	&:hover,&:focus{
 		background: $cautionBackHover;
 		border-color: $cautionBackHover;
@@ -114,6 +105,9 @@ $buttonPadding: 1.15rem 1.5rem 1rem;
 	}
 }
 
+.button{
+	@include button;
+}
 .button--danger,#edit-reset{
 	@include resetButton;
 	margin-left: 0;
@@ -133,10 +127,13 @@ $buttonPadding: 1.15rem 1.5rem 1rem;
 	}
 }//end reset danger buttons
 #edit-preview{
-	@include submitButton;
-	background: $green;
+	@include altButton;
+	background: $altBack !important;
+	color: $altText !important;
 	&:hover,&:focus{
-		background: $buttonBackHover;
+		background: $altBackHover !important;
+		border-color: $altBackHover !important;
+		color: $altTextHover !important;
 	}
 	&:active{
 		background: $buttonBackActive;
@@ -170,5 +167,11 @@ $buttonPadding: 1.15rem 1.5rem 1rem;
 .button-action{
 	&:before{
 		font-size: $baseSize;
+	}
+}
+
+#edit-clear-cache{
+	.button{
+		@include altButton;
 	}
 }

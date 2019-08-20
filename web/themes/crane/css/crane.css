@@ -4265,6 +4265,39 @@ body.crane {
 /* ========================
   BUTTONS
 ========================== */
+.button {
+  background-image: none;
+  background-color: #3778c1;
+  border: none;
+  border-radius: 0;
+  color: #ffffff;
+  line-height: 1.15;
+  padding: 1.15rem 1.5rem 1rem;
+  display: inline-block;
+  vertical-align: middle;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+  margin-left: 0;
+  margin-right: 0;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  -moz-transition: color 0.3s ease, background-color 0.3s ease;
+  -webkit-transition: color 0.3s ease, background-color 0.3s ease;
+  -webkit-transform: translateZ(0); }
+  .button:hover, .button:focus {
+    color: #121212;
+    background-color: #cccccc;
+    box-shadow: none;
+    outline: none;
+    padding: 1.15rem 1.5rem 1rem; }
+  .button:active {
+    color: #121212;
+    background-color: #b3b3b3; }
+
 .button--danger, #edit-reset {
   background-image: none;
   background-color: #3778c1;
@@ -4284,12 +4317,18 @@ body.crane {
   margin-bottom: 3rem;
   margin-left: 0;
   margin-right: 0;
-  background: #bf0e0e;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  -moz-transition: color 0.3s ease, background-color 0.3s ease;
+  -webkit-transition: color 0.3s ease, background-color 0.3s ease;
+  -webkit-transform: translateZ(0);
+  background: #3778c1;
   color: #ffffff;
-  border-color: #bf0e0e;
   height: auto;
   min-width: 115px;
   margin-top: 0;
+  background: #bf0e0e;
+  color: #ffffff;
+  border-color: #bf0e0e;
   margin-left: 0;
   margin-right: 0;
   width: 100%; }
@@ -4297,15 +4336,15 @@ body.crane {
     color: #121212;
     background-color: #cccccc;
     box-shadow: none;
-    transition: color 0.3s ease, background-color 0.3s ease;
-    -moz-transition: color 0.3s ease, background-color 0.3s ease;
-    -webkit-transition: color 0.3s ease, background-color 0.3s ease;
-    -webkit-transform: translateZ(0);
     outline: none;
     padding: 1.15rem 1.5rem 1rem; }
   .button--danger:active, #edit-reset:active {
     color: #121212;
     background-color: #b3b3b3; }
+  .button--danger:hover, .button--danger:focus, #edit-reset:hover, #edit-reset:focus {
+    background: #cccccc;
+    border-color: #cccccc;
+    color: #121212; }
   .button--danger:hover, .button--danger:focus, #edit-reset:hover, #edit-reset:focus {
     background: #cccccc;
     border-color: #cccccc;
@@ -4333,12 +4372,18 @@ body.crane {
   margin-bottom: 3rem;
   margin-left: 0;
   margin-right: 0;
-  background: #797501;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  -moz-transition: color 0.3s ease, background-color 0.3s ease;
+  -webkit-transition: color 0.3s ease, background-color 0.3s ease;
+  -webkit-transform: translateZ(0);
+  background: #3778c1;
   color: #ffffff;
-  border-color: #797501;
   height: auto;
   min-width: 115px;
   margin-top: 0;
+  background: #797501;
+  color: #ffffff;
+  border-color: #797501;
   margin-left: 0;
   margin-right: 0;
   width: 100%; }
@@ -4346,15 +4391,15 @@ body.crane {
     color: #121212;
     background-color: #cccccc;
     box-shadow: none;
-    transition: color 0.3s ease, background-color 0.3s ease;
-    -moz-transition: color 0.3s ease, background-color 0.3s ease;
-    -webkit-transition: color 0.3s ease, background-color 0.3s ease;
-    -webkit-transform: translateZ(0);
     outline: none;
     padding: 1.15rem 1.5rem 1rem; }
   .button[data-drupal-selector="edit-cancel"]:active, .button[data-drupal-selector="edit-actions-cancel"]:active {
     color: #121212;
     background-color: #b3b3b3; }
+  .button[data-drupal-selector="edit-cancel"]:hover, .button[data-drupal-selector="edit-cancel"]:focus, .button[data-drupal-selector="edit-actions-cancel"]:hover, .button[data-drupal-selector="edit-actions-cancel"]:focus {
+    background: #cccccc;
+    border-color: #cccccc;
+    color: #121212; }
   .button[data-drupal-selector="edit-cancel"]:hover, .button[data-drupal-selector="edit-cancel"]:focus, .button[data-drupal-selector="edit-actions-cancel"]:hover, .button[data-drupal-selector="edit-actions-cancel"]:focus {
     background: #cccccc;
     border-color: #cccccc;
@@ -4382,20 +4427,23 @@ body.crane {
   margin-bottom: 3rem;
   margin-left: 0;
   margin-right: 0;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  -moz-transition: color 0.3s ease, background-color 0.3s ease;
+  -webkit-transition: color 0.3s ease, background-color 0.3s ease;
+  -webkit-transform: translateZ(0);
   background: #3778c1;
   color: #ffffff;
   height: auto;
   min-width: 115px;
   margin-top: 0;
-  background: #018901; }
+  background: #018901;
+  color: #ffffff;
+  background: #018901 !important;
+  color: #ffffff !important; }
   #edit-preview:hover, #edit-preview:focus {
     color: #121212;
     background-color: #cccccc;
     box-shadow: none;
-    transition: color 0.3s ease, background-color 0.3s ease;
-    -moz-transition: color 0.3s ease, background-color 0.3s ease;
-    -webkit-transition: color 0.3s ease, background-color 0.3s ease;
-    -webkit-transform: translateZ(0);
     outline: none;
     padding: 1.15rem 1.5rem 1rem; }
   #edit-preview:active {
@@ -4406,7 +4454,13 @@ body.crane {
     border-color: #cccccc;
     color: #121212; }
   #edit-preview:hover, #edit-preview:focus {
-    background: #cccccc; }
+    background: #cccccc;
+    border-color: #cccccc;
+    color: #121212; }
+  #edit-preview:hover, #edit-preview:focus {
+    background: #cccccc !important;
+    border-color: #cccccc !important;
+    color: #121212 !important; }
   #edit-preview:active {
     background: #b3b3b3; }
 
@@ -4429,16 +4483,16 @@ body.crane {
   margin-bottom: 3rem;
   margin-left: 0;
   margin-right: 0;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  -moz-transition: color 0.3s ease, background-color 0.3s ease;
+  -webkit-transition: color 0.3s ease, background-color 0.3s ease;
+  -webkit-transform: translateZ(0);
   background: #3778c1;
   color: #ffffff; }
   .button--primary:hover, .button--primary:focus {
     color: #121212;
     background-color: #cccccc;
     box-shadow: none;
-    transition: color 0.3s ease, background-color 0.3s ease;
-    -moz-transition: color 0.3s ease, background-color 0.3s ease;
-    -webkit-transition: color 0.3s ease, background-color 0.3s ease;
-    -webkit-transform: translateZ(0);
     outline: none;
     padding: 1.15rem 1.5rem 1rem; }
   .button--primary:active {
@@ -4470,6 +4524,10 @@ body.crane {
   margin-bottom: 3rem;
   margin-left: 0;
   margin-right: 0;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  -moz-transition: color 0.3s ease, background-color 0.3s ease;
+  -webkit-transition: color 0.3s ease, background-color 0.3s ease;
+  -webkit-transform: translateZ(0);
   background: transparent;
   border: 1px solid #3778c1;
   color: #3778c1;
@@ -4478,10 +4536,6 @@ body.crane {
     color: #121212;
     background-color: #cccccc;
     box-shadow: none;
-    transition: color 0.3s ease, background-color 0.3s ease;
-    -moz-transition: color 0.3s ease, background-color 0.3s ease;
-    -webkit-transition: color 0.3s ease, background-color 0.3s ease;
-    -webkit-transform: translateZ(0);
     outline: none;
     padding: 1.15rem 1.5rem 1rem; }
   .button-outline:active {
@@ -4502,6 +4556,54 @@ body.crane {
 
 .button-action:before {
   font-size: 1.5rem; }
+
+#edit-clear-cache .button {
+  background-image: none;
+  background-color: #3778c1;
+  border: none;
+  border-radius: 0;
+  color: #ffffff;
+  line-height: 1.15;
+  padding: 1.15rem 1.5rem 1rem;
+  display: inline-block;
+  vertical-align: middle;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+  margin-left: 0;
+  margin-right: 0;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  -moz-transition: color 0.3s ease, background-color 0.3s ease;
+  -webkit-transition: color 0.3s ease, background-color 0.3s ease;
+  -webkit-transform: translateZ(0);
+  background: #3778c1;
+  color: #ffffff;
+  height: auto;
+  min-width: 115px;
+  margin-top: 0;
+  background: #018901;
+  color: #ffffff; }
+  #edit-clear-cache .button:hover, #edit-clear-cache .button:focus {
+    color: #121212;
+    background-color: #cccccc;
+    box-shadow: none;
+    outline: none;
+    padding: 1.15rem 1.5rem 1rem; }
+  #edit-clear-cache .button:active {
+    color: #121212;
+    background-color: #b3b3b3; }
+  #edit-clear-cache .button:hover, #edit-clear-cache .button:focus {
+    background: #cccccc;
+    border-color: #cccccc;
+    color: #121212; }
+  #edit-clear-cache .button:hover, #edit-clear-cache .button:focus {
+    background: #cccccc;
+    border-color: #cccccc;
+    color: #121212; }
 
 /* ========================
   FIELD
