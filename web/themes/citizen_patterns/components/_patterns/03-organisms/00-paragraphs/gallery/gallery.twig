@@ -16,7 +16,7 @@
   <div class="gallery-type {{gallery_type}}" >
     <div class="gallery-wrapper">
 
-      {% if 'Lightbox' in gallery_type %}
+      {% if 'lightbox' in gallery_type %}
         {% block lightboxContent %}
           {% for image in images %}
             <div class="featherlight-gal image-gal" href="#item{{image.id}}">

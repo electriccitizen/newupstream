@@ -40,10 +40,9 @@
 {% extends "paragraph.html.twig" %}
 
 {% block widgetContent %}
-  {{ attach_library('citizen_patterns/galleries') }}
   {% embed "@organisms/00-paragraphs/gallery/gallery.twig"
     with{
-      gallery_type: content.field_gallery_type.0['#markup'],
+      gallery_type: content.field_gallery_type.0['#markup']|clean_class,
 		  widget_title: content.field_widget_title.0['#context'].value
     }
   %}
@@ -71,4 +70,5 @@
     {% block plwidgetclose %}{# remove pl only structure #}{% endblock %}
 
   {% endembed %}
+  {{ attach_library('citizen_patterns/galleries') }}
 {% endblock %}

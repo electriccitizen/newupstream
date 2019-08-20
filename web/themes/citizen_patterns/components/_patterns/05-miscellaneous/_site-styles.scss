@@ -219,9 +219,157 @@ body {
 }//end modal-element
 
 
-/* =============
-	MESSAGING
-================ */
+/* FEATHERLIGHT
+------------------- */
+.featherlight{
+	background: $modalBack;
+	.featherlight-content {
+		background: $siteBack;
+		padding: 0px !important;
+		border-bottom: 0px !important;
+		margin-left: 5%;
+		margin-right: 5%;
+		//controls
+		.featherlight-close-icon {
+			background: none;
+			font-size: 24px;
+			color: $modalGalButton;
+			text-shadow: 2px 2px 3px $modalGalButtonShadow;
+			height: 32px;
+			width: 32px;
+			font-family: $bodyFont;
+			&:hover,&:focus{
+				color: $modalGalButtonHover;
+				background: $modalGalButtonBackHover;
+				text-shadow: 2px 2px 3px $modalGalButtonShadowHover;
+			}
+		}
+		.featherlight-previous {
+			left: 0;
+			top: 0;
+			right: auto;
+			width: 15%;
+			min-width: 60px;
+			span {
+				display: block;
+				width: 12px;
+				height: 24px;
+				left: 10px;
+				font-size: 0;
+				@include triangle(left,24px,12px,$white);
+				@include tab{
+					width: 20px;
+					height: 40px;
+					@include triangle(left,40px,20px,$white);
+				}
+			}
+			&:hover,&:focus {
+				//background: $modalGalButtonBackHover;
+				span {
+					border-right-color: $link;
+					@include transition(border-right-color, 0.3s, ease);
+				}
+			}
+		}
+		//end previous
+		.featherlight-next {
+			right: 0;
+			top: 0;
+			left: auto;
+			width: 15%;
+			min-width: 60px;
+			span {
+				display: block;
+				width: 12px;
+				height: 24px;
+				right: 10px;
+				font-size: 0;
+				@include triangle(right,24px,12px,$white);
+				@include tab{
+					width: 20px;
+					height: 40px;
+					@include triangle(right,40px,20px,$white);
+				}
+			}
+			&:hover,&:focus {
+				//background: $modalGalButtonBackHover;
+				span {
+					border-left-color: $link;
+					@include transition(border-left-color, 0.3s, ease);
+				}
+			}
+		}
+		//end next
+		img {
+			display: block;
+		}
+		figcaption,.field-caption {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			z-index: 30;
+			background: rgba(35,35,35,0.6);
+			color: $white;
+			padding: 1rem 2rem;
+		}
+		.gallery-text {
+			max-width: $textMax;
+			padding: 4rem 6rem;
+		}
+	}//end featherlight content
+}//end featherlight
+
+/* SLIDER STYLING
+-------------- */
+.slick-slider {
+	.slick-list {
+		@include listReset;
+	}
+	.slick-arrow {
+		z-index: 1;
+		height: 40px;
+		&:before {
+			content: '' !important;
+			display: block;
+		}
+		&.slick-prev {
+			left: 20px;
+			&:before{
+				@include triangle(left,24px,12px,$white);
+				@include tab {
+					@include triangle(left,40px,20px,$white);
+				}
+			}
+			&:hover,&:focus{
+				&:before{
+					border-right-color: $link;
+					@include transition(border-right-color, 0.3s, ease);
+				}
+			}
+		}
+		&.slick-next {
+			right: 20px;
+			&:before{
+				@include triangle(right,24px,12px,$white);
+				float: right;
+				@include tab {
+					@include triangle(right,40px,20px,$white);
+				}
+			}
+			&:hover,&:focus{
+				&:before{
+					border-left-color: $link;
+					@include transition(border-left-color, 0.3s, ease);
+				}
+			}
+		}
+	}
+}//end slick-slider
+
+
+/* MESSAGING
+----------------- */
 .drupal-message {
 	margin: 2rem auto;
 	padding: 10px 10px 10px 50px; /* LTR */

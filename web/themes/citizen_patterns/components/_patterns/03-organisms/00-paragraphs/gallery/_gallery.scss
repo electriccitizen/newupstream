@@ -1,209 +1,60 @@
 /* ===============
-   LIGHTBOX GALLERY WIDGET
+   GALLERY WIDGET
 ==================== */
-.gallery-type.Lightbox {
-	.gallery-wrapper{
-		@include safeFlex(row,wrap,start,start);
-		@include bleed(20px);
-		margin-bottom: -20px;
-		//hide the content before lightbox
-		.featherlight-hidden {
-			display: none;
+.paragraph--type--gallery{
+	.lightbox{
+		.gallery-wrapper{
+			@include safeFlex(row,wrap,start,start);
+			@include bleed(20px);
+			margin-bottom: -20px;
+			//hide the content before lightbox
+			.featherlight-hidden {
+				display: none;
+			}
+			//Image lighbox
+			.image-gal {
+				padding-left: 10px;
+				padding-right: 10px;
+				margin-bottom: 20px;
+				overflow: hidden;
+				cursor: pointer;
+				width: 100%;
+				@include smallTab{
+					width: 50%;
+				}
+				@include tab{
+					width: 33.33%;
+				}
+				@include desk{
+					width: 25%;
+				}
+				img {
+					width: 100%;
+					@include imageHover;
+				}
+
+			}//end image lightbox
+		}//end gallery-wrapper
+	}//end lightbox
+	.slider {
+		.gallery-wrapper {
+			max-width: $contentStop !important;
 		}
-		//Image lighbox
-		.image-gal {
-			padding-left: 10px;
-			padding-right: 10px;
-			margin-bottom: 20px;
-			overflow: hidden;
-			cursor: pointer;
-			width: 100%;
-			@include smallTab{
-				width: 50%;
-			}
-			@include tab{
-				width: 33.33%;
-			}
-			@include desk{
-				width: 25%;
+		//slider container overrides layout padding on mobile
+		.field-image-multi {
+			@include edgeToEdge;
+			@include calc(width, "100% + 40px");
+			@include contentStop {
+				@include edgeReset;
+				width: 100%;
 			}
 			img {
 				width: 100%;
-				@include imageHover;
-				border: 0px;
 			}
+		}
+	}//end slider
+}//end gallery paragraph
 
-		}//end image lightbox
-	}//end gallery-wrapper
-}//end lightbox
 
-//FEATHERLIGHT OVERLAY THEMING
-.featherlight{
-	background: $modalBack;
-	.featherlight-content {
-		background: $siteBack;
-		padding: 0px !important;
-		border-bottom: 0px !important;
-		margin-left: 5%;
-		margin-right: 5%;
-		//controls
-		.featherlight-close-icon {
-			background: none;
-			font-size: 24px;
-			color: $modalGalButton;
-			text-shadow: 2px 2px 3px $modalGalButtonShadow;
-			height: 32px;
-			width: 32px;
-			font-family: $bodyFont;
-			&:hover,&:focus{
-				color: $modalGalButtonHover;
-				background: $modalGalButtonBackHover;
-				text-shadow: 2px 2px 3px $modalGalButtonShadowHover;
-			}
-		}
-		.featherlight-previous {
-			left: 0;
-			top: 0;
-			right: auto;
-			width: 15%;
-			min-width: 60px;
-			span {
-				display: block;
-				font-size: 4rem;
-				color: $modalGalButton;
-				width: 60px;
-				height: 80px;
-				left: 0;
-				text-shadow: 2px 2px 2px $modalGalButtonShadow;
-			}
-			&:hover,&:focus {
-				background: $modalGalButtonBackHover;
-				span {
-					text-shadow: 2px 2px 3px $modalGalButtonShadowHover;
-					color: $modalGalButtonHover;
-				}
-			}
-		}
-		//end previous
-		.featherlight-next {
-			right: 0;
-			top: 0;
-			left: auto;
-			width: 15%;
-			min-width: 60px;
-			span {
-				display: block;
-				font-size: 4rem;
-				color: $modalGalButton;
-				width: 60px;
-				height: 80px;
-				left: auto;
-				right: 0;
-				ext-shadow: 2px 2px 2px $modalGalButtonShadow;
-			}
-			&:hover,&:focus {
-				background: $modalGalButtonBackHover;
-				span {
-					text-shadow: 2px 2px 3px $modalGalButtonShadowHover;
-					color: $modalGalButtonHover;
-				}
-			}
-		}
-		//end next
-		img {
-			display: block;
-		}
-		figcaption,.field-caption {
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			width: 100%;
-			z-index: 30;
-			background: rgba(35,35,35,0.6);
-			color: $white;
-			padding: 1rem 2rem;
-		}
-		.gallery-text {
-			max-width: $textMax;
-			padding: 4rem 6rem;
-		}
-	}//end featherlight content
-}//end featherlight
 
-/* ================
-   Slideshow
-=================== */
-@mixin sliderTriangle {
-	.slick-arrow {
-		height: 40px;
-		&:before {
-			content: '' !important;
-			display: block;
-		}
-		&.slick-prev:before {
-			@include triangle(left,24px,12px,$white);
-			@include tab {
-				@include triangle(left,40px,20px,$white);
-			}
-		}
-		&.slick-next:before {
-			@include triangle(right,24px,12px,$white);
-			float: right;
-			@include tab {
-				@include triangle(right,40px,20px,$white);
-			}
-		}
-		&.slick-next:focus,
-		&.slick-next:hover {
-			&:before {
-				border-left-color: $link;
-				@include transition(border-left-color, 0.3s, ease);
-			}
-		}
-		&.slick-prev:focus,
-		&.slick-prev:hover {
-			&:before {
-				border-right-color: $link;
-				@include transition(border-right-color, 0.3s, ease);
-			}
-		}
-	}//end a
-}//end triangle
-
-/* SLIDER STYLING
--------------- */
-.slick-slider {
-	@include sliderTriangle;
-	.slick-list {
-		@include listReset;
-	}
-	.slick-arrow {
-		z-index: 1;
-		&.slick-prev {
-			left: 20px;
-		}
-		&.slick-next {
-			right: 20px;
-		}
-	}
-
-}//end slick-slider
-
-.gallery-type.Slider {
-	.gallery-wrapper {
-		max-width: $contentStop !important;
-	}
-	//slider container overrides layout padding on mobile
-	.field-image-multi {
-		@include edgeToEdge;
-		@include calc(width, "100% + 40px");
-		@include contentStop {
-			@include edgeReset;
-			width: 100%;
-		}
-		img {
-			width: 100%;
-		}
-	}
-}//end slideshow widget
 

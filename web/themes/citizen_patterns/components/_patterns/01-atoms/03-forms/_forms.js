@@ -19,4 +19,24 @@ Drupal.behaviors.userLogin = {
 	}
 };
 
+/* SELECT 2
+------------------------------------ */
+Drupal.behaviors.select2 = {
+  attach: function (context, settings) {
+    $("select", context).once('selects').each(function(){
+      $( 'form:not(.layout-builder-add-block):not(.layout-builder-update-block) select' ).select2({
+        placeholder: "Select an option"
+      });
+      $(".js-form-type-select", context).once('selectAccessiblity').each(function(){
+        $(document).ready(function(){
+          $('.select2-search__field').each(function(){
+            var label = $(this).closest('.select2-container').siblings('label').text();
+            $(this).attr('aria-label',label).removeAttr('role');
+          });
+        });
+      });
+    });
+   }
+};
+
 })(jQuery, Drupal);

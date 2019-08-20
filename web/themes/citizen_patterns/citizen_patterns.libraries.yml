@@ -2,7 +2,7 @@ global-styling:
   version: 1.0
   css:
     theme:
-      dist/style.css: { minified: true }
+      dist/style.css: {}
   js:
     dist/00-base/global.min.js.gz: { minified: true }
   dependencies:
@@ -15,14 +15,14 @@ accordion:
   js:
     dist/03-organisms/00-paragraphs/accordion/accordion.min.js.gz: { minified: true }
 featherlight:
-  version: 3.0
+  version: 1.7.13
   css:
     theme:
-      https://cdn.rawgit.com/noelboss/featherlight/1.7.12/release/featherlight.min.css: { type: external, minified: true, preprocess: false }
-      https://cdn.rawgit.com/noelboss/featherlight/1.7.12/release/featherlight.gallery.min.css: { type: external, minified: true, preprocess: false }
+      components/js/featherlight/featherlight.css: {}
+      components/js/featherlight/featherlight.gallery.css: {}
   js:
-    https://cdn.rawgit.com/noelboss/featherlight/1.7.12/release/featherlight.min.js: { type: external, minified: true, preprocess: false }
-    https://cdn.rawgit.com/noelboss/featherlight/1.7.12/release/featherlight.gallery.min.js: { type: external, minified: true, preprocess: false }
+    components/js/featherlight/featherlight.min.js: { minified: true }
+    components/js/featherlight/featherlight.gallery.min.js: { minified: true }
 forms:
   version: 1.0
   js:
@@ -52,21 +52,21 @@ search-page:
   js:
     dist/04-elements/_search.min.js.gz: { minified: true }
 select:
-  version: 3.0
+  version: 4.0.3
   css:
     theme:
-      /modules/custom/citizen_custom/js/select2/select2.min.css: { minified: true }
+      components/js/select2/select2.min.css: { minified: true }
   js:
-    /modules/custom/citizen_custom/js/select2/select2.min.js: { minified: true }
-    /modules/custom/citizen_custom/js/select.js: {}
+    components/js/select2/select2.min.js: { minified: true }
+    dist/01-atoms/03-forms/_forms.min.js.gz: { minified: true }
 slick:
-  version: 3.0
+  version: 1.8.1
   css:
     theme:
-      https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css: { type: external, preprocess: false }
-      https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css: { type: external, preprocess: false }
+      components/js/slick/slick.css: {}
+      components/js/slick/slick-theme.css: {}
   js:
-    https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js: { type: external, minified: true, preprocess: false, attributes: { async: true } }
+    components/js/slick/slick.min.js: { minified: true }
 table:
   version: 1.0
   js:
