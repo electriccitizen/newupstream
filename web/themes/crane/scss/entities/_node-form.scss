@@ -7,4 +7,11 @@
 	@include tab{
 		padding-right: 32px;
 	}
+	.layout-region-node-footer__content{
+		.form-actions{
+			.button{
+				min-width: 140px;
+			}
+		}
+	}
 }//end node edit form

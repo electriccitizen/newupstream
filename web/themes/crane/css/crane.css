@@ -4265,31 +4265,243 @@ body.crane {
 /* ========================
   BUTTONS
 ========================== */
+.button--danger, #edit-reset {
+  background-image: none;
+  background-color: #3778c1;
+  border: none;
+  border-radius: 0;
+  color: #ffffff;
+  line-height: 1.15;
+  padding: 1.15rem 1.5rem 1rem;
+  display: inline-block;
+  vertical-align: middle;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+  margin-left: 0;
+  margin-right: 0;
+  background: #bf0e0e;
+  color: #ffffff;
+  border-color: #bf0e0e;
+  height: auto;
+  min-width: 115px;
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%; }
+  .button--danger:hover, .button--danger:focus, #edit-reset:hover, #edit-reset:focus {
+    color: #121212;
+    background-color: #cccccc;
+    box-shadow: none;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    -moz-transition: color 0.3s ease, background-color 0.3s ease;
+    -webkit-transition: color 0.3s ease, background-color 0.3s ease;
+    -webkit-transform: translateZ(0);
+    outline: none;
+    padding: 1.15rem 1.5rem 1rem; }
+  .button--danger:active, #edit-reset:active {
+    color: #121212;
+    background-color: #b3b3b3; }
+  .button--danger:hover, .button--danger:focus, #edit-reset:hover, #edit-reset:focus {
+    background: #cccccc;
+    border-color: #cccccc;
+    color: #121212; }
+  @media (min-width: 600px) {
+    .button--danger, #edit-reset {
+      width: auto; } }
+
+.button[data-drupal-selector="edit-cancel"], .button[data-drupal-selector="edit-actions-cancel"] {
+  background-image: none;
+  background-color: #3778c1;
+  border: none;
+  border-radius: 0;
+  color: #ffffff;
+  line-height: 1.15;
+  padding: 1.15rem 1.5rem 1rem;
+  display: inline-block;
+  vertical-align: middle;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+  margin-left: 0;
+  margin-right: 0;
+  background: #797501;
+  color: #ffffff;
+  border-color: #797501;
+  height: auto;
+  min-width: 115px;
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%; }
+  .button[data-drupal-selector="edit-cancel"]:hover, .button[data-drupal-selector="edit-cancel"]:focus, .button[data-drupal-selector="edit-actions-cancel"]:hover, .button[data-drupal-selector="edit-actions-cancel"]:focus {
+    color: #121212;
+    background-color: #cccccc;
+    box-shadow: none;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    -moz-transition: color 0.3s ease, background-color 0.3s ease;
+    -webkit-transition: color 0.3s ease, background-color 0.3s ease;
+    -webkit-transform: translateZ(0);
+    outline: none;
+    padding: 1.15rem 1.5rem 1rem; }
+  .button[data-drupal-selector="edit-cancel"]:active, .button[data-drupal-selector="edit-actions-cancel"]:active {
+    color: #121212;
+    background-color: #b3b3b3; }
+  .button[data-drupal-selector="edit-cancel"]:hover, .button[data-drupal-selector="edit-cancel"]:focus, .button[data-drupal-selector="edit-actions-cancel"]:hover, .button[data-drupal-selector="edit-actions-cancel"]:focus {
+    background: #cccccc;
+    border-color: #cccccc;
+    color: #121212; }
+  @media (min-width: 600px) {
+    .button[data-drupal-selector="edit-cancel"], .button[data-drupal-selector="edit-actions-cancel"] {
+      width: auto; } }
+
+#edit-preview {
+  background-image: none;
+  background-color: #3778c1;
+  border: none;
+  border-radius: 0;
+  color: #ffffff;
+  line-height: 1.15;
+  padding: 1.15rem 1.5rem 1rem;
+  display: inline-block;
+  vertical-align: middle;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+  margin-left: 0;
+  margin-right: 0;
+  background: #3778c1;
+  color: #ffffff;
+  height: auto;
+  min-width: 115px;
+  margin-top: 0;
+  background: #018901; }
+  #edit-preview:hover, #edit-preview:focus {
+    color: #121212;
+    background-color: #cccccc;
+    box-shadow: none;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    -moz-transition: color 0.3s ease, background-color 0.3s ease;
+    -webkit-transition: color 0.3s ease, background-color 0.3s ease;
+    -webkit-transform: translateZ(0);
+    outline: none;
+    padding: 1.15rem 1.5rem 1rem; }
+  #edit-preview:active {
+    color: #121212;
+    background-color: #b3b3b3; }
+  #edit-preview:hover, #edit-preview:focus {
+    background: #cccccc;
+    border-color: #cccccc;
+    color: #121212; }
+  #edit-preview:hover, #edit-preview:focus {
+    background: #cccccc; }
+  #edit-preview:active {
+    background: #b3b3b3; }
+
+.button--primary {
+  background-image: none;
+  background-color: #3778c1;
+  border: none;
+  border-radius: 0;
+  color: #ffffff;
+  line-height: 1.15;
+  padding: 1.15rem 1.5rem 1rem;
+  display: inline-block;
+  vertical-align: middle;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+  margin-left: 0;
+  margin-right: 0;
+  background: #3778c1;
+  color: #ffffff; }
+  .button--primary:hover, .button--primary:focus {
+    color: #121212;
+    background-color: #cccccc;
+    box-shadow: none;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    -moz-transition: color 0.3s ease, background-color 0.3s ease;
+    -webkit-transition: color 0.3s ease, background-color 0.3s ease;
+    -webkit-transform: translateZ(0);
+    outline: none;
+    padding: 1.15rem 1.5rem 1rem; }
+  .button--primary:active {
+    color: #121212;
+    background-color: #b3b3b3; }
+  .button--primary:hover, .button--primary:focus {
+    background: #cccccc;
+    color: #121212; }
+  .button--primary:active {
+    background: #b3b3b3;
+    color: #121212; }
+
+.button-outline {
+  background-image: none;
+  background-color: #3778c1;
+  border: none;
+  border-radius: 0;
+  color: #ffffff;
+  line-height: 1.15;
+  padding: 1.15rem 1.5rem 1rem;
+  display: inline-block;
+  vertical-align: middle;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+  margin-left: 0;
+  margin-right: 0;
+  background: transparent;
+  border: 1px solid #3778c1;
+  color: #3778c1;
+  border-radius: 3px; }
+  .button-outline:hover, .button-outline:focus {
+    color: #121212;
+    background-color: #cccccc;
+    box-shadow: none;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    -moz-transition: color 0.3s ease, background-color 0.3s ease;
+    -webkit-transition: color 0.3s ease, background-color 0.3s ease;
+    -webkit-transform: translateZ(0);
+    outline: none;
+    padding: 1.15rem 1.5rem 1rem; }
+  .button-outline:active {
+    color: #121212;
+    background-color: #b3b3b3; }
+  .button-outline:hover, .button-outline:focus {
+    background: #cccccc;
+    color: #121212;
+    border-color: #cccccc; }
+  .button-outline:active {
+    background: #b3b3b3;
+    color: #121212;
+    border-color: #b3b3b3; }
+
 .button, .no-touchevents .button--small {
-  font-size: 1.5rem; }
+  font-size: 1.5rem;
+  padding: 1.15rem 1.5rem 1rem; }
 
 .button-action:before {
   font-size: 1.5rem; }
-
-input[type="submit"].button {
-  padding: 7px 1.5em;
-  border-radius: 0;
-  border-color: #767676;
-  margin-bottom: 1rem; }
-
-body .button--primary {
-  border-radius: 0;
-  padding: 9px 1em; }
-
-body .button--primary.button--small {
-  padding: 6px 1em; }
-
-#edit-clear-cache input[type="submit"].button {
-  background: #018901;
-  color: #fff; }
-
-#edit-clear-cache input[type="submit"].button:hover, #edit-clear-cache input[type="submit"].button:focus {
-  background: #676767; }
 
 /* ========================
   FIELD
@@ -4941,6 +5153,9 @@ header.content-header {
 @media (min-width: 760px) {
   .node-form {
     padding-right: 32px; } }
+
+.node-form .layout-region-node-footer__content .form-actions .button {
+  min-width: 140px; }
 
 /* ========================
   PARAGRAPHS

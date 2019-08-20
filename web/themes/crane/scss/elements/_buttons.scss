@@ -1,35 +1,174 @@
 /* ========================
   BUTTONS
 ========================== */
+$buttonPadding: 1.15rem 1.5rem 1rem;
+
+///mixin - button
+@mixin button{
+	background-image: none;
+	background-color: $buttonBack;
+	border: none;
+	border-radius: 0;
+	color: $buttonText;
+	line-height: 1.15;
+	padding: $buttonPadding;
+	display: inline-block;
+	vertical-align: middle;
+	text-decoration: none;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: .04em;
+	font-weight: $heavy;
+	font-size: $button;
+	margin-bottom: $spaceMd;
+	margin-left: 0;
+	margin-right: 0;
+	&:hover,&:focus {
+		color: $buttonTextHover;
+		background-color: $buttonBackHover;
+		box-shadow: none;
+		@include transColor(.3s);
+		outline: none;
+		padding: $buttonPadding;
+	}
+	&:active{
+		color: $buttonTextActive;
+		background-color: $buttonBackActive;
+	}
+}//end button mixin
+
+///mixin - outlineButton
+@mixin outlineButton($outlineColor){
+	@include button;
+	background: transparent;
+	border: 1px solid $outlineColor;
+	color: $outlineColor;
+	border-radius: 3px;
+	&:hover,&:focus{
+		background: $buttonBackHover;
+		color: $buttonTextHover;
+		border-color: $buttonBackHover;
+	}
+	&:active{
+		background: $buttonBackActive;
+		color: $buttonTextActive;
+		border-color: $buttonBackActive;
+	}
+}
+
+@mixin submitButton{
+	@include button;
+	background: $submitBack;
+	color: $submitText;
+	height: auto;
+	min-width: 115px;
+	margin-top: 0;
+	&:hover,&:focus{
+		background: $submitBackHover;
+		border-color: $submitBackHover;
+		color: $submitTextHover;
+	}
+}
+
+@mixin altButton{
+	@include button;
+	background: $altBack;
+	color: $altText;
+	height: auto;
+	min-width: 115px;
+	margin-top: 0;
+	&:hover,&:focus{
+		background: $altBackHover;
+		border-color: $altBackHover;
+		color: $altTextHover;
+	}
+}
+
+@mixin resetButton{
+	@include button;
+	background: $resetBack;
+	color: $resetText;
+	border-color: $resetBack;
+	height: auto;
+	min-width: 115px;
+	margin-top: 0;
+	&:hover,&:focus{
+		background: $resetBackHover;
+		border-color: $resetBackHover;
+		color: $resetTextHover;
+	}
+}
+
+@mixin cautionButton{
+	@include button;
+	background: $cautionBack;
+	color: $cautionText;
+	border-color: $cautionBack;
+	height: auto;
+	min-width: 115px;
+	margin-top: 0;
+	&:hover,&:focus{
+		background: $cautionBackHover;
+		border-color: $cautionBackHover;
+		color: $cautionTextHover;
+	}
+}
+
+.button--danger,#edit-reset{
+	@include resetButton;
+	margin-left: 0;
+	margin-right: 0;
+	width: 100%;
+	@include smallTab{
+		width: auto;
+	}
+}//end reset danger buttons
+.button[data-drupal-selector="edit-cancel"],.button[data-drupal-selector="edit-actions-cancel"]{
+	@include cautionButton;
+	margin-left: 0;
+	margin-right: 0;
+	width: 100%;
+	@include smallTab{
+		width: auto;
+	}
+}//end reset danger buttons
+#edit-preview{
+	@include submitButton;
+	background: $green;
+	&:hover,&:focus{
+		background: $buttonBackHover;
+	}
+	&:active{
+		background: $buttonBackActive;
+	}
+}//end preview
+.button--primary {
+	@include button;
+	background: $primaryButtonBack;
+	color: $primaryButtonText;
+	&:hover,&:focus{
+		background: $primaryBackHover;
+		color: $primaryTextHover;
+	}
+	&:active{
+		background: $primaryBackActive;
+		color: $primaryTextActive;
+	}
+	&.button--small{
+		@extend .button--small;
+	}
+}//end button primary
+.button-outline{
+	@include outlineButton($link);
+}
 
 .button,.no-touchevents .button--small{
 	font-size: $baseSize;
+	padding: $buttonPadding;
 }
 
 .button-action{
 	&:before{
 		font-size: $baseSize;
 	}
-}
-
-input[type="submit"].button{
-	padding: 7px 1.5em;
-	border-radius: 0;
-	border-color: $contrastGrey;
-	margin-bottom: $spaceXs;
-}
-body .button--primary{
-	border-radius: 0;
-	padding: 9px 1em;
-}
-body .button--primary.button--small{
-	padding: 6px 1em;
-}
-
-#edit-clear-cache input[type="submit"].button{
-	background: $green;
-	color: #fff;
-}
-#edit-clear-cache input[type="submit"].button:hover,#edit-clear-cache input[type="submit"].button:focus{
-	background: $midGrey;
 }

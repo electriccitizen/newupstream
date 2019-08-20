@@ -15,6 +15,7 @@ function ec_preview_form_alter(&$form, FormStateInterface $form_state, $form_id)
       '#attributes' => [
         'class' => [
           'fixed-preview',
+          'button',
           'button--primary'
         ],
       ],
