@@ -1,6 +1,14 @@
 /* ==============
-	 MEDIA BROWSER
+	 MEDIA
 ================== */
+
+/* MEDIA BROWSER
+------------------- */
+//modal
+.entity-browser-form{
+	font-size: $baseSize;
+}	
+//entity browser view
 .eb-media{
 	padding-bottom: $spaceMd;
 	.views-row{
@@ -154,5 +162,22 @@
 	}
 }//end media view list
 
+//Icons in previews/file upload fields
+.file--application-pdf {
+  background-image: url('../images/icons/file-icons/pdf.svg');
+  background-size: 16px 19px;
+}
+.file--x-office-spreadsheet {
+  background-image: url('../images/icons/file-icons/excel.svg');
+  background-size: 16px 19px;
+}
+.file--x-office-document {
+  background-image: url('../images/icons/file-icons/word.svg');
+  background-size: 16px 19px;
+}
+.file--x-office-presentation{
+	background-image: url('../images/icons/file-icons/powerpoint.svg');
+	background-size: 16px 19px;
+}
 
 

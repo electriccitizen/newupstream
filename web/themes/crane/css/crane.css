@@ -4744,8 +4744,13 @@ header.content-header {
   MAIN
 ========================== */
 /* ==============
-	 MEDIA BROWSER
+	 MEDIA
 ================== */
+/* MEDIA BROWSER
+------------------- */
+.entity-browser-form {
+  font-size: 1.5rem; }
+
 .eb-media {
   padding-bottom: 3rem; }
   .eb-media .views-row .views-col {
@@ -4833,6 +4838,22 @@ header.content-header {
     background: #ededed; }
     .view-media.view-display-id-media_page_list .views-field-thumbnail__target-id span.doc img {
       display: none; }
+
+.file--application-pdf {
+  background-image: url("../images/icons/file-icons/pdf.svg");
+  background-size: 16px 19px; }
+
+.file--x-office-spreadsheet {
+  background-image: url("../images/icons/file-icons/excel.svg");
+  background-size: 16px 19px; }
+
+.file--x-office-document {
+  background-image: url("../images/icons/file-icons/word.svg");
+  background-size: 16px 19px; }
+
+.file--x-office-presentation {
+  background-image: url("../images/icons/file-icons/powerpoint.svg");
+  background-size: 16px 19px; }
 
 /* ==============
 	 NAVIGATION
