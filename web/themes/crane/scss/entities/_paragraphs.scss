@@ -80,6 +80,13 @@
 			  background: url('../images/icons/paragraphs/video.svg') no-repeat;
 			}
 		}//end paragraph add button input
+
+		//prevent trimming of widget type name
+		.paragraph-top{
+			.js &{
+				grid-template-columns: 250px auto 1fr auto;
+			}
+		}//end paragraph top
 	}//end paragraphs tab wrapper
 }//end field--widget-paragraphs
 
@@ -97,15 +104,6 @@
   	margin: .5em 0 .5em 1em;
   }
 }
-
-/* WIDGET LABEL */
-.js .paragraph-type-top .paragraph-type-title{
-  min-width: 300px;
-}
-.paragraph-type-title .paragraph-type-label{
-  font-weight: bold;
-}
-
 
 /* PREVIEWS
 ---------------- */
@@ -149,6 +147,9 @@
 	}
 	p,.field--type-text-long{
 		margin: 0;
+	}
+	.more{
+		margin-left: .25em;
 	}
 }//end paragraph-preview
 

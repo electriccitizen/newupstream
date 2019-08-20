@@ -2,8 +2,8 @@
 
 {% block fieldLabel %}
 	{% set textStripped = item.content['#text']|striptags %}
-	{% if textStripped|length > 140 %}
-		{% set textTrimmed = textStripped|slice(0, 140) ~ '...' %}
+	{% if textStripped|length > 60 %}
+		{% set textTrimmed = textStripped|slice(0, 60) ~ '...' %}
 	{% else %}
 		{% set textTrimmed = textStripped %}
 	{% endif %}

@@ -45,13 +45,23 @@
 		<div class="field links-files field--type-string field--label-inline field__items">
 			<div class="field__label">Links & Files</div>
 	    <div class="links-files-list">
+	    	{% set count = 0 %}
 				{%- for key, link in content.field_link_multi if key|first != "#" -%}
-					{% if loop.index0 > 0 %},{% endif %}<div class="lf-item"><a href="{{ link['#url'] }}">{{ link['#title'] }}</a></div>
+						{% set count = count + 1 %}
+						{% if count < 3 %}
+							{% if loop.index0 > 0 %},{% endif %}<div class="lf-item"><a href="{{ link['#url'] }}">{{ link['#title'] }}</a></div>
+						{% endif %}
 				{%- endfor -%}
 				{%- if content.field_link_multi.0 and content.field_file_multi.0 -%},{%- endif -%}
 				{%- for key, file in content.field_file_multi['#items'] if key|first != "#" -%}
-					{% if loop.index0 > 0  %},{% endif %}<div class="lf-item">{{ drupal_entity('media', file.entity.id, 'default') }}</div>
+					{% set count = count + 1 %}
+					{% if count < 3 %}
+						{% if loop.index0 > 0  %},{% endif %}<div class="lf-item">{{ drupal_entity('media', file.entity.id, 'default') }}</div>
+					{% endif %}
 				{%- endfor -%}
+				{% if count >= 3 %}
+					<span class="more">...</span>
+				{% endif %}
 			</div>
 		</div>
 	{%- endif -%}

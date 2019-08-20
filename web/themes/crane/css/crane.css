@@ -4335,7 +4335,8 @@ body .button--primary.button--small {
   padding: 6px;
   width: 100%;
   line-height: 1;
-  min-height: 34px; }
+  min-height: 34px;
+  max-width: 800px; }
   .js-form-type-textfield input::-webkit-placeholder {
     opacity: 0.4;
     color: #121212; }
@@ -4369,7 +4370,8 @@ body .button--primary.button--small {
   padding: 6px;
   width: 100%;
   line-height: 1;
-  min-height: 34px; }
+  min-height: 34px;
+  max-width: 800px; }
   .js-form-type-email input::-webkit-placeholder {
     opacity: 0.4;
     color: #121212; }
@@ -4403,7 +4405,8 @@ body .button--primary.button--small {
   padding: 6px;
   width: 100%;
   line-height: 1;
-  min-height: 34px; }
+  min-height: 34px;
+  max-width: 800px; }
   .js-form-type-password input::-webkit-placeholder {
     opacity: 0.4;
     color: #121212; }
@@ -4437,7 +4440,8 @@ body .button--primary.button--small {
   padding: 6px;
   width: 100%;
   line-height: 1;
-  min-height: 34px; }
+  min-height: 34px;
+  max-width: 800px; }
   .js-form-type-tel input::-webkit-placeholder {
     opacity: 0.4;
     color: #121212; }
@@ -4471,7 +4475,8 @@ body .button--primary.button--small {
   padding: 6px;
   width: 100%;
   line-height: 1;
-  min-height: 34px; }
+  min-height: 34px;
+  max-width: 800px; }
   .js-form-type-search input::-webkit-placeholder {
     opacity: 0.4;
     color: #121212; }
@@ -4529,7 +4534,8 @@ body .button--primary.button--small {
   padding: 6px;
   width: 100%;
   line-height: 1;
-  min-height: 34px; }
+  min-height: 34px;
+  max-width: 800px; }
   .js-form-type-textarea textarea::-webkit-placeholder {
     opacity: 0.4;
     color: #121212; }
@@ -4981,6 +4987,10 @@ header.content-header {
 .field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Video"] {
   background: url("../images/icons/paragraphs/video.svg") no-repeat; }
 
+.js .field--widget-paragraphs .paragraphs-tabs-wrapper .paragraph-top {
+  -ms-grid-columns: 250px auto 1fr auto;
+  grid-template-columns: 250px auto 1fr auto; }
+
 /* WIDGET CONTENT SPACING
 -------------------------- */
 .paragraphs-content {
@@ -4991,13 +5001,6 @@ header.content-header {
   .field--name-field-reusable-paragraph .entities-list .item-container input {
     display: inline-block;
     margin: .5em 0 .5em 1em; }
-
-/* WIDGET LABEL */
-.js .paragraph-type-top .paragraph-type-title {
-  min-width: 300px; }
-
-.paragraph-type-title .paragraph-type-label {
-  font-weight: bold; }
 
 /* PREVIEWS
 ---------------- */
@@ -5031,6 +5034,9 @@ header.content-header {
 
 .field--widget-paragraphs .paragraph--view-mode--preview p, .field--widget-paragraphs .paragraph--view-mode--preview .field--type-text-long {
   margin: 0; }
+
+.field--widget-paragraphs .paragraph--view-mode--preview .more {
+  margin-left: .25em; }
 
 /* PREVIEW SUBFORM */
 .paragraphs-subform .field--widget-paragraphs .paragraph--view-mode--preview > .field--label-inline > .field__label {

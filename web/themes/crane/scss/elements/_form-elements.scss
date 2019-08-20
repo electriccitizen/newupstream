@@ -50,6 +50,7 @@
 	width: 100%;
 	line-height: 1;
 	min-height: 34px;
+	max-width: $textMax;
 	@include placeholder;
 	&:focus{
 		@include placeholderFocus;
