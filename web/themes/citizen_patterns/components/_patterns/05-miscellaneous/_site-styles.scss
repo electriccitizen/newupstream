@@ -264,7 +264,7 @@ body {
 				}
 			}
 			&:hover,&:focus {
-				//background: $modalGalButtonBackHover;
+				background: $modalGalButtonBackHover;
 				span {
 					border-right-color: $link;
 					@include transition(border-right-color, 0.3s, ease);
@@ -292,7 +292,7 @@ body {
 				}
 			}
 			&:hover,&:focus {
-				//background: $modalGalButtonBackHover;
+				background: $modalGalButtonBackHover;
 				span {
 					border-left-color: $link;
 					@include transition(border-left-color, 0.3s, ease);
