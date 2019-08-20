@@ -18,6 +18,7 @@ permissions:
   - 'access in-place editing'
   - 'access media overview'
   - 'access panels in-place editing'
+  - 'access responsive preview'
   - 'access toolbar'
   - 'access user profiles'
   - 'access video_browser entity browser pages'

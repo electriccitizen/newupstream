@@ -15,6 +15,7 @@ permissions:
   - 'access image_browser entity browser pages'
   - 'access in-place editing'
   - 'access media overview'
+  - 'access responsive preview'
   - 'access site reports'
   - 'access taxonomy overview'
   - 'access user profiles'

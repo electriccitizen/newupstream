@@ -1,0 +1,69 @@
+/* PREVIEW CONTAINER */
+#responsive-preview.responsive-preview.active #responsive-preview-frame-container {
+  height: 80%;
+  width: 80%;
+  left: 50% !important;
+  -webit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+	border-radius: 0;
+	padding: 0 !important;
+}
+
+/* PREVIEW FRAME */
+.responsive-preview-active #responsive-preview-frame {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* PREVIEW CONTROLS */
+#edit-preview,#responsive-preview-frame-label,#responsive-preview-orientation{
+  display: none !important;
+}
+#responsive-preview-close{
+	background: #fcd105;
+	z-index: 1;
+	border-left: 1px solid #262626;
+	border-bottom: 1px solid #262626;
+}
+#responsive-preview-close:hover,#responsive-preview-close:focus{
+	background: #797501;
+	color: #fff;
+}
+#responsive-preview-close:before{
+	height: 16px;
+	width: 20px;
+	background: url('../icons/close-black.svg') no-repeat;
+	background-size: 16px 16px;
+	background-position: center;
+}
+#responsive-preview-close:hover::before,#responsive-preview-close:focus::before{
+	background: url('../icons/close-white.svg') no-repeat;
+	background-size: 16px 16px;
+	background-position: center;
+}
+
+/* PREVIEW BUTTON ON NODE */
+#edit-ec-preview {
+  background: #018901;
+  color: #ffffff;
+}
+#edit-ec-preview:hover,#edit-ec-preview:focus{
+	background: #ccc;
+	color: #121212;
+}
+@media screen and (min-width: 760px){
+	#edit-ec-preview.fixed-preview{
+		position: fixed;
+		top: 30%;
+		right: -4.5rem;
+		z-index: 499;
+		-webkit-transform: rotate(90deg);
+		-ms-transform: rotate(90deg);
+		transform: rotate(90deg);
+		padding: 30px 3rem 15px;
+		font-size: 1.8rem;
+	}
+}
+

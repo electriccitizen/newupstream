@@ -55,6 +55,10 @@
 		}
 	}
 }//end #toolbar
+//responsive preview
+#responsive-preview-toolbar-tab{
+	display: none !important;
+}
 .toolbar-tray-horizontal{
 	.menu-item-expanded{
 		background-color: $white !important;

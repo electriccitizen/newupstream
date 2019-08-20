@@ -1,3 +1,10 @@
 /* ========================
   NODE FORMS
 ========================== */
+
+.node-form{
+	//make room for fixed preview button
+	@include tab{
+		padding-right: 32px;
+	}
+}//end node edit form

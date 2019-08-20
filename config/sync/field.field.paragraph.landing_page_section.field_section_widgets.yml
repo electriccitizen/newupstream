@@ -22,7 +22,7 @@ id: paragraph.landing_page_section.field_section_widgets
 field_name: field_section_widgets
 entity_type: paragraph
 bundle: landing_page_section
-label: 'Section Widgets'
+label: 'Widgets in this Section'
 description: ''
 required: false
 translatable: false
