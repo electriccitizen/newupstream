@@ -20,20 +20,24 @@ $buttonPadding: 1.15rem 1.5rem 1rem;
 	letter-spacing: .04em;
 	font-weight: $heavy;
 	font-size: $button;
-	margin-bottom: $spaceMd;
 	margin-left: 0;
 	margin-right: 0;
 	@include transColor(.3s);
+	text-shadow: none;
 	&:hover,&:focus {
 		color: $buttonTextHover;
 		background-color: $buttonBackHover;
-		box-shadow: none;
+		background-image: none;
 		outline: none;
+		border: none;
 		padding: $buttonPadding;
+		box-shadow: none;
 	}
 	&:active{
 		color: $buttonTextActive;
 		background-color: $buttonBackActive;
+		border: none;
+		box-shadow: none;
 	}
 }//end button mixin
 
@@ -64,9 +68,14 @@ $buttonPadding: 1.15rem 1.5rem 1rem;
 	min-width: 115px;
 	margin-top: 0;
 	&:hover,&:focus{
-		background: $submitBackHover;
-		border-color: $submitBackHover;
-		color: $submitTextHover;
+		background: $buttonBackHover;
+		color: $buttonTextHover;
+		border-color: $buttonBackHover;
+	}
+	&:active{
+		background: $buttonBackActive;
+		color: $buttonTextActive;
+		border-color: $buttonBackActive;
 	}
 }
 
@@ -75,9 +84,14 @@ $buttonPadding: 1.15rem 1.5rem 1rem;
 	background: $altBack;
 	color: $altText;
 	&:hover,&:focus{
-		background: $altBackHover;
-		border-color: $altBackHover;
-		color: $altTextHover;
+		background: $buttonBackHover;
+		color: $buttonTextHover;
+		border-color: $buttonBackHover;
+	}
+	&:active{
+		background: $buttonBackActive;
+		color: $buttonTextActive;
+		border-color: $buttonBackActive;
 	}
 }
 
@@ -87,9 +101,14 @@ $buttonPadding: 1.15rem 1.5rem 1rem;
 	color: $resetText;
 	border-color: $resetBack;
 	&:hover,&:focus{
-		background: $resetBackHover;
-		border-color: $resetBackHover;
-		color: $resetTextHover;
+		background: $buttonBackHover;
+		color: $buttonTextHover;
+		border-color: $buttonBackHover;
+	}
+	&:active{
+		background: $buttonBackActive;
+		color: $buttonTextActive;
+		border-color: $buttonBackActive;
 	}
 }
 
@@ -99,46 +118,49 @@ $buttonPadding: 1.15rem 1.5rem 1rem;
 	color: $cautionText;
 	border-color: $cautionBack;
 	&:hover,&:focus{
-		background: $cautionBackHover;
-		border-color: $cautionBackHover;
-		color: $cautionTextHover;
+		background: $buttonBackHover;
+		color: $buttonTextHover;
+		border-color: $buttonBackHover;
+	}
+	&:active{
+		background: $buttonBackActive;
+		color: $buttonTextActive;
+		border-color: $buttonBackActive;
 	}
 }
 
+.button.js-hide{
+	display: none !important;
+}
 .button{
 	@include button;
 }
-.button--danger,#edit-reset{
+.button.form-submit{
+	@include submitButton;
+}
+.button--danger,#edit-reset,.button[value="Remove"]{
 	@include resetButton;
-	margin-left: 0;
-	margin-right: 0;
-	width: 100%;
-	@include smallTab{
-		width: auto;
-	}
 }//end reset danger buttons
-.button[data-drupal-selector="edit-cancel"],.button[data-drupal-selector="edit-actions-cancel"]{
+.button[data-drupal-selector="edit-cancel"],.button[data-drupal-selector="edit-actions-cancel"],.button[value="Cancel"]{
 	@include cautionButton;
-	margin-left: 0;
-	margin-right: 0;
-	width: 100%;
-	@include smallTab{
-		width: auto;
-	}
 }//end reset danger buttons
+
 #edit-preview{
 	@include altButton;
 	background: $altBack !important;
 	color: $altText !important;
 	&:hover,&:focus{
-		background: $altBackHover !important;
-		border-color: $altBackHover !important;
-		color: $altTextHover !important;
+		background: $buttonBackHover !important;
+		border-color: $buttonBackHover !important;
+		color: $buttonTextHover !important;
 	}
 	&:active{
 		background: $buttonBackActive;
+		border-color: $buttonBackActive !important;
+		color: $buttonTextActive !important;
 	}
 }//end preview
+
 .button--primary {
 	@include button;
 	background: $primaryButtonBack;
@@ -155,6 +177,7 @@ $buttonPadding: 1.15rem 1.5rem 1rem;
 		@extend .button--small;
 	}
 }//end button primary
+
 .button-outline{
 	@include outlineButton($link);
 }

@@ -49,7 +49,7 @@
 	padding: 6px;
 	width: 100%;
 	line-height: 1;
-	min-height: 34px;
+	min-height: 38px;
 	max-width: $textMax;
 	@include placeholder;
 	&:focus{
@@ -82,6 +82,14 @@
 	.select2-selection__choice__remove{
 		position: relative;
 		z-index: 999;
+	}
+}
+
+/* GLOBAL FORM ELEMENTS
+---------------------- */
+.js-form-item{
+	label{
+		margin-bottom: $spaceXxs;
 	}
 }
 
@@ -132,7 +140,7 @@
 
 /* SELECT 2
 --------------- */
-body select,body select:hover,body select:focus{
+select,select:hover,select:focus{
 	background: none;
 }
 
@@ -146,74 +154,76 @@ optgroup:empty{
 	display: none !important;
 }
 
-body{
-	.select2-container{
-		min-width: 150px;
-		margin-bottom: .5em;
-	}
-	.select2-container--default{
-		.select2-selection--single{
-			@include selectInput;
-			.select2-selection__rendered{
-				padding: 1px 32px 1px 10px;
-				color: $midGrey;
-				text-align: left;
+
+.select2-container{
+	min-width: 150px;
+	margin-bottom: .5em;
+}
+.select2-container--default{
+	.select2-selection--single{
+		@include selectInput;
+		.select2-selection__rendered{
+			padding: 3.5px 32px 4px 10px;
+			color: $midGrey;
+			text-align: left;
+		}
+		.select2-selection__arrow{
+			top: 17px;
+			right: 10px;
+			cursor: pointer;
+			@include triangle(down,8px,10px,$midGrey);
+			b{
+				display: none;
 			}
-			.select2-selection__arrow{
-				top: 14px;
-				right: 10px;
+		}
+	}//end single
+	.select2-selection--multiple{
+		@include selectInput;
+		.select2-search--inline{
+			position: relative;
+			float: none;
+			padding: 3.5px 3px 4px;
+			&:after{
+				content: '';
+				display: block;
+				position: absolute;
+				top: 13px;
+				right: 2px;
 				cursor: pointer;
 				@include triangle(down,8px,10px,$midGrey);
-				b{
-					display: none;
+			}
+			input.select2-search__field{
+				color: $midGrey;
+				@include placeholder;
+				&:focus{
+					@include placeholderFocus;
 				}
 			}
-		}//end single
+		}//end search inline
+		.select2-selection__choice{
+			border-radius: 0;
+			background: $lightGrey;
+			margin-top: 8px;
+		}
+	}//end multiple
+	&.select2-container--open,&.select2-container--focus{
+		box-shadow: 0 2px 2px rgba(35,35,35,0.3);
+		.select2-selection--single{
+			border-color: $borderRule;
+			.select2-selection__arrow{
+				border-top: 0;
+				border-bottom: 8px solid $midGrey;
+			}
+		}
 		.select2-selection--multiple{
-			@include selectInput;
-			.select2-search--inline{
-				position: relative;
-				float: none;
-				padding: 1px 3px;
-				&:after{
-					content: '';
-					display: block;
-					position: absolute;
-					top: 10px;
-					right: 2px;
-					cursor: pointer;
-					@include triangle(down,8px,10px,$midGrey);
-				}
-				input.select2-search__field{
-					color: $midGrey;
-					@include placeholder;
-					&:focus{
-						@include placeholderFocus;
-					}
-				}
-			}//end search inline
-			.select2-selection__choice{
-				border-radius: 0;
-				background: $lightGrey;
+			border-color: $borderRule;
+			.select2-search--inline:after{
+				border-top: 0;
+				border-bottom: 8px solid $midGrey;
 			}
-		}//end multiple
-		&.select2-container--open,&.select2-container--focus{
-			box-shadow: 0 2px 2px rgba(35,35,35,0.3);
-			.select2-selection--single{
-				.select2-selection__arrow{
-					border-top: 0;
-					border-bottom: 8px solid $midGrey;
-				}
-			}
-			.select2-selection--multiple{
-				.select2-search--inline:after{
-					border-top: 0;
-					border-bottom: 8px solid $midGrey;
-				}
-			}
-		}//end open,focus
-	}//end container--default
-}//end body
+		}
+	}//end open,focus
+}//end container--default
 
 .select2-container .select2-dropdown{
 	border: 1px solid $midGrey;
@@ -227,11 +237,49 @@ body{
 .select2-container--default .select2-results__option--highlighted[aria-selected]{
 	background-color: $blue;
 }
-body select{
+select{
 	border-radius: 0;
 	background: url('../images/icons/admin-icons/caret-down.svg') no-repeat 99% 63%, #fff;
 }
-body select:hover,body select:focus{
+select:hover,select:focus{
 	background: url('../images/icons/admin-icons/caret-down.svg') no-repeat 99% 63%, #ececec;
 }
+
+
+/* FILE UPLOAD
+---------------- */
+.form-type-managed-file{
+	& > label{
+		pointer-events: none;
+		cursor: default;
+	}
+	.file-upload-wrapper{
+		position: relative;
+		overflow: hidden;
+		display:  inline-block;
+		cursor: pointer;
+		margin-bottom: .5rem;
+		.fake-button{
+			@include button;
+			margin-bottom: 0;
+		}
+		input[type="file"]{
+			position: absolute;
+			left: 0;
+			top: 0;
+			opacity: 0;
+			font-size: 100px;
+			z-index: 2;
+			&:hover,&:focus{
+				& + .fake-button{
+					background: $buttonBackHover;
+					color: $buttonTextHover;
+				}
+			}
+		}
+	}//end field upload wrapper
+	.description{
+		line-height: 1.25;
+	}
+}//end managed file
 

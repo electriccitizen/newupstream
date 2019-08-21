@@ -106,9 +106,14 @@
 	height: 43px;
 	line-height: 1;
 	&:hover,&:focus{
-		background: $submitBackHover;
-		border-color: $submitBackHover;
-		color: $submitTextHover;
+		background: $buttonBackHover;
+		border-color: $buttonBackHover;
+		color: $buttonTextHover;
+	}
+	&:active{
+		background: $buttonBackActive;
+		border-color: $buttonBackActive;
+		color: $buttonTextActive;
 	}
 }
 
@@ -118,9 +123,14 @@
 	color: $cautionText;
 	border-color: $cautionBack;
 	&:hover,&:focus{
-		background: $cautionBackHover;
-		border-color: $cautionBackHover;
-		color: $cautionTextHover;
+		background: $buttonBackHover;
+		border-color: $buttonBackHover;
+		color: $buttonTextHover;
+	}
+	&:active{
+		background: $buttonBackActive;
+		border-color: $buttonBackActive;
+		color: $buttonTextActive;
 	}
 }
 
@@ -130,9 +140,14 @@
 	color: $resetText;
 	border-color: $resetBack;
 	&:hover,&:focus{
-		background: $resetBackHover;
-		border-color: $resetBackHover;
-		color: $resetTextHover;
+		background: $buttonBackHover;
+		border-color: $buttonBackHover;
+		color: $buttonTextHover;
+	}
+	&:active{
+		background: $buttonBackActive;
+		border-color: $buttonBackActive;
+		color: $buttonTextActive;
 	}
 }
 
