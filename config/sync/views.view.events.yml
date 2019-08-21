@@ -63,8 +63,8 @@ display:
           id: 0
           total_pages: null
           tags:
-            previous: ‹‹
-            next: ››
+            previous: "«\_Prev"
+            next: "Next\_»"
             first: '« First'
             last: 'Last »'
           expose:
@@ -510,7 +510,7 @@ display:
           group_type: group
           admin_label: ''
           empty: false
-          content: 'Results: Page @current_page – @page_count'
+          content: "<span class=\"results-count\">Results: @start - @end of @total</span>\r\n<span class=\"count-shim\">@page_count</span>"
           plugin_id: result
       empty:
         area_text_custom:

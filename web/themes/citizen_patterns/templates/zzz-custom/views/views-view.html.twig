@@ -87,10 +87,15 @@
   {{ more }}
 
   {% block viewFooter %}
-    {% if footer %}
+      {% if footer %}
       <div class="view-footer">
-        {{ footer }}
+        {{- footer|without('result') -}}
       </div>
+      {% if footer.result %}
+        {% block count %}
+          {{ footer.result }}
+        {% endblock %}
+      {% endif %}
     {% endif %}
   {% endblock %}
 

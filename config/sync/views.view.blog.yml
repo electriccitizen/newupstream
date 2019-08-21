@@ -393,7 +393,7 @@ display:
           group_type: group
           admin_label: ''
           empty: false
-          content: 'Results: Page @current_page – @page_count'
+          content: "<span class=\"results-count\">Results: @start - @end of @total</span>\r\n<span class=\"count-shim\">@page_count</span>"
           plugin_id: result
       empty: {  }
       relationships: {  }
@@ -460,13 +460,13 @@ display:
       pager:
         type: full
         options:
-          items_per_page: 5
+          items_per_page: 6
           offset: 0
           id: 0
           total_pages: null
           tags:
-            previous: '‹ Previous'
-            next: 'Next ›'
+            previous: "«\_Prev"
+            next: "Next\_»"
             first: '« First'
             last: 'Last »'
           expose:

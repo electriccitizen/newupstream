@@ -1,5 +1,6 @@
 global-styling:
   version: 1.0
+  header: true
   css:
     theme:
       dist/style.css: {}
@@ -43,6 +44,10 @@ object-fit:
   version: 1.0
   js:
     dist/05-miscellaneous/_object-fit.min.js.gz: { minified: true }
+pager:
+  version: 1.0
+  js:
+    dist/02-molecules/pagers/_pager.min.js.gz: { minified: true }
 search-block:
   version: 1.0
   js:

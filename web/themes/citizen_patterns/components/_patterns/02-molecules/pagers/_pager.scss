@@ -15,7 +15,6 @@ $pagerLine: 2.4rem;
 	height: 26px;
 	padding: 0px 3px;
 	line-height: $pagerLine;
-	font-weight: bold;
 	text-align: center;
 	border-radius: 6px;
 	color: $pagerNumber;
@@ -28,77 +27,36 @@ $pagerLine: 2.4rem;
 	}
 }
 
-///mixin - pagerNumbers
-@mixin pagerNumbers{
-	@include safeFlexSize(0,0,100%);
+/* RESULTS (PAGE X OF & RESULTS X-X OF)
+------------------------- */
+
+.results-count,.count-shim{
+	display: none;
+}
+.results-count-wrapper{
+	font-weight: $heavy;
+	margin-bottom: $spaceSm;
+	width: 100%;
 	text-align: center;
 	@include tab{
-		border-top: 1px solid $pagerBorder;
-		border-bottom: 1px solid $pagerBorder;
-		background: $pagerBack;
-		@include safeFlexSize(1,1,auto);
-	}
-	.pager{
-		position: relative;
-		padding: 6px 0 26px;
-		.pager__item a{
-			font-family: $header;
-			font-weight: $heavy;
-		}
-		.pager__item:not(.pager__item--first):not(.pager__item--previous):not(.pager__item--next):not(.pager__item--last) a{
-			font-family: $header;
-			font-weight: $heavy;
-		}
-		@include tab{
-			padding: 20px 0 18px;
-			.js-pager__items{
-				@include safeFlex(row,wrap,end,start);
-			}
-		}
+		width: 50%;
+		text-align: left;
 	}
 }
 
-///mixin - pagerResults
-@mixin pagerResults{
-	border-top: 1px solid $pagerBorder;
-	border-bottom: 1px solid $pagerBorder;
-	background: $pagerBack;
-	margin-bottom: $spaceSm;
-	@include calc(width, "100% + 40px");
-	@include edgeToEdge;
-	div{
-		position: relative;
-		padding: 20px 0;
-		text-align: center;
-		font-size: 18px;
-		font-family: $header;
-		color: $resultsText;
-		span{
-			text-transform: uppercase;
-		}
-	}
-	@include tab{
-		width: 200px;
-		margin-bottom: 0;
-		@include edgeReset;
-		div{
-			padding: 20px 0 18px;
-			text-align: left;
-		}
-	}
-}
 
 /* GLOBAL PAGER STYLING
 -------------------- */
 .js-pager__items{
 	@include listReset;
 	text-align: center;
-	@include safeFlex(row,wrap,null,null);
+	margin-bottom: $spaceSm;
+	@include safeFlex(row,wrap,start,start);
 	li{
+		font-weight: $heavy;
 		*{
 			line-height: $pagerLine;
 			display: block;
-			font-weight: $heavy;
 		}
 		&:not(:first-child):not(:last-child){
 			margin: 0 .5rem;
@@ -108,32 +66,21 @@ $pagerLine: 2.4rem;
 
 /* FULL PAGER
 ---------------- */
-.pager-bar{
-	@include safeFlex(row,wrap,null,null);
-	margin-top: 20px;
-	.view-footer{
-		@include pagerResults;
-	}
-	.bottom-pager{
-		border-top: 1px solid $borderRule;
-		border-bottom: 1px solid $borderRule;
-		@include safeFlexSize(1,1,auto);
+.pager{
+	border-top: 1px solid $borderRule;
+	padding-top: $spaceSm;
+	@include safeFlex(row,wrap,center,center);
+	&.results-pager{
 		@include onlySmall{
-			border: 0px;
-		}
-		.js-pager__items{
-			@include safeFlex(row,wrap,end,start);
-			padding: 20px 0;
-			@include onlySmall{
-				@include safeFlex(row,wrap,center,start);
+			.pager__item--previous,.pager__item--next{
+				display: none;
 			}
 		}
+		@include tab{
+			@include safeFlex(row,nowrap,justify,center);
+		}
 	}
-}//end pager-bar
-
-.pager{
-	//page number styling;
-	.pager__item:not(.pager__item--first):not(.pager__item--previous):not(.pager__item--next):not(.pager__item--last){
+	.pager__item{
 		a{
 			@include pagerItemStyle;
 		}
@@ -147,38 +94,22 @@ $pagerLine: 2.4rem;
 				}
 			}
 		}
+		&.pager__item--previous{
+			padding-right: 2rem;
+		}
+		&.pager__item--next{
+			padding-left: 2rem;
+		}
 	}//end page number items
-
-	.pager__item--first{
+	.disabled{
 		a{
-			color: $pagerLink;
-			background: $pagerLinkBack;
-			&:hover,&:focus{
-				color: $pagerLinkHover;
-				background: $pagerLinkBackHover;
-			}
+			color: $midGrey;
+			pointer-events: none;
 		}
 	}
 
-	//previous styling
-	.pager__item--previous{
-		@extend .pager__item--first;
-		a{
-			display: none;
-		}
-	}
-
-	//next styling
-	.pager__item--next{
-		@extend .pager__item--first;
-		a{
-			display: none;
-		}
-	}
-
-	//last styling
-	.pager__item--last{
-		@extend .pager__item--first;
+	.pager__number,.pager__current{
+		display: none;
 	}
 
 }//end full .pager

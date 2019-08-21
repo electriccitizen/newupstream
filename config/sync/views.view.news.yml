@@ -57,13 +57,13 @@ display:
       pager:
         type: full
         options:
-          items_per_page: 5
+          items_per_page: 6
           offset: 0
           id: 0
           total_pages: null
           tags:
-            previous: ‹‹
-            next: ››
+            previous: "«\_Prev"
+            next: "Next\_»"
             first: '« First'
             last: 'Last »'
           expose:
@@ -74,7 +74,7 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
-          quantity: 6
+          quantity: 5
       style:
         type: default
         options:
@@ -535,7 +535,7 @@ display:
           group_type: group
           admin_label: ''
           empty: false
-          content: 'Results: Page @current_page – @page_count'
+          content: "<span class=\"results-count\">Results: @start - @end of @total</span>\r\n<span class=\"count-shim\">@page_count</span>"
           plugin_id: result
       empty:
         area_text_custom:
