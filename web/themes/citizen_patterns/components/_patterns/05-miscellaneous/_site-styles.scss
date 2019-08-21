@@ -136,9 +136,8 @@ body {
 	.tabs {
 		@include listReset;
 		@include safeFlex(row,wrap,null,null);
-		@include bleed(10px);
+		@include bleed(padding,10px);
 		li {
-			padding: 0 10px;
 			@include onlySmall{
 				width: 100%;
 			}

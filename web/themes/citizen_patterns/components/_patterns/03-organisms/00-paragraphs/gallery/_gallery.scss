@@ -5,7 +5,7 @@
 	.lightbox{
 		.gallery-wrapper{
 			@include safeFlex(row,wrap,start,start);
-			@include bleed(20px);
+			@include bleed(padding,20px);
 			margin-bottom: -20px;
 			//hide the content before lightbox
 			.featherlight-hidden {
@@ -13,8 +13,6 @@
 			}
 			//Image lighbox
 			.image-gal {
-				padding-left: 10px;
-				padding-right: 10px;
 				margin-bottom: 20px;
 				overflow: hidden;
 				cursor: pointer;

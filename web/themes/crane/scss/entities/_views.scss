@@ -8,7 +8,7 @@
 	.view-filters{
 		background: $whiteBlue;
 		padding: $spaceXs 2.5em $spaceSm;
-		@include bleed(5em);
+		@include bleed(null,5em);
 		position: relative;
 		z-index: 20;
 		margin-bottom: -1px;

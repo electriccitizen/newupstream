@@ -164,7 +164,7 @@ SECTION LAYOUTS
 		padding-top: 2rem;
 		@include tab{
 			display: block !important;
-			@include bleed(20px);
+			@include bleed(padding,20px);
 			padding-bottom: 2rem;
 		}
 	}
@@ -189,7 +189,6 @@ SECTION LAYOUTS
 		}
 		@include tab{
 			display: inline-block;
-			padding: 0 10px;
 			font-size: 2.2rem;
 			&:not(:last-child):after{
 				height: 70%;

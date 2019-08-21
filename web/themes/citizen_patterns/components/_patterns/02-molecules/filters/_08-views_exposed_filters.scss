@@ -4,10 +4,9 @@
 
 .views-exposed-form{
 	@include safeFlex(row,wrap,start,center);
-	@include bleed(20px);
+	@include bleed(padding,20px);
 	.form-item{
 		width: 100%;
-		padding:0px 10px;
 		@include smallTab{
 			width: 50%;
 			max-width: 300px;

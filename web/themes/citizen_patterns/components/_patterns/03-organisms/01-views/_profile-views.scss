@@ -10,13 +10,11 @@
 	}
 	.view-content{
 		@include safeFlex(row,wrap,null,null);
-		@include bleed(30px);
+		@include bleed(padding,30px);
 	}
 	.views-row{
 		width: 100%;
 		margin-bottom: $spaceLg;
-		padding-right: 15px;
-		padding-left: 15px;
 		text-align: center;
 		@include smallTab{
 			width: 50%;

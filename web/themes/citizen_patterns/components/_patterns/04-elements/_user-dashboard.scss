@@ -134,11 +134,9 @@ article.user-dashboard{
 		}
 		ul{
 			@include listReset;
-			@include bleed(20px);
+			@include bleed(padding,20px);
 			@include safeFlex(row,wrap,center,center);
 			li{
-				padding-left: 10px;
-				padding-right: 10px;
 				margin-bottom: $spaceSm;
 				a{
 					width: 240px;
