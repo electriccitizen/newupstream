@@ -4305,7 +4305,7 @@ body {
     border: none;
     box-shadow: none; }
 
-.button.form-submit {
+.form-submit {
   background-image: none;
   background-color: #3778c1;
   border: none;
@@ -4333,7 +4333,7 @@ body {
   height: auto;
   min-width: 115px;
   margin-top: 0; }
-  .button.form-submit:hover, .button.form-submit:focus {
+  .form-submit:hover, .form-submit:focus {
     color: #121212;
     background-color: #cccccc;
     background-image: none;
@@ -4341,16 +4341,16 @@ body {
     border: none;
     padding: 1.15rem 1.5rem 1rem;
     box-shadow: none; }
-  .button.form-submit:active {
+  .form-submit:active {
     color: #121212;
     background-color: #b3b3b3;
     border: none;
     box-shadow: none; }
-  .button.form-submit:hover, .button.form-submit:focus {
+  .form-submit:hover, .form-submit:focus {
     background: #cccccc;
     color: #121212;
     border-color: #cccccc; }
-  .button.form-submit:active {
+  .form-submit:active {
     background: #b3b3b3;
     color: #121212;
     border-color: #b3b3b3; }
@@ -4547,6 +4547,79 @@ body {
     border-color: #b3b3b3 !important;
     color: #121212 !important; }
 
+.button--small, .button--primary.button--small {
+  background-image: none;
+  background-color: #3778c1;
+  border: none;
+  border-radius: 0;
+  color: #ffffff;
+  line-height: 1.15;
+  padding: 1.15rem 1.5rem 1rem;
+  display: inline-block;
+  vertical-align: middle;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-left: 0;
+  margin-right: 0;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  -moz-transition: color 0.3s ease, background-color 0.3s ease;
+  -webkit-transition: color 0.3s ease, background-color 0.3s ease;
+  -webkit-transform: translateZ(0);
+  text-shadow: none;
+  background: transparent;
+  border: 1px solid #3778c1;
+  color: #3778c1;
+  border-radius: 3px;
+  background: transparent;
+  border: 1px solid #3778c1;
+  color: #121212;
+  font-weight: 400;
+  font-size: 1.2rem;
+  border-radius: 2px; }
+  .button--small:hover, .button--small:focus {
+    color: #121212;
+    background-color: #cccccc;
+    background-image: none;
+    outline: none;
+    border: none;
+    padding: 1.15rem 1.5rem 1rem;
+    box-shadow: none; }
+  .button--small:active {
+    color: #121212;
+    background-color: #b3b3b3;
+    border: none;
+    box-shadow: none; }
+  .button--small:hover, .button--small:focus {
+    background: #cccccc;
+    color: #121212;
+    border-color: #cccccc; }
+  .button--small:active {
+    background: #b3b3b3;
+    color: #121212;
+    border-color: #b3b3b3; }
+  .button--small.button--small-override {
+    font-size: 1.8rem;
+    border-width: 2px;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    border-radius: 4px; }
+  .button--small:hover, .button--small:focus {
+    background: #cccccc;
+    border-color: #cccccc;
+    color: #121212;
+    transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -webkit-transform: translateZ(0); }
+  .button--small:active {
+    background: #b3b3b3;
+    border-color: #b3b3b3;
+    color: #121212; }
+
 .button--primary {
   background-image: none;
   background-color: #3778c1;
@@ -4708,6 +4781,28 @@ body {
     color: #121212;
     border-color: #b3b3b3; }
 
+.js .dropbutton-multiple .dropbutton-widget .dropbutton-action input, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle input, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-action input, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle input, .js .dropbutton-single .dropbutton-widget .dropbutton-action input, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle input, .js .dropbutton-multiple .dropbutton-action input, .js .dropbutton-wrapper .dropbutton-action input, .js .dropbutton-single .dropbutton-action input, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle .button, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle .button, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle .button, .js .dropbutton-multiple .dropbutton-action .button, .js .dropbutton-wrapper .dropbutton-action .button, .js .dropbutton-single .dropbutton-action .button, .js .dropbutton-multiple .dropbutton-widget .dropbutton-action a, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle a, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-action a, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle a, .js .dropbutton-single .dropbutton-widget .dropbutton-action a, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle a, .js .dropbutton-multiple .dropbutton-action a, .js .dropbutton-wrapper .dropbutton-action a, .js .dropbutton-single .dropbutton-action a, .js .dropbutton-multiple .dropbutton-widget .dropbutton-action button, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle button, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-action button, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle button, .js .dropbutton-single .dropbutton-widget .dropbutton-action button, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle button, .js .dropbutton-multiple .dropbutton-action button, .js .dropbutton-wrapper .dropbutton-action button, .js .dropbutton-single .dropbutton-action button {
+  border-radius: 0 !important;
+  box-shadow: 0;
+  background: #ffffff;
+  text-shadow: 0;
+  border-color: #3778c1; }
+  .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle input:hover, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle input:hover, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle input:hover, .js .dropbutton-multiple .dropbutton-action input:hover, .js .dropbutton-wrapper .dropbutton-action input:hover, .js .dropbutton-single .dropbutton-action input:hover, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle input:focus, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle input:focus, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle input:focus, .js .dropbutton-multiple .dropbutton-action input:focus, .js .dropbutton-wrapper .dropbutton-action input:focus, .js .dropbutton-single .dropbutton-action input:focus, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle .button:hover, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle .button:hover, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle .button:hover, .js .dropbutton-multiple .dropbutton-action .button:hover, .js .dropbutton-wrapper .dropbutton-action .button:hover, .js .dropbutton-single .dropbutton-action .button:hover, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle .button:focus, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle .button:focus, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle .button:focus, .js .dropbutton-multiple .dropbutton-action .button:focus, .js .dropbutton-wrapper .dropbutton-action .button:focus, .js .dropbutton-single .dropbutton-action .button:focus, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle a:hover, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle a:hover, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle a:hover, .js .dropbutton-multiple .dropbutton-action a:hover, .js .dropbutton-wrapper .dropbutton-action a:hover, .js .dropbutton-single .dropbutton-action a:hover, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle a:focus, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle a:focus, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle a:focus, .js .dropbutton-multiple .dropbutton-action a:focus, .js .dropbutton-wrapper .dropbutton-action a:focus, .js .dropbutton-single .dropbutton-action a:focus, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle button:hover, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle button:hover, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle button:hover, .js .dropbutton-multiple .dropbutton-action button:hover, .js .dropbutton-wrapper .dropbutton-action button:hover, .js .dropbutton-single .dropbutton-action button:hover, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle button:focus, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle button:focus, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle button:focus, .js .dropbutton-multiple .dropbutton-action button:focus, .js .dropbutton-wrapper .dropbutton-action button:focus, .js .dropbutton-single .dropbutton-action button:focus {
+    background-color: #dbe4e4 !important;
+    background-image: none !important;
+    border-radius: 0 !important;
+    box-shadow: 0; }
+  .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle input:active, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle input:active, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle input:active, .js .dropbutton-multiple .dropbutton-action input:active, .js .dropbutton-wrapper .dropbutton-action input:active, .js .dropbutton-single .dropbutton-action input:active, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle .button:active, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle .button:active, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle .button:active, .js .dropbutton-multiple .dropbutton-action .button:active, .js .dropbutton-wrapper .dropbutton-action .button:active, .js .dropbutton-single .dropbutton-action .button:active, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle a:active, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle a:active, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle a:active, .js .dropbutton-multiple .dropbutton-action a:active, .js .dropbutton-wrapper .dropbutton-action a:active, .js .dropbutton-single .dropbutton-action a:active, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle button:active, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle button:active, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle button:active, .js .dropbutton-multiple .dropbutton-action button:active, .js .dropbutton-wrapper .dropbutton-action button:active, .js .dropbutton-single .dropbutton-action button:active {
+    background: #ededed;
+    border-radius: 0;
+    box-shadow: 0; }
+
+.js .dropbutton-multiple .dropbutton-widget, .js .dropbutton-wrapper .dropbutton-widget, .js .dropbutton-single .dropbutton-widget {
+  border-radius: 0;
+  text-shadow: none;
+  background: #ffffff;
+  border-color: #3778c1; }
+
 /* ========================
   FIELD
 ========================== */
@@ -4749,7 +4844,7 @@ body {
 
 /* TEXT FIELDS
 ----------------- */
-.js-form-type-textfield input {
+.js-form-type-textfield input, .js-form-type-email input, .js-form-type-password input, .js-form-type-tel input, .js-form-type-number input, .js-form-type-search input, .js-form-type-entity-autocomplete input {
   border: 1px solid #3778c1;
   border-radius: 2px;
   font-size: 1.5rem;
@@ -4758,195 +4853,66 @@ body {
   width: 100%;
   line-height: 1;
   min-height: 38px;
-  max-width: 800px; }
-  .js-form-type-textfield input::-webkit-placeholder {
+  max-width: 300px; }
+  .js-form-type-textfield input::-webkit-placeholder, .js-form-type-email input::-webkit-placeholder, .js-form-type-password input::-webkit-placeholder, .js-form-type-tel input::-webkit-placeholder, .js-form-type-number input::-webkit-placeholder, .js-form-type-search input::-webkit-placeholder, .js-form-type-entity-autocomplete input::-webkit-placeholder {
     opacity: 0.4;
     color: #121212; }
-  .js-form-type-textfield input::-moz-placeholder {
+  .js-form-type-textfield input::-moz-placeholder, .js-form-type-email input::-moz-placeholder, .js-form-type-password input::-moz-placeholder, .js-form-type-tel input::-moz-placeholder, .js-form-type-number input::-moz-placeholder, .js-form-type-search input::-moz-placeholder, .js-form-type-entity-autocomplete input::-moz-placeholder {
     opacity: 0.4;
     color: #121212; }
-  .js-form-type-textfield input:-ms-input-placeholder {
+  .js-form-type-textfield input:-ms-input-placeholder, .js-form-type-email input:-ms-input-placeholder, .js-form-type-password input:-ms-input-placeholder, .js-form-type-tel input:-ms-input-placeholder, .js-form-type-number input:-ms-input-placeholder, .js-form-type-search input:-ms-input-placeholder, .js-form-type-entity-autocomplete input:-ms-input-placeholder {
     opacity: 0.4;
     color: #121212; }
-  .js-form-type-textfield input::-webkit-input-placeholder {
+  .js-form-type-textfield input::-webkit-input-placeholder, .js-form-type-email input::-webkit-input-placeholder, .js-form-type-password input::-webkit-input-placeholder, .js-form-type-tel input::-webkit-input-placeholder, .js-form-type-number input::-webkit-input-placeholder, .js-form-type-search input::-webkit-input-placeholder, .js-form-type-entity-autocomplete input::-webkit-input-placeholder {
     opacity: 0.4;
     color: #121212; }
-  .js-form-type-textfield input:focus::-webkit-placeholder {
+  .js-form-type-textfield input:focus::-webkit-placeholder, .js-form-type-email input:focus::-webkit-placeholder, .js-form-type-password input:focus::-webkit-placeholder, .js-form-type-tel input:focus::-webkit-placeholder, .js-form-type-number input:focus::-webkit-placeholder, .js-form-type-search input:focus::-webkit-placeholder, .js-form-type-entity-autocomplete input:focus::-webkit-placeholder {
     opacity: 0.2;
     color: #121212; }
-  .js-form-type-textfield input:focus::-moz-placeholder {
+  .js-form-type-textfield input:focus::-moz-placeholder, .js-form-type-email input:focus::-moz-placeholder, .js-form-type-password input:focus::-moz-placeholder, .js-form-type-tel input:focus::-moz-placeholder, .js-form-type-number input:focus::-moz-placeholder, .js-form-type-search input:focus::-moz-placeholder, .js-form-type-entity-autocomplete input:focus::-moz-placeholder {
     opacity: 0.2;
     color: #121212; }
-  .js-form-type-textfield input:focus:-ms-input-placeholder {
+  .js-form-type-textfield input:focus:-ms-input-placeholder, .js-form-type-email input:focus:-ms-input-placeholder, .js-form-type-password input:focus:-ms-input-placeholder, .js-form-type-tel input:focus:-ms-input-placeholder, .js-form-type-number input:focus:-ms-input-placeholder, .js-form-type-search input:focus:-ms-input-placeholder, .js-form-type-entity-autocomplete input:focus:-ms-input-placeholder {
     opacity: 0.2;
     color: #121212; }
-  .js-form-type-textfield input:focus::-webkit-input-placeholder {
+  .js-form-type-textfield input:focus::-webkit-input-placeholder, .js-form-type-email input:focus::-webkit-input-placeholder, .js-form-type-password input:focus::-webkit-input-placeholder, .js-form-type-tel input:focus::-webkit-input-placeholder, .js-form-type-number input:focus::-webkit-input-placeholder, .js-form-type-search input:focus::-webkit-input-placeholder, .js-form-type-entity-autocomplete input:focus::-webkit-input-placeholder {
     opacity: 0.2;
     color: #121212; }
 
-.js-form-type-email input {
-  border: 1px solid #3778c1;
-  border-radius: 2px;
-  font-size: 1.5rem;
-  font-family: "PT Sans", sans-serif;
-  padding: 6px;
-  width: 100%;
-  line-height: 1;
-  min-height: 38px;
-  max-width: 800px; }
-  .js-form-type-email input::-webkit-placeholder {
-    opacity: 0.4;
-    color: #121212; }
-  .js-form-type-email input::-moz-placeholder {
-    opacity: 0.4;
-    color: #121212; }
-  .js-form-type-email input:-ms-input-placeholder {
-    opacity: 0.4;
-    color: #121212; }
-  .js-form-type-email input::-webkit-input-placeholder {
-    opacity: 0.4;
-    color: #121212; }
-  .js-form-type-email input:focus::-webkit-placeholder {
-    opacity: 0.2;
-    color: #121212; }
-  .js-form-type-email input:focus::-moz-placeholder {
-    opacity: 0.2;
-    color: #121212; }
-  .js-form-type-email input:focus:-ms-input-placeholder {
-    opacity: 0.2;
-    color: #121212; }
-  .js-form-type-email input:focus::-webkit-input-placeholder {
-    opacity: 0.2;
-    color: #121212; }
+.js-form-type-number input {
+  max-width: 150px; }
 
-.js-form-type-password input {
-  border: 1px solid #3778c1;
-  border-radius: 2px;
-  font-size: 1.5rem;
-  font-family: "PT Sans", sans-serif;
-  padding: 6px;
-  width: 100%;
-  line-height: 1;
-  min-height: 38px;
-  max-width: 800px; }
-  .js-form-type-password input::-webkit-placeholder {
-    opacity: 0.4;
-    color: #121212; }
-  .js-form-type-password input::-moz-placeholder {
-    opacity: 0.4;
-    color: #121212; }
-  .js-form-type-password input:-ms-input-placeholder {
-    opacity: 0.4;
-    color: #121212; }
-  .js-form-type-password input::-webkit-input-placeholder {
-    opacity: 0.4;
-    color: #121212; }
-  .js-form-type-password input:focus::-webkit-placeholder {
-    opacity: 0.2;
-    color: #121212; }
-  .js-form-type-password input:focus::-moz-placeholder {
-    opacity: 0.2;
-    color: #121212; }
-  .js-form-type-password input:focus:-ms-input-placeholder {
-    opacity: 0.2;
-    color: #121212; }
-  .js-form-type-password input:focus::-webkit-input-placeholder {
-    opacity: 0.2;
-    color: #121212; }
+.js-form-type-search input::-webkit-placeholder {
+  opacity: 0.4;
+  color: #121212; }
 
-.js-form-type-tel input {
-  border: 1px solid #3778c1;
-  border-radius: 2px;
-  font-size: 1.5rem;
-  font-family: "PT Sans", sans-serif;
-  padding: 6px;
-  width: 100%;
-  line-height: 1;
-  min-height: 38px;
-  max-width: 800px; }
-  .js-form-type-tel input::-webkit-placeholder {
-    opacity: 0.4;
-    color: #121212; }
-  .js-form-type-tel input::-moz-placeholder {
-    opacity: 0.4;
-    color: #121212; }
-  .js-form-type-tel input:-ms-input-placeholder {
-    opacity: 0.4;
-    color: #121212; }
-  .js-form-type-tel input::-webkit-input-placeholder {
-    opacity: 0.4;
-    color: #121212; }
-  .js-form-type-tel input:focus::-webkit-placeholder {
-    opacity: 0.2;
-    color: #121212; }
-  .js-form-type-tel input:focus::-moz-placeholder {
-    opacity: 0.2;
-    color: #121212; }
-  .js-form-type-tel input:focus:-ms-input-placeholder {
-    opacity: 0.2;
-    color: #121212; }
-  .js-form-type-tel input:focus::-webkit-input-placeholder {
-    opacity: 0.2;
-    color: #121212; }
+.js-form-type-search input::-moz-placeholder {
+  opacity: 0.4;
+  color: #121212; }
 
-.js-form-type-search input {
-  border: 1px solid #3778c1;
-  border-radius: 2px;
-  font-size: 1.5rem;
-  font-family: "PT Sans", sans-serif;
-  padding: 6px;
-  width: 100%;
-  line-height: 1;
-  min-height: 38px;
-  max-width: 800px; }
-  .js-form-type-search input::-webkit-placeholder {
-    opacity: 0.4;
-    color: #121212; }
-  .js-form-type-search input::-moz-placeholder {
-    opacity: 0.4;
-    color: #121212; }
-  .js-form-type-search input:-ms-input-placeholder {
-    opacity: 0.4;
-    color: #121212; }
-  .js-form-type-search input::-webkit-input-placeholder {
-    opacity: 0.4;
-    color: #121212; }
-  .js-form-type-search input:focus::-webkit-placeholder {
-    opacity: 0.2;
-    color: #121212; }
-  .js-form-type-search input:focus::-moz-placeholder {
-    opacity: 0.2;
-    color: #121212; }
-  .js-form-type-search input:focus:-ms-input-placeholder {
-    opacity: 0.2;
-    color: #121212; }
-  .js-form-type-search input:focus::-webkit-input-placeholder {
-    opacity: 0.2;
-    color: #121212; }
-  .js-form-type-search input::-webkit-placeholder {
-    opacity: 0.4;
-    color: #121212; }
-  .js-form-type-search input::-moz-placeholder {
-    opacity: 0.4;
-    color: #121212; }
-  .js-form-type-search input:-ms-input-placeholder {
-    opacity: 0.4;
-    color: #121212; }
-  .js-form-type-search input::-webkit-input-placeholder {
-    opacity: 0.4;
-    color: #121212; }
-  .js-form-type-search input:focus::-webkit-placeholder {
-    opacity: 0.2;
-    color: #121212; }
-  .js-form-type-search input:focus::-moz-placeholder {
-    opacity: 0.2;
-    color: #121212; }
-  .js-form-type-search input:focus:-ms-input-placeholder {
-    opacity: 0.2;
-    color: #121212; }
-  .js-form-type-search input:focus::-webkit-input-placeholder {
-    opacity: 0.2;
-    color: #121212; }
+.js-form-type-search input:-ms-input-placeholder {
+  opacity: 0.4;
+  color: #121212; }
+
+.js-form-type-search input::-webkit-input-placeholder {
+  opacity: 0.4;
+  color: #121212; }
+
+.js-form-type-search input:focus::-webkit-placeholder {
+  opacity: 0.2;
+  color: #121212; }
+
+.js-form-type-search input:focus::-moz-placeholder {
+  opacity: 0.2;
+  color: #121212; }
+
+.js-form-type-search input:focus:-ms-input-placeholder {
+  opacity: 0.2;
+  color: #121212; }
+
+.js-form-type-search input:focus::-webkit-input-placeholder {
+  opacity: 0.2;
+  color: #121212; }
 
 .js-form-type-textarea textarea {
   border: 1px solid #3778c1;
@@ -4957,7 +4923,7 @@ body {
   width: 100%;
   line-height: 1;
   min-height: 38px;
-  max-width: 800px; }
+  max-width: 300px; }
   .js-form-type-textarea textarea::-webkit-placeholder {
     opacity: 0.4;
     color: #121212; }
@@ -5693,6 +5659,91 @@ header.content-header {
 /* ========================
   VIEWS
 ========================== */
+/* GLOBAL VIEWS
+---------------- */
+.views-ui-display-tab-bucket .views-display-setting {
+  font-size: 1.4rem; }
+
+.js .views-edit-view .dropbutton-wrapper .dropbutton .dropbutton-action > * {
+  font-size: 1.3rem;
+  text-transform: none; }
+
+.view-preview-form .js-form-type-textfield, .view-preview-form .js-form-type-email, .view-preview-form .js-form-type-password, .view-preview-form .js-form-type-tel, .view-preview-form .js-form-type-number, .view-preview-form .js-form-type-search, .view-preview-form .js-form-type-entity-autocomplete {
+  max-width: 300px; }
+
+@media (min-width: 600px) {
+  .view-preview-form .form-actions {
+    margin-top: 55px; } }
+
+.views-ui-dialog .views-override.form--inline .js-form-item-override-dropdown {
+  max-width: 175px; }
+
+.views-ui-dialog .views-override.form--inline .js-form-item-override-controls-options-search {
+  max-width: 240px; }
+
+.views-ui-dialog .ui-dialog-buttonset button {
+  margin-right: 2rem !important; }
+  .views-ui-dialog .ui-dialog-buttonset button:not(.button--primary):not(.button--danger) {
+    background-image: none;
+    background-color: #3778c1;
+    border: none;
+    border-radius: 0;
+    color: #ffffff;
+    line-height: 1.15;
+    padding: 1.15rem 1.5rem 1rem;
+    display: inline-block;
+    vertical-align: middle;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-left: 0;
+    margin-right: 0;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    -moz-transition: color 0.3s ease, background-color 0.3s ease;
+    -webkit-transition: color 0.3s ease, background-color 0.3s ease;
+    -webkit-transform: translateZ(0);
+    text-shadow: none;
+    background: #3778c1;
+    color: #ffffff;
+    height: auto;
+    min-width: 115px;
+    margin-top: 0;
+    background: #797501;
+    color: #ffffff;
+    border-color: #797501; }
+    .views-ui-dialog .ui-dialog-buttonset button:not(.button--primary):not(.button--danger):hover, .views-ui-dialog .ui-dialog-buttonset button:not(.button--primary):not(.button--danger):focus {
+      color: #121212;
+      background-color: #cccccc;
+      background-image: none;
+      outline: none;
+      border: none;
+      padding: 1.15rem 1.5rem 1rem;
+      box-shadow: none; }
+    .views-ui-dialog .ui-dialog-buttonset button:not(.button--primary):not(.button--danger):active {
+      color: #121212;
+      background-color: #b3b3b3;
+      border: none;
+      box-shadow: none; }
+    .views-ui-dialog .ui-dialog-buttonset button:not(.button--primary):not(.button--danger):hover, .views-ui-dialog .ui-dialog-buttonset button:not(.button--primary):not(.button--danger):focus {
+      background: #cccccc;
+      color: #121212;
+      border-color: #cccccc; }
+    .views-ui-dialog .ui-dialog-buttonset button:not(.button--primary):not(.button--danger):active {
+      background: #b3b3b3;
+      color: #121212;
+      border-color: #b3b3b3; }
+    .views-ui-dialog .ui-dialog-buttonset button:not(.button--primary):not(.button--danger):hover, .views-ui-dialog .ui-dialog-buttonset button:not(.button--primary):not(.button--danger):focus {
+      background: #cccccc;
+      color: #121212;
+      border-color: #cccccc; }
+    .views-ui-dialog .ui-dialog-buttonset button:not(.button--primary):not(.button--danger):active {
+      background: #b3b3b3;
+      color: #121212;
+      border-color: #b3b3b3; }
+
 /* MAIN CONTENT VIEW
 ----------------------- */
 .view-content.view-display-id-page_1 .view-filters, .view-display-id-media_page_list .view-filters, .view-files.view-display-id-page_1 .view-filters {
@@ -5708,7 +5759,7 @@ header.content-header {
     clear: none;
     float: left; }
     .view-content.view-display-id-page_1 .view-filters .form-actions input, .view-display-id-media_page_list .view-filters .form-actions input, .view-files.view-display-id-page_1 .view-filters .form-actions input {
-      margin-top: 18px !important; }
+      margin-top: 22px !important; }
 
 .view-content.view-display-id-page_1 .view-content, .view-display-id-media_page_list .view-content, .view-files.view-display-id-page_1 .view-content {
   position: relative; }

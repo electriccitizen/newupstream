@@ -135,7 +135,7 @@ $buttonPadding: 1.15rem 1.5rem 1rem;
 .button{
 	@include button;
 }
-.button.form-submit{
+.form-submit{
 	@include submitButton;
 }
 .button--danger,#edit-reset,.button[value="Remove"]{
@@ -160,6 +160,34 @@ $buttonPadding: 1.15rem 1.5rem 1rem;
 		color: $buttonTextActive !important;
 	}
 }//end preview
+
+.button--small{
+	@include outlineButton($link);
+	background: transparent;
+	border: 1px solid $primaryButtonBack;
+	color: $baseText;
+	font-weight: $regular;
+	font-size: 1.2rem;
+	border-radius: 2px;
+	&.button--small-override{
+		font-size: 1.8rem;
+		border-width: 2px;
+		font-weight: $heavy;
+		margin-bottom: $spaceSm;
+		border-radius: 4px;
+	}
+	&:hover,&:focus{
+		background: $buttonBackHover;
+		border-color: $buttonBackHover;
+		color: $buttonTextHover;
+		@include transAll(.3s);
+	}
+	&:active{
+		background: $buttonBackActive;
+		border-color: $buttonBackActive;
+		color: $buttonTextActive;
+	}
+}//end button--small
 
 .button--primary {
 	@include button;
@@ -198,3 +226,41 @@ $buttonPadding: 1.15rem 1.5rem 1rem;
 		@include altButton;
 	}
 }
+
+%dropbutton{
+	input,.button,a,button{
+		border-radius: 0 !important;
+		box-shadow: 0;
+		background: $siteBack;
+		text-shadow: 0;
+		border-color: $borderRule;
+		&:hover,&:focus{
+			background-color: $whiteBlue !important;
+			background-image: none !important;
+			border-radius: 0 !important;
+			box-shadow: 0;
+		}
+		&:active{
+			background: $lightGrey;
+			border-radius: 0;
+			box-shadow: 0;
+		}
+	}
+}
+
+//dropbuttons
+.js .dropbutton-multiple,.js .dropbutton-wrapper,.js .dropbutton-single{
+	.dropbutton-widget{
+		border-radius: 0;
+		text-shadow: none;
+		background: $siteBack;
+		border-color: $borderRule;
+		.dropbutton-action,.dropbutton-toggle{
+			@extend %dropbutton;
+		}
+	}//end dropbutton widget
+	.dropbutton-action{
+		@extend %dropbutton;
+	}
+}//end dropbutton
+

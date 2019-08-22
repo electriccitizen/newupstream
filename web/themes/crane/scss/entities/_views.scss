@@ -2,6 +2,58 @@
   VIEWS
 ========================== */
 
+
+/* GLOBAL VIEWS
+---------------- */
+.views-ui-display-tab-bucket .views-display-setting{
+	font-size: 1.4rem;
+}
+
+.js .views-edit-view{
+	.dropbutton-wrapper{
+		.dropbutton{
+			.dropbutton-action{
+				& > *{
+					font-size: 1.3rem;
+					text-transform: none;
+				}
+			}
+		}
+	}
+}
+
+.view-preview-form{
+	.js-form-type-textfield{
+		max-width: 300px;
+	}
+	.form-actions{
+		@include smallTab{
+			margin-top: 55px;
+		}
+	}
+}
+
+//views modal buttons
+.views-ui-dialog{
+	.views-override.form--inline{
+		.js-form-item-override-dropdown{
+			max-width: 175px;
+		}
+		.js-form-item-override-controls-options-search{
+			max-width: 240px;
+		}
+	}
+	.ui-dialog-buttonset{
+		button{
+			margin-right: 2rem !important;
+			&:not(.button--primary):not(.button--danger){
+				@include cautionButton;
+			}
+		}
+	}
+}//end views ui dialog
+
+
 /* MAIN CONTENT VIEW
 ----------------------- */
 .view-content.view-display-id-page_1{
@@ -16,7 +68,7 @@
 			clear: none;
   		float: left;
   		input{
-  			margin-top: 18px !important;
+  			margin-top: 22px !important;
   		}
 		}
 	}//end views filters
