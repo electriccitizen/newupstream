@@ -242,7 +242,7 @@ $plBorder: #333333;
 /* SITE HEADER
 ------------------ */
 .pl .layout-container > header{
-	@include mobileStop{
+	@include onlyMobile{
 		.sf-horizontal{
 			display: none;
 		}

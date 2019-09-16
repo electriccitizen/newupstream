@@ -20,18 +20,19 @@
 	}
 	.form-actions{
 		@include auto;
+		@include safeFlex(row,wrap,start,start);
 		@include smallTab{
-			margin: 8px 0px 0px 0px;
+			margin: 7px 0 0 -10px;
 		}
 		input.form-submit.button{
 			@include submitButton;
 			@include smallTab{
-				margin: 0px 10px;
+				margin: 0 10px;
 			}
 			&#edit-reset{
 				@include warningButton;
 				@include smallTab{
-					margin: 0px 10px;
+					margin: 0 10px;
 				}
 			}
 		}

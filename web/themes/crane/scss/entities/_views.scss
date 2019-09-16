@@ -46,8 +46,10 @@
 	.ui-dialog-buttonset{
 		button{
 			margin-right: 2rem !important;
+			min-width: 185px;
 			&:not(.button--primary):not(.button--danger){
 				@include cautionButton;
+				min-width: 185px;
 			}
 		}
 	}

@@ -12,7 +12,7 @@
 		background: $menuBlockTitleBack;
 		color: $menuBlockTitle;
 		max-width: none;
-		@include mobileStop{
+		@include onlyMobile{
 			padding: 2rem;
 			@include edgeToEdge;
 		}	 
@@ -31,7 +31,7 @@
 	#page-menu-wrapper{
 		display: none;
 		background: $menuBack;
-		@include mobileStop{
+		@include onlyMobile{
 			padding-left: $siteMarginMobile;
 			padding-right: $siteMarginMobile;
 			max-width: 440px;

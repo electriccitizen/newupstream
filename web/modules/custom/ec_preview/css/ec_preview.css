@@ -1,7 +1,9 @@
 /* PREVIEW CONTAINER */
+#responsive-preview.responsive-preview.active{
+	z-index: 600;
+}
+
 #responsive-preview.responsive-preview.active #responsive-preview-frame-container {
-  height: 80%;
-  width: 80%;
   left: 50% !important;
   -webit-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
@@ -13,8 +15,18 @@
 
 /* PREVIEW FRAME */
 .responsive-preview-active #responsive-preview-frame {
-  width: 100% !important;
-  height: 100% !important;
+  width: 90vw !important;
+  height: -webkit-calc(100vh - 60px) !important;
+  height: -moz-calc(100vh - 60px) !important;
+  height: -o-calc(100vh - 60px) !important;
+  height: calc(100vh - 60px) !important;
+}
+
+.role-administrator #responsive-preview #responsive-preview-frame{
+	height: -webkit-calc(100vh - 128px) !important;
+  height: -moz-calc(100vh - 128px) !important;
+  height: -o-calc(100vh - 128px) !important;
+  height: calc(100vh - 128px) !important;
 }
 
 /* PREVIEW CONTROLS */
@@ -28,18 +40,15 @@
 	border-bottom: 1px solid #262626;
 }
 #responsive-preview-close:hover,#responsive-preview-close:focus{
-	background: #797501;
-	color: #fff;
+	background: #cccccc;
+}
+#responsive-preview-close:active{
+	background: #979797;
 }
 #responsive-preview-close:before{
 	height: 16px;
 	width: 20px;
 	background: url('../icons/close-black.svg') no-repeat;
-	background-size: 16px 16px;
-	background-position: center;
-}
-#responsive-preview-close:hover::before,#responsive-preview-close:focus::before{
-	background: url('../icons/close-white.svg') no-repeat;
 	background-size: 16px 16px;
 	background-position: center;
 }
@@ -53,17 +62,3 @@
 	background: #ccc;
 	color: #121212;
 }
-@media screen and (min-width: 760px){
-	#edit-ec-preview.fixed-preview{
-		position: fixed;
-		top: 30%;
-		right: -4.5rem;
-		z-index: 499;
-		-webkit-transform: rotate(90deg);
-		-ms-transform: rotate(90deg);
-		transform: rotate(90deg);
-		padding: 30px 3rem 15px;
-		font-size: 1.8rem;
-	}
-}
-

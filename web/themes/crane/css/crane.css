@@ -4265,6 +4265,23 @@ body {
 /* ========================
   BUTTONS
 ========================== */
+.js .dropbutton-multiple .dropbutton-widget .dropbutton-action input, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle input, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-action input, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle input, .js .dropbutton-single .dropbutton-widget .dropbutton-action input, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle input, .js .dropbutton-multiple .dropbutton-action input, .js .dropbutton-wrapper .dropbutton-action input, .js .dropbutton-single .dropbutton-action input, .js .views-edit-view .dropbutton-multiple .dropbutton-widget .dropbutton-action input, .js .views-edit-view .dropbutton-multiple .dropbutton-widget .dropbutton-toggle input, .js .views-edit-view .dropbutton-wrapper .dropbutton-widget .dropbutton-action input, .js .views-edit-view .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle input, .js .views-edit-view .dropbutton-single .dropbutton-widget .dropbutton-action input, .js .views-edit-view .dropbutton-single .dropbutton-widget .dropbutton-toggle input, .js .views-edit-view .dropbutton-multiple .dropbutton-action input, .js .views-edit-view .dropbutton-wrapper .dropbutton-action input, .js .views-edit-view .dropbutton-single .dropbutton-action input, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle .button, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle .button, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle .button, .js .dropbutton-multiple .dropbutton-action .button, .js .dropbutton-wrapper .dropbutton-action .button, .js .dropbutton-single .dropbutton-action .button, .js .dropbutton-multiple .dropbutton-widget .dropbutton-action a, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle a, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-action a, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle a, .js .dropbutton-single .dropbutton-widget .dropbutton-action a, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle a, .js .dropbutton-multiple .dropbutton-action a, .js .dropbutton-wrapper .dropbutton-action a, .js .dropbutton-single .dropbutton-action a, .js .views-edit-view .dropbutton-multiple .dropbutton-widget .dropbutton-action a, .js .views-edit-view .dropbutton-multiple .dropbutton-widget .dropbutton-toggle a, .js .views-edit-view .dropbutton-wrapper .dropbutton-widget .dropbutton-action a, .js .views-edit-view .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle a, .js .views-edit-view .dropbutton-single .dropbutton-widget .dropbutton-action a, .js .views-edit-view .dropbutton-single .dropbutton-widget .dropbutton-toggle a, .js .views-edit-view .dropbutton-multiple .dropbutton-action a, .js .views-edit-view .dropbutton-wrapper .dropbutton-action a, .js .views-edit-view .dropbutton-single .dropbutton-action a, .js .dropbutton-multiple .dropbutton-widget .dropbutton-action button, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle button, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-action button, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle button, .js .dropbutton-single .dropbutton-widget .dropbutton-action button, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle button, .js .dropbutton-multiple .dropbutton-action button, .js .dropbutton-wrapper .dropbutton-action button, .js .dropbutton-single .dropbutton-action button, .js .views-edit-view .dropbutton-multiple .dropbutton-widget .dropbutton-action button, .js .views-edit-view .dropbutton-multiple .dropbutton-widget .dropbutton-toggle button, .js .views-edit-view .dropbutton-wrapper .dropbutton-widget .dropbutton-action button, .js .views-edit-view .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle button, .js .views-edit-view .dropbutton-single .dropbutton-widget .dropbutton-action button, .js .views-edit-view .dropbutton-single .dropbutton-widget .dropbutton-toggle button, .js .views-edit-view .dropbutton-multiple .dropbutton-action button, .js .views-edit-view .dropbutton-wrapper .dropbutton-action button, .js .views-edit-view .dropbutton-single .dropbutton-action button {
+  border-radius: 0 !important;
+  box-shadow: none;
+  background: #ffffff;
+  text-shadow: none;
+  border-color: #3778c1;
+  font-size: 1.4rem; }
+  .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle input:hover, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle input:hover, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle input:hover, .js .dropbutton-multiple .dropbutton-action input:hover, .js .dropbutton-wrapper .dropbutton-action input:hover, .js .dropbutton-single .dropbutton-action input:hover, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle input:focus, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle input:focus, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle input:focus, .js .dropbutton-multiple .dropbutton-action input:focus, .js .dropbutton-wrapper .dropbutton-action input:focus, .js .dropbutton-single .dropbutton-action input:focus, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle .button:hover, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle .button:hover, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle .button:hover, .js .dropbutton-multiple .dropbutton-action .button:hover, .js .dropbutton-wrapper .dropbutton-action .button:hover, .js .dropbutton-single .dropbutton-action .button:hover, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle .button:focus, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle .button:focus, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle .button:focus, .js .dropbutton-multiple .dropbutton-action .button:focus, .js .dropbutton-wrapper .dropbutton-action .button:focus, .js .dropbutton-single .dropbutton-action .button:focus, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle a:hover, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle a:hover, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle a:hover, .js .dropbutton-multiple .dropbutton-action a:hover, .js .dropbutton-wrapper .dropbutton-action a:hover, .js .dropbutton-single .dropbutton-action a:hover, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle a:focus, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle a:focus, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle a:focus, .js .dropbutton-multiple .dropbutton-action a:focus, .js .dropbutton-wrapper .dropbutton-action a:focus, .js .dropbutton-single .dropbutton-action a:focus, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle button:hover, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle button:hover, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle button:hover, .js .dropbutton-multiple .dropbutton-action button:hover, .js .dropbutton-wrapper .dropbutton-action button:hover, .js .dropbutton-single .dropbutton-action button:hover, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle button:focus, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle button:focus, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle button:focus, .js .dropbutton-multiple .dropbutton-action button:focus, .js .dropbutton-wrapper .dropbutton-action button:focus, .js .dropbutton-single .dropbutton-action button:focus {
+    background-color: #f6f6f6 !important;
+    background-image: none !important;
+    border-radius: 0 !important;
+    box-shadow: none; }
+  .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle input:active, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle input:active, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle input:active, .js .dropbutton-multiple .dropbutton-action input:active, .js .dropbutton-wrapper .dropbutton-action input:active, .js .dropbutton-single .dropbutton-action input:active, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle .button:active, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle .button:active, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle .button:active, .js .dropbutton-multiple .dropbutton-action .button:active, .js .dropbutton-wrapper .dropbutton-action .button:active, .js .dropbutton-single .dropbutton-action .button:active, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle a:active, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle a:active, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle a:active, .js .dropbutton-multiple .dropbutton-action a:active, .js .dropbutton-wrapper .dropbutton-action a:active, .js .dropbutton-single .dropbutton-action a:active, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle button:active, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle button:active, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle button:active, .js .dropbutton-multiple .dropbutton-action button:active, .js .dropbutton-wrapper .dropbutton-action button:active, .js .dropbutton-single .dropbutton-action button:active {
+    background: #ededed;
+    border-radius: 0;
+    box-shadow: none; }
+
 .button.js-hide {
   display: none !important; }
 
@@ -4281,11 +4298,12 @@ body {
   text-decoration: none;
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: .04em;
+  letter-spacing: .02em;
   font-weight: 700;
   font-size: 1.5rem;
   margin-left: 0;
   margin-right: 0;
+  margin-bottom: 3rem;
   transition: color 0.3s ease, background-color 0.3s ease;
   -moz-transition: color 0.3s ease, background-color 0.3s ease;
   -webkit-transition: color 0.3s ease, background-color 0.3s ease;
@@ -4318,11 +4336,12 @@ body {
   text-decoration: none;
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: .04em;
+  letter-spacing: .02em;
   font-weight: 700;
   font-size: 1.5rem;
   margin-left: 0;
   margin-right: 0;
+  margin-bottom: 3rem;
   transition: color 0.3s ease, background-color 0.3s ease;
   -moz-transition: color 0.3s ease, background-color 0.3s ease;
   -webkit-transition: color 0.3s ease, background-color 0.3s ease;
@@ -4330,9 +4349,7 @@ body {
   text-shadow: none;
   background: #3778c1;
   color: #ffffff;
-  height: auto;
-  min-width: 115px;
-  margin-top: 0; }
+  min-width: 120px; }
   .form-submit:hover, .form-submit:focus {
     color: #121212;
     background-color: #cccccc;
@@ -4355,7 +4372,7 @@ body {
     color: #121212;
     border-color: #b3b3b3; }
 
-.button--danger, #edit-reset, .button[value="Remove"] {
+.button--danger, #edit-reset, a.button--danger, .button[value="Remove"], .button[value="Delete"], .button[value="Reset to alphabetical"] {
   background-image: none;
   background-color: #3778c1;
   border: none;
@@ -4368,11 +4385,12 @@ body {
   text-decoration: none;
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: .04em;
+  letter-spacing: .02em;
   font-weight: 700;
   font-size: 1.5rem;
   margin-left: 0;
   margin-right: 0;
+  margin-bottom: 3rem;
   transition: color 0.3s ease, background-color 0.3s ease;
   -moz-transition: color 0.3s ease, background-color 0.3s ease;
   -webkit-transition: color 0.3s ease, background-color 0.3s ease;
@@ -4380,13 +4398,14 @@ body {
   text-shadow: none;
   background: #3778c1;
   color: #ffffff;
-  height: auto;
-  min-width: 115px;
-  margin-top: 0;
+  min-width: 120px;
   background: #bf0e0e;
   color: #ffffff;
-  border-color: #bf0e0e; }
-  .button--danger:hover, .button--danger:focus, #edit-reset:hover, #edit-reset:focus, .button[value="Remove"]:hover, .button[value="Remove"]:focus {
+  border-color: #bf0e0e;
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%; }
+  .button--danger:hover, .button--danger:focus, #edit-reset:hover, #edit-reset:focus, a.button--danger:hover, a.button--danger:focus, .button[value="Remove"]:hover, .button[value="Remove"]:focus, .button[value="Delete"]:hover, .button[value="Delete"]:focus, .button[value="Reset to alphabetical"]:hover, .button[value="Reset to alphabetical"]:focus {
     color: #121212;
     background-color: #cccccc;
     background-image: none;
@@ -4394,29 +4413,32 @@ body {
     border: none;
     padding: 1.15rem 1.5rem 1rem;
     box-shadow: none; }
-  .button--danger:active, #edit-reset:active, .button[value="Remove"]:active {
+  .button--danger:active, #edit-reset:active, a.button--danger:active, .button[value="Remove"]:active, .button[value="Delete"]:active, .button[value="Reset to alphabetical"]:active {
     color: #121212;
     background-color: #b3b3b3;
     border: none;
     box-shadow: none; }
-  .button--danger:hover, .button--danger:focus, #edit-reset:hover, #edit-reset:focus, .button[value="Remove"]:hover, .button[value="Remove"]:focus {
+  .button--danger:hover, .button--danger:focus, #edit-reset:hover, #edit-reset:focus, a.button--danger:hover, a.button--danger:focus, .button[value="Remove"]:hover, .button[value="Remove"]:focus, .button[value="Delete"]:hover, .button[value="Delete"]:focus, .button[value="Reset to alphabetical"]:hover, .button[value="Reset to alphabetical"]:focus {
     background: #cccccc;
     color: #121212;
     border-color: #cccccc; }
-  .button--danger:active, #edit-reset:active, .button[value="Remove"]:active {
+  .button--danger:active, #edit-reset:active, a.button--danger:active, .button[value="Remove"]:active, .button[value="Delete"]:active, .button[value="Reset to alphabetical"]:active {
     background: #b3b3b3;
     color: #121212;
     border-color: #b3b3b3; }
-  .button--danger:hover, .button--danger:focus, #edit-reset:hover, #edit-reset:focus, .button[value="Remove"]:hover, .button[value="Remove"]:focus {
+  .button--danger:hover, .button--danger:focus, #edit-reset:hover, #edit-reset:focus, a.button--danger:hover, a.button--danger:focus, .button[value="Remove"]:hover, .button[value="Remove"]:focus, .button[value="Delete"]:hover, .button[value="Delete"]:focus, .button[value="Reset to alphabetical"]:hover, .button[value="Reset to alphabetical"]:focus {
     background: #cccccc;
     color: #121212;
     border-color: #cccccc; }
-  .button--danger:active, #edit-reset:active, .button[value="Remove"]:active {
+  .button--danger:active, #edit-reset:active, a.button--danger:active, .button[value="Remove"]:active, .button[value="Delete"]:active, .button[value="Reset to alphabetical"]:active {
     background: #b3b3b3;
     color: #121212;
     border-color: #b3b3b3; }
+  @media (min-width: 600px) {
+    .button--danger, #edit-reset, a.button--danger, .button[value="Remove"], .button[value="Delete"], .button[value="Reset to alphabetical"] {
+      width: auto; } }
 
-.button[data-drupal-selector="edit-cancel"], .button[data-drupal-selector="edit-actions-cancel"], .button[value="Cancel"] {
+.button[data-drupal-selector="edit-cancel"], .button[data-drupal-selector="edit-actions-cancel"] {
   background-image: none;
   background-color: #3778c1;
   border: none;
@@ -4429,11 +4451,12 @@ body {
   text-decoration: none;
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: .04em;
+  letter-spacing: .02em;
   font-weight: 700;
   font-size: 1.5rem;
   margin-left: 0;
   margin-right: 0;
+  margin-bottom: 3rem;
   transition: color 0.3s ease, background-color 0.3s ease;
   -moz-transition: color 0.3s ease, background-color 0.3s ease;
   -webkit-transition: color 0.3s ease, background-color 0.3s ease;
@@ -4441,13 +4464,14 @@ body {
   text-shadow: none;
   background: #3778c1;
   color: #ffffff;
-  height: auto;
-  min-width: 115px;
-  margin-top: 0;
+  min-width: 120px;
   background: #797501;
   color: #ffffff;
-  border-color: #797501; }
-  .button[data-drupal-selector="edit-cancel"]:hover, .button[data-drupal-selector="edit-cancel"]:focus, .button[data-drupal-selector="edit-actions-cancel"]:hover, .button[data-drupal-selector="edit-actions-cancel"]:focus, .button[value="Cancel"]:hover, .button[value="Cancel"]:focus {
+  border-color: #797501;
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%; }
+  .button[data-drupal-selector="edit-cancel"]:hover, .button[data-drupal-selector="edit-cancel"]:focus, .button[data-drupal-selector="edit-actions-cancel"]:hover, .button[data-drupal-selector="edit-actions-cancel"]:focus {
     color: #121212;
     background-color: #cccccc;
     background-image: none;
@@ -4455,29 +4479,32 @@ body {
     border: none;
     padding: 1.15rem 1.5rem 1rem;
     box-shadow: none; }
-  .button[data-drupal-selector="edit-cancel"]:active, .button[data-drupal-selector="edit-actions-cancel"]:active, .button[value="Cancel"]:active {
+  .button[data-drupal-selector="edit-cancel"]:active, .button[data-drupal-selector="edit-actions-cancel"]:active {
     color: #121212;
     background-color: #b3b3b3;
     border: none;
     box-shadow: none; }
-  .button[data-drupal-selector="edit-cancel"]:hover, .button[data-drupal-selector="edit-cancel"]:focus, .button[data-drupal-selector="edit-actions-cancel"]:hover, .button[data-drupal-selector="edit-actions-cancel"]:focus, .button[value="Cancel"]:hover, .button[value="Cancel"]:focus {
+  .button[data-drupal-selector="edit-cancel"]:hover, .button[data-drupal-selector="edit-cancel"]:focus, .button[data-drupal-selector="edit-actions-cancel"]:hover, .button[data-drupal-selector="edit-actions-cancel"]:focus {
     background: #cccccc;
     color: #121212;
     border-color: #cccccc; }
-  .button[data-drupal-selector="edit-cancel"]:active, .button[data-drupal-selector="edit-actions-cancel"]:active, .button[value="Cancel"]:active {
+  .button[data-drupal-selector="edit-cancel"]:active, .button[data-drupal-selector="edit-actions-cancel"]:active {
     background: #b3b3b3;
     color: #121212;
     border-color: #b3b3b3; }
-  .button[data-drupal-selector="edit-cancel"]:hover, .button[data-drupal-selector="edit-cancel"]:focus, .button[data-drupal-selector="edit-actions-cancel"]:hover, .button[data-drupal-selector="edit-actions-cancel"]:focus, .button[value="Cancel"]:hover, .button[value="Cancel"]:focus {
+  .button[data-drupal-selector="edit-cancel"]:hover, .button[data-drupal-selector="edit-cancel"]:focus, .button[data-drupal-selector="edit-actions-cancel"]:hover, .button[data-drupal-selector="edit-actions-cancel"]:focus {
     background: #cccccc;
     color: #121212;
     border-color: #cccccc; }
-  .button[data-drupal-selector="edit-cancel"]:active, .button[data-drupal-selector="edit-actions-cancel"]:active, .button[value="Cancel"]:active {
+  .button[data-drupal-selector="edit-cancel"]:active, .button[data-drupal-selector="edit-actions-cancel"]:active {
     background: #b3b3b3;
     color: #121212;
     border-color: #b3b3b3; }
+  @media (min-width: 600px) {
+    .button[data-drupal-selector="edit-cancel"], .button[data-drupal-selector="edit-actions-cancel"] {
+      width: auto; } }
 
-#edit-preview {
+.button--small, .button--primary.button--small, .draggable .form-submit:not(.image-button), .draggable:not([class*="paragraph"]) td .form-submit {
   background-image: none;
   background-color: #3778c1;
   border: none;
@@ -4490,81 +4517,12 @@ body {
   text-decoration: none;
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: .04em;
+  letter-spacing: .02em;
   font-weight: 700;
   font-size: 1.5rem;
   margin-left: 0;
   margin-right: 0;
-  transition: color 0.3s ease, background-color 0.3s ease;
-  -moz-transition: color 0.3s ease, background-color 0.3s ease;
-  -webkit-transition: color 0.3s ease, background-color 0.3s ease;
-  -webkit-transform: translateZ(0);
-  text-shadow: none;
-  background: #3778c1;
-  color: #ffffff;
-  height: auto;
-  min-width: 115px;
-  margin-top: 0;
-  background: #018901;
-  color: #ffffff;
-  background: #018901 !important;
-  color: #ffffff !important; }
-  #edit-preview:hover, #edit-preview:focus {
-    color: #121212;
-    background-color: #cccccc;
-    background-image: none;
-    outline: none;
-    border: none;
-    padding: 1.15rem 1.5rem 1rem;
-    box-shadow: none; }
-  #edit-preview:active {
-    color: #121212;
-    background-color: #b3b3b3;
-    border: none;
-    box-shadow: none; }
-  #edit-preview:hover, #edit-preview:focus {
-    background: #cccccc;
-    color: #121212;
-    border-color: #cccccc; }
-  #edit-preview:active {
-    background: #b3b3b3;
-    color: #121212;
-    border-color: #b3b3b3; }
-  #edit-preview:hover, #edit-preview:focus {
-    background: #cccccc;
-    color: #121212;
-    border-color: #cccccc; }
-  #edit-preview:active {
-    background: #b3b3b3;
-    color: #121212;
-    border-color: #b3b3b3; }
-  #edit-preview:hover, #edit-preview:focus {
-    background: #cccccc !important;
-    border-color: #cccccc !important;
-    color: #121212 !important; }
-  #edit-preview:active {
-    background: #b3b3b3;
-    border-color: #b3b3b3 !important;
-    color: #121212 !important; }
-
-.button--small, .button--primary.button--small {
-  background-image: none;
-  background-color: #3778c1;
-  border: none;
-  border-radius: 0;
-  color: #ffffff;
-  line-height: 1.15;
-  padding: 1.15rem 1.5rem 1rem;
-  display: inline-block;
-  vertical-align: middle;
-  text-decoration: none;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: .04em;
-  font-weight: 700;
-  font-size: 1.5rem;
-  margin-left: 0;
-  margin-right: 0;
+  margin-bottom: 3rem;
   transition: color 0.3s ease, background-color 0.3s ease;
   -moz-transition: color 0.3s ease, background-color 0.3s ease;
   -webkit-transition: color 0.3s ease, background-color 0.3s ease;
@@ -4573,14 +4531,15 @@ body {
   background: transparent;
   border: 1px solid #3778c1;
   color: #3778c1;
-  border-radius: 3px;
-  background: transparent;
-  border: 1px solid #3778c1;
-  color: #121212;
+  background: #ffffff;
+  color: #3778c1;
   font-weight: 400;
   font-size: 1.2rem;
-  border-radius: 2px; }
-  .button--small:hover, .button--small:focus {
+  margin-bottom: 0;
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  border-radius: 0; }
+  .button--small:hover, .draggable .form-submit:hover:not(.image-button), .draggable:not([class*="paragraph"]) td .form-submit:hover, .button--small:focus, .draggable .form-submit:focus:not(.image-button), .draggable:not([class*="paragraph"]) td .form-submit:focus {
     color: #121212;
     background-color: #cccccc;
     background-image: none;
@@ -4588,26 +4547,38 @@ body {
     border: none;
     padding: 1.15rem 1.5rem 1rem;
     box-shadow: none; }
-  .button--small:active {
+  .button--small:active, .draggable .form-submit:active:not(.image-button), .draggable:not([class*="paragraph"]) td .form-submit:active {
     color: #121212;
     background-color: #b3b3b3;
     border: none;
     box-shadow: none; }
-  .button--small:hover, .button--small:focus {
+  .button--small:hover, .draggable .form-submit:hover:not(.image-button), .draggable:not([class*="paragraph"]) td .form-submit:hover, .button--small:focus, .draggable .form-submit:focus:not(.image-button), .draggable:not([class*="paragraph"]) td .form-submit:focus {
     background: #cccccc;
     color: #121212;
     border-color: #cccccc; }
-  .button--small:active {
+  .button--small:active, .draggable .form-submit:active:not(.image-button), .draggable:not([class*="paragraph"]) td .form-submit:active {
     background: #b3b3b3;
     color: #121212;
     border-color: #b3b3b3; }
-  .button--small.button--small-override {
+  .button--small.button--small-override, .draggable .button--small-override.form-submit:not(.image-button), .draggable:not([class*="paragraph"]) td .button--small-override.form-submit {
     font-size: 1.8rem;
     border-width: 2px;
     font-weight: 700;
     margin-bottom: 2rem;
     border-radius: 4px; }
-  .button--small:hover, .button--small:focus {
+    .button--small.button--small-override:hover, .draggable .button--small-override.form-submit:hover:not(.image-button), .draggable:not([class*="paragraph"]) td .button--small-override.form-submit:hover, .button--small.button--small-override:focus, .draggable .button--small-override.form-submit:focus:not(.image-button), .draggable:not([class*="paragraph"]) td .button--small-override.form-submit:focus {
+      background: #cccccc;
+      color: #121212;
+      border: 1px solid #cccccc;
+      transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -webkit-transition: all 0.3s ease;
+      -webkit-transform: translateZ(0); }
+    .button--small.button--small-override:active, .draggable .button--small-override.form-submit:active:not(.image-button), .draggable:not([class*="paragraph"]) td .button--small-override.form-submit:active {
+      background: #b3b3b3;
+      color: #121212;
+      border: 1px solid #b3b3b3; }
+  .button--small:hover, .draggable .form-submit:hover:not(.image-button), .draggable:not([class*="paragraph"]) td .form-submit:hover, .button--small:focus, .draggable .form-submit:focus:not(.image-button), .draggable:not([class*="paragraph"]) td .form-submit:focus {
     background: #cccccc;
     border-color: #cccccc;
     color: #121212;
@@ -4615,7 +4586,7 @@ body {
     -moz-transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
     -webkit-transform: translateZ(0); }
-  .button--small:active {
+  .button--small:active, .draggable .form-submit:active:not(.image-button), .draggable:not([class*="paragraph"]) td .form-submit:active {
     background: #b3b3b3;
     border-color: #b3b3b3;
     color: #121212; }
@@ -4633,18 +4604,17 @@ body {
   text-decoration: none;
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: .04em;
+  letter-spacing: .02em;
   font-weight: 700;
   font-size: 1.5rem;
   margin-left: 0;
   margin-right: 0;
+  margin-bottom: 3rem;
   transition: color 0.3s ease, background-color 0.3s ease;
   -moz-transition: color 0.3s ease, background-color 0.3s ease;
   -webkit-transition: color 0.3s ease, background-color 0.3s ease;
   -webkit-transform: translateZ(0);
-  text-shadow: none;
-  background: #3778c1;
-  color: #ffffff; }
+  text-shadow: none; }
   .button--primary:hover, .button--primary:focus {
     color: #121212;
     background-color: #cccccc;
@@ -4658,12 +4628,6 @@ body {
     background-color: #b3b3b3;
     border: none;
     box-shadow: none; }
-  .button--primary:hover, .button--primary:focus {
-    background: #cccccc;
-    color: #121212; }
-  .button--primary:active {
-    background: #b3b3b3;
-    color: #121212; }
 
 .button-outline {
   background-image: none;
@@ -4678,11 +4642,12 @@ body {
   text-decoration: none;
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: .04em;
+  letter-spacing: .02em;
   font-weight: 700;
   font-size: 1.5rem;
   margin-left: 0;
   margin-right: 0;
+  margin-bottom: 3rem;
   transition: color 0.3s ease, background-color 0.3s ease;
   -moz-transition: color 0.3s ease, background-color 0.3s ease;
   -webkit-transition: color 0.3s ease, background-color 0.3s ease;
@@ -4690,8 +4655,7 @@ body {
   text-shadow: none;
   background: transparent;
   border: 1px solid #3778c1;
-  color: #3778c1;
-  border-radius: 3px; }
+  color: #3778c1; }
   .button-outline:hover, .button-outline:focus {
     color: #121212;
     background-color: #cccccc;
@@ -4714,12 +4678,17 @@ body {
     color: #121212;
     border-color: #b3b3b3; }
 
-.button, .no-touchevents .button--small {
+.button, .no-touchevents .button--small, .no-touchevents .draggable .form-submit:not(.image-button), .draggable .no-touchevents .form-submit:not(.image-button), .no-touchevents .draggable:not([class*="paragraph"]) td .form-submit, .draggable:not([class*="paragraph"]) td .no-touchevents .form-submit {
   font-size: 1.5rem;
   padding: 1.15rem 1.5rem 1rem; }
 
 .button-action:before {
   font-size: 1.5rem; }
+
+.draggable .form-submit:not(.image-button) {
+  padding: .95rem 1rem;
+  min-width: 80px;
+  margin-bottom: 0; }
 
 #edit-clear-cache .button {
   background-image: none;
@@ -4734,11 +4703,12 @@ body {
   text-decoration: none;
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: .04em;
+  letter-spacing: .02em;
   font-weight: 700;
   font-size: 1.5rem;
   margin-left: 0;
   margin-right: 0;
+  margin-bottom: 3rem;
   transition: color 0.3s ease, background-color 0.3s ease;
   -moz-transition: color 0.3s ease, background-color 0.3s ease;
   -webkit-transition: color 0.3s ease, background-color 0.3s ease;
@@ -4746,9 +4716,7 @@ body {
   text-shadow: none;
   background: #3778c1;
   color: #ffffff;
-  height: auto;
-  min-width: 115px;
-  margin-top: 0;
+  min-width: 120px;
   background: #018901;
   color: #ffffff; }
   #edit-clear-cache .button:hover, #edit-clear-cache .button:focus {
@@ -4781,27 +4749,46 @@ body {
     color: #121212;
     border-color: #b3b3b3; }
 
-.js .dropbutton-multiple .dropbutton-widget .dropbutton-action input, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle input, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-action input, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle input, .js .dropbutton-single .dropbutton-widget .dropbutton-action input, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle input, .js .dropbutton-multiple .dropbutton-action input, .js .dropbutton-wrapper .dropbutton-action input, .js .dropbutton-single .dropbutton-action input, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle .button, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle .button, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle .button, .js .dropbutton-multiple .dropbutton-action .button, .js .dropbutton-wrapper .dropbutton-action .button, .js .dropbutton-single .dropbutton-action .button, .js .dropbutton-multiple .dropbutton-widget .dropbutton-action a, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle a, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-action a, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle a, .js .dropbutton-single .dropbutton-widget .dropbutton-action a, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle a, .js .dropbutton-multiple .dropbutton-action a, .js .dropbutton-wrapper .dropbutton-action a, .js .dropbutton-single .dropbutton-action a, .js .dropbutton-multiple .dropbutton-widget .dropbutton-action button, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle button, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-action button, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle button, .js .dropbutton-single .dropbutton-widget .dropbutton-action button, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle button, .js .dropbutton-multiple .dropbutton-action button, .js .dropbutton-wrapper .dropbutton-action button, .js .dropbutton-single .dropbutton-action button {
-  border-radius: 0 !important;
-  box-shadow: 0;
-  background: #ffffff;
-  text-shadow: 0;
-  border-color: #3778c1; }
-  .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle input:hover, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle input:hover, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle input:hover, .js .dropbutton-multiple .dropbutton-action input:hover, .js .dropbutton-wrapper .dropbutton-action input:hover, .js .dropbutton-single .dropbutton-action input:hover, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle input:focus, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle input:focus, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle input:focus, .js .dropbutton-multiple .dropbutton-action input:focus, .js .dropbutton-wrapper .dropbutton-action input:focus, .js .dropbutton-single .dropbutton-action input:focus, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle .button:hover, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle .button:hover, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle .button:hover, .js .dropbutton-multiple .dropbutton-action .button:hover, .js .dropbutton-wrapper .dropbutton-action .button:hover, .js .dropbutton-single .dropbutton-action .button:hover, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle .button:focus, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle .button:focus, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle .button:focus, .js .dropbutton-multiple .dropbutton-action .button:focus, .js .dropbutton-wrapper .dropbutton-action .button:focus, .js .dropbutton-single .dropbutton-action .button:focus, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle a:hover, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle a:hover, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle a:hover, .js .dropbutton-multiple .dropbutton-action a:hover, .js .dropbutton-wrapper .dropbutton-action a:hover, .js .dropbutton-single .dropbutton-action a:hover, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle a:focus, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle a:focus, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle a:focus, .js .dropbutton-multiple .dropbutton-action a:focus, .js .dropbutton-wrapper .dropbutton-action a:focus, .js .dropbutton-single .dropbutton-action a:focus, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle button:hover, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle button:hover, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle button:hover, .js .dropbutton-multiple .dropbutton-action button:hover, .js .dropbutton-wrapper .dropbutton-action button:hover, .js .dropbutton-single .dropbutton-action button:hover, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle button:focus, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle button:focus, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle button:focus, .js .dropbutton-multiple .dropbutton-action button:focus, .js .dropbutton-wrapper .dropbutton-action button:focus, .js .dropbutton-single .dropbutton-action button:focus {
-    background-color: #dbe4e4 !important;
-    background-image: none !important;
-    border-radius: 0 !important;
-    box-shadow: 0; }
-  .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle input:active, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle input:active, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle input:active, .js .dropbutton-multiple .dropbutton-action input:active, .js .dropbutton-wrapper .dropbutton-action input:active, .js .dropbutton-single .dropbutton-action input:active, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle .button:active, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle .button:active, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle .button:active, .js .dropbutton-multiple .dropbutton-action .button:active, .js .dropbutton-wrapper .dropbutton-action .button:active, .js .dropbutton-single .dropbutton-action .button:active, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle a:active, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle a:active, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle a:active, .js .dropbutton-multiple .dropbutton-action a:active, .js .dropbutton-wrapper .dropbutton-action a:active, .js .dropbutton-single .dropbutton-action a:active, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle button:active, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle button:active, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle button:active, .js .dropbutton-multiple .dropbutton-action button:active, .js .dropbutton-wrapper .dropbutton-action button:active, .js .dropbutton-single .dropbutton-action button:active {
-    background: #ededed;
-    border-radius: 0;
-    box-shadow: 0; }
-
 .js .dropbutton-multiple .dropbutton-widget, .js .dropbutton-wrapper .dropbutton-widget, .js .dropbutton-single .dropbutton-widget {
   border-radius: 0;
   text-shadow: none;
   background: #ffffff;
   border-color: #3778c1; }
+  .js .dropbutton-multiple .dropbutton-widget:empty, .js .dropbutton-wrapper .dropbutton-widget:empty, .js .dropbutton-single .dropbutton-widget:empty {
+    border: none; }
+
+.js .views-edit-view .dropbutton-multiple .dropbutton-widget, .js .views-edit-view .dropbutton-wrapper .dropbutton-widget, .js .views-edit-view .dropbutton-single .dropbutton-widget {
+  border-radius: 0;
+  text-shadow: none;
+  background: #ffffff;
+  border-color: #3778c1; }
+  .js .views-edit-view .dropbutton-multiple .dropbutton-widget:empty, .js .views-edit-view .dropbutton-wrapper .dropbutton-widget:empty, .js .views-edit-view .dropbutton-single .dropbutton-widget:empty {
+    border: none; }
+
+.draggable:not([class*="paragraph"]) td .form-submit {
+  padding: .75rem 1rem;
+  min-width: 80px;
+  margin-bottom: 0; }
+  .draggable:not([class*="paragraph"]) td .form-submit[value="Cancel"] {
+    background: #bf0e0e;
+    color: #ffffff;
+    border-color: #bf0e0e; }
+    .draggable:not([class*="paragraph"]) td .form-submit[value="Cancel"]:hover, .draggable:not([class*="paragraph"]) td .form-submit[value="Cancel"]:focus {
+      background: #cccccc;
+      color: #121212;
+      border-color: #cccccc; }
+    .draggable:not([class*="paragraph"]) td .form-submit[value="Cancel"]:active {
+      background: #b3b3b3;
+      color: #121212;
+      border-color: #b3b3b3; }
+
+.image-button, .draggable:not([class*="paragraph"]) td .form-submit.image-button {
+  min-width: 20px;
+  border: 0; }
+  .image-button:hover, .image-button:focus, .image-button:active, .draggable:not([class*="paragraph"]) td .form-submit.image-button:hover, .draggable:not([class*="paragraph"]) td .form-submit.image-button:focus, .draggable:not([class*="paragraph"]) td .form-submit.image-button:active {
+    background: transparent;
+    border: 0;
+    opacity: .6; }
 
 /* ========================
   FIELD
@@ -4969,20 +4956,20 @@ optgroup:empty {
   min-width: 150px;
   margin-bottom: .5em; }
 
-.select2-container--default .select2-selection--single {
+.crane .select2-container--default .select2-selection--single {
   width: 100%;
   font-size: 1.3rem;
   border: 1px solid #3778c1;
   border-radius: 0;
   height: auto; }
-  .select2-container--default .select2-selection--single .select2-selection__choice__remove {
+  .crane .select2-container--default .select2-selection--single .select2-selection__choice__remove {
     position: relative;
     z-index: 999; }
-  .select2-container--default .select2-selection--single .select2-selection__rendered {
+  .crane .select2-container--default .select2-selection--single .select2-selection__rendered {
     padding: 3.5px 32px 4px 10px;
     color: #676767;
     text-align: left; }
-  .select2-container--default .select2-selection--single .select2-selection__arrow {
+  .crane .select2-container--default .select2-selection--single .select2-selection__arrow {
     top: 17px;
     right: 10px;
     cursor: pointer;
@@ -4992,23 +4979,23 @@ optgroup:empty {
     border-right: 5px double rgba(0, 0, 0, 0);
     border-left: 5px double rgba(0, 0, 0, 0);
     border-top: 8px solid #676767; }
-    .select2-container--default .select2-selection--single .select2-selection__arrow b {
+    .crane .select2-container--default .select2-selection--single .select2-selection__arrow b {
       display: none; }
 
-.select2-container--default .select2-selection--multiple {
+.crane .select2-container--default .select2-selection--multiple {
   width: 100%;
   font-size: 1.3rem;
   border: 1px solid #3778c1;
   border-radius: 0;
   height: auto; }
-  .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+  .crane .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
     position: relative;
     z-index: 999; }
-  .select2-container--default .select2-selection--multiple .select2-search--inline {
+  .crane .select2-container--default .select2-selection--multiple .select2-search--inline {
     position: relative;
     float: none;
     padding: 3.5px 3px 4px; }
-    .select2-container--default .select2-selection--multiple .select2-search--inline:after {
+    .crane .select2-container--default .select2-selection--multiple .select2-search--inline:after {
       content: '';
       display: block;
       position: absolute;
@@ -5021,47 +5008,47 @@ optgroup:empty {
       border-right: 5px double rgba(0, 0, 0, 0);
       border-left: 5px double rgba(0, 0, 0, 0);
       border-top: 8px solid #676767; }
-    .select2-container--default .select2-selection--multiple .select2-search--inline input.select2-search__field {
+    .crane .select2-container--default .select2-selection--multiple .select2-search--inline input.select2-search__field {
       color: #676767; }
-      .select2-container--default .select2-selection--multiple .select2-search--inline input.select2-search__field::-webkit-placeholder {
+      .crane .select2-container--default .select2-selection--multiple .select2-search--inline input.select2-search__field::-webkit-placeholder {
         opacity: 0.4;
         color: #121212; }
-      .select2-container--default .select2-selection--multiple .select2-search--inline input.select2-search__field::-moz-placeholder {
+      .crane .select2-container--default .select2-selection--multiple .select2-search--inline input.select2-search__field::-moz-placeholder {
         opacity: 0.4;
         color: #121212; }
-      .select2-container--default .select2-selection--multiple .select2-search--inline input.select2-search__field:-ms-input-placeholder {
+      .crane .select2-container--default .select2-selection--multiple .select2-search--inline input.select2-search__field:-ms-input-placeholder {
         opacity: 0.4;
         color: #121212; }
-      .select2-container--default .select2-selection--multiple .select2-search--inline input.select2-search__field::-webkit-input-placeholder {
+      .crane .select2-container--default .select2-selection--multiple .select2-search--inline input.select2-search__field::-webkit-input-placeholder {
         opacity: 0.4;
         color: #121212; }
-      .select2-container--default .select2-selection--multiple .select2-search--inline input.select2-search__field:focus::-webkit-placeholder {
+      .crane .select2-container--default .select2-selection--multiple .select2-search--inline input.select2-search__field:focus::-webkit-placeholder {
         opacity: 0.2;
         color: #121212; }
-      .select2-container--default .select2-selection--multiple .select2-search--inline input.select2-search__field:focus::-moz-placeholder {
+      .crane .select2-container--default .select2-selection--multiple .select2-search--inline input.select2-search__field:focus::-moz-placeholder {
         opacity: 0.2;
         color: #121212; }
-      .select2-container--default .select2-selection--multiple .select2-search--inline input.select2-search__field:focus:-ms-input-placeholder {
+      .crane .select2-container--default .select2-selection--multiple .select2-search--inline input.select2-search__field:focus:-ms-input-placeholder {
         opacity: 0.2;
         color: #121212; }
-      .select2-container--default .select2-selection--multiple .select2-search--inline input.select2-search__field:focus::-webkit-input-placeholder {
+      .crane .select2-container--default .select2-selection--multiple .select2-search--inline input.select2-search__field:focus::-webkit-input-placeholder {
         opacity: 0.2;
         color: #121212; }
-  .select2-container--default .select2-selection--multiple .select2-selection__choice {
+  .crane .select2-container--default .select2-selection--multiple .select2-selection__choice {
     border-radius: 0;
     background: #ededed;
     margin-top: 8px; }
 
-.select2-container--default.select2-container--open, .select2-container--default.select2-container--focus {
+.crane .select2-container--default.select2-container--open, .crane .select2-container--default.select2-container--focus {
   box-shadow: 0 2px 2px rgba(35, 35, 35, 0.3); }
-  .select2-container--default.select2-container--open .select2-selection--single, .select2-container--default.select2-container--focus .select2-selection--single {
+  .crane .select2-container--default.select2-container--open .select2-selection--single, .crane .select2-container--default.select2-container--focus .select2-selection--single {
     border-color: #3778c1; }
-    .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow, .select2-container--default.select2-container--focus .select2-selection--single .select2-selection__arrow {
+    .crane .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow, .crane .select2-container--default.select2-container--focus .select2-selection--single .select2-selection__arrow {
       border-top: 0;
       border-bottom: 8px solid #676767; }
-  .select2-container--default.select2-container--open .select2-selection--multiple, .select2-container--default.select2-container--focus .select2-selection--multiple {
+  .crane .select2-container--default.select2-container--open .select2-selection--multiple, .crane .select2-container--default.select2-container--focus .select2-selection--multiple {
     border-color: #3778c1; }
-    .select2-container--default.select2-container--open .select2-selection--multiple .select2-search--inline:after, .select2-container--default.select2-container--focus .select2-selection--multiple .select2-search--inline:after {
+    .crane .select2-container--default.select2-container--open .select2-selection--multiple .select2-search--inline:after, .crane .select2-container--default.select2-container--focus .select2-selection--multiple .select2-search--inline:after {
       border-top: 0;
       border-bottom: 8px solid #676767; }
 
@@ -5070,6 +5057,10 @@ optgroup:empty {
   border-radius: 0;
   border-top: 0;
   padding: 0; }
+
+.select2-container--default .select2-results__option {
+  font-size: 1.3rem;
+  line-height: 1.25; }
 
 .select2-container--default .select2-results__option[aria-selected="true"] {
   background-color: #ededed; }
@@ -5109,11 +5100,12 @@ select:hover, select:focus {
     text-decoration: none;
     text-align: center;
     text-transform: uppercase;
-    letter-spacing: .04em;
+    letter-spacing: .02em;
     font-weight: 700;
     font-size: 1.5rem;
     margin-left: 0;
     margin-right: 0;
+    margin-bottom: 3rem;
     transition: color 0.3s ease, background-color 0.3s ease;
     -moz-transition: color 0.3s ease, background-color 0.3s ease;
     -webkit-transition: color 0.3s ease, background-color 0.3s ease;
@@ -5682,7 +5674,8 @@ header.content-header {
   max-width: 240px; }
 
 .views-ui-dialog .ui-dialog-buttonset button {
-  margin-right: 2rem !important; }
+  margin-right: 2rem !important;
+  min-width: 185px; }
   .views-ui-dialog .ui-dialog-buttonset button:not(.button--primary):not(.button--danger) {
     background-image: none;
     background-color: #3778c1;
@@ -5696,11 +5689,12 @@ header.content-header {
     text-decoration: none;
     text-align: center;
     text-transform: uppercase;
-    letter-spacing: .04em;
+    letter-spacing: .02em;
     font-weight: 700;
     font-size: 1.5rem;
     margin-left: 0;
     margin-right: 0;
+    margin-bottom: 3rem;
     transition: color 0.3s ease, background-color 0.3s ease;
     -moz-transition: color 0.3s ease, background-color 0.3s ease;
     -webkit-transition: color 0.3s ease, background-color 0.3s ease;
@@ -5708,12 +5702,11 @@ header.content-header {
     text-shadow: none;
     background: #3778c1;
     color: #ffffff;
-    height: auto;
-    min-width: 115px;
-    margin-top: 0;
+    min-width: 120px;
     background: #797501;
     color: #ffffff;
-    border-color: #797501; }
+    border-color: #797501;
+    min-width: 185px; }
     .views-ui-dialog .ui-dialog-buttonset button:not(.button--primary):not(.button--danger):hover, .views-ui-dialog .ui-dialog-buttonset button:not(.button--primary):not(.button--danger):focus {
       color: #121212;
       background-color: #cccccc;

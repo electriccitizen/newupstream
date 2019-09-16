@@ -17,11 +17,12 @@ $buttonPadding: 1.15rem 1.5rem 1rem;
 	text-decoration: none;
 	text-align: center;
 	text-transform: uppercase;
-	letter-spacing: .04em;
+	letter-spacing: .02em;
 	font-weight: $heavy;
 	font-size: $button;
 	margin-left: 0;
 	margin-right: 0;
+	margin-bottom: $spaceMd;
 	@include transColor(.3s);
 	text-shadow: none;
 	&:hover,&:focus {
@@ -47,7 +48,6 @@ $buttonPadding: 1.15rem 1.5rem 1rem;
 	background: transparent;
 	border: 1px solid $outlineColor;
 	color: $outlineColor;
-	border-radius: 3px;
 	&:hover,&:focus{
 		background: $buttonBackHover;
 		color: $buttonTextHover;
@@ -64,9 +64,7 @@ $buttonPadding: 1.15rem 1.5rem 1rem;
 	@include button;
 	background: $submitBack;
 	color: $submitText;
-	height: auto;
-	min-width: 115px;
-	margin-top: 0;
+	min-width: 120px;
 	&:hover,&:focus{
 		background: $buttonBackHover;
 		color: $buttonTextHover;
@@ -129,6 +127,28 @@ $buttonPadding: 1.15rem 1.5rem 1rem;
 	}
 }
 
+%dropbutton{
+	input,.button,a,button{
+		border-radius: 0 !important;
+		box-shadow: none;
+		background: $siteBack;
+		text-shadow: none;
+		border-color: $borderRule;
+		font-size: 1.4rem;
+		&:hover,&:focus{
+			background-color: $offWhite !important;
+			background-image: none !important;
+			border-radius: 0 !important;
+			box-shadow: none;
+		}
+		&:active{
+			background: $lightGrey;
+			border-radius: 0;
+			box-shadow: none;
+		}
+	}
+}
+
 .button.js-hide{
 	display: none !important;
 }
@@ -138,43 +158,52 @@ $buttonPadding: 1.15rem 1.5rem 1rem;
 .form-submit{
 	@include submitButton;
 }
-.button--danger,#edit-reset,.button[value="Remove"]{
+.button--danger,#edit-reset,a.button--danger,.button[value="Remove"],.button[value="Delete"],.button[value="Reset to alphabetical"]{
 	@include resetButton;
+	margin-left: 0;
+	margin-right: 0;
+	width: 100%;
+	@include smallTab{
+		width: auto;
+	}
 }//end reset danger buttons
-.button[data-drupal-selector="edit-cancel"],.button[data-drupal-selector="edit-actions-cancel"],.button[value="Cancel"]{
+.button[data-drupal-selector="edit-cancel"],.button[data-drupal-selector="edit-actions-cancel"]{
 	@include cautionButton;
+	margin-left: 0;
+	margin-right: 0;
+	width: 100%;
+	@include smallTab{
+		width: auto;
+	}
 }//end reset danger buttons
-
-#edit-preview{
-	@include altButton;
-	background: $altBack !important;
-	color: $altText !important;
-	&:hover,&:focus{
-		background: $buttonBackHover !important;
-		border-color: $buttonBackHover !important;
-		color: $buttonTextHover !important;
-	}
-	&:active{
-		background: $buttonBackActive;
-		border-color: $buttonBackActive !important;
-		color: $buttonTextActive !important;
-	}
-}//end preview
 
 .button--small{
-	@include outlineButton($link);
-	background: transparent;
-	border: 1px solid $primaryButtonBack;
-	color: $baseText;
+	@include outlineButton($borderRule);
+	background: $siteBack;
+	color: $link;
 	font-weight: $regular;
 	font-size: 1.2rem;
-	border-radius: 2px;
+	margin-bottom: 0;
+	padding-top: .75rem;
+	padding-bottom: .75rem;
+	border-radius: 0;
 	&.button--small-override{
 		font-size: 1.8rem;
 		border-width: 2px;
 		font-weight: $heavy;
 		margin-bottom: $spaceSm;
 		border-radius: 4px;
+		&:hover,&:focus{
+			background: $buttonBackHover;
+			color: $buttonTextHover;
+			border: 1px solid $buttonBackHover;
+			@include transAll(.3s);
+		}
+		&:active{
+			background: $buttonBackActive;
+			color: $buttonTextActive;
+			border: 1px solid $buttonBackActive;
+		}
 	}
 	&:hover,&:focus{
 		background: $buttonBackHover;
@@ -191,16 +220,6 @@ $buttonPadding: 1.15rem 1.5rem 1rem;
 
 .button--primary {
 	@include button;
-	background: $primaryButtonBack;
-	color: $primaryButtonText;
-	&:hover,&:focus{
-		background: $primaryBackHover;
-		color: $primaryTextHover;
-	}
-	&:active{
-		background: $primaryBackActive;
-		color: $primaryTextActive;
-	}
 	&.button--small{
 		@extend .button--small;
 	}
@@ -221,46 +240,93 @@ $buttonPadding: 1.15rem 1.5rem 1rem;
 	}
 }
 
+.draggable{
+	.form-submit:not(.image-button){
+		@extend .button--small;
+		padding: .95rem 1rem;
+		min-width: 80px;
+		margin-bottom: 0;
+	}
+} 
+
 #edit-clear-cache{
 	.button{
 		@include altButton;
 	}
 }
 
-%dropbutton{
-	input,.button,a,button{
-		border-radius: 0 !important;
-		box-shadow: 0;
-		background: $siteBack;
-		text-shadow: 0;
-		border-color: $borderRule;
-		&:hover,&:focus{
-			background-color: $whiteBlue !important;
-			background-image: none !important;
-			border-radius: 0 !important;
-			box-shadow: 0;
-		}
-		&:active{
-			background: $lightGrey;
-			border-radius: 0;
-			box-shadow: 0;
-		}
-	}
-}
 
 //dropbuttons
-.js .dropbutton-multiple,.js .dropbutton-wrapper,.js .dropbutton-single{
-	.dropbutton-widget{
-		border-radius: 0;
-		text-shadow: none;
-		background: $siteBack;
-		border-color: $borderRule;
-		.dropbutton-action,.dropbutton-toggle{
+.js{
+	.dropbutton-multiple,.dropbutton-wrapper,.dropbutton-single{
+		.dropbutton-widget{
+			border-radius: 0;
+			text-shadow: none;
+			background: $siteBack;
+			border-color: $borderRule;
+			&:empty{
+				border: none;
+			}
+			.dropbutton-action,.dropbutton-toggle{
+				@extend %dropbutton;
+			}
+		}//end dropbutton widget
+		.dropbutton-action{
 			@extend %dropbutton;
 		}
-	}//end dropbutton widget
-	.dropbutton-action{
-		@extend %dropbutton;
+	}//end dropbutton
+	.views-edit-view{
+		.dropbutton-multiple,.dropbutton-wrapper,.dropbutton-single{
+			.dropbutton-widget{
+				border-radius: 0;
+				text-shadow: none;
+				background: $siteBack;
+				border-color: $borderRule;
+				&:empty{
+					border: none;
+				}
+				.dropbutton-action,.dropbutton-toggle{
+					@extend %dropbutton;
+				}
+			}//end dropbutton widget
+			.dropbutton-action{
+				@extend %dropbutton;
+			}
+		}//end dropbutton
 	}
-}//end dropbutton
+}//end js
 
+
+//draggable buttons
+.draggable:not([class*="paragraph"]) td{
+	.form-submit{
+		@extend .button--small;
+		padding: .75rem 1rem;
+		min-width: 80px;
+		margin-bottom: 0;
+		&[value="Cancel"]{
+			background: $resetBack;
+			color: $resetText;
+			border-color: $resetBack;
+			&:hover,&:focus{
+				background: $buttonBackHover;
+				color: $buttonTextHover;
+				border-color: $buttonBackHover;
+			}
+			&:active{
+				background: $buttonBackActive;
+				color: $buttonTextActive;
+				border-color: $buttonBackActive;
+			}
+		}
+	}//end form submit
+}//end draggable td
+.image-button,.draggable:not([class*="paragraph"]) td .form-submit.image-button{
+	min-width: 20px;
+	border: 0;
+	&:hover,&:focus,&:active{
+		background: transparent;
+		border: 0;
+		opacity: .6;
+	}
+} 

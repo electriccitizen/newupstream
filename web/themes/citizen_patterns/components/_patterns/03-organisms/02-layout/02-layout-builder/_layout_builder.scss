@@ -9,11 +9,12 @@
 .layout-builder-form{
 	max-width: $contentStop;
 	@include auto;
+	margin-bottom: $spaceLg;
 	.form-actions{
 		@include safeFlex(row,wrap,start,center);
 		input.button{
 			margin-right: 1rem;
-			min-width: 230px;
+			min-width: 200px;
 			&:last-of-type{
 				margin-right: 3.5rem;
 			}
@@ -42,7 +43,7 @@
 		padding: 4px 8px;
 		margin-bottom: .5rem;
 	}
-	.vertical-tabs{
+	& ~ .js-form-type-vertical-tabs{
 		display: none;
 	}
 }//end layout builder form

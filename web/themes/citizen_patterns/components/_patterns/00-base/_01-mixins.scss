@@ -455,54 +455,6 @@
 	-ms-flex-order: $order;
 }
 
-// set child elements into 2 columns using flex and bleed
-@mixin twoColumn($xAlign,$yAlign,$colSpace){
-	width: 100%;
-	@include bleed(padding,$colSpace);
-	@include safeFlex(row,wrap,$xAlign,$yAlign);
-	& > *{
-		width: 100%;
-		@include smallTab{
-			width: 50%;
-		}
-	}
-}
-
-// set child elements into three columns using flex and bleed
-@mixin threeColumn($xAlign,$yAlign,$colSpace){
-	width: 100%;
-	@include bleed(padding,$colSpace);
-	@include safeFlex(row,wrap,$xAlign,$yAlign);
-	& > *{
-		width: 100%;
-		@include smallTab{
-			width: 50%;
-		}
-		@include tab{
-			width: 33.333%;
-		}
-	}
-}
-
-//set child elements into four columns using flex and bleed
-@mixin fourColumn($xAlign,$yAlign,$colSpace){
-	width: 100%;
-	@include bleed(padding,$colSpace);
-	@include safeFlex(row,wrap,$xAlign,$yAlign);
-	& > *{
-		width: 100%;
-		@include smallTab{
-			width: 50%;
-		}
-		@include tab{
-			width: 33.333%;
-		}
-		@include tab{
-			width: 25%;
-		}
-	}
-}
-
 // set negative edges on a parent to allow children to have equal space between without overflowing edges
 @mixin bleed($bleedType,$bleedWidth){
 	margin-left: $bleedWidth * -0.5;

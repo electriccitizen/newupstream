@@ -9,6 +9,10 @@
 	@include auto;
 	margin-top: $spaceMd;
 	border-bottom: 1px solid $borderRule;
+	.action-wrapper{
+		@include safeFlex(row,wrap,start,start);
+		@include bleed(margin,10px);
+	}
 }//end revisions actions
 
 .node-revision{

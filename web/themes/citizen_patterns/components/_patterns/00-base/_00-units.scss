@@ -12,9 +12,9 @@ $desk: 980px;
 $contentStop: 1200px;
 $textMax: 800px;
 $onlyTab: 760px 899px;
-$onlySmall: max-width 759px;
-$onlyPhone: max-width 499px;
-$mobileStop: max-width 979px;
+$onlySmall: max-width $tab - 1px;
+$onlyPhone: max-width $smallTab - 1px;
+$onlyMobile: max-width $desk - 1px;
 
 
 /* SPACING VARIABLES
@@ -86,9 +86,9 @@ $sectionGutter: 40px;
 	}
 }
 
-///mixin - mobileStop
-@mixin mobileStop {
-	@include breakpoint($mobileStop) {
+///mixin - onlyMobile
+@mixin onlyMobile {
+	@include breakpoint($onlyMobile) {
 		@content;
 	}
 }

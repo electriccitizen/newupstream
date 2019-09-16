@@ -79,7 +79,7 @@
 /* MAIN NAVIGATION BLOCK
 ------------------------ */
 .block-superfishmain{
-	@include mobileStop{
+	@include onlyMobile{
 		&.contextual-region{
 			position: static;
 		}

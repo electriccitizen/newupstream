@@ -4,6 +4,8 @@
 
 /* BUTTON MIXINS
 ------------------ */
+$buttonPadding: 1.6rem 3rem;
+$submitPadding: 0 1.5rem;
 
 ///mixin - button
 @mixin button{
@@ -11,7 +13,7 @@
 	border: none;
 	color: $buttonText;
 	line-height: 1.15;
-	padding: 1.6rem 3rem;
+	padding: $buttonPadding;
 	display: inline-block;
 	vertical-align: top;
 	text-decoration: none;
@@ -36,7 +38,7 @@
 		background: none;
 		a{
 			background-color: $buttonBack;
-			padding: 1.6rem 3rem;
+			padding: $buttonPadding;
 			display: block;
 			max-width: 260px;
 			text-decoration: none;
@@ -102,9 +104,11 @@
 	@include button;
 	background: $submitBack;
 	color: $submitText;
-	padding: 1.25rem 3rem;
-	height: 43px;
+	padding: $submitPadding;
+	height: 44px;
 	line-height: 1;
+	@include safeFlex(column,nowrap,center,center);
+	min-width: 120px;
 	&:hover,&:focus{
 		background: $buttonBackHover;
 		border-color: $buttonBackHover;
@@ -168,7 +172,7 @@
 	@include outlineButton($link);
 }
 
-/* LAYOUT BUILDER BUTTONS
+/* secondary task buttons
 ------------------ */
 #block-citizen-patterns-local-tasks .tabs.secondary a{
 	background: $link !important;
