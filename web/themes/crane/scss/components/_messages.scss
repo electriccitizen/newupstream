@@ -1,0 +1,143 @@
+/* ========================
+  MESSAGES
+========================== */
+$messageGoodIcon    : '../images/icons/message/message-status.svg';
+$messageWarningIcon : '../images/icons/message/message-warning.svg';
+$messageErrorIcon   : '../images/icons/message/message-error.svg';
+
+.messages{
+	padding: 15px 20px 12px 45px;
+	margin-top: $spaceMd;
+	background-repeat: no-repeat;
+	background-position: 12px center;
+	background-size: 20px 20px;
+	&.messages--error{
+		background-color: $messageErrorBack;
+		border-color: $messageErrorText;
+		color: $messageErrorText;
+		background-image: url($messageErrorIcon);
+	}
+	&.messages--warning{
+		background-color: $messageWarningBack;
+		border-color: $messageWarningText;
+		color: $messageWarningText;
+		background-image: url($messageWarningIcon);
+	}
+	&.messages--status{
+		background-color: $messageGoodBack;
+		border-color: $messageGoodText;
+		color: $messageGoodText;
+		background-image: url($messageGoodIcon);
+	}
+}//end messages
+
+/* STATUS REPORT
+------------------- */
+.system-status-general-info__item{
+	margin-top: 0;
+	h3{
+		font-size: 2rem;
+		margin-bottom: $spaceXxs;
+	}
+	h4{
+		font-size: 1.8rem;
+		margin-bottom: $spaceXxs;
+	}
+	.description{
+		margin-bottom: $spaceXxs;
+	}
+}
+.system-status-report-counters__item{
+	background: none;
+}
+.system-status-counter{
+	&.system-status-counter--error{
+		background-color: $messageErrorBack;
+		border-color: $messageErrorText;
+		color: $messageErrorText;
+	}
+	&.system-status-counter--warning{
+		background-color: $messageWarningBack;
+		border-color: $messageWarningText;
+		color: $messageWarningText;
+	}
+	&.system-status-counter--checked{
+		background-color: $messageGoodBack;
+		border-color: $messageGoodText;
+		color: $messageGoodText;
+	}
+}
+.system-status-counter__details{
+	font-size: 1.6rem;
+}
+.system-status-counter__status-icon{
+	box-shadow: none;
+	border: 0;
+	background-color: transparent;
+}
+.system-status-counter__status-icon--error,.details .system-status-report__status-icon--error{
+	&:before{
+		background-image: url($messageErrorIcon);
+	}
+}
+.system-status-counter__status-icon--warning,.details .system-status-report__status-icon--warning{
+	&:before{
+		background-image: url($messageWarningIcon);
+	}
+}
+.system-status-counter__status-icon--checked,.details .system-status-report__status-icon--checked{
+	&:before{
+		background-image: url($messageGoodIcon);
+	}
+}
+
+.color-error{
+	color: $messageErrorText;
+	background-color: $messageErrorBack;
+}
+.color-warning{
+	color: $messageWarningText;
+	background-color: $messageWarningBack;
+}
+.color-checked{
+	color: $messageGoodText;
+	background-color: $messageGoodBack;
+}
+
+.system-status-report__status-title{
+	@media screen and (min-width: 48em){
+		width: 30%;
+	}
+}
+.system-status-report__entry__value{
+	h3{
+		font-size: 2rem;
+	}
+	@media screen and (min-width: 48em){
+		width: 70%;
+	}
+}
+
+/* DB LOG MESSAGES
+-------------- */
+.admin-dblog{
+	.dblog-error{
+		background: $messageErrorBack;
+		color: $messageErrorText;
+		.icon{
+			background-image: url($messageErrorIcon);
+			background-repeat: no-repeat;
+			background-size: 16px 16px;
+		}
+	}
+	.dblog-warning{
+		background: $messageWarningBack;
+		color: $messageWarningText;
+		.icon{
+			background-image: url($messageWarningIcon);
+			background-repeat: no-repeat;
+			background-size: 16px 16px;
+		}
+	}
+}
+

@@ -23,6 +23,24 @@ items:
     value: '#bf0e0e'
   - name: $pink
     value: '#f8e8f1'
+  - name: $fuchsia
+    value: '#c028bb'
+  - name: $darkFuchsia
+    value: '#5d025a'
+  - name: $purple
+    value: '#8b01e2'
+  - name: $green
+    value: '#018901'
+  - name: $gold
+    value: '#fcd105'
+  - name: $tan
+    value: '#8e700b'
+  - name: $transFuchsia
+    value: 'rgba(192,40,187,0.03)'
+  - name: $transGold
+    value: 'rgba(252,217,1,0.06)'
+  - name: $transGreen
+    value: 'rgba(1,185,1,0.05)'
   - name: $transWhite
     value: 'rgba(255,255,255,0.7)'
   - name: $transBlack

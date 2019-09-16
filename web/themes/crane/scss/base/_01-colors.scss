@@ -4,6 +4,7 @@
 $white        : #ffffff;
 $offWhite     : #f6f6f6;
 $whiteBlue    : #dbe4e4;
+$iceBlue      : #f2f9fb;
 $lightGrey    : #ededed;
 $grey         : #cccccc;
 $contrastGrey : #767676;
@@ -12,20 +13,24 @@ $darkGrey     : #4a4a4a;
 $black        : #121212;
 $lightPink    : #fbf3f6;
 $red          : #bf0e0e;
+$fuchsia      : #c41294;
+$darkFuchsia  : #5d025a;
+$purple       : #8b01e2;
 $green        : #018901;
-$teal         : #01897b;
-$orange       : #fc9605;
 $gold         : #fcd105;
-$darkGold     : #ebc304;
-$blackGold    : #797501;
+$tan          : #8e700b;
 $blueGrey     : #dce7f3;
-$blue         : #3778c1;
-$midBlue      : #2c5580;
-$darkBlue     : #323b49;
+$blue         : #017AC6;
+$midBlue      : #1d5a9f;
+$darkBlue     : #073b75;
 
 $transBlueLight: rgba(28,88,131,0.25);
 $transBlack    : rgba(35,35,35,0.7);
 $transWhite    : rgba(255,255,255,0.8);
+$transFuchsia  : rgba(192,40,187,0.03);
+$transGold     : rgba(252,217,1,0.06);
+$transGreen    : rgba(1,185,1,0.05);
+
 
 /* COMPONENT COLORS
 ----------------- */
@@ -43,9 +48,9 @@ $buttonBackActive  : darken($grey, 10%);
 $buttonTextActive  : $black;
 $submitBack        : $blue;
 $submitText        : $white;
-$resetBack         : $red;
+$resetBack         : $fuchsia;
 $resetText         : $white;
-$cautionBack       : $blackGold;
+$cautionBack       : $purple;
 $cautionText       : $white;
 $altBack           : $green;
 $altText           : $white;
@@ -64,5 +69,10 @@ $selectArrow              : $midGrey;
 $selectHighlight          : $link;
 
 $quickLinkBar             : $gold;
-$quickLinkDrawer          : $darkGold;
-$quickLinkDrawerHover     : lighten($darkGold, 5%);
+
+$messageGoodText    : darken($green,3%);
+$messageGoodBack    : $transGreen;
+$messageWarningText : $tan;
+$messageWarningBack : $transGold;
+$messageErrorText   : $darkFuchsia;
+$messageErrorBack   : $transFuchsia;
