@@ -1,11 +1,43 @@
 /* ========================
   GLOBAL
 ========================== */
-
-/* LAYOUT CONTAINER
---------------------- */
-.dialog-off-canvas-main-canvas{
-	& > .layout-container{
-		padding-top: $spaceSm;
+body{
+	background-color: $siteBack;
+	& > div{
+		box-sizing: border-box;
 	}
-}
+	.layout-container{
+		margin: 0;
+		box-sizing: border-box;
+		padding-left: $siteMarginMobile;
+		padding-right: $siteMarginMobile;
+		@include desk{
+			padding-left: $siteMarginDesk;
+			padding-right: $siteMarginDesk;
+		}
+	}
+	.dialog-off-canvas-main-canvas{
+		width: 100%;
+		box-sizing: border-box;
+		overflow-x: hidden;
+		& > .layout-container{
+			background: $siteBack;
+		}
+	}
+	.visually-hidden{
+		max-width: 1px;
+	}
+	&.path-batch{
+		.dialog-off-canvas-main-canvas{
+			@include smallTab{
+				padding-right: 80px;
+			}
+			& > .layout-container{
+				background: $offWhite;
+			}
+		}
+	}//end path batch
+	.ui-dialog{
+		z-index: 500 !important;
+	}
+}//end body

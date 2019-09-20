@@ -19,6 +19,39 @@
 	}
 }
 
+/* SUMMARY BLOCK
+------------------ */
+.seven-details[open]{
+	& > .seven-details__summary{
+		color: $darkBlue;
+		&:hover,&:focus{
+			color: $hoverLink;
+		}
+	}
+}
+.seven-details__summary{
+	font-family: $bodyFont;
+	color: $darkBlue;
+	&:hover,&:focus{
+		color: $hoverLink;
+	}
+	&.form-required{
+		&:after{
+			content: none;
+		}
+	}
+}
+
+/* INLINE CONTAINERS
+-------------------- */
+.container-inline{
+	div{
+		display: inline-block;
+		width: auto;
+		margin-right: 1em;
+	}
+}
+
 /* MODALS
 ------------- */
 #drupal-modal{

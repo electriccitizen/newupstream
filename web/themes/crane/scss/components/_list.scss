@@ -2,3 +2,49 @@
   LIST
 ========================== */
 
+/* ========================
+  LIST
+========================== */
+
+.item-list ul{
+	list-style: none;
+	padding: 0;
+	margin: .5rem 0 .5rem 2rem;
+	li{
+		position: relative;
+		padding-left: 15px;
+		list-style-type: none;
+		margin: 0 0 .5rem;
+		&:before{
+			content: '•';
+			position: absolute;
+			left: 0;
+			top: 1px;
+			font-size: 12px;
+		}
+	}
+}//end ul
+
+.admin-list{
+	li{
+		&:first-child{
+			border-top: 0;
+		}
+		a{
+			padding: 14px 15px 0 25px;
+		}
+		.description{
+			margin-bottom: 15px;
+		}
+		//hide one-off block types from non-admins
+		body:not(.role-administrator) &{
+			&.social-media-links{
+				display: none;
+				a{
+					pointer-events: none;
+				}
+			}
+		}
+	}//end li
+}//end admin list
+

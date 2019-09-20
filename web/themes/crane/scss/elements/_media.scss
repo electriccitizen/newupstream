@@ -163,22 +163,69 @@
 	}
 }//end media view list
 
-//Icons in previews/file upload fields
-.file--application-pdf {
-  background-image: url('../images/icons/file-icons/pdf.svg');
-  background-size: 16px 19px;
+
+/* FILE ICONS
+--------------- */
+%docIcons{
+	position: relative;
+	padding-left: 20px;
+	&:hover:before,&:focus:before{
+		opacity: .7;
+	}
+	&:before{
+		content:'';
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 16px;
+		height: 16px;
+		background-repeat: none;
+		background-position: 0 0;
+		background-size: 16px 16px;
+	}
 }
-.file--x-office-spreadsheet {
-  background-image: url('../images/icons/file-icons/excel.svg');
-  background-size: 16px 19px;
-}
-.file--x-office-document {
-  background-image: url('../images/icons/file-icons/word.svg');
-  background-size: 16px 19px;
-}
-.file--x-office-presentation{
-	background-image: url('../images/icons/file-icons/powerpoint.svg');
-	background-size: 16px 19px;
+.text-with-summary,.text-long,span.file{
+	a[href$='.pdf']{
+		@extend %docIcons;
+		&:before{			
+			background-image: url('../images/icons/files/pdf.svg');
+		}	
+	}
+
+	//word
+	a[href$='.doc'],a[href$=".docx"]{
+		@extend %docIcons;
+		&:before{
+			background-image: url('../images/icons/files/word.svg');
+		}
+	}
+	//excel
+	a[href$='.xls'],a[href$=".xlsx"]{
+		@extend %docIcons;
+		&:before{
+			background-image: url('../images/icons/files/excel.svg');
+		}
+	}
+	//powerpoint
+	a[href$='.ppt'],a[href$=".pptx"]{
+		@extend %docIcons;
+		&:before{
+			background-image: url('../images/icons/files/powerpoint.svg');
+		}
+	}
+}//end wysiwyg fields
+
+/* GENERIC FILES */
+span.file{
+	background-image: none;
+	padding-left: 0;
+	a{
+		@extend %docIcons;
+		&:before{
+			background-image: url('../images/icons/files/generic.svg');
+		}
+	}
 }
 
 

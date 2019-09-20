@@ -158,7 +158,7 @@ $buttonPadding: 1.15rem 1.5rem 1rem;
 .form-submit{
 	@include submitButton;
 }
-.button--danger,#edit-reset,a.button--danger,.button[value="Remove"],.button[value="Delete"],.button[value="Reset to alphabetical"]{
+.button--danger,#edit-reset,a.button--danger,.button[value="Remove"],.button[value="Delete"],.button[value="Reset to alphabetical"],.button[value="Reset"]{
 	@include resetButton;
 	margin-left: 0;
 	margin-right: 0;
