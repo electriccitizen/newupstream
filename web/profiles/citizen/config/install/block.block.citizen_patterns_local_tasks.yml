@@ -1,11 +1,11 @@
-uuid: 617d7d61-a461-4e5b-ac94-ef477fbb8e92
+uuid: 0ddc5109-6cf9-40b8-9ad5-90d592f7a10b
 langcode: en
 status: true
 dependencies:
   theme:
     - citizen_patterns
 _core:
-  default_config_hash: uTDBkQTXNqaKM1sH758frrw1JeAYtdnb0bVe0XhBsNc
+  default_config_hash: WXKa88JhqD3yh-0H8tvRwIBg2UBhSC0zWmcrVfxxpd0
 id: citizen_patterns_local_tasks
 theme: citizen_patterns
 region: content

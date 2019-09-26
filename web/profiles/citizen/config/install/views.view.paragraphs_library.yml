@@ -9,7 +9,7 @@ dependencies:
     - paragraphs_library
     - user
 _core:
-  default_config_hash: d7aXzkVXJQb85SCR2ZqPsK-po_HzdSe2NZyD6wv3iF8
+  default_config_hash: wj8uyspZ4PYFtfF7lmwh06qrZ1DlhKywM9eJ8WgPokI
 id: paragraphs_library
 label: 'Paragraphs library'
 module: views

@@ -8,7 +8,7 @@ dependencies:
     - paragraphs
     - paragraphs_library
 _core:
-  default_config_hash: 298FcPciNgWk7pojyH1AA-0apcAkJulU6N3PO89ZXIk
+  default_config_hash: uDF5rC1Mhwp6-O63UmFAB6AMTDUxm7GlrgZ_t_AtsVs
 id: paragraphs_library_item.paragraphs_library_item.summary
 targetEntityType: paragraphs_library_item
 bundle: paragraphs_library_item
@@ -29,4 +29,5 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  search_api_excerpt: true

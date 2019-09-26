@@ -6,7 +6,7 @@ dependencies:
     - field.field.paragraph.from_library.field_reusable_paragraph
     - paragraphs.paragraphs_type.from_library
 _core:
-  default_config_hash: 9knAA3vKrdribzKDr8Tukj_mt0qsK_UkKX9_Jbeofm4
+  default_config_hash: UNy5HGiSJovvo01kWshHZrTCS4EyUI0MKYJ0imqnRbg
 id: paragraph.from_library.default
 targetEntityType: paragraph
 bundle: from_library
@@ -21,4 +21,5 @@ content:
     third_party_settings: {  }
     type: entity_reference_entity_view
     region: content
-hidden: {  }
+hidden:
+  search_api_excerpt: true

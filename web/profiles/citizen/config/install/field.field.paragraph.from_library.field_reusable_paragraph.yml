@@ -6,7 +6,7 @@ dependencies:
     - field.storage.paragraph.field_reusable_paragraph
     - paragraphs.paragraphs_type.from_library
 _core:
-  default_config_hash: z_H_kCDBkuITFi-RGZRiO8Ps2UxRDucMs7Dhan7d6yw
+  default_config_hash: DBjTDnBu331hytjLekj17wzCNQYKqvU-EPF1vptyVco
 id: paragraph.from_library.field_reusable_paragraph
 field_name: field_reusable_paragraph
 entity_type: paragraph

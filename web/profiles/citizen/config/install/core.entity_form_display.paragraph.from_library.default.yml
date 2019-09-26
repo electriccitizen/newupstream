@@ -3,12 +3,13 @@ langcode: en
 status: true
 dependencies:
   config:
+    - entity_browser.browser.paragraphs_library_items
     - field.field.paragraph.from_library.field_reusable_paragraph
     - paragraphs.paragraphs_type.from_library
   module:
     - entity_browser
 _core:
-  default_config_hash: lYjPW8cUeZTrBXuchgRTuaP6oQSE0aToBCD0wrKNZcI
+  default_config_hash: 2z7xDw2Z646SQdtWxnKCuDhIpO2SIPYh_njC5ChlP2Q
 id: paragraph.from_library.default
 targetEntityType: paragraph
 bundle: from_library
@@ -26,7 +27,7 @@ content:
       field_widget_replace: true
       field_widget_edit: true
       selection_mode: selection_append
-    weight: 2
+    weight: 3
     third_party_settings: {  }
     region: content
 hidden:

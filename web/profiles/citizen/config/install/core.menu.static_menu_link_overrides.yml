@@ -53,5 +53,3 @@ definitions:
     parent: system.admin
     expanded: false
     enabled: true
-_core:
-  default_config_hash: 1_zr8ahbELAKYZHcHMNhbfx8t4Emc3HwDP2vEBnsoiE
