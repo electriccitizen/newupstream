@@ -1,0 +1,23 @@
+uuid: 15f699ed-87eb-41fc-abbe-3863d9a630ab
+langcode: en
+status: true
+dependencies:
+  theme:
+    - citizen_patterns
+_core:
+  default_config_hash: uoYfTRhXG0aHCwr99ZukCaRZO6WnsuMbgsztyVpaoEY
+id: citizen_patterns_newsletter
+theme: citizen_patterns
+region: footer
+weight: -4
+provider: null
+plugin: 'block_content:2ed87386-5a05-45c6-8fca-f5c0d676d1d2'
+settings:
+  id: 'block_content:2ed87386-5a05-45c6-8fca-f5c0d676d1d2'
+  label: Newsletter
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

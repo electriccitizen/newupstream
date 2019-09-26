@@ -1,0 +1,23 @@
+uuid: 4d37682a-284d-40b7-9977-7551b53c974b
+langcode: en
+status: true
+dependencies:
+  theme:
+    - citizen_patterns
+_core:
+  default_config_hash: p6CF98PoXNtCMPI0q-a4ACppkH05WJEKIR_Cl-tTahA
+id: citizen_patterns_disconnectwithus
+theme: citizen_patterns
+region: footer
+weight: -3
+provider: null
+plugin: 'block_content:412a8554-21fa-4bd9-877f-4b001647c54e'
+settings:
+  id: 'block_content:412a8554-21fa-4bd9-877f-4b001647c54e'
+  label: 'Disconnect With Us'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
