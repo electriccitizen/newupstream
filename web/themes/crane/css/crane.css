@@ -6194,10 +6194,14 @@ table {
 .vbo-view-form > #edit-actions, .media-library-views-form > #edit-actions {
   display: none; }
 
+.views-exposed-form .filter-control {
+  margin-bottom: 2rem; }
+
 .views-exposed-form #views-filter-wrapper {
   background: #676767;
   padding: 1px 2rem;
-  margin-bottom: 3rem; }
+  margin-bottom: 3rem;
+  display: none; }
 
 .views-exposed-form .form--inline {
   display: flex;
@@ -6222,8 +6226,11 @@ table {
     margin-right: 0; }
     .views-exposed-form .form--inline > .form-item label {
       color: #ffffff; }
-    .crane .views-exposed-form .form--inline > .form-item .select2-container--default {
-      width: 100% !important; }
+    .views-exposed-form .form--inline > .form-item .select2-container--default {
+      margin-bottom: 0;
+      max-width: 300px; }
+      .crane .views-exposed-form .form--inline > .form-item .select2-container--default {
+        width: 100% !important; }
     @media (min-width: 600px) {
       .views-exposed-form .form--inline > .form-item {
         max-width: 240px; } }
