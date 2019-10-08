@@ -290,3 +290,80 @@ select:hover,select:focus{
 	}
 }//end managed file
 
+/* CHECKBOXES & radios
+---------------- */
+.js-form-type-checkbox,.js-form-type-radio,.select-all{
+	-webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+	&:not(:last-child){
+		margin-bottom: 0;
+	}
+	input{
+		//hide the normal inputs
+		position: absolute;
+		opacity: 0;
+		&[type="radio"] + label:before{
+			border-radius: 50%;
+		}
+		&:hover,&:focus{
+			+ label:before{
+				background: $checkboxBackHover;
+				border-color: $checkboxHover;
+			}
+		}
+		&:checked{
+			+ label:before{
+				background: $checkboxCheckedBack;
+				border-color: $checkboxChecked;
+			}
+			&:hover{
+				& + label:before{
+					background: $checkboxCheckedBackHover;
+					border-color: $checkboxCheckedHover;
+				}
+			}
+			&:focus{
+				background: $checkboxCheckedBack;
+				border-color: $checkboxChecked;
+			}
+		}
+	}
+	label{
+		display: inline-block;
+		width: 100%;
+		padding-left: 26px;
+		position: relative;
+		margin-bottom: $spaceXs;
+		//create custom boxes before the label
+		&:before{
+			content: '';
+			display: inline-block;
+			width: 16px;
+			height: 16px;
+			border: 2px solid $checkbox;
+			background: $siteBack;
+			cursor: pointer;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 20;
+			margin-right: 1rem;
+		}
+	}
+}//end checkbox,radio
+
+/* DRAWERS
+------------------ */
+.drawer-toggle{
+	margin-bottom: $spaceXxs;
+	font-size: 1.6rem;
+	#drupal-modal &{
+		display: none;
+	}
+}
+.form-drawer{
+	display: none;
+}

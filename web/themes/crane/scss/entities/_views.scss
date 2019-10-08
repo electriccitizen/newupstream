@@ -7,14 +7,10 @@
 	}
 }
 .views-exposed-form{
-	.filter-control{
-		margin-bottom: $spaceSm;
-	}
 	#views-filter-wrapper{
 		background: $midGrey;
 		padding: 1px $spaceSm;
 		margin-bottom: $spaceMd;
-		display: none;
 	}
 	.form--inline{
 		@include safeFlex(row,wrap,start,end);

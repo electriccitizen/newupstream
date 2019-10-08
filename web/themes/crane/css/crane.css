@@ -4284,44 +4284,44 @@ h1 {
       font-size: 46px; } }
   @media (min-width: 1200px) {
     h1 {
-      font-size: 60px; } }
+      font-size: 54px; } }
 
 h2 {
   line-height: 1.15;
   font-weight: 700;
   font-family: "PT Sans", sans-serif;
   margin: 0;
-  font-size: 26px; }
+  font-size: 24px; }
   @media (min-width: 760px) {
     h2 {
-      font-size: 29px; } }
+      font-size: 26px; } }
   @media (min-width: 1200px) {
     h2 {
-      font-size: 32px; } }
+      font-size: 28px; } }
 
 h3 {
   line-height: 1.15;
   font-weight: 700;
   font-family: "PT Sans", sans-serif;
   margin: 0;
-  font-size: 23px; }
+  font-size: 22px; }
   @media (min-width: 760px) {
     h3 {
-      font-size: 26px; } }
+      font-size: 24px; } }
 
 h4 {
   line-height: 1.15;
   font-weight: 700;
   font-family: "PT Sans", sans-serif;
   margin: 0;
-  font-size: 22px; }
+  font-size: 20px; }
 
 h5 {
   line-height: 1.15;
   font-weight: 700;
   font-family: "PT Sans", sans-serif;
   margin: 0;
-  font-size: 20px; }
+  font-size: 19px; }
 
 h6 {
   line-height: 1.15;
@@ -4937,7 +4937,7 @@ a, .link {
 
 /* TEXT FIELDS
 ----------------- */
-.js-form-type-textfield input, .js-form-type-email input, .js-form-type-password input, .js-form-type-tel input, .js-form-type-number input, .js-form-type-search input, .js-form-type-entity-autocomplete input {
+.js-form-type-textfield input, .js-form-type-email input, .js-form-type-password input, .js-form-type-tel input, .js-form-type-number input, .js-form-type-search input, .js-form-type-entity-autocomplete input, .node-form .js-form-type-entity-autocomplete input, .node-confirm-form .js-form-type-entity-autocomplete input {
   border: 1px solid #026cc5;
   border-radius: 2px;
   font-size: 1.5rem;
@@ -4947,16 +4947,16 @@ a, .link {
   line-height: 1;
   min-height: 38px;
   max-width: 300px; }
-  .js-form-type-textfield input::-webkit-placeholder, .js-form-type-email input::-webkit-placeholder, .js-form-type-password input::-webkit-placeholder, .js-form-type-tel input::-webkit-placeholder, .js-form-type-number input::-webkit-placeholder, .js-form-type-search input::-webkit-placeholder, .js-form-type-entity-autocomplete input::-webkit-placeholder {
+  .js-form-type-textfield input::-webkit-placeholder, .js-form-type-email input::-webkit-placeholder, .js-form-type-password input::-webkit-placeholder, .js-form-type-tel input::-webkit-placeholder, .js-form-type-number input::-webkit-placeholder, .js-form-type-search input::-webkit-placeholder, .js-form-type-entity-autocomplete input::-webkit-placeholder, .node-form .js-form-type-entity-autocomplete input::-webkit-placeholder, .node-confirm-form .js-form-type-entity-autocomplete input::-webkit-placeholder {
     opacity: 0.4;
     color: #121212; }
-  .js-form-type-textfield input::-moz-placeholder, .js-form-type-email input::-moz-placeholder, .js-form-type-password input::-moz-placeholder, .js-form-type-tel input::-moz-placeholder, .js-form-type-number input::-moz-placeholder, .js-form-type-search input::-moz-placeholder, .js-form-type-entity-autocomplete input::-moz-placeholder {
+  .js-form-type-textfield input::-moz-placeholder, .js-form-type-email input::-moz-placeholder, .js-form-type-password input::-moz-placeholder, .js-form-type-tel input::-moz-placeholder, .js-form-type-number input::-moz-placeholder, .js-form-type-search input::-moz-placeholder, .js-form-type-entity-autocomplete input::-moz-placeholder, .node-form .js-form-type-entity-autocomplete input::-moz-placeholder, .node-confirm-form .js-form-type-entity-autocomplete input::-moz-placeholder {
     opacity: 0.4;
     color: #121212; }
   .js-form-type-textfield input:-ms-input-placeholder, .js-form-type-email input:-ms-input-placeholder, .js-form-type-password input:-ms-input-placeholder, .js-form-type-tel input:-ms-input-placeholder, .js-form-type-number input:-ms-input-placeholder, .js-form-type-search input:-ms-input-placeholder, .js-form-type-entity-autocomplete input:-ms-input-placeholder {
     opacity: 0.4;
     color: #121212; }
-  .js-form-type-textfield input::-webkit-input-placeholder, .js-form-type-email input::-webkit-input-placeholder, .js-form-type-password input::-webkit-input-placeholder, .js-form-type-tel input::-webkit-input-placeholder, .js-form-type-number input::-webkit-input-placeholder, .js-form-type-search input::-webkit-input-placeholder, .js-form-type-entity-autocomplete input::-webkit-input-placeholder {
+  .js-form-type-textfield input::-webkit-input-placeholder, .js-form-type-email input::-webkit-input-placeholder, .js-form-type-password input::-webkit-input-placeholder, .js-form-type-tel input::-webkit-input-placeholder, .js-form-type-number input::-webkit-input-placeholder, .js-form-type-search input::-webkit-input-placeholder, .js-form-type-entity-autocomplete input::-webkit-input-placeholder, .node-form .js-form-type-entity-autocomplete input::-webkit-input-placeholder, .node-confirm-form .js-form-type-entity-autocomplete input::-webkit-input-placeholder {
     opacity: 0.4;
     color: #121212; }
   .js-form-type-textfield input:focus::-webkit-placeholder, .js-form-type-email input:focus::-webkit-placeholder, .js-form-type-password input:focus::-webkit-placeholder, .js-form-type-tel input:focus::-webkit-placeholder, .js-form-type-number input:focus::-webkit-placeholder, .js-form-type-search input:focus::-webkit-placeholder, .js-form-type-entity-autocomplete input:focus::-webkit-placeholder {
@@ -5244,9 +5244,70 @@ select:hover, select:focus {
 .form-type-managed-file .description {
   line-height: 1.25; }
 
+/* CHECKBOXES & radios
+---------------- */
+.js-form-type-checkbox, .js-form-type-radio, .select-all {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative; }
+  .js-form-type-checkbox:not(:last-child), .js-form-type-radio:not(:last-child), .select-all:not(:last-child) {
+    margin-bottom: 0; }
+  .js-form-type-checkbox input, .js-form-type-radio input, .select-all input {
+    position: absolute;
+    opacity: 0; }
+    .js-form-type-checkbox input[type="radio"] + label:before, .js-form-type-radio input[type="radio"] + label:before, .select-all input[type="radio"] + label:before {
+      border-radius: 50%; }
+    .js-form-type-checkbox input:hover + label:before, .js-form-type-checkbox input:focus + label:before, .js-form-type-radio input:hover + label:before, .js-form-type-radio input:focus + label:before, .select-all input:hover + label:before, .select-all input:focus + label:before {
+      background: #ededed;
+      border-color: #026cc5; }
+    .js-form-type-checkbox input:checked + label:before, .js-form-type-radio input:checked + label:before, .select-all input:checked + label:before {
+      background: #026cc5;
+      border-color: #073b75; }
+    .js-form-type-checkbox input:checked:hover + label:before, .js-form-type-radio input:checked:hover + label:before, .select-all input:checked:hover + label:before {
+      background: #676767;
+      border-color: #073b75; }
+    .js-form-type-checkbox input:checked:focus, .js-form-type-radio input:checked:focus, .select-all input:checked:focus {
+      background: #026cc5;
+      border-color: #073b75; }
+  .js-form-type-checkbox label, .js-form-type-radio label, .select-all label {
+    display: inline-block;
+    width: 100%;
+    padding-left: 26px;
+    position: relative;
+    margin-bottom: 1rem; }
+    .js-form-type-checkbox label:before, .js-form-type-radio label:before, .select-all label:before {
+      content: '';
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      border: 2px solid #026cc5;
+      background: #ffffff;
+      cursor: pointer;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 20;
+      margin-right: 1rem; }
+
+/* DRAWERS
+------------------ */
+.drawer-toggle {
+  margin-bottom: 0.5rem;
+  font-size: 1.6rem; }
+  #drupal-modal .drawer-toggle {
+    display: none; }
+
+.form-drawer {
+  display: none; }
+
 /* ==============
 	 MEDIA
 ================== */
+.media-library-item__attributes {
+  min-height: 22px; }
+
 /* MEDIA BROWSER
 ------------------- */
 .entity-browser-form {
@@ -5831,12 +5892,139 @@ body:not(.role-administrator) #block-tabs nav.tabs.blocks.block-types {
 /* ========================
   NODE FORMS
 ========================== */
-@media (min-width: 760px) {
-  .node-form {
-    padding-right: 32px; } }
-
-.node-form .layout-region-node-footer__content .form-actions .button {
-  min-width: 140px; }
+.node-form, .node-confirm-form {
+  /* node specific form elements
+	---------------------------- */
+  /* SUPPORT BOOK FORM */ }
+  .node-form .js-form-type-textfield input, .node-form .js-form-type-email input, .node-form .js-form-type-password input, .node-form .js-form-type-tel input, .node-form .js-form-type-number input, .node-form .js-form-type-search input, .node-form .js-form-type-entity-autocomplete input, .node-confirm-form .js-form-type-textfield input, .node-confirm-form .js-form-type-email input, .node-confirm-form .js-form-type-password input, .node-confirm-form .js-form-type-tel input, .node-confirm-form .js-form-type-number input, .node-confirm-form .js-form-type-search input, .node-confirm-form .js-form-type-entity-autocomplete input {
+    max-width: 400px; }
+  .node-form .js-form-type-entity-autocomplete, .node-confirm-form .js-form-type-entity-autocomplete {
+    max-width: 800px; }
+  .node-form .layout-region-node-main > .field--widget-options-select .select2-container--default, .node-confirm-form .layout-region-node-main > .field--widget-options-select .select2-container--default {
+    width: 100% !important;
+    max-width: 240px; }
+  .node-form .field--widget-image-image, .node-confirm-form .field--widget-image-image {
+    max-width: 800px; }
+    .node-form .field--widget-image-image .js-form-type-textfield:last-of-type, .node-form .field--widget-image-image .js-form-type-email:last-of-type, .node-form .field--widget-image-image .js-form-type-password:last-of-type, .node-form .field--widget-image-image .js-form-type-tel:last-of-type, .node-form .field--widget-image-image .js-form-type-number:last-of-type, .node-form .field--widget-image-image .js-form-type-search:last-of-type, .node-form .field--widget-image-image .js-form-type-entity-autocomplete:last-of-type, .node-confirm-form .field--widget-image-image .js-form-type-textfield:last-of-type, .node-confirm-form .field--widget-image-image .js-form-type-email:last-of-type, .node-confirm-form .field--widget-image-image .js-form-type-password:last-of-type, .node-confirm-form .field--widget-image-image .js-form-type-tel:last-of-type, .node-confirm-form .field--widget-image-image .js-form-type-number:last-of-type, .node-confirm-form .field--widget-image-image .js-form-type-search:last-of-type, .node-confirm-form .field--widget-image-image .js-form-type-entity-autocomplete:last-of-type {
+      margin-bottom: 0; }
+    .node-form .field--widget-image-image .form-submit, .node-confirm-form .field--widget-image-image .form-submit {
+      top: 1.5rem;
+      margin-left: 2.5rem !important; }
+  .node-form .menu-instruction, .node-confirm-form .menu-instruction {
+    background: #ededed;
+    padding: 3rem 2rem 2rem; }
+    .node-form .menu-instruction h2, .node-confirm-form .menu-instruction h2 {
+      font-size: 20px; }
+  .node-form .layout-region-node-footer, .node-confirm-form .layout-region-node-footer {
+    position: relative; }
+    .node-form .layout-region-node-footer .layout-region-node-footer__content, .node-confirm-form .layout-region-node-footer .layout-region-node-footer__content {
+      border-top: 0;
+      padding-top: 4rem;
+      margin-top: 3rem;
+      border-top: 3px solid #1d5a9f;
+      display: flex;
+      display: -ms-flexbox;
+      flex-direction: row;
+      -ms-flex-direction: row;
+      flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      justify-content: flex-start;
+      -ms-flex-pack: start;
+      align-items: center;
+      -ms-flex-align: center; }
+      .node-form .layout-region-node-footer .layout-region-node-footer__content .entity-content-form-footer, .node-confirm-form .layout-region-node-footer .layout-region-node-footer__content .entity-content-form-footer {
+        display: flex;
+        display: -ms-flexbox;
+        flex-direction: row;
+        -ms-flex-direction: row;
+        flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        justify-content: flex-start;
+        -ms-flex-pack: start;
+        align-items: center;
+        -ms-flex-align: center; }
+    .node-form .layout-region-node-footer #edit-status-wrapper .form-item, .node-form .layout-region-node-footer #edit-field-restricted-wrapper .form-item, .node-confirm-form .layout-region-node-footer #edit-status-wrapper .form-item, .node-confirm-form .layout-region-node-footer #edit-field-restricted-wrapper .form-item {
+      margin: 1rem 3rem 1rem 0; }
+    .node-form .layout-region-node-footer #edit-status-wrapper .js-form-type-checkbox label, .node-form .layout-region-node-footer #edit-field-restricted-wrapper .js-form-type-checkbox label, .node-confirm-form .layout-region-node-footer #edit-status-wrapper .js-form-type-checkbox label, .node-confirm-form .layout-region-node-footer #edit-field-restricted-wrapper .js-form-type-checkbox label {
+      font-weight: 700;
+      font-size: 2rem;
+      padding-left: 35px; }
+      .node-form .layout-region-node-footer #edit-status-wrapper .js-form-type-checkbox label:before, .node-form .layout-region-node-footer #edit-field-restricted-wrapper .js-form-type-checkbox label:before, .node-confirm-form .layout-region-node-footer #edit-status-wrapper .js-form-type-checkbox label:before, .node-confirm-form .layout-region-node-footer #edit-field-restricted-wrapper .js-form-type-checkbox label:before {
+        width: 22px;
+        height: 22px; }
+    .node-form .layout-region-node-footer #edit-actions > *, .node-confirm-form .layout-region-node-footer #edit-actions > * {
+      margin-right: 1rem;
+      margin-bottom: 1rem; }
+    .node-form .layout-region-node-footer #edit-actions #edit-preview, .node-confirm-form .layout-region-node-footer #edit-actions #edit-preview {
+      background-image: none;
+      background-color: #026cc5;
+      border: none;
+      border-radius: 0;
+      color: #ffffff;
+      line-height: 1.15;
+      padding: 1.15rem 1.5rem 1rem;
+      display: inline-block;
+      vertical-align: middle;
+      text-decoration: none;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: .02em;
+      font-weight: 700;
+      font-size: 1.5rem;
+      margin-left: 0;
+      margin-right: 0;
+      margin-bottom: 3rem;
+      transition: color 0.3s ease, background-color 0.3s ease;
+      -moz-transition: color 0.3s ease, background-color 0.3s ease;
+      -webkit-transition: color 0.3s ease, background-color 0.3s ease;
+      -webkit-transform: translateZ(0);
+      text-shadow: none;
+      background: #026cc5;
+      color: #ffffff;
+      min-width: 120px;
+      background: #018901; }
+      .node-form .layout-region-node-footer #edit-actions #edit-preview:hover, .node-form .layout-region-node-footer #edit-actions #edit-preview:focus, .node-confirm-form .layout-region-node-footer #edit-actions #edit-preview:hover, .node-confirm-form .layout-region-node-footer #edit-actions #edit-preview:focus {
+        color: #121212;
+        background-color: #cccccc;
+        background-image: none;
+        outline: none;
+        border: none;
+        box-shadow: none; }
+      .node-form .layout-region-node-footer #edit-actions #edit-preview:active, .node-confirm-form .layout-region-node-footer #edit-actions #edit-preview:active {
+        color: #121212;
+        background-color: #b3b3b3;
+        border: none;
+        box-shadow: none; }
+      .node-form .layout-region-node-footer #edit-actions #edit-preview:hover, .node-form .layout-region-node-footer #edit-actions #edit-preview:focus, .node-confirm-form .layout-region-node-footer #edit-actions #edit-preview:hover, .node-confirm-form .layout-region-node-footer #edit-actions #edit-preview:focus {
+        background: #cccccc;
+        color: #121212;
+        border-color: #cccccc; }
+      .node-form .layout-region-node-footer #edit-actions #edit-preview:active, .node-confirm-form .layout-region-node-footer #edit-actions #edit-preview:active {
+        background: #b3b3b3;
+        color: #121212;
+        border-color: #b3b3b3; }
+      .node-form .layout-region-node-footer #edit-actions #edit-preview:hover, .node-form .layout-region-node-footer #edit-actions #edit-preview:focus, .node-confirm-form .layout-region-node-footer #edit-actions #edit-preview:hover, .node-confirm-form .layout-region-node-footer #edit-actions #edit-preview:focus {
+        background: #cccccc;
+        color: #121212; }
+      .node-form .layout-region-node-footer #edit-actions #edit-preview:active, .node-confirm-form .layout-region-node-footer #edit-actions #edit-preview:active {
+        background: #b3b3b3;
+        color: #121212; }
+    .node-form .layout-region-node-footer #edit-actions #edit-submit, .node-form .layout-region-node-footer #edit-actions #edit-delete, .node-confirm-form .layout-region-node-footer #edit-actions #edit-submit, .node-confirm-form .layout-region-node-footer #edit-actions #edit-delete {
+      max-width: 120px;
+      padding-bottom: 1.15rem;
+      margin-top: 0; }
+  .node-form.node-support-book-edit-form .layout-region-node-secondary, .node-form.node-support-book-form .layout-region-node-secondary, .node-confirm-form.node-support-book-edit-form .layout-region-node-secondary, .node-confirm-form.node-support-book-form .layout-region-node-secondary {
+    padding-right: 2em; }
+    .node-form.node-support-book-edit-form .layout-region-node-secondary .entity-meta, .node-form.node-support-book-form .layout-region-node-secondary .entity-meta, .node-confirm-form.node-support-book-edit-form .layout-region-node-secondary .entity-meta, .node-confirm-form.node-support-book-form .layout-region-node-secondary .entity-meta {
+      display: block; }
+      .node-form.node-support-book-edit-form .layout-region-node-secondary .entity-meta .entity-meta__header, .node-form.node-support-book-form .layout-region-node-secondary .entity-meta .entity-meta__header, .node-confirm-form.node-support-book-edit-form .layout-region-node-secondary .entity-meta .entity-meta__header, .node-confirm-form.node-support-book-form .layout-region-node-secondary .entity-meta .entity-meta__header {
+        display: none; }
+      .node-form.node-support-book-edit-form .layout-region-node-secondary .entity-meta .menu-link-form, .node-form.node-support-book-form .layout-region-node-secondary .entity-meta .menu-link-form, .node-confirm-form.node-support-book-edit-form .layout-region-node-secondary .entity-meta .menu-link-form, .node-confirm-form.node-support-book-form .layout-region-node-secondary .entity-meta .menu-link-form {
+        border-top: 1px solid #bfbfbf;
+        background-image: none;
+        background: #f6f6f6; }
+        .node-form.node-support-book-edit-form .layout-region-node-secondary .entity-meta .menu-link-form summary, .node-form.node-support-book-form .layout-region-node-secondary .entity-meta .menu-link-form summary, .node-confirm-form.node-support-book-edit-form .layout-region-node-secondary .entity-meta .menu-link-form summary, .node-confirm-form.node-support-book-form .layout-region-node-secondary .entity-meta .menu-link-form summary {
+          font-size: 1.6rem; }
 
 /* ========================
   PARAGRAPHS
@@ -5860,7 +6048,9 @@ body:not(.role-administrator) #block-tabs nav.tabs.blocks.block-types {
   float: left;
   background-position: 4px 3px !important;
   background-size: 24px 24px !important;
-  margin-right: 15px; }
+  margin-right: 15px;
+  font-size: 1.6rem;
+  font-weight: 700; }
 
 .field--widget-paragraphs .paragraphs-tabs-wrapper input.button.field-add-more-submit:hover {
   border-color: #005b8a !important;
@@ -5869,46 +6059,46 @@ body:not(.role-administrator) #block-tabs nav.tabs.blocks.block-types {
 .field--widget-paragraphs .paragraphs-tabs-wrapper .clearfix {
   margin-bottom: 2em; }
 
-.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Accordion Group"] {
+.field--widget-paragraphs .paragraphs-tabs-wrapper input.form-submit:not(.image-button)[value="Add Accordion Group"] {
   background: url("../images/icons/paragraphs/accordion.svg") no-repeat; }
 
-.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Accordion Item"] {
+.field--widget-paragraphs .paragraphs-tabs-wrapper input.form-submit:not(.image-button)[value="Add Accordion Item"] {
   background: url("../images/icons/paragraphs/accordion.svg") no-repeat; }
 
-.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Basic Page Section"] {
+.field--widget-paragraphs .paragraphs-tabs-wrapper input.form-submit:not(.image-button)[value="Add Basic Page Section"] {
   background: url("../images/icons/paragraphs/section.svg") no-repeat; }
 
-.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Block Placer"] {
+.field--widget-paragraphs .paragraphs-tabs-wrapper input.form-submit:not(.image-button)[value="Add Block Placer"] {
   background: url("../images/icons/paragraphs/block.svg") no-repeat; }
 
-.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Form"] {
+.field--widget-paragraphs .paragraphs-tabs-wrapper input.form-submit:not(.image-button)[value="Add Form"] {
   background: url("../images/icons/paragraphs/form.svg") no-repeat; }
 
-.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Gallery"] {
+.field--widget-paragraphs .paragraphs-tabs-wrapper input.form-submit:not(.image-button)[value="Add Gallery"] {
   background: url("../images/icons/paragraphs/galleries.svg") no-repeat; }
 
-.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Horizontal Rule"] {
+.field--widget-paragraphs .paragraphs-tabs-wrapper input.form-submit:not(.image-button)[value="Add Horizontal Rule"] {
   background: url("../images/icons/paragraphs/hr.svg") no-repeat; }
 
-.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Image"] {
+.field--widget-paragraphs .paragraphs-tabs-wrapper input.form-submit:not(.image-button)[value="Add Image"] {
   background: url("../images/icons/paragraphs/image.svg") no-repeat; }
 
-.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Landing Page Section"] {
+.field--widget-paragraphs .paragraphs-tabs-wrapper input.form-submit:not(.image-button)[value="Add Landing Page Section"] {
   background: url("../images/icons/paragraphs/section.svg") no-repeat; }
 
-.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Links & Files"] {
+.field--widget-paragraphs .paragraphs-tabs-wrapper input.form-submit:not(.image-button)[value="Add Links & Files"] {
   background: url("../images/icons/paragraphs/link.svg") no-repeat; }
 
-.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Pullquote"] {
+.field--widget-paragraphs .paragraphs-tabs-wrapper input.form-submit:not(.image-button)[value="Add Pullquote"] {
   background: url("../images/icons/paragraphs/pullquote.svg") no-repeat; }
 
-.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Text"] {
+.field--widget-paragraphs .paragraphs-tabs-wrapper input.form-submit:not(.image-button)[value="Add Text"] {
   background: url("../images/icons/paragraphs/text.svg") no-repeat; }
 
-.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add View Placer"] {
+.field--widget-paragraphs .paragraphs-tabs-wrapper input.form-submit:not(.image-button)[value="Add View Placer"] {
   background: url("../images/icons/paragraphs/view-placer.svg") no-repeat; }
 
-.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Video"] {
+.field--widget-paragraphs .paragraphs-tabs-wrapper input.form-submit:not(.image-button)[value="Add Video"] {
   background: url("../images/icons/paragraphs/video.svg") no-repeat; }
 
 .js .field--widget-paragraphs .paragraphs-tabs-wrapper .paragraph-top {
@@ -6173,7 +6363,7 @@ table {
     font-weight: 700;
     font-family: "PT Sans", sans-serif;
     margin: 0;
-    font-size: 20px; }
+    font-size: 19px; }
 
 /* TAXONOMY OVERVIEW 
 ------------------------ */
@@ -6194,14 +6384,10 @@ table {
 .vbo-view-form > #edit-actions, .media-library-views-form > #edit-actions {
   display: none; }
 
-.views-exposed-form .filter-control {
-  margin-bottom: 2rem; }
-
 .views-exposed-form #views-filter-wrapper {
   background: #676767;
   padding: 1px 2rem;
-  margin-bottom: 3rem;
-  display: none; }
+  margin-bottom: 3rem; }
 
 .views-exposed-form .form--inline {
   display: flex;

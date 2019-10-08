@@ -27,6 +27,8 @@
 			  background-position: 4px 3px !important;
 			  background-size: 24px 24px !important;
 			  margin-right: 15px;
+			  font-size: 1.6rem;
+			  font-weight: $heavy;
 			}
 			&:hover{
 				border-color: #005b8a !important;
@@ -36,7 +38,7 @@
 		.clearfix{
 			margin-bottom: 2em;
 		}
-		input{
+		input.form-submit:not(.image-button){
 			&[value="Add Accordion Group"]{
 				background: url('../images/icons/paragraphs/accordion.svg') no-repeat;
 			}
