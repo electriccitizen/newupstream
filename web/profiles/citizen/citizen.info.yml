@@ -7,15 +7,18 @@ dependencies:
   - addanother
   - addtoany
   - admin_toolbar
+  - antibot
   - auto_entitylabel
   - automated_cron
   - block
   - block_content
   - breakpoint
+  - citizen_custom
   - ckeditor
   - color
   - components
   - config
+  - config_filter
   - config_ignore
   - config_split
   - config_update
@@ -27,9 +30,9 @@ dependencies:
   - datetime
   - dblog
   - default_content
-  - devel
   - dynamic_page_cache
   - easy_breadcrumb
+  - ec_preview
   - editor
   - embed
   - entity
@@ -38,7 +41,6 @@ dependencies:
   - entity_embed
   - entity_reference_revisions
   - entity_usage
-  - extlink
   - field
   - field_group
   - field_ui
@@ -47,38 +49,46 @@ dependencies:
   - flippy
   - focal_point
   - geolocation
+  - google_analytics
+  - hal
   - help
   - history
   - image
   - image_style_quality
   - inline_entity_form
-  - kint
   - layout_builder
   - layout_builder_restrictions
   - layout_discovery
   - libraries
   - link
-  - link_attributes
   - linkit
   - media
   - media_entity_actions
+  - media_entity_generic
   - menu_block
   - menu_ui
   - metatag
+  - metatag_open_graph
+  - metatag_twitter_cards
   - node
   - options
   - page_cache
-  - paragraphs_type_permissions
   - paragraphs_library
+  - paragraphs_type_permissions
   - path
   - pathologic
   - quickedit
+  - quicklink
   - rdf
   - redirect
   - responsive_image
+  - responsive_preview
   - search_api
   - search_api_db
+  - serialization
   - shortcut
+  - stage_file_proxy
+  - structure_sync
   - superfish
   - system
   - taxonomy
@@ -91,13 +101,14 @@ dependencies:
   - user
   - video_embed_field
   - video_embed_media
-  - views_infinite_scroll
   - views_bulk_operations
+  - views_infinite_scroll
   - views_ui
   - webform
   - webform_ui
   - xmlsitemap_custom
   - xmlsitemap_engines
+  - extlink
   - menu_link_content
   - pathauto
   - xmlsitemap
@@ -106,4 +117,5 @@ dependencies:
 
 themes:
   - citizen_patterns
+  - crane
   - seven
