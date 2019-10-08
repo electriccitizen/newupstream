@@ -31,7 +31,6 @@ $buttonPadding: 1.15rem 1.5rem 1rem;
 		background-image: none;
 		outline: none;
 		border: none;
-		padding: $buttonPadding;
 		box-shadow: none;
 	}
 	&:active{
@@ -51,12 +50,12 @@ $buttonPadding: 1.15rem 1.5rem 1rem;
 	&:hover,&:focus{
 		background: $buttonBackHover;
 		color: $buttonTextHover;
-		border-color: $buttonBackHover;
+		border: 1px solid $buttonBackHover;
 	}
 	&:active{
 		background: $buttonBackActive;
 		color: $buttonTextActive;
-		border-color: $buttonBackActive;
+		border: 1px solid $buttonBackActive;
 	}
 }
 
@@ -102,11 +101,13 @@ $buttonPadding: 1.15rem 1.5rem 1rem;
 		background: $buttonBackHover;
 		color: $buttonTextHover;
 		border-color: $buttonBackHover;
+		padding: $buttonPadding;
 	}
 	&:active{
 		background: $buttonBackActive;
 		color: $buttonTextActive;
 		border-color: $buttonBackActive;
+		padding: $buttonPadding;
 	}
 }
 
@@ -177,7 +178,7 @@ $buttonPadding: 1.15rem 1.5rem 1rem;
 	}
 }//end reset danger buttons
 
-.button--small{
+.button--small,.no-touchevents .button--small{
 	@include outlineButton($borderRule);
 	background: $siteBack;
 	color: $link;
@@ -229,7 +230,7 @@ $buttonPadding: 1.15rem 1.5rem 1rem;
 	@include outlineButton($link);
 }
 
-.button,.no-touchevents .button--small{
+.button{
 	font-size: $baseSize;
 	padding: $buttonPadding;
 }

@@ -20,7 +20,7 @@ $green        : #018901;
 $gold         : #fcd105;
 $tan          : #8e700b;
 $blueGrey     : #dce7f3;
-$blue         : #017AC6;
+$blue         : #026cc5;
 $midBlue      : #1d5a9f;
 $darkBlue     : #073b75;
 
@@ -55,6 +55,13 @@ $cautionText       : $white;
 $altBack           : $green;
 $altText           : $white;
 
+$tabsBorder       : $link;
+$tabsBack         : $siteBack;
+$tabsText         : $black;
+$tabsActiveBack   : $blueGrey;
+$tabsActiveBorder : $blueGrey;
+$tabsActiveText   : $black;
+
 $formElementBorder        : $borderRule;
 $placeColor               : $baseText;
 $placeFocusColor          : $placeColor;
@@ -76,3 +83,13 @@ $messageWarningText : $tan;
 $messageWarningBack : $transGold;
 $messageErrorText   : $darkFuchsia;
 $messageErrorBack   : $transFuchsia;
+
+$tableHeaderBack     : $lightGrey;
+$tableHeaderBorder   : $tableHeaderBack;
+$tableHeaderText     : $black;
+$rowBorder           : $midGrey;
+$oddRowBack          : $siteBack;
+$oddRowText          : $black;
+$evenRowBack         : $siteBack;
+$evenRowText         : $black;
+

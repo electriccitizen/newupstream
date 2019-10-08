@@ -8,8 +8,8 @@ dependencies:
     - crane
 id: breadcrumbs
 theme: crane
-region: breadcrumb
-weight: 0
+region: header
+weight: -3
 provider: null
 plugin: system_breadcrumb_block
 settings:

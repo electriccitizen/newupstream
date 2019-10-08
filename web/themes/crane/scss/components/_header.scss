@@ -1,64 +1,6 @@
 /* ========================
   HEADER
 ========================== */
-
-.header-bar{
-	box-sizing: border-box;
-	background: $black;
-	color: $white;
-	padding: 18px $siteMarginMobile 13px;
-	position: fixed;
-	width: 100%;
-	top: 50px;
-	left: 0;
-	z-index: 496;
-	@include safeFlex(row,wrap,center,center);
-	@include tab{
-		top: 0;
-		left: 0;
-		z-index: 599;
-		@include safeFlex(row,wrap,justify,center);
-	}
-	.site-name{
-		font-weight: $heavy;
-		display: block;
-		@include onlySmall{
-			width: 100%;
-			text-align: center;
-			margin-bottom: $spaceXs;
-		}
-	}
-	.header-actions{
-		@include safeFlex(row,wrap,center,start);
-		@include bleed(padding,20px);
-		@include tab{
-			text-align: right;
-			@include calc(width,"100% - 200px");
-			@include safeFlex(row,wrap,end,start);
-		}
-		& > div{
-			&:not(:last-child){
-				position: relative;
-				&:after{
-					@include vertRule(right,70%,$white);
-				}
-			}
-		}
-		.user-icon{
-			width: 14px;
-			margin-right: .75rem;
-		}
-		a{
-			color: $white;
-			text-decoration: none;
-			&:hover,&:focus{
-				opacity: .6;
-				text-decoration: underline;
-			}
-		}
-	}//end header actions
-}//end header-bar
-
 header{
 	.shortcut-action__icon{
 		background: transparent url('../images/icons/admin-icons/shortcut-star.svg') no-repeat left top;
@@ -83,11 +25,8 @@ header{
 	}
 	&.content-header{
 		position: relative;
-		padding: $spaceLg 0 0;
+		padding: $spaceMd 0 0;
 		background-color: $siteBack;
-		@include tab{
-			padding: $spaceXl 0 0;
-		}
 		.region-header{
 			border-bottom: 1px solid $borderRule;
 			@include desk{
