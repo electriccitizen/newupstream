@@ -5476,6 +5476,9 @@ span.file {
   .seven-details[open] > .seven-details__summary:hover, .seven-details[open] > .seven-details__summary:focus {
     color: #676767; }
 
+.entity-meta .seven-details[open] {
+  background-image: #f6f6f6; }
+
 .seven-details__summary {
   font-family: "PT Sans", sans-serif;
   color: #073b75; }
