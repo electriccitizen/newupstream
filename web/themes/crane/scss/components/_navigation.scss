@@ -2,6 +2,14 @@
 	 NAVIGATION
 ================== */
 
+/* BREADCRUMBS
+---------------- */
+.block-system-breadcrumb-block{
+	width: 100%;
+	font-size: 1.4rem;
+	margin-top: -$spaceSm;
+}
+
 /* ADMIN TOOLBAR
 ------------------ */
 #toolbar-bar{
@@ -70,26 +78,161 @@
 	}
 }
 
+/* LOCAL ACTIONS
+------------------ */
+#block-crane-local-actions{
+	ul.action-links{
+		margin: 0;
+		a.button--primary.button--small{
+			border-radius: 0;
+			&:hover,&:focus{
+				background: $buttonBackHover;
+				color: $buttonTextHover;
+				border: 1px solid $buttonBackHover;
+				@include transAll(.3s);
+			}
+			&:active{
+				background: $buttonBackActive;
+				color: $buttonTextActive;
+				border: 1px solid $buttonBackActive;
+			}
+		}
+	}//end action links
+}//end local actions
+
+
 /* PRIMARY TASKS
 ------------------- */
-#block-seven-primary-local-tasks{
-	.tabs__tab{
-		a{
-			color: $midBlue;
-		}
-		&.is-active{
-			a{
-				color: $blue;
+#block-tabs-2{
+	width: 100%;
+	*{
+		box-sizing: border-box;
+	}
+	nav.is-horizontal.is-collapsible.position-container.is-horizontal-enabled{
+		background: transparent;
+		margin-left: 0;
+		margin-right: 0;
+		padding-left: 0;
+		padding-right: 0;
+		position: relative;
+		z-index: 99;
+		.tabs{
+			&:before{
+				content: none;
+			}
+			.tabs__tab{
+				border-radius: 0;
 			}
 		}
 	}
-}
+	nav.is-collapse-enabled{
+		.tabs__tab{
+			padding-right: 0;
+			&.is-active{
+				border-bottom: 0;
+				top: -4px;
+			}
+			a{
+				display: block;
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.tabs.primary .tabs__tab{
+		border-color: $tabsBorder;
+		&.is-active{
+			box-shadow: none !important;
+			background-color: transparent;
+			margin: 0;
+		}
+		a{
+			margin-bottom: -1px;
+			background: $tabsBack;
+			border-radius: 0;
+			font-weight: $heavy;
+			color: $tabsText;
+			&:hover,&:focus{
+				background: $buttonBackHover;
+				color: $buttonTextHover;
+				text-decoration: none !important;
+			}
+			&:active{
+				background: $buttonBackActive;
+				color: $buttonTextActive;
+			}
+			&.is-active{
+				background: $tabsActiveBack;
+				color: $tabsActiveText;
+				border-color: $tabsActiveBorder;
+				&:hover,&:focus{
+					background: $buttonBackHover;
+					color: $buttonTextHover;
+				}
+				&:active{
+					background: $buttonBackActive;
+					color: $buttonTextActive;
+				}
+			}
+		}//end a{
+	}//end tabs__tab
+}//end primary tabs
 
 /* SECONDARY TASKS
 -------------------- */
-#block-seven-secondary-local-tasks{
-	padding-bottom: $spaceSm;
-}
+#block-tabs{
+	nav.tabs{
+		.is-horizontal{
+			margin-left: -1em;
+			.tabs{
+				&:before{
+					content: none;
+				}
+				li{
+					a{
+						border-left: 0;
+						border-bottom: 2px solid transparent;
+						&.is-active{
+							border-bottom-color: $buttonBackActive;
+						}
+						&:hover,&:focus{
+							border-bottom-color: $buttonBackHover;
+						}
+					}
+				}
+			}
+		}//end is horizontal
+		li{
+			border: 0 !important;
+			padding-left: 0;
+			padding-right: 0;
+			background: none;
+			a{
+				border-bottom: 1px solid $borderRule;
+				border-left: 3px solid transparent;
+				font-size: 1.5rem;
+				&.is-active{
+					border-left-color: $darkGrey;
+					&:hover,&:focus{
+						color: $hoverLink;
+						border-left-color: $grey;
+					}
+				}
+				&:hover,&:focus{
+					border-left-color: $grey;
+					color: $hoverLink;
+				}
+			}//end a
+		}//end li
+
+		//hide block secondary tasks from non-admins
+		&.blocks.block-types{
+			body:not(.role-administrator) &{
+				display: none;
+			}
+		}
+	}//end nav tabs
+}//end secondary tabs
 
 /* BREADCRUMBS 
 ----------------- */

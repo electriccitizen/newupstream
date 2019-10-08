@@ -75,24 +75,24 @@
 		opacity: 0;
 		&:hover,&:focus{
 			+ label:before{
-				background: $checkBoxBackHover;
-				border-color: $checkBoxHover;
+				background: $checkboxBackHover;
+				border-color: $checkboxHover;
 			}
 		}
 		&:checked{
 			+ label:before{
-				background: $checkBoxCheckedBack;
-				border-color: $checkBoxChecked;
+				background: $checkboxCheckedBack;
+				border-color: $checkboxChecked;
 			}
 			&:hover{
 				& + label:before{
-					background: $checkBoxCheckedBackHover;
-					border-color: $checkBoxCheckedHover;
+					background: $checkboxCheckedBackHover;
+					border-color: $checkboxCheckedHover;
 				}
 			}
 			&:focus{
-				background: $checkBoxCheckedBack;
-				border-color: $checkBoxChecked;
+				background: $checkboxCheckedBack;
+				border-color: $checkboxChecked;
 			}
 		}
 	}
@@ -108,7 +108,7 @@
 			display: inline-block;
 			width: 16px;
 			height: 16px;
-			border: 2px solid $checkBox;
+			border: 2px solid $checkbox;
 			background: $siteBack;
 			cursor: pointer;
 			position: absolute;

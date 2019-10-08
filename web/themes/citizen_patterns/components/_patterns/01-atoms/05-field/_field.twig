@@ -1,10 +1,12 @@
 
+{% set classes = 'field ' ~ field_name|clean_class ~ ' ' ~ field_type|clean_class %}
+  
 {# no label #}
 {%- if label_hidden -%}
   {# multi block with no label #}
   {%- if multiple -%}
     {% block fieldMultiNoClasses %}
-    <div class="field {{ field_name|clean_class }} {{ field_type|clean_class }}">
+    <div{{ attributes.addClass(classes) }}>
     {% endblock %}
         {%- for item in items -%}
           <div{{ item.attributes }}>
@@ -17,7 +19,7 @@
   {# single block with no label #}
   {%- else -%}
     {% block fieldSingleNoClasses %}
-    <div class="field {{ field_name|clean_class }} {{ field_type|clean_class }}">
+    <div{{ attributes.addClass(classes) }}>
     {% endblock %}
       {%- for item in items -%}
         {% block fieldSingleNo %}
@@ -29,7 +31,7 @@
 {%- else -%}
   {# block with label #}
   {% block fieldLabelClasses %}
-  <div class="field {{ field_name|clean_class }} {{ field_type|clean_class }}">
+  <div{{ attributes.addClass(classes) }}>
   {% endblock %}
     {%- if (label_display == 'inline') -%}
       <span class="inline-label">{{- label -}}:</span>

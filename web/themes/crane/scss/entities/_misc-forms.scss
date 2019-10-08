@@ -12,3 +12,31 @@
   padding: .25em 1em;
   display: inline-block;
 }
+
+/* BLOCK LAYOUT
+------------------ */
+.block-admin-display-form{
+	table{
+		tbody{
+			tr.region-title{
+				background: $iceBlue;
+				padding: .5rem .6em;
+				td{
+					.button--small{
+						border-color: $black;
+						color: $black;
+						background: transparent;
+						&:hover,&:focus{
+							color: $white;
+							background: $midGrey;
+						}
+						&:active{
+							color: $white;
+							background: $black;
+						}
+					}
+				}
+			}//end region-title
+		}//end tbody
+	}//end table
+}//end block layout admin form

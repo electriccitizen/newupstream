@@ -28,6 +28,9 @@
 			color: $hoverLink;
 		}
 	}
+	.entity-meta &{
+		background-image: $offWhite;
+	}
 }
 .seven-details__summary{
 	font-family: $bodyFont;

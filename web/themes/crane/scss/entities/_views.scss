@@ -1,39 +1,116 @@
 /* ========================
   VIEWS
 ========================== */
-
-
-/* GLOBAL VIEWS
----------------- */
-.views-ui-display-tab-bucket .views-display-setting{
-	font-size: 1.4rem;
+.vbo-view-form,.media-library-views-form{
+	& > #edit-actions{
+		display: none;
+	}
+}
+.views-exposed-form{
+	#views-filter-wrapper{
+		background: $midGrey;
+		padding: 1px $spaceSm;
+		margin-bottom: $spaceMd;
+	}
+	.form--inline{
+		@include safeFlex(row,wrap,start,end);
+		@include bleed(padding,10px);
+		& > .form-item{
+			width: 100%;
+			margin-bottom: $spaceSm;
+			margin-right: 0;
+			label{
+				color: $white;
+			}
+			.select2-container--default{
+				margin-bottom: 0;
+				max-width: 300px;
+				.crane &{
+					width: 100% !important;
+				}
+			}
+			@include smallTab{
+				max-width: 240px;
+			}
+		}//end form item
+		#edit-actions{
+			margin: 0;
+			width: 260px;
+			input{
+				margin-bottom: $spaceSm;
+			}
+		}
+	}//end form inline
+}//end views exposed form
+.view-filters + .view-empty{
+	padding: $spaceMd 0;
+	margin-top: $spaceMd;
+	border-top: 1px solid $borderRule;
 }
 
-.js .views-edit-view{
-	.dropbutton-wrapper{
-		.dropbutton{
-			.dropbutton-action{
-				& > *{
-					font-size: 1.3rem;
-					text-transform: none;
-				}
+/* VIEWS BULK OPERATIONS
+----------------------- */
+#bulk-operations-wrapper > *{
+	@include safeFlex(row,wrap,start,center);
+	margin-bottom: $spaceMd;
+	.form-item{
+		width: auto;
+		margin-right: 2rem;
+		margin-top: 0;
+		margin-bottom: $spaceXs;
+	}
+	.js-form-item-action{
+		label{
+			@include visuallyHidden;
+		}
+		.crane &{
+			.select2-container--default .select2-selection--single{
+				min-width: 200px;
+			}
+		}
+	}
+	.js-form-item-select-all{
+		+ .form-actions{
+			width: 100%;
+		}
+	}
+	.vbo-multipage-selector{
+		display: none;
+	}
+	.form-actions{
+		margin: 0;
+		input{
+			margin-bottom: $spaceXs;
+			padding-left: 5rem;
+			padding-right: 5rem;
+		}
+	}
+}//end vbo form-wrapper
+
+/* VIEWS TABLE
+----------------- */
+.views-table{
+	.crane &{
+		td.views-field-operations{
+			padding: .75rem 1.5rem;
+			.dropbutton-widget{
+				min-width: 120px;
 			}
 		}
 	}
 }
 
-.view-preview-form{
-	.js-form-type-textfield{
-		max-width: 300px;
+/* VIEWS UI
+----------------- */
+.views-ui-display-tab-bucket{
+	margin-bottom: $spaceXs;
+	.views-display-setting{
+		font-size: 1.5rem;
 	}
-	.form-actions{
-		@include smallTab{
-			margin-top: 55px;
-		}
+	.views-ui-display-tab-bucket__title{
+		font-size: $baseSize;
 	}
 }
-
-//views modal buttons
 .views-ui-dialog{
 	.views-override.form--inline{
 		.js-form-item-override-dropdown{
@@ -51,86 +128,102 @@
 				@include cautionButton;
 				min-width: 185px;
 			}
+			&.button--danger:not(.image-button){
+				min-width: 185px;
+			}
 		}
 	}
 }//end views ui dialog
 
 
-/* MAIN CONTENT VIEW
------------------------ */
-.view-content.view-display-id-page_1{
-	.view-filters{
-		background: $whiteBlue;
-		padding: $spaceXs 2.5em $spaceSm;
-		@include bleed(null,5em);
-		position: relative;
-		z-index: 20;
-		margin-bottom: -1px;
-		.form-actions{
-			clear: none;
-  		float: left;
-  		input{
-  			margin-top: 22px !important;
-  		}
-		}
-	}//end views filters
-	.view-content{
-		position: relative;
-		@include contentStop{
-			&:before{
-				content: '';
-				display: block;
-				position: absolute;
-				top: 0;
-				left: -2.5em;
-				z-index: -1;
-				width: 100vw;
-				height: 42px;
-				background: $offWhite;
-				border-bottom: 1px solid $grey;
-			}
-		}
-		.views-form > form{
-			@include safeFlex(column,nowrap,start,start);
-			& > .form-actions{
-				display: none;
-			}
-			& > #edit-header{
-				@include safeFlexOrder(99);
-				&.form-wrapper{
-					width:  100%;
-					max-width: 300px;
-				}
-			}	
-		}
-		table{
-			thead{
-				& > tr{
-					border-bottom: none;
-				}
-				th{
-					background: $offWhite;
-					border-color: $grey;
-				}
-			}
-		}//end table
-	}//end view content
-}//end admin content view
+/* ==================
+  SPECIFIC VIEWS
+===================== */
 
-/* MAIN MEDIA VIEW
--------------------- */
-.view-display-id-media_page_list{
-	@extend .view-content.view-display-id-page_1;
-	.view-filters{
-		.form-item-field-media-categories-target-id{
-			max-width: 300px;
-			margin-right: 20px;
+/* USERS LIST
+---------------- */
+.view-user-admin-people{
+	.views-exposed-form{
+		.form--inline{
+			& > .form-item-status{
+				max-width: 120px;
+			}
+			& > .form-item-role{
+				max-width: 140px;
+			}
+		}
+	}//end views exposed form
+	.view-content{
+		//hide duplicate bulk operations button
+		.views-table ~ .form-actions{
+			display: none !important;
+		}
+		.views-field-user-picture{
+			img{
+				width: 50px;
+				border-radius: 50%;
+			}
 		}
 	}
-}
+}//end user admin people
 
-/* MAIN FILES VIEW
+
+/* REDIRECTS LIST
 --------------------- */
-.view-files.view-display-id-page_1{
-	@extend .view-content.view-display-id-page_1;
-}
+.view-redirect{
+	.view-content{
+		//hide duplicate bulk operations button
+		.views-table ~ .form-actions{
+			display: none !important;
+		}
+	}
+}//end redirect view
+
+/* CONTENT VIEWS
+------------------ */
+.view-id-content{
+	.views-table{
+		*{
+			box-sizing: border-box;
+		}
+		.views-field-title{
+			.restricted{
+				font-size: 1.4rem;
+				color: $red;
+				margin-left: .5rem;
+			}
+		}
+		.views-field-changed{
+			max-width: 140px;
+		}
+		.views-field-operations{
+			max-width: 120px;
+		}
+	}
+}//end content views
+
+//media
+.crane .media-library-select-all{
+	margin: $spaceXs 8px;
+	font-size: 1.6rem;
+}//end media library select all
+
+/* RESTRICTED BLOCKS */
+.view-id-block_content{
+	.views-field-info{
+		.restricted{
+			color: $red;
+			font-size: 1.4rem;
+			margin-left: .5rem;
+		}
+	}
+	td.views-field-operations.Yes,td.views-field-operations.Social,td.views-field-operations.Home,td.views-field-operations.Escape,td.views-field-operations.Translated{
+		body:not(.role-administrator) &{
+			.dropbutton-wrapper{
+				.delete{
+					display: none;
+				}
+			}
+		}
+	}
+}//end block content
