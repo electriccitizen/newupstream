@@ -58,4 +58,4 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
     include $local_settings;
   }
 }
-
+$settings['install_profile'] = 'citizen';
