@@ -32,6 +32,7 @@ $buttonPadding: 1.15rem 1.5rem 1rem;
 		outline: none;
 		border: none;
 		box-shadow: none;
+		text-decoration: none;
 	}
 	&:active{
 		color: $buttonTextActive;
@@ -136,6 +137,7 @@ $buttonPadding: 1.15rem 1.5rem 1rem;
 		text-shadow: none;
 		border-color: $borderRule;
 		font-size: 1.4rem;
+		font-weight: $regular;
 		&:hover,&:focus{
 			background-color: $offWhite !important;
 			background-image: none !important;
@@ -274,6 +276,20 @@ $buttonPadding: 1.15rem 1.5rem 1rem;
 		}//end dropbutton widget
 		.dropbutton-action{
 			@extend %dropbutton;
+		}
+		.dropbutton-arrow{
+			border-width: 5px 6px 0;
+			border-top-color: $darkGrey;
+			border-bottom-color: transparent;
+			border-left-color: transparent;
+			border-right-color: transparent;
+		}
+		&.open{
+			.dropbutton-arrow{
+				border-width: 0 6px 5px;
+				border-top-color: transparent;
+				border-bottom-color: $darkGrey;
+			}
 		}
 	}//end dropbutton
 	.views-edit-view{

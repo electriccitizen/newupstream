@@ -23,10 +23,17 @@
 				color: $white;
 			}
 			.select2-container--default{
-				margin-bottom: 0;
 				max-width: 300px;
 				.crane &{
 					width: 100% !important;
+					.select2-selection--single{
+						.select2-selection__rendered{
+							padding: 3.5px 32px 4px 10px;
+						}
+						.select2-selection__arrow{
+							top: 17px;
+						}
+					}
 				}
 			}
 			@include smallTab{

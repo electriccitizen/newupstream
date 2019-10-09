@@ -3,6 +3,10 @@ items:
     value: '#fff'
   - name: $offWhite
     value: '#f6f6f6'
+  - name: $iceBlue
+    value: '#f2f9fb'
+  - name: $darkIce
+    value: '#e4f5fc'
   - name: $lightGrey
     value: '#ededed'
   - name: $grey

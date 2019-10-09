@@ -44,6 +44,28 @@ body {
 	}
 }
 
+/* ADMIN TOOLBAR
+------------------ */
+.toolbar-tray-horizontal{
+	.menu-item--expanded{
+		background: none;
+	}
+	.menu-item{
+		&:hover{
+			background-color: $iceBlue;
+			a{
+				background-color: transparent;
+			}
+		}
+		a:focus{
+			background-color: $iceBlue;
+		}
+		a:active{
+			background-color: $darkIce;
+		}
+	}
+}
+
 /* MAP PINS
 -------------- */
 //google api map pins

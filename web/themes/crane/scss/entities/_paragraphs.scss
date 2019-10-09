@@ -19,20 +19,20 @@
 		input.button.field-add-more-submit{
 			&:not([value="Add another item"]){
 				padding: 6px 8px 6px 34px;
-			  border: 2px solid #02acd7;
-			  color: #535353;
+			  border: 2px solid $link;
+			  color: $darkGrey;
 			  border-radius: 0;
-			  box-shadow: 3px 3px 0 #d2d2d2;
+			  box-shadow: 3px 3px 0 $lightGrey;
 			  float: left;
-			  background-position: 4px 3px !important;
-			  background-size: 24px 24px !important;
+			  background-position: 4px 3px;
+			  background-size: 24px 24px;
 			  margin-right: 15px;
 			  font-size: 1.6rem;
 			  font-weight: $heavy;
 			}
-			&:hover{
-				border-color: #005b8a !important;
-  			background-color: rgba(205,232,246,0.3) !important;
+			&:hover,&:focus{
+				border-color: $midBlue;
+  			background-color: $darkIce !important;
 			}
 		}
 		.clearfix{
@@ -223,6 +223,7 @@
 		top: 10px;
 		hr{
 			background: $borderRule;
+			margin: -5px 0 5px;
 		}
 	}
 }//end image

@@ -61,7 +61,6 @@
 			}
 		}
 		&.is-active{
-			border: none;
 			background: lighten($tableHeaderBack, 3%);
 			& > a{
 				&:hover,&:focus{
@@ -79,6 +78,9 @@
 
 	tbody tr{
 		border-bottom: 0;
+		&.selected td{
+			background: $rowSelectedBack;
+		}
 		//set table row colors
 		td{
 			border-bottom: 1px solid $rowBorder;
@@ -102,7 +104,7 @@
 	}//end tr
 }//end table mixin
 
-table{
+.crane table{
 	@include table;
 }//end table
 

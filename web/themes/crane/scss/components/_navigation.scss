@@ -72,8 +72,17 @@
 		background: none;
 	}
 	.menu-item{
-		&:hover,&:focus{
-			background: $iceBlue;
+		&:hover{
+			background-color: $iceBlue;
+			a{
+				background-color: transparent;
+			}
+		}
+		a:focus{
+			background-color: $iceBlue;
+		}
+		a:active{
+			background-color: $darkIce;
 		}
 	}
 }
@@ -145,6 +154,19 @@
 			box-shadow: none !important;
 			background-color: transparent;
 			margin: 0;
+		 	a{
+				background: $tabsActiveBack;
+				color: $tabsActiveText;
+				border-color: $tabsActiveBorder;
+				&:hover,&:focus{
+					background: $buttonBackHover;
+					color: $buttonTextHover;
+				}
+				&:active{
+					background: $buttonBackActive;
+					color: $buttonTextActive;
+				}
+			}
 		}
 		a{
 			margin-bottom: -1px;
@@ -161,20 +183,7 @@
 				background: $buttonBackActive;
 				color: $buttonTextActive;
 			}
-			&.is-active{
-				background: $tabsActiveBack;
-				color: $tabsActiveText;
-				border-color: $tabsActiveBorder;
-				&:hover,&:focus{
-					background: $buttonBackHover;
-					color: $buttonTextHover;
-				}
-				&:active{
-					background: $buttonBackActive;
-					color: $buttonTextActive;
-				}
-			}
-		}//end a{
+		}//end a
 	}//end tabs__tab
 }//end primary tabs
 
@@ -189,12 +198,15 @@
 					content: none;
 				}
 				li{
+					&.is-active a{
+						border-bottom-color: $darkGrey;
+						&:hover,&:focus{
+							border-bottom-color: $buttonBackHover;
+						}
+					}
 					a{
 						border-left: 0;
 						border-bottom: 2px solid transparent;
-						&.is-active{
-							border-bottom-color: $buttonBackActive;
-						}
 						&:hover,&:focus{
 							border-bottom-color: $buttonBackHover;
 						}
@@ -207,20 +219,21 @@
 			padding-left: 0;
 			padding-right: 0;
 			background: none;
+			&.is-active a{
+				border-left-color: $darkGrey;
+				&:hover,&:focus{
+					color: $hoverLink;
+					border-left-color: $buttonBackHover;
+				}
+			}
 			a{
 				border-bottom: 1px solid $borderRule;
 				border-left: 3px solid transparent;
 				font-size: 1.5rem;
-				&.is-active{
-					border-left-color: $darkGrey;
-					&:hover,&:focus{
-						color: $hoverLink;
-						border-left-color: $grey;
-					}
-				}
 				&:hover,&:focus{
-					border-left-color: $grey;
+					border-left-color: $buttonBackHover;
 					color: $hoverLink;
+					text-decoration: none;
 				}
 			}//end a
 		}//end li

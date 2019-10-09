@@ -15,7 +15,7 @@
 
 /* BLOCK LAYOUT
 ------------------ */
-.block-admin-display-form{
+.crane .block-admin-display-form{
 	table{
 		tbody{
 			tr.region-title{
@@ -26,6 +26,7 @@
 						border-color: $black;
 						color: $black;
 						background: transparent;
+						line-height: 1 !important;
 						&:hover,&:focus{
 							color: $white;
 							background: $midGrey;

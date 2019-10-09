@@ -160,21 +160,20 @@ optgroup:empty{
 
 .select2-container{
 	min-width: 150px;
-	margin-bottom: .5em;
 }
 .crane .select2-container--default{
 	.select2-selection--single{
 		@include selectInput;
 		.select2-selection__rendered{
-			padding: 3.5px 32px 4px 10px;
+			padding: 0px 32px 0 10px;
 			color: $midGrey;
 			text-align: left;
 		}
 		.select2-selection__arrow{
-			top: 17px;
+			top: 13px;
 			right: 10px;
 			cursor: pointer;
-			@include triangle(down,8px,10px,$midGrey);
+			@include triangle(down,5px,12px,$darkGrey);
 			b{
 				display: none;
 			}
@@ -190,10 +189,10 @@ optgroup:empty{
 				content: '';
 				display: block;
 				position: absolute;
-				top: 13px;
+				top: 16px;
 				right: 2px;
 				cursor: pointer;
-				@include triangle(down,8px,10px,$midGrey);
+				@include triangle(down,5px,12px,$darkGrey);
 			}
 			input.select2-search__field{
 				color: $midGrey;
@@ -215,14 +214,14 @@ optgroup:empty{
 			border-color: $borderRule;
 			.select2-selection__arrow{
 				border-top: 0;
-				border-bottom: 8px solid $midGrey;
+				border-bottom: 5px solid $darkGrey;
 			}
 		}
 		.select2-selection--multiple{
 			border-color: $borderRule;
 			.select2-search--inline:after{
 				border-top: 0;
-				border-bottom: 8px solid $midGrey;
+				border-bottom: 5px solid $darkGrey;
 			}
 		}
 	}//end open,focus
@@ -293,65 +292,31 @@ select:hover,select:focus{
 /* CHECKBOXES & radios
 ---------------- */
 .js-form-type-checkbox,.js-form-type-radio,.select-all{
-	-webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  position: relative;
-	&:not(:last-child){
-		margin-bottom: 0;
-	}
 	input{
-		//hide the normal inputs
-		position: absolute;
-		opacity: 0;
-		&[type="radio"] + label:before{
-			border-radius: 50%;
-		}
-		&:hover,&:focus{
-			+ label:before{
-				background: $checkboxBackHover;
-				border-color: $checkboxHover;
-			}
-		}
-		&:checked{
-			+ label:before{
-				background: $checkboxCheckedBack;
-				border-color: $checkboxChecked;
-			}
-			&:hover{
-				& + label:before{
-					background: $checkboxCheckedBackHover;
-					border-color: $checkboxCheckedHover;
-				}
-			}
-			&:focus{
-				background: $checkboxCheckedBack;
-				border-color: $checkboxChecked;
-			}
-		}
-	}
-	label{
-		display: inline-block;
-		width: 100%;
-		padding-left: 26px;
-		position: relative;
-		margin-bottom: $spaceXs;
-		//create custom boxes before the label
-		&:before{
-			content: '';
-			display: inline-block;
-			width: 16px;
-			height: 16px;
-			border: 2px solid $checkbox;
-			background: $siteBack;
-			cursor: pointer;
-			position: absolute;
-			top: 0;
-			left: 0;
-			z-index: 20;
-			margin-right: 1rem;
-		}
+		@include browserWipe;
+		-webkit-user-select: none;
+  	-moz-user-select: none;
+  	-ms-user-select: none;
+  	user-select: none;
+  	outline: none;
+  	border: 1px solid $checkbox;
+  	width: 18px;
+  	height: 18px;
+  	background: $siteBack;
+  	position: relative;
+  	top: 3px;
+  	cursor: pointer;
+  	&:hover,&:focus{
+  		background-color: $checkboxBackHover;
+  	}
+  	&:checked{
+  		border-color: $checkboxChecked;
+  		background: $checkboxCheckedBack;
+  		&:hover,&:focus{
+  			border-color: $checkboxCheckedHover;
+  			background: $checkboxCheckedBackHover;
+  		}
+  	}
 	}
 }//end checkbox,radio
 

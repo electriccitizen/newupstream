@@ -4383,7 +4383,8 @@ a, .link {
   background: #ffffff;
   text-shadow: none;
   border-color: #026cc5;
-  font-size: 1.4rem; }
+  font-size: 1.4rem;
+  font-weight: 400; }
   .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle input:hover, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle input:hover, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle input:hover, .js .dropbutton-multiple .dropbutton-action input:hover, .js .dropbutton-wrapper .dropbutton-action input:hover, .js .dropbutton-single .dropbutton-action input:hover, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle input:focus, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle input:focus, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle input:focus, .js .dropbutton-multiple .dropbutton-action input:focus, .js .dropbutton-wrapper .dropbutton-action input:focus, .js .dropbutton-single .dropbutton-action input:focus, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle .button:hover, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle .button:hover, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle .button:hover, .js .dropbutton-multiple .dropbutton-action .button:hover, .js .dropbutton-wrapper .dropbutton-action .button:hover, .js .dropbutton-single .dropbutton-action .button:hover, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle .button:focus, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle .button:focus, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle .button:focus, .js .dropbutton-multiple .dropbutton-action .button:focus, .js .dropbutton-wrapper .dropbutton-action .button:focus, .js .dropbutton-single .dropbutton-action .button:focus, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle a:hover, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle a:hover, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle a:hover, .js .dropbutton-multiple .dropbutton-action a:hover, .js .dropbutton-wrapper .dropbutton-action a:hover, .js .dropbutton-single .dropbutton-action a:hover, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle a:focus, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle a:focus, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle a:focus, .js .dropbutton-multiple .dropbutton-action a:focus, .js .dropbutton-wrapper .dropbutton-action a:focus, .js .dropbutton-single .dropbutton-action a:focus, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle button:hover, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle button:hover, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle button:hover, .js .dropbutton-multiple .dropbutton-action button:hover, .js .dropbutton-wrapper .dropbutton-action button:hover, .js .dropbutton-single .dropbutton-action button:hover, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle button:focus, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle button:focus, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle button:focus, .js .dropbutton-multiple .dropbutton-action button:focus, .js .dropbutton-wrapper .dropbutton-action button:focus, .js .dropbutton-single .dropbutton-action button:focus {
     background-color: #f6f6f6 !important;
     background-image: none !important;
@@ -4427,7 +4428,8 @@ a, .link {
     background-image: none;
     outline: none;
     border: none;
-    box-shadow: none; }
+    box-shadow: none;
+    text-decoration: none; }
   .button:active {
     color: #121212;
     background-color: #b3b3b3;
@@ -4467,7 +4469,8 @@ a, .link {
     background-image: none;
     outline: none;
     border: none;
-    box-shadow: none; }
+    box-shadow: none;
+    text-decoration: none; }
   .form-submit:active {
     color: #121212;
     background-color: #b3b3b3;
@@ -4521,7 +4524,8 @@ a, .link {
     background-image: none;
     outline: none;
     border: none;
-    box-shadow: none; }
+    box-shadow: none;
+    text-decoration: none; }
   .button--danger:active, #edit-reset:active, a.button--danger:active, .button[value="Remove"]:active, .button[value="Delete"]:active, .button[value="Reset to alphabetical"]:active, .button[value="Reset"]:active {
     color: #121212;
     background-color: #b3b3b3;
@@ -4588,7 +4592,8 @@ a, .link {
     background-image: none;
     outline: none;
     border: none;
-    box-shadow: none; }
+    box-shadow: none;
+    text-decoration: none; }
   .button[data-drupal-selector="edit-cancel"]:active, .button[data-drupal-selector="edit-actions-cancel"]:active {
     color: #121212;
     background-color: #b3b3b3;
@@ -4655,7 +4660,8 @@ a, .link {
     background-image: none;
     outline: none;
     border: none;
-    box-shadow: none; }
+    box-shadow: none;
+    text-decoration: none; }
   .button--small:active, .draggable .form-submit:active:not(.image-button), .draggable:not([class*="paragraph"]) td .form-submit:active, .no-touchevents .button--small:active, .no-touchevents .draggable .form-submit:active:not(.image-button), .draggable .no-touchevents .form-submit:active:not(.image-button), .no-touchevents .draggable:not([class*="paragraph"]) td .form-submit:active, .draggable:not([class*="paragraph"]) td .no-touchevents .form-submit:active {
     color: #121212;
     background-color: #b3b3b3;
@@ -4730,7 +4736,8 @@ a, .link {
     background-image: none;
     outline: none;
     border: none;
-    box-shadow: none; }
+    box-shadow: none;
+    text-decoration: none; }
   .button--primary:active {
     color: #121212;
     background-color: #b3b3b3;
@@ -4770,7 +4777,8 @@ a, .link {
     background-image: none;
     outline: none;
     border: none;
-    box-shadow: none; }
+    box-shadow: none;
+    text-decoration: none; }
   .button-outline:active {
     color: #121212;
     background-color: #b3b3b3;
@@ -4832,7 +4840,8 @@ a, .link {
     background-image: none;
     outline: none;
     border: none;
-    box-shadow: none; }
+    box-shadow: none;
+    text-decoration: none; }
   #edit-clear-cache .button:active {
     color: #121212;
     background-color: #b3b3b3;
@@ -4862,6 +4871,18 @@ a, .link {
   border-color: #026cc5; }
   .js .dropbutton-multiple .dropbutton-widget:empty, .js .dropbutton-wrapper .dropbutton-widget:empty, .js .dropbutton-single .dropbutton-widget:empty {
     border: none; }
+
+.js .dropbutton-multiple .dropbutton-arrow, .js .dropbutton-wrapper .dropbutton-arrow, .js .dropbutton-single .dropbutton-arrow {
+  border-width: 5px 6px 0;
+  border-top-color: #4a4a4a;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent; }
+
+.js .dropbutton-multiple.open .dropbutton-arrow, .js .dropbutton-wrapper.open .dropbutton-arrow, .js .dropbutton-single.open .dropbutton-arrow {
+  border-width: 0 6px 5px;
+  border-top-color: transparent;
+  border-bottom-color: #4a4a4a; }
 
 .js .views-edit-view .dropbutton-multiple .dropbutton-widget, .js .views-edit-view .dropbutton-wrapper .dropbutton-widget, .js .views-edit-view .dropbutton-single .dropbutton-widget {
   border-radius: 0;
@@ -5059,8 +5080,7 @@ optgroup:empty {
   display: none !important; }
 
 .select2-container {
-  min-width: 150px;
-  margin-bottom: .5em; }
+  min-width: 150px; }
 
 .crane .select2-container--default .select2-selection--single {
   width: 100%;
@@ -5072,19 +5092,19 @@ optgroup:empty {
     position: relative;
     z-index: 999; }
   .crane .select2-container--default .select2-selection--single .select2-selection__rendered {
-    padding: 3.5px 32px 4px 10px;
+    padding: 0px 32px 0 10px;
     color: #676767;
     text-align: left; }
   .crane .select2-container--default .select2-selection--single .select2-selection__arrow {
-    top: 17px;
+    top: 13px;
     right: 10px;
     cursor: pointer;
     width: 0;
     height: 0;
     transform: rotate(0.05deg);
-    border-right: 5px double rgba(0, 0, 0, 0);
-    border-left: 5px double rgba(0, 0, 0, 0);
-    border-top: 8px solid #676767; }
+    border-right: 6px double rgba(0, 0, 0, 0);
+    border-left: 6px double rgba(0, 0, 0, 0);
+    border-top: 5px solid #4a4a4a; }
     .crane .select2-container--default .select2-selection--single .select2-selection__arrow b {
       display: none; }
 
@@ -5105,15 +5125,15 @@ optgroup:empty {
       content: '';
       display: block;
       position: absolute;
-      top: 13px;
+      top: 16px;
       right: 2px;
       cursor: pointer;
       width: 0;
       height: 0;
       transform: rotate(0.05deg);
-      border-right: 5px double rgba(0, 0, 0, 0);
-      border-left: 5px double rgba(0, 0, 0, 0);
-      border-top: 8px solid #676767; }
+      border-right: 6px double rgba(0, 0, 0, 0);
+      border-left: 6px double rgba(0, 0, 0, 0);
+      border-top: 5px solid #4a4a4a; }
     .crane .select2-container--default .select2-selection--multiple .select2-search--inline input.select2-search__field {
       color: #676767; }
       .crane .select2-container--default .select2-selection--multiple .select2-search--inline input.select2-search__field::-webkit-placeholder {
@@ -5151,12 +5171,12 @@ optgroup:empty {
     border-color: #026cc5; }
     .crane .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow, .crane .select2-container--default.select2-container--focus .select2-selection--single .select2-selection__arrow {
       border-top: 0;
-      border-bottom: 8px solid #676767; }
+      border-bottom: 5px solid #4a4a4a; }
   .crane .select2-container--default.select2-container--open .select2-selection--multiple, .crane .select2-container--default.select2-container--focus .select2-selection--multiple {
     border-color: #026cc5; }
     .crane .select2-container--default.select2-container--open .select2-selection--multiple .select2-search--inline:after, .crane .select2-container--default.select2-container--focus .select2-selection--multiple .select2-search--inline:after {
       border-top: 0;
-      border-bottom: 8px solid #676767; }
+      border-bottom: 5px solid #4a4a4a; }
 
 .select2-container .select2-dropdown {
   border: 1px solid #676767;
@@ -5224,7 +5244,8 @@ select:hover, select:focus {
       background-image: none;
       outline: none;
       border: none;
-      box-shadow: none; }
+      box-shadow: none;
+      text-decoration: none; }
     .form-type-managed-file .file-upload-wrapper .fake-button:active {
       color: #121212;
       background-color: #b3b3b3;
@@ -5246,50 +5267,31 @@ select:hover, select:focus {
 
 /* CHECKBOXES & radios
 ---------------- */
-.js-form-type-checkbox, .js-form-type-radio, .select-all {
+.js-form-type-checkbox input, .js-form-type-radio input, .select-all input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  position: relative; }
-  .js-form-type-checkbox:not(:last-child), .js-form-type-radio:not(:last-child), .select-all:not(:last-child) {
-    margin-bottom: 0; }
-  .js-form-type-checkbox input, .js-form-type-radio input, .select-all input {
-    position: absolute;
-    opacity: 0; }
-    .js-form-type-checkbox input[type="radio"] + label:before, .js-form-type-radio input[type="radio"] + label:before, .select-all input[type="radio"] + label:before {
-      border-radius: 50%; }
-    .js-form-type-checkbox input:hover + label:before, .js-form-type-checkbox input:focus + label:before, .js-form-type-radio input:hover + label:before, .js-form-type-radio input:focus + label:before, .select-all input:hover + label:before, .select-all input:focus + label:before {
-      background: #ededed;
-      border-color: #026cc5; }
-    .js-form-type-checkbox input:checked + label:before, .js-form-type-radio input:checked + label:before, .select-all input:checked + label:before {
-      background: #026cc5;
-      border-color: #073b75; }
-    .js-form-type-checkbox input:checked:hover + label:before, .js-form-type-radio input:checked:hover + label:before, .select-all input:checked:hover + label:before {
-      background: #676767;
-      border-color: #073b75; }
-    .js-form-type-checkbox input:checked:focus, .js-form-type-radio input:checked:focus, .select-all input:checked:focus {
-      background: #026cc5;
-      border-color: #073b75; }
-  .js-form-type-checkbox label, .js-form-type-radio label, .select-all label {
-    display: inline-block;
-    width: 100%;
-    padding-left: 26px;
-    position: relative;
-    margin-bottom: 1rem; }
-    .js-form-type-checkbox label:before, .js-form-type-radio label:before, .select-all label:before {
-      content: '';
-      display: inline-block;
-      width: 16px;
-      height: 16px;
-      border: 2px solid #026cc5;
-      background: #ffffff;
-      cursor: pointer;
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 20;
-      margin-right: 1rem; }
+  outline: none;
+  border: 1px solid #026cc5;
+  width: 18px;
+  height: 18px;
+  background: #ffffff;
+  position: relative;
+  top: 3px;
+  cursor: pointer; }
+  .js-form-type-checkbox input:hover, .js-form-type-checkbox input:focus, .js-form-type-radio input:hover, .js-form-type-radio input:focus, .select-all input:hover, .select-all input:focus {
+    background-color: #ededed; }
+  .js-form-type-checkbox input:checked, .js-form-type-radio input:checked, .select-all input:checked {
+    border-color: #073b75;
+    background: #026cc5; }
+    .js-form-type-checkbox input:checked:hover, .js-form-type-checkbox input:checked:focus, .js-form-type-radio input:checked:hover, .js-form-type-radio input:checked:focus, .select-all input:checked:hover, .select-all input:checked:focus {
+      border-color: #073b75;
+      background: #676767; }
 
 /* DRAWERS
 ------------------ */
@@ -5477,7 +5479,7 @@ span.file {
     color: #676767; }
 
 .entity-meta .seven-details[open] {
-  background-image: #f6f6f6; }
+  background: #f6f6f6; }
 
 .seven-details__summary {
   font-family: "PT Sans", sans-serif;
@@ -5742,8 +5744,16 @@ body:not(.role-administrator) .admin-list li.social-media-links {
 .toolbar-tray-horizontal .menu-item--expanded {
   background: none; }
 
-.toolbar-tray-horizontal .menu-item:hover, .toolbar-tray-horizontal .menu-item:focus {
-  background: #f2f9fb; }
+.toolbar-tray-horizontal .menu-item:hover {
+  background-color: #f2f9fb; }
+  .toolbar-tray-horizontal .menu-item:hover a {
+    background-color: transparent; }
+
+.toolbar-tray-horizontal .menu-item a:focus {
+  background-color: #f2f9fb; }
+
+.toolbar-tray-horizontal .menu-item a:active {
+  background-color: #e4f5fc; }
 
 /* LOCAL ACTIONS
 ------------------ */
@@ -5796,6 +5806,16 @@ body:not(.role-administrator) .admin-list li.social-media-links {
       box-shadow: none !important;
       background-color: transparent;
       margin: 0; }
+      #block-tabs-2 .tabs.primary .tabs__tab.is-active a {
+        background: #dce7f3;
+        color: #121212;
+        border-color: #dce7f3; }
+        #block-tabs-2 .tabs.primary .tabs__tab.is-active a:hover, #block-tabs-2 .tabs.primary .tabs__tab.is-active a:focus {
+          background: #cccccc;
+          color: #121212; }
+        #block-tabs-2 .tabs.primary .tabs__tab.is-active a:active {
+          background: #b3b3b3;
+          color: #121212; }
     #block-tabs-2 .tabs.primary .tabs__tab a {
       margin-bottom: -1px;
       background: #ffffff;
@@ -5809,16 +5829,6 @@ body:not(.role-administrator) .admin-list li.social-media-links {
       #block-tabs-2 .tabs.primary .tabs__tab a:active {
         background: #b3b3b3;
         color: #121212; }
-      #block-tabs-2 .tabs.primary .tabs__tab a.is-active {
-        background: #dce7f3;
-        color: #121212;
-        border-color: #dce7f3; }
-        #block-tabs-2 .tabs.primary .tabs__tab a.is-active:hover, #block-tabs-2 .tabs.primary .tabs__tab a.is-active:focus {
-          background: #cccccc;
-          color: #121212; }
-        #block-tabs-2 .tabs.primary .tabs__tab a.is-active:active {
-          background: #b3b3b3;
-          color: #121212; }
 
 /* SECONDARY TASKS
 -------------------- */
@@ -5826,11 +5836,13 @@ body:not(.role-administrator) .admin-list li.social-media-links {
   margin-left: -1em; }
   #block-tabs nav.tabs .is-horizontal .tabs:before {
     content: none; }
+  #block-tabs nav.tabs .is-horizontal .tabs li.is-active a {
+    border-bottom-color: #4a4a4a; }
+    #block-tabs nav.tabs .is-horizontal .tabs li.is-active a:hover, #block-tabs nav.tabs .is-horizontal .tabs li.is-active a:focus {
+      border-bottom-color: #cccccc; }
   #block-tabs nav.tabs .is-horizontal .tabs li a {
     border-left: 0;
     border-bottom: 2px solid transparent; }
-    #block-tabs nav.tabs .is-horizontal .tabs li a.is-active {
-      border-bottom-color: #b3b3b3; }
     #block-tabs nav.tabs .is-horizontal .tabs li a:hover, #block-tabs nav.tabs .is-horizontal .tabs li a:focus {
       border-bottom-color: #cccccc; }
 
@@ -5839,18 +5851,19 @@ body:not(.role-administrator) .admin-list li.social-media-links {
   padding-left: 0;
   padding-right: 0;
   background: none; }
+  #block-tabs nav.tabs li.is-active a {
+    border-left-color: #4a4a4a; }
+    #block-tabs nav.tabs li.is-active a:hover, #block-tabs nav.tabs li.is-active a:focus {
+      color: #676767;
+      border-left-color: #cccccc; }
   #block-tabs nav.tabs li a {
     border-bottom: 1px solid #026cc5;
     border-left: 3px solid transparent;
     font-size: 1.5rem; }
-    #block-tabs nav.tabs li a.is-active {
-      border-left-color: #4a4a4a; }
-      #block-tabs nav.tabs li a.is-active:hover, #block-tabs nav.tabs li a.is-active:focus {
-        color: #676767;
-        border-left-color: #cccccc; }
     #block-tabs nav.tabs li a:hover, #block-tabs nav.tabs li a:focus {
       border-left-color: #cccccc;
-      color: #676767; }
+      color: #676767;
+      text-decoration: none; }
 
 body:not(.role-administrator) #block-tabs nav.tabs.blocks.block-types {
   display: none; }
@@ -5878,17 +5891,18 @@ body:not(.role-administrator) #block-tabs nav.tabs.blocks.block-types {
 
 /* BLOCK LAYOUT
 ------------------ */
-.block-admin-display-form table tbody tr.region-title {
+.crane .block-admin-display-form table tbody tr.region-title {
   background: #f2f9fb;
   padding: .5rem .6em; }
-  .block-admin-display-form table tbody tr.region-title td .button--small, .block-admin-display-form table tbody tr.region-title td .draggable .form-submit:not(.image-button), .draggable .block-admin-display-form table tbody tr.region-title td .form-submit:not(.image-button), .block-admin-display-form table tbody tr.region-title .draggable:not([class*="paragraph"]) td .form-submit, .draggable:not([class*="paragraph"]) .block-admin-display-form table tbody tr.region-title td .form-submit {
+  .crane .block-admin-display-form table tbody tr.region-title td .button--small, .crane .block-admin-display-form table tbody tr.region-title td .draggable .form-submit:not(.image-button), .draggable .crane .block-admin-display-form table tbody tr.region-title td .form-submit:not(.image-button), .crane .block-admin-display-form table tbody tr.region-title .draggable:not([class*="paragraph"]) td .form-submit, .draggable:not([class*="paragraph"]) .crane .block-admin-display-form table tbody tr.region-title td .form-submit {
     border-color: #121212;
     color: #121212;
-    background: transparent; }
-    .block-admin-display-form table tbody tr.region-title td .button--small:hover, .block-admin-display-form table tbody tr.region-title td .draggable .form-submit:hover:not(.image-button), .draggable .block-admin-display-form table tbody tr.region-title td .form-submit:hover:not(.image-button), .block-admin-display-form table tbody tr.region-title .draggable:not([class*="paragraph"]) td .form-submit:hover, .draggable:not([class*="paragraph"]) .block-admin-display-form table tbody tr.region-title td .form-submit:hover, .block-admin-display-form table tbody tr.region-title td .button--small:focus, .block-admin-display-form table tbody tr.region-title td .draggable .form-submit:focus:not(.image-button), .draggable .block-admin-display-form table tbody tr.region-title td .form-submit:focus:not(.image-button), .block-admin-display-form table tbody tr.region-title .draggable:not([class*="paragraph"]) td .form-submit:focus, .draggable:not([class*="paragraph"]) .block-admin-display-form table tbody tr.region-title td .form-submit:focus {
+    background: transparent;
+    line-height: 1 !important; }
+    .crane .block-admin-display-form table tbody tr.region-title td .button--small:hover, .crane .block-admin-display-form table tbody tr.region-title td .draggable .form-submit:hover:not(.image-button), .draggable .crane .block-admin-display-form table tbody tr.region-title td .form-submit:hover:not(.image-button), .crane .block-admin-display-form table tbody tr.region-title .draggable:not([class*="paragraph"]) td .form-submit:hover, .draggable:not([class*="paragraph"]) .crane .block-admin-display-form table tbody tr.region-title td .form-submit:hover, .crane .block-admin-display-form table tbody tr.region-title td .button--small:focus, .crane .block-admin-display-form table tbody tr.region-title td .draggable .form-submit:focus:not(.image-button), .draggable .crane .block-admin-display-form table tbody tr.region-title td .form-submit:focus:not(.image-button), .crane .block-admin-display-form table tbody tr.region-title .draggable:not([class*="paragraph"]) td .form-submit:focus, .draggable:not([class*="paragraph"]) .crane .block-admin-display-form table tbody tr.region-title td .form-submit:focus {
       color: #ffffff;
       background: #676767; }
-    .block-admin-display-form table tbody tr.region-title td .button--small:active, .block-admin-display-form table tbody tr.region-title td .draggable .form-submit:active:not(.image-button), .draggable .block-admin-display-form table tbody tr.region-title td .form-submit:active:not(.image-button), .block-admin-display-form table tbody tr.region-title .draggable:not([class*="paragraph"]) td .form-submit:active, .draggable:not([class*="paragraph"]) .block-admin-display-form table tbody tr.region-title td .form-submit:active {
+    .crane .block-admin-display-form table tbody tr.region-title td .button--small:active, .crane .block-admin-display-form table tbody tr.region-title td .draggable .form-submit:active:not(.image-button), .draggable .crane .block-admin-display-form table tbody tr.region-title td .form-submit:active:not(.image-button), .crane .block-admin-display-form table tbody tr.region-title .draggable:not([class*="paragraph"]) td .form-submit:active, .draggable:not([class*="paragraph"]) .crane .block-admin-display-form table tbody tr.region-title td .form-submit:active {
       color: #ffffff;
       background: #121212; }
 
@@ -5947,14 +5961,17 @@ body:not(.role-administrator) #block-tabs nav.tabs.blocks.block-types {
         align-items: center;
         -ms-flex-align: center; }
     .node-form .layout-region-node-footer #edit-status-wrapper .form-item, .node-form .layout-region-node-footer #edit-field-restricted-wrapper .form-item, .node-confirm-form .layout-region-node-footer #edit-status-wrapper .form-item, .node-confirm-form .layout-region-node-footer #edit-field-restricted-wrapper .form-item {
-      margin: 1rem 3rem 1rem 0; }
+      margin: .5rem 3rem 1rem 0; }
     .node-form .layout-region-node-footer #edit-status-wrapper .js-form-type-checkbox label, .node-form .layout-region-node-footer #edit-field-restricted-wrapper .js-form-type-checkbox label, .node-confirm-form .layout-region-node-footer #edit-status-wrapper .js-form-type-checkbox label, .node-confirm-form .layout-region-node-footer #edit-field-restricted-wrapper .js-form-type-checkbox label {
       font-weight: 700;
-      font-size: 2rem;
-      padding-left: 35px; }
-      .node-form .layout-region-node-footer #edit-status-wrapper .js-form-type-checkbox label:before, .node-form .layout-region-node-footer #edit-field-restricted-wrapper .js-form-type-checkbox label:before, .node-confirm-form .layout-region-node-footer #edit-status-wrapper .js-form-type-checkbox label:before, .node-confirm-form .layout-region-node-footer #edit-field-restricted-wrapper .js-form-type-checkbox label:before {
-        width: 22px;
-        height: 22px; }
+      font-size: 2rem; }
+    .node-form .layout-region-node-footer #edit-status-wrapper .js-form-type-checkbox input, .node-form .layout-region-node-footer #edit-field-restricted-wrapper .js-form-type-checkbox input, .node-confirm-form .layout-region-node-footer #edit-status-wrapper .js-form-type-checkbox input, .node-confirm-form .layout-region-node-footer #edit-field-restricted-wrapper .js-form-type-checkbox input {
+      width: 22px;
+      height: 22px;
+      position: relative;
+      top: 3px;
+      margin-right: 5px;
+      border-width: 2px; }
     .node-form .layout-region-node-footer #edit-actions > *, .node-confirm-form .layout-region-node-footer #edit-actions > * {
       margin-right: 1rem;
       margin-bottom: 1rem; }
@@ -5992,7 +6009,8 @@ body:not(.role-administrator) #block-tabs nav.tabs.blocks.block-types {
         background-image: none;
         outline: none;
         border: none;
-        box-shadow: none; }
+        box-shadow: none;
+        text-decoration: none; }
       .node-form .layout-region-node-footer #edit-actions #edit-preview:active, .node-confirm-form .layout-region-node-footer #edit-actions #edit-preview:active {
         color: #121212;
         background-color: #b3b3b3;
@@ -6044,20 +6062,20 @@ body:not(.role-administrator) #block-tabs nav.tabs.blocks.block-types {
 
 .field--widget-paragraphs .paragraphs-tabs-wrapper input.button.field-add-more-submit:not([value="Add another item"]) {
   padding: 6px 8px 6px 34px;
-  border: 2px solid #02acd7;
-  color: #535353;
+  border: 2px solid #026cc5;
+  color: #4a4a4a;
   border-radius: 0;
-  box-shadow: 3px 3px 0 #d2d2d2;
+  box-shadow: 3px 3px 0 #ededed;
   float: left;
-  background-position: 4px 3px !important;
-  background-size: 24px 24px !important;
+  background-position: 4px 3px;
+  background-size: 24px 24px;
   margin-right: 15px;
   font-size: 1.6rem;
   font-weight: 700; }
 
-.field--widget-paragraphs .paragraphs-tabs-wrapper input.button.field-add-more-submit:hover {
-  border-color: #005b8a !important;
-  background-color: rgba(205, 232, 246, 0.3) !important; }
+.field--widget-paragraphs .paragraphs-tabs-wrapper input.button.field-add-more-submit:hover, .field--widget-paragraphs .paragraphs-tabs-wrapper input.button.field-add-more-submit:focus {
+  border-color: #1d5a9f;
+  background-color: #e4f5fc !important; }
 
 .field--widget-paragraphs .paragraphs-tabs-wrapper .clearfix {
   margin-bottom: 2em; }
@@ -6228,7 +6246,8 @@ body:not(.role-administrator) #block-tabs nav.tabs.blocks.block-types {
     position: relative;
     top: 10px; }
     .paragraph--type--horizontal-rule .field__item hr {
-      background: #026cc5; }
+      background: #026cc5;
+      margin: -5px 0 5px; }
 
 /* IMAGE
 ------------------- */
@@ -6277,80 +6296,81 @@ body:not(.role-administrator) #block-tabs nav.tabs.blocks.block-types {
 /* ========================
   TABLES
 ========================== */
-table {
+.crane table {
   width: 100%;
   border-spacing: unset; }
-  table caption {
+  .crane table caption {
     font-weight: 700;
     margin-bottom: 1rem; }
-  table td {
+  .crane table td {
     padding: 1rem 1.5rem .75rem;
     font-size: 1.7rem; }
-    .js table td .dropbutton-wrapper {
+    .js .crane table td .dropbutton-wrapper {
       min-height: 28px; }
-    table td:first-child {
+    .crane table td:first-child {
       padding-left: 3rem; }
-    table td:last-child {
+    .crane table td:last-child {
       padding-right: 3rem; }
-  table thead th {
+  .crane table thead th {
     background: #ededed;
     color: #121212;
     padding: 2rem 1.5rem;
     text-align: left;
     font-weight: 700;
     font-size: 1.5rem; }
-    table thead th > tr {
+    .crane table thead th > tr {
       border-bottom: none; }
-    table thead th a {
+    .crane table thead th a {
       color: #121212;
       display: block; }
-      table thead th a:after {
+      .crane table thead th a:after {
         content: none; }
-      table thead th a:hover, table thead th a:focus {
+      .crane table thead th a:hover, .crane table thead th a:focus {
         opacity: .6;
         color: #121212; }
-      table thead th a .tablesort {
+      .crane table thead th a .tablesort {
         background: none;
         float: none;
         position: relative;
         top: -3px;
         margin-left: 5px; }
-        table thead th a .tablesort.tablesort--desc {
+        .crane table thead th a .tablesort.tablesort--desc {
           width: 0;
           height: 0;
           transform: rotate(0.05deg);
           border-right: 4px double rgba(0, 0, 0, 0);
           border-left: 4px double rgba(0, 0, 0, 0);
           border-top: 5px solid #121212; }
-        table thead th a .tablesort.tablesort--asc {
+        .crane table thead th a .tablesort.tablesort--asc {
           width: 0;
           height: 0;
           transform: rotate(0.05deg);
           border-right: 4px double rgba(0, 0, 0, 0);
           border-left: 4px double rgba(0, 0, 0, 0);
           border-bottom: 5px solid #121212; }
-    table thead th.is-active {
-      border: none;
+    .crane table thead th.is-active {
       background: whitesmoke; }
-      table thead th.is-active > a:hover, table thead th.is-active > a:focus {
+      .crane table thead th.is-active > a:hover, .crane table thead th.is-active > a:focus {
         color: #1d5a9f; }
-    table thead th:first-child {
+    .crane table thead th:first-child {
       padding-left: 3rem; }
-    table thead th:last-child {
+    .crane table thead th:last-child {
       padding-right: 3rem; }
-  table tbody tr {
+  .crane table tbody tr {
     border-bottom: 0; }
-    table tbody tr td {
+    .crane table tbody tr.selected td {
+      background: #f2f9fb; }
+    .crane table tbody tr td {
       border-bottom: 1px solid #676767; }
-    table tbody tr:nth-of-type(odd) {
+    .crane table tbody tr:nth-of-type(odd) {
       background: #ffffff; }
-      table tbody tr:nth-of-type(odd) td {
+      .crane table tbody tr:nth-of-type(odd) td {
         color: #121212; }
-    table tbody tr:nth-of-type(even) {
+    .crane table tbody tr:nth-of-type(even) {
       background: #ffffff; }
-      table tbody tr:nth-of-type(even) td {
+      .crane table tbody tr:nth-of-type(even) td {
         color: #121212; }
-    table tbody tr th {
+    .crane table tbody tr th {
       background: #ededed;
       color: #121212; }
 
@@ -6416,10 +6436,13 @@ table {
     .views-exposed-form .form--inline > .form-item label {
       color: #ffffff; }
     .views-exposed-form .form--inline > .form-item .select2-container--default {
-      margin-bottom: 0;
       max-width: 300px; }
       .crane .views-exposed-form .form--inline > .form-item .select2-container--default {
         width: 100% !important; }
+        .crane .views-exposed-form .form--inline > .form-item .select2-container--default .select2-selection--single .select2-selection__rendered {
+          padding: 3.5px 32px 4px 10px; }
+        .crane .views-exposed-form .form--inline > .form-item .select2-container--default .select2-selection--single .select2-selection__arrow {
+          top: 17px; }
     @media (min-width: 600px) {
       .views-exposed-form .form--inline > .form-item {
         max-width: 240px; } }
@@ -6536,7 +6559,8 @@ table {
       background-image: none;
       outline: none;
       border: none;
-      box-shadow: none; }
+      box-shadow: none;
+      text-decoration: none; }
     .views-ui-dialog .ui-dialog-buttonset button:not(.button--primary):not(.button--danger):active {
       color: #121212;
       background-color: #b3b3b3;
