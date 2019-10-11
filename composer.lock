@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0ae1c5cec0ca4cf0357577a7ce2329e9",
+    "content-hash": "348a9dccc50324e51a14fbffa2a1093b",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -3363,6 +3363,9 @@
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
                     }
+                },
+                "patches_applied": {
+                    "Array to string conversion for Media Image": "https://www.drupal.org/files/issues/2019-09-02/entity-embed-array-to-string--3069448-17.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
