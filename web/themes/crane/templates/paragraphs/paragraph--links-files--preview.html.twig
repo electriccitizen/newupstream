@@ -59,7 +59,7 @@
 						{% if loop.index0 > 0  %},{% endif %}<div class="lf-item">{{ drupal_entity('media', file.entity.id, 'default') }}</div>
 					{% endif %}
 				{%- endfor -%}
-				{% if count >= 3 %}
+				{% if count == 3 %}
 					<span class="more">...</span>
 				{% endif %}
 			</div>

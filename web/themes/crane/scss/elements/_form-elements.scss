@@ -317,6 +317,9 @@ select:hover,select:focus{
   			background: $checkboxCheckedBackHover;
   		}
   	}
+  	&[type="radio"]{
+  		border-radius: 50%;
+  	}
 	}
 }//end checkbox,radio
 

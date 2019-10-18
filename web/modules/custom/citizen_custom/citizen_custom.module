@@ -68,10 +68,9 @@ function citizen_custom_preprocess_html(&$variables){
 }
 
 /*
- * attach css and custom.js to node form only
+ * set promotion text on node forms
  */
 function citizen_custom_form_node_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
-  $formId = $form['#id'];
   $node = $form_state->getFormObject()->getEntity();
   if ($node->getType() == 'news') {
     $form['promote']['widget']['value']['#title'] = 'Add to Featured News';
@@ -84,12 +83,22 @@ function citizen_custom_form_node_form_alter(&$form, \Drupal\Core\Form\FormState
   if ($node->getType() == 'blog') {
     $form['promote']['widget']['value']['#title'] = 'Add to Featured Posts';
   }
+}
+
+/*
+ * general form alter
+ */
+function citizen_custom_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  $formId = $form['#id'];
+  $user = \Drupal::currentUser();
+  $userRole = $user->getRoles();
+  //remove layout builder revision info access (to hide revision field)
   if (strpos($form_id, 'layout_builder_form') > 0) {
     $form['advanced']['#access'] = FALSE;
     $form['revision_information']['#access'] = FALSE;
     $form['revision']['#access'] = FALSE;
   }
-   //alter user form ro prevent site managers from making themselves admins
+   //alter user form t0 prevent site managers from making themselves admins
   if($formId == 'user-form'){
     if(!in_array('administrator', $userRole)){
       unset($form['account']['roles']['#options']['administrator']);
