@@ -10,7 +10,6 @@
   },
   "scripts": {
     "start": "gulp compile && gulp theme",
-    "zip": "gulp watchZip",
     "build": "gulp build",
     "postinstall": "rm -rf pattern-lab && composer create-project -n pattern-lab/edition-twig-standard pattern-lab && rm -rf pattern-lab/source && ln -s ../components pattern-lab/source"
   },

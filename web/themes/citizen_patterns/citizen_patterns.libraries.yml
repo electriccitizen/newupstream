@@ -5,7 +5,7 @@ global-styling:
     theme:
       dist/style.css: {}
   js:
-    dist/00-base/global.min.js.gz: { minified: true }
+    dist/00-base/global.js: {}
   dependencies:
     - core/drupal
     - core/drupalSettings
@@ -14,7 +14,7 @@ global-styling:
 accordion:
   version: 1.0
   js:
-    dist/03-organisms/00-paragraphs/accordion/accordion.min.js.gz: { minified: true }
+    dist/03-organisms/00-paragraphs/accordion/accordion.js: {}
 featherlight:
   version: 1.7.13
   css:
@@ -27,35 +27,35 @@ featherlight:
 forms:
   version: 1.0
   js:
-    dist/01-atoms/03-forms/_forms.min.js.gz: { minified: true }
+    dist/01-atoms/03-forms/_forms.js: {}
 galleries:
   version: 1.0
   js:
-    dist/03-organisms/00-paragraphs/gallery/gallery.min.js.gz: { minified: true }
+    dist/03-organisms/00-paragraphs/gallery/gallery.js: {}
 menu-block:
   version: 1.0
   js:
-    dist/02-molecules/menus/menu-block/_menu-block.min.js.gz: { minified: true }
+    dist/02-molecules/menus/menu-block/_menu-block.js: {}
 modal:
   version: 1.0
   js:
-    dist/05-miscellaneous/modal.min.js.gz: { minified: true }
+    dist/05-miscellaneous/modal.js: {}
 object-fit:
   version: 1.0
   js:
-    dist/05-miscellaneous/_object-fit.min.js.gz: { minified: true }
+    dist/05-miscellaneous/_object-fit.js: {}
 pager:
   version: 1.0
   js:
-    dist/02-molecules/pagers/_pager.min.js.gz: { minified: true }
+    dist/02-molecules/pagers/_pager.js: {}
 search-block:
   version: 1.0
   js:
-    dist/02-molecules/blocks/search/search-block.min.js.gz: { minified: true }
+    dist/02-molecules/blocks/search/search-block.js: {}
 search-page:
   version: 1.0
   js:
-    dist/04-elements/_search.min.js.gz: { minified: true }
+    dist/04-elements/_search.js: {}
 select:
   version: 4.0.3
   css:
@@ -63,7 +63,7 @@ select:
       components/js/select2/select2.min.css: { minified: true }
   js:
     components/js/select2/select2.min.js: { minified: true }
-    dist/01-atoms/03-forms/_forms.min.js.gz: { minified: true }
+    dist/01-atoms/03-forms/_forms.js: {}
 slick:
   version: 1.8.1
   css:
@@ -76,22 +76,22 @@ table:
   version: 1.0
   js:
     components/js/stacktable/stacktable.min.js: { minified: true }
-    dist/01-atoms/04-tables/tables.min.js.gz: { minified: true }
+    dist/01-atoms/04-tables/tables.js: {}
 user:
   version: 1.0
   js:
-    dist/04-elements/_user-dashboard.min.js.gz: { minified: true }
+    dist/04-elements/_user-dashboard.js: {}
     https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js: { type: external, minified: true, preprocess: false }
 views:
   version: 1.0
   js:
-    dist/03-organisms/01-views/_views.min.js.gz: { minified: true }
+    dist/03-organisms/01-views/_views.js: {}
   dependencies:
     - core/underscore
 widgets:
   version: 1.0
   js:
-    dist/03-organisms/00-paragraphs/_widgets.min.js.gz: { minified: true }
+    dist/03-organisms/00-paragraphs/_widgets.js: {}
   dependencies:
     - core/underscore
 fonts:
