@@ -4,7 +4,7 @@
 .paragraph--type--gallery{
 	.lightbox{
 		.gallery-wrapper{
-			@include safeFlex(row,wrap,start,start);
+			@include safeFlex(row,wrap,center,start);
 			@include bleed(padding,20px);
 			margin-bottom: -20px;
 			//hide the content before lightbox
