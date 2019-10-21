@@ -2,32 +2,63 @@
 
 //highlight search results
 Drupal.behaviors.dashboard = {
-	attach: function (context, settings) {
-	 	$(".user-tour").once('tSearch').each(function(){  
+  attach: function (context, settings) {
+    $(".user-tour").once('tSearch').each(function(){  
       $(function () {
         if (Cookies.get('userTour')) {
-          $('.user-tour').remove()
+          $('.user-tour').remove();
         }
         else { 
-          $('.user-tour').show()
+          $('body:not(.role-administrator) .user-tour').show();
         }
+      });
+
+      //show text about avatar
+      if($('img.avatar').length){
+        $('.avatar-note').show();
+      }
+
+      //position flags
+      $('.flag#admin-nav').prependTo('.layout-container');
+      $('.flag#your-dash').prependTo('.block-name');
+
+      $(document).on('click','.tour-advance',function(e){
+        var flagId = $(this).attr('aria-controls');
+        e.preventDefault();
+        $('.tour-nav a').attr('aria-expanded','false');
+        $(this).attr('aria-expanded','true');
+        $('.tour-nav').hide(0);
+        $('.flag').hide(0).attr('aria-hidden','true').removeClass('active-flag');
+        $('.tour-reel').animate({'left':'-=300'}, 300);
+        $('.tour-nav').delay(300).fadeIn(100);
+        $('.flag#' + flagId).delay(500).fadeIn(300).attr('aria-hidden','false').addClass('active-flag');
+         $('.content-inner').scrollTop(0);
+      });
+
+      $(document).on('click','.tour-back',function(e){
+        var flagId = $(this).attr('aria-controls');
+        e.preventDefault();
+        $('.tour-nav a').attr('aria-expanded','false');
+        $(this).attr('aria-expanded','true');
+        $('.tour-nav').hide(0);
+        $('.flag').hide(0).attr('aria-hidden','true');
+        $('.tour-reel').animate({'left':'+=300'}, 300);
+        $('.tour-nav').delay(300).fadeIn(100);
+        $('.flag#' + flagId).delay(500).fadeIn(300).attr('aria-hidden','false');
+        $('.content-inner').scrollTop(0);
       });
 
       $(document).on('click','.tour-close',function(e){
         e.preventDefault();
-        $(this).parent('.user-tour').fadeTo(10,0,function(){
+        $('.flag').remove();
+        $(this).closest('.user-tour').fadeTo(10,0,function(){
           $(this).remove();
         });
-        Cookies.set('userTour', '1', { expires: 1000 });
+        Cookies.set('userTour', '1', { expires: 10000 });
       });
-
-		});
-	}
+    });
+  }
 }
 
 
-
 })(jQuery, Drupal);
-
-
-

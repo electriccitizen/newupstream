@@ -1,178 +1,357 @@
-/* ============
-   USER DASHBOARD
-=============== */
+/* ========================
+  USER DASHBOARD
+========================== */
 
-/* TOUR */
+/* TOUR 
+------------ */
 .user-tour{
+	@include onlySmall{
+		display: none important;
+	}
 	display: none;
 	position: fixed;
-	top: 20%;
-	right: 0;
+	top: 12vh;
+	right: 20px;
 	z-index: 999;
-	width: 240px;
-	background: $black;
-	padding: 30px 20px;
-	color: $white;
-	box-shadow: -8px 8px 16px rgba(35,35,35,0.2);
+	overflow: hidden;
+	width: 300px;
+	background: $lightGrey;
+	border: 2px solid $gold;
+	border-right-width: 3px;
+	padding-bottom: 10px;
+	box-shadow: -8px 8px 16px rgba(35,35,35,0.3);
+	.tour-reel{
+		@include safeFlex(row,nowrap,start,stretch);
+		width: 1800px;
+		position: relative;
+		top: 0;
+		left: 0;
+		.tour-item{
+			padding-bottom: 60px;
+			font-size: 1.6rem;
+			position: relative;
+			.tour-item-content{
+				position: relative;
+				width: 300px;
+				&:after{
+					content: '';
+					display: block;
+					position: absolute;
+					bottom: 0;
+					left: 20px;
+					@include calc(width, "100% - 40px");
+					height: 50px;
+					@include gradient(top,rgba(255,255,255,0),$lightGrey);
+				}
+				.content-inner{
+					height: 30vh;
+					overflow-y: scroll;
+					*:last-child{
+						padding-bottom: 15px;
+					}
+				}
+			}//end tour-content
+			.tour-nav{
+				position: absolute;
+				bottom: 0;
+				left: 20px;
+				@include calc(width,"100% - 40px");
+				@include safeFlex(row,wrap,justify,start);
+				border-top: 1px solid $black;
+				border-bottom: 1px solid $black;
+				a{
+					display: inline-block;
+					padding: 10px 0;
+					text-decoration: none;
+					&:hover,&:focus{
+						text-decoration: underline;
+					}
+					&.full{
+						width: 100%;
+					}
+					&.right{
+						text-align: right;
+					}
+				}
+			}//end tour nav
+		}//end tour item
+	}//end tour reel
 	h2{
-		font-size: 2.2rem;
-		margin-bottom: $spaceMd;
+		font-size: 2rem;
+		margin-bottom: $spaceSm;
+		display: block;
+		background: $gold;
+		padding: 1.35rem 20px;
+		text-align: center;
+		height: 78px;
+		@include safeFlex(column,nowrap,center,center);
+		width: 300px;
 	}
 	p{
-		font-size: 1.6rem;
 		margin-bottom: $spaceSm;
-		a{
-			color: $transWhite;
-			text-decoration: underline;
-			&:hover,&:focus{
-				color: $white;
-				text-decoration: none;
-			}
+		padding-left: 20px;
+		padding-right: 20px;
+		font-size: 1.6rem;
+		&.avatar-note{
+			display: none;
 		}
-	}
-	@include onlySmall{
-		display: none !important;
-	}
-	.tour-close{
-		@include outlineButton($white);
-		font-size: 1.5rem;
-		padding: 1rem 1.5rem;
-		width: 100%;
-		max-width: 200px;
-		margin: 0 auto;
-		&:hover,&:focus{
-			background: $white;
-			color: $black;
+	}//end p
+	.close-cookie{
+		text-align: center;
+		padding-top: 20px;
+		width: 300px;
+		.tour-close{
+			@include button;
+			font-size: 1.5rem;
+			padding: 1rem 1.5rem;
+			margin: 0 auto $spaceSm;
 		}
-	}
+		span{
+			text-align: left; 
+			display: block;
+			font-size: 1.3rem;
+		}
+	}//end close cookie
 }//end user-tour
 
-/* DASHBOARD */
-article.user-dashboard{
-	margin-top: -$elementSpace;
-	margin-bottom: $spaceXl;
-	//image, username, since, roles
-	& > .layout--onecol:first-child{
-		position: relative;
-		padding: $spaceXl 0;
-		margin-bottom: $spaceLg;
-		&:after{
-			@include fullBack($lightGrey);
+//user tour flags
+.flag{
+	display: none;
+	position: absolute;
+	background: $purple;
+	color: $white;
+	padding: 0 2em;
+	line-height: 52px;
+	height: 52px;
+	z-index: 9999;
+	font-size: 2rem;
+	font-weight: 700;
+	box-shadow: 5px 5px 8px rgba(35,35,35,0.2);
+	&:before{
+		content: '';
+		display: block;
+		position: absolute;
+	}
+	&#admin-nav{
+		top: 47px;
+		position: fixed;
+		right: 535px;
+		@include rotate3d(0,1,2,6);
+		&:before{
+			@include triangle(left,52px,26px,$purple);
+			top: 0;
+			left: -26px;
 		}
-		.layout__region--content{
-			max-width: $textMax;
-			@include auto;
-			@include clearFix;
+	}
+	&#your-dash{
+		top: 40px;
+		right: 275px;
+		padding: 0 2em 0 1.5em;
+		@include rotate3d(0,1,2,-12);
+		&:before{
+			@include triangle(left,52px,26px,$purple);
+			top: 0;
+			left: -26px;
 		}
-		.block-field.block-uid{
-			width: 250px;
-			.user-image{
-				width: 100%;
-				padding-bottom: 100%;
-				border-radius: 50%;
-			}
-			@include onlySmall{
-				margin-bottom: $spaceSm;
-				@include auto;
-			}
-			@include tab{
-				float: left;
-				margin-bottom: 0;
-			}
-		}
-	}//end image username since roles
+	}
+}//end flags
 
-	.block-field.block-name{
-		@include tab{
-			&:nth-child(2){
-				@include calc(width, "100% - 310px");
-				margin-left: 310px;
+
+/* PROFILE INFORMATION
+------------------------- */
+.block-name{
+	margin-bottom: $spaceSm;
+	text-align: center;
+	max-width: $desk;
+	position: relative;
+	@include desk{
+		@include clearFix;
+	}
+	.field.name{
+		@include safeFlex(column,nowrap,start,center);
+		@include desk{
+			@supports(display: grid){
+				display: grid;
+				grid-template-columns: 1fr 225px;
+				grid-template-rows: auto;
+				grid-template-areas:
+					"header sidebar"
+					"middle sidebar"
+					"bottom sidebar";
 			}
 		}
 	}
-
-	.block-field.block-created{
+	h1{
+		font-size: $h1Sm;
+		font-weight: $regular;
+		margin-bottom: $spaceSm;
+		@include safeFlexOrder(1);
 		@include tab{
-			&:nth-child(3){
-				@include calc(width, "100% - 310px");
-				margin-left: 310px;
+			font-size: 4.2rem;
+		}
+		@include desk{
+			@supports(display: grid){
+				grid-area: header;
+				grid-column: 1 / span 1;
+				padding-top: 3rem;
+				text-align: left;
 			}
 		}
-		.user-created{
-			margin-bottom: $spaceXs;
+	}//end h1
+
+	.user-image-wrapper{
+		width: 225px;
+		margin-bottom: $spaceSm;
+		@include safeFlexOrder(2);
+		@include desk{
+			@supports(display: grid){
+				grid-area: sidebar;
+				grid-column: 2 / span 1;
+			}
 		}
-		.user-roles{
-			margin-bottom: $spaceSm;
-			span.role:not(:last-child){
-				margin-right: .7rem;
+		img{
+			border-radius: 50%;
+			display: block;
+		}
+	}//end user image wrapper
+
+	.user-info{
+		@include safeFlex(row,wrap,center,start);
+		@include bleed(padding,20px);
+		@include safeFlexOrder(3);
+		margin-bottom: $spaceMd;
+		@include desk{
+			@supports(display: grid){
+				grid-area: middle;
+				grid-column: 1 / span 1;
+				@include safeFlex(row,wrap,start,start);
+			}
+		}
+		& > div{
+			&:not(:last-child){
 				position: relative;
-				padding-right: 1rem;
 				&:after{
-					@include vertRule(right,80%,$borderRule);
+					@include vertRule(right,70%,$baseText);
 				}
 			}
 		}
-		.button-outline{
-			padding: .5rem 1.5rem;
-		}
-	}//end created
-
-	// links & recently Authored
-	& > .layout--onecol:nth-child(2){
-		.layout__region--content{
-			@include safeFlex(row,wrap,null,null);
-		}
-	}
-
-	//quicklinks
-	.block-field-user-quick-links{
-		margin-bottom: $spaceLg;
-		width: 100%;
-		@include contentStop{
-			width: 50%;
-			padding-right: 40px;
-		}
-		ul{
-			@include listReset;
-			@include bleed(padding,20px);
-			@include safeFlex(row,wrap,center,center);
-			li{
-				margin-bottom: $spaceSm;
-				a{
-					width: 240px;
-					height: 55px;
-					display: table-cell;
-					vertical-align: middle;
-					font-size: 1.6rem;
-					padding: 0;
-				}
+		.user-name{
+			span:not(:last-child){
+				margin-rigth: .25em;
 			}
 		}
-	}
-
-	// Recently Authored
-	.block:not(.block-field-user-quick-links){
-		width: 100%;
-		@include contentStop{
-			width: 50%;
-			padding-left: 40px;
-		}
-		.view.user-dashboard{
-			text-align: center;
-			.views-row{
-				margin-bottom: $spaceSm;
+		.edit-link a{
+			text-decoration: none;
+			&:hover,&:focus{
+				text-decoration: underline;
 			}
 		}
-	}//end recently added
+	}//user info
 
-	//hide member for
-	& > .js-form-type-item{
+	//action buttons
+	.action-buttons{
+		@include safeFlexOrder(4);
+		@include safeFlex(row,wrap,center,start);
+		@include bleed(margin,.8rem);
+		@include desk{
+			@supports(display: grid){
+				grid-area: bottom;
+				grid-column: 1 / span 1;
+				text-align: left;
+				@include safeFlex(row,wrap,start,start);
+			}
+		}
+		& > a{
+			width: 192px;
+			display: block;
+		}
+	}//end action buttons
+}//end username
+
+
+/* CONTENT VIEWS
+-------------------- */
+.views-block.block-user-dashboard{
+	@include onlyMobile{
+		padding-top: 1rem;
+	}
+	h2.block-title{
 		display: none;
 	}
-}//end user dashboard
+	.view-empty{
+		padding-top: $spaceLg;
+	}
+	table{
+		@include desk{
+			border-top: 0;
+		}
+	}
+	
+	.views-field-title{
+		@include desk{
+			@include calc(width, "100% - 355px");
+		}
+		a{
+			text-decoration: none;
+			&:hover,&:focus{
+				text-decoration: underline;
+			}
+		}
+		.restricted{
+			margin-left: .5rem;
+			color: $red;
+			font-size: 1.4rem;
+		}
+	}
+	&.all-recents{
+		.views-field-title{
+			@include desk{
+				@include calc(width, "100% - 525px");
+			}
+		}
+	}
+	.views-field-changed{
+		@include desk{
+			width: 180px;
+		}
+	}
+	.views-field-uid{
+		@include desk{
+			width: 180px;
+		}
+	}
+	.views-field-operations{
+		&.st-val{
+			padding-top: .6rem;
+			padding-bottom: .5rem;
+		}
+		@include desk{
+			width: 165px !important;
+			max-width: 165px;
+		}
+	}
+}//end views block
 
+/* MODERATED CONTENT
+---------------------- */
+.views-block.block-moderated-content{
+	h2.block-title{
+		display: none;
+	}
+	table{
+		@include desk{
+			border-top: 0;
+		}
+	}
+}
 
-
-
-
-
+.user-dashboard .view-content table.small-only{
+	.st-key{
+		width: 150px;
+	}
+	.st-val{
+		@include calc(width, "100% - 150px");
+		padding-right: 1rem;
+		max-width: none;
+	}
+}

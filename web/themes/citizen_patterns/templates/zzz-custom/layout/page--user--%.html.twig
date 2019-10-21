@@ -47,14 +47,69 @@
 
 {% block pageMain %}
 	{% if logged_in %}
-	  {{ attach_library('citizen_patterns/user') }}
+	  {{ attach_library('citizen_patterns/dashboard') }}
 	  <div class="user-tour">
-	  	<div>
-	  		<h2>Welcome to your dashboard!</h2>
-	  		<p>Your dashboard gives quick access to the areas of the site you will interact with the most as well as letting you view some recently created nodes.</p>
-	  		<p>To learn more about your dashboard and the administrative side of of the site, visit the <a href="{{ path('entity.node.canonical', {'node': '10'}) }}">Support&nbsp;Book</a>.</p>
+	  	<div class="tour-reel">
+	  		<div class="tour-item">
+	  			<h2>Welcome to Upstream, {{ fname }}!</h2>
+	  			<div class="tour-item-content">
+	  				<div class="content-inner">
+				  		<p>We're glad that you're here. This tutorial will familiarize you with some of the key elements in navigating the Drupal admin&nbsp;side! <strong>NOTE:</strong> To get the best admin experience, if you're using an IE version older than Edge 16, please upgrade to the latest version or switch to any other browser.</p>
+				  		<p>This is the only time you'll ever see this tutorial once you click close (unless you clear your cookies), so be sure not to click close accidentally! If you do miss part of the tutorial or need a refresher, this information can all be found in the <a href="/node/5" target="_blank">Support Guide.</a></p>
+				  	</div>
+			  	</div>
+		  		<div class="tour-nav">
+		  			<a href="#" class="tour-advance full right" aria-controls="your-dash" aria-expanded="false">Get Started!&nbsp;»</a>
+		  		</div>
+		  	</div>
+		  	<div class="tour-item">
+		  		<h2>User Dashboard</h2>
+		  		<div class="tour-item-content">
+		  			<div class="content-inner">
+		  				<p>User Dashboard</p>
+		  				<p>This is your user dashboard.  Your name and user role are displayed at the top along with a link to edit your profile and to logout. Your user role defines what areas of the site you can access and what type of content you can work with.</p>
+		  				<p class="avatar-note">Sick of being an avatar? Edit your profile and add a profile picture in the user personalization area.</p>
+		  				<p>Your dashboard provides quick access to any recent content you've created. Clicking on All Recent Content shows content recently created by anyone. If you are a site manager or editor, clicking on Waiting for Review will show you content that has been created and is waiting for review and publishing.</p>
+		  				<p>You can also click on View Content to see a list of all the nodes on the site or Add Content to add a node.</p>
+		  			</div>
+		  		</div>
+		  		<div class="tour-nav">
+			  		<a href="#" class="tour-back" aria-expanded="false">«&nbsp;Back</a>
+			  		<a href="#" class="tour-advance" aria-controls="admin-nav" aria-expanded="false">Next&nbsp;»</a>
+			  	</div>
+		  	</div>
+		  	<div class="tour-item">
+		  		<h2>Admin Toolbar</h2>
+		  		<div class="tour-item-content">
+		  			<div class="content-inner">
+		  				<p>You can access all areas of the site from the admin toolbar at the top of every page.</p>
+		  				<p>Clicking on a top level link (with colored background) will open its child links. <strong>NOTE:</strong> The color of the top level of the admin toolbar will change depending what site environment you are on.</p>
+		  				<p>You can also access a fully responsive content preview and the content moderation sidebar from the admin toolbar.</p>
+		  			</div>
+		  		</div>
+		  		<div class="tour-nav">
+			  		<a href="#" class="tour-back" aria-controls="your-dash" aria-expanded="false">«&nbsp;Back</a>
+			  		<a href="#" class="tour-advance" aria-controls="support" aria-expanded="false">Next&nbsp;»</a>
+			  	</div>
+		  	</div>
+		  	<div class="tour-item">
+		  		<h2>Support Guide</h2>
+		  		<div class="tour-item-content">
+		  			<div class="content-inner">
+		  				<p>Because it is so powerful and has so many options, Drupal can be a bit much to take in when you first get started.</p>
+		  				<p>The support guide will provide in-depth assistance for adding and editing node content, content moderation, working with menu links, managing taxonomy terms, custom blocks, managing users and much, much more. You can access the support guide at any time by clicking on shortcuts in the admin toolbar.</p>
+		  			</div>
+		  		</div>
+		  		<div class="tour-nav">
+			  		<a href="#" class="tour-back" aria-controls="admin-nav" aria-expanded="false">«&nbsp;Back</a>
+			  	</div>
+		  	</div>
 	  	</div>
-	  	<a href="#" class="tour-close">Never show again!</a>
+	  	<div id="admin-nav" aria-hidden="true" class="flag">Admin Toolbar</div>
+	  	<div id="your-dash" aria-hidden="true" class="flag">User Dashboard</div>
+	  	<div class="close-cookie">
+	  		<a href="#" class="tour-close">Close Forever</a>
+	  	</div>
 	  </div>
 	{% endif %}
   {{ parent() }}

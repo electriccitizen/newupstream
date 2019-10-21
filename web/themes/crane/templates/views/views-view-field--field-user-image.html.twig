@@ -18,15 +18,15 @@
  * @see template_preprocess_views_view_field()
  */
 #}
-{% if row._entity.user_picture.0 %}
+{% if row._entity.field_user_image.0 %}
 	{{ output -}}
 {% else %}
 	{% if row.uid is divisible by(3) %}
-		{% set avatar = '/themes/custom/crane/images/avatars/avatar-gold.jpg' %}
+		{% set avatar = '/themes/crane/images/avatars/avatar-gold.jpg' %}
 	{% elseif row.uid is even %}
-	  {% set avatar = '/themes/custom/crane/images/avatars/avatar-fuchsia.jpg' %}
+	  {% set avatar = '/themes/crane/images/avatars/avatar-fuchsia.jpg' %}
 	{% else %}
-	  {% set avatar = '/themes/custom/crane/images/avatars/avatar-blue.jpg' %}
+	  {% set avatar = '/themes/crane/images/avatars/avatar-blue.jpg' %}
 	{% endif %}
 	<img src="{{ avatar }}" width="100px" height="100px" alt="Profile image for {{ row._entity.name.0.value }}" />
 {% endif %}

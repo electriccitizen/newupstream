@@ -113,3 +113,52 @@
 		}
 	}//end layout region second
 }//end layout-twocol-sideleft
+
+/* TABS */
+.layout--tabs{
+	width: 100%;
+	.layout__region--tabs{
+		.tabs-wrapper > div:not(:first-of-type){
+			display: none;
+		}
+		ul.tabs-header{
+			@include listReset;
+			@include safeFlex(row,wrap,start,start);
+			li{
+				min-width: 224px;
+				@include onlySmall{
+					width: 100%;
+				}
+				@include tab{
+					margin-right: -1px;
+				}
+			}
+			.tab-control{
+				@include outlineButton($borderRule);
+				border-radius: 0;
+				border-width: 1px;
+				width: 100%;
+				margin-bottom: -1px;
+				color: $black;
+				&.active-tab{
+					background: $midGrey;
+					color: $white;
+					border-color: $midGrey;
+					&:hover,&:focus{
+						background: $buttonBackHover;
+						color: $buttonTextHover;
+						border-color: $buttonBackHover;
+					}
+					&:active{
+						background: $buttonBackActive;
+						color: $buttonTextActive;
+						border-color: $buttonBackActive;
+					}
+				}
+			}//end tab control
+		}//end tabs header
+		.tab-item{
+			border-top: 1px solid $borderRule;
+		}
+	}//end region--tabs
+}//end layout-tabs

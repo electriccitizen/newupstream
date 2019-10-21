@@ -32,6 +32,10 @@ galleries:
   version: 1.0
   js:
     dist/03-organisms/00-paragraphs/gallery/gallery.js: {}
+layout:
+  version: 1.0
+  js:
+    components/_patterns/03-organisms/02-layout/02-layout-builder/layout.js: {}
 menu-block:
   version: 1.0
   js:

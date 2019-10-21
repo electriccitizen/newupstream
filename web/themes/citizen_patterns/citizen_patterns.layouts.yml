@@ -37,3 +37,14 @@ two_column_sidebar:
       label: Content
     sidebar:
       label: Sidebar
+tabs:
+  label: Tabs
+  category: Crane Layouts
+  path: templates/layout
+  template: layout--tabs
+  default_region: tabs
+  icon_map:
+    - [tabs]
+  regions:
+    tabs:
+      label: Tabs

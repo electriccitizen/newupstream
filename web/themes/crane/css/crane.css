@@ -6620,7 +6620,7 @@ body:not(.role-administrator) #block-tabs nav.tabs.blocks.block-types {
 .view-user-admin-people .view-content .views-table ~ .form-actions {
   display: none !important; }
 
-.view-user-admin-people .view-content .views-field-user-picture img {
+.view-user-admin-people .view-content .views-field-field-user-image img {
   width: 50px;
   border-radius: 50%; }
 
