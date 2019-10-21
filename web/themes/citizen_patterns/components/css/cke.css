@@ -12,40 +12,40 @@ html {
 
 .align-right{
 	float: right;
-	margin:0 0 20px 40px;
-	clear:both;
+	margin:0 0 20px 20px;
+	clear: both;
 	max-width: 50%;
 }
 .align-left{
 	float: left;
-	margin:0 40px 20px 0;
-	clear:both;
+	margin:0 20px 20px 0;
+	clear: both;
 	max-width: 50%;
 }
 .align-center > .media {
-	margin: 2rem auto;
+	margin: 0 auto;
 	text-align: center;
-	clear:both;
+	clear: both;
 }
 
-.media--view-mode-small-embed{
+.media--view-mode-small-embed,.view-modemediasmall-embed{
 	width: 300px;
 	max-width: 100%;
 }
-.media--view-mode-medium-embed{
+.media--view-mode-medium-embed,.view-modemediamedium-embed{
 	max-width: 100%;
 	width: 500px;
 }
-.media--view-mode-large-embed{
+.media--view-mode-large-embed,.view-modemedialarge-embed{
 	max-width: 100%;
 	width: 800px;
 }
 
-.field--name-field-media-video-embed-field .video-embed-field-responsive-video{
+.field-media-video-embed-field .video-embed-field-responsive-video{
 	position: relative;
 	padding-bottom: 56.25%;	
 }
-.field--name-field-media-video-embed-field .video-embed-field-responsive-video iframe{
+.field-media-video-embed-field .video-embed-field-responsive-video iframe{
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -59,6 +59,7 @@ html {
 span.highlight{
 	background: #fcd916;
 }
+
 
 div.warning {
 	border: 2px solid #dd241b;
@@ -79,6 +80,9 @@ div.button{
 	max-width: 260px;
 	text-align: center;
 	box-sizing: border-box;
+}
+.cke_panel_listItem div.button{
+	margin-bottom: 0;
 }
 div.button + div.button{
 	margin-left: 2rem;
