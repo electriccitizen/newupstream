@@ -1,3 +1,4 @@
+uuid: bb4d8c1f-afb2-4213-9c6d-bf02b072b18c
 langcode: en
 status: open
 dependencies:
@@ -6,6 +7,11 @@ dependencies:
       - webform
   module:
     - antibot
+third_party_settings:
+  antibot:
+    antibot: true
+_core:
+  default_config_hash: oZIx_IHS7gdveuJ3iSbhNY-A1FwlieWPdjJEJz4Wlb4
 open: null
 close: null
 weight: 0
@@ -16,7 +22,7 @@ id: contact
 title: Contact
 description: 'Basic email contact webform.'
 category: ''
-elements: "name:\n  '#type': textfield\n  '#title': Name\n  '#title_display': inline\n  '#maxlength': '60'\n  '#required': true\nemail:\n  '#type': email\n  '#title': 'Your Email'\n  '#title_display': inline\n  '#required': true\nsubject:\n  '#type': textfield\n  '#title': Subject\n  '#title_display': inline\n  '#required': true\n  '#test': 'Testing contact webform from [site:name]'\nmessage:\n  '#type': textarea\n  '#title': Message\n  '#title_display': inline\n  '#required': true\n  '#test': 'Please ignore this email.'\n"
+elements: "name:\n  '#type': textfield\n  '#title': Name\n  '#title_display': inline\n  '#maxlength': '60'\n  '#required': true\nemail:\n  '#type': email\n  '#title': 'Your Email'\n  '#title_display': inline\n  '#required': true\nsubject:\n  '#type': textfield\n  '#title': Subject\n  '#title_display': inline\n  '#required': true\n  '#test': 'Testing contact webform from [site:name]'\nmessage:\n  '#type': textarea\n  '#title': Message\n  '#title_display': inline\n  '#required': true\n  '#test': 'Please ignore this email.'\nsoem_boxes:\n  '#type': checkboxes\n  '#title': 'soem boxes'\n  '#options':\n    adsfasdf: adsfasdf\n    fsdgsg: fsdgsg\n    fgjfghjj: fgjfghjj\nddfgh:\n  '#type': radios\n  '#title': dfghdfghdg\n  '#options':\n    'xfdgsdfg dg': 'xfdgsdfg dg'\n    'sgdsg s': 'sgdsg s'\n    'dfg hfj j': 'dfg hfj j'"
 css: ''
 javascript: ''
 settings:
@@ -252,9 +258,3 @@ handlers:
       sender_mail: ''
       sender_name: ''
       theme_name: ''
-uuid: bb4d8c1f-afb2-4213-9c6d-bf02b072b18c
-third_party_settings:
-  antibot:
-    antibot: true
-_core:
-  default_config_hash: oZIx_IHS7gdveuJ3iSbhNY-A1FwlieWPdjJEJz4Wlb4
