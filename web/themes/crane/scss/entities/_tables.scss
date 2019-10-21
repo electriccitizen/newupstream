@@ -131,3 +131,21 @@
 		min-width: 114px;
 	}
 }//end taxonomy overview
+
+
+/* MODULES
+-------------- */
+.system-modules{
+	table{
+		tr.odd,tr.even{
+			border-bottom: 1px solid $rowBorder;
+		}
+	}
+	.package-listing{
+		.seven-details__summary{
+			background: $blueGrey;
+		}
+	}
+}//end system-modules
+
+

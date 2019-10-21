@@ -68,54 +68,49 @@
 }
 
 @mixin customOptions{
-	position: relative;
 	input{
-		//hide the normal inputs
-		position: absolute;
-		opacity: 0;
+		@include browserWipe;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		outline: none;
+		border: 2px solid $checkbox;
+		width: 18px;
+		height: 18px;
+		background-color: $siteBack;
+		position: relative;
+		top: 3px;
+		cursor: pointer;
 		&:hover,&:focus{
-			+ label:before{
-				background: $checkboxBackHover;
-				border-color: $checkboxHover;
-			}
+			border-color: $checkboxHover;
+			background-color: $checkboxBackHover;
 		}
 		&:checked{
-			+ label:before{
-				background: $checkboxCheckedBack;
-				border-color: $checkboxChecked;
-			}
-			&:hover{
-				& + label:before{
-					background: $checkboxCheckedBackHover;
-					border-color: $checkboxCheckedHover;
-				}
-			}
-			&:focus{
-				background: $checkboxCheckedBack;
-				border-color: $checkboxChecked;
+			border-color: $checkboxChecked;
+			background-color: $checkboxCheckedBack;
+			&:hover,&:focus{
+				border-color: $checkboxCheckedHover;
+				background-color: $checkboxCheckedBackHover;
 			}
 		}
-	}
-	label{
-		display: inline-block;
-		width: 100%;
-		padding-left: 26px;
-		position: relative;
-		margin-bottom: $spaceXs;
-		//create custom boxes before the label
-		&:before{
-			content: '';
-			display: inline-block;
-			width: 16px;
-			height: 16px;
-			border: 2px solid $checkbox;
-			background: $siteBack;
-			cursor: pointer;
-			position: absolute;
-			top: 3px;
-			left: 0;
-			z-index: 20;
-			margin-right: 1rem;
+		&[type="checkbox"]:checked{
+			background-image: url('../images/form-elements/checkmark.svg');
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+		&[type="radio"]{
+			border-radius: 50%;
+			&:checked{
+				background-color: $siteBack;
+				background-image: url('../images/form-elements/radio-dot-red.svg');
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: 10px 10px;
+				&:hover,&:focus{
+					background-image: url('../images/form-elements/radio-dot-hover.svg');
+				}
+			}
 		}
 	}
 }//end custom options

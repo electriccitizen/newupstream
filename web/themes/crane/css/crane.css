@@ -5277,21 +5277,34 @@ select:hover, select:focus {
   -ms-user-select: none;
   user-select: none;
   outline: none;
-  border: 1px solid #026cc5;
+  border: 2px solid #026cc5;
   width: 18px;
   height: 18px;
-  background: #ffffff;
+  background-color: #ffffff;
   position: relative;
   top: 3px;
   cursor: pointer; }
   .js-form-type-checkbox input:hover, .js-form-type-checkbox input:focus, .js-form-type-radio input:hover, .js-form-type-radio input:focus, .select-all input:hover, .select-all input:focus {
+    border-color: #026cc5;
     background-color: #ededed; }
   .js-form-type-checkbox input:checked, .js-form-type-radio input:checked, .select-all input:checked {
     border-color: #073b75;
-    background: #026cc5; }
+    background-color: #026cc5; }
     .js-form-type-checkbox input:checked:hover, .js-form-type-checkbox input:checked:focus, .js-form-type-radio input:checked:hover, .js-form-type-radio input:checked:focus, .select-all input:checked:hover, .select-all input:checked:focus {
       border-color: #073b75;
-      background: #676767; }
+      background-color: #676767; }
+  .js-form-type-checkbox input[type="checkbox"]:checked, .js-form-type-radio input[type="checkbox"]:checked, .select-all input[type="checkbox"]:checked {
+    background-image: url("../images/icons/admin-icons/checkmark.svg"); }
+  .js-form-type-checkbox input[type="radio"], .js-form-type-radio input[type="radio"], .select-all input[type="radio"] {
+    border-radius: 50%; }
+    .js-form-type-checkbox input[type="radio"]:checked, .js-form-type-radio input[type="radio"]:checked, .select-all input[type="radio"]:checked {
+      background-color: #ffffff;
+      background-image: url("../images/icons/admin-icons/radio-dot.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 10px 10px; }
+      .js-form-type-checkbox input[type="radio"]:checked:hover, .js-form-type-checkbox input[type="radio"]:checked:focus, .js-form-type-radio input[type="radio"]:checked:hover, .js-form-type-radio input[type="radio"]:checked:focus, .select-all input[type="radio"]:checked:hover, .select-all input[type="radio"]:checked:focus {
+        background-image: url("../images/icons/admin-icons/radio-dot-hover.svg"); }
 
 /* DRAWERS
 ------------------ */
@@ -6392,6 +6405,14 @@ body:not(.role-administrator) #block-tabs nav.tabs.blocks.block-types {
 ------------------------ */
 #taxonomy ul.dropbutton {
   min-width: 114px; }
+
+/* MODULES
+-------------- */
+.system-modules table tr.odd, .system-modules table tr.even {
+  border-bottom: 1px solid #676767; }
+
+.system-modules .package-listing .seven-details__summary {
+  background: #dce7f3; }
 
 /* ========================
   TAXONOMY
