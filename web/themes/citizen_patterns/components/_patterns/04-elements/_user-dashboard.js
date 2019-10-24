@@ -19,12 +19,13 @@ Drupal.behaviors.dashboard = {
       }
 
       //position flags
-      $('.flag#admin-nav').prependTo('.layout-container');
+      $('.flag#admin-nav,.flag#support').prependTo('.layout-container');
       $('.flag#your-dash').prependTo('.block-name');
 
       $(document).on('click','.tour-advance',function(e){
         var flagId = $(this).attr('aria-controls');
         e.preventDefault();
+
         $('.tour-nav a').attr('aria-expanded','false');
         $(this).attr('aria-expanded','true');
         $('.tour-nav').hide(0);
@@ -32,7 +33,13 @@ Drupal.behaviors.dashboard = {
         $('.tour-reel').animate({'left':'-=300'}, 300);
         $('.tour-nav').delay(300).fadeIn(100);
         $('.flag#' + flagId).delay(500).fadeIn(300).attr('aria-hidden','false').addClass('active-flag');
-         $('.content-inner').scrollTop(0);
+        $('.content-inner').scrollTop(0);
+        
+        if(flagId == 'support'){
+          if(!$('a.toolbar-icon-shortcut.is-active').length){
+            $('a.toolbar-icon-shortcut').trigger('click');
+          }
+        }
       });
 
       $(document).on('click','.tour-back',function(e){

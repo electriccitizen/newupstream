@@ -133,10 +133,21 @@
 		position: absolute;
 	}
 	&#admin-nav{
-		top: 47px;
+		top: 112px;
 		position: fixed;
-		right: 535px;
-		@include rotate3d(0,1,2,6);
+		left: 250px;
+		@include rotate3d(0,1,2,29);
+		&:before{
+			@include triangle(left,52px,26px,$purple);
+			top: 0;
+			left: -26px;
+		}
+	}
+	&#support{
+		top: 57px;
+		position: fixed;
+		left: 635px;
+		@include rotate3d(0,1,2,12);
 		&:before{
 			@include triangle(left,52px,26px,$purple);
 			top: 0;
