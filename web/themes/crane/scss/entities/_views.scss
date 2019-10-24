@@ -26,14 +26,6 @@
 				max-width: 300px;
 				.crane &{
 					width: 100% !important;
-					.select2-selection--single{
-						.select2-selection__rendered{
-							padding: 3.5px 32px 4px 10px;
-						}
-						.select2-selection__arrow{
-							top: 17px;
-						}
-					}
 				}
 			}
 			@include smallTab{
@@ -206,10 +198,10 @@
 	.views-exposed-form{
 		.form--inline{
 			& > .form-item-status{
-				max-width: 120px;
+				max-width: 150px;
 			}
 			& > .form-item-role{
-				max-width: 140px;
+				max-width: 170px;
 			}
 		}
 	}//end views exposed form

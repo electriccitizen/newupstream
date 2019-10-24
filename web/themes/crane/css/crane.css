@@ -5125,11 +5125,11 @@ optgroup:empty {
     position: relative;
     z-index: 999; }
   .crane .select2-container--default .select2-selection--single .select2-selection__rendered {
-    padding: 0px 32px 0 10px;
+    padding: 3.5px 32px 4px 10px;
     color: #676767;
     text-align: left; }
   .crane .select2-container--default .select2-selection--single .select2-selection__arrow {
-    top: 13px;
+    top: 17px;
     right: 10px;
     cursor: pointer;
     width: 0;
@@ -5158,8 +5158,8 @@ optgroup:empty {
       content: '';
       display: block;
       position: absolute;
-      top: 16px;
-      right: 2px;
+      top: 17px;
+      right: 3px;
       cursor: pointer;
       width: 0;
       height: 0;
@@ -6537,10 +6537,6 @@ body:not(.role-administrator) #block-tabs nav.tabs.blocks.block-types {
       max-width: 300px; }
       .crane .views-exposed-form .form--inline > .form-item .select2-container--default {
         width: 100% !important; }
-        .crane .views-exposed-form .form--inline > .form-item .select2-container--default .select2-selection--single .select2-selection__rendered {
-          padding: 3.5px 32px 4px 10px; }
-        .crane .views-exposed-form .form--inline > .form-item .select2-container--default .select2-selection--single .select2-selection__arrow {
-          top: 17px; }
     @media (min-width: 600px) {
       .views-exposed-form .form--inline > .form-item {
         max-width: 240px; } }
@@ -6744,10 +6740,10 @@ body:not(.role-administrator) #block-tabs nav.tabs.blocks.block-types {
 /* USERS LIST
 ---------------- */
 .view-user-admin-people .views-exposed-form .form--inline > .form-item-status {
-  max-width: 120px; }
+  max-width: 150px; }
 
 .view-user-admin-people .views-exposed-form .form--inline > .form-item-role {
-  max-width: 140px; }
+  max-width: 170px; }
 
 .view-user-admin-people .view-content .views-table ~ .form-actions {
   display: none !important; }

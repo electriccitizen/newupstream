@@ -165,12 +165,12 @@ optgroup:empty{
 	.select2-selection--single{
 		@include selectInput;
 		.select2-selection__rendered{
-			padding: 0px 32px 0 10px;
+			padding: 3.5px 32px 4px 10px;
 			color: $midGrey;
 			text-align: left;
 		}
 		.select2-selection__arrow{
-			top: 13px;
+			top: 17px;
 			right: 10px;
 			cursor: pointer;
 			@include triangle(down,5px,12px,$darkGrey);
@@ -189,8 +189,8 @@ optgroup:empty{
 				content: '';
 				display: block;
 				position: absolute;
-				top: 16px;
-				right: 2px;
+				top: 17px;
+				right: 3px;
 				cursor: pointer;
 				@include triangle(down,5px,12px,$darkGrey);
 			}
