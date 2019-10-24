@@ -154,6 +154,9 @@
 			box-shadow: none !important;
 			background-color: transparent;
 			margin: 0;
+			&:not(:first-child){
+				margin: 0 0 0 -1px;
+			}
 		 	a{
 				background: $tabsActiveBack;
 				color: $tabsActiveText;

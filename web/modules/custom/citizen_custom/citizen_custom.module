@@ -191,3 +191,13 @@ function citizen_custom_form_site_search_form_alter(&$form, FormStateInterface $
   $form['form_id']['#access'] = FALSE;
 }
 
+function citizen_custom_field_widget_form_alter(&$element, \Drupal\Core\Form\FormStateInterface $form_state, $context) {
+  $field_definition = $context['items']->getFieldDefinition();
+  if ($field_definition->getType() == 'entity_reference_revisions') {
+    $type = $element['#paragraph_type'];
+    $element['top']['type']['#attributes']['class'][] = str_replace('_','-',$type);
+    if(isset($element['top']['type']['icon'])){
+      unset($element['top']['type']['icon']);
+    }
+  }
+}

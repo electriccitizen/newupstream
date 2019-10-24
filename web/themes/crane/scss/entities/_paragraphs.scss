@@ -14,18 +14,110 @@
 	.description strong span{
 		 color: #dd241b;
 	}
+
+	//summary icons
+	.paragraph-top{
+		.js &{
+			grid-template-columns: 300px auto 1fr auto;
+		}
+		.paragraph-type.form-wrapper{
+			&.landing-page-section,.basic-page-section{
+				.paragraph-type-label{
+					background-image: url('../images/icons/paragraphs/section.svg');
+				}
+			}
+			&.accordion-group,.accordion-item{
+				.paragraph-type-label{
+					background-image: url('../images/icons/paragraphs/accordion.svg');
+				}
+			}
+			&.block-placer{
+				.paragraph-type-label{
+					background-image: url('../images/icons/paragraphs/block.svg');
+				}
+			}
+			&.form{
+				.paragraph-type-label{
+					background-image: url('../images/icons/paragraphs/form.svg');
+				}
+			}
+			&.gallery{
+				.paragraph-type-label{
+					background-image: url('../images/icons/paragraphs/galleries.svg');
+				}
+			}
+			&.horizontal-rule{
+				.paragraph-type-label{
+					background-image: url('../images/icons/paragraphs/hr.svg');
+				}
+			}
+			&.image{
+				.paragraph-type-label{
+					background-image: url('../images/icons/paragraphs/image.svg');
+				}
+			}
+			&.links-files{
+				.paragraph-type-label{
+					background-image: url('../images/icons/paragraphs/link.svg');
+				}
+			}
+			&.pullquote{
+				.paragraph-type-label{
+					background-image: url('../images/icons/paragraphs/pullquote.svg');
+				}
+			}
+			&.text{
+				.paragraph-type-label{
+					background-image: url('../images/icons/paragraphs/text.svg');
+				}
+			}
+			&.video{
+				.paragraph-type-label{
+					background-image: url('../images/icons/paragraphs/video.svg');
+				}
+			}
+			&.view-placer{
+				.paragraph-type-label{
+					background-image: url('../images/icons/paragraphs/view-placer.svg');
+				}
+			}
+			.paragraph-type-label{
+				@include heading4;
+				padding-left: 30px;
+				background-size: 22px 22px;
+				background-position: 1px 1px;
+				background-repeat: no-repeat;
+				color: $darkBlue;
+			}
+		}//end paragraph-type-form-wrapper
+		.paragraph-info{
+			.paragraphs-badge{
+				font-size: 1.5rem;
+				font-weight: 700;
+				border-radius: 0;
+				background: $darkBlue;
+				margin: 0;
+				padding: 3px 6px;
+				position: relative;
+				top: -2px;
+			}
+		}//end paragraph info
+	}//end paragraph-top
+
 	//button icons
 	.paragraphs-tabs-wrapper{
 		input.button.field-add-more-submit{
 			&:not([value="Add another item"]){
-				padding: 6px 8px 6px 34px;
+				padding: 7px 12px 7px 38px;
 			  border: 2px solid $link;
 			  color: $darkGrey;
 			  border-radius: 0;
 			  box-shadow: 3px 3px 0 $lightGrey;
 			  float: left;
-			  background-position: 4px 3px;
-			  background-size: 24px 24px;
+			  background-position: 7px 4px;
+			  background-size: 22px 22px;
+			  background-repeat: no-repeat;
+			  background-color: $siteBack;
 			  margin-right: 15px;
 			  font-size: 1.6rem;
 			  font-weight: $heavy;
@@ -40,55 +132,54 @@
 		}
 		input.form-submit:not(.image-button){
 			&[value="Add Accordion Group"]{
-				background: url('../images/icons/paragraphs/accordion.svg') no-repeat;
+				background-image: url('../images/icons/paragraphs/accordion.svg');
 			}
 			&[value="Add Accordion Item"]{
-				background: url('../images/icons/paragraphs/accordion.svg') no-repeat;
+				background-image: url('../images/icons/paragraphs/accordion.svg');
 			}
 			&[value="Add Basic Page Section"]{
-				background: url('../images/icons/paragraphs/section.svg') no-repeat;
+				background-image: url('../images/icons/paragraphs/section.svg');
 			}
 			&[value="Add Block Placer"]{
-				background: url('../images/icons/paragraphs/block.svg') no-repeat;
+				background-image: url('../images/icons/paragraphs/block.svg');
 			}
 			&[value="Add Form"]{
-				background: url('../images/icons/paragraphs/form.svg') no-repeat;
+				background-image: url('../images/icons/paragraphs/form.svg');
 			}
 			&[value="Add Gallery"]{
-			  background: url('../images/icons/paragraphs/galleries.svg') no-repeat;
+			  background-image: url('../images/icons/paragraphs/galleries.svg');
 			}
 			&[value="Add Horizontal Rule"]{
-			  background: url('../images/icons/paragraphs/hr.svg') no-repeat;
+			  background-image: url('../images/icons/paragraphs/hr.svg');
 			}
 			&[value="Add Image"]{
-			  background: url('../images/icons/paragraphs/image.svg') no-repeat;
+			  background-image: url('../images/icons/paragraphs/image.svg');
 			}
 			&[value="Add Landing Page Section"] {
-			  background: url('../images/icons/paragraphs/section.svg') no-repeat;
+			  background-image: url('../images/icons/paragraphs/section.svg');
 			}
 			&[value="Add Links & Files"]{
-			  background: url('../images/icons/paragraphs/link.svg') no-repeat;
+			  background-image: url('../images/icons/paragraphs/link.svg');
 			}
 			&[value="Add Pullquote"]{
-			  background: url('../images/icons/paragraphs/pullquote.svg') no-repeat;
+			  background-image: url('../images/icons/paragraphs/pullquote.svg');
+			  background-position: 7px 6px;
+			  background-size: 20px 20px;
 			}
 			&[value="Add Text"]{
-			  background: url('../images/icons/paragraphs/text.svg') no-repeat;
+			  background-image: url('../images/icons/paragraphs/text.svg');
+			  background-position: 7px 6px;
+			  background-size: 20px 20px;
 			}
 			&[value="Add View Placer"]{
-			  background: url('../images/icons/paragraphs/view-placer.svg') no-repeat;
+			  background-image: url('../images/icons/paragraphs/view-placer.svg');
 			}
 			&[value="Add Video"]{
-			  background: url('../images/icons/paragraphs/video.svg') no-repeat;
+			  background-image: url('../images/icons/paragraphs/video.svg');
+			  background-position: 7px 6px;
+			  background-size: 20px 20px;
 			}
 		}//end paragraph add button input
-
-		//prevent trimming of widget type name
-		.paragraph-top{
-			.js &{
-				grid-template-columns: 250px auto 1fr auto;
-			}
-		}//end paragraph top
 	}//end paragraphs tab wrapper
 }//end field--widget-paragraphs
 
@@ -110,17 +201,18 @@
 /* PREVIEWS
 ---------------- */
 .field--widget-paragraphs .paragraph--view-mode--preview{
+	padding-top: $spaceXs;
 	&.paragraph--type--landing-page-section,&.paragraph--type--basic-page-section{
 		& > *:not(:last-child){
 			margin-bottom: $spaceXxs;
 		}
 	}
 	.field--name-field-section-widgets{
-		padding-top: $spaceXxs;
+		padding: $spaceXs 0;
 		& > .field__label{
 			display: inline-block;
 			margin-bottom: $spaceXxs;
-			padding-right: 4rem;
+			padding-right: 6rem;
 			border-bottom: 1px solid $borderRule;
 		}
 		& > .field__items{
@@ -158,6 +250,14 @@
 /* PREVIEW SUBFORM */
 .paragraphs-subform{
 	.field--widget-paragraphs{
+		.paragraph-top .paragraph-type.form-wrapper{
+			.paragraph-type-label{
+				@include heading5;
+				color: $darkBlue;
+				background-size: 20px 20px;
+				padding-left: 28px;
+			}
+		}
 		.paragraph--view-mode--preview{
 			& > .field--label-inline{
 				& > .field__label{
@@ -203,6 +303,9 @@
 	@include safeFlex(row,wrap,start,center);
 	.field--name-field-gallery-type{
 		@include safeFlexSize(0,0,165px);
+		.paragraphs-subform &{
+			@include safeFlexSize(0,0,75px);
+		}
 	}
 	.field--name-field-image-multi{
 		@include safeFlex(row,wrap,start,start);
