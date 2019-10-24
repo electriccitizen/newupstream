@@ -4243,13 +4243,14 @@ body {
     box-sizing: border-box; }
   body .layout-container {
     margin: 0;
-    box-sizing: border-box;
-    padding-left: 2rem;
-    padding-right: 2rem; }
-    @media (min-width: 975px) {
-      body .layout-container {
-        padding-left: 6rem;
-        padding-right: 6rem; } }
+    box-sizing: border-box; }
+    body .layout-container .region-header, body .layout-container .page-content {
+      padding-left: 2rem;
+      padding-right: 2rem; }
+      @media (min-width: 975px) {
+        body .layout-container .region-header, body .layout-container .page-content {
+          padding-left: 6rem;
+          padding-right: 6rem; } }
   body .dialog-off-canvas-main-canvas {
     width: 100%;
     box-sizing: border-box;
@@ -4388,7 +4389,7 @@ a, .link {
   .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle input.form-submit, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle input.form-submit, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle input.form-submit, .js .dropbutton-multiple .dropbutton-action input.form-submit, .js .dropbutton-wrapper .dropbutton-action input.form-submit, .js .dropbutton-single .dropbutton-action input.form-submit, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle .button.form-submit, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle .button.form-submit, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle .button.form-submit, .js .dropbutton-multiple .dropbutton-action .button.form-submit, .js .dropbutton-wrapper .dropbutton-action .button.form-submit, .js .dropbutton-single .dropbutton-action .button.form-submit, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle a.form-submit, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle a.form-submit, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle a.form-submit, .js .dropbutton-multiple .dropbutton-action a.form-submit, .js .dropbutton-wrapper .dropbutton-action a.form-submit, .js .dropbutton-single .dropbutton-action a.form-submit, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle button.form-submit, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle button.form-submit, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle button.form-submit, .js .dropbutton-multiple .dropbutton-action button.form-submit, .js .dropbutton-wrapper .dropbutton-action button.form-submit, .js .dropbutton-single .dropbutton-action button.form-submit {
     text-transform: none; }
   .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle input:hover, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle input:hover, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle input:hover, .js .dropbutton-multiple .dropbutton-action input:hover, .js .dropbutton-wrapper .dropbutton-action input:hover, .js .dropbutton-single .dropbutton-action input:hover, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle input:focus, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle input:focus, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle input:focus, .js .dropbutton-multiple .dropbutton-action input:focus, .js .dropbutton-wrapper .dropbutton-action input:focus, .js .dropbutton-single .dropbutton-action input:focus, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle .button:hover, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle .button:hover, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle .button:hover, .js .dropbutton-multiple .dropbutton-action .button:hover, .js .dropbutton-wrapper .dropbutton-action .button:hover, .js .dropbutton-single .dropbutton-action .button:hover, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle .button:focus, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle .button:focus, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle .button:focus, .js .dropbutton-multiple .dropbutton-action .button:focus, .js .dropbutton-wrapper .dropbutton-action .button:focus, .js .dropbutton-single .dropbutton-action .button:focus, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle a:hover, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle a:hover, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle a:hover, .js .dropbutton-multiple .dropbutton-action a:hover, .js .dropbutton-wrapper .dropbutton-action a:hover, .js .dropbutton-single .dropbutton-action a:hover, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle a:focus, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle a:focus, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle a:focus, .js .dropbutton-multiple .dropbutton-action a:focus, .js .dropbutton-wrapper .dropbutton-action a:focus, .js .dropbutton-single .dropbutton-action a:focus, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle button:hover, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle button:hover, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle button:hover, .js .dropbutton-multiple .dropbutton-action button:hover, .js .dropbutton-wrapper .dropbutton-action button:hover, .js .dropbutton-single .dropbutton-action button:hover, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle button:focus, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle button:focus, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle button:focus, .js .dropbutton-multiple .dropbutton-action button:focus, .js .dropbutton-wrapper .dropbutton-action button:focus, .js .dropbutton-single .dropbutton-action button:focus {
-    background-color: #f2f9fb !important;
+    background-color: #f6f6f6 !important;
     background-image: none !important;
     border-radius: 0 !important;
     box-shadow: none; }
@@ -5234,6 +5235,12 @@ select {
 select:hover, select:focus {
   background: url("../images/icons/admin-icons/caret-down.svg") no-repeat 99% 63%, #ececec; }
 
+.crane .draggable:not([class*="paragraph"]) td .select2-container--default .select2-selection--single .select2-selection__rendered {
+  padding: 0px 32px 0px 10px; }
+
+.crane .draggable:not([class*="paragraph"]) td .select2-container--default .select2-selection--single .select2-selection__arrow {
+  top: 13px; }
+
 /* FILE UPLOAD
 ---------------- */
 .form-type-managed-file > label {
@@ -5356,99 +5363,47 @@ select:hover, select:focus {
 .media-library-item__attributes {
   min-height: 22px; }
 
-/* MEDIA BROWSER
-------------------- */
-.entity-browser-form {
-  font-size: 1.5rem; }
-
-.eb-media {
-  padding-bottom: 3rem; }
-  .eb-media .views-row .views-col {
-    margin: 0 0 3rem;
-    position: relative; }
-  .eb-media .views-field-entity-browser-select .form-type-checkbox {
-    margin: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 20; }
-    .eb-media .views-field-entity-browser-select .form-type-checkbox input[type="checkbox"] {
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      -ms-appearance: none;
-      appearance: none;
-      height: 200px;
-      width: 250px;
-      border: 8px solid transparent; }
-      .eb-media .views-field-entity-browser-select .form-type-checkbox input[type="checkbox"]:hover, .eb-media .views-field-entity-browser-select .form-type-checkbox input[type="checkbox"]:focus {
-        border-color: #bf0e0e;
-        outline: none; }
-      .eb-media .views-field-entity-browser-select .form-type-checkbox input[type="checkbox"]:checked {
-        border-color: #cccccc; }
-        .eb-media .views-field-entity-browser-select .form-type-checkbox input[type="checkbox"]:checked:hover, .eb-media .views-field-entity-browser-select .form-type-checkbox input[type="checkbox"]:checked:focus {
-          border-color: #676767; }
-
-/* ENTITY BROWSER MODAL FORM
-------------------------- */
-.entity-browser-form > .form-actions {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  z-index: 30;
-  width: 100%;
-  background: #ffffff;
-  border-top: 1px solid #026cc5;
-  padding-top: 1em;
-  margin: 0; }
-
 /* CUSTOM DOCUMENT ICONS
 ----------------------- */
 .eb-media .views-field .file-extension > span, .eb-media.view-display-id-embed_browser .views-field-thumbnail__target-id > span.doc {
   display: block;
-  height: 160px;
-  width: 160px;
-  padding-bottom: 4rem;
-  background: #ededed; }
+  height: auto;
+  width: 100%;
+  background-color: #f6f6f6;
+  background-image: url("../images/icons/file/generic.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 120px 72px;
+  margin-bottom: .5rem;
+  padding-bottom: 60%; }
 
-.eb-media .views-field .file-extension > span[class$='.pdf'], .eb-media.view-display-id-embed_browser .views-field-thumbnail__target-id > span.doc[class$='pdf'], .view-media.view-display-id-media_page_list .views-field-thumbnail__target-id span.doc[class$='pdf'] {
-  background: url("../images/icons/file-icons/pdf.svg") no-repeat;
+.eb-media .views-field .file-extension > span[class$='.pdf'], .eb-media.view-display-id-embed_browser .views-field-thumbnail__target-id > span.doc[class$='pdf'], .view-media.view-display-id-media_page_list .views-field-thumbnail__target-id span.doc[class$='pdf'], .text-with-summary a[href$='.pdf']:before, .text-long a[href$='.pdf']:before, span.file a[href$='.pdf']:before {
+  background-image: url("../images/icons/file/pdf.svg"); }
+
+.eb-media .views-field .file-extension > span[class$='.doc'], .eb-media .views-field .file-extension > span[class$='.docx'], .eb-media.view-display-id-embed_browser .views-field-thumbnail__target-id > span.doc[class$='xls'], .eb-media.view-display-id-embed_browser .views-field-thumbnail__target-id > span.doc[class$='xlsx'], .view-media.view-display-id-media_page_list .views-field-thumbnail__target-id span.doc[class$='xls'], .view-media.view-display-id-media_page_list .views-field-thumbnail__target-id span.doc[class$='xlsx'], .text-with-summary a[href$='.doc']:before, .text-with-summary a[href$=".docx"]:before, .text-long a[href$='.doc']:before, .text-long a[href$=".docx"]:before, span.file a[href$='.doc']:before, span.file a[href$=".docx"]:before {
+  background-image: url("../images/icons/file/word.svg"); }
+
+.eb-media .views-field .file-extension > span[class$='.xls'], .eb-media .views-field .file-extension > span[class$='.xlsx'], .eb-media.view-display-id-embed_browser .views-field-thumbnail__target-id > span.doc[class$='doc'], .eb-media.view-display-id-embed_browser .views-field-thumbnail__target-id > span.doc[class$='docx'], .view-media.view-display-id-media_page_list .views-field-thumbnail__target-id span.doc[class$='doc'], .view-media.view-display-id-media_page_list .views-field-thumbnail__target-id span.doc[class$='docx'], .text-with-summary a[href$='.xls']:before, .text-with-summary a[href$=".xlsx"]:before, .text-long a[href$='.xls']:before, .text-long a[href$=".xlsx"]:before, span.file a[href$='.xls']:before, span.file a[href$=".xlsx"]:before {
+  background-image: url("../images/icons/file/excel.svg"); }
+
+.eb-media .views-field .file-extension > span[class$='.ppt'], .eb-media .views-field .file-extension > span[class$='.pptx'], .eb-media.view-display-id-embed_browser .views-field-thumbnail__target-id > span.doc[class$='ppt'], .eb-media.view-display-id-embed_browser .views-field-thumbnail__target-id > span.doc[class$='pptx'], .view-media.view-display-id-media_page_list .views-field-thumbnail__target-id span.doc[class$='ppt'], .view-media.view-display-id-media_page_list .views-field-thumbnail__target-id span.doc[class$='pptx'], .text-with-summary a[href$='.ppt']:before, .text-with-summary a[href$=".pptx"]:before, .text-long a[href$='.ppt']:before, .text-long a[href$=".pptx"]:before, span.file a[href$='.ppt']:before, span.file a[href$=".pptx"]:before {
+  background-image: url("../images/icons/file/powerpoint.svg"); }
+
+.eb-media .views-field .file-extension > span img {
+  display: none; }
+
+.eb-media.view-display-id-embed_browser .views-field-thumbnail__target-id > span.doc img {
+  display: none; }
+
+.view-media.view-display-id-media_page_list .views-field-thumbnail__target-id span.doc {
+  display: block;
+  height: 75px;
+  width: 60px;
+  background-repeat: no-repeat;
   background-position: center;
   background-size: contain; }
-
-.eb-media .views-field .file-extension > span[class$='.doc'], .eb-media .views-field .file-extension > span[class$='.docx'], .eb-media.view-display-id-embed_browser .views-field-thumbnail__target-id > span.doc[class$='xls'], .eb-media.view-display-id-embed_browser .views-field-thumbnail__target-id > span.doc[class$='xlsx'], .view-media.view-display-id-media_page_list .views-field-thumbnail__target-id span.doc[class$='xls'], .view-media.view-display-id-media_page_list .views-field-thumbnail__target-id span.doc[class$='xlsx'] {
-  background: url("../images/icons/file-icons/word.svg") no-repeat;
-  background-position: center;
-  background-size: contain; }
-
-.eb-media .views-field .file-extension > span[class$='.xls'], .eb-media .views-field .file-extension > span[class$='.xlsx'], .eb-media.view-display-id-embed_browser .views-field-thumbnail__target-id > span.doc[class$='doc'], .eb-media.view-display-id-embed_browser .views-field-thumbnail__target-id > span.doc[class$='docx'], .view-media.view-display-id-media_page_list .views-field-thumbnail__target-id span.doc[class$='doc'], .view-media.view-display-id-media_page_list .views-field-thumbnail__target-id span.doc[class$='docx'] {
-  background: url("../images/icons/file-icons/excel.svg") no-repeat;
-  background-position: center;
-  background-size: contain; }
-
-.eb-media .views-field .file-extension > span[class$='.ppt'], .eb-media .views-field .file-extension > span[class$='.pptx'], .eb-media.view-display-id-embed_browser .views-field-thumbnail__target-id > span.doc[class$='ppt'], .eb-media.view-display-id-embed_browser .views-field-thumbnail__target-id > span.doc[class$='pptx'], .view-media.view-display-id-media_page_list .views-field-thumbnail__target-id span.doc[class$='ppt'], .view-media.view-display-id-media_page_list .views-field-thumbnail__target-id span.doc[class$='pptx'] {
-  background: url("../images/icons/file-icons/powerpoint.svg") no-repeat;
-  background-position: center;
-  background-size: contain; }
-
-.eb-media .views-field .file-extension {
-  padding-bottom: 1rem; }
-  .eb-media .views-field .file-extension > span img {
+  .view-media.view-display-id-media_page_list .views-field-thumbnail__target-id span.doc img {
     display: none; }
-
-.eb-media.view-display-id-embed_browser .views-field-thumbnail__target-id {
-  padding-bottom: 1rem; }
-  .eb-media.view-display-id-embed_browser .views-field-thumbnail__target-id > span.doc img {
-    display: none; }
-
-.view-media.view-display-id-media_page_list {
-  padding-bottom: 1rem; }
-  .view-media.view-display-id-media_page_list .views-field-thumbnail__target-id span.doc {
-    display: block;
-    height: 75px;
-    width: 60px;
-    background: #ededed; }
-    .view-media.view-display-id-media_page_list .views-field-thumbnail__target-id span.doc img {
-      display: none; }
 
 /* FILE ICONS
 --------------- */
@@ -5468,18 +5423,6 @@ select:hover, select:focus {
     background-repeat: none;
     background-position: 0 0;
     background-size: 16px 16px; }
-
-.text-with-summary a[href$='.pdf']:before, .text-long a[href$='.pdf']:before, span.file a[href$='.pdf']:before {
-  background-image: url("../images/icons/files/pdf.svg"); }
-
-.text-with-summary a[href$='.doc']:before, .text-with-summary a[href$=".docx"]:before, .text-long a[href$='.doc']:before, .text-long a[href$=".docx"]:before, span.file a[href$='.doc']:before, span.file a[href$=".docx"]:before {
-  background-image: url("../images/icons/files/word.svg"); }
-
-.text-with-summary a[href$='.xls']:before, .text-with-summary a[href$=".xlsx"]:before, .text-long a[href$='.xls']:before, .text-long a[href$=".xlsx"]:before, span.file a[href$='.xls']:before, span.file a[href$=".xlsx"]:before {
-  background-image: url("../images/icons/files/excel.svg"); }
-
-.text-with-summary a[href$='.ppt']:before, .text-with-summary a[href$=".pptx"]:before, .text-long a[href$='.ppt']:before, .text-long a[href$=".pptx"]:before, span.file a[href$='.ppt']:before, span.file a[href$=".pptx"]:before {
-  background-image: url("../images/icons/files/powerpoint.svg"); }
 
 /* GENERIC FILES */
 span.file {
@@ -5743,6 +5686,127 @@ body:not(.role-administrator) .admin-list li.social-media-links {
     background-repeat: no-repeat;
     background-size: 16px 16px; }
 
+/* ========================
+  MODALS
+========================== */
+/* MEDIA ENTITY BROWSER
+----------------- */
+.ui-dialog.entity-browser-modal {
+  max-width: 1200px; }
+
+.entity-browser-form {
+  font-size: 1.5rem;
+  margin-top: -3rem; }
+  .entity-browser-form > .form-actions {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 30;
+    width: 100%;
+    background: #ffffff;
+    border-top: 1px solid #026cc5;
+    padding-top: 1em;
+    margin: 0; }
+  .entity-browser-form .eb-tabs ul {
+    border-bottom: 1px solid #026cc5; }
+    .entity-browser-form .eb-tabs ul li {
+      border-bottom: 0;
+      border-left: 1px solid #026cc5;
+      border-top: 1px solid #026cc5;
+      border-right: 1px solid #026cc5; }
+      .entity-browser-form .eb-tabs ul li:not(:first-child) {
+        margin-left: -1px; }
+      .entity-browser-form .eb-tabs ul li a {
+        color: #121212; }
+        .entity-browser-form .eb-tabs ul li a:hover, .entity-browser-form .eb-tabs ul li a:focus {
+          background: #cccccc;
+          color: #121212;
+          text-decoration: none; }
+        .entity-browser-form .eb-tabs ul li a:active {
+          background: #b3b3b3;
+          color: #121212; }
+        .entity-browser-form .eb-tabs ul li a.is-active {
+          background: #dce7f3;
+          color: #121212;
+          border-color: #dce7f3; }
+          .entity-browser-form .eb-tabs ul li a.is-active:hover, .entity-browser-form .eb-tabs ul li a.is-active:focus {
+            background: #cccccc;
+            color: #121212; }
+          .entity-browser-form .eb-tabs ul li a.is-active:active {
+            background: #b3b3b3;
+            color: #121212; }
+
+/* ENTITY BROWSER MEDIA VIEW CONTENT
+------------------- */
+.eb-media {
+  padding-top: 2rem;
+  padding-bottom: 4rem; }
+  .eb-media .views-exposed-form {
+    padding: 0 8px 0.5rem; }
+    .eb-media .views-exposed-form .filter-control {
+      padding-bottom: 0.5rem; }
+  .eb-media .views-row {
+    display: flex;
+    display: -ms-flexbox;
+    flex-direction: row;
+    -ms-flex-direction: row;
+    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    justify-content: flex-start;
+    -ms-flex-pack: start;
+    align-items: stretch;
+    -ms-flex-align: stretch; }
+  .eb-media .views-col {
+    position: relative;
+    margin-bottom: 3rem;
+    box-sizing: border-box;
+    margin-left: 10px;
+    margin-right: 10px;
+    background: #4a4a4a;
+    float: none;
+    width: calc(50% - 20px) !important; }
+    @media (min-width: 600px) {
+      .eb-media .views-col {
+        width: calc(25% - 20px) !important; } }
+    .eb-media .views-col:hover {
+      opacity: .6; }
+    .eb-media .views-col.selected .views-field-thumbnail__target-id {
+      position: relative; }
+      .eb-media .views-col.selected .views-field-thumbnail__target-id:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(35, 35, 35, 0.7);
+        background-image: url("../images/icons/admin-icons/checkmark.svg");
+        background-repeat: no-repeat;
+        background-size: 60px 60px;
+        background-position: center; }
+  .eb-media .views-field-thumbnail__target-id img {
+    width: 100%;
+    display: block; }
+  .eb-media .views-field-entity-browser-select {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    opacity: 0; }
+    .eb-media .views-field-entity-browser-select .form-type-checkbox {
+      margin-top: 0;
+      margin-bottom: 0; }
+      .eb-media .views-field-entity-browser-select .form-type-checkbox .form-boolean {
+        width: 24px;
+        height: 24px; }
+  .eb-media .views-field-name, .eb-media .views-field-bundle {
+    padding: 8px 10px;
+    line-height: 1.25;
+    text-align: center;
+    color: #ffffff; }
+  .eb-media .views-field-bundle {
+    padding-top: 0; }
+
 /* ==============
 	 NAVIGATION
 ================== */
@@ -5880,41 +5944,46 @@ body:not(.role-administrator) .admin-list li.social-media-links {
 
 /* SECONDARY TASKS
 -------------------- */
-#block-tabs nav.tabs .is-horizontal {
-  margin-left: -1em; }
-  #block-tabs nav.tabs .is-horizontal .tabs:before {
-    content: none; }
-  #block-tabs nav.tabs .is-horizontal .tabs li.is-active a {
-    border-bottom-color: #4a4a4a; }
-    #block-tabs nav.tabs .is-horizontal .tabs li.is-active a:hover, #block-tabs nav.tabs .is-horizontal .tabs li.is-active a:focus {
-      border-bottom-color: #cccccc; }
-  #block-tabs nav.tabs .is-horizontal .tabs li a {
-    border-left: 0;
-    border-bottom: 2px solid transparent; }
-    #block-tabs nav.tabs .is-horizontal .tabs li a:hover, #block-tabs nav.tabs .is-horizontal .tabs li a:focus {
-      border-bottom-color: #cccccc; }
-
-#block-tabs nav.tabs li {
-  border: 0 !important;
-  padding-left: 0;
-  padding-right: 0;
-  background: none; }
-  #block-tabs nav.tabs li.is-active a {
-    border-left-color: #4a4a4a; }
-    #block-tabs nav.tabs li.is-active a:hover, #block-tabs nav.tabs li.is-active a:focus {
-      color: #676767;
-      border-left-color: #cccccc; }
-  #block-tabs nav.tabs li a {
-    border-bottom: 1px solid #026cc5;
-    border-left: 3px solid transparent;
-    font-size: 1.5rem; }
-    #block-tabs nav.tabs li a:hover, #block-tabs nav.tabs li a:focus {
-      border-left-color: #cccccc;
-      color: #676767;
-      text-decoration: none; }
-
-body:not(.role-administrator) #block-tabs nav.tabs.blocks.block-types {
-  display: none; }
+#block-tabs {
+  padding-left: 2rem;
+  padding-right: 2rem; }
+  @media (min-width: 975px) {
+    #block-tabs {
+      padding-left: 6rem;
+      padding-right: 6rem; } }
+  #block-tabs nav.tabs .is-horizontal {
+    margin-left: -1em; }
+    #block-tabs nav.tabs .is-horizontal .tabs:before {
+      content: none; }
+    #block-tabs nav.tabs .is-horizontal .tabs li.is-active a {
+      border-bottom-color: #4a4a4a; }
+      #block-tabs nav.tabs .is-horizontal .tabs li.is-active a:hover, #block-tabs nav.tabs .is-horizontal .tabs li.is-active a:focus {
+        border-bottom-color: #cccccc; }
+    #block-tabs nav.tabs .is-horizontal .tabs li a {
+      border-left: 0;
+      border-bottom: 2px solid transparent; }
+      #block-tabs nav.tabs .is-horizontal .tabs li a:hover, #block-tabs nav.tabs .is-horizontal .tabs li a:focus {
+        border-bottom-color: #cccccc; }
+  #block-tabs nav.tabs li {
+    border: 0 !important;
+    padding-left: 0;
+    padding-right: 0;
+    background: none; }
+    #block-tabs nav.tabs li.is-active a {
+      border-left-color: #4a4a4a; }
+      #block-tabs nav.tabs li.is-active a:hover, #block-tabs nav.tabs li.is-active a:focus {
+        color: #676767;
+        border-left-color: #cccccc; }
+    #block-tabs nav.tabs li a {
+      border-bottom: 1px solid #026cc5;
+      border-left: 3px solid transparent;
+      font-size: 1.5rem; }
+      #block-tabs nav.tabs li a:hover, #block-tabs nav.tabs li a:focus {
+        border-left-color: #cccccc;
+        color: #676767;
+        text-decoration: none; }
+  body:not(.role-administrator) #block-tabs nav.tabs.blocks.block-types {
+    display: none; }
 
 /* BREADCRUMBS 
 ----------------- */

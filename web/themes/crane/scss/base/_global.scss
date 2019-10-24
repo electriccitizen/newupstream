@@ -9,11 +9,13 @@ body{
 	.layout-container{
 		margin: 0;
 		box-sizing: border-box;
-		padding-left: $siteMarginMobile;
-		padding-right: $siteMarginMobile;
-		@include desk{
-			padding-left: $siteMarginDesk;
-			padding-right: $siteMarginDesk;
+		.region-header,.page-content{
+			padding-left: $siteMarginMobile;
+			padding-right: $siteMarginMobile;
+			@include desk{
+				padding-left: $siteMarginDesk;
+				padding-right: $siteMarginDesk;
+			}
 		}
 	}
 	.dialog-off-canvas-main-canvas{

@@ -5,99 +5,35 @@
 	min-height: 22px;
 }
 
-/* MEDIA BROWSER
-------------------- */
-//modal
-.entity-browser-form{
-	font-size: $baseSize;
-}	
-//entity browser view
-.eb-media{
-	padding-bottom: $spaceMd;
-	.views-row{
-		.views-col{
-			margin: 0 0 $spaceMd;
-			position: relative;
-		}
-	}//end views-row
-
-	//browser checkbox
-	.views-field-entity-browser-select{
-		.form-type-checkbox{
-			margin: 0;
-			position: absolute;
-			top: 0;
-			left: 0;
-			z-index: 20;
-			input[type="checkbox"]{
-				@include browserWipe;
-				height: 200px;
-				width: 250px;
-				border: 8px solid transparent;
-				&:hover,&:focus{
-					border-color: $red;
-					outline: none;
-				}
-				&:checked{
-					border-color: $grey;
-					&:hover,&:focus{
-						border-color: $midGrey;
-					}
-				}
-			}//end checkbox
-		}//end checkbox
-	}//end entity-browser-select
-}//end eb-media
-
-/* ENTITY BROWSER MODAL FORM
-------------------------- */
-.entity-browser-form{
-	& > .form-actions{
-		position: fixed;
-		bottom: 0;
-		left: 0;
-		z-index: 30;
-		width: 100%;
-		background: $white;
-		border-top: 1px solid $borderRule;
-		padding-top: 1em;
-		margin: 0;
-	}
-}//end eb form
-
 /* CUSTOM DOCUMENT ICONS
 ----------------------- */
 %customIconWrap{
 	display: block;
-	height: 160px;
-	width: 160px;
-	padding-bottom: $spaceLg;
-	background: $lightGrey;
+	height: auto;
+  width: 100%;
+  background-color: #f6f6f6;
+  background-image: url('../images/icons/file/generic.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 120px 72px;
+  margin-bottom: .5rem;
+  padding-bottom: 60%;
 }
 %pdf{
-	background: url('../images/icons/file-icons/pdf.svg') no-repeat;
-	background-position: center;
-	background-size: contain;
+	background-image: url('../images/icons/file/pdf.svg');
 }
 %word{
-	background: url('../images/icons/file-icons/word.svg') no-repeat;
-	background-position: center;
-	background-size: contain;
+	background-image: url('../images/icons/file/word.svg');
 }
 %excel{
-	background: url('../images/icons/file-icons/excel.svg') no-repeat;
-	background-position: center;
-	background-size: contain;
+	background-image: url('../images/icons/file/excel.svg');
 }
 %powerpoint{
-	background: url('../images/icons/file-icons/powerpoint.svg') no-repeat;
-	background-position: center;
-	background-size: contain;
+	background-image: url('../images/icons/file/powerpoint.svg');
 }
 
 //icons in browser
 .eb-media .views-field .file-extension{
-	padding-bottom: $spaceXs;
 	& > span{
 		@extend %customIconWrap;
 		img{
@@ -119,7 +55,6 @@
 }//end file extension & thumbnail fields
 
 .eb-media.view-display-id-embed_browser .views-field-thumbnail__target-id{
-	padding-bottom: $spaceXs;
 	& > span.doc{
 		@extend %customIconWrap;
 		&[class$='pdf']{
@@ -142,12 +77,13 @@
 
 //icons on main media view list
 .view-media.view-display-id-media_page_list{
-	padding-bottom: $spaceXs;
 	.views-field-thumbnail__target-id span.doc{
 		display: block;
 		height: 75px;
 		width: 60px;
-		background: $lightGrey;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
 		&[class$='pdf']{
 			@extend %pdf;
 		}
@@ -192,7 +128,7 @@
 	a[href$='.pdf']{
 		@extend %docIcons;
 		&:before{			
-			background-image: url('../images/icons/files/pdf.svg');
+			@extend %pdf;
 		}	
 	}
 
@@ -200,21 +136,21 @@
 	a[href$='.doc'],a[href$=".docx"]{
 		@extend %docIcons;
 		&:before{
-			background-image: url('../images/icons/files/word.svg');
+			@extend %word;
 		}
 	}
 	//excel
 	a[href$='.xls'],a[href$=".xlsx"]{
 		@extend %docIcons;
 		&:before{
-			background-image: url('../images/icons/files/excel.svg');
+			@extend %excel;
 		}
 	}
 	//powerpoint
 	a[href$='.ppt'],a[href$=".pptx"]{
 		@extend %docIcons;
 		&:before{
-			background-image: url('../images/icons/files/powerpoint.svg');
+			@extend %powerpoint;
 		}
 	}
 }//end wysiwyg fields

@@ -1,0 +1,6 @@
+browser:
+  version: 1.0
+  js:
+    js/browser.js: {}
+  dependencies:
+    - core/backbone

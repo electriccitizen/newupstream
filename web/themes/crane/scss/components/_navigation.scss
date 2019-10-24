@@ -193,6 +193,12 @@
 /* SECONDARY TASKS
 -------------------- */
 #block-tabs{
+	padding-left: $siteMarginMobile;
+	padding-right: $siteMarginMobile;
+	@include desk{
+		padding-left: $siteMarginDesk;
+		padding-right: $siteMarginDesk;
+	}
 	nav.tabs{
 		.is-horizontal{
 			margin-left: -1em;

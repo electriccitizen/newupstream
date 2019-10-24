@@ -251,6 +251,17 @@ select:hover,select:focus{
 	background: url('../images/icons/admin-icons/caret-down.svg') no-repeat 99% 63%, #ececec;
 }
 
+.crane .draggable:not([class*="paragraph"]) td .select2-container--default{
+	.select2-selection--single{
+		.select2-selection__rendered{
+			padding: 0px 32px 0px 10px;
+		}
+		.select2-selection__arrow{
+			top: 13px;
+		}
+	}
+}
+
 
 /* FILE UPLOAD
 ---------------- */

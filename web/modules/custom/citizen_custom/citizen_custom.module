@@ -40,19 +40,6 @@ function citizen_custom_theme() {
   ];
 }
 
-/**
- * Preprocess function for grid views of the media library.
- *
- * @param array $variables
- *   Template variables.
- */
-function citizen_custom_preprocess_views_view_grid__media(array &$variables) {
-  foreach ($variables['items'] as &$item) {
-    foreach ($item['content'] as &$column) {
-      $column['attributes']['data-selectable'] = 'true';
-    }
-  }
-}
 
 /* ADD USER ROLE CLASSES
 ------------------------*/
@@ -103,6 +90,9 @@ function citizen_custom_form_alter(&$form, \Drupal\Core\Form\FormStateInterface 
     if(!in_array('administrator', $userRole)){
       unset($form['account']['roles']['#options']['administrator']);
     }
+  }
+  if ($form_state->has('entity_browser')) {
+    $form['#attached']['library'][] = 'citizen_custom/browser';
   }
 }
 
@@ -174,6 +164,26 @@ function citizen_custom_local_tasks_alter(&$local_tasks) {
     }
   }
 }
+
+/**
+ * Preprocess function for grid views of the media library.
+ *
+ * @param array $variables
+ *   Template variables.
+ */
+function citizen_custom_preprocess_views_view_grid(array &$variables) {
+  /** @var \Drupal\views\ViewExecutable $view */
+  $view = $variables['view'];
+
+  if ($view->display_handler->getPluginId() == 'entity_browser') {
+    foreach ($variables['items'] as &$item) {
+      foreach ($item['content'] as &$column) {
+        $column['attributes']['data-selectable'] = 'true';
+      }
+    }
+  }
+}
+
 
 /**
  * Implements hook_form_FORM_ID_alter() for the search_block_form form.

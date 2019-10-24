@@ -1,0 +1,143 @@
+/* ========================
+  MODALS
+========================== */
+
+/* MEDIA ENTITY BROWSER
+----------------- */
+.ui-dialog.entity-browser-modal{
+  max-width: 1200px;
+}//end entity browser modal
+.entity-browser-form{
+	font-size: $baseSize;
+	margin-top: -$spaceMd;
+	& > .form-actions{
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		z-index: 30;
+		width: 100%;
+		background: $white;
+		border-top: 1px solid $borderRule;
+		padding-top: 1em;
+		margin: 0;
+	}
+	.eb-tabs{
+		ul{
+			border-bottom: 1px solid $borderRule;
+			li{
+				border-bottom: 0;
+				border-left: 1px solid $tabsBorder;
+				border-top: 1px solid $tabsBorder;
+				border-right: 1px solid $tabsBorder;
+				&:not(:first-child){
+					margin-left: -1px;
+				}
+				a{
+					color: $tabsText;
+					&:hover,&:focus{
+						background: $buttonBackHover;
+						color: $buttonTextHover;
+						text-decoration: none;
+					}
+					&:active{
+						background: $buttonBackActive;
+						color: $buttonTextActive;	
+					}
+					&.is-active{
+						background: $tabsActiveBack;
+						color: $tabsActiveText;
+						border-color: $tabsActiveBorder;
+						&:hover,&:focus{
+							background: $buttonBackHover;
+							color: $buttonTextHover;
+						}
+						&:active{
+							background: $buttonBackActive;
+							color: $buttonTextActive;
+						}
+					}
+				}//end a
+			}//end li
+		}//end ul
+	}//end entity browser tabs
+}//end eb modal form
+
+/* ENTITY BROWSER MEDIA VIEW CONTENT
+------------------- */
+.eb-media{
+	padding-top: $spaceSm;
+	padding-bottom: $spaceLg;
+	.views-exposed-form{
+		padding: 0 8px $spaceXxs;
+		.filter-control{
+			padding-bottom: $spaceXxs;
+		}
+	}
+	.views-row{
+		@include safeFlex(row,wrap,start,stretch);
+	}
+	.views-col{
+		position: relative;
+		margin-bottom: $spaceMd;
+		box-sizing: border-box;
+		margin-left: 10px;
+		margin-right: 10px;
+		background: $darkGrey;
+		float: none;
+		@include calcForce(width, "50% - 20px");
+		@include smallTab{
+			@include calcForce(width, "25% - 20px");
+		}
+		&:hover{
+			opacity: .6;
+		}
+		&.selected{
+			.views-field-thumbnail__target-id{
+				position: relative;
+				&:before{
+					content: '';
+					display: block;
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					background-color: rgba(35,35,35,.7);
+					background-image: url('../images/icons/admin-icons/checkmark.svg');
+					background-repeat: no-repeat;
+					background-size: 60px 60px;
+					background-position: center;
+				}
+			}
+		}
+	}
+	.views-field-thumbnail__target-id img{
+	  width: 100%;
+	  display: block;
+	}
+	.views-field-entity-browser-select{
+		position: absolute;
+	  top: 0;
+	  right: 10px;
+	  opacity: 0;
+		.form-type-checkbox{
+			margin-top: 0;
+  		margin-bottom: 0;
+  		.form-boolean{
+				width: 24px;
+  			height: 24px
+  		}
+		}//end checkbox
+	}//end entity-browser-select
+	.views-field-name{
+		padding: 8px 10px;
+		line-height: 1.25;
+		text-align: center;
+		color: $white;
+	}
+	.views-field-bundle{
+		@extend .views-field-name;
+		padding-top: 0;
+	}
+}//end eb-media
+
