@@ -250,7 +250,41 @@ $buttonPadding: 1.15rem 1.5rem 1rem;
 		min-width: 80px;
 		margin-bottom: 0;
 	}
-} 
+	//reset to regular buttons for in-paragraph forms
+	.ief-entity-operations,.fieldset-wrapper .container-inline{
+		.form-submit:not(.image-button){
+			border-color: $buttonBack;
+			background: $buttonBack;
+			color: $buttonText;
+			font-weight: $heavy;
+			&:hover,&:focus{
+				border-color: $buttonBackHover;
+				background: $buttonBackHover;
+				color: $buttonTextHover;
+			}
+			&:active{
+				border-color: $buttonBackActive;
+				background: $buttonBackActive;
+				color: $buttonTextActive;
+			}
+			&[value="Remove"]{
+				background: $resetBack;
+				color: $resetText;
+				border-color: $resetBack;
+				&:hover,&:focus{
+					border-color: $buttonBackHover;
+					background: $buttonBackHover;
+					color: $buttonTextHover;
+				}
+				&:active{
+					border-color: $buttonBackActive;
+					background: $buttonBackActive;
+					color: $buttonTextActive;
+				}
+			}
+		}//end form submit
+	}//end ief draggable
+}//end draggable 
 
 #edit-clear-cache{
 	.button{

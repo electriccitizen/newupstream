@@ -4805,6 +4805,32 @@ a, .link {
   min-width: 80px;
   margin-bottom: 0; }
 
+.draggable .ief-entity-operations .form-submit:not(.image-button), .draggable .fieldset-wrapper .container-inline .form-submit:not(.image-button) {
+  border-color: #026cc5;
+  background: #026cc5;
+  color: #ffffff;
+  font-weight: 700; }
+  .draggable .ief-entity-operations .form-submit:not(.image-button):hover, .draggable .ief-entity-operations .form-submit:not(.image-button):focus, .draggable .fieldset-wrapper .container-inline .form-submit:not(.image-button):hover, .draggable .fieldset-wrapper .container-inline .form-submit:not(.image-button):focus {
+    border-color: #cccccc;
+    background: #cccccc;
+    color: #121212; }
+  .draggable .ief-entity-operations .form-submit:not(.image-button):active, .draggable .fieldset-wrapper .container-inline .form-submit:not(.image-button):active {
+    border-color: #b3b3b3;
+    background: #b3b3b3;
+    color: #121212; }
+  .draggable .ief-entity-operations .form-submit:not(.image-button)[value="Remove"], .draggable .fieldset-wrapper .container-inline .form-submit:not(.image-button)[value="Remove"] {
+    background: #c41294;
+    color: #ffffff;
+    border-color: #c41294; }
+    .draggable .ief-entity-operations .form-submit:not(.image-button)[value="Remove"]:hover, .draggable .ief-entity-operations .form-submit:not(.image-button)[value="Remove"]:focus, .draggable .fieldset-wrapper .container-inline .form-submit:not(.image-button)[value="Remove"]:hover, .draggable .fieldset-wrapper .container-inline .form-submit:not(.image-button)[value="Remove"]:focus {
+      border-color: #cccccc;
+      background: #cccccc;
+      color: #121212; }
+    .draggable .ief-entity-operations .form-submit:not(.image-button)[value="Remove"]:active, .draggable .fieldset-wrapper .container-inline .form-submit:not(.image-button)[value="Remove"]:active {
+      border-color: #b3b3b3;
+      background: #b3b3b3;
+      color: #121212; }
+
 #edit-clear-cache .button {
   background-image: none;
   background-color: #026cc5;
