@@ -2,6 +2,45 @@
   PARAGRAPHS
 ========================== */
 
+/* ICON IMAGES
+----------------- */
+%section{
+	background-image: url('../images/icons/paragraphs/section.svg');
+}
+%accordion{
+	background-image: url('../images/icons/paragraphs/accordion.svg');
+}
+%block{
+	background-image: url('../images/icons/paragraphs/block.svg');
+}
+%form{
+	background-image: url('../images/icons/paragraphs/form.svg');
+}
+%gallery{
+	background-image: url('../images/icons/paragraphs/galleries.svg');
+}
+%rule{
+	background-image: url('../images/icons/paragraphs/hr.svg');
+}
+%image{
+	background-image: url('../images/icons/paragraphs/image.svg');
+}
+%link{
+	background-image: url('../images/icons/paragraphs/link.svg');
+}
+%quote{
+	background-image: url('../images/icons/paragraphs/pullquote.svg');
+}
+%text{
+	background-image: url('../images/icons/paragraphs/text.svg');
+}
+%video{
+	background-image: url('../images/icons/paragraphs/video.svg');
+}
+%view{
+	background-image: url('../images/icons/paragraphs/view-placer.svg');
+}
+
 /* PARAGRAPHS BUTTONS
 --------------------------- */
 
@@ -23,62 +62,62 @@
 		.paragraph-type.form-wrapper{
 			&.landing-page-section,.basic-page-section{
 				.paragraph-type-label{
-					background-image: url('../images/icons/paragraphs/section.svg');
+					@extend %section;
 				}
 			}
 			&.accordion-group,.accordion-item{
 				.paragraph-type-label{
-					background-image: url('../images/icons/paragraphs/accordion.svg');
+					@extend %accordion;
 				}
 			}
 			&.block-placer{
 				.paragraph-type-label{
-					background-image: url('../images/icons/paragraphs/block.svg');
+					@extend %block;
 				}
 			}
 			&.form{
 				.paragraph-type-label{
-					background-image: url('../images/icons/paragraphs/form.svg');
+					@extend %form;
 				}
 			}
 			&.gallery{
 				.paragraph-type-label{
-					background-image: url('../images/icons/paragraphs/galleries.svg');
+					@extend %gallery;
 				}
 			}
 			&.horizontal-rule{
 				.paragraph-type-label{
-					background-image: url('../images/icons/paragraphs/hr.svg');
+					@extend %rule;
 				}
 			}
 			&.image{
 				.paragraph-type-label{
-					background-image: url('../images/icons/paragraphs/image.svg');
+					@extend %image;
 				}
 			}
 			&.links-files{
 				.paragraph-type-label{
-					background-image: url('../images/icons/paragraphs/link.svg');
+					@extend %link;
 				}
 			}
 			&.pullquote{
 				.paragraph-type-label{
-					background-image: url('../images/icons/paragraphs/pullquote.svg');
+					@extend %quote;
 				}
 			}
 			&.text{
 				.paragraph-type-label{
-					background-image: url('../images/icons/paragraphs/text.svg');
+					@extend %text;
 				}
 			}
 			&.video{
 				.paragraph-type-label{
-					background-image: url('../images/icons/paragraphs/video.svg');
+					@extend %video;
 				}
 			}
 			&.view-placer{
 				.paragraph-type-label{
-					background-image: url('../images/icons/paragraphs/view-placer.svg');
+					@extend %view;
 				}
 			}
 			.paragraph-type-label{
@@ -131,53 +170,47 @@
 			margin-bottom: 2em;
 		}
 		input.form-submit:not(.image-button){
-			&[value="Add Accordion Group"]{
-				background-image: url('../images/icons/paragraphs/accordion.svg');
+			&[value="Add Landing Page Section"],&[value="Add Basic Page Section"]{
+				@extend %section;
 			}
-			&[value="Add Accordion Item"]{
-				background-image: url('../images/icons/paragraphs/accordion.svg');
-			}
-			&[value="Add Basic Page Section"]{
-				background-image: url('../images/icons/paragraphs/section.svg');
+			&[value="Add Accordion Group"],&[value="Add Accordion Item"]{
+				@extend %accordion;
 			}
 			&[value="Add Block Placer"]{
-				background-image: url('../images/icons/paragraphs/block.svg');
+				@extend %block;
 			}
 			&[value="Add Form"]{
-				background-image: url('../images/icons/paragraphs/form.svg');
+				@extend %form;
 			}
 			&[value="Add Gallery"]{
-			  background-image: url('../images/icons/paragraphs/galleries.svg');
+				@extend %gallery;
 			}
 			&[value="Add Horizontal Rule"]{
-			  background-image: url('../images/icons/paragraphs/hr.svg');
+			  @extend %rule;
 			}
 			&[value="Add Image"]{
-			  background-image: url('../images/icons/paragraphs/image.svg');
-			}
-			&[value="Add Landing Page Section"] {
-			  background-image: url('../images/icons/paragraphs/section.svg');
+			  @extend %image;
 			}
 			&[value="Add Links & Files"]{
-			  background-image: url('../images/icons/paragraphs/link.svg');
+			  @extend %image;
 			}
 			&[value="Add Pullquote"]{
-			  background-image: url('../images/icons/paragraphs/pullquote.svg');
+			  @extend %quote;
 			  background-position: 7px 6px;
 			  background-size: 20px 20px;
 			}
 			&[value="Add Text"]{
-			  background-image: url('../images/icons/paragraphs/text.svg');
+			  @extend %text;
+			  background-position: 7px 6px;
+			  background-size: 20px 20px;
+			}
+			&[value="Add Video"]{
+			  @extend %video;
 			  background-position: 7px 6px;
 			  background-size: 20px 20px;
 			}
 			&[value="Add View Placer"]{
-			  background-image: url('../images/icons/paragraphs/view-placer.svg');
-			}
-			&[value="Add Video"]{
-			  background-image: url('../images/icons/paragraphs/video.svg');
-			  background-position: 7px 6px;
-			  background-size: 20px 20px;
+			  @extend %view;
 			}
 		}//end paragraph add button input
 	}//end paragraphs tab wrapper
