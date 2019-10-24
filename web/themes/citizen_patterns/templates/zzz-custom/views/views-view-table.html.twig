@@ -37,6 +37,7 @@
     sticky ? 'sticky-enabled',
   ]
 %}
+{{ attach_library('citizen_patterns/table') }}
 <table{{ attributes.addClass(classes) }}>
   {% if caption_needed %}
     <caption>

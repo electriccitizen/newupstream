@@ -73,7 +73,7 @@
 
 /* TABLE STYLING
 -------------------- */
-.text-with-summary,.text-long{
+.text-with-summary,.text-long,.view-content{
 	table{
 		@include table;
 		margin-bottom: $spaceMd;
@@ -89,6 +89,9 @@ table{
 		width: 52%;
 		max-width: 200px;
 		background: $tableHeaderBack;
+		padding-left: 1rem !important;
+		padding-right: 1rem !important;
+		color: $tableHeaderText !important;
 	}
 	//stack table td on mobile
 	.st-val{

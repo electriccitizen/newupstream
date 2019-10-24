@@ -138,8 +138,11 @@ $buttonPadding: 1.15rem 1.5rem 1rem;
 		border-color: $borderRule;
 		font-size: 1.4rem;
 		font-weight: $regular;
+		&.form-submit{
+			text-transform: none;
+		}
 		&:hover,&:focus{
-			background-color: $offWhite !important;
+			background-color: $iceBlue !important;
 			background-image: none !important;
 			border-radius: 0 !important;
 			box-shadow: none;

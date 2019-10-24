@@ -109,6 +109,55 @@
 
 /* VIEWS UI
 ----------------- */
+.views-displays .tabs.secondary{
+	@include safeFlex(row,wrap,start,start);
+	li{
+		float: none;
+		&.is-active{
+			a.is-active{
+				&:hover,&:focus{
+					background: lighten($midGrey,5%);
+				}
+			}
+		}
+	}
+	a{
+		border-radius: 0;
+		line-height: 1;
+		padding: 2px 7px;
+		min-height: 24px;
+		@include safeFlex(row,nowrap,center,center);
+		span.icon{
+			top: 0px;
+		}
+	}
+	.action-list{
+		top: 100%;
+		border: 1px solid $borderRule;
+		li{
+			background: $siteBack;
+			&:first-child{
+				border-radius: 0;
+			}
+			&:last-child{
+				border-radius: 0;
+			}
+			&:not(:last-child){
+				border-bottom: 1px solid $grey;
+			}
+			&:hover{
+				background: $offWhite;
+			}
+		}
+		input.form-submit{
+			width: 100%;
+			text-align: left;
+			color: $link;
+			font-weight: $regular;
+			text-transform: none;
+		}
+	}
+}//end views ui tabs secondary
 .views-ui-display-tab-bucket{
 	margin-bottom: $spaceXs;
 	.views-display-setting{
@@ -116,6 +165,10 @@
 	}
 	.views-ui-display-tab-bucket__title{
 		font-size: $baseSize;
+		min-height: 22px;
+	}
+	.dropbutton-wrapper{
+		top: -3px;
 	}
 }
 .views-ui-dialog{

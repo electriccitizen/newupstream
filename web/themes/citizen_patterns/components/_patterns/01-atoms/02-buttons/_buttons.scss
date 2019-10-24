@@ -7,6 +7,30 @@
 $buttonPadding: 1.6rem 3rem;
 $submitPadding: 0 1.5rem;
 
+%dropbutton{
+	input,.button,a,button{
+		border-radius: 0 !important;
+		box-shadow: none;
+		background: $siteBack;
+		text-shadow: none;
+		border-color: $borderRule;
+		font-size: 1.6rem;
+		color: $baseText;
+		text-decoration: none;
+		&:hover,&:focus{
+			background-color: $offWhite !important;
+			background-image: none !important;
+			border-radius: 0 !important;
+			box-shadow: none;
+		}
+		&:active{
+			background: $lightGrey;
+			border-radius: 0;
+			box-shadow: none;
+		}
+	}
+}
+
 ///mixin - button
 @mixin button{
 	background-color: $buttonBack;
@@ -186,3 +210,35 @@ $submitPadding: 0 1.5rem;
 		border-color: $link;
 	}
 }
+
+/* DROPBUTTONS
+--------------- */
+.js{
+	.dropbutton-multiple,.dropbutton-wrapper,.dropbutton-single{
+		.dropbutton-widget{
+			border-radius: 0;
+			text-shadow: none;
+			background: $siteBack;
+			border: 1px solid $borderRule;
+			min-width: 120px;
+			&:empty{
+				border: 0;
+			}
+			.dropbutton-action,.dropbutton-toggle{
+				@extend %dropbutton;
+			}
+			.dropbutton-toggle{
+				button{
+					border-left: 1px solid $borderRule;
+				}
+			}
+		}//end dropbutton widget
+		.dropbutton-action{
+			@extend %dropbutton;
+			a{
+				padding: .25rem 2rem;
+			}
+		}
+	}//end dropbutton
+}//end js
+
