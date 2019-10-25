@@ -195,12 +195,11 @@ $accordActiveBackHover    : $darkGrey;
 
 /* MESSAGES
 ------------------ */
-$messageGoodText    : darken($green,3%);
-$messageGoodBack    : $transGreen;
-$messageWarningText : $tan;
-$messageWarningBack : $transGold;
-$messageErrorText   : $darkFuchsia;
-$messageErrorBack   : $transFuchsia;
+$messageText          : $white;
+$messageBack          : $darkGrey;
+$messageGoodBorder    : $green;
+$messageWarningBorder : $gold;
+$messageErrorBorder   : $fuchsia;
 $messageGoodIcon    : '../images/message/message-status.svg';
 $messageWarningIcon : '../images/message/message-warning.svg';
 $messageErrorIcon   : '../images/message/message-error.svg';

@@ -14,11 +14,9 @@ $black        : #121212;
 $lightPink    : #fbf3f6;
 $red          : #bf0e0e;
 $fuchsia      : #c41294;
-$darkFuchsia  : #5d025a;
 $purple       : #8b01e2;
 $green        : #018901;
 $gold         : #fcd105;
-$tan          : #8e700b;
 $blueGrey     : #dce7f3;
 $blue         : #026cc5;
 $midBlue      : #1d5a9f;
@@ -27,9 +25,6 @@ $darkBlue     : #073b75;
 $transBlueLight: rgba(28,88,131,0.25);
 $transBlack    : rgba(35,35,35,0.7);
 $transWhite    : rgba(255,255,255,0.8);
-$transFuchsia  : rgba(192,40,187,0.03);
-$transGold     : rgba(252,217,1,0.06);
-$transGreen    : rgba(1,185,1,0.05);
 
 
 /* COMPONENT COLORS
@@ -78,12 +73,11 @@ $selectHighlight          : $link;
 
 $quickLinkBar             : $gold;
 
-$messageGoodText    : darken($green,3%);
-$messageGoodBack    : $transGreen;
-$messageWarningText : $tan;
-$messageWarningBack : $transGold;
-$messageErrorText   : $darkFuchsia;
-$messageErrorBack   : $transFuchsia;
+$messageText          : $white;
+$messageBack          : $darkGrey;
+$messageGoodBorder    : $green;
+$messageWarningBorder : $gold;
+$messageErrorBorder   : $fuchsia;
 
 $tableHeaderBack     : $lightGrey;
 $tableHeaderBorder   : $tableHeaderBack;

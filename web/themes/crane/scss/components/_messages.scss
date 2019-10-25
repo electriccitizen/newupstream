@@ -6,30 +6,48 @@ $messageWarningIcon : '../images/icons/message/message-warning.svg';
 $messageErrorIcon   : '../images/icons/message/message-error.svg';
 
 .messages{
-	padding: 15px 20px 12px 45px;
-	margin-top: $spaceMd;
+	padding: $spaceMd 20px $spaceMd 45px;
+	margin: $spaceMd 0 0;
 	background-repeat: no-repeat;
 	background-position: 12px center;
 	background-size: 20px 20px;
+	font-size: 1.8rem;
+	background-color: $messageBack;
+	color: $messageText;
+	border-left: 10px solid;
+	box-shadow: none;
+	a{
+		color: $gold;
+		&:hover,&:focus{
+			opacity: .6;
+		}
+	}
 	&.messages--error{
-		background-color: $messageErrorBack;
-		border-color: $messageErrorText;
-		color: $messageErrorText;
+		border-color: $messageErrorBorder;
 		background-image: url($messageErrorIcon);
 	}
 	&.messages--warning{
-		background-color: $messageWarningBack;
-		border-color: $messageWarningText;
-		color: $messageWarningText;
+		border-color: $messageWarningBorder;
 		background-image: url($messageWarningIcon);
 	}
 	&.messages--status{
-		background-color: $messageGoodBack;
-		border-color: $messageGoodText;
-		color: $messageGoodText;
+		border-color: $messageGoodBorder;
 		background-image: url($messageGoodIcon);
 	}
+	&.messages--webform{
+		.webform-message &{
+			background-color: $messageBack;
+			color: $messageText;
+		}
+	}
 }//end messages
+
+.webform-message{
+	margin-bottom: $spaceSm;
+	&[data-message-id="webform.help.promotion_webform"]{
+		display: none !important;
+	}
+}
 
 /* STATUS REPORT
 ------------------- */
@@ -52,19 +70,13 @@ $messageErrorIcon   : '../images/icons/message/message-error.svg';
 }
 .system-status-counter{
 	&.system-status-counter--error{
-		background-color: $messageErrorBack;
-		border-color: $messageErrorText;
-		color: $messageErrorText;
+		border-color: $messageErrorBorder;
 	}
 	&.system-status-counter--warning{
-		background-color: $messageWarningBack;
-		border-color: $messageWarningText;
-		color: $messageWarningText;
+		border-color: $messageWarningBorder;
 	}
 	&.system-status-counter--checked{
-		background-color: $messageGoodBack;
-		border-color: $messageGoodText;
-		color: $messageGoodText;
+		border-color: $messageGoodBorder;
 	}
 }
 .system-status-counter__details{
@@ -92,16 +104,13 @@ $messageErrorIcon   : '../images/icons/message/message-error.svg';
 }
 
 .color-error{
-	color: $messageErrorText;
-	background-color: $messageErrorBack;
+	border-color: $messageErrorBorder;
 }
 .color-warning{
-	color: $messageWarningText;
-	background-color: $messageWarningBack;
+	border-color: $messageWarningBorder;
 }
 .color-checked{
-	color: $messageGoodText;
-	background-color: $messageGoodBack;
+	border-color: $messageGoodBorder;
 }
 
 .system-status-report__status-title{
@@ -122,21 +131,19 @@ $messageErrorIcon   : '../images/icons/message/message-error.svg';
 -------------- */
 .admin-dblog{
 	.dblog-error{
-		background: $messageErrorBack;
-		color: $messageErrorText;
 		.icon{
 			background-image: url($messageErrorIcon);
 			background-repeat: no-repeat;
 			background-size: 16px 16px;
+			border-left: 4px solid $messageErrorBorder;
 		}
 	}
 	.dblog-warning{
-		background: $messageWarningBack;
-		color: $messageWarningText;
 		.icon{
 			background-image: url($messageWarningIcon);
 			background-repeat: no-repeat;
 			background-size: 16px 16px;
+			border-left: 4px solid $messageWarningBorder;
 		}
 	}
 }

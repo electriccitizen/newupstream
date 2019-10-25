@@ -5576,26 +5576,37 @@ body:not(.role-administrator) .admin-list li.social-media-links {
   MESSAGES
 ========================== */
 .messages {
-  padding: 15px 20px 12px 45px;
-  margin-top: 3rem;
+  padding: 3rem 20px 3rem 45px;
+  margin: 3rem 0 0;
   background-repeat: no-repeat;
   background-position: 12px center;
-  background-size: 20px 20px; }
+  background-size: 20px 20px;
+  font-size: 1.8rem;
+  background-color: #4a4a4a;
+  color: #ffffff;
+  border-left: 10px solid;
+  box-shadow: none; }
+  .messages a {
+    color: #fcd105; }
+    .messages a:hover, .messages a:focus {
+      opacity: .6; }
   .messages.messages--error {
-    background-color: rgba(192, 40, 187, 0.03);
-    border-color: #5d025a;
-    color: #5d025a;
+    border-color: #c41294;
     background-image: url("../images/icons/message/message-error.svg"); }
   .messages.messages--warning {
-    background-color: rgba(252, 217, 1, 0.06);
-    border-color: #8e700b;
-    color: #8e700b;
+    border-color: #fcd105;
     background-image: url("../images/icons/message/message-warning.svg"); }
   .messages.messages--status {
-    background-color: rgba(1, 185, 1, 0.05);
-    border-color: #017a01;
-    color: #017a01;
+    border-color: #018901;
     background-image: url("../images/icons/message/message-status.svg"); }
+  .webform-message .messages.messages--webform {
+    background-color: #4a4a4a;
+    color: #ffffff; }
+
+.webform-message {
+  margin-bottom: 2rem; }
+  .webform-message[data-message-id="webform.help.promotion_webform"] {
+    display: none !important; }
 
 /* STATUS REPORT
 ------------------- */
@@ -5614,19 +5625,13 @@ body:not(.role-administrator) .admin-list li.social-media-links {
   background: none; }
 
 .system-status-counter.system-status-counter--error {
-  background-color: rgba(192, 40, 187, 0.03);
-  border-color: #5d025a;
-  color: #5d025a; }
+  border-color: #c41294; }
 
 .system-status-counter.system-status-counter--warning {
-  background-color: rgba(252, 217, 1, 0.06);
-  border-color: #8e700b;
-  color: #8e700b; }
+  border-color: #fcd105; }
 
 .system-status-counter.system-status-counter--checked {
-  background-color: rgba(1, 185, 1, 0.05);
-  border-color: #017a01;
-  color: #017a01; }
+  border-color: #018901; }
 
 .system-status-counter__details {
   font-size: 1.6rem; }
@@ -5646,16 +5651,13 @@ body:not(.role-administrator) .admin-list li.social-media-links {
   background-image: url("../images/icons/message/message-status.svg"); }
 
 .color-error {
-  color: #5d025a;
-  background-color: rgba(192, 40, 187, 0.03); }
+  border-color: #c41294; }
 
 .color-warning {
-  color: #8e700b;
-  background-color: rgba(252, 217, 1, 0.06); }
+  border-color: #fcd105; }
 
 .color-checked {
-  color: #017a01;
-  background-color: rgba(1, 185, 1, 0.05); }
+  border-color: #018901; }
 
 @media screen and (min-width: 48em) {
   .system-status-report__status-title {
@@ -5670,21 +5672,17 @@ body:not(.role-administrator) .admin-list li.social-media-links {
 
 /* DB LOG MESSAGES
 -------------- */
-.admin-dblog .dblog-error {
-  background: rgba(192, 40, 187, 0.03);
-  color: #5d025a; }
-  .admin-dblog .dblog-error .icon {
-    background-image: url("../images/icons/message/message-error.svg");
-    background-repeat: no-repeat;
-    background-size: 16px 16px; }
+.admin-dblog .dblog-error .icon {
+  background-image: url("../images/icons/message/message-error.svg");
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+  border-left: 4px solid #c41294; }
 
-.admin-dblog .dblog-warning {
-  background: rgba(252, 217, 1, 0.06);
-  color: #8e700b; }
-  .admin-dblog .dblog-warning .icon {
-    background-image: url("../images/icons/message/message-warning.svg");
-    background-repeat: no-repeat;
-    background-size: 16px 16px; }
+.admin-dblog .dblog-warning .icon {
+  background-image: url("../images/icons/message/message-warning.svg");
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+  border-left: 4px solid #fcd105; }
 
 /* ========================
   MODALS
