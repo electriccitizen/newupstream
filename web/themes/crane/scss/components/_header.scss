@@ -28,7 +28,7 @@ header{
 		padding: $spaceMd 0 0;
 		background-color: $siteBack;
 		.region-header{
-			border-bottom: 1px solid $borderRule;
+			border-bottom: 1px solid $tabsBorder;
 			@include desk{
 				@include safeFlex(row,wrap,justify,start);
 			}

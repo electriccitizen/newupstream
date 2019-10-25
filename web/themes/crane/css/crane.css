@@ -5510,7 +5510,7 @@ header.content-header {
   padding: 3rem 0 0;
   background-color: #ffffff; }
   header.content-header .region-header {
-    border-bottom: 1px solid #026cc5; }
+    border-bottom: 1px solid #4a4a4a; }
     @media (min-width: 975px) {
       header.content-header .region-header {
         display: flex;
@@ -5709,9 +5709,9 @@ body:not(.role-administrator) .admin-list li.social-media-links {
     border-bottom: 1px solid #026cc5; }
     .entity-browser-form .eb-tabs ul li {
       border-bottom: 0;
-      border-left: 1px solid #026cc5;
-      border-top: 1px solid #026cc5;
-      border-right: 1px solid #026cc5; }
+      border-left: 1px solid #4a4a4a;
+      border-top: 1px solid #4a4a4a;
+      border-right: 1px solid #4a4a4a; }
       .entity-browser-form .eb-tabs ul li:not(:first-child) {
         margin-left: -1px; }
       .entity-browser-form .eb-tabs ul li a {
@@ -5724,9 +5724,9 @@ body:not(.role-administrator) .admin-list li.social-media-links {
           background: #b3b3b3;
           color: #121212; }
         .entity-browser-form .eb-tabs ul li a.is-active {
-          background: #dce7f3;
+          background: #fcd105;
           color: #121212;
-          border-color: #dce7f3; }
+          border-color: #fcd105; }
           .entity-browser-form .eb-tabs ul li a.is-active:hover, .entity-browser-form .eb-tabs ul li a.is-active:focus {
             background: #cccccc;
             color: #121212; }
@@ -5909,7 +5909,7 @@ body:not(.role-administrator) .admin-list li.social-media-links {
       display: block;
       margin-bottom: 0; }
   #block-tabs-2 .tabs.primary .tabs__tab {
-    border-color: #026cc5; }
+    border-color: #4a4a4a; }
     #block-tabs-2 .tabs.primary .tabs__tab.is-active {
       box-shadow: none !important;
       background-color: transparent;
@@ -5917,9 +5917,9 @@ body:not(.role-administrator) .admin-list li.social-media-links {
       #block-tabs-2 .tabs.primary .tabs__tab.is-active:not(:first-child) {
         margin: 0 0 0 -1px; }
       #block-tabs-2 .tabs.primary .tabs__tab.is-active a {
-        background: #dce7f3;
+        background: #fcd105;
         color: #121212;
-        border-color: #dce7f3; }
+        border-color: #fcd105; }
         #block-tabs-2 .tabs.primary .tabs__tab.is-active a:hover, #block-tabs-2 .tabs.primary .tabs__tab.is-active a:focus {
           background: #cccccc;
           color: #121212; }
