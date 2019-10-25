@@ -152,31 +152,40 @@ body {
 	body:not(.logged-in) &{
 		display: none;
 	}
-	&:after{
-		@include fullBack($darkGrey);
-	}
 	.tabs {
 		@include listReset;
 		@include safeFlex(row,wrap,null,null);
 		@include bleed(padding,10px);
+		border-bottom: 1px solid $link;
 		li {
 			@include onlySmall{
 				width: 100%;
 			}
+			@include tab{
+				&:first-child{
+					padding-left: 0;
+				}
+			}
 		}
 		a {
-			@include outlineButton($white);
+			@include outlineButton($link);
 			text-transform: none;
 			padding: 4px 12px;
 			display: block;
+			margin-bottom: $spaceXs;
 			&.is-active {
-				background-color: $white;
-				color: $black;
-			}
-			&:focus,&:hover {
-				background-color: $offWhite;
-				color: $black;
-				opacity: .8;
+				background-color: $link;
+				color: $white;
+				&:hover,&:focus{
+					border-color: $buttonBackHover;
+					background: $buttonBackHover;
+					color: $buttonTextHover;
+				}
+				&:active{
+					border-color: $buttonBackActive;
+					background: $buttonBackActive;
+					color: $buttonTextActive;
+				}
 			}
 		}
 	}// end tabs

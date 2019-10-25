@@ -6471,15 +6471,25 @@ body:not(.role-administrator) .admin-list li.social-media-links {
   .crane table thead th {
     background: #ededed;
     color: #121212;
-    padding: 2rem 1.5rem;
+    padding: 1.5rem 1.5rem;
     text-align: left;
     font-weight: 700;
-    font-size: 1.5rem; }
+    font-size: 1.8rem;
+    border-top: 3px solid #ededed;
+    border-bottom: 3px solid #ededed; }
     .crane table thead th > tr {
       border-bottom: none; }
     .crane table thead th a {
       color: #121212;
-      display: block; }
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-size: 15px;
+      background-position: center left;
+      background-image: url("../images/icons/admin-icons/sort.svg");
+      padding-left: 25px; }
       .crane table thead th a:after {
         content: none; }
       .crane table thead th a:hover, .crane table thead th a:focus {
@@ -6488,27 +6498,26 @@ body:not(.role-administrator) .admin-list li.social-media-links {
       .crane table thead th a .tablesort {
         background: none;
         float: none;
-        position: relative;
-        top: -3px;
-        margin-left: 5px; }
+        position: absolute;
+        top: -1px;
+        left: -18px;
+        margin-left: 5px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        width: 18px;
+        height: 18px; }
         .crane table thead th a .tablesort.tablesort--desc {
-          width: 0;
-          height: 0;
-          transform: rotate(0.05deg);
-          border-right: 4px double rgba(0, 0, 0, 0);
-          border-left: 4px double rgba(0, 0, 0, 0);
-          border-top: 5px solid #121212; }
+          background-image: url("../images/icons/admin-icons/arrow-down-blue.svg"); }
         .crane table thead th a .tablesort.tablesort--asc {
-          width: 0;
-          height: 0;
-          transform: rotate(0.05deg);
-          border-right: 4px double rgba(0, 0, 0, 0);
-          border-left: 4px double rgba(0, 0, 0, 0);
-          border-bottom: 5px solid #121212; }
+          background-image: url("../images/icons/admin-icons/arrow-up-blue.svg"); }
     .crane table thead th.is-active {
-      background: whitesmoke; }
-      .crane table thead th.is-active > a:hover, .crane table thead th.is-active > a:focus {
-        color: #1d5a9f; }
+      background: whitesmoke;
+      border-top-color: whitesmoke;
+      border-bottom-color: #026cc5; }
+      .crane table thead th.is-active > a {
+        color: #026cc5;
+        background-image: none; }
     .crane table thead th:first-child {
       padding-left: 3rem; }
     .crane table thead th:last-child {
