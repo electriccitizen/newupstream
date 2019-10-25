@@ -106,7 +106,8 @@
 	li{
 		float: none;
 		&.is-active{
-			a.is-active{
+			a{
+				border: 0;
 				&:hover,&:focus{
 					background: lighten($midGrey,5%);
 				}
@@ -116,8 +117,9 @@
 	a{
 		border-radius: 0;
 		line-height: 1;
-		padding: 2px 7px;
+		padding: 2px 10px;
 		min-height: 24px;
+		min-width: 100px;
 		@include safeFlex(row,nowrap,center,center);
 		span.icon{
 			top: 0px;
@@ -128,6 +130,7 @@
 		border: 1px solid $borderRule;
 		li{
 			background: $siteBack;
+			padding: 4px 10px;
 			&:first-child{
 				border-radius: 0;
 			}
