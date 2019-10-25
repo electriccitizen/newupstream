@@ -6309,7 +6309,7 @@ body:not(.role-administrator) .admin-list li.social-media-links {
           margin-bottom: 0.5rem; }
         .field--widget-paragraphs .paragraph--view-mode--preview .field--name-field-section-widgets > .field__items > .field__item .field__label {
           color: #4a4a4a; }
-  .field--widget-paragraphs .paragraph--view-mode--preview a {
+  .field--widget-paragraphs .paragraph--view-mode--preview a:not(.leave-live) {
     color: #121212;
     pointer-events: none; }
   .field--widget-paragraphs .paragraph--view-mode--preview img {

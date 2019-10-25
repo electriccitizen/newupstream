@@ -39,10 +39,11 @@
 {% extends "paragraph.html.twig" %}
 
 {% block content %}
-	<div class="field field--type-form field--label-inline">
-    <div class="field__label">Form</div>
+	{% set nodeDestination = '?destination=/node/' ~ nodeId ~ '/edit' %}
+	<div class="field field--name-field-block field--label-inline">
+		<div class="field__label">Block</div>
     <div class="field__item">
-			{{- content.field_form['#items'].0.target_id|title|replace('_',' ') -}}
+			{{- content.field_block.0['#plain_text'] }} | <a class="leave-live" href="/block/{{ content.field_block['#items'].0.target_id ~ nodeDestination }}">Edit block</a> (This block must be edited in the custom block library.)
 		</div>
 	</div>
 {% endblock %}

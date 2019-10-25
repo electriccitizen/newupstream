@@ -265,7 +265,7 @@
 		}//end field items
 	}//end section widgets
 
-	a{
+	a:not(.leave-live){
 		color: $baseText;
 		pointer-events: none;
 	}
