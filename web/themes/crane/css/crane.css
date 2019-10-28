@@ -5014,18 +5014,25 @@ a, .link {
   .js-form-type-textfield input::-webkit-input-placeholder, .js-form-type-email input::-webkit-input-placeholder, .js-form-type-password input::-webkit-input-placeholder, .js-form-type-tel input::-webkit-input-placeholder, .js-form-type-number input::-webkit-input-placeholder, .js-form-type-search input::-webkit-input-placeholder, .js-form-type-entity-autocomplete input::-webkit-input-placeholder, .node-form .js-form-type-entity-autocomplete input::-webkit-input-placeholder, .node-confirm-form .js-form-type-entity-autocomplete input::-webkit-input-placeholder {
     opacity: 0.4;
     color: #121212; }
-  .js-form-type-textfield input:focus::-webkit-placeholder, .js-form-type-email input:focus::-webkit-placeholder, .js-form-type-password input:focus::-webkit-placeholder, .js-form-type-tel input:focus::-webkit-placeholder, .js-form-type-number input:focus::-webkit-placeholder, .js-form-type-search input:focus::-webkit-placeholder, .js-form-type-entity-autocomplete input:focus::-webkit-placeholder {
-    opacity: 0.2;
-    color: #121212; }
-  .js-form-type-textfield input:focus::-moz-placeholder, .js-form-type-email input:focus::-moz-placeholder, .js-form-type-password input:focus::-moz-placeholder, .js-form-type-tel input:focus::-moz-placeholder, .js-form-type-number input:focus::-moz-placeholder, .js-form-type-search input:focus::-moz-placeholder, .js-form-type-entity-autocomplete input:focus::-moz-placeholder {
-    opacity: 0.2;
-    color: #121212; }
-  .js-form-type-textfield input:focus:-ms-input-placeholder, .js-form-type-email input:focus:-ms-input-placeholder, .js-form-type-password input:focus:-ms-input-placeholder, .js-form-type-tel input:focus:-ms-input-placeholder, .js-form-type-number input:focus:-ms-input-placeholder, .js-form-type-search input:focus:-ms-input-placeholder, .js-form-type-entity-autocomplete input:focus:-ms-input-placeholder {
-    opacity: 0.2;
-    color: #121212; }
-  .js-form-type-textfield input:focus::-webkit-input-placeholder, .js-form-type-email input:focus::-webkit-input-placeholder, .js-form-type-password input:focus::-webkit-input-placeholder, .js-form-type-tel input:focus::-webkit-input-placeholder, .js-form-type-number input:focus::-webkit-input-placeholder, .js-form-type-search input:focus::-webkit-input-placeholder, .js-form-type-entity-autocomplete input:focus::-webkit-input-placeholder {
-    opacity: 0.2;
-    color: #121212; }
+  .js-form-type-textfield input:hover, .js-form-type-email input:hover, .js-form-type-password input:hover, .js-form-type-tel input:hover, .js-form-type-number input:hover, .js-form-type-search input:hover, .js-form-type-entity-autocomplete input:hover {
+    border-color: #026cc5;
+    box-shadow: inset 0 0 0 1px #026cc5; }
+  .js-form-type-textfield input:focus, .js-form-type-email input:focus, .js-form-type-password input:focus, .js-form-type-tel input:focus, .js-form-type-number input:focus, .js-form-type-search input:focus, .js-form-type-entity-autocomplete input:focus {
+    outline: none;
+    box-shadow: inset 0 0 0 1px #121212;
+    border-color: #121212; }
+    .js-form-type-textfield input:focus::-webkit-placeholder, .js-form-type-email input:focus::-webkit-placeholder, .js-form-type-password input:focus::-webkit-placeholder, .js-form-type-tel input:focus::-webkit-placeholder, .js-form-type-number input:focus::-webkit-placeholder, .js-form-type-search input:focus::-webkit-placeholder, .js-form-type-entity-autocomplete input:focus::-webkit-placeholder {
+      opacity: 0.2;
+      color: #121212; }
+    .js-form-type-textfield input:focus::-moz-placeholder, .js-form-type-email input:focus::-moz-placeholder, .js-form-type-password input:focus::-moz-placeholder, .js-form-type-tel input:focus::-moz-placeholder, .js-form-type-number input:focus::-moz-placeholder, .js-form-type-search input:focus::-moz-placeholder, .js-form-type-entity-autocomplete input:focus::-moz-placeholder {
+      opacity: 0.2;
+      color: #121212; }
+    .js-form-type-textfield input:focus:-ms-input-placeholder, .js-form-type-email input:focus:-ms-input-placeholder, .js-form-type-password input:focus:-ms-input-placeholder, .js-form-type-tel input:focus:-ms-input-placeholder, .js-form-type-number input:focus:-ms-input-placeholder, .js-form-type-search input:focus:-ms-input-placeholder, .js-form-type-entity-autocomplete input:focus:-ms-input-placeholder {
+      opacity: 0.2;
+      color: #121212; }
+    .js-form-type-textfield input:focus::-webkit-input-placeholder, .js-form-type-email input:focus::-webkit-input-placeholder, .js-form-type-password input:focus::-webkit-input-placeholder, .js-form-type-tel input:focus::-webkit-input-placeholder, .js-form-type-number input:focus::-webkit-input-placeholder, .js-form-type-search input:focus::-webkit-input-placeholder, .js-form-type-entity-autocomplete input:focus::-webkit-input-placeholder {
+      opacity: 0.2;
+      color: #121212; }
 
 .js-form-type-number input {
   max-width: 150px; }
@@ -5084,18 +5091,28 @@ a, .link {
   .js-form-type-textarea textarea::-webkit-input-placeholder {
     opacity: 0.4;
     color: #121212; }
-  .js-form-type-textarea textarea:focus::-webkit-placeholder {
-    opacity: 0.2;
-    color: #121212; }
-  .js-form-type-textarea textarea:focus::-moz-placeholder {
-    opacity: 0.2;
-    color: #121212; }
-  .js-form-type-textarea textarea:focus:-ms-input-placeholder {
-    opacity: 0.2;
-    color: #121212; }
-  .js-form-type-textarea textarea:focus::-webkit-input-placeholder {
-    opacity: 0.2;
-    color: #121212; }
+  .js-form-type-textarea textarea:hover {
+    border-color: #026cc5;
+    box-shadow: inset 0 0 0 1px #026cc5; }
+  .js-form-type-textarea textarea:focus {
+    outline: none;
+    box-shadow: inset 0 0 0 1px #121212;
+    border-color: #121212; }
+    .js-form-type-textarea textarea:focus::-webkit-placeholder {
+      opacity: 0.2;
+      color: #121212; }
+    .js-form-type-textarea textarea:focus::-moz-placeholder {
+      opacity: 0.2;
+      color: #121212; }
+    .js-form-type-textarea textarea:focus:-ms-input-placeholder {
+      opacity: 0.2;
+      color: #121212; }
+    .js-form-type-textarea textarea:focus::-webkit-input-placeholder {
+      opacity: 0.2;
+      color: #121212; }
+
+tr.odd .text-format-wrapper .js-form-type-textarea, tr.even .text-format-wrapper .js-form-type-textarea {
+  margin-bottom: 0; }
 
 /* SELECTS
 ------------- */
@@ -5125,6 +5142,10 @@ optgroup:empty {
   .crane .select2-container--default .select2-selection--single .select2-selection__choice__remove {
     position: relative;
     z-index: 999; }
+  .crane .select2-container--default .select2-selection--single:hover {
+    box-shadow: inset 0 0 0 1px #026cc5; }
+  .crane .select2-container--default .select2-selection--single[aria-expanded="true"] {
+    box-shadow: inset 0 0 0 1px #121212; }
   .crane .select2-container--default .select2-selection--single .select2-selection__rendered {
     padding: 3.5px 32px 4px 10px;
     color: #676767;
@@ -5151,6 +5172,10 @@ optgroup:empty {
   .crane .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
     position: relative;
     z-index: 999; }
+  .crane .select2-container--default .select2-selection--multiple:hover {
+    box-shadow: inset 0 0 0 1px #026cc5; }
+  .crane .select2-container--default .select2-selection--multiple[aria-expanded="true"] {
+    box-shadow: inset 0 0 0 1px #121212; }
   .crane .select2-container--default .select2-selection--multiple .select2-search--inline {
     position: relative;
     float: none;
@@ -5182,18 +5207,20 @@ optgroup:empty {
       .crane .select2-container--default .select2-selection--multiple .select2-search--inline input.select2-search__field::-webkit-input-placeholder {
         opacity: 0.4;
         color: #121212; }
-      .crane .select2-container--default .select2-selection--multiple .select2-search--inline input.select2-search__field:focus::-webkit-placeholder {
-        opacity: 0.2;
-        color: #121212; }
-      .crane .select2-container--default .select2-selection--multiple .select2-search--inline input.select2-search__field:focus::-moz-placeholder {
-        opacity: 0.2;
-        color: #121212; }
-      .crane .select2-container--default .select2-selection--multiple .select2-search--inline input.select2-search__field:focus:-ms-input-placeholder {
-        opacity: 0.2;
-        color: #121212; }
-      .crane .select2-container--default .select2-selection--multiple .select2-search--inline input.select2-search__field:focus::-webkit-input-placeholder {
-        opacity: 0.2;
-        color: #121212; }
+      .crane .select2-container--default .select2-selection--multiple .select2-search--inline input.select2-search__field:focus {
+        outline: none; }
+        .crane .select2-container--default .select2-selection--multiple .select2-search--inline input.select2-search__field:focus::-webkit-placeholder {
+          opacity: 0.2;
+          color: #121212; }
+        .crane .select2-container--default .select2-selection--multiple .select2-search--inline input.select2-search__field:focus::-moz-placeholder {
+          opacity: 0.2;
+          color: #121212; }
+        .crane .select2-container--default .select2-selection--multiple .select2-search--inline input.select2-search__field:focus:-ms-input-placeholder {
+          opacity: 0.2;
+          color: #121212; }
+        .crane .select2-container--default .select2-selection--multiple .select2-search--inline input.select2-search__field:focus::-webkit-input-placeholder {
+          opacity: 0.2;
+          color: #121212; }
   .crane .select2-container--default .select2-selection--multiple .select2-selection__choice {
     border-radius: 0;
     background: #ededed;
@@ -5217,6 +5244,9 @@ optgroup:empty {
   border-radius: 0;
   border-top: 0;
   padding: 0; }
+  .select2-container .select2-dropdown .select2-search__field {
+    outline: none;
+    border-color: #121212; }
 
 .select2-container--default .select2-results__option {
   font-size: 1.3rem;
@@ -5357,6 +5387,25 @@ select:hover, select:focus {
 .form-drawer {
   display: none; }
 
+/* FIELDSETS & CKE Containers
+------------------- */
+fieldset, .form-textarea-wrapper .cke_chrome {
+  border-color: #026cc5; }
+  fieldset > .cke_inner, .form-textarea-wrapper .cke_chrome > .cke_inner {
+    border: 1px solid transparent; }
+  fieldset:hover, .form-textarea-wrapper .cke_chrome:hover {
+    box-shadow: inset 0 0 0 1px #026cc5;
+    border-color: #026cc5;
+    transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -webkit-transform: translateZ(0); }
+    fieldset:hover > .cke_inner, .form-textarea-wrapper .cke_chrome:hover > .cke_inner {
+      border-color: #026cc5; }
+
+.text-format-wrapper .filter-wrapper {
+  display: none; }
+
 /* ==============
 	 MEDIA
 ================== */
@@ -5477,6 +5526,19 @@ span.file {
     color: #676767; }
   .seven-details__summary.form-required:after {
     content: none; }
+
+/* ENYITY META
+----------------- */
+.entity-meta {
+  border-right-color: #026cc5;
+  border-left-color: #026cc5; }
+  .entity-meta .entity-meta__header {
+    border-top-color: #026cc5;
+    border-bottom-color: #026cc5; }
+  .entity-meta .seven-details {
+    border-bottom-color: #026cc5; }
+    .entity-meta .seven-details .seven-details {
+      border-bottom: 0; }
 
 /* INLINE CONTAINERS
 -------------------- */

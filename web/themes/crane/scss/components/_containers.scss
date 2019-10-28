@@ -45,6 +45,26 @@
 	}
 }
 
+/* ENYITY META
+----------------- */
+.entity-meta{
+	border-right-color: $borderRule;
+	border-left-color: $borderRule;
+	&:hover{
+		
+	}
+	.entity-meta__header{
+		border-top-color: $borderRule;
+		border-bottom-color: $borderRule;
+	}
+	.seven-details{
+		border-bottom-color: $borderRule;
+		.seven-details{
+			border-bottom: 0;
+		}
+	}
+}//end entity-meta
+
 /* INLINE CONTAINERS
 -------------------- */
 .container-inline{

@@ -52,8 +52,15 @@
 	min-height: 38px;
 	max-width: 300px;
 	@include placeholder;
+	&:hover{
+		border-color: $formElementBorderHover;
+		box-shadow: inset 0 0 0 1px $formElementBorderHover;
+	}
 	&:focus{
 		@include placeholderFocus;
+		outline: none;
+		box-shadow: inset 0 0 0 1px $formElementBorderFocus;
+		border-color: $formElementBorderFocus;
 	}
 }
 
@@ -129,6 +136,13 @@
 		@include textInput;
 	}
 }
+.text-format-wrapper{
+	.js-form-type-textarea{
+		tr.odd &,tr.even &{
+			margin-bottom: 0;
+		}
+	}
+}
 .js-form-type-entity-autocomplete{
 	@extend .js-form-type-textfield;
 }
@@ -164,6 +178,12 @@ optgroup:empty{
 .crane .select2-container--default{
 	.select2-selection--single{
 		@include selectInput;
+		&:hover{
+			box-shadow: inset 0 0 0 1px $formElementBorderHover;
+		}
+		&[aria-expanded="true"]{
+			box-shadow: inset 0 0 0 1px $formElementBorderFocus;
+		}
 		.select2-selection__rendered{
 			padding: 3.5px 32px 4px 10px;
 			color: $midGrey;
@@ -181,6 +201,12 @@ optgroup:empty{
 	}//end single
 	.select2-selection--multiple{
 		@include selectInput;
+		&:hover{
+			box-shadow: inset 0 0 0 1px $formElementBorderHover;
+		}
+		&[aria-expanded="true"]{
+			box-shadow: inset 0 0 0 1px $formElementBorderFocus;
+		}
 		.select2-search--inline{
 			position: relative;
 			float: none;
@@ -199,6 +225,7 @@ optgroup:empty{
 				@include placeholder;
 				&:focus{
 					@include placeholderFocus;
+					outline: none;
 				}
 			}
 		}//end search inline
@@ -232,6 +259,10 @@ optgroup:empty{
 	border-radius: 0;
 	border-top: 0;
 	padding: 0;
+	.select2-search__field{
+		outline: none;
+		border-color: $formElementBorderFocus;
+	}
 }
 .select2-container--default .select2-results__option{
 	font-size: 1.3rem;
@@ -359,4 +390,26 @@ select:hover,select:focus{
 }
 .form-drawer{
 	display: none;
+}
+
+/* FIELDSETS & CKE Containers
+------------------- */
+fieldset,.form-textarea-wrapper .cke_chrome{
+	border-color: $borderRule;
+	& > .cke_inner{
+		border: 1px solid transparent;
+	}
+	&:hover{
+		box-shadow: inset 0 0 0 1px $formElementBorderHover;
+		border-color: $formElementBorderHover;
+		@include transAll(.3s);
+		& > .cke_inner{
+			border-color: $formElementBorderHover;
+		}
+	}
+}//end fieldsets and cke
+.text-format-wrapper{
+	.filter-wrapper{
+		display: none;
+	}
 }
