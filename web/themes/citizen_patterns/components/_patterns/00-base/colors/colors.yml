@@ -27,6 +27,8 @@ items:
     value: '#bf0e0e'
   - name: $pink
     value: '#f8e8f1'
+  - name: $gold
+    value: '#fcd105'
   - name: $fuchsia
     value: '#c028bb'
   - name: $purple

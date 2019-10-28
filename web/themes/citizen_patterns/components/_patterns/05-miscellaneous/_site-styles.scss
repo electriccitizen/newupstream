@@ -155,39 +155,49 @@ body {
 	.tabs {
 		@include listReset;
 		@include safeFlex(row,wrap,null,null);
-		@include bleed(padding,10px);
-		border-bottom: 1px solid $link;
+		border-bottom: 1px solid $borderRule;
 		li {
 			@include onlySmall{
 				width: 100%;
 			}
 			@include tab{
-				&:first-child{
-					padding-left: 0;
+				&:not(:first-child){
+					margin-left: -1px;
 				}
 			}
 		}
 		a {
-			@include outlineButton($link);
 			text-transform: none;
 			padding: 4px 12px;
 			display: block;
 			margin-bottom: $spaceXs;
+			border: 1px solid $borderRule;
+			font-weight: $heavy;
+			color: $black;
+			&:hover,&:focus{
+				background: $buttonBackHover;
+				color: $buttonTextHover;
+				text-decoration: none;
+			}
+			&:active{
+				background: $buttonBackActive;
+				color: $buttonTextActive;
+			}
 			&.is-active {
-				background-color: $link;
-				color: $white;
+				background-color: $gold;
 				&:hover,&:focus{
-					border-color: $buttonBackHover;
 					background: $buttonBackHover;
 					color: $buttonTextHover;
 				}
 				&:active{
-					border-color: $buttonBackActive;
 					background: $buttonBackActive;
 					color: $buttonTextActive;
 				}
 			}
-		}
+			@include tab{
+				margin-bottom: -1px;
+			}
+		}//end a
 	}// end tabs
 }//end local tasks
 
