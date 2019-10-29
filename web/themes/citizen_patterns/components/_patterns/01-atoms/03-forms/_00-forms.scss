@@ -51,8 +51,15 @@
 	line-height: 1;
 	min-height: 44px;
 	@include placeholder;
+	&:hover{
+		border-color: $formElementBorderHover;
+		box-shadow: inset 0 0 0 1px $formElementBorderHover;
+	}
 	&:focus{
 		@include placeholderFocus;
+		outline: none;
+		box-shadow: inset 0 0 0 1px $formElementBorderFocus;
+		border-color: $formElementBorderFocus;
 	}
 }
 
@@ -82,14 +89,24 @@
 		position: relative;
 		top: 3px;
 		cursor: pointer;
-		&:hover,&:focus{
+		&:hover{
+			border-color: $checkboxHover;
+			background-color: $checkboxBackHover;
+			box-shadow: 0 0 0 1px $checkboxHover;
+		}
+		&:focus{
 			border-color: $checkboxHover;
 			background-color: $checkboxBackHover;
 		}
 		&:checked{
 			border-color: $checkboxChecked;
 			background-color: $checkboxCheckedBack;
-			&:hover,&:focus{
+			&:hover{
+				border-color: $checkboxCheckedHover;
+				background-color: $checkboxCheckedBackHover;
+				box-shadow: 0 0 0 1px $checkboxCheckedHover;
+			}
+			&:focus{
 				border-color: $checkboxCheckedHover;
 				background-color: $checkboxCheckedBackHover;
 			}

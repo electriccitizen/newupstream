@@ -48,21 +48,51 @@
 /* ENYITY META
 ----------------- */
 .entity-meta{
-	border-right-color: $borderRule;
-	border-left-color: $borderRule;
-	&:hover{
-		
-	}
+	border-right-color: $metaBorderSoft;
+	border-left-color: $metaBorderSoft;
+	box-shadow: 0 2px 4px $metaBorderSoft;
 	.entity-meta__header{
-		border-top-color: $borderRule;
-		border-bottom-color: $borderRule;
+		border-top-color: $metaBorderSoft;
+		border-bottom-color: $metaBorderHard;
 	}
 	.seven-details{
-		border-bottom-color: $borderRule;
+		border-bottom-color: $metaBorderHard;
+		.seven-details__summary{
+			position: relative;
+			&:hover,&:focus{
+				background: $iceBlue;
+			}
+		}
+		&[open] .seven-details__summary{
+			background: $siteBack;
+			box-shadow: 0 2px 4px $metaBorderSoft;
+			&:hover{
+				background: $iceBlue;
+			}
+			&:after{
+				content: '';
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 3px;
+				height: 100%;
+				width: 3px;
+				background: $gold;
+			}
+		}
 		.seven-details{
 			border-bottom: 0;
-		}
-	}
+			&#edit-field-metatags-0-basic{
+				.seven-details__summary{
+					display: none;
+				}
+				.seven-details__wrapper{
+					padding: 1em 0;
+				}
+			}
+		}//end nested details
+	}//end seven details
 }//end entity-meta
 
 /* INLINE CONTAINERS

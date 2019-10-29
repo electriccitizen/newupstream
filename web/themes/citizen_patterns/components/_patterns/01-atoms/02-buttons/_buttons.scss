@@ -18,13 +18,13 @@ $submitPadding: 0 1.5rem;
 		color: $baseText;
 		text-decoration: none;
 		&:hover,&:focus{
-			background-color: $offWhite !important;
+			background-color: $buttonTextHover !important;
 			background-image: none !important;
 			border-radius: 0 !important;
 			box-shadow: none;
 		}
 		&:active{
-			background: $lightGrey;
+			background: $buttonBackActive;
 			border-radius: 0;
 			box-shadow: none;
 		}

@@ -142,13 +142,13 @@ $buttonPadding: 1.15rem 1.5rem 1rem;
 			text-transform: none;
 		}
 		&:hover,&:focus{
-			background-color: $offWhite !important;
+			background-color: $buttonBackHover !important;
 			background-image: none !important;
 			border-radius: 0 !important;
 			box-shadow: none;
 		}
 		&:active{
-			background: $lightGrey;
+			background: $buttonBackActive;
 			border-radius: 0;
 			box-shadow: none;
 		}

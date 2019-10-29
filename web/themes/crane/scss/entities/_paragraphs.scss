@@ -151,7 +151,6 @@
 			  border: 2px solid $link;
 			  color: $darkGrey;
 			  border-radius: 0;
-			  box-shadow: 3px 3px 0 $lightGrey;
 			  float: left;
 			  background-position: 7px 4px;
 			  background-size: 22px 22px;
@@ -162,8 +161,14 @@
 			  font-weight: $heavy;
 			}
 			&:hover,&:focus{
-				border-color: $midBlue;
-  			background-color: $darkIce !important;
+				border-color: $formElementBorderHover;
+				box-shadow: inset 0 0 0 .05rem $formElementBorderHover;
+  			background-color: $offWhite !important;
+			}
+			&:active{
+				border-color: $formElementBorderFocus;
+				box-shadow: inset 0 0 0 .05rem $formElementBorderFocus;
+  			background-color: $lightGrey !important;
 			}
 		}
 		.clearfix{

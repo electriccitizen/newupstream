@@ -77,6 +77,8 @@ $searchCloseBackHover      : $black;
 /* FORMS
 --------------------- */ 
 $formElementBorder        : $borderRule;
+$formElementBorderHover   : $borderRule;
+$formElementBorderFocus   : $link;
 $placeColor               : $baseText;
 $placeFocusColor          : $placeColor;
 $validation               : $brightRed;

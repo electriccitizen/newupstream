@@ -4389,12 +4389,12 @@ a, .link {
   .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle input.form-submit, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle input.form-submit, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle input.form-submit, .js .dropbutton-multiple .dropbutton-action input.form-submit, .js .dropbutton-wrapper .dropbutton-action input.form-submit, .js .dropbutton-single .dropbutton-action input.form-submit, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle .button.form-submit, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle .button.form-submit, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle .button.form-submit, .js .dropbutton-multiple .dropbutton-action .button.form-submit, .js .dropbutton-wrapper .dropbutton-action .button.form-submit, .js .dropbutton-single .dropbutton-action .button.form-submit, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle a.form-submit, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle a.form-submit, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle a.form-submit, .js .dropbutton-multiple .dropbutton-action a.form-submit, .js .dropbutton-wrapper .dropbutton-action a.form-submit, .js .dropbutton-single .dropbutton-action a.form-submit, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle button.form-submit, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle button.form-submit, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle button.form-submit, .js .dropbutton-multiple .dropbutton-action button.form-submit, .js .dropbutton-wrapper .dropbutton-action button.form-submit, .js .dropbutton-single .dropbutton-action button.form-submit {
     text-transform: none; }
   .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle input:hover, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle input:hover, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle input:hover, .js .dropbutton-multiple .dropbutton-action input:hover, .js .dropbutton-wrapper .dropbutton-action input:hover, .js .dropbutton-single .dropbutton-action input:hover, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle input:focus, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle input:focus, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle input:focus, .js .dropbutton-multiple .dropbutton-action input:focus, .js .dropbutton-wrapper .dropbutton-action input:focus, .js .dropbutton-single .dropbutton-action input:focus, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle .button:hover, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle .button:hover, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle .button:hover, .js .dropbutton-multiple .dropbutton-action .button:hover, .js .dropbutton-wrapper .dropbutton-action .button:hover, .js .dropbutton-single .dropbutton-action .button:hover, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle .button:focus, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle .button:focus, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle .button:focus, .js .dropbutton-multiple .dropbutton-action .button:focus, .js .dropbutton-wrapper .dropbutton-action .button:focus, .js .dropbutton-single .dropbutton-action .button:focus, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle a:hover, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle a:hover, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle a:hover, .js .dropbutton-multiple .dropbutton-action a:hover, .js .dropbutton-wrapper .dropbutton-action a:hover, .js .dropbutton-single .dropbutton-action a:hover, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle a:focus, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle a:focus, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle a:focus, .js .dropbutton-multiple .dropbutton-action a:focus, .js .dropbutton-wrapper .dropbutton-action a:focus, .js .dropbutton-single .dropbutton-action a:focus, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle button:hover, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle button:hover, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle button:hover, .js .dropbutton-multiple .dropbutton-action button:hover, .js .dropbutton-wrapper .dropbutton-action button:hover, .js .dropbutton-single .dropbutton-action button:hover, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle button:focus, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle button:focus, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle button:focus, .js .dropbutton-multiple .dropbutton-action button:focus, .js .dropbutton-wrapper .dropbutton-action button:focus, .js .dropbutton-single .dropbutton-action button:focus {
-    background-color: #f6f6f6 !important;
+    background-color: #cccccc !important;
     background-image: none !important;
     border-radius: 0 !important;
     box-shadow: none; }
   .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle input:active, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle input:active, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle input:active, .js .dropbutton-multiple .dropbutton-action input:active, .js .dropbutton-wrapper .dropbutton-action input:active, .js .dropbutton-single .dropbutton-action input:active, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle .button:active, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle .button:active, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle .button:active, .js .dropbutton-multiple .dropbutton-action .button:active, .js .dropbutton-wrapper .dropbutton-action .button:active, .js .dropbutton-single .dropbutton-action .button:active, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle a:active, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle a:active, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle a:active, .js .dropbutton-multiple .dropbutton-action a:active, .js .dropbutton-wrapper .dropbutton-action a:active, .js .dropbutton-single .dropbutton-action a:active, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle button:active, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle button:active, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle button:active, .js .dropbutton-multiple .dropbutton-action button:active, .js .dropbutton-wrapper .dropbutton-action button:active, .js .dropbutton-single .dropbutton-action button:active {
-    background: #ededed;
+    background: #b3b3b3;
     border-radius: 0;
     box-shadow: none; }
 
@@ -5354,13 +5354,21 @@ select:hover, select:focus {
   position: relative;
   top: 3px;
   cursor: pointer; }
-  .js-form-type-checkbox input:hover, .js-form-type-checkbox input:focus, .js-form-type-radio input:hover, .js-form-type-radio input:focus, .select-all input:hover, .select-all input:focus {
+  .js-form-type-checkbox input:hover, .js-form-type-radio input:hover, .select-all input:hover {
+    border-color: #026cc5;
+    background-color: #ededed;
+    box-shadow: 0 0 0 1px #026cc5; }
+  .js-form-type-checkbox input:focus, .js-form-type-radio input:focus, .select-all input:focus {
     border-color: #026cc5;
     background-color: #ededed; }
   .js-form-type-checkbox input:checked, .js-form-type-radio input:checked, .select-all input:checked {
     border-color: #073b75;
     background-color: #026cc5; }
-    .js-form-type-checkbox input:checked:hover, .js-form-type-checkbox input:checked:focus, .js-form-type-radio input:checked:hover, .js-form-type-radio input:checked:focus, .select-all input:checked:hover, .select-all input:checked:focus {
+    .js-form-type-checkbox input:checked:hover, .js-form-type-radio input:checked:hover, .select-all input:checked:hover {
+      border-color: #073b75;
+      background-color: #676767;
+      box-shadow: 0 0 0 1px #073b75; }
+    .js-form-type-checkbox input:checked:focus, .js-form-type-radio input:checked:focus, .select-all input:checked:focus {
       border-color: #073b75;
       background-color: #676767; }
   .js-form-type-checkbox input[type="checkbox"]:checked, .js-form-type-radio input[type="checkbox"]:checked, .select-all input[type="checkbox"]:checked {
@@ -5389,22 +5397,40 @@ select:hover, select:focus {
 
 /* FIELDSETS & CKE Containers
 ------------------- */
-fieldset, .form-textarea-wrapper .cke_chrome {
+.text-format-wrapper .filter-wrapper {
+  display: none; }
+
+fieldset {
   border-color: #026cc5; }
-  fieldset > .cke_inner, .form-textarea-wrapper .cke_chrome > .cke_inner {
-    border: 1px solid transparent; }
-  fieldset:hover, .form-textarea-wrapper .cke_chrome:hover {
+  fieldset:hover {
     box-shadow: inset 0 0 0 1px #026cc5;
     border-color: #026cc5;
     transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
     -webkit-transform: translateZ(0); }
-    fieldset:hover > .cke_inner, .form-textarea-wrapper .cke_chrome:hover > .cke_inner {
-      border-color: #026cc5; }
+  fieldset.ief-form {
+    box-shadow: inset 0 0 0 1px #121212;
+    border-color: #121212; }
 
-.text-format-wrapper .filter-wrapper {
-  display: none; }
+.form-textarea-wrapper .cke_chrome {
+  border-color: #026cc5; }
+  .form-textarea-wrapper .cke_chrome > .cke_inner {
+    border: 1px solid transparent; }
+  .form-textarea-wrapper .cke_chrome:hover {
+    box-shadow: inset 0 0 0 1px #026cc5;
+    border-color: #026cc5;
+    transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -webkit-transform: translateZ(0); }
+    .form-textarea-wrapper .cke_chrome:hover > .cke_inner {
+      border-color: #026cc5; }
+  .form-textarea-wrapper .cke_chrome.cke_focus {
+    border-color: #121212;
+    box-shadow: inset 0 0 0 1px #121212; }
+    .form-textarea-wrapper .cke_chrome.cke_focus > .cke_inner {
+      border-color: #121212; }
 
 /* ==============
 	 MEDIA
@@ -5530,15 +5556,39 @@ span.file {
 /* ENYITY META
 ----------------- */
 .entity-meta {
-  border-right-color: #026cc5;
-  border-left-color: #026cc5; }
+  border-right-color: rgba(35, 35, 35, 0.1);
+  border-left-color: rgba(35, 35, 35, 0.1);
+  box-shadow: 0 2px 4px rgba(35, 35, 35, 0.1); }
   .entity-meta .entity-meta__header {
-    border-top-color: #026cc5;
-    border-bottom-color: #026cc5; }
+    border-top-color: rgba(35, 35, 35, 0.1);
+    border-bottom-color: rgba(35, 35, 35, 0.3); }
   .entity-meta .seven-details {
-    border-bottom-color: #026cc5; }
+    border-bottom-color: rgba(35, 35, 35, 0.3); }
+    .entity-meta .seven-details .seven-details__summary {
+      position: relative; }
+      .entity-meta .seven-details .seven-details__summary:hover, .entity-meta .seven-details .seven-details__summary:focus {
+        background: #f2f9fb; }
+    .entity-meta .seven-details[open] .seven-details__summary {
+      background: #ffffff;
+      box-shadow: 0 2px 4px rgba(35, 35, 35, 0.1); }
+      .entity-meta .seven-details[open] .seven-details__summary:hover {
+        background: #f2f9fb; }
+      .entity-meta .seven-details[open] .seven-details__summary:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 3px;
+        height: 100%;
+        width: 3px;
+        background: #fcd105; }
     .entity-meta .seven-details .seven-details {
       border-bottom: 0; }
+      .entity-meta .seven-details .seven-details#edit-field-metatags-0-basic .seven-details__summary {
+        display: none; }
+      .entity-meta .seven-details .seven-details#edit-field-metatags-0-basic .seven-details__wrapper {
+        padding: 1em 0; }
 
 /* INLINE CONTAINERS
 -------------------- */
@@ -5616,6 +5666,8 @@ header.system-admin_content #block-crane-content, header.node-add #block-crane-c
       left: 0;
       top: 1px;
       font-size: 12px; }
+    .item-list ul li.ui-tabs-tab:before {
+      content: none; }
 
 .admin-list li:first-child {
   border-top: 0; }
@@ -5829,25 +5881,31 @@ body:not(.role-administrator) .admin-list li.social-media-links {
       .eb-media .views-col {
         width: calc(25% - 20px) !important; } }
     .eb-media .views-col:hover {
-      opacity: .6; }
-    .eb-media .views-col.selected .views-field-thumbnail__target-id {
-      position: relative; }
-      .eb-media .views-col.selected .views-field-thumbnail__target-id:before {
-        content: '';
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(35, 35, 35, 0.7);
-        background-image: url("../images/icons/admin-icons/checkmark.svg");
-        background-repeat: no-repeat;
-        background-size: 60px 60px;
-        background-position: center; }
-  .eb-media .views-field-thumbnail__target-id img {
-    width: 100%;
-    display: block; }
+      box-shadow: 0 0 1px 2px #026cc5; }
+      .eb-media .views-col:hover .views-field-thumbnail__target-id:before {
+        background-color: rgba(255, 255, 255, 0.3); }
+    .eb-media .views-col.selected .views-field-thumbnail__target-id:before {
+      background-color: rgba(35, 35, 35, 0.7);
+      background-image: url("../images/icons/admin-icons/checkmark.svg");
+      background-repeat: no-repeat;
+      background-size: 60px 60px;
+      background-position: center; }
+    .eb-media .views-col.selected:hover .views-field-thumbnail__target-id:before {
+      background-color: rgba(255, 255, 255, 0.3); }
+  .eb-media .views-field-thumbnail__target-id {
+    position: relative; }
+    .eb-media .views-field-thumbnail__target-id:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: transparent; }
+    .eb-media .views-field-thumbnail__target-id img {
+      width: 100%;
+      display: block; }
   .eb-media .views-field-entity-browser-select {
     position: absolute;
     top: 0;
@@ -6306,7 +6364,6 @@ body:not(.role-administrator) .admin-list li.social-media-links {
   border: 2px solid #026cc5;
   color: #4a4a4a;
   border-radius: 0;
-  box-shadow: 3px 3px 0 #ededed;
   float: left;
   background-position: 7px 4px;
   background-size: 22px 22px;
@@ -6317,8 +6374,14 @@ body:not(.role-administrator) .admin-list li.social-media-links {
   font-weight: 700; }
 
 .field--widget-paragraphs .paragraphs-tabs-wrapper input.button.field-add-more-submit:hover, .field--widget-paragraphs .paragraphs-tabs-wrapper input.button.field-add-more-submit:focus {
-  border-color: #1d5a9f;
-  background-color: #e4f5fc !important; }
+  border-color: #026cc5;
+  box-shadow: inset 0 0 0 0.05rem #026cc5;
+  background-color: #f6f6f6 !important; }
+
+.field--widget-paragraphs .paragraphs-tabs-wrapper input.button.field-add-more-submit:active {
+  border-color: #121212;
+  box-shadow: inset 0 0 0 0.05rem #121212;
+  background-color: #ededed !important; }
 
 .field--widget-paragraphs .paragraphs-tabs-wrapper .clearfix {
   margin-bottom: 2em; }
