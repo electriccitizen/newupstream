@@ -26,7 +26,7 @@ header{
 	&.content-header{
 		position: relative;
 		padding: $spaceMd 0 0;
-		background-color: $siteBack;
+		background-color: $offWhite;
 		.region-header{
 			border-bottom: 1px solid $tabsBorder;
 			@include desk{

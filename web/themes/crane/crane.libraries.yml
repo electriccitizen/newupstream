@@ -12,6 +12,15 @@ global:
     - core/drupalSettings
     - core/jquery
     - core/jquery.once
+details:
+  version: 1.0
+  js:
+    js/details.js: {}
+  dependencies:
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery
+    - core/jquery.once
 fonts:
   version: 1.0
   css:

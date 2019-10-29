@@ -25,7 +25,12 @@
 	& > .seven-details__summary{
 		color: $darkBlue;
 		&:hover,&:focus{
-			color: $hoverLink;
+			color: $black;
+		}
+		&:before{
+			-webkit-transform: rotate(90deg);
+		  -ms-transform: rotate(90deg);
+		  transform: rotate(90deg);
 		}
 	}
 	.entity-meta &{
@@ -35,15 +40,44 @@
 .seven-details__summary{
 	font-family: $bodyFont;
 	color: $darkBlue;
+	list-style: none;
+	position: relative;
+	padding-left: 40px;
+	&::-webkit-details-marker {
+  	display: none;
+	}
 	&:hover,&:focus{
-		color: $hoverLink;
+		color: $black;
+		&:before{
+			background-image: url('../images/icons/admin-icons/caret-right-black.svg');
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: contain;
+		}
+	}
+	&:before{
+		content: '';
+		display: block;
+		width: 16px;
+		height: 16px;
+		position: absolute;
+		top: 15px;
+		left: 14px;
+		background-image: url('../images/icons/admin-icons/caret-right-blue-dark.svg');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+		-webkit-transition: -webkit-transform 0.15s ease-in 0s;
+	  transition: -webkit-transform 0.15s ease-in 0s;
+	  transition: transform 0.15s ease-in 0s;
+	  transition: transform 0.15s ease-in 0s, -webkit-transform 0.15s ease-in 0s;
 	}
 	&.form-required{
 		&:after{
 			content: none;
 		}
 	}
-}
+}//end seven details summary
 
 /* ENYITY META
 ----------------- */
@@ -57,30 +91,37 @@
 	}
 	.seven-details{
 		border-bottom-color: $metaBorderHard;
-		.seven-details__summary{
-			position: relative;
+		& > .seven-details__summary{
+			padding: 1.5rem 1.5rem 1.5rem 4rem;
 			&:hover,&:focus{
 				background: $iceBlue;
 			}
 		}
-		&[open] .seven-details__summary{
-			background: $siteBack;
-			box-shadow: 0 2px 4px $metaBorderSoft;
-			&:hover{
-				background: $iceBlue;
+		&[open]{
+			.seven-details__summary{
+				background: $siteBack;
+				box-shadow: 0 2px 4px $metaBorderSoft;
+				&:before{
+					-webkit-transform: rotate(90deg);
+				  -ms-transform: rotate(90deg);
+				  transform: rotate(90deg);
+				}
+				&:hover{
+					background: $iceBlue;
+				}
+				&:after{
+					content: '';
+					display: block;
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 3px;
+					height: 100%;
+					width: 3px;
+					background: $gold;
+				}
 			}
-			&:after{
-				content: '';
-				display: block;
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 3px;
-				height: 100%;
-				width: 3px;
-				background: $gold;
-			}
-		}
+		}//end open
 		.seven-details{
 			border-bottom: 0;
 			&#edit-field-metatags-0-basic{
@@ -112,3 +153,18 @@
 		display: none;
 	}
 }
+
+/* PANELS
+---------------- */
+.panel{
+	border: none;
+	background: $siteBack;
+	padding: 0;
+	margin-bottom: $spaceLg;
+	.panel__title{
+		padding: 1rem 1.5rem;
+		background: $blueGrey;
+		color: $darkBlue;
+	}
+}//end panel
+

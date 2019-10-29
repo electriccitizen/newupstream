@@ -114,6 +114,10 @@
 				color: $evenRowText;
 			}
 		}
+		&:hover{
+			background: $iceBlue;
+			@include transAll(.3s);
+		}
 		th{
 			background: $tableHeaderBack;
 			color: $tableHeaderText;
@@ -161,6 +165,7 @@
 	.package-listing{
 		.seven-details__summary{
 			background: $blueGrey;
+			padding-left: 40px;
 		}
 	}
 }//end system-modules

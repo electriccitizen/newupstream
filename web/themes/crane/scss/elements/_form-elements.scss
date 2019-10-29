@@ -276,10 +276,10 @@ optgroup:empty{
 }
 select{
 	border-radius: 0;
-	background: url('../images/icons/admin-icons/caret-down.svg') no-repeat 99% 63%, #fff;
+	background: url('../images/icons/admin-icons/triangle-down.svg') no-repeat 99% 63%, #fff;
 }
 select:hover,select:focus{
-	background: url('../images/icons/admin-icons/caret-down.svg') no-repeat 99% 63%, #ececec;
+	background: url('../images/icons/admin-icons/triangle-down-down.svg') no-repeat 99% 63%, #ececec;
 }
 
 .crane .draggable:not([class*="paragraph"]) td .select2-container--default{

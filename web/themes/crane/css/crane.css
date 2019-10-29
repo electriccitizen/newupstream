@@ -5260,10 +5260,10 @@ optgroup:empty {
 
 select {
   border-radius: 0;
-  background: url("../images/icons/admin-icons/caret-down.svg") no-repeat 99% 63%, #fff; }
+  background: url("../images/icons/admin-icons/triangle-down.svg") no-repeat 99% 63%, #fff; }
 
 select:hover, select:focus {
-  background: url("../images/icons/admin-icons/caret-down.svg") no-repeat 99% 63%, #ececec; }
+  background: url("../images/icons/admin-icons/triangle-down-down.svg") no-repeat 99% 63%, #ececec; }
 
 .crane .draggable:not([class*="paragraph"]) td .select2-container--default .select2-selection--single .select2-selection__rendered {
   padding: 0px 32px 0px 10px; }
@@ -5506,6 +5506,18 @@ span.file {
   span.file a:before {
     background-image: url("../images/icons/files/generic.svg"); }
 
+/* CUSTOM SVG ICONS
+----------------------- */
+.crane-icon {
+  width: 50px;
+  height: 50px;
+  color: #026cc5; }
+  .crane-icon svg {
+    width: 50px;
+    height: 50px;
+    fill: currentColor;
+    stroke: currentColor; }
+
 /* ==============
 	 BLOCKS
 ================== */
@@ -5540,16 +5552,41 @@ span.file {
 .seven-details[open] > .seven-details__summary {
   color: #073b75; }
   .seven-details[open] > .seven-details__summary:hover, .seven-details[open] > .seven-details__summary:focus {
-    color: #676767; }
+    color: #121212; }
+  .seven-details[open] > .seven-details__summary:before {
+    transform: rotate(90deg); }
 
 .entity-meta .seven-details[open] {
   background: #f6f6f6; }
 
 .seven-details__summary {
   font-family: "PT Sans", sans-serif;
-  color: #073b75; }
+  color: #073b75;
+  list-style: none;
+  position: relative;
+  padding-left: 40px; }
+  .seven-details__summary::-webkit-details-marker {
+    display: none; }
   .seven-details__summary:hover, .seven-details__summary:focus {
-    color: #676767; }
+    color: #121212; }
+    .seven-details__summary:hover:before, .seven-details__summary:focus:before {
+      background-image: url("../images/icons/admin-icons/caret-right-black.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain; }
+  .seven-details__summary:before {
+    content: '';
+    display: block;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 15px;
+    left: 14px;
+    background-image: url("../images/icons/admin-icons/caret-right-blue-dark.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transition: transform 0.15s ease-in 0s; }
   .seven-details__summary.form-required:after {
     content: none; }
 
@@ -5564,13 +5601,15 @@ span.file {
     border-bottom-color: rgba(35, 35, 35, 0.3); }
   .entity-meta .seven-details {
     border-bottom-color: rgba(35, 35, 35, 0.3); }
-    .entity-meta .seven-details .seven-details__summary {
-      position: relative; }
-      .entity-meta .seven-details .seven-details__summary:hover, .entity-meta .seven-details .seven-details__summary:focus {
+    .entity-meta .seven-details > .seven-details__summary {
+      padding: 1.5rem 1.5rem 1.5rem 4rem; }
+      .entity-meta .seven-details > .seven-details__summary:hover, .entity-meta .seven-details > .seven-details__summary:focus {
         background: #f2f9fb; }
     .entity-meta .seven-details[open] .seven-details__summary {
       background: #ffffff;
       box-shadow: 0 2px 4px rgba(35, 35, 35, 0.1); }
+      .entity-meta .seven-details[open] .seven-details__summary:before {
+        transform: rotate(90deg); }
       .entity-meta .seven-details[open] .seven-details__summary:hover {
         background: #f2f9fb; }
       .entity-meta .seven-details[open] .seven-details__summary:after {
@@ -5602,6 +5641,18 @@ span.file {
 #drupal-modal .captcha-admin-links {
   display: none; }
 
+/* PANELS
+---------------- */
+.panel {
+  border: none;
+  background: #ffffff;
+  padding: 0;
+  margin-bottom: 4rem; }
+  .panel .panel__title {
+    padding: 1rem 1.5rem;
+    background: #dce7f3;
+    color: #073b75; }
+
 /* ========================
   HEADER
 ========================== */
@@ -5620,7 +5671,7 @@ header .shortcut-action--remove .shortcut-action__icon {
 header.content-header {
   position: relative;
   padding: 3rem 0 0;
-  background-color: #ffffff; }
+  background-color: #f6f6f6; }
   header.content-header .region-header {
     border-bottom: 1px solid #4a4a4a; }
     @media (min-width: 975px) {
@@ -5673,10 +5724,18 @@ header.system-admin_content #block-crane-content, header.node-add #block-crane-c
   border-top: 0; }
 
 .admin-list li a {
-  padding: 14px 15px 0 25px; }
-
-.admin-list li .description {
-  margin-bottom: 15px; }
+  padding: 14px 15px 15px 25px;
+  background-image: url("../images/icons/admin-icons/caret-right-blue.svg");
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+  background-position: 0 16px; }
+  .admin-list li a:hover, .admin-list li a:focus {
+    background-image: url("../images/icons/admin-icons/caret-right-grey.svg");
+    background-color: #f2f9fb;
+    transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -webkit-transform: translateZ(0); }
 
 body:not(.role-administrator) .admin-list li.social-media-links {
   display: none; }
@@ -5686,6 +5745,15 @@ body:not(.role-administrator) .admin-list li.social-media-links {
 /* ========================
   MAIN
 ========================== */
+/* LAYOUTS
+---------------- */
+@media screen and (min-width: 38em) {
+  .layout-column--half {
+    padding-right: 20px; }
+    .layout-column--half + .layout-column--half {
+      padding-right: 0;
+      padding-left: 20px; } }
+
 /* ========================
   MESSAGES
 ========================== */
@@ -6140,6 +6208,11 @@ body:not(.role-administrator) .admin-list li.social-media-links {
     .crane .block-admin-display-form table tbody tr.region-title td .button--small:active, .crane .block-admin-display-form table tbody tr.region-title td .draggable .form-submit:active:not(.image-button), .draggable .crane .block-admin-display-form table tbody tr.region-title td .form-submit:active:not(.image-button), .crane .block-admin-display-form table tbody tr.region-title .draggable:not([class*="paragraph"]) td .form-submit:active, .draggable:not([class*="paragraph"]) .crane .block-admin-display-form table tbody tr.region-title td .form-submit:active {
       color: #ffffff;
       background: #121212; }
+
+/* WEBFORM UI
+------------- */
+.webform-filter-form .seven-details__wrapper input[type="submit"] {
+  margin-bottom: 0; }
 
 /* ========================
   NODE FORMS
@@ -6661,6 +6734,12 @@ body:not(.role-administrator) .admin-list li.social-media-links {
       background: #ffffff; }
       .crane table tbody tr:nth-of-type(even) td {
         color: #121212; }
+    .crane table tbody tr:hover {
+      background: #f2f9fb;
+      transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -webkit-transition: all 0.3s ease;
+      -webkit-transform: translateZ(0); }
     .crane table tbody tr th {
       background: #ededed;
       color: #121212; }
@@ -6690,7 +6769,8 @@ body:not(.role-administrator) .admin-list li.social-media-links {
   border-bottom: 1px solid #676767; }
 
 .system-modules .package-listing .seven-details__summary {
-  background: #dce7f3; }
+  background: #dce7f3;
+  padding-left: 40px; }
 
 /* ========================
   TAXONOMY
