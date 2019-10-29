@@ -6643,7 +6643,7 @@ body:not(.role-administrator) .admin-list li.social-media-links {
     font-weight: 700;
     margin-bottom: 1rem; }
   .crane table td {
-    padding: 1rem 1.5rem .75rem;
+    padding: 1.25rem 1.5rem 1rem;
     font-size: 1.7rem; }
     .js .crane table td .dropbutton-wrapper {
       min-height: 28px; }
@@ -6752,6 +6752,13 @@ body:not(.role-administrator) .admin-list li.social-media-links {
 -------------- */
 .system-modules table tr.odd, .system-modules table tr.even {
   border-bottom: 1px solid #676767; }
+
+.system-modules table .module label {
+  font-size: 1.8rem;
+  color: #4a4a4a;
+  margin: 0;
+  display: block;
+  padding-top: 3px; }
 
 .system-modules .package-listing .seven-details__summary {
   background: #dce7f3;

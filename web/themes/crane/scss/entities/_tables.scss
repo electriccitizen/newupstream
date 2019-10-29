@@ -12,7 +12,7 @@
 	}
 
 	td{
-		padding: 1rem 1.5rem .75rem;
+		padding: 1.25rem 1.5rem 1rem;
 		font-size: 1.7rem;
 		.js &{
 			.dropbutton-wrapper{
@@ -160,6 +160,15 @@
 	table{
 		tr.odd,tr.even{
 			border-bottom: 1px solid $rowBorder;
+		}
+		.module{
+			label{
+				font-size: 1.8rem;
+				color: $darkGrey;
+				margin: 0;
+				display: block;
+				padding-top: 3px;
+			}
 		}
 	}
 	.package-listing{
