@@ -64,7 +64,20 @@ body {
 			background-color: $darkIce;
 		}
 	}
-}
+	ul{
+		li.menu-item--expanded{
+			ul{
+				li.menu-item--expanded{
+					background-image: url('../images/admin/caret-right-blue.svg');
+					background-size: 16px 16px;
+					&:hover{
+						background-image: url('../images/admin/caret-right-blue-dark.svg');
+					}
+				}
+			}
+		}
+	}
+}//end toolbar horizontal
 
 /* MAP PINS
 -------------- */

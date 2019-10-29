@@ -12,6 +12,7 @@
 
 /* ADMIN TOOLBAR
 ------------------ */
+.toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded
 #toolbar-bar{
 	position: fixed !important;
 	width: 100%;
@@ -85,7 +86,20 @@
 			background-color: $darkIce;
 		}
 	}
-}
+	ul{
+		li.menu-item--expanded{
+			ul{
+				li.menu-item--expanded{
+					background-image: url('../images/icons/admin-icons/caret-right-blue.svg');
+					background-size: 16px 16px;
+					&:hover{
+						background-image: url('../images/icons/admin-icons/caret-right-blue-dark.svg');
+					}
+				}
+			}
+		}
+	}
+}//end horizontal toolbar tray
 
 /* LOCAL ACTIONS
 ------------------ */

@@ -5990,33 +5990,33 @@ body:not(.role-administrator) .admin-list li.social-media-links {
 
 /* ADMIN TOOLBAR
 ------------------ */
-#toolbar-bar {
+.toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded #toolbar-bar {
   position: fixed !important;
   width: 100%; }
-  #toolbar-bar .toolbar-tab.env span.toolbar-item {
+  .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded #toolbar-bar .toolbar-tab.env span.toolbar-item {
     padding: 1em 1.333em;
     font-weight: 700;
     display: block;
     background: rgba(255, 255, 255, 0.8);
     color: #121212 !important;
     cursor: default; }
-    #toolbar-bar .toolbar-tab.env span.toolbar-item:hover, #toolbar-bar .toolbar-tab.env span.toolbar-item:focus {
+    .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded #toolbar-bar .toolbar-tab.env span.toolbar-item:hover, .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded #toolbar-bar .toolbar-tab.env span.toolbar-item:focus {
       text-decoration: none; }
-  #toolbar-bar.local {
+  .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded #toolbar-bar.local {
     background-color: #121212; }
-    #toolbar-bar.local .toolbar-tab .toolbar-item {
+    .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded #toolbar-bar.local .toolbar-tab .toolbar-item {
       color: #cccccc !important; }
-  #toolbar-bar.dev {
+  .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded #toolbar-bar.dev {
     background: #018901; }
-    #toolbar-bar.dev .toolbar-tab .toolbar-item {
+    .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded #toolbar-bar.dev .toolbar-tab .toolbar-item {
       color: #ffffff !important; }
-  #toolbar-bar.test {
+  .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded #toolbar-bar.test {
     background: #fcd105; }
-    #toolbar-bar.test .toolbar-tab .toolbar-item {
+    .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded #toolbar-bar.test .toolbar-tab .toolbar-item {
       color: #121212 !important; }
-  #toolbar-bar.live {
+  .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded #toolbar-bar.live {
     background: #990b0b; }
-    #toolbar-bar.live.toolbar-tab .toolbar-item {
+    .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded #toolbar-bar.live.toolbar-tab .toolbar-item {
       color: #ffffff !important; }
 
 #responsive-preview-toolbar-tab {
@@ -6035,6 +6035,12 @@ body:not(.role-administrator) .admin-list li.social-media-links {
 
 .toolbar-tray-horizontal .menu-item a:active {
   background-color: #e4f5fc; }
+
+.toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded {
+  background-image: url("../images/icons/admin-icons/caret-right-blue.svg");
+  background-size: 16px 16px; }
+  .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded:hover {
+    background-image: url("../images/icons/admin-icons/caret-right-blue-dark.svg"); }
 
 /* LOCAL ACTIONS
 ------------------ */
