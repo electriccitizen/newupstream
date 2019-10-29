@@ -5506,18 +5506,6 @@ span.file {
   span.file a:before {
     background-image: url("../images/icons/files/generic.svg"); }
 
-/* CUSTOM SVG ICONS
------------------------ */
-.crane-icon {
-  width: 50px;
-  height: 50px;
-  color: #026cc5; }
-  .crane-icon svg {
-    width: 50px;
-    height: 50px;
-    fill: currentColor;
-    stroke: currentColor; }
-
 /* ==============
 	 BLOCKS
 ================== */
@@ -5697,10 +5685,7 @@ header.system-admin_content #block-crane-content, header.node-add #block-crane-c
   padding-top: 0; }
 
 /* ========================
-  LIST
-========================== */
-/* ========================
-  LIST
+  LISTS
 ========================== */
 .item-list ul {
   list-style: none;

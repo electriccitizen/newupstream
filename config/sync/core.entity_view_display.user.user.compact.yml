@@ -27,6 +27,8 @@ mode: compact
 content: {  }
 hidden:
   field_authored_placeholder: true
+  field_first_name: true
+  field_last_name: true
   field_user_image: true
   member_for: true
   search_api_excerpt: true
