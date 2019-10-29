@@ -147,6 +147,12 @@
 	@extend .js-form-type-textfield;
 }
 
+/* HEADINGS
+--------------- */
+form > h3{
+	margin-bottom: $spaceXxs;
+}
+
 /* SELECTS
 ------------- */
 .form-type-select{
@@ -348,6 +354,7 @@ select:hover,select:focus{
 		position: relative;
 		top: 3px;
 		cursor: pointer;
+		margin-right: $spaceXxs;
 		&:hover{
 			border-color: $checkboxHover;
 			background-color: $checkboxBackHover;

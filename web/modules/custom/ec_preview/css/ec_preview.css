@@ -1,63 +1,56 @@
-/* PREVIEW CONTAINER */
-#responsive-preview.responsive-preview.active{
-	z-index: 600;
+#responsive-preview-toolbar-tab .responsive-preview-trigger.active{
+	background: #018901;
+}
+#responsive-preview-toolbar-tab .responsive-preview-trigger.active:hover{
+	background: #676767;
 }
 
-#responsive-preview.responsive-preview.active #responsive-preview-frame-container {
-  left: 50% !important;
-  -webit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-	border-radius: 0;
-	padding: 0 !important;
+#responsive-preview-modal-background{
+	background: rgba(92,96,98,.92);
 }
-
-/* PREVIEW FRAME */
-.responsive-preview-active #responsive-preview-frame {
-  width: 90vw !important;
-  height: -webkit-calc(100vh - 60px) !important;
-  height: -moz-calc(100vh - 60px) !important;
-  height: -o-calc(100vh - 60px) !important;
-  height: calc(100vh - 60px) !important;
+#responsive-preview-frame-container{
+	border-radius: 5px;
 }
-
-.role-administrator #responsive-preview #responsive-preview-frame{
-	height: -webkit-calc(100vh - 128px) !important;
-  height: -moz-calc(100vh - 128px) !important;
-  height: -o-calc(100vh - 128px) !important;
-  height: calc(100vh - 128px) !important;
+.responsive-preview-device-label-text{
+	position: relative;
+	top: -2px;
+	color: #f6f6f6;
 }
-
-/* PREVIEW CONTROLS */
-#edit-preview,#responsive-preview-frame-label,#responsive-preview-orientation{
-  display: none !important;
+.responsive-preview-device-label-text:after{
+	content: none !important;
 }
-#responsive-preview-close{
-	background: #fcd105;
-	z-index: 1;
-	border-left: 1px solid #262626;
-	border-bottom: 1px solid #262626;
+.responsive-preview-device-label-text span{
+	display: none;
 }
-#responsive-preview-close:hover,#responsive-preview-close:focus{
-	background: #cccccc;
+.responsive-preview-control.responsive-preview-close{
+	right: -5px;
 }
-#responsive-preview-close:active{
-	background: #979797;
+#responsive-preview-orientation:before{
+	height: 20px;
+	width: 20px;
+	background: url('../icons/orientation-white.svg') no-repeat;
+	background-size: 13px 13px;
+	background-position: center;
+	top: 6px;
 }
 #responsive-preview-close:before{
-	height: 16px;
+	height: 20px;
 	width: 20px;
-	background: url('../icons/close-black.svg') no-repeat;
-	background-size: 16px 16px;
+	background: url('../icons/close-white.svg') no-repeat;
+	background-size: 13px 13px;
 	background-position: center;
+	top: 6px;
 }
 
-/* PREVIEW BUTTON ON NODE */
+/* REMOVE DEFAULT DRUPAL PREVIEW BUTTON */
+#edit-preview{
+  display: none !important;
+}
+
+/* CUSTOM PREVIEW BUTTON ON NODE */
 #edit-ec-preview {
   background: #018901;
   color: #ffffff;
-  min-width: 120px;
 }
 #edit-ec-preview:hover,#edit-ec-preview:focus{
 	background: #ccc;

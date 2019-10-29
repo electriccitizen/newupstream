@@ -10,24 +10,8 @@ Drupal.behaviors.previewAction = {
 		    e.preventDefault();
 		    $('.responsive-preview-icon-active').trigger('click');
 		  });
-
-		 	$(window).on('scroll', function() {
-      	if($('.layout-region-node-footer').isInViewport()){
-      		$('#edit-ec-preview').removeClass('fixed-preview');
-      	}else{
-      		$('#edit-ec-preview').addClass('fixed-preview');
-      	}
-      });
 		});
   }
-};
-
-$.fn.isInViewport = function() {
-	var elementTop = $(this).offset().top;
-	var elementBottom = elementTop + $(this).outerHeight();
-	var viewportTop = $(window).scrollTop();
-	var viewportBottom = viewportTop + $(window).height();
-	return elementBottom > viewportTop && elementTop < viewportBottom;
 };
 
 })(jQuery, Drupal, drupalSettings);

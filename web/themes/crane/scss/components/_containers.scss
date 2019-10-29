@@ -21,22 +21,27 @@
 
 /* SUMMARY BLOCK
 ------------------ */
-.seven-details[open]{
-	& > .seven-details__summary{
-		color: $darkBlue;
-		&:hover,&:focus{
-			color: $black;
+.seven-details{
+	background: $siteBack;
+	border-radius: 0;
+	box-shadow: 0 2px 4px $metaBorderSoft;
+	&[open]{
+		& > .seven-details__summary{
+			color: $darkBlue;
+			&:hover,&:focus{
+				color: $black;
+			}
+			&:before{
+				-webkit-transform: rotate(90deg);
+			  -ms-transform: rotate(90deg);
+			  transform: rotate(90deg);
+			}
 		}
-		&:before{
-			-webkit-transform: rotate(90deg);
-		  -ms-transform: rotate(90deg);
-		  transform: rotate(90deg);
+		.entity-meta &{
+			background: $offWhite;
 		}
 	}
-	.entity-meta &{
-		background: $offWhite;
-	}
-}
+}//end seven details
 .seven-details__summary{
 	font-family: $bodyFont;
 	color: $darkBlue;

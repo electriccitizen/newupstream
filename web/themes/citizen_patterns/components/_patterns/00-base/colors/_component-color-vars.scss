@@ -1,8 +1,19 @@
 @import '_color-vars.scss';
 
+
+/* ADMINS - do not customize per site */
+$gold          : #fcd105;
+$fuchsia       : #c028bb;
+$purple        : #8b01e2;
+$green         : #018901;
+$gold          : #fcd105;
+$transGrey     : rgba(92,96,98,.92);
+
+
 /* ===========================
     COMPONENT SPECIFIC COLORS
 =============================   */
+
 /* TEXT & BUTTONS
 ---------------------- */
 $baseText          : $darkGrey;

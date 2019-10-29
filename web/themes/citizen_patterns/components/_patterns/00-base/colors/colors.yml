@@ -27,16 +27,6 @@ items:
     value: '#bf0e0e'
   - name: $pink
     value: '#f8e8f1'
-  - name: $gold
-    value: '#fcd105'
-  - name: $fuchsia
-    value: '#c028bb'
-  - name: $purple
-    value: '#8b01e2'
-  - name: $green
-    value: '#018901'
-  - name: $gold
-    value: '#fcd105'
   - name: $transWhite
     value: 'rgba(255,255,255,0.7)'
   - name: $transBlack

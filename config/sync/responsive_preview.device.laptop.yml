@@ -1,0 +1,11 @@
+id: laptop
+uuid: 205ee032-a57d-4d6f-a17e-a53d8b55cffb
+label: Laptop
+weight: 0
+status: 1
+orientation: landscape
+dimensions:
+  width: 1290
+  height: 800
+  dppx: !!float 1
+langcode: en

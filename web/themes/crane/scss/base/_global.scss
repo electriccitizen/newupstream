@@ -29,16 +29,6 @@ body{
 	.visually-hidden{
 		max-width: 1px;
 	}
-	&.path-batch{
-		.dialog-off-canvas-main-canvas{
-			@include smallTab{
-				padding-right: 80px;
-			}
-			& > .layout-container{
-				background: $offWhite;
-			}
-		}
-	}//end path batch
 	.ui-dialog{
 		z-index: 500 !important;
 	}

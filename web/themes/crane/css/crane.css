@@ -4259,11 +4259,6 @@ body {
       background: #ffffff; }
   body .visually-hidden {
     max-width: 1px; }
-  @media (min-width: 600px) {
-    body.path-batch .dialog-off-canvas-main-canvas {
-      padding-right: 80px; } }
-  body.path-batch .dialog-off-canvas-main-canvas > .layout-container {
-    background: #f6f6f6; }
   body .ui-dialog {
     z-index: 500 !important; }
 
@@ -5114,6 +5109,11 @@ a, .link {
 tr.odd .text-format-wrapper .js-form-type-textarea, tr.even .text-format-wrapper .js-form-type-textarea {
   margin-bottom: 0; }
 
+/* HEADINGS
+--------------- */
+form > h3 {
+  margin-bottom: 0.5rem; }
+
 /* SELECTS
 ------------- */
 .form-type-select select {
@@ -5353,7 +5353,8 @@ select:hover, select:focus {
   background-color: #ffffff;
   position: relative;
   top: 3px;
-  cursor: pointer; }
+  cursor: pointer;
+  margin-right: 0.5rem; }
   .js-form-type-checkbox input:hover, .js-form-type-radio input:hover, .select-all input:hover {
     border-color: #026cc5;
     background-color: #ededed;
@@ -5537,15 +5538,18 @@ span.file {
 
 /* SUMMARY BLOCK
 ------------------ */
-.seven-details[open] > .seven-details__summary {
-  color: #073b75; }
-  .seven-details[open] > .seven-details__summary:hover, .seven-details[open] > .seven-details__summary:focus {
-    color: #121212; }
-  .seven-details[open] > .seven-details__summary:before {
-    transform: rotate(90deg); }
-
-.entity-meta .seven-details[open] {
-  background: #f6f6f6; }
+.seven-details {
+  background: #ffffff;
+  border-radius: 0;
+  box-shadow: 0 2px 4px rgba(35, 35, 35, 0.1); }
+  .seven-details[open] > .seven-details__summary {
+    color: #073b75; }
+    .seven-details[open] > .seven-details__summary:hover, .seven-details[open] > .seven-details__summary:focus {
+      color: #121212; }
+    .seven-details[open] > .seven-details__summary:before {
+      transform: rotate(90deg); }
+  .entity-meta .seven-details[open] {
+    background: #f6f6f6; }
 
 .seven-details__summary {
   font-family: "PT Sans", sans-serif;
@@ -5738,6 +5742,11 @@ body:not(.role-administrator) .admin-list li.social-media-links {
     .layout-column--half + .layout-column--half {
       padding-right: 0;
       padding-left: 20px; } }
+
+/* SYNCH PAGE MAIN CONTENT
+--------------- */
+.crane .progress {
+  margin-top: 3rem; }
 
 /* ========================
   MESSAGES
@@ -6018,9 +6027,6 @@ body:not(.role-administrator) .admin-list li.social-media-links {
     background: #990b0b; }
     .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded #toolbar-bar.live.toolbar-tab .toolbar-item {
       color: #ffffff !important; }
-
-#responsive-preview-toolbar-tab {
-  display: none !important; }
 
 .toolbar-tray-horizontal .menu-item--expanded {
   background: none; }
