@@ -181,7 +181,7 @@ optgroup:empty{
 .select2-container{
 	min-width: 150px;
 }
-.crane .select2-container--default{
+.crane .select2-container--default,.entity-browser-form .select2-container--default{
 	.select2-selection--single{
 		@include selectInput;
 		&:hover{
