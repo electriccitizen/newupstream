@@ -421,7 +421,7 @@ select:hover,select:focus{
 }
 
 fieldset:not(.form-composite){
-	border-color: $formElementBorder;
+	border-color: $metaBorderHard;
 	background: $siteBack;
 	box-shadow: 0 2px 4px $metaBorderSoft;
 	border-radius: none;
