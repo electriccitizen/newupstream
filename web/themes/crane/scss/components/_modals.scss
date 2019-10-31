@@ -10,6 +10,9 @@
 .ui-dialog.entity-browser-modal{
   max-width: 1200px;
 }//end entity browser modal
+
+/* ENTITY BROWSER FORM
+------------------------- */
 .entity-browser-form{
 	font-size: $baseSize;
 	margin-top: -$spaceMd;
@@ -88,95 +91,45 @@
 	}
 }//end eb modal form
 
-/* ENTITY BROWSER MEDIA VIEW CONTENT
-------------------- */
-.eb-media{
-	padding-top: $spaceSm;
-	padding-bottom: $spaceLg;
-	.views-exposed-form{
-		padding: 0 8px $spaceXxs;
-		.filter-control{
-			padding-bottom: $spaceXxs;
-		}
-	}
-	.views-row{
-		@include safeFlex(row,wrap,start,stretch);
-	}
-	.views-col{
-		position: relative;
-		margin-bottom: $spaceMd;
-		box-sizing: border-box;
-		margin-left: 10px;
-		margin-right: 10px;
-		background: $darkGrey;
-		float: none;
-		@include calcForce(width, "50% - 20px");
-		@include smallTab{
-			@include calcForce(width, "25% - 20px");
-		}
-		&:hover{
-			box-shadow: 0 0 1px 2px $formElementBorderHover;
-			.views-field-thumbnail__target-id:before{
-				background-color: rgba(255,255,255,.3);
-			}
-		}
-		&.selected{
-			.views-field-thumbnail__target-id{
-				&:before{
-					background-color: rgba(35,35,35,.7);
-					background-image: url('../images/icons/admin-icons/checkmark.svg');
-					background-repeat: no-repeat;
-					background-size: 60px 60px;
-					background-position: center;
-				}
-			}
-			&:hover{
-				.views-field-thumbnail__target-id:before{
-					background-color: rgba(255,255,255,.3);
-				}
+/* ENTITY EMBED DIALOG
+------------------------ */
+//document embed dialog
+.entity-embed-dialog-step--embed[action="/entity-embed/dialog/basic_html/document"]{
+	.js-form-item-entity{
+		a{
+			position: relative;
+			padding-left: 20px;
+			&:before{
+				content:'';
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 16px;
+				height: 16px;
+				background-image: url('../images/icons/file/generic.svg');
+				background-repeat: no-repeat;
+				background-position: 0 0;
+				background-size: 16px 16px;
 			}
 		}
 	}
-	.views-field-thumbnail__target-id{
-		position: relative;
-		&:before{
-			content: '';
-			display: block;
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background-color: transparent;
-		}
-		img{
-	  	width: 100%;
-	  	display: block;
+	fieldset[data-drupal-selector="edit-attributes-data-align"]{
+		display: none;
+	}
+	.form-actions{
+		input.form-submit,input.button-primary{
+			margin-bottom: 0;
 		}
 	}
-	.views-field-entity-browser-select{
-		position: absolute;
-	  top: 0;
-	  right: 10px;
-	  opacity: 0;
-		.form-type-checkbox{
-			margin-top: 0;
-  		margin-bottom: 0;
-  		.form-boolean{
-				width: 24px;
-  			height: 24px
-  		}
-		}//end checkbox
-	}//end entity-browser-select
-	.views-field-name{
-		padding: 8px 10px;
-		line-height: 1.25;
-		text-align: center;
-		color: $white;
+}//end document entity embed dialog
+.entity-select-dialog{
+	.ui-dialog-buttonset{
+		button:not(:last-child){
+			margin-right: 1rem;
+		}
 	}
-	.views-field-bundle{
-		@extend .views-field-name;
-		padding-top: 0;
-	}
-}//end eb-media
+}
+
+
 

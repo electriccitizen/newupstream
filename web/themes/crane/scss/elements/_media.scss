@@ -119,7 +119,7 @@
 		left: 0;
 		width: 16px;
 		height: 16px;
-		background-repeat: none;
+		background-repeat: no-repeat;
 		background-position: 0 0;
 		background-size: 16px 16px;
 	}
@@ -162,7 +162,7 @@ span.file{
 	a{
 		@extend %docIcons;
 		&:before{
-			background-image: url('../images/icons/files/generic.svg');
+			background-image: url('../images/icons/file/generic.svg');
 		}
 	}
 }

@@ -322,20 +322,10 @@ $buttonPadding: 1.15rem 1.5rem 1rem;
 			border-right-color: transparent;
 		}
 		&.open{
-			position: relative;
-			.dropbutton-widget{
-				z-index: 999999;
-			}
 			.dropbutton-arrow{
 				border-width: 0 6px 5px;
 				border-top-color: transparent;
 				border-bottom-color: $darkGrey;
-			}
-		}
-		&:not(.open){
-			z-index: 0;
-			.dropbutton-widget{
-				z-index: 0;
 			}
 		}
 	}//end dropbutton
@@ -396,11 +386,20 @@ $buttonPadding: 1.15rem 1.5rem 1rem;
 } 
 
 
-/* CKE MEDIA EMBED BUTTON
+/* CKE EMBED BUTTONS
 ------------------------- */
-.cke_button_icon{
-	&.cke_button__media_icon{
-		background-image: url('../images/icons/admin-icons/media-embed.svg') !important;
+.cke_button__media{
+	.cke_button_icon{
+		&.cke_button__media_icon{
+			background-image: url('../images/icons/admin-icons/media-embed.svg') !important;
+		}
+	}
+}
+.cke_button__document{
+	.cke_button_icon{
+		&.cke_button__document_icon{
+			background-image: url('../images/icons/file/generic.svg') !important;
+		}
 	}
 }
 

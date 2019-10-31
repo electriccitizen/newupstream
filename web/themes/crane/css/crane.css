@@ -4895,19 +4895,10 @@ a, .link {
   border-left-color: transparent;
   border-right-color: transparent; }
 
-.js .dropbutton-multiple.open, .js .dropbutton-wrapper.open, .js .dropbutton-single.open {
-  position: relative; }
-  .js .dropbutton-multiple.open .dropbutton-widget, .js .dropbutton-wrapper.open .dropbutton-widget, .js .dropbutton-single.open .dropbutton-widget {
-    z-index: 999999; }
-  .js .dropbutton-multiple.open .dropbutton-arrow, .js .dropbutton-wrapper.open .dropbutton-arrow, .js .dropbutton-single.open .dropbutton-arrow {
-    border-width: 0 6px 5px;
-    border-top-color: transparent;
-    border-bottom-color: #4a4a4a; }
-
-.js .dropbutton-multiple:not(.open), .js .dropbutton-wrapper:not(.open), .js .dropbutton-single:not(.open) {
-  z-index: 0; }
-  .js .dropbutton-multiple:not(.open) .dropbutton-widget, .js .dropbutton-wrapper:not(.open) .dropbutton-widget, .js .dropbutton-single:not(.open) .dropbutton-widget {
-    z-index: 0; }
+.js .dropbutton-multiple.open .dropbutton-arrow, .js .dropbutton-wrapper.open .dropbutton-arrow, .js .dropbutton-single.open .dropbutton-arrow {
+  border-width: 0 6px 5px;
+  border-top-color: transparent;
+  border-bottom-color: #4a4a4a; }
 
 .js .views-edit-view .dropbutton-multiple .dropbutton-widget, .js .views-edit-view .dropbutton-wrapper .dropbutton-widget, .js .views-edit-view .dropbutton-single .dropbutton-widget {
   border-radius: 0;
@@ -4942,10 +4933,13 @@ a, .link {
     border: 0;
     opacity: .6; }
 
-/* CKE MEDIA EMBED BUTTON
+/* CKE EMBED BUTTONS
 ------------------------- */
-.cke_button_icon.cke_button__media_icon {
+.cke_button__media .cke_button_icon.cke_button__media_icon {
   background-image: url("../images/icons/admin-icons/media-embed.svg") !important; }
+
+.cke_button__document .cke_button_icon.cke_button__document_icon {
+  background-image: url("../images/icons/file/generic.svg") !important; }
 
 /* ========================
   FIELD
@@ -5106,6 +5100,8 @@ a, .link {
     .js-form-type-textarea textarea:focus::-webkit-input-placeholder {
       opacity: 0.2;
       color: #121212; }
+  .js-form-type-textarea textarea#edit-filters-filter-html-settings-allowed-html {
+    max-width: none; }
 
 tr.odd .text-format-wrapper .js-form-type-textarea, tr.even .text-format-wrapper .js-form-type-textarea {
   margin-bottom: 0; }
@@ -5401,16 +5397,19 @@ select:hover, select:focus {
 .text-format-wrapper .filter-wrapper {
   display: none; }
 
-fieldset {
-  border-color: #026cc5; }
-  fieldset:hover {
+fieldset:not(.form-composite) {
+  border-color: #026cc5;
+  background: #ffffff;
+  box-shadow: 0 2px 4px rgba(35, 35, 35, 0.1);
+  border-radius: none; }
+  fieldset:not(.form-composite):hover {
     box-shadow: inset 0 0 0 1px #026cc5;
     border-color: #026cc5;
     transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
     -webkit-transform: translateZ(0); }
-  fieldset.ief-form {
+  fieldset:not(.form-composite).ief-form {
     box-shadow: inset 0 0 0 1px #121212;
     border-color: #121212; }
 
@@ -5496,7 +5495,7 @@ fieldset {
     left: 0;
     width: 16px;
     height: 16px;
-    background-repeat: none;
+    background-repeat: no-repeat;
     background-position: 0 0;
     background-size: 16px 16px; }
 
@@ -5505,7 +5504,7 @@ span.file {
   background-image: none;
   padding-left: 0; }
   span.file a:before {
-    background-image: url("../images/icons/files/generic.svg"); }
+    background-image: url("../images/icons/file/generic.svg"); }
 
 /* ==============
 	 BLOCKS
@@ -5871,6 +5870,8 @@ body:not(.role-administrator) .admin-list li.social-media-links {
 .ui-dialog.entity-browser-modal {
   max-width: 1200px; }
 
+/* ENTITY BROWSER FORM
+------------------------- */
 .entity-browser-form {
   font-size: 1.5rem;
   margin-top: -3rem;
@@ -5929,82 +5930,32 @@ body:not(.role-administrator) .admin-list li.social-media-links {
     margin-top: 1rem;
     line-height: 1.4; }
 
-/* ENTITY BROWSER MEDIA VIEW CONTENT
-------------------- */
-.eb-media {
-  padding-top: 2rem;
-  padding-bottom: 4rem; }
-  .eb-media .views-exposed-form {
-    padding: 0 8px 0.5rem; }
-    .eb-media .views-exposed-form .filter-control {
-      padding-bottom: 0.5rem; }
-  .eb-media .views-row {
-    display: flex;
-    display: -ms-flexbox;
-    flex-direction: row;
-    -ms-flex-direction: row;
-    flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    justify-content: flex-start;
-    -ms-flex-pack: start;
-    align-items: stretch;
-    -ms-flex-align: stretch; }
-  .eb-media .views-col {
-    position: relative;
-    margin-bottom: 3rem;
-    box-sizing: border-box;
-    margin-left: 10px;
-    margin-right: 10px;
-    background: #4a4a4a;
-    float: none;
-    width: calc(50% - 20px) !important; }
-    @media (min-width: 600px) {
-      .eb-media .views-col {
-        width: calc(25% - 20px) !important; } }
-    .eb-media .views-col:hover {
-      box-shadow: 0 0 1px 2px #026cc5; }
-      .eb-media .views-col:hover .views-field-thumbnail__target-id:before {
-        background-color: rgba(255, 255, 255, 0.3); }
-    .eb-media .views-col.selected .views-field-thumbnail__target-id:before {
-      background-color: rgba(35, 35, 35, 0.7);
-      background-image: url("../images/icons/admin-icons/checkmark.svg");
-      background-repeat: no-repeat;
-      background-size: 60px 60px;
-      background-position: center; }
-    .eb-media .views-col.selected:hover .views-field-thumbnail__target-id:before {
-      background-color: rgba(255, 255, 255, 0.3); }
-  .eb-media .views-field-thumbnail__target-id {
-    position: relative; }
-    .eb-media .views-field-thumbnail__target-id:before {
-      content: '';
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: transparent; }
-    .eb-media .views-field-thumbnail__target-id img {
-      width: 100%;
-      display: block; }
-  .eb-media .views-field-entity-browser-select {
+/* ENTITY EMBED DIALOG
+------------------------ */
+.entity-embed-dialog-step--embed[action="/entity-embed/dialog/basic_html/document"] .js-form-item-entity a {
+  position: relative;
+  padding-left: 20px; }
+  .entity-embed-dialog-step--embed[action="/entity-embed/dialog/basic_html/document"] .js-form-item-entity a:before {
+    content: '';
+    display: block;
     position: absolute;
     top: 0;
-    right: 10px;
-    opacity: 0; }
-    .eb-media .views-field-entity-browser-select .form-type-checkbox {
-      margin-top: 0;
-      margin-bottom: 0; }
-      .eb-media .views-field-entity-browser-select .form-type-checkbox .form-boolean {
-        width: 24px;
-        height: 24px; }
-  .eb-media .views-field-name, .eb-media .views-field-bundle {
-    padding: 8px 10px;
-    line-height: 1.25;
-    text-align: center;
-    color: #ffffff; }
-  .eb-media .views-field-bundle {
-    padding-top: 0; }
+    left: 0;
+    width: 16px;
+    height: 16px;
+    background-image: url("../images/icons/file/generic.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 16px 16px; }
+
+.entity-embed-dialog-step--embed[action="/entity-embed/dialog/basic_html/document"] fieldset[data-drupal-selector="edit-attributes-data-align"] {
+  display: none; }
+
+.entity-embed-dialog-step--embed[action="/entity-embed/dialog/basic_html/document"] .form-actions input.form-submit, .entity-embed-dialog-step--embed[action="/entity-embed/dialog/basic_html/document"] .form-actions input.button-primary {
+  margin-bottom: 0; }
+
+.entity-select-dialog .ui-dialog-buttonset button:not(:last-child) {
+  margin-right: 1rem; }
 
 /* ==============
 	 NAVIGATION
@@ -6976,8 +6927,12 @@ body:not(.role-administrator) .admin-list li.social-media-links {
 .views-ui-dialog .views-override.form--inline .js-form-item-override-dropdown {
   max-width: 175px; }
 
-.views-ui-dialog .views-override.form--inline .js-form-item-override-controls-options-search {
+.views-ui-dialog .views-override.form--inline .js-form-item-override-controls-options-search, .views-ui-dialog .views-override.form--inline .js-form-item-override-controls-group {
   max-width: 240px; }
+
+.views-ui-dialog .views-override.form--inline .select2-container--default {
+  width: 100% !important;
+  max-width: 300px; }
 
 .views-ui-dialog .ui-dialog-buttonset button {
   margin-right: 2rem !important;
@@ -7095,6 +7050,84 @@ body:not(.role-administrator) .admin-list li.social-media-links {
 
 body:not(.role-administrator) .view-id-block_content td.views-field-operations.Yes .dropbutton-wrapper .delete, body:not(.role-administrator) .view-id-block_content td.views-field-operations.Social .dropbutton-wrapper .delete, body:not(.role-administrator) .view-id-block_content td.views-field-operations.Home .dropbutton-wrapper .delete, body:not(.role-administrator) .view-id-block_content td.views-field-operations.Escape .dropbutton-wrapper .delete, body:not(.role-administrator) .view-id-block_content td.views-field-operations.Translated .dropbutton-wrapper .delete {
   display: none; }
+
+/* ENTITY BROWSER MEDIA VIEW CONTENT */
+.eb-media {
+  padding-top: 2rem;
+  padding-bottom: 4rem; }
+  .eb-media .views-exposed-form {
+    padding: 0 8px 0.5rem; }
+    .eb-media .views-exposed-form .filter-control {
+      padding-bottom: 0.5rem; }
+  .eb-media .views-row {
+    display: flex;
+    display: -ms-flexbox;
+    flex-direction: row;
+    -ms-flex-direction: row;
+    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    justify-content: flex-start;
+    -ms-flex-pack: start;
+    align-items: stretch;
+    -ms-flex-align: stretch; }
+  .eb-media .views-col {
+    position: relative;
+    margin-bottom: 3rem;
+    box-sizing: border-box;
+    margin-left: 10px;
+    margin-right: 10px;
+    background: #4a4a4a;
+    float: none;
+    width: calc(50% - 20px) !important; }
+    @media (min-width: 600px) {
+      .eb-media .views-col {
+        width: calc(25% - 20px) !important; } }
+    .eb-media .views-col:hover {
+      box-shadow: 0 0 1px 2px #026cc5; }
+      .eb-media .views-col:hover .views-field-thumbnail__target-id:before {
+        background-color: rgba(255, 255, 255, 0.3); }
+    .eb-media .views-col.selected .views-field-thumbnail__target-id:before, .eb-media .views-col.selected .views-field-field-media-file:before {
+      background-color: rgba(35, 35, 35, 0.7);
+      background-image: url("../images/icons/admin-icons/checkmark.svg");
+      background-repeat: no-repeat;
+      background-size: 60px 60px;
+      background-position: center; }
+    .eb-media .views-col.selected:hover .views-field-thumbnail__target-id:before {
+      background-color: rgba(255, 255, 255, 0.3); }
+    .eb-media .views-col.selected:hover .views-field-field-media-file:before {
+      background-color: rgba(35, 35, 35, 0.2); }
+  .eb-media .views-field-thumbnail__target-id, .eb-media .views-field-field-media-file {
+    position: relative; }
+    .eb-media .views-field-thumbnail__target-id:before, .eb-media .views-field-field-media-file:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: transparent; }
+    .eb-media .views-field-thumbnail__target-id img, .eb-media .views-field-field-media-file img {
+      width: 100%;
+      display: block; }
+  .eb-media .views-field-entity-browser-select {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    opacity: 0; }
+    .eb-media .views-field-entity-browser-select .form-type-checkbox {
+      margin-top: 0;
+      margin-bottom: 0; }
+      .eb-media .views-field-entity-browser-select .form-type-checkbox .form-boolean {
+        width: 24px;
+        height: 24px; }
+  .eb-media .views-field-name, .eb-media .views-field-bundle {
+    padding: 8px 10px;
+    line-height: 1.25;
+    text-align: center;
+    color: #ffffff; }
+  .eb-media .views-field-bundle {
+    padding-top: 0; }
 
 /* ========================
   WEBFORMS

@@ -1,4 +1,3 @@
-uuid: bb4d8c1f-afb2-4213-9c6d-bf02b072b18c
 langcode: en
 status: open
 dependencies:
@@ -7,11 +6,6 @@ dependencies:
       - webform
   module:
     - antibot
-third_party_settings:
-  antibot:
-    antibot: true
-_core:
-  default_config_hash: oZIx_IHS7gdveuJ3iSbhNY-A1FwlieWPdjJEJz4Wlb4
 open: null
 close: null
 weight: 0
@@ -22,7 +16,7 @@ id: contact
 title: Contact
 description: 'Basic email contact webform.'
 category: ''
-elements: "name:\n  '#type': textfield\n  '#title': Name\n  '#title_display': inline\n  '#maxlength': '60'\n  '#required': true\nemail:\n  '#type': email\n  '#title': 'Your Email'\n  '#title_display': inline\n  '#required': true\nsubject:\n  '#type': textfield\n  '#title': Subject\n  '#title_display': inline\n  '#required': true\n  '#test': 'Testing contact webform from [site:name]'\nmessage:\n  '#type': textarea\n  '#title': Message\n  '#title_display': inline\n  '#required': true\n  '#test': 'Please ignore this email.'\nselect_test:\n  '#type': select\n  '#title': 'Select Test'\n  '#options':\n    one: One\n    two: Two\n    three: Three\nchecks_test:\n  '#type': checkboxes\n  '#title': 'Checks test'\n  '#options':\n    one: one\n    two: two\n    three: three"
+elements: "name:\n  '#type': textfield\n  '#title': Name\n  '#title_display': inline\n  '#maxlength': '60'\n  '#required': true\nemail:\n  '#type': email\n  '#title': 'Your Email'\n  '#title_display': inline\n  '#required': true\nsubject:\n  '#type': textfield\n  '#title': Subject\n  '#title_display': inline\n  '#required': true\n  '#test': 'Testing contact webform from [site:name]'\nmessage:\n  '#type': textarea\n  '#title': Message\n  '#title_display': inline\n  '#required': true\n  '#test': 'Please ignore this email.'\n"
 css: ''
 javascript: ''
 settings:
@@ -258,3 +252,9 @@ handlers:
       sender_mail: ''
       sender_name: ''
       theme_name: ''
+uuid: bb4d8c1f-afb2-4213-9c6d-bf02b072b18c
+third_party_settings:
+  antibot:
+    antibot: true
+_core:
+  default_config_hash: oZIx_IHS7gdveuJ3iSbhNY-A1FwlieWPdjJEJz4Wlb4

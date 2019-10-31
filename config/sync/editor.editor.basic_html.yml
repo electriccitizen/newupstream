@@ -38,6 +38,7 @@ settings:
           name: Media
           items:
             - media
+            - document
         -
           name: Miscellaneous
           items:

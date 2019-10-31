@@ -1,0 +1,42 @@
+uuid: d13822d3-c607-4255-82a4-5813b2fc1409
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.citizen_media
+  module:
+    - entity_browser_entity_form
+    - views
+name: embedded_doc_browser
+label: 'Embedded Doc Browser'
+display: iframe
+display_configuration:
+  width: 100%
+  height: '600'
+  link_text: 'Select Documents'
+  auto_open: true
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  66da6d58-a6ce-4c58-a887-c88e3d34b76f:
+    settings:
+      entity_type: media
+      bundle: document
+      form_mode: default
+      submit_text: Use
+    uuid: 66da6d58-a6ce-4c58-a887-c88e3d34b76f
+    weight: -9
+    label: 'Add File'
+    id: entity_form
+  fe879250-51f5-4ec7-a30a-8ed438475291:
+    settings:
+      view: citizen_media
+      view_display: file_browser
+      submit_text: Use
+      auto_select: false
+    uuid: fe879250-51f5-4ec7-a30a-8ed438475291
+    weight: -10
+    label: Library
+    id: view
