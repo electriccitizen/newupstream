@@ -4,11 +4,11 @@
 
 /* MEDIA ENTITY BROWSER
 ----------------- */
+.entity-browser-iframe-container{
+	width: 100% !important;
+}
 .ui-dialog.entity-browser-modal{
   max-width: 1200px;
-  .entity-browser-iframe-container{
-		width: 100% !important;
-	}
 }//end entity browser modal
 .entity-browser-form{
 	font-size: $baseSize;

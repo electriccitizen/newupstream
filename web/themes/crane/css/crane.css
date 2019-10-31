@@ -5865,10 +5865,11 @@ body:not(.role-administrator) .admin-list li.social-media-links {
 ========================== */
 /* MEDIA ENTITY BROWSER
 ----------------- */
+.entity-browser-iframe-container {
+  width: 100% !important; }
+
 .ui-dialog.entity-browser-modal {
   max-width: 1200px; }
-  .ui-dialog.entity-browser-modal .entity-browser-iframe-container {
-    width: 100% !important; }
 
 .entity-browser-form {
   font-size: 1.5rem;
