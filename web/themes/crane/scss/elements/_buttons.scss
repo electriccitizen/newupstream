@@ -161,6 +161,11 @@ $buttonPadding: 1.15rem 1.5rem 1rem;
 .button{
 	@include button;
 }
+button{
+	&:focus{
+		outline: none;
+	}
+}
 .form-submit{
 	@include submitButton;
 }
@@ -198,7 +203,6 @@ $buttonPadding: 1.15rem 1.5rem 1rem;
 		border-width: 2px;
 		font-weight: $heavy;
 		margin-bottom: $spaceSm;
-		border-radius: 4px;
 		&:hover,&:focus{
 			background: $buttonBackHover;
 			color: $buttonTextHover;

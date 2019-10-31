@@ -4433,6 +4433,9 @@ a, .link {
     border: none;
     box-shadow: none; }
 
+button:focus {
+  outline: none; }
+
 .form-submit {
   background-image: none;
   background-color: #026cc5;
@@ -4672,8 +4675,7 @@ a, .link {
     font-size: 1.8rem;
     border-width: 2px;
     font-weight: 700;
-    margin-bottom: 2rem;
-    border-radius: 4px; }
+    margin-bottom: 2rem; }
     .button--small.button--small-override:hover, .draggable .button--small-override.form-submit:hover:not(.image-button), .draggable:not([class*="paragraph"]) td .button--small-override.form-submit:hover, .button--small.button--small-override:focus, .draggable .button--small-override.form-submit:focus:not(.image-button), .draggable:not([class*="paragraph"]) td .button--small-override.form-submit:focus, .no-touchevents .button--small.button--small-override:hover, .no-touchevents .draggable .button--small-override.form-submit:hover:not(.image-button), .draggable .no-touchevents .button--small-override.form-submit:hover:not(.image-button), .no-touchevents .draggable:not([class*="paragraph"]) td .button--small-override.form-submit:hover, .draggable:not([class*="paragraph"]) td .no-touchevents .button--small-override.form-submit:hover, .no-touchevents .button--small.button--small-override:focus, .no-touchevents .draggable .button--small-override.form-submit:focus:not(.image-button), .draggable .no-touchevents .button--small-override.form-submit:focus:not(.image-button), .no-touchevents .draggable:not([class*="paragraph"]) td .button--small-override.form-submit:focus, .draggable:not([class*="paragraph"]) td .no-touchevents .button--small-override.form-submit:focus {
       background: #cccccc;
       color: #121212;
@@ -5380,6 +5382,17 @@ select:hover, select:focus {
       background-size: 10px 10px; }
       .js-form-type-checkbox input[type="radio"]:checked:hover, .js-form-type-checkbox input[type="radio"]:checked:focus, .js-form-type-radio input[type="radio"]:checked:hover, .js-form-type-radio input[type="radio"]:checked:focus, .select-all input[type="radio"]:checked:hover, .select-all input[type="radio"]:checked:focus {
         background-image: url("../images/icons/admin-icons/radio-dot-hover.svg"); }
+
+/* AUTOCOMPLETE DROPDOWN
+-------------------------- */
+.ui-autocomplete .ui-menu-item-wrapper {
+  display: block; }
+  .ui-autocomplete .ui-menu-item-wrapper.ui-state-active {
+    background: #026cc5;
+    border-color: #026cc5;
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0; }
 
 /* DRAWERS
 ------------------ */
@@ -6175,11 +6188,6 @@ body:not(.role-administrator) .admin-list li.social-media-links {
     .crane .block-admin-display-form table tbody tr.region-title td .button--small:active, .crane .block-admin-display-form table tbody tr.region-title td .draggable .form-submit:active:not(.image-button), .draggable .crane .block-admin-display-form table tbody tr.region-title td .form-submit:active:not(.image-button), .crane .block-admin-display-form table tbody tr.region-title .draggable:not([class*="paragraph"]) td .form-submit:active, .draggable:not([class*="paragraph"]) .crane .block-admin-display-form table tbody tr.region-title td .form-submit:active {
       color: #ffffff;
       background: #121212; }
-
-/* WEBFORM UI
-------------- */
-.webform-filter-form .seven-details__wrapper input[type="submit"] {
-  margin-bottom: 0; }
 
 /* ========================
   NODE FORMS
@@ -7136,5 +7144,39 @@ body:not(.role-administrator) .view-id-block_content td.views-field-operations.Y
 ------------------------------ */
 .webform-form.webform-ui-element-form textarea.form-textarea {
   visibility: visible !important; }
+
+/* WEBFORM LIST FILTER
+------------------------ */
+.webform-filter-form .seven-details__wrapper input[type="submit"] {
+  margin-bottom: 0; }
+
+/* FORM ELEMENT POPUP 
+------------------------- */
+.webform-ui-element-form .webform-tabs .ui-tabs-nav {
+  padding: 5px 0 0; }
+  .webform-ui-element-form .webform-tabs .ui-tabs-nav li {
+    padding: 0; }
+
+.webform-ui-element-form .webform-tabs .ui-tabs-active.ui-state-active {
+  background: #fcd105;
+  border-color: #fcd105; }
+  .webform-ui-element-form .webform-tabs .ui-tabs-active.ui-state-active a {
+    color: #121212; }
+
+.webform-ui-element-form .webform-details-toggle-state {
+  display: block;
+  width: 40px;
+  height: 30px;
+  margin-top: -8px;
+  text-indent: -900vw;
+  background-image: url("../images/icons/admin-icons/chevron-down-blue.svg");
+  background-repeat: no-repeat;
+  background-size: 16px;
+  background-position: center;
+  transition: transform 0.15s ease-in 0s; }
+  .webform-ui-element-form .webform-details-toggle-state:hover, .webform-ui-element-form .webform-details-toggle-state:focus {
+    background-image: url("../images/icons/admin-icons/chevron-down-grey.svg"); }
+  .webform-ui-element-form .webform-details-toggle-state.expanded {
+    transform: rotate(180deg); }
 
 /*# sourceMappingURL=crane.css.map */

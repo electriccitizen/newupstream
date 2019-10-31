@@ -399,6 +399,19 @@ select:hover,select:focus{
 	}
 }//end checkbox,radio
 
+/* AUTOCOMPLETE DROPDOWN
+-------------------------- */
+.ui-autocomplete .ui-menu-item-wrapper{
+	display: block;
+	&.ui-state-active{
+		background: $blue;
+		border-color: $blue;
+		color: $white;
+		text-decoration: none;
+		margin: 0;
+	}
+}
+
 /* DRAWERS
 ------------------ */
 .drawer-toggle{

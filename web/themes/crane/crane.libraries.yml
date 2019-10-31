@@ -30,3 +30,8 @@ views-filters:
   version: 1.0
   js:
     js/views-filters.js: {}
+webform-elements:
+  version: 1.0
+  js:
+    js/webform.js: {}
+    

@@ -9,3 +9,56 @@
   	visibility: visible !important;
   }
 }
+
+/* WEBFORM LIST FILTER
+------------------------ */
+.webform-filter-form{
+	.seven-details__wrapper{
+		input[type="submit"]{
+			margin-bottom: 0;
+		}
+	}
+}//end webform-filter-form
+
+/* FORM ELEMENT POPUP 
+------------------------- */
+.webform-ui-element-form{
+	.webform-tabs{
+		.ui-tabs-nav{
+			padding: 5px 0 0;
+			li{
+				padding: 0;
+			}
+		}
+		.ui-tabs-active.ui-state-active{
+			background: $gold;
+			border-color: $gold;
+			a{
+				color: $black;
+			}
+		}
+	}
+	.webform-details-toggle-state{
+		display: block;
+		width: 40px;
+		height: 30px;
+		margin-top: -8px;
+		text-indent: -900vw;
+		background-image: url('../images/icons/admin-icons/chevron-down-blue.svg');
+		background-repeat: no-repeat;
+		background-size: 16px;
+		background-position: center;
+		-webkit-transition: -webkit-transform 0.15s ease-in 0s;
+	  transition: -webkit-transform 0.15s ease-in 0s;
+	  transition: transform 0.15s ease-in 0s;
+	  transition: transform 0.15s ease-in 0s, -webkit-transform 0.15s ease-in 0s;
+		&:hover,&:focus{
+			background-image: url('../images/icons/admin-icons/chevron-down-grey.svg');
+		}
+		&.expanded{
+			-webkit-transform: rotate(180deg);
+		  -ms-transform: rotate(180deg);
+		  transform: rotate(180deg);
+		}
+	}
+}//end form element popup

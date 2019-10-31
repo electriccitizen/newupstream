@@ -7,6 +7,8 @@ dependencies:
     - core.entity_view_mode.media.medium_embed
     - core.entity_view_mode.media.small_embed
     - entity_browser.browser.embedded_browser
+    - media.type.image
+    - media.type.video
   content:
     - 'file:file:cf0d0363-e980-4d9c-8bb4-ce4c5a29b93c'
   module:
@@ -19,7 +21,9 @@ id: media
 type_id: entity
 type_settings:
   entity_type: media
-  bundles: {  }
+  bundles:
+    - image
+    - video
   display_plugins:
     - 'view_mode:media.large_embed'
     - 'view_mode:media.medium_embed'
