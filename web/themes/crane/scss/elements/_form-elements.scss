@@ -412,6 +412,26 @@ select:hover,select:focus{
 	}
 }
 
+/* UI DIALOG
+--------------------- */
+.ui-dialog.ui-dialog-off-canvas{
+	&:focus{
+		outline: none;
+	}
+	.ui-dialog-titlebar{
+		background: $darkGrey;
+	}
+	.ui-resizable-w{
+		border-color: $link;
+		background-color: $iceBlue;
+		&:hover{
+			background-color: $hoverLink;
+			border-color: $black;
+		} 
+	}//end ui-resize handle
+}//end ui-dialog
+
+
 /* DRAWERS
 ------------------ */
 .drawer-toggle{

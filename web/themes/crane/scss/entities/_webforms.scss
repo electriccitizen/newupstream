@@ -60,5 +60,10 @@
 		  -ms-transform: rotate(180deg);
 		  transform: rotate(180deg);
 		}
+	}//end expand all/collapse all
+	label + a.button{
+		margin-left: 10px;
 	}
 }//end form element popup
+
+

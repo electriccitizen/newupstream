@@ -5394,6 +5394,21 @@ select:hover, select:focus {
     text-decoration: none;
     margin: 0; }
 
+/* UI DIALOG
+--------------------- */
+.ui-dialog.ui-dialog-off-canvas:focus {
+  outline: none; }
+
+.ui-dialog.ui-dialog-off-canvas .ui-dialog-titlebar {
+  background: #4a4a4a; }
+
+.ui-dialog.ui-dialog-off-canvas .ui-resizable-w {
+  border-color: #026cc5;
+  background-color: #f2f9fb; }
+  .ui-dialog.ui-dialog-off-canvas .ui-resizable-w:hover {
+    background-color: #676767;
+    border-color: #121212; }
+
 /* DRAWERS
 ------------------ */
 .drawer-toggle {
@@ -5524,6 +5539,9 @@ span.file {
 ================== */
 #block-crane-help {
   padding: 3rem 0 0; }
+  #block-crane-help a.button {
+    margin-left: 10px;
+    margin-right: 10px; }
 
 #block-crane-content {
   padding: 3rem 0; }
@@ -7178,5 +7196,8 @@ body:not(.role-administrator) .view-id-block_content td.views-field-operations.Y
     background-image: url("../images/icons/admin-icons/chevron-down-grey.svg"); }
   .webform-ui-element-form .webform-details-toggle-state.expanded {
     transform: rotate(180deg); }
+
+.webform-ui-element-form label + a.button {
+  margin-left: 10px; }
 
 /*# sourceMappingURL=crane.css.map */
