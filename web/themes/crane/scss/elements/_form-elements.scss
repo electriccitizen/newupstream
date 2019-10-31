@@ -95,8 +95,16 @@
 /* GLOBAL FORM ELEMENTS
 ---------------------- */
 .js-form-item{
+	&:focus{
+		outline: none;
+	}
 	label{
 		margin-bottom: $spaceXxs;
+	}
+}
+.js-form-wrapper{
+	&:focus{
+		outline: none;
 	}
 }
 
@@ -185,6 +193,12 @@ optgroup:empty{
 	min-width: 150px;
 }
 .crane .select2-container--default,.entity-browser-form .select2-container--default{
+	&:focus{
+		outline: none;
+		*:focus{
+			outline: none;
+		}
+	}
 	.select2-selection--single{
 		@include selectInput;
 		&:hover{
@@ -490,3 +504,7 @@ fieldset:not(.form-composite){
 		}
 	}
 }//end cke-chrome
+
+
+
+

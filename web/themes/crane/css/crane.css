@@ -4979,8 +4979,14 @@ button:focus {
 ========================== */
 /* GLOBAL FORM ELEMENTS
 ---------------------- */
+.js-form-item:focus {
+  outline: none; }
+
 .js-form-item label {
   margin-bottom: 0.5rem; }
+
+.js-form-wrapper:focus {
+  outline: none; }
 
 /* TEXT FIELDS
 ----------------- */
@@ -5131,6 +5137,11 @@ optgroup:empty {
 
 .select2-container {
   min-width: 150px; }
+
+.crane .select2-container--default:focus, .entity-browser-form .select2-container--default:focus {
+  outline: none; }
+  .crane .select2-container--default:focus *:focus, .entity-browser-form .select2-container--default:focus *:focus {
+    outline: none; }
 
 .crane .select2-container--default .select2-selection--single, .entity-browser-form .select2-container--default .select2-selection--single {
   width: 100%;
@@ -7199,5 +7210,14 @@ body:not(.role-administrator) .view-id-block_content td.views-field-operations.Y
 
 .webform-ui-element-form label + a.button {
   margin-left: 10px; }
+
+.webform-ui-element-form .webform-element-help {
+  border: 0;
+  background: #026cc5;
+  position: relative;
+  top: -3px; }
+  .webform-ui-element-form .webform-element-help:hover, .webform-ui-element-form .webform-element-help:focus {
+    outline: none;
+    background: #676767; }
 
 /*# sourceMappingURL=crane.css.map */

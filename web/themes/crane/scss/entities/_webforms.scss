@@ -64,6 +64,17 @@
 	label + a.button{
 		margin-left: 10px;
 	}
+
+	.webform-element-help{
+		border: 0;
+		background: $link;
+		position: relative;
+		top: -3px;
+		&:hover,&:focus{
+			outline: none;
+			background: $hoverLink;
+		}
+	}
 }//end form element popup
 
 
