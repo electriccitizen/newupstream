@@ -9,8 +9,6 @@ dependencies:
     - entity_browser.browser.embedded_browser
     - media.type.image
     - media.type.video
-  content:
-    - 'file:file:cf0d0363-e980-4d9c-8bb4-ce4c5a29b93c'
   module:
     - entity_embed
     - media
@@ -31,4 +29,4 @@ type_settings:
   entity_browser: embedded_browser
   entity_browser_settings:
     display_review: false
-icon_uuid: cf0d0363-e980-4d9c-8bb4-ce4c5a29b93c
+icon_uuid: null
