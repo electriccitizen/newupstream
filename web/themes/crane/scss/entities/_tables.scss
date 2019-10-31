@@ -95,8 +95,16 @@
 
 	tbody tr{
 		border-bottom: 0;
-		&.selected td{
-			background: $rowSelectedBack;
+		&.selected{
+			td{
+				background: $rowSelectedBack;
+			}
+			&:hover{
+				td{
+					background: $iceBlue;
+					@include transColor(.3s);
+				}
+			}
 		}
 		//set table row colors
 		td{
@@ -116,7 +124,7 @@
 		}
 		&:hover{
 			background: $iceBlue;
-			@include transAll(.3s);
+			@include transColor(.3s);
 		}
 		th{
 			background: $tableHeaderBack;

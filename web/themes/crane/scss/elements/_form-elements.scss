@@ -237,7 +237,7 @@ optgroup:empty{
 		}//end search inline
 		.select2-selection__choice{
 			border-radius: 0;
-			background: $lightGrey;
+			background: $whiteGold;
 			margin-top: 8px;
 		}
 	}//end multiple
@@ -275,7 +275,7 @@ optgroup:empty{
 	line-height: 1.25;
 }
 .select2-container--default .select2-results__option[aria-selected="true"]{
-	background-color: $lightGrey;
+	background-color: $whiteGold;
 }
 .select2-container--default .select2-results__option--highlighted[aria-selected]{
 	background-color: $blue;

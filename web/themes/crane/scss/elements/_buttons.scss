@@ -322,10 +322,20 @@ $buttonPadding: 1.15rem 1.5rem 1rem;
 			border-right-color: transparent;
 		}
 		&.open{
+			position: relative;
+			.dropbutton-widget{
+				z-index: 999999;
+			}
 			.dropbutton-arrow{
 				border-width: 0 6px 5px;
 				border-top-color: transparent;
 				border-bottom-color: $darkGrey;
+			}
+		}
+		&:not(.open){
+			z-index: 0;
+			.dropbutton-widget{
+				z-index: 0;
 			}
 		}
 	}//end dropbutton

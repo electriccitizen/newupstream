@@ -4418,7 +4418,6 @@ a, .link {
   transition: color 0.3s ease, background-color 0.3s ease;
   -moz-transition: color 0.3s ease, background-color 0.3s ease;
   -webkit-transition: color 0.3s ease, background-color 0.3s ease;
-  -webkit-transform: translateZ(0);
   text-shadow: none; }
   .button:hover, .button:focus {
     color: #121212;
@@ -4456,7 +4455,6 @@ a, .link {
   transition: color 0.3s ease, background-color 0.3s ease;
   -moz-transition: color 0.3s ease, background-color 0.3s ease;
   -webkit-transition: color 0.3s ease, background-color 0.3s ease;
-  -webkit-transform: translateZ(0);
   text-shadow: none;
   background: #026cc5;
   color: #ffffff;
@@ -4505,7 +4503,6 @@ a, .link {
   transition: color 0.3s ease, background-color 0.3s ease;
   -moz-transition: color 0.3s ease, background-color 0.3s ease;
   -webkit-transition: color 0.3s ease, background-color 0.3s ease;
-  -webkit-transform: translateZ(0);
   text-shadow: none;
   background: #026cc5;
   color: #ffffff;
@@ -4573,7 +4570,6 @@ a, .link {
   transition: color 0.3s ease, background-color 0.3s ease;
   -moz-transition: color 0.3s ease, background-color 0.3s ease;
   -webkit-transition: color 0.3s ease, background-color 0.3s ease;
-  -webkit-transform: translateZ(0);
   text-shadow: none;
   background: #026cc5;
   color: #ffffff;
@@ -4639,7 +4635,6 @@ a, .link {
   transition: color 0.3s ease, background-color 0.3s ease;
   -moz-transition: color 0.3s ease, background-color 0.3s ease;
   -webkit-transition: color 0.3s ease, background-color 0.3s ease;
-  -webkit-transform: translateZ(0);
   text-shadow: none;
   background: transparent;
   border: 1px solid #026cc5;
@@ -4726,7 +4721,6 @@ a, .link {
   transition: color 0.3s ease, background-color 0.3s ease;
   -moz-transition: color 0.3s ease, background-color 0.3s ease;
   -webkit-transition: color 0.3s ease, background-color 0.3s ease;
-  -webkit-transform: translateZ(0);
   text-shadow: none; }
   .button--primary:hover, .button--primary:focus {
     color: #121212;
@@ -4764,7 +4758,6 @@ a, .link {
   transition: color 0.3s ease, background-color 0.3s ease;
   -moz-transition: color 0.3s ease, background-color 0.3s ease;
   -webkit-transition: color 0.3s ease, background-color 0.3s ease;
-  -webkit-transform: translateZ(0);
   text-shadow: none;
   background: transparent;
   border: 1px solid #026cc5;
@@ -4851,7 +4844,6 @@ a, .link {
   transition: color 0.3s ease, background-color 0.3s ease;
   -moz-transition: color 0.3s ease, background-color 0.3s ease;
   -webkit-transition: color 0.3s ease, background-color 0.3s ease;
-  -webkit-transform: translateZ(0);
   text-shadow: none;
   background: #026cc5;
   color: #ffffff;
@@ -4903,10 +4895,19 @@ a, .link {
   border-left-color: transparent;
   border-right-color: transparent; }
 
-.js .dropbutton-multiple.open .dropbutton-arrow, .js .dropbutton-wrapper.open .dropbutton-arrow, .js .dropbutton-single.open .dropbutton-arrow {
-  border-width: 0 6px 5px;
-  border-top-color: transparent;
-  border-bottom-color: #4a4a4a; }
+.js .dropbutton-multiple.open, .js .dropbutton-wrapper.open, .js .dropbutton-single.open {
+  position: relative; }
+  .js .dropbutton-multiple.open .dropbutton-widget, .js .dropbutton-wrapper.open .dropbutton-widget, .js .dropbutton-single.open .dropbutton-widget {
+    z-index: 999999; }
+  .js .dropbutton-multiple.open .dropbutton-arrow, .js .dropbutton-wrapper.open .dropbutton-arrow, .js .dropbutton-single.open .dropbutton-arrow {
+    border-width: 0 6px 5px;
+    border-top-color: transparent;
+    border-bottom-color: #4a4a4a; }
+
+.js .dropbutton-multiple:not(.open), .js .dropbutton-wrapper:not(.open), .js .dropbutton-single:not(.open) {
+  z-index: 0; }
+  .js .dropbutton-multiple:not(.open) .dropbutton-widget, .js .dropbutton-wrapper:not(.open) .dropbutton-widget, .js .dropbutton-single:not(.open) .dropbutton-widget {
+    z-index: 0; }
 
 .js .views-edit-view .dropbutton-multiple .dropbutton-widget, .js .views-edit-view .dropbutton-wrapper .dropbutton-widget, .js .views-edit-view .dropbutton-single .dropbutton-widget {
   border-radius: 0;
@@ -5223,7 +5224,7 @@ optgroup:empty {
           color: #121212; }
   .crane .select2-container--default .select2-selection--multiple .select2-selection__choice, .entity-browser-form .select2-container--default .select2-selection--multiple .select2-selection__choice {
     border-radius: 0;
-    background: #ededed;
+    background: #fbf9db;
     margin-top: 8px; }
 
 .crane .select2-container--default.select2-container--open, .crane .select2-container--default.select2-container--focus, .entity-browser-form .select2-container--default.select2-container--open, .entity-browser-form .select2-container--default.select2-container--focus {
@@ -5253,7 +5254,7 @@ optgroup:empty {
   line-height: 1.25; }
 
 .select2-container--default .select2-results__option[aria-selected="true"] {
-  background-color: #ededed; }
+  background-color: #fbf9db; }
 
 .select2-container--default .select2-results__option--highlighted[aria-selected] {
   background-color: #026cc5; }
@@ -5305,7 +5306,6 @@ select:hover, select:focus {
     transition: color 0.3s ease, background-color 0.3s ease;
     -moz-transition: color 0.3s ease, background-color 0.3s ease;
     -webkit-transition: color 0.3s ease, background-color 0.3s ease;
-    -webkit-transform: translateZ(0);
     text-shadow: none;
     margin-bottom: 0; }
     .form-type-managed-file .file-upload-wrapper .fake-button:hover, .form-type-managed-file .file-upload-wrapper .fake-button:focus {
@@ -6321,7 +6321,6 @@ body:not(.role-administrator) .admin-list li.social-media-links {
       transition: color 0.3s ease, background-color 0.3s ease;
       -moz-transition: color 0.3s ease, background-color 0.3s ease;
       -webkit-transition: color 0.3s ease, background-color 0.3s ease;
-      -webkit-transform: translateZ(0);
       text-shadow: none;
       background: #026cc5;
       color: #ffffff;
@@ -6739,7 +6738,12 @@ body:not(.role-administrator) .admin-list li.social-media-links {
   .crane table tbody tr {
     border-bottom: 0; }
     .crane table tbody tr.selected td {
-      background: #f2f9fb; }
+      background: #fbf9db; }
+    .crane table tbody tr.selected:hover td {
+      background: #f2f9fb;
+      transition: color 0.3s ease, background-color 0.3s ease;
+      -moz-transition: color 0.3s ease, background-color 0.3s ease;
+      -webkit-transition: color 0.3s ease, background-color 0.3s ease; }
     .crane table tbody tr td {
       border-bottom: 1px solid #676767; }
     .crane table tbody tr:nth-of-type(odd) {
@@ -6752,10 +6756,9 @@ body:not(.role-administrator) .admin-list li.social-media-links {
         color: #121212; }
     .crane table tbody tr:hover {
       background: #f2f9fb;
-      transition: all 0.3s ease;
-      -moz-transition: all 0.3s ease;
-      -webkit-transition: all 0.3s ease;
-      -webkit-transform: translateZ(0); }
+      transition: color 0.3s ease, background-color 0.3s ease;
+      -moz-transition: color 0.3s ease, background-color 0.3s ease;
+      -webkit-transition: color 0.3s ease, background-color 0.3s ease; }
     .crane table tbody tr th {
       background: #ededed;
       color: #121212; }
@@ -7001,7 +7004,6 @@ body:not(.role-administrator) .admin-list li.social-media-links {
     transition: color 0.3s ease, background-color 0.3s ease;
     -moz-transition: color 0.3s ease, background-color 0.3s ease;
     -webkit-transition: color 0.3s ease, background-color 0.3s ease;
-    -webkit-transform: translateZ(0);
     text-shadow: none;
     background: #026cc5;
     color: #ffffff;

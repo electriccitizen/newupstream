@@ -12,7 +12,6 @@
 	transition: color $time ease,background-color $time ease;
 	-moz-transition: color $time ease,background-color $time ease;
 	-webkit-transition: color $time ease,background-color $time ease;
-	-webkit-transform: translateZ(0);
 }
 
 ///mixin - transAll(.3s)
