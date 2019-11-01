@@ -59,7 +59,14 @@
 
 		{% block links %}
 			{%- if content.field_link_multi.0 or content.field_file_multi.0 -%}
-				<div class="field links-files">
+				{% set count = 0%}
+				{%- for key, link in content.field_link_multi if key|first != "#" -%}
+					{% set count = count + 1 %}
+				{% endfor %}
+				{%- for key, file in content.field_file_multi['#items'] if key|first != "#" -%}
+					{% set count = count + 1 %}
+				{% endfor %}
+				<div class="field links-files{% if count > 3 %} multi-col{% endif %}">
 					{%- for key, link in content.field_link_multi if key|first != "#" -%}
 						<div class="lf-item"><a href="{{ link['#url'] }}">{{ link['#title'] }}</a></div>
 					{%- endfor -%}
