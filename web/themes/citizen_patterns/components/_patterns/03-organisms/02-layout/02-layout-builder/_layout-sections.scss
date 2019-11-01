@@ -21,49 +21,6 @@
 	}
 }
 
-
-/* ONE COLUMN DEFAULT LAYOUT */
-.layout--onecol{
-
-}//end layout-onecol
-
-/* TWO COLUMN SIDEBAR (Macro Variable) */
-.layout--twocol-sidebar{
-	width: 100%;
-	max-width: $contentStop;
-	@include auto;
-	@include safeFlex(row,wrap,start,start);
-	.layout__region--content{
-		width: 100%;
-		@include desk{
-			&:not(:only-child){
-				@include calc(width, "100% - "$sideBar);
-				&:not(.ui-sortable){
-					padding-right: $sectionGutter;
-				}
-			}
-		}
-	}
-	.layout__region--sidebar{
-		width: 100%;
-		@include desk{
-			width: $sideBar;
-		}
-	}//end layout region second
-	&.side-left{
-		.layout__region--content{
-			@include safeFlexOrder(2);
-			@include desk{
-				&:not(.ui-sortable){
-					padding-left: $sectionGutter;
-					padding-right: 0;
-				}
-			}
-		}
-	}
-}//end layout-twocol-sideleft
-
-
 /* TWO COLUMN SIDEBAR LEFT */
 .layout--twocol-sideleft{
 	width: 100%;

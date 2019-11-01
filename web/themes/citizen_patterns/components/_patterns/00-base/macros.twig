@@ -35,14 +35,6 @@
 </div>
 {% macro formElements() %}custom-options{% endmacro %}
 
-{#######  LAYOUT VARIABLES  #######}
-<div class="macro-tile">
-<p><strong>Sidebar Position</strong></br>
-	VARIABLES= side-left, side-right</br>		
-</p>
-</div>
-{% macro sidebar() %}side-left{% endmacro %}
-
 {#######  FOOTER VARIABLES  #######}
 <div class="macro-tile">
 <p><strong>Footer Version</strong></br>
@@ -66,25 +58,3 @@
 </div>
 {% macro newsletterDisplay() %}modal{% endmacro %}
 
-
-
-
-{#######  SVG VIEWBOX POSITIONS  ########}
-
-{# SOCIAL MEDIA WIDGET ICONS 
-	--------------------------- #}
-<div class="macro-tile">
-<p><strong>SOCIAL MEDIA WIDGET ICONS</strong></br>
-	These variables define the viewbox positions.</br>
-	DRUPAL= 0 0 80 80</br>
-	FACEBOOK= 80 0 80 80</br>
-	TWITTER= 80 80 80 80</br>
-	LINKEDIN= 0 80 80 80</br>
-	YOUTUBE= 160 0 80 80</br>
-</p>
-</div>
-{% macro drupal()%}0 0 80 80{% endmacro %}
-{% macro facebook()%}80 0 80 80{% endmacro %}
-{% macro twitter()%}80 80 80 80{% endmacro %}
-{% macro linkedin()%}0 80 80 80{% endmacro %}
-{% macro youtube()%}160 0 80 80{% endmacro %}

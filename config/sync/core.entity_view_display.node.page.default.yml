@@ -76,12 +76,12 @@ third_party_settings:
             weight: 2
         third_party_settings: {  }
       -
-        layout_id: two_column_sidebar
+        layout_id: two_column_sidebar_left
         layout_settings: {  }
         components:
           8b5f525e-0dcc-435f-bbdf-eabc88b5e8b6:
             uuid: 8b5f525e-0dcc-435f-bbdf-eabc88b5e8b6
-            region: sidebar
+            region: first
             configuration:
               id: 'menu_block:main'
               label: 'In This Section'
@@ -161,7 +161,8 @@ third_party_settings:
         core: {  }
       allowed_layouts:
         - layout_onecol
-        - two_column_sidebar
+        - two_column_sidebar_left
+        - two_column_sidebar_right
 _core:
   default_config_hash: 6cLH5reWp4HB-2AJp7PY1kXioC8KrzluoED6Q9UGPHw
 id: node.page.default
