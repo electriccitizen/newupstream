@@ -47,6 +47,59 @@
 	& ~ .js-form-type-vertical-tabs{
 		display: none;
 	}
+
+	/* PRETTIFY LAYOUT BUILDER PREVIEW CONTENT */
+	.layout-builder-block{
+		.field,a{
+			word-break: break-all;
+		}
+		//trim long text fields down to a max height
+		.text-long,.text-with-summary{
+			max-height: 200px;
+			overflow: hidden;
+			position: relative;
+			min-height: 60px;
+			&:after{
+				content: '';
+				display: block;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				height: 60px;
+				@include gradient(bottom,$siteBack,rgba(255,255,255,0));
+			}
+		}//end long text fields
+		.widget-anchors{
+			display: none;
+		}
+		.field-paragraphs .section{
+			//constrian to max height
+			max-height: 200px;
+			overflow: hidden;
+			position: relative;
+			min-height: 60px;
+			&:after{
+				content: '';
+				display: block;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				height: 60px;
+				@include gradient(bottom,$siteBack,rgba(255,255,255,0));
+			}
+			//remove section backgrounds and reset to dark text.
+			&.background{
+				background: none;
+				@include lightBack;
+			}
+			//only show first section
+			&:not(:first-child){
+				display: none;
+			}
+		}//end .section paragraph
+	}//end layout builder block
 }//end layout builder form
 
 
