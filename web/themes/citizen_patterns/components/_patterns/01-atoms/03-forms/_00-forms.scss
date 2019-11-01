@@ -207,6 +207,24 @@ fieldset{
 	}
 }//end fieldset
 
+/* AUTOCOMPLETE DROPDOWN
+-------------------------- */
+.ui-autocomplete {
+	#drupal-off-canvas &{
+		background: $siteBack;
+	}
+	.ui-menu-item-wrapper{
+		display: block;
+		font-size: 1.5rem;
+		&.ui-state-active{
+			background: $link;
+			border-color: $link;
+			color: $white;
+			text-decoration: none;
+			margin: 0;
+		}
+	}
+}
 
 /* USER LOGIN
 --------------- */

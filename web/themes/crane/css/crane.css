@@ -5654,7 +5654,7 @@ span.file {
         width: 3px;
         height: 100%;
         width: 3px;
-        background: #fcd105; }
+        background: #fcdc01; }
     .entity-meta .seven-details .seven-details {
       border-bottom: 0; }
       .entity-meta .seven-details .seven-details#edit-field-metatags-0-basic .seven-details__summary {
@@ -5804,14 +5804,14 @@ body:not(.role-administrator) .admin-list li.social-media-links {
   border-left: 10px solid;
   box-shadow: none; }
   .messages a {
-    color: #fcd105; }
+    color: #fcdc01; }
     .messages a:hover, .messages a:focus {
       opacity: .6; }
   .messages.messages--error {
     border-color: #c41294;
     background-image: url("../images/icons/message/message-error.svg"); }
   .messages.messages--warning {
-    border-color: #fcd105;
+    border-color: #fcdc01;
     background-image: url("../images/icons/message/message-warning.svg"); }
   .messages.messages--status {
     border-color: #018901;
@@ -5845,7 +5845,7 @@ body:not(.role-administrator) .admin-list li.social-media-links {
   border-color: #c41294; }
 
 .system-status-counter.system-status-counter--warning {
-  border-color: #fcd105; }
+  border-color: #fcdc01; }
 
 .system-status-counter.system-status-counter--checked {
   border-color: #018901; }
@@ -5871,7 +5871,7 @@ body:not(.role-administrator) .admin-list li.social-media-links {
   border-color: #c41294; }
 
 .color-warning {
-  border-color: #fcd105; }
+  border-color: #fcdc01; }
 
 .color-checked {
   border-color: #018901; }
@@ -5899,7 +5899,7 @@ body:not(.role-administrator) .admin-list li.social-media-links {
   background-image: url("../images/icons/message/message-warning.svg");
   background-repeat: no-repeat;
   background-size: 16px 16px;
-  border-left: 4px solid #fcd105; }
+  border-left: 4px solid #fcdc01; }
 
 /* ========================
   MODALS
@@ -5950,9 +5950,9 @@ body:not(.role-administrator) .admin-list li.social-media-links {
           background: #b3b3b3;
           color: #121212; }
         .entity-browser-form .eb-tabs ul li a.is-active {
-          background: #fcd105;
+          background: #fcdc01;
           color: #121212;
-          border-color: #fcd105; }
+          border-color: #fcdc01; }
           .entity-browser-form .eb-tabs ul li a.is-active:hover, .entity-browser-form .eb-tabs ul li a.is-active:focus {
             background: #cccccc;
             color: #121212; }
@@ -6032,7 +6032,7 @@ body:not(.role-administrator) .admin-list li.social-media-links {
     .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded #toolbar-bar.dev .toolbar-tab .toolbar-item {
       color: #ffffff !important; }
   .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded #toolbar-bar.test {
-    background: #fcd105; }
+    background: #fcdc01; }
     .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded #toolbar-bar.test .toolbar-tab .toolbar-item {
       color: #121212 !important; }
   .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded #toolbar-bar.live {
@@ -6114,9 +6114,9 @@ body:not(.role-administrator) .admin-list li.social-media-links {
       #block-tabs-2 .tabs.primary .tabs__tab.is-active:not(:first-child) {
         margin: 0 0 0 -1px; }
       #block-tabs-2 .tabs.primary .tabs__tab.is-active a {
-        background: #fcd105;
+        background: #fcdc01;
         color: #121212;
-        border-color: #fcd105; }
+        border-color: #fcdc01; }
         #block-tabs-2 .tabs.primary .tabs__tab.is-active a:hover, #block-tabs-2 .tabs.primary .tabs__tab.is-active a:focus {
           background: #cccccc;
           color: #121212; }
@@ -7187,8 +7187,8 @@ body:not(.role-administrator) .view-id-block_content td.views-field-operations.Y
     padding: 0; }
 
 .webform-ui-element-form .webform-tabs .ui-tabs-active.ui-state-active {
-  background: #fcd105;
-  border-color: #fcd105; }
+  background: #fcdc01;
+  border-color: #fcdc01; }
   .webform-ui-element-form .webform-tabs .ui-tabs-active.ui-state-active a {
     color: #121212; }
 

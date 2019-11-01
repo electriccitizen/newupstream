@@ -22,6 +22,7 @@ $submitPadding: 0 1.5rem;
 			background-image: none !important;
 			border-radius: 0 !important;
 			box-shadow: none;
+			outline: 0;
 		}
 		&:active{
 			background: $buttonBackActive;
@@ -52,6 +53,7 @@ $submitPadding: 0 1.5rem;
 		background-color: $buttonBackHover;
 		@include transAll(.3s);
 		text-decoration: none;
+		outline: 0;
 	}
 	&:active{
 		color: $buttonTextActive;
@@ -71,6 +73,7 @@ $submitPadding: 0 1.5rem;
 				color: $buttonTextHover;
 				background-color: $buttonBackHover;
 				@include transAll(.3s);
+				outline: 0;
 			}
 			&:active{
 				color: $buttonTextActive;
@@ -208,6 +211,7 @@ $submitPadding: 0 1.5rem;
 		background: $white !important;
 		color: $link;
 		border-color: $link;
+		outline: 0;
 	}
 }
 

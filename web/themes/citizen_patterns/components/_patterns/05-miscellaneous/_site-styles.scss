@@ -508,13 +508,10 @@ body {
 	}
 }
 
-/* MODERATION SIDEBAR
------------------------- */
-.ui-dialog-off-canvas #drupal-off-canvas{ 
-	.js-form-type-checkbox{
-		@include customOptions;
-	}
-}
+/* NON-LAYOUT-BUILDER SIDEBAR PANELS AND OFF CANVAS
+-------------------------------------------- */
+
+/* MODERATION SIDEBAR */
 .moderation-sidebar-actions{
 	a,input.button{
 		&:hover,&:focus{
@@ -522,3 +519,71 @@ body {
 		}
 	}
 }
+
+/* DIALOGS */
+.ui-dialog .ui-dialog-title{
+	white-space: normal;
+}
+.ui-dialog-off-canvas + .select2-container--open .select2-dropdown{
+	font-size: 1.4rem;
+}
+
+/* OFF CANVAS */
+.ui-dialog-off-canvas #drupal-off-canvas{
+	.js-form-type-checkbox{
+		@include customOptions;
+	}
+	.ui-autocomplete li a{
+		background: $siteBack;
+		font-size: 1.4rem;
+		&.ui-state-active{
+			background: $link;
+			border-color: $link;
+			color: $white !important;
+			text-decoration: none;
+			margin: 0;
+		}
+	}
+
+	.form-item{
+		margin-bottom: $spaceSm;
+	}
+
+	.form-text{
+		color: $darkGrey;
+		border: 2px solid $link;
+		background: $white;
+		margin-top: $spaceXxs;
+		&:focus{
+			@include placeholderFocus;
+			outline: none;
+			border-color: $link;
+			box-shadow: inset 0 0 0 1px $link;
+			background: $offWhite;
+		}
+	}//end form-text
+
+	.js-form-type-checkbox{
+		label{
+			display: inline-block;
+		}
+	}
+
+	.select2-container--default{
+		margin-top: $spaceXxs;
+		max-width: 100%;
+		.select2-selection--single,.select2-selection--multiple{
+			border-color: $link;
+			font-size: 1.4rem;
+		}//end select 2 selection single
+	}//end select2 container default
+
+	input[type="submit"].button--primary{
+		@include submitButton;
+		border-radius: 0;
+	}
+	a.button.dialog-cancel{
+		margin-top: -$spaceXs;
+		@include cautionButton;
+	}
+}//end off canvas

@@ -24,7 +24,7 @@ Drupal.behaviors.userLogin = {
 Drupal.behaviors.select2 = {
   attach: function (context, settings) {
     $("select", context).once('selects').each(function(){
-      $( 'form:not(.layout-builder-add-block):not(.layout-builder-update-block) select' ).select2({
+      $( 'form select' ).select2({
         placeholder: "Select an option"
       });
       $(".js-form-type-select", context).once('selectAccessiblity').each(function(){
