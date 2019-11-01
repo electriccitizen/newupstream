@@ -144,7 +144,6 @@ third_party_settings:
         AddToAny: {  }
         'Chaos Tools': {  }
         Content: {  }
-        core: {  }
         Flippy: {  }
         Forms: {  }
         Help: {  }
@@ -157,6 +156,9 @@ third_party_settings:
           - system_breadcrumb_block
         User: {  }
         'User fields': {  }
+        Webform:
+          - webform_block
+        core: {  }
       allowed_layouts:
         - layout_onecol
         - two_column_sidebar
@@ -200,3 +202,4 @@ content:
 hidden:
   field_metatags: true
   links: true
+  search_api_excerpt: true

@@ -144,10 +144,13 @@ third_party_settings:
           - system_breadcrumb_block
         User: {  }
         'User fields': {  }
-        Webform: {  }
+        Webform:
+          - webform_block
         core: {  }
       allowed_layouts:
         - layout_onecol
+        - two_column_sidebar_left
+        - two_column_sidebar_right
 _core:
   default_config_hash: 1h2sEQ222bYyFk67-1xEhAMXEdbzEI367eTDmO2XiM8
 id: node.landing_page.default
@@ -194,3 +197,4 @@ content:
 hidden:
   addtoany: true
   layout_builder__layout: true
+  search_api_excerpt: true
