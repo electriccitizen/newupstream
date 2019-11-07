@@ -5234,7 +5234,7 @@ optgroup:empty {
           color: #121212; }
   .crane .select2-container--default .select2-selection--multiple .select2-selection__choice, .entity-browser-form .select2-container--default .select2-selection--multiple .select2-selection__choice {
     border-radius: 0;
-    background: #fbf9db;
+    background: #fefbc7;
     margin-top: 8px; }
 
 .crane .select2-container--default.select2-container--open, .crane .select2-container--default.select2-container--focus, .entity-browser-form .select2-container--default.select2-container--open, .entity-browser-form .select2-container--default.select2-container--focus {
@@ -5264,7 +5264,7 @@ optgroup:empty {
   line-height: 1.25; }
 
 .select2-container--default .select2-results__option[aria-selected="true"] {
-  background-color: #fbf9db; }
+  background-color: #fefbc7; }
 
 .select2-container--default .select2-results__option--highlighted[aria-selected] {
   background-color: #026cc5; }
@@ -6743,7 +6743,7 @@ body:not(.role-administrator) .admin-list li.social-media-links {
   .crane table tbody tr {
     border-bottom: 0; }
     .crane table tbody tr.selected td {
-      background: #fbf9db; }
+      background: #fefbc7; }
     .crane table tbody tr.selected:hover td {
       background: #f2f9fb;
       transition: color 0.3s ease, background-color 0.3s ease;
