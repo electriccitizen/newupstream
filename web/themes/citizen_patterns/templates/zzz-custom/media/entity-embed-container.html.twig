@@ -14,15 +14,14 @@
 #}
 {% set display = element['#context']['data-entity-embed-display']|clean_class %}
 
-{% set align = element['#attributes']['data-align'] %}
+{% set classes = attributes.class|join(' ') %}
 
 {% set bundle = element['#entity'].bundle() %}
-
 
 {%- if (bundle == 'document') -%}
 	{{- children -}}
 {%- else -%}
-<div class="citizen-media {{ display }} {{ align }}">
+<div class="{{ display }} {{ classes }}">
 	{{- children -}}
 </div>
 {%- endif -%}

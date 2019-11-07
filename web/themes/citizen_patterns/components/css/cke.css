@@ -5,7 +5,7 @@ html {
 	font-family: Helvetica, Arial, sans-serif;
 }
 
-.media--type-image img{
+.embedded-entity img{
 	max-width: 100%;
 	height: auto;
 }

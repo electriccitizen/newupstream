@@ -32,29 +32,33 @@ img{
 
 /* MEDIA IN WYSIWYG 
 ------------------- */
-.citizen-media{
-	margin-bottom: $spaceLg;
+.embedded-entity{
+	margin-bottom: $spaceMd;
 
 	//embedded alignment (images only )
-	&.right{
+	&.align-right{
+		@include onlySmall{
+			float: none;
+		}
 		@include tab {
-			float: right;
 			margin-left: 2rem;
 			&:not(.view-modemediasmall-embed){
 				max-width: 50%;
 			}
 		}
 	}
-	&.left{
+	&.align-left{
+		@include onlySmall{
+			float: none;
+		}
 		@include tab {
-			float: left;
 			margin-right: 2rem;
 			&:not(.view-modemediasmall-embed){
 				max-width: 50%;
 			}
 		}
 	}
-	&.center{
+	&.align-center{
 		@include auto;
 	}
 	.player .vp-player-layout{
