@@ -4802,7 +4802,8 @@ button:focus {
   border-color: #026cc5;
   background: #026cc5;
   color: #ffffff;
-  font-weight: 700; }
+  font-weight: 700;
+  margin-bottom: 0.5rem; }
   .draggable .ief-entity-operations .form-submit:not(.image-button):hover, .draggable .ief-entity-operations .form-submit:not(.image-button):focus, .draggable .fieldset-wrapper .container-inline .form-submit:not(.image-button):hover, .draggable .fieldset-wrapper .container-inline .form-submit:not(.image-button):focus {
     border-color: #cccccc;
     background: #cccccc;
@@ -7170,7 +7171,16 @@ body:not(.role-administrator) .view-id-block_content td.views-field-operations.Y
     text-align: center;
     color: #ffffff; }
   .eb-media .views-field-bundle {
-    padding-top: 0; }
+    position: relative; }
+    .eb-media .views-field-bundle:before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 30%;
+      top: 0;
+      width: 40%;
+      height: 1px;
+      background: #ffffff; }
 
 /* ========================
   WEBFORMS

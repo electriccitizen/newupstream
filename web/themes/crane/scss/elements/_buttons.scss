@@ -264,6 +264,7 @@ button{
 			background: $buttonBack;
 			color: $buttonText;
 			font-weight: $heavy;
+			margin-bottom: $spaceXxs;
 			&:hover,&:focus{
 				border-color: $buttonBackHover;
 				background: $buttonBackHover;
