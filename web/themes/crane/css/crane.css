@@ -5478,6 +5478,17 @@ fieldset:not(.form-composite) {
 .media-library-item__attributes {
   min-height: 22px; }
 
+/* CAPTION FIELD
+------------------- */
+.field--name-field-caption .js-form-type-textarea textarea {
+  max-width: 600px;
+  max-height: 76px; }
+
+/* FOCAL POINT THUMBNAIL
+-------------------------- */
+.focal-point-preview-link {
+  margin-top: .75rem; }
+
 /* CUSTOM DOCUMENT ICONS
 ----------------------- */
 .eb-media .views-field .file-extension > span, .eb-media.view-display-id-embed_browser .views-field-thumbnail__target-id > span.doc {
@@ -5519,12 +5530,6 @@ fieldset:not(.form-composite) {
   background-size: contain; }
   .view-media.view-display-id-media_page_list .views-field-thumbnail__target-id span.doc img {
     display: none; }
-
-/* CAPTION FIELD
-------------------- */
-.field--name-field-caption .js-form-type-textarea textarea {
-  max-width: 600px;
-  max-height: 76px; }
 
 /* FILE ICONS
 --------------- */
@@ -5978,9 +5983,14 @@ body:not(.role-administrator) .admin-list li.social-media-links {
   .entity-browser-form #edit-inline-entity-form-field-media-categories--description {
     margin-top: 1rem;
     line-height: 1.4; }
+  .entity-browser-form.entity-browser-embedded-browser-form .focal-point-preview-link {
+    display: none; }
 
 /* ENTITY EMBED DIALOG
 ------------------------ */
+.entity-embed-dialog-step--embed .js-form-item-attributes-data-entity-embed-display-settings-alt {
+  display: none; }
+
 .entity-embed-dialog-step--embed[action="/entity-embed/dialog/basic_html/document"] .js-form-item-entity a {
   position: relative;
   padding-left: 20px; }

@@ -89,10 +89,21 @@
 		margin-top: $spaceXs;
 		line-height: 1.4;
 	}
+	&.entity-browser-embedded-browser-form{
+		.focal-point-preview-link{
+			display: none;
+		}
+	}
 }//end eb modal form
 
 /* ENTITY EMBED DIALOG
 ------------------------ */
+.entity-embed-dialog-step--embed{
+	.js-form-item-attributes-data-entity-embed-display-settings-alt{
+		display: none;
+	}
+}//end entity embed dialog step
+
 //document embed dialog
 .entity-embed-dialog-step--embed[action="/entity-embed/dialog/basic_html/document"]{
 	.js-form-item-entity{

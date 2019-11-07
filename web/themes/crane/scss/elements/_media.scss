@@ -5,6 +5,23 @@
 	min-height: 22px;
 }
 
+/* CAPTION FIELD
+------------------- */
+.field--name-field-caption{
+	.js-form-type-textarea{
+		textarea{
+			max-width: 600px;
+			max-height: 76px;
+		}
+	}
+}
+
+/* FOCAL POINT THUMBNAIL
+-------------------------- */
+.focal-point-preview-link{
+	margin-top: .75rem;
+}
+
 /* CUSTOM DOCUMENT ICONS
 ----------------------- */
 %customIconWrap{
@@ -101,18 +118,6 @@
 		}
 	}
 }//end media view list
-
-/* CAPTION FIELD
-------------------- */
-.field--name-field-caption{
-	.js-form-type-textarea{
-		textarea{
-			max-width: 600px;
-			max-height: 76px;
-		}
-	}
-}
-
 
 /* FILE ICONS
 --------------- */
