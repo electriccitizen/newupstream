@@ -1,6 +1,8 @@
 /* ===============
    FORMS
 ================= */
+$formElementBorderWidth: 2px;
+$elementBorder: $formElementBorderWidth solid $formElementBorder;
 
 @mixin placeholder{
 	$placeTint: .4;
@@ -43,12 +45,12 @@
 }
 
 @mixin textInput{
-	border: 2px solid $formElementBorder;
+	border: $elementBorder;
 	font-size: 1.6rem;
 	font-family: $bodyFont;
 	padding: 8px 6px 9px;
 	width: 100%;
-	line-height: 1;
+	line-height: 1.4;
 	min-height: 44px;
 	@include placeholder;
 	&:hover{
@@ -82,7 +84,7 @@
 		-ms-user-select: none;
 		user-select: none;
 		outline: none;
-		border: 2px solid $checkbox;
+		border: $formElementBorderWidth solid $checkbox;
 		width: 18px;
 		height: 18px;
 		background-color: $siteBack;
@@ -170,25 +172,21 @@ input[type="submit"].button{
 	@include required;
 }
 
-//help
-.webform-element-help{
-	border: 0;
-	background: $link;
-	position: relative;
-	top: -3px;
-	&:hover,&:focus{
-		outline: none;
-		background: $hoverLink;
-	}
-}
-
 //descriptions
 .description{
-	@include smaller;
+	font-size: 1.6rem;
+}
+.webform-element-description{
+	font-size: 1.6rem;
+	padding-bottom: $spaceXs;
 }
 input + .description{
 	padding-top: $spaceXs;
+	.webform-element-description{
+		padding-bottom: 0;
+	}
 }
+
 
 //fieldsets
 fieldset{
@@ -197,13 +195,13 @@ fieldset{
 	margin: 0;
 	legend{
 		font-weight: $heavy;
-		@include larger;
+		font-size: 2.2rem;
 		margin-bottom: $spaceXs;
 	}
-	&:not(.js-webform-type-radios){
-		.fieldset-wrapper{
-			margin: 0 2rem;
-		}
+	
+	&.webform-composite-hidden-title{
+		margin-top: 0;
+		margin-bottom: $spaceMd;
 	}
 }//end fieldset
 
@@ -225,6 +223,221 @@ fieldset{
 		}
 	}
 }
+
+/* WEBFORMS
+----------- */
+.webform-submission-form{
+	max-width: $textMax;
+	@include auto;
+	padding-top: $spaceMd;
+	.webform-element-help{
+		margin: 0;
+		height: 16px;
+		width: 16px;
+		line-height: 16px;
+		top: -5px;
+		border: 0;
+		background: $link;
+		position: relative;
+		&:hover,&:focus{
+			outline: none;
+			background: $hoverLink;
+		}
+	}//end element help
+	.form-actions{
+		padding-top: $spaceMd;
+		@include safeFlex(row,wrap,justify,start);
+	}
+}//end webform submission form
+
+/* CONFIRMATION
+------------------ */
+.webform-confirmation{
+	max-width: $textMax;
+	@include auto;
+	border: $elementBorder;
+	padding: 2rem;
+	text-align: center;
+	.webform-confirmation__back{
+		a{
+			@include button;
+			margin-bottom: 0;
+		}
+	}
+}//end webform confirmation
+
+
+
+/* OBSCURE WEBFORM ELEMENTS
+------------------------- */
+//pager
+.webform-progress{
+	& ~ .form-actions{
+		border-top: $elementBorder;
+		margin-top: $spaceMd;
+	}
+	.webform-progress-tracker{
+		padding-bottom: $spaceMd;
+		.progress-step{
+			&:after{
+				background-color: $progressBar;
+			}
+			&:not(.is-active){
+				.progress-marker{
+					background-color: $progressMarker;
+					color: $progressMarkerText;
+				}
+			}
+			&.is-active{
+				.progress-marker{
+					background-color: $progressMarkerActive;
+					color: $progressMarkerActiveText;
+				}
+				&:hover{
+					.progress-marker{
+						background-color: $progressMarkerActive;
+						color: $progressMarkerActiveText;
+					}
+				}
+			}
+			.progress-marker{
+				line-height: 1;
+				padding-bottom: 0;
+				font-weight: 700;
+				font-size: 1.6rem;	
+			}
+		}//end progress step
+	}//end progress tracker
+}//end pager
+
+//number range
+.js-form-type-range{
+	$knobSize: 18px;
+	.form-range{
+		margin-bottom: $spaceSm;
+		-webkit-appearance: none;
+		width: 100%;
+		height: 100%;
+		background: transparent;
+		max-width: 400px;
+		&:focus {
+			outline: none;
+		}
+		//WEBKIT
+		&::-webkit-slider-thumb {
+			-webkit-appearance: none;
+			height: $knobSize;
+			width: $knobSize;
+			border-radius: 50%;
+			background: $sliderKnob;
+			margin-top: -5px;
+			box-shadow: 1px 1px 2px rgba(35,35,35,.6);
+			cursor: pointer;
+		}
+		&::-webkit-slider-runnable-track {
+			width: 100%;
+			height: 9px;
+			background: $sliderTrack;
+			border-radius: 3rem;
+			transition: all 0.5s;
+			cursor: pointer;
+		}
+		&:hover::-webkit-slider-runnable-track {
+			background: $sliderTrackHover;
+		}
+		&::-ms-track {
+			width: 100%;
+			cursor: pointer;
+			height: 9px;
+			transition: all 0.5s;
+			/* Hides the slider so custom styles can be added */
+			background: transparent;
+			border-color: transparent;
+			color: transparent;
+		}
+		&::-ms-thumb {
+			height: $knobSize;
+			width: $knobSize;
+			border-radius: 50%;
+			background: $sliderKnob;
+			margin-top: -5px;
+			box-shadow: 1px 1px 2px rgba(35,35,35,.4);
+			cursor: pointer;
+		}
+		&::-ms-fill-lower {
+			background: $sliderTrack;
+			border-radius: 3rem;
+		}
+		&:focus::-ms-fill-lower {
+			background: $sliderTrackHover;
+		}
+		&::-ms-fill-upper {
+			background: $sliderTrack;
+			border-radius: 3rem;
+		}
+		&:focus::-ms-fill-upper {
+			background: $sliderTrackHover;
+		}
+		&::-moz-range-thumb {
+			height: $knobSize;
+			width: $knobSize;
+			border-radius: 50%;
+			background: $sliderKnob;
+			margin-top: -5px;
+			box-shadow: 1px 1px 2px rgba(35,35,35,0.4);
+			cursor: pointer;
+		}
+		&::-moz-range-track {
+			width: 100%;
+			height: 9px;
+			background: $sliderTrack;
+			border-radius: 3rem;
+			transition: all 0.5s;
+			cursor: pointer;
+		}
+		&:hover::-moz-range-track {
+			background: $sliderTrackHover;
+		}
+	}//end form-range
+}//end number range
+
+//signature
+.js-form-type-webform-signature{
+	.webform-signature-pad{
+		border: $elementBorder;
+		&:hover{
+			border-color: $formElementBorderHover;
+			box-shadow: inset 0 0 0 1px $formElementBorderHover;
+		}
+		&:focus{
+			@include placeholderFocus;
+			outline: none;
+			box-shadow: inset 0 0 0 1px $formElementBorderFocus;
+			border-color: $formElementBorderFocus;
+		}
+		input[type="submit"].button{
+			top: 5px;
+			right: 5px;
+			font-size: 1.4rem;
+			min-width: 0;
+			height: 30px;
+			padding: 0 1rem;
+		}
+	}
+}//end sign this
+
+/// table select
+.webform-tableselect{
+	th{
+		@include customOptions;
+	}
+	.form-item{
+		margin-bottom: 0;
+		&.js-form-type-checkbox{
+			margin-right: 0 !important;
+		}
+	}
+}//end webform tableselect
 
 /* USER LOGIN
 --------------- */
@@ -266,4 +479,38 @@ fieldset{
 		margin: 0;
 	}
 }//end user login form
+
+
+details.form-wrapper{
+	background: $detailsWrapperBack;
+	margin-bottom: $spaceMd;
+	&[open]{
+		padding-bottom: 1px;
+		summary{
+			border-color: $formElementBorderFocus;
+			box-shadow: inset 0 0 0 1px $formElementBorderFocus; 
+			margin-bottom: $spaceMd;
+		}
+		& > *:not(summary){
+			padding-left: 2rem;
+			padding-right: 2rem;
+		}
+	}
+	summary{
+		border: $elementBorder;
+		padding: 1rem 2rem;
+		font-weight: $heavy;
+		position: relative;
+		font-size: 2.2rem;
+		background: $siteBack;
+		cursor: pointer;
+		&::-webkit-details-marker {
+			display: none;
+		}
+		&:hover{
+			border-color: $formElementBorderHover;
+			box-shadow: inset 0 0 0 1px $formElementBorderHover; 
+		}
+	}//end summary
+}//end details form-wrapper
 

@@ -7179,6 +7179,14 @@ body:not(.role-administrator) .view-id-block_content td.views-field-operations.Y
 .webform-filter-form .seven-details__wrapper input[type="submit"] {
   margin-bottom: 0; }
 
+/* WEBFORM ADD ELEMENT POPUP
+--------------------------- */
+.webform-ui-element-type-select-form details[data-webform-element-id="webform-ui-element-type-6"], .webform-ui-element-type-select-form details[data-webform-element-id="webform-ui-element-type-10"], .webform-ui-element-type-select-form details[data-webform-element-id="webform-ui-element-type-11"], .webform-ui-element-type-select-form details[data-webform-element-id="webform-ui-element-type-12"] {
+  display: none !important; }
+
+.webform-ui-element-type-select-form .webform-ui-element-type-table tr[data-drupal-selector="edit-elements-hidden"], .webform-ui-element-type-select-form .webform-ui-element-type-table tr[data-drupal-selector="edit-elements-webform-autocomplete"], .webform-ui-element-type-select-form .webform-ui-element-type-table tr[data-drupal-selector="edit-elements-captcha"], .webform-ui-element-type-select-form .webform-ui-element-type-table tr[data-drupal-selector="edit-elements-webform-codemirror"], .webform-ui-element-type-select-form .webform-ui-element-type-table tr[data-drupal-selector="edit-elements-color"], .webform-ui-element-type-select-form .webform-ui-element-type-table tr[data-drupal-selector="edit-elements-webform-mapping"], .webform-ui-element-type-select-form .webform-ui-element-type-table tr[data-drupal-selector="edit-elements-webform-same"], .webform-ui-element-type-select-form .webform-ui-element-type-table tr[data-drupal-selector="edit-elements-search"], .webform-ui-element-type-select-form .webform-ui-element-type-table tr[data-drupal-selector="edit-elements-webform-toggle"], .webform-ui-element-type-select-form .webform-ui-element-type-table tr[data-drupal-selector="edit-elements-value"], .webform-ui-element-type-select-form .webform-ui-element-type-table tr[data-drupal-selector="edit-elements-webform-custom-composite"], .webform-ui-element-type-select-form .webform-ui-element-type-table tr[data-drupal-selector="edit-elements-webform-link"], .webform-ui-element-type-select-form .webform-ui-element-type-table tr[data-drupal-selector="edit-elements-webform-location-places"], .webform-ui-element-type-select-form .webform-ui-element-type-table tr[data-drupal-selector="edit-elements-processed-text"], .webform-ui-element-type-select-form .webform-ui-element-type-table tr[data-drupal-selector="edit-elements-webform-likert"], .webform-ui-element-type-select-form .webform-ui-element-type-table tr[data-drupal-selector="edit-elements-webform-toggles"] {
+  display: none !important; }
+
 /* FORM ELEMENT POPUP 
 ------------------------- */
 .webform-ui-element-form .webform-tabs .ui-tabs-nav {
@@ -7219,5 +7227,14 @@ body:not(.role-administrator) .view-id-block_content td.views-field-operations.Y
   .webform-ui-element-form .webform-element-help:hover, .webform-ui-element-form .webform-element-help:focus {
     outline: none;
     background: #676767; }
+
+.webform-ui-element-form .container-inline div {
+  vertical-align: bottom; }
+
+.webform-ui-element-form .container-inline input[data-drupal-selector="edit-properties-options-custom-options-add-submit"] {
+  margin-bottom: 3.2rem; }
+
+.webform-ui-element-form .form-item-properties-icheck, .webform-ui-element-form .form-item-properties-select2, .webform-ui-element-form .form-item-properties-choices, .webform-ui-element-form div[data-drupal-selector="edit-select-message"].webform-message {
+  display: none; }
 
 /*# sourceMappingURL=crane.css.map */

@@ -25,4 +25,16 @@
 }
 .js-form-type-webform-document-file,.form-item-document-upload,.js-form-item-document-upload{
 	@include fileUpload;
+	label.button{
+		display: inline-block;
+		color: $buttonText;
+		padding: $buttonPadding;
+		font-size: $button;
+		&:hover,&:focus{
+			color: $buttonTextHover;
+		}
+		&:active{
+			color: $buttonTextActive;
+		}
+	}
 }

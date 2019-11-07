@@ -84,6 +84,9 @@ $submitPadding: 0 1.5rem;
 			margin-left: 1.5rem;
 		}
 	}//end wysiwyg
+	&.js-hide{
+		display: none;
+	}
 }//end button mixin
 
 ///mixin - outlineButton
