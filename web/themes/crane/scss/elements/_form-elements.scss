@@ -2,7 +2,8 @@
   FORM ELEMENTS
 ========================== */
 @mixin placeholder{
-	$placeTint: .4;
+	$placeTint: 1;
+	$placeColor: red;
 	&::-webkit-placeholder{
 		opacity: $placeTint;
 		color: $placeColor;
@@ -16,6 +17,10 @@
 		color: $placeColor;
 	}
 	&::-webkit-input-placeholder{
+		opacity: $placeTint;
+		color: $placeColor;
+	}
+	&::placeholder{
 		opacity: $placeTint;
 		color: $placeColor;
 	}
@@ -209,7 +214,7 @@ optgroup:empty{
 		}
 		.select2-selection__rendered{
 			padding: 3.5px 32px 4px 10px;
-			color: $midGrey;
+			color: $placeColor;
 			text-align: left;
 		}
 		.select2-selection__arrow{

@@ -3,9 +3,8 @@
 ================= */
 $formElementBorderWidth: 2px;
 $elementBorder: $formElementBorderWidth solid $formElementBorder;
-
 @mixin placeholder{
-	$placeTint: .4;
+	$placeTint: 1;
 	&::-webkit-placeholder{
 		opacity: $placeTint;
 		color: $placeColor;

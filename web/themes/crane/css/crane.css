@@ -5002,17 +5002,17 @@ button:focus {
   min-height: 38px;
   max-width: 300px; }
   .js-form-type-textfield input::-webkit-placeholder, .js-form-type-email input::-webkit-placeholder, .js-form-type-password input::-webkit-placeholder, .js-form-type-tel input::-webkit-placeholder, .js-form-type-number input::-webkit-placeholder, .js-form-type-search input::-webkit-placeholder, .js-form-type-entity-autocomplete input::-webkit-placeholder, .node-form .js-form-type-entity-autocomplete input::-webkit-placeholder, .node-confirm-form .js-form-type-entity-autocomplete input::-webkit-placeholder {
-    opacity: 0.4;
-    color: #121212; }
-  .js-form-type-textfield input::-moz-placeholder, .js-form-type-email input::-moz-placeholder, .js-form-type-password input::-moz-placeholder, .js-form-type-tel input::-moz-placeholder, .js-form-type-number input::-moz-placeholder, .js-form-type-search input::-moz-placeholder, .js-form-type-entity-autocomplete input::-moz-placeholder, .node-form .js-form-type-entity-autocomplete input::-moz-placeholder, .node-confirm-form .js-form-type-entity-autocomplete input::-moz-placeholder {
-    opacity: 0.4;
-    color: #121212; }
+    opacity: 1;
+    color: red; }
   .js-form-type-textfield input:-ms-input-placeholder, .js-form-type-email input:-ms-input-placeholder, .js-form-type-password input:-ms-input-placeholder, .js-form-type-tel input:-ms-input-placeholder, .js-form-type-number input:-ms-input-placeholder, .js-form-type-search input:-ms-input-placeholder, .js-form-type-entity-autocomplete input:-ms-input-placeholder {
-    opacity: 0.4;
-    color: #121212; }
-  .js-form-type-textfield input::-webkit-input-placeholder, .js-form-type-email input::-webkit-input-placeholder, .js-form-type-password input::-webkit-input-placeholder, .js-form-type-tel input::-webkit-input-placeholder, .js-form-type-number input::-webkit-input-placeholder, .js-form-type-search input::-webkit-input-placeholder, .js-form-type-entity-autocomplete input::-webkit-input-placeholder, .node-form .js-form-type-entity-autocomplete input::-webkit-input-placeholder, .node-confirm-form .js-form-type-entity-autocomplete input::-webkit-input-placeholder {
-    opacity: 0.4;
-    color: #121212; }
+    opacity: 1;
+    color: red; }
+  .js-form-type-textfield input:-ms-input-placeholder, .js-form-type-email input:-ms-input-placeholder, .js-form-type-password input:-ms-input-placeholder, .js-form-type-tel input:-ms-input-placeholder, .js-form-type-number input:-ms-input-placeholder, .js-form-type-search input:-ms-input-placeholder, .js-form-type-entity-autocomplete input:-ms-input-placeholder, .node-form .js-form-type-entity-autocomplete input:-ms-input-placeholder, .node-confirm-form .js-form-type-entity-autocomplete input:-ms-input-placeholder {
+    opacity: 1;
+    color: red; }
+  .js-form-type-textfield input::placeholder, .js-form-type-email input::placeholder, .js-form-type-password input::placeholder, .js-form-type-tel input::placeholder, .js-form-type-number input::placeholder, .js-form-type-search input::placeholder, .js-form-type-entity-autocomplete input::placeholder, .node-form .js-form-type-entity-autocomplete input::placeholder, .node-confirm-form .js-form-type-entity-autocomplete input::placeholder {
+    opacity: 1;
+    color: red; }
   .js-form-type-textfield input:hover, .js-form-type-email input:hover, .js-form-type-password input:hover, .js-form-type-tel input:hover, .js-form-type-number input:hover, .js-form-type-search input:hover, .js-form-type-entity-autocomplete input:hover {
     border-color: #026cc5;
     box-shadow: inset 0 0 0 1px #026cc5; }
@@ -5022,51 +5022,47 @@ button:focus {
     border-color: #121212; }
     .js-form-type-textfield input:focus::-webkit-placeholder, .js-form-type-email input:focus::-webkit-placeholder, .js-form-type-password input:focus::-webkit-placeholder, .js-form-type-tel input:focus::-webkit-placeholder, .js-form-type-number input:focus::-webkit-placeholder, .js-form-type-search input:focus::-webkit-placeholder, .js-form-type-entity-autocomplete input:focus::-webkit-placeholder {
       opacity: 0.2;
-      color: #121212; }
+      color: #767676; }
     .js-form-type-textfield input:focus::-moz-placeholder, .js-form-type-email input:focus::-moz-placeholder, .js-form-type-password input:focus::-moz-placeholder, .js-form-type-tel input:focus::-moz-placeholder, .js-form-type-number input:focus::-moz-placeholder, .js-form-type-search input:focus::-moz-placeholder, .js-form-type-entity-autocomplete input:focus::-moz-placeholder {
       opacity: 0.2;
-      color: #121212; }
+      color: #767676; }
     .js-form-type-textfield input:focus:-ms-input-placeholder, .js-form-type-email input:focus:-ms-input-placeholder, .js-form-type-password input:focus:-ms-input-placeholder, .js-form-type-tel input:focus:-ms-input-placeholder, .js-form-type-number input:focus:-ms-input-placeholder, .js-form-type-search input:focus:-ms-input-placeholder, .js-form-type-entity-autocomplete input:focus:-ms-input-placeholder {
       opacity: 0.2;
-      color: #121212; }
+      color: #767676; }
     .js-form-type-textfield input:focus::-webkit-input-placeholder, .js-form-type-email input:focus::-webkit-input-placeholder, .js-form-type-password input:focus::-webkit-input-placeholder, .js-form-type-tel input:focus::-webkit-input-placeholder, .js-form-type-number input:focus::-webkit-input-placeholder, .js-form-type-search input:focus::-webkit-input-placeholder, .js-form-type-entity-autocomplete input:focus::-webkit-input-placeholder {
       opacity: 0.2;
-      color: #121212; }
+      color: #767676; }
 
 .js-form-type-number input {
   max-width: 150px; }
 
 .js-form-type-search input::-webkit-placeholder {
-  opacity: 0.4;
-  color: #121212; }
-
-.js-form-type-search input::-moz-placeholder {
-  opacity: 0.4;
-  color: #121212; }
+  opacity: 1;
+  color: red; }
 
 .js-form-type-search input:-ms-input-placeholder {
-  opacity: 0.4;
-  color: #121212; }
+  opacity: 1;
+  color: red; }
 
-.js-form-type-search input::-webkit-input-placeholder {
-  opacity: 0.4;
-  color: #121212; }
+.js-form-type-search input::placeholder {
+  opacity: 1;
+  color: red; }
 
 .js-form-type-search input:focus::-webkit-placeholder {
   opacity: 0.2;
-  color: #121212; }
+  color: #767676; }
 
 .js-form-type-search input:focus::-moz-placeholder {
   opacity: 0.2;
-  color: #121212; }
+  color: #767676; }
 
 .js-form-type-search input:focus:-ms-input-placeholder {
   opacity: 0.2;
-  color: #121212; }
+  color: #767676; }
 
 .js-form-type-search input:focus::-webkit-input-placeholder {
   opacity: 0.2;
-  color: #121212; }
+  color: #767676; }
 
 .js-form-type-textarea textarea {
   border: 1px solid #026cc5;
@@ -5079,17 +5075,14 @@ button:focus {
   min-height: 38px;
   max-width: 300px; }
   .js-form-type-textarea textarea::-webkit-placeholder {
-    opacity: 0.4;
-    color: #121212; }
-  .js-form-type-textarea textarea::-moz-placeholder {
-    opacity: 0.4;
-    color: #121212; }
+    opacity: 1;
+    color: red; }
   .js-form-type-textarea textarea:-ms-input-placeholder {
-    opacity: 0.4;
-    color: #121212; }
-  .js-form-type-textarea textarea::-webkit-input-placeholder {
-    opacity: 0.4;
-    color: #121212; }
+    opacity: 1;
+    color: red; }
+  .js-form-type-textarea textarea::placeholder {
+    opacity: 1;
+    color: red; }
   .js-form-type-textarea textarea:hover {
     border-color: #026cc5;
     box-shadow: inset 0 0 0 1px #026cc5; }
@@ -5099,16 +5092,16 @@ button:focus {
     border-color: #121212; }
     .js-form-type-textarea textarea:focus::-webkit-placeholder {
       opacity: 0.2;
-      color: #121212; }
+      color: #767676; }
     .js-form-type-textarea textarea:focus::-moz-placeholder {
       opacity: 0.2;
-      color: #121212; }
+      color: #767676; }
     .js-form-type-textarea textarea:focus:-ms-input-placeholder {
       opacity: 0.2;
-      color: #121212; }
+      color: #767676; }
     .js-form-type-textarea textarea:focus::-webkit-input-placeholder {
       opacity: 0.2;
-      color: #121212; }
+      color: #767676; }
   .js-form-type-textarea textarea#edit-filters-filter-html-settings-allowed-html {
     max-width: none; }
 
@@ -5159,7 +5152,7 @@ optgroup:empty {
     box-shadow: inset 0 0 0 1px #121212; }
   .crane .select2-container--default .select2-selection--single .select2-selection__rendered, .entity-browser-form .select2-container--default .select2-selection--single .select2-selection__rendered {
     padding: 3.5px 32px 4px 10px;
-    color: #676767;
+    color: #767676;
     text-align: left; }
   .crane .select2-container--default .select2-selection--single .select2-selection__arrow, .entity-browser-form .select2-container--default .select2-selection--single .select2-selection__arrow {
     top: 17px;
@@ -5207,31 +5200,28 @@ optgroup:empty {
     .crane .select2-container--default .select2-selection--multiple .select2-search--inline input.select2-search__field, .entity-browser-form .select2-container--default .select2-selection--multiple .select2-search--inline input.select2-search__field {
       color: #676767; }
       .crane .select2-container--default .select2-selection--multiple .select2-search--inline input.select2-search__field::-webkit-placeholder, .entity-browser-form .select2-container--default .select2-selection--multiple .select2-search--inline input.select2-search__field::-webkit-placeholder {
-        opacity: 0.4;
-        color: #121212; }
-      .crane .select2-container--default .select2-selection--multiple .select2-search--inline input.select2-search__field::-moz-placeholder, .entity-browser-form .select2-container--default .select2-selection--multiple .select2-search--inline input.select2-search__field::-moz-placeholder {
-        opacity: 0.4;
-        color: #121212; }
+        opacity: 1;
+        color: red; }
       .crane .select2-container--default .select2-selection--multiple .select2-search--inline input.select2-search__field:-ms-input-placeholder, .entity-browser-form .select2-container--default .select2-selection--multiple .select2-search--inline input.select2-search__field:-ms-input-placeholder {
-        opacity: 0.4;
-        color: #121212; }
-      .crane .select2-container--default .select2-selection--multiple .select2-search--inline input.select2-search__field::-webkit-input-placeholder, .entity-browser-form .select2-container--default .select2-selection--multiple .select2-search--inline input.select2-search__field::-webkit-input-placeholder {
-        opacity: 0.4;
-        color: #121212; }
+        opacity: 1;
+        color: red; }
+      .crane .select2-container--default .select2-selection--multiple .select2-search--inline input.select2-search__field::placeholder, .entity-browser-form .select2-container--default .select2-selection--multiple .select2-search--inline input.select2-search__field::placeholder {
+        opacity: 1;
+        color: red; }
       .crane .select2-container--default .select2-selection--multiple .select2-search--inline input.select2-search__field:focus, .entity-browser-form .select2-container--default .select2-selection--multiple .select2-search--inline input.select2-search__field:focus {
         outline: none; }
         .crane .select2-container--default .select2-selection--multiple .select2-search--inline input.select2-search__field:focus::-webkit-placeholder, .entity-browser-form .select2-container--default .select2-selection--multiple .select2-search--inline input.select2-search__field:focus::-webkit-placeholder {
           opacity: 0.2;
-          color: #121212; }
+          color: #767676; }
         .crane .select2-container--default .select2-selection--multiple .select2-search--inline input.select2-search__field:focus::-moz-placeholder, .entity-browser-form .select2-container--default .select2-selection--multiple .select2-search--inline input.select2-search__field:focus::-moz-placeholder {
           opacity: 0.2;
-          color: #121212; }
+          color: #767676; }
         .crane .select2-container--default .select2-selection--multiple .select2-search--inline input.select2-search__field:focus:-ms-input-placeholder, .entity-browser-form .select2-container--default .select2-selection--multiple .select2-search--inline input.select2-search__field:focus:-ms-input-placeholder {
           opacity: 0.2;
-          color: #121212; }
+          color: #767676; }
         .crane .select2-container--default .select2-selection--multiple .select2-search--inline input.select2-search__field:focus::-webkit-input-placeholder, .entity-browser-form .select2-container--default .select2-selection--multiple .select2-search--inline input.select2-search__field:focus::-webkit-input-placeholder {
           opacity: 0.2;
-          color: #121212; }
+          color: #767676; }
   .crane .select2-container--default .select2-selection--multiple .select2-selection__choice, .entity-browser-form .select2-container--default .select2-selection--multiple .select2-selection__choice {
     border-radius: 0;
     background: #fefbc7;

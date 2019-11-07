@@ -30,6 +30,9 @@
 			@include customOptions;
 		}
 	}//end form actions
+	details#edit-xmlsitemap{
+		display: none;
+	}
 	#layout-builder{
 		overflow-x: hidden;
 	}

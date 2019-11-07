@@ -8,6 +8,7 @@ $fuchsia       : #c028bb;
 $purple        : #8b01e2;
 $green         : #018901;
 $gold          : #fcdc01;
+$contrastGrey  : #676767;
 $transGrey     : rgba(92,96,98,.92);
 
 
@@ -91,7 +92,7 @@ $searchCloseBackHover      : $black;
 $formElementBorder        : $borderRule;
 $formElementBorderHover   : $borderRule;
 $formElementBorderFocus   : $link;
-$placeColor               : $baseText;
+$placeColor               : $contastGrey;
 $placeFocusColor          : $placeColor;
 $validation               : $brightRed;
 $checkbox                 : $link;
