@@ -5003,16 +5003,16 @@ button:focus {
   max-width: 300px; }
   .js-form-type-textfield input::-webkit-placeholder, .js-form-type-email input::-webkit-placeholder, .js-form-type-password input::-webkit-placeholder, .js-form-type-tel input::-webkit-placeholder, .js-form-type-number input::-webkit-placeholder, .js-form-type-search input::-webkit-placeholder, .js-form-type-entity-autocomplete input::-webkit-placeholder, .node-form .js-form-type-entity-autocomplete input::-webkit-placeholder, .node-confirm-form .js-form-type-entity-autocomplete input::-webkit-placeholder {
     opacity: 1;
-    color: red; }
+    color: #767676; }
   .js-form-type-textfield input:-ms-input-placeholder, .js-form-type-email input:-ms-input-placeholder, .js-form-type-password input:-ms-input-placeholder, .js-form-type-tel input:-ms-input-placeholder, .js-form-type-number input:-ms-input-placeholder, .js-form-type-search input:-ms-input-placeholder, .js-form-type-entity-autocomplete input:-ms-input-placeholder {
     opacity: 1;
-    color: red; }
+    color: #767676; }
   .js-form-type-textfield input:-ms-input-placeholder, .js-form-type-email input:-ms-input-placeholder, .js-form-type-password input:-ms-input-placeholder, .js-form-type-tel input:-ms-input-placeholder, .js-form-type-number input:-ms-input-placeholder, .js-form-type-search input:-ms-input-placeholder, .js-form-type-entity-autocomplete input:-ms-input-placeholder, .node-form .js-form-type-entity-autocomplete input:-ms-input-placeholder, .node-confirm-form .js-form-type-entity-autocomplete input:-ms-input-placeholder {
     opacity: 1;
-    color: red; }
+    color: #767676; }
   .js-form-type-textfield input::placeholder, .js-form-type-email input::placeholder, .js-form-type-password input::placeholder, .js-form-type-tel input::placeholder, .js-form-type-number input::placeholder, .js-form-type-search input::placeholder, .js-form-type-entity-autocomplete input::placeholder, .node-form .js-form-type-entity-autocomplete input::placeholder, .node-confirm-form .js-form-type-entity-autocomplete input::placeholder {
     opacity: 1;
-    color: red; }
+    color: #767676; }
   .js-form-type-textfield input:hover, .js-form-type-email input:hover, .js-form-type-password input:hover, .js-form-type-tel input:hover, .js-form-type-number input:hover, .js-form-type-search input:hover, .js-form-type-entity-autocomplete input:hover {
     border-color: #026cc5;
     box-shadow: inset 0 0 0 1px #026cc5; }
@@ -5038,15 +5038,15 @@ button:focus {
 
 .js-form-type-search input::-webkit-placeholder {
   opacity: 1;
-  color: red; }
+  color: #767676; }
 
 .js-form-type-search input:-ms-input-placeholder {
   opacity: 1;
-  color: red; }
+  color: #767676; }
 
 .js-form-type-search input::placeholder {
   opacity: 1;
-  color: red; }
+  color: #767676; }
 
 .js-form-type-search input:focus::-webkit-placeholder {
   opacity: 0.2;
@@ -5076,13 +5076,13 @@ button:focus {
   max-width: 300px; }
   .js-form-type-textarea textarea::-webkit-placeholder {
     opacity: 1;
-    color: red; }
+    color: #767676; }
   .js-form-type-textarea textarea:-ms-input-placeholder {
     opacity: 1;
-    color: red; }
+    color: #767676; }
   .js-form-type-textarea textarea::placeholder {
     opacity: 1;
-    color: red; }
+    color: #767676; }
   .js-form-type-textarea textarea:hover {
     border-color: #026cc5;
     box-shadow: inset 0 0 0 1px #026cc5; }
@@ -5201,13 +5201,13 @@ optgroup:empty {
       color: #676767; }
       .crane .select2-container--default .select2-selection--multiple .select2-search--inline input.select2-search__field::-webkit-placeholder, .entity-browser-form .select2-container--default .select2-selection--multiple .select2-search--inline input.select2-search__field::-webkit-placeholder {
         opacity: 1;
-        color: red; }
+        color: #767676; }
       .crane .select2-container--default .select2-selection--multiple .select2-search--inline input.select2-search__field:-ms-input-placeholder, .entity-browser-form .select2-container--default .select2-selection--multiple .select2-search--inline input.select2-search__field:-ms-input-placeholder {
         opacity: 1;
-        color: red; }
+        color: #767676; }
       .crane .select2-container--default .select2-selection--multiple .select2-search--inline input.select2-search__field::placeholder, .entity-browser-form .select2-container--default .select2-selection--multiple .select2-search--inline input.select2-search__field::placeholder {
         opacity: 1;
-        color: red; }
+        color: #767676; }
       .crane .select2-container--default .select2-selection--multiple .select2-search--inline input.select2-search__field:focus, .entity-browser-form .select2-container--default .select2-selection--multiple .select2-search--inline input.select2-search__field:focus {
         outline: none; }
         .crane .select2-container--default .select2-selection--multiple .select2-search--inline input.select2-search__field:focus::-webkit-placeholder, .entity-browser-form .select2-container--default .select2-selection--multiple .select2-search--inline input.select2-search__field:focus::-webkit-placeholder {
