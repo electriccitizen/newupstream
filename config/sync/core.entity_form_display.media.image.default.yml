@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.media.image.field_caption
     - field.field.media.image.field_media_categories
     - field.field.media.image.field_media_image
     - image.style.thumbnail
@@ -15,14 +14,6 @@ targetEntityType: media
 bundle: image
 mode: default
 content:
-  field_caption:
-    type: string_textfield
-    weight: 2
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
   field_media_categories:
     type: options_select
     weight: 3

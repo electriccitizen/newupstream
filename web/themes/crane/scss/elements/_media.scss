@@ -102,6 +102,17 @@
 	}
 }//end media view list
 
+/* CAPTION FIELD
+------------------- */
+.field--name-field-caption{
+	.js-form-type-textarea{
+		textarea{
+			max-width: 600px;
+			max-height: 76px;
+		}
+	}
+}
+
 
 /* FILE ICONS
 --------------- */

@@ -5519,6 +5519,12 @@ fieldset:not(.form-composite) {
   .view-media.view-display-id-media_page_list .views-field-thumbnail__target-id span.doc img {
     display: none; }
 
+/* CAPTION FIELD
+------------------- */
+.field--name-field-caption .js-form-type-textarea textarea {
+  max-width: 600px;
+  max-height: 76px; }
+
 /* FILE ICONS
 --------------- */
 .text-with-summary a[href$='.pdf'], .text-long a[href$='.pdf'], span.file a[href$='.pdf'], .text-with-summary a[href$='.doc'], .text-with-summary a[href$=".docx"], .text-long a[href$='.doc'], .text-long a[href$=".docx"], span.file a[href$='.doc'], span.file a[href$=".docx"], .text-with-summary a[href$='.xls'], .text-with-summary a[href$=".xlsx"], .text-long a[href$='.xls'], .text-long a[href$=".xlsx"], span.file a[href$='.xls'], span.file a[href$=".xlsx"], .text-with-summary a[href$='.ppt'], .text-with-summary a[href$=".pptx"], .text-long a[href$='.ppt'], .text-long a[href$=".pptx"], span.file a[href$='.ppt'], span.file a[href$=".pptx"], span.file a {

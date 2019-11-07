@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - core.entity_form_mode.media.background_image
-    - field.field.media.image.field_caption
     - field.field.media.image.field_media_categories
     - field.field.media.image.field_media_image
     - image.style.thumbnail
@@ -44,7 +43,6 @@ content:
     region: content
 hidden:
   created: true
-  field_caption: true
   path: true
   status: true
   uid: true
