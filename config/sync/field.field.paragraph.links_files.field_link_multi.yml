@@ -12,7 +12,7 @@ field_name: field_link_multi
 entity_type: paragraph
 bundle: links_files
 label: Links
-description: 'Add links to existing nodes or files as well as external urls.'
+description: ''
 required: false
 translatable: false
 default_value: {  }

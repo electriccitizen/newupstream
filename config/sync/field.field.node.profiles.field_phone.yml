@@ -14,7 +14,7 @@ field_name: field_phone
 entity_type: node
 bundle: profiles
 label: Phone
-description: 'Example: 555-555-5555'
+description: ''
 required: false
 translatable: false
 default_value: {  }

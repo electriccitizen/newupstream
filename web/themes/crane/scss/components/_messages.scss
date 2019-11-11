@@ -16,6 +16,10 @@ $messageErrorIcon   : '../images/icons/message/message-error.svg';
 	color: $messageText;
 	border-left: 10px solid;
 	box-shadow: none;
+	.ui-dialog &{
+		font-size: 1.6rem;
+		padding: $spaceXs 20px $spaceXs 45px;
+	}
 	a{
 		color: $gold;
 		&:hover,&:focus{

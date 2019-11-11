@@ -5084,6 +5084,47 @@ button:focus {
   opacity: 0.2;
   color: #767676; }
 
+.js-form-type-date input {
+  border: 1px solid #026cc5;
+  border-radius: 2px;
+  font-size: 1.5rem;
+  font-family: "PT Sans", sans-serif;
+  padding: 6px;
+  width: 100%;
+  line-height: 1;
+  min-height: 38px;
+  max-width: 300px;
+  width: auto;
+  max-width: none; }
+  .js-form-type-date input::-webkit-placeholder {
+    opacity: 1;
+    color: #767676; }
+  .js-form-type-date input:-ms-input-placeholder {
+    opacity: 1;
+    color: #767676; }
+  .js-form-type-date input::placeholder {
+    opacity: 1;
+    color: #767676; }
+  .js-form-type-date input:hover {
+    border-color: #026cc5;
+    box-shadow: inset 0 0 0 1px #026cc5; }
+  .js-form-type-date input:focus {
+    outline: none;
+    box-shadow: inset 0 0 0 1px #121212;
+    border-color: #121212; }
+    .js-form-type-date input:focus::-webkit-placeholder {
+      opacity: 0.2;
+      color: #767676; }
+    .js-form-type-date input:focus::-moz-placeholder {
+      opacity: 0.2;
+      color: #767676; }
+    .js-form-type-date input:focus:-ms-input-placeholder {
+      opacity: 0.2;
+      color: #767676; }
+    .js-form-type-date input:focus::-webkit-input-placeholder {
+      opacity: 0.2;
+      color: #767676; }
+
 .js-form-type-textarea textarea {
   border: 1px solid #026cc5;
   border-radius: 2px;
@@ -5093,7 +5134,8 @@ button:focus {
   width: 100%;
   line-height: 1;
   min-height: 38px;
-  max-width: 300px; }
+  max-width: 300px;
+  max-width: 800px; }
   .js-form-type-textarea textarea::-webkit-placeholder {
     opacity: 1;
     color: #767676; }
@@ -5834,6 +5876,9 @@ body:not(.role-administrator) .admin-list li.social-media-links {
   color: #ffffff;
   border-left: 10px solid;
   box-shadow: none; }
+  .ui-dialog .messages {
+    font-size: 1.6rem;
+    padding: 1rem 20px 1rem 45px; }
   .messages a {
     color: #fcdc01; }
     .messages a:hover, .messages a:focus {

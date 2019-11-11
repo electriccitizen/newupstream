@@ -15,7 +15,7 @@ field_name: field_accordion_item
 entity_type: paragraph
 bundle: accordion_group
 label: Accordion
-description: 'Add accordions to this accordion group.'
+description: ''
 required: true
 translatable: false
 default_value: {  }
@@ -23,6 +23,7 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
+    negate: 0
     target_bundles:
       accordion_item: accordion_item
     target_bundles_drag_drop:
@@ -34,5 +35,41 @@ settings:
         weight: 5
       video:
         weight: 6
+        enabled: false
+      basic_page_section:
+        weight: 18
+        enabled: false
+      block_placer:
+        weight: 19
+        enabled: false
+      form:
+        weight: 20
+        enabled: false
+      from_library:
+        weight: 21
+        enabled: false
+      gallery:
+        weight: 22
+        enabled: false
+      horizontal_rule:
+        weight: 23
+        enabled: false
+      image:
+        weight: 24
+        enabled: false
+      landing_page_section:
+        weight: 25
+        enabled: false
+      links_files:
+        weight: 26
+        enabled: false
+      pullquote:
+        weight: 27
+        enabled: false
+      text:
+        weight: 28
+        enabled: false
+      view_placer:
+        weight: 30
         enabled: false
 field_type: entity_reference_revisions

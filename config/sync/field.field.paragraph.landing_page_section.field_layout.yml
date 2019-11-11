@@ -12,7 +12,7 @@ field_name: field_layout
 entity_type: paragraph
 bundle: landing_page_section
 label: Layout
-description: 'Set the widget layout for this section. Two column will place widgets side by side in horizontal rows. Left or Right will constrain the widget to 50% of the section width and position them on the left or the right side.'
+description: 'Two columns will place widgets side by side in horizontal rows. Left or Right will constrain the widgets in this section to 50% width and position them on the left or the right side.'
 required: true
 translatable: true
 default_value:

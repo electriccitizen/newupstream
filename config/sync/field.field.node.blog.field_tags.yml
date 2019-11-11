@@ -13,7 +13,7 @@ field_name: field_tags
 entity_type: node
 bundle: blog
 label: Tags
-description: 'Select tags from the list. If the tag you wish to add does not exist, you can create it <a href="/admin/structure/taxonomy/manage/tags/add" target="_blank">here</a>. <strong>NOTE:</strong> You will need to save this page and refresh for your newly created tag to appear in the list.'
+description: ''
 required: false
 translatable: false
 default_value: {  }

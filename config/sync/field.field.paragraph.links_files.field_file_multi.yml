@@ -11,7 +11,7 @@ field_name: field_file_multi
 entity_type: paragraph
 bundle: links_files
 label: Files
-description: 'Add new files or select existing files from the media library.'
+description: ''
 required: false
 translatable: false
 default_value: {  }

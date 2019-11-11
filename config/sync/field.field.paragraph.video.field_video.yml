@@ -11,7 +11,7 @@ field_name: field_video
 entity_type: paragraph
 bundle: video
 label: Video
-description: 'Add a video from youtube by pasting the url or select an existing video from the Video Library.'
+description: ''
 required: true
 translatable: false
 default_value: {  }

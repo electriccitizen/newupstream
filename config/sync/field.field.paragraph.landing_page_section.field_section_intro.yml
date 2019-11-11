@@ -12,7 +12,7 @@ field_name: field_section_intro
 entity_type: paragraph
 bundle: landing_page_section
 label: 'Section Intro'
-description: 'Add some introductory text for this section.'
+description: ''
 required: false
 translatable: true
 default_value: {  }

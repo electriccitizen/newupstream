@@ -159,9 +159,17 @@
 		}
 	}
 }
+.js-form-type-date{
+	input{
+		@include textInput;
+		width: auto;
+		max-width: none;
+	}
+}
 .js-form-type-textarea{
 	textarea{
 		@include textInput;
+		max-width: $textMax;
 		&#edit-filters-filter-html-settings-allowed-html{
 			max-width: none;
 		}

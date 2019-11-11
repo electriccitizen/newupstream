@@ -10,7 +10,7 @@ field_name: field_widget_title
 entity_type: paragraph
 bundle: block_placer
 label: 'Widget Title'
-description: '<strong>NOTE:</strong> This is the widget title—not the block title. The block title will not be shown.'
+description: ''
 required: false
 translatable: true
 default_value: {  }
