@@ -4975,6 +4975,11 @@ button:focus {
 .field--type-entity-reference .field--name-revision-log-message {
   display: none; }
 
+/* HIDE WEFORM EXTRAS FROM WEBFORM REFERENCES
+--------------------------------------- */
+.field--type-webform .seven-details {
+  display: none; }
+
 /* ========================
   FORM ELEMENTS
 ========================== */
@@ -4988,6 +4993,21 @@ button:focus {
 
 .js-form-wrapper:focus {
   outline: none; }
+
+.form-item--error-message {
+  color: #ffffff;
+  background: #4a4a4a;
+  border-top: 1px solid #c41294;
+  border-bottom: 1px solid #c41294;
+  border-right: 1px solid #c41294;
+  border-left: 10px solid #c41294;
+  padding: 1rem; }
+  .form-item--error-message:before {
+    background: url("../images/icons/message/message-error.svg") no-repeat;
+    background-size: 20px;
+    background-position: center;
+    width: 20px;
+    height: 20px; }
 
 /* TEXT FIELDS
 ----------------- */
@@ -5104,9 +5124,18 @@ button:focus {
       color: #767676; }
   .js-form-type-textarea textarea#edit-filters-filter-html-settings-allowed-html {
     max-width: none; }
+  .js-form-type-textarea textarea.error + .cke {
+    border-color: #c41294; }
 
 tr.odd .text-format-wrapper .js-form-type-textarea, tr.even .text-format-wrapper .js-form-type-textarea {
   margin-bottom: 0; }
+
+.text-format-wrapper .form-item--error-message {
+  padding: 1rem;
+  border-top: 0;
+  border-bottom: 1px solid #c41294;
+  border-right: 1px solid #c41294;
+  border-left: 10px solid #c41294; }
 
 /* HEADINGS
 --------------- */
@@ -6003,7 +6032,9 @@ body:not(.role-administrator) .admin-list li.social-media-links {
 .entity-embed-dialog-step--embed[action="/entity-embed/dialog/basic_html/document"] .form-actions input.form-submit, .entity-embed-dialog-step--embed[action="/entity-embed/dialog/basic_html/document"] .form-actions input.button-primary {
   margin-bottom: 0; }
 
-.entity-select-dialog .ui-dialog-buttonset button:not(:last-child) {
+/* UI FORMS
+------------------ */
+.ui-dialog-buttonpane .ui-dialog-buttonset button:not(:last-child) {
   margin-right: 1rem; }
 
 /* ==============

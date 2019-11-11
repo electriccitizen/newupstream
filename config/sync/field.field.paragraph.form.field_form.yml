@@ -13,7 +13,7 @@ entity_type: paragraph
 bundle: form
 label: Form
 description: 'Select the form you wish to add. <strong>NOTE:</strong> If you don''t see the form you wish to add in the list, you may create it <a href="/admin/structure/webform">here</a>.'
-required: false
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''

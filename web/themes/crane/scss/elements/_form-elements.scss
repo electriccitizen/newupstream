@@ -111,6 +111,22 @@
 		outline: none;
 	}
 }
+.form-item--error-message{
+	color: $messageText;
+	background: $messageBack;
+	border-top: 1px solid $messageErrorBorder;
+	border-bottom: 1px solid $messageErrorBorder;
+	border-right: 1px solid $messageErrorBorder;
+	border-left: 10px solid $messageErrorBorder;
+	padding: $spaceXs;
+	&:before{
+		background: url('../images/icons/message/message-error.svg') no-repeat;
+		background-size: 20px;
+		background-position: center;
+		width: 20px;
+		height: 20px;
+	}
+}
 
 /* TEXT FIELDS
 ----------------- */
@@ -149,6 +165,9 @@
 		&#edit-filters-filter-html-settings-allowed-html{
 			max-width: none;
 		}
+		&.error + .cke{
+			border-color: $messageErrorBorder;
+		}
 	}
 }
 .text-format-wrapper{
@@ -156,6 +175,13 @@
 		tr.odd &,tr.even &{
 			margin-bottom: 0;
 		}
+	}
+	.form-item--error-message{
+		padding: $spaceXs;
+		border-top: 0;
+		border-bottom: 1px solid $messageErrorBorder;
+		border-right: 1px solid $messageErrorBorder;
+		border-left: 10px solid $messageErrorBorder;
 	}
 }
 .js-form-type-entity-autocomplete{

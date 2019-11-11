@@ -38,3 +38,10 @@
 	display: none;
 }
 
+/* HIDE WEFORM EXTRAS FROM WEBFORM REFERENCES
+--------------------------------------- */
+.field--type-webform{
+	.seven-details{
+		display: none;
+	}
+}

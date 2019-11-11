@@ -134,13 +134,14 @@
 		}
 	}
 }//end document entity embed dialog
-.entity-select-dialog{
+
+/* UI FORMS
+------------------ */
+.ui-dialog-buttonpane{
 	.ui-dialog-buttonset{
 		button:not(:last-child){
 			margin-right: 1rem;
 		}
 	}
 }
-
-
 

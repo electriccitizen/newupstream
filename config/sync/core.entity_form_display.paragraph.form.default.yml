@@ -18,7 +18,7 @@ content:
   field_form:
     weight: 2
     settings:
-      default_data: true
+      default_data: false
     third_party_settings: {  }
     type: webform_entity_reference_select
     region: content
