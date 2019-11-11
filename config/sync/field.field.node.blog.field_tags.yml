@@ -13,7 +13,7 @@ field_name: field_tags
 entity_type: node
 bundle: blog
 label: Tags
-description: ''
+description: 'Tags may be added or edited <a href="/admin/structure/taxonomy/manage/tags/overview">here</a>. Save your changes to this page first.'
 required: false
 translatable: false
 default_value: {  }
