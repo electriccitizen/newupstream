@@ -43,7 +43,7 @@ menu-block:
 modal:
   version: 1.0
   js:
-    components/_patterns/05-miscellaneous/modal.js: {}
+    components/_patterns/02-molecules/modals/modal.js: {}
 object-fit:
   version: 1.0
   js:

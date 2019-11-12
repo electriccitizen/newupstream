@@ -15,12 +15,13 @@ footer {
 		@include auto;
 		position: relative;
 		@include tab{
-			padding: 0 $siteMarginMobile 50px;
+			padding: 40px $siteMarginMobile 50px;
 			min-height: 0;
 		}
 
 		//limit footer content to max-width and set flex parenting
 		& > div{
+			@include safeFlex(row,wrap,start,start);
 			@include tab{
 				@include bleed(padding,40px);
 			}
@@ -29,37 +30,14 @@ footer {
 					margin-bottom: $spaceMd;
 				}
 				h2.block-title{
-					text-align: left;
 					margin-bottom: 1.5rem;
+					@include tab{
+						text-align: left;
+					}
 				}
 			}
-		}
-
+		}//end footer-inn > div
 	}//end footer-inner
-
-	&.footer-v1{
-		& > .footer-inner{
-			@include clearFix;
-			padding: 30px $siteMarginMobile 0;
-			@include tab{
-				padding: 30px $siteMarginMobile 0;
-			}
-			& > div{
-				@include onlySmall{
-					@include safeFlex(column,nowrap,start,start);
-				}
-			}
-		}
-	}//end footer v1
-
-	&.footer-v2{
-		& > .footer-inner{
-			& > div{
-				@include safeFlex(row,wrap,start,start);
-			}
-		}
-	}//end footer v2
-
 }//end footer
 
 

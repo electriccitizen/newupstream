@@ -25,8 +25,24 @@
  * @see template_preprocess_block()
  */
 #}
-{% extends '@molecules/blocks/footer/_footer-copyright.twig' %}
+
+{% extends '@molecules/blocks/block.twig' %}
 
 {% block dLabel %}
-	{{ label }}
+	{{- label -}}
 {% endblock %}
+
+{% block blockContent %}
+	{% set text = {
+		'#type': 'processed_text',
+		'#text': content.body.0['#text'],
+		'#format': content.body.0['#format']
+	} %}
+
+	{% include '@molecules/blocks/footer/_footer-copyright.twig' 
+		with{
+			copyright: text
+		}
+	%}
+{% endblock %}
+

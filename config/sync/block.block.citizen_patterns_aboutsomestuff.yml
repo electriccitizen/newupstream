@@ -18,7 +18,7 @@ settings:
   id: 'block_content:776b5982-01ea-4b37-acde-8e3f751d0c95'
   label: 'About Some Stuff'
   provider: block_content
-  label_display: visible
+  label_display: '0'
   status: true
   info: ''
   view_mode: full

@@ -12,17 +12,41 @@ Available macro variables: fixed, non-fixed.
 {% endblock %}
 
 {% block footerContent %}
-{% import "@base/macros.twig" as styles %}
-<footer role="contentinfo" class="pl-spacer {{ styles.footer }}">
+<footer role="contentinfo" class="pl-spacer">
 	<div class="footer-inner">	
 		<div>
-		{% if menu %}
-			{% include "@molecules/blocks/footer/_footer-menu.twig" %}
-		{% endif %}
+			{% if about %}
+				<div class="block-2">
+					{% autoescape false %}
+						{{ about }}
+					{% endautoescape %}
+				</div>
+			{% endif %}
+			{% if menu %}
+				{% include "@molecules/blocks/footer/_footer-menu.twig" %}
+			{% endif %}
 
-		{% if copyright %}
-			{% include "@molecules/blocks/footer/_footer-copyright.twig" %}
-		{% endif %}
+			{% if newsletter %}
+				<div class="block-newsletter">
+					{% include "@molecules/blocks/newsletter/_newsletter.twig" 
+						with{
+							plLabel: newsletter.plLabel,
+							intro: newsletter.intro,
+							embedForm: newsletter.embedForm,
+							modal: newsletter.modal,
+							modalHeader: newsletter.modalHeader,
+							modalTrigger: newsletter.modalTrigger,
+							modalIntro: newsletter.modalIntro
+						}
+					%}
+				</div>
+			{% endif %}
+
+			{% if copyright %}
+				<div class="block-1">
+					{% include "@molecules/blocks/footer/_footer-copyright.twig" %}
+				</div>
+			{% endif %}
 		</div>
 	</div>
 </footer>

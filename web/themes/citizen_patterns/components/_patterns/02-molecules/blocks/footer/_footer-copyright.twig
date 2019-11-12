@@ -2,15 +2,6 @@
  Drupal: This file is extended in the site-footer.twig pattern lab file and in the footer-copyright Drupal block.
 #}
 
-{% extends '@molecules/blocks/block.twig' %}
-
-{% block blockContent %}
-	{% set text = {
-		'#type': 'processed_text',
-		'#text': content.body.0['#text'],
-		'#format': content.body.0['#format']
-	} %}
-	<div class="field body copyright">
-		<span class="copyright-year">©{{ "now"|date('Y') -}}</span> {{- text -}}
-	</div>
-{% endblock %}
+<div class="field body copyright">
+	<span class="copyright-year">©{{ "now"|date('Y') -}}</span> {{- copyright -}}
+</div>

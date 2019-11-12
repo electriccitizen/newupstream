@@ -1,8 +1,11 @@
 {#
- Drupal: This file is embedded in the site-footer.twig pattern lab file and in the footer-menu Drupal block. The variables are placeholders for those files.
+ Drupal: This file is embedded in the site-footer.twig pattern lab file.
 #}
 
-<div class="block block--system-menu footer-menu">
+<div class="block block--system-menu block-footer-menu">
+	{% if menuTitle %}
+		<h2 class="block-title">{{ menuTitle }}</h2>
+	{% endif %}
 	{% block footer_menu %}
 		<ul>
 			{% for link in menu %}

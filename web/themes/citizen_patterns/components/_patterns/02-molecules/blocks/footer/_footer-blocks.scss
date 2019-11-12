@@ -5,31 +5,47 @@
 /* ABOUT
 -------------- */
 .block-2{
-
+	@include tab{
+		width: 33.333%;
+	}
 }//end block-2 about
 
 /* CONNECT
 -------------- */
-.social-links{
-	@include listReset;
-	li{
-		display: inline-block;
-		margin-right: 10px;
-		a{
-			color: $footerIcon;
-			font-size: 32px;
-			&:hover,&:focus{
-				color: $footerIconHover;
+.block-social-links{
+	.platforms{
+		@include listReset;
+		li{
+			display: inline-block;
+			margin-right: 10px;
+			a{
+				color: $footerIcon;
+				font-size: 32px;
+				&:hover,&:focus{
+					color: $footerIconHover;
+				}
 			}
 		}
-	}
-}
+	}//end platforms
+}//end block social-links
 
 
 /* NEWSLETTER
 -------------- */
 .block-newsletter{
-	p{
+	width: 100%;
+	@include tab{
+		width: 33.33%;
+	}
+	.field.body{
+		& > *:last-child{
+			margin-bottom: 0;
+		}
+		&.has-modal{
+			& > *:nth-last-child(2){
+				display: inline;
+			}
+		}
 		a{
 			color: $footerLink;
 			text-decoration: underline;
@@ -43,6 +59,9 @@
 		background: none;
 		font: inherit;
 		width: 100%;
+		label{
+			display: none;
+		}
 		#mc-embedded-subscribe-form{
 			padding: 0;
 		}
@@ -65,29 +84,15 @@
 -------------- */
 .block-footer-menu{
 	width: 100%;
-	@include onlySmall{
-		@include safeFlexOrder(2);
+	@include tab{
+		width: 33.33%;
 	}
 	ul:not(.contextual-links){
 		@include listReset;
-		@include safeFlex(row,wrap,center,null);
+		@include safeFlex(row,wrap,center,start);
 		@include tab{
-			.footer-v1 &{
-				@include safeFlex(row,wrap,start,start);
-				li{
-					width: 50%;
-					&:not(:first-child){
-						padding-left: 0
-					}
-					&:not(:last-child){
-						padding-right: 0 !important;
-						&:after{
-							content: none;
-						}
-					}
-				}
-			}//end footer v1
-		}//end tab
+			@include safeFlex(row,wrap,start,start);
+		}
 		li{
 			position: relative;
 			a{
@@ -106,9 +111,15 @@
 			}
 			&:not(:first-child){
 				padding-left: 6px;
+				@include tab{
+					padding-left: 0;
+				}
 			}
 			&:not(:last-child){
 				padding-right: 8px;
+				@include tab{
+					margin-right: 6px;
+				}
 				&:after{
 					@include vertRule(right,60%,$white);
 				}
