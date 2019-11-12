@@ -17,7 +17,7 @@ id: contact
 title: Contact
 description: 'Basic email contact webform.'
 category: ''
-elements: "name:\n  '#type': textfield\n  '#title': Name\n  '#title_display': inline\n  '#maxlength': '60'\n  '#required': true\nemail:\n  '#type': email\n  '#title': 'Your Email'\n  '#title_display': inline\n  '#required': true\nsubject:\n  '#type': textfield\n  '#title': Subject\n  '#title_display': inline\n  '#required': true\n  '#test': 'Testing contact webform from [site:name]'\nmessage:\n  '#type': textarea\n  '#title': Message\n  '#title_display': inline\n  '#required': true\n  '#test': 'Please ignore this email.'\n"
+elements: "name:\n  '#type': textfield\n  '#title': Name\n  '#title_display': inline\n  '#maxlength': '60'\n  '#required': true\nemail:\n  '#type': email\n  '#title': 'Your Email'\n  '#title_display': inline\n  '#required': true\nsubject:\n  '#type': textfield\n  '#title': Subject\n  '#title_display': inline\n  '#required': true\n  '#test': 'Testing contact webform from [site:name]'\nmessage:\n  '#type': textarea\n  '#title': Message\n  '#title_display': inline\n  '#required': true\n  '#test': 'Please ignore this email.'\ntest:\n  '#type': textfield\n  '#title': Test"
 css: ''
 javascript: ''
 settings:
