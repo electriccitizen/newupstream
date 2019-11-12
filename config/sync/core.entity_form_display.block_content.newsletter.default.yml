@@ -17,11 +17,11 @@ third_party_settings:
   field_group:
     group_modal_settings:
       children:
-        - field_modal_trigger
         - field_modal_header
         - field_modal_intro
+        - field_modal_trigger
       parent_name: ''
-      weight: 20
+      weight: 4
       format_type: details
       format_settings:
         id: ''
@@ -30,7 +30,7 @@ third_party_settings:
         open: false
         required_fields: true
       label: 'Modal Settings'
-      region: hidden
+      region: content
 id: block_content.newsletter.default
 targetEntityType: block_content
 bundle: newsletter
@@ -60,6 +60,30 @@ content:
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
+  field_modal_header:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_modal_intro:
+    type: text_textarea
+    weight: 0
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_modal_trigger:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   info:
     type: string_textfield
     weight: 0
@@ -68,7 +92,4 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-hidden:
-  field_modal_header: true
-  field_modal_intro: true
-  field_modal_trigger: true
+hidden: {  }
