@@ -25,13 +25,8 @@
  * @see template_preprocess_block()
  */
 #}
-{% embed '@molecules/blocks/footer/_footer-newsletter.twig' 
-	with{
-		modalScripts: attach_library('citizen_patterns/modal')
-	}
-%}
-	{% block dLabel %}
-		{{ label }}
-	{% endblock %}
+{% extends '@molecules/blocks/footer/_footer-copyright.twig' %}
 
-{% endembed %}
+{% block dLabel %}
+	{{ label }}
+{% endblock %}

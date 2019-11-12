@@ -5,72 +5,30 @@
 /* ABOUT
 -------------- */
 .block-2{
-	@include onlySmall{
-		@include safeFlexOrder(1);
-	}
-	.footer-v1 &{
-		@include tab{
-			width: 33.33%;
-			float: left;
-		}
-	}
-	.footer-v2 &{
-		@include tab{
-			@include safeFlexOrder(2);
-			width: 50%;
-		}
-	}
+
 }//end block-2 about
 
 /* CONNECT
 -------------- */
-.block-3{
-	@include onlySmall{
-		@include safeFlexOrder(4);
-	}
-	.footer-v1 &{
-		@include tab{
-			width: 33.33%;
-			margin-left: 66.66%;
-		}
-	}
-	.footer-v2 &{
-		@include tab{
-			@include safeFlexOrder(5);
-			width: 50%;
-		}
-	}
-	.social-links{
-		@include listReset;
-		li{
-			display: inline-block;
-			margin-right: 10px;
-			a{
-				color: $footerIcon;
-				font-size: 32px;
-				&:hover,&:focus{
-					color: $footerIconHover;
-				}
+.social-links{
+	@include listReset;
+	li{
+		display: inline-block;
+		margin-right: 10px;
+		a{
+			color: $footerIcon;
+			font-size: 32px;
+			&:hover,&:focus{
+				color: $footerIconHover;
 			}
 		}
 	}
-}//end block-3 connect
+}
+
 
 /* NEWSLETTER
 -------------- */
-.block-4{
-	@include safeFlexOrder(3);
-	.footer-v1 &{
-		@include tab{
-			width: 33.33%;
-			margin-left: 66.66%;
-		}
-	}
-	.footer-v2 &{
-		@include tab{
-			width: 50%;
-		}
-	}
+.block-newsletter{
 	p{
 		a{
 			color: $footerLink;
@@ -110,26 +68,6 @@
 	@include onlySmall{
 		@include safeFlexOrder(2);
 	}
-	.footer-v1 &{
-		float: left;
-		width: 33.33%;
-	}
-	.footer-v2 &{
-		h2.block-title{
-			display: none;
-		}
-		@include tab{
-			@include safeFlexOrder(1);
-			position: relative;
-			padding-top: 15px;
-			padding-bottom: 15px;
-			z-index: 2;
-			&:after{
-				@include fullBack(darken($darkGrey, 5%));
-			}	
-		}
-	}
-	
 	ul:not(.contextual-links){
 		@include listReset;
 		@include safeFlex(row,wrap,center,null);
@@ -184,30 +122,17 @@
 -------------- */
 .block-1{
 	width: 100%;
-	text-align: center;
-	.footer-v1 &{
-		position: relative;
-		z-index: 2;
-		padding-top: 30px;
-		padding-bottom: 30px;
-		clear: both;
-		&:after{
-			@include fullBack($black);
-		}
-	}
-	@include onlySmall{
-		@include safeFlexOrder(5);
-	}
-	@include tab{
-		width: 100%;
-		.footer-v2 &{
-			width: 50%;
-			@include safeFlexOrder(4);
-			text-align: left;
-		}
-	}
-	p{
-		margin:0;
+	.copyright{
+		text-align: center;
 		font-size: 1.5rem;
+		& > span:first-child{
+			padding-right: .25em;
+			& + *{
+				display: inline;
+			}
+		}
+		p{
+			margin:0;
+		}
 	}
 }//end footer-copyright
