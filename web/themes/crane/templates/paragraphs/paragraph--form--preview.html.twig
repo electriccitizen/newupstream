@@ -39,10 +39,12 @@
 {% extends "paragraph.html.twig" %}
 
 {% block content %}
+	{{ attach_library('crane/confirmation') }}
 	<div class="field field--type-form field--label-inline">
     <div class="field__label">Form</div>
     <div class="field__item">
 			{{- content.field_form['#items'].0.target_id|title|replace('_',' ') -}}
+			| <a class="leave-live confirm-link form-confirm" href="/admin/structure/webform/manage/{{ content.field_form['#items'].0.target_id }}" target="_blank">Edit Form</a>
 		</div>
 	</div>
 {% endblock %}

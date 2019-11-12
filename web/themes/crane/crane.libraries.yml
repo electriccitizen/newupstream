@@ -21,6 +21,10 @@ details:
     - core/drupalSettings
     - core/jquery
     - core/jquery.once
+confirmation:
+  version: 1.0
+  js:
+    js/confirmation.js: {}
 fonts:
   version: 1.0
   css:
