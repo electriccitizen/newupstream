@@ -6301,6 +6301,13 @@ body:not(.role-administrator) .admin-list li.social-media-links {
       color: #ffffff;
       background: #121212; }
 
+/* BLOCK CONTENT FORM
+--------------------- */
+.block-content-form {
+  max-width: 800px; }
+  .block-content-form .form-type-vertical-tabs {
+    display: none; }
+
 /* ========================
   NODE FORMS
 ========================== */

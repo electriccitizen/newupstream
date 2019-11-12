@@ -42,3 +42,11 @@
 	}//end table
 }//end block layout admin form
 
+/* BLOCK CONTENT FORM
+--------------------- */
+.block-content-form{
+	max-width: $textMax;
+	.form-type-vertical-tabs{
+		display: none;
+	}
+}//end block content form

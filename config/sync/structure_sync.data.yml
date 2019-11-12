@@ -1,16 +1,3 @@
-blocks:
-  -
-    info: 'Test sync block'
-    langcode: en
-    uuid: f8b4a8e0-34e5-4fcc-98d9-9d6f3ac939d0
-    bundle: basic
-    revision_id: null
-    rev_id_current: null
-    fields:
-      body:
-        value: "<p>Did this make it to dev?</p>\r\n"
-        summary: ''
-        format: basic_html
 menus:
   -
     menu_name: main
@@ -144,3 +131,51 @@ menus:
     weight: '-99'
     langcode: en
     uuid: 963c1388-d4ff-44de-8088-17c37176cfaf
+blocks:
+  -
+    info: 'Stay in Touch'
+    langcode: en
+    uuid: 84a09ce2-e145-4874-90b6-067da5857172
+    bundle: newsletter
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body:
+        value: "<p>Keep abreast of all our breaking changes and latest news!</p>\r\n"
+        summary: ''
+        format: basic_html
+      field_form_embed:
+        value: "<link href=\"//cdn-images.mailchimp.com/embedcode/slim-10_7.css\" rel=\"stylesheet\" type=\"text/css\">\r\n\t\t\t<style type=\"text/css\">\r\n\t\t\t\t#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }\r\n\t\t\t\t/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.\r\n\t\t\t\t   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */\r\n\t\t\t</style>\r\n\t\t\t<div id=\"mc_embed_signup\">\r\n\t\t\t\t<form action=\"https://alphafox-design.us11.list-manage.com/subscribe/post?u=9e6e7f117cc33d5901f2c9ad0&amp;id=02c18215cc\" method=\"post\" id=\"mc-embedded-subscribe-form\" name=\"mc-embedded-subscribe-form\" class=\"validate\" target=\"_blank\" novalidate>\r\n\t\t\t\t    <div id=\"mc_embed_signup_scroll\">\r\n\t\t\t\t\t<label for=\"mce-EMAIL\">Subscribe to our mailing list</label>\r\n\t\t\t\t\t<input type=\"email\" value=\"\" name=\"EMAIL\" class=\"email\" id=\"mce-EMAIL\" placeholder=\"email address\" required>\r\n\t\t\t\t    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->\r\n\t\t\t\t    <div style=\"position: absolute; left: -5000px;\" aria-hidden=\"true\"><input type=\"text\" name=\"b_9e6e7f117cc33d5901f2c9ad0_02c18215cc\" tabindex=\"-1\" value=\"\"></div>\r\n\t\t\t\t    <div class=\"clear\"><input type=\"submit\" value=\"Subscribe\" name=\"subscribe\" id=\"mc-embedded-subscribe\" class=\"button\"></div>\r\n\t\t\t\t    </div>\r\n\t\t\t\t</form>\r\n\t\t\t</div>"
+      field_form_modal:
+        value: '1'
+      field_modal_header:
+        value: 'Demo newsletter signup'
+      field_modal_intro:
+        value: "<p>We're glad you've decided to stay in touch. We promise not to bug you too much!</p>\r\n"
+        format: basic_html
+      field_modal_trigger:
+        value: 'Signup today!'
+  -
+    info: 'About Us'
+    langcode: en
+    uuid: 776b5982-01ea-4b37-acde-8e3f751d0c95
+    bundle: basic
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body:
+        value: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Atqui iste locus est, Piso, tibi etiam atque etiam confirmandus, inquam; Quia dolori non voluptas contraria est, sed doloris privatio. Cupiditates non Epicuri divisione finiebat, sed sua satietate. Apparet statim, quae sint officia, quae actiones.</p>\r\n"
+        summary: ''
+        format: basic_html
+  -
+    info: Copyright
+    langcode: en
+    uuid: 27de869c-2ba8-4187-b40e-31c99519f508
+    bundle: basic
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body:
+        value: "<p>© 2019 Electric Citizen, All Tacos&nbsp;Spoken For</p>\r\n"
+        summary: ''
+        format: basic_html
