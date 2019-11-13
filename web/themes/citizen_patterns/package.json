@@ -11,7 +11,8 @@
   "scripts": {
     "start": "gulp compile && gulp theme",
     "build": "gulp build",
-    "postinstall": "rm -rf pattern-lab && composer create-project -n pattern-lab/edition-twig-standard pattern-lab && rm -rf pattern-lab/source && ln -s ../components pattern-lab/source"
+    "postinstall": "rm -rf pattern-lab && composer create-project -n pattern-lab/edition-twig-standard pattern-lab && rm -rf pattern-lab/source && ln -s ../components pattern-lab/source",
+    "deploy": "gulp ghpages-deploy"
   },
   "dependencies": {
     "gulp-rename": "^1.4.0",
