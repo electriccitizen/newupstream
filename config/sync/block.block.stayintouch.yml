@@ -10,8 +10,8 @@ dependencies:
     - citizen_patterns
 id: stayintouch
 theme: citizen_patterns
-region: footer
-weight: -4
+region: prefooter
+weight: -3
 provider: null
 plugin: 'block_content:84a09ce2-e145-4874-90b6-067da5857172'
 settings:

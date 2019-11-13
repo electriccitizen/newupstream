@@ -12,8 +12,8 @@ _core:
   default_config_hash: b1YEev4sFgrNyB1POY_3_VVXyfaOG0eYtCE0qwBuzbM
 id: citizen_patterns_footer
 theme: citizen_patterns
-region: footer
-weight: -5
+region: prefooter
+weight: -4
 provider: null
 plugin: 'menu_block:footer'
 settings:

@@ -133,6 +133,19 @@ menus:
     uuid: 963c1388-d4ff-44de-8088-17c37176cfaf
 blocks:
   -
+    info: Connect
+    langcode: en
+    uuid: 48753224-ddba-4ea1-bf35-ab01f2321dcd
+    bundle: social_media_links
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body: null
+      field_platforms:
+        uri: 'https://www.facebook.com'
+        title: ''
+        options: {  }
+  -
     info: 'Stay in Touch'
     langcode: en
     uuid: 84a09ce2-e145-4874-90b6-067da5857172
@@ -156,6 +169,18 @@ blocks:
       field_modal_trigger:
         value: 'Signup today!'
   -
+    info: Newsletter
+    langcode: en
+    uuid: 2ed87386-5a05-45c6-8fca-f5c0d676d1d2
+    bundle: basic
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body:
+        value: "<p>Placeholder for newsletter signup.</p>\r\n"
+        summary: ''
+        format: basic_html
+  -
     info: 'About Us'
     langcode: en
     uuid: 776b5982-01ea-4b37-acde-8e3f751d0c95
@@ -176,6 +201,6 @@ blocks:
     rev_id_current: null
     fields:
       body:
-        value: "<p>Electric Citizen, All Tacos&nbsp;Spoken For</p>\r\n"
+        value: "<p>© 2019 Electric Citizen, All Tacos&nbsp;Spoken For</p>\r\n"
         summary: ''
         format: basic_html

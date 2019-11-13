@@ -11,7 +11,7 @@ dependencies:
 id: citizen_patterns_copyright
 theme: citizen_patterns
 region: footer
-weight: -2
+weight: -5
 provider: null
 plugin: 'block_content:27de869c-2ba8-4187-b40e-31c99519f508'
 settings:
