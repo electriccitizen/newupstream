@@ -1,0 +1,77 @@
+
+
+STYLEGUIDE ONLY: This template is not embedded into Drupal, but header blocks are embedded from molecules/blocks both here and in Drupal. Changing a variable at the blocks level changes both. See the blocks twig files for available variables for search and superfish.
+<div class="layout-container pl-spacer">
+
+<header role="banner" class="nav-right">
+  <div>
+
+		
+<div id="block-citizen-patterns-branding" class="contextual-region block--system-branding block block-system-branding-block">
+	<a href="#" title="home" rel="home">
+					<img class="logo" src="../../../../logo.svg" />
+							<span class="site-name">OC Patterns</span>
+			</a>
+</div>		 
+					
+
+	
+
+	<div data-drupal-selector="search-block-form" id="block-search-form" class="block block-search-form-block toggle">
+
+			<div>
+	
+					<div class="search-form-outer">
+				<div class="t-search-wrapper"><a href="#" class="t-search" role="button" aria-label="toggle-search" aria-controls="search-form-wrapper"><i class="fas fa-search"></i></a></div>
+				<div class="t-search-close"><a href="#" class="close-search" role="button" aria-label="toggle-search-close" aria-controls="search-form-wrapper"><i class="fas fa-times"></i></a></div>
+				<div id="search-form-wrapper" aria-hidden="true">
+					<form action="/site-search" method="get" id="views-exposed-form-site-search-search-results" accept-charset="UTF-8" data-drupal-form-fields="edit-search-api-fulltext">
+
+													<div class="js-form-item form-item js-form-type-textfield form-item-search-api-fulltext js-form-item-search-api-fulltext">
+								<label for="edit-search-api-fulltext" class="visually-hidden">Search</label>
+								<input id="edit-search-api-fulltext" class="form-text" placeholder="enter keywords" data-drupal-selector="edit-search-api-fulltext" type="text" size="30" max-length="128" >
+							</div>
+							<div data-drupal-selector="edit-actions" id="edit-site-search-actions" class="form-actions js-form-wrapper form-wrapper">
+								<input id="edit-submit-site-search" class="button js-form-submit form-submit" data-drupal-selector="edit-submit-site-search" value="search" type="submit">
+								<i class="fas fa-search"></i>
+							</div>
+						
+					</form>
+				</div>
+			</div>
+
+		
+			</div>
+	
+	</div>
+				 
+		
+					<div id="block-citizen-patterns-mainnavigation" class="contextual-region block block-superfishmain right">
+												<div class="sf-accordion-toggle sf-style-none">
+						<a id="superfish-main-toggle" href="#">
+							<span>Main Navigation</span>
+						</a>
+					</div>	
+													<ul id="#superfish-main" class="sf-menu sf-main sf-horizontal">
+						<li class="sf-depth-1 sf-no-children">
+							<a href="#" class="sf-depth-1">Main Link 1</a>
+						</li>
+						<li class="sf-depth-1 menuparent">
+							<a href="#" class="sf-depth-1 menuparent">Main Link 2</a>
+							<ul class="sf-hidden">
+								<li class="sf-depth-2 sf-no-children">
+									<a href="#" class="sf-depth2">Link 1</a>
+								</li>
+							</ul>
+						</li>
+						<li class="sf-depth-1 sf-no-children active-trail">
+							<a href="#" class="sf-depth-1 is-active">Main Link 3</a>
+						</li>
+					</ul>
+				
+					</div>
+			 
+	</div>
+</header>
+
+</div>

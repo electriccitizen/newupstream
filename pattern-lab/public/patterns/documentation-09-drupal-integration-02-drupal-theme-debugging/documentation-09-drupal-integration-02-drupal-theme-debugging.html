@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html class="pl">
+  <head>
+    <title>Pattern Lab</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+
+    <link rel="stylesheet" href="../../css/style.css?1573673286" media="all" />
+    <link rel="stylesheet" href="../../css/pattern-scaffolding.css?1573673286" media="all" />
+    <link rel="stylesheet" href="../../../../dist/style.css?1573673286" media="all" />
+    <link rel="stylesheet" href="../../js/select2.min.css?1573673286" media="all" />
+    <link rel="stylesheet" href="../../js/swipebox/src/css/swipebox.css?1573673286" media="all" />
+
+    <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
+    <!-- never cache patterns -->
+<meta http-equiv="cache-control" content="max-age=0" />
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+<meta http-equiv="pragma" content="no-cache" />
+
+<link rel="stylesheet" href="../../styleguide/css/styleguide.min.css?1573673286" media="all">
+<link rel="stylesheet" href="../../styleguide/css/prism-typeahead.min.css?1573673286" media="all" />
+    <!-- End Pattern Lab -->
+
+  </head>
+  <body class="">
+    <!-- for js not found errors (only in styleguide)-->
+  	<div class="visually-hidden">
+  		<div id="tabs" class="tabs"></div>
+  	</div>
+<a name="drupal-theme-debug" id="drupal-theme-debug"></a>
+
+<div class="doc-text">
+	<div class="doc-section">
+		<h4 class="doc-section-title">Theme Debugging</h4>
+		<div class="doc-section-inner">
+												<p>Theme debugging can be the saving grace of any developer when customizing templates or doing and sort of PHP/Twig work. Thankfully Drupal 8 offers several ways to debug Citizen Patterns in order to find the variables you need when customizing a template or writing a .theme function.</p>
+			<p><strong>Devel/Kint—</strong> Devel is suite of contrib modules that allow theme debugging and (new for Drupal 8) the powerful <span class="code">{{ kint() }}</span> Twig function and <span class="code">{{ ksm() }}</span> PHP function to debug variables.</p>
+			<p><strong>Theme Debug—</strong> Theme dug is something that can be turned on by creating a services.yml file for the site and changing a few variables. Theme debug will list all available template suggestions for each component when using a browser inspector. It will also tell you which template is being used and when it ends. You can also turn off site-cache and turn on auto-reload so you don't have to clear cache every time you change a template (as long as you are logged in to your local site). The services.yml file can be found in the /sites/default/services.yml. If there is not one there, you can copy development.services.yml from the /sites folder and move the copy to sites/default and rename it services.yml.</p>
+			<p>In services.yml, find the twig.conf: section and change <span class="code">debug:</span> to true, <span class="code">auto_reload:</span> to true, and <span class="code">cache:</span> to false. This will allow for an optimal theming environment. <strong>Never commit the services.yml to git.</strong></p>
+			<p><strong>Template variable dumping—</strong> Template variables are piece of Drupal content before they get rendered by Twig templates. Any custom templating of theme functions you do will involve finding and printing template variables.</p>
+			<p>If you are customizing a template, you will use either <span class="code">{{ kint() }}</span> or <span class="code">{{ dd() }}</span>. Both will dump all of the available variables for the entity the template belongs to and its parent entity (though use of the <span class="code">'#object'</span> variable). The difference is <span class="code">{{ kint() }}</span> also gets you all of the available methods for each variable. This makes it much slower and more memory intensive that <span class="code">{{ dd() }}</span>, but also more powerful. Methods are good ways to find fields and other variables from entity reference fields: <span class="code">get('field_my_field')</span>. We recommend using <span class="code">{{ dd() }}</span> to get as far as you can and then using <span class="code">{{ kint() }}</span> if necessary—just for efficiency reasons.</p>
+			<p>When working in the .theme file editing or creating new theme PHP functions, <span class="code">{{ ksm() }}</span> is the variable dump function you want to use. It works just like <span class="code"></span></p>
+			<p><strong>DB Log Report—</strong> Often when making Twig or theme function changes, errors are made that results in a white screen and a fatal error message. This is most often due to syntax errors or variable errors. Sometimes but these errors are printed directly on the screen, but often you will need to go to Configuration > Reports > Recent Log Messages to view the error and find out exactly what is wrong.</p>
+		</div>
+	</div>
+</div>
+
+  <!--DO NOT REMOVE-->
+  <script type="text/json" id="sg-pattern-data-footer" class="sg-pattern-data">
+  {"cssEnabled":false,"lineage":[],"lineageR":[],"patternBreadcrumb":{"patternType":"documentation","patternSubtype":"drupal integration"},"patternDesc":"","patternExtension":"twig","patternName":"drupal theme debugging","patternPartial":"documentation-drupal-theme-debugging","patternState":"","extraOutput":[]}
+</script>
+
+<script>
+  /*!
+  * scriptLoader - v0.1
+  *
+  * Copyright (c) 2014 Dave Olsen, http://dmolsen.com
+  * Licensed under the MIT license
+  *
+  */
+  
+  var scriptLoader = {
+    run: function(js,cb,target) {
+      var s  = document.getElementById(target+'-'+cb);
+      for (var i = 0; i < js.length; i++) {
+        var src = (typeof js[i] != 'string') ? js[i].src : js[i];
+        var c   = document.createElement('script');
+        c.src   = '../../'+src+'?'+cb;
+        if (typeof js[i] != 'string') {
+          if (js[i].dep !== undefined) {
+            c.onload = function(dep,cb,target) {
+              return function() {
+                scriptLoader.run(dep,cb,target);
+              }
+            }(js[i].dep,cb,target);
+          }
+        }
+        s.parentNode.insertBefore(c,s);
+      }
+    }
+  }
+</script>
+
+<script id="pl-js-polyfill-insert-1573673286">
+  (function() {
+    if (self != top) {
+      var cb = '1573673286';
+      var js = [];
+      if (typeof document !== 'undefined' && !('classList' in document.documentElement)) {
+        js.push('styleguide/bower_components/classList.min.js');
+      }
+      scriptLoader.run(js,cb,'pl-js-polyfill-insert');
+    }
+  })();
+</script>
+
+<script id="pl-js-insert-1573673286">
+  (function() {
+    if (self != top) {
+      var cb = '1573673286';
+      var js = [ { 'src': 'styleguide/bower_components/jwerty.min.js', 'dep': [ 'styleguide/js/patternlab-pattern.min.js' ] } ];
+      scriptLoader.run(js,cb,'pl-js-insert');
+    }
+  })();
+</script>
+
+  <!-- Drupal-specific files - UNCOMMENT AS NECESSARY -->
+  <!-- may need to change these below based on path -->
+  <script src="../../js/ready.min.js"></script>
+  <script src="../../js/drupal.js"></script>
+  <script src="../../js/underscore-min.js"></script>
+  <script src="../../js/jquery.js"></script>
+  <script src="../../js/jquery.once.min.js"></script>
+  <script src="../../js/select2.min.js"></script>
+  <script src="../../js/stacktable/stacktable.min.js"></script>
+  <script src="../../js/swipebox//src/js/jquery.swipebox.js"></script>
+  <script src="../../../../dist/scripts-styleguide.js"></script>
+  <script>Drupal.attachBehaviors();</script>
+  <script>
+    $("select").once('selects').each(function(){  
+        $( '.sg-pattern-example select' ).select2({
+          placeholder: "Select an option"
+        });
+    });
+  </script>
+
+  <script>
+    $(".node--type-landing_page select").once('landing_select').each(function(){  
+        $(this).select2();
+    });
+  </script>
+
+  <script>
+    $(".text-long table").once('stack').each(function(){  
+        $(this).cardtable({myClass:'responsive-table'});
+        $(document).ajaxComplete(function() {
+            $('.layout-container table').cardtable({myClass:'responsive-table'});
+        });
+    });
+  </script>
+  </body>
+</html>

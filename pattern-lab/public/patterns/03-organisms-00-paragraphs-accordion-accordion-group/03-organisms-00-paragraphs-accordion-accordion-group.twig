@@ -1,0 +1,19 @@
+{#
+  STYLEGUIDE ONLY: This template is not embedded into Drupal.
+#}
+<div class="paragraph paragraph--type--accordion-group">
+	<div class="widget-title">Accordion Group</div>
+	<div class="field field-accordion-item">
+		{% for accordion in accordion_group %}
+			<div>
+				{% 
+					include "@organisms/00-paragraphs/accordion/accordion.twig"
+					with{
+						accordion_header: accordion.accordion_header,
+						accordion_content: accordion.accordion_content,
+					}
+				%}
+			</div>
+		{% endfor %}
+	</div>
+</div>
