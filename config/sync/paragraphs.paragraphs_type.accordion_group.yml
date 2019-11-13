@@ -5,7 +5,7 @@ dependencies: {  }
 _core:
   default_config_hash: FhFNxBKqbZtQXblHXf44SrI1cbH_Q8OEvDbJJVLcd0M
 id: accordion_group
-label: 'Accordion Group'
+label: Accordions
 icon_uuid: null
 description: 'Creates structure for accordion items'
 behavior_plugins: {  }

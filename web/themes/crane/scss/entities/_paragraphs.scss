@@ -178,7 +178,7 @@
 			&[value="Add Landing Page Section"],&[value="Add Basic Page Section"]{
 				@extend %section;
 			}
-			&[value="Add Accordion Group"],&[value="Add Accordion Item"]{
+			&[value="Add Accordions"],&[value="Add Accordion Item"]{
 				@extend %accordion;
 			}
 			&[value="Add Block Placer"]{
