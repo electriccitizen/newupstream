@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html class="pl">
+  <head>
+    <title>Pattern Lab</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+
+    <link rel="stylesheet" href="../../css/style.css?1573669448" media="all" />
+    <link rel="stylesheet" href="../../css/pattern-scaffolding.css?1573669448" media="all" />
+    <link rel="stylesheet" href="../../../../dist/style.css?1573669448" media="all" />
+    <link rel="stylesheet" href="../../js/select2.min.css?1573669448" media="all" />
+    <link rel="stylesheet" href="../../js/swipebox/src/css/swipebox.css?1573669448" media="all" />
+
+    <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
+    <!-- never cache patterns -->
+<meta http-equiv="cache-control" content="max-age=0" />
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+<meta http-equiv="pragma" content="no-cache" />
+
+<link rel="stylesheet" href="../../styleguide/css/styleguide.min.css?1573669448" media="all">
+<link rel="stylesheet" href="../../styleguide/css/prism-typeahead.min.css?1573669448" media="all" />
+    <!-- End Pattern Lab -->
+
+  </head>
+  <body class="">
+    <!-- for js not found errors (only in styleguide)-->
+  	<div class="visually-hidden">
+  		<div id="tabs" class="tabs"></div>
+  	</div>
+<a name="misc-dev" id="misc-dev"></a>
+
+<div class="doc-text">
+	<div class="doc-section">
+		<h4 class="doc-section-title">Dev Specific Configuration</h4>
+		<div class="doc-section-inner">
+			<p>Electric Citizen uses a full-site configuration export workflow (Continuous Integration). This means that ANY configuration changes on your local site (except those specifically limited to local environments) is pushed to the development environments when you export you work.</p>
+			<p>However, some configuration is tied to content—which is not exported. Paragraph file icons and custom blocks used in block layout and Layout Builder are prime examples. If you create a new custom block and add it to the footer locally then export your configuration, your block will show as missing or broken on the dev site—because the block does no exist there. In these cases, it is necessary to some configuration on dev (or whatever the highest level of environment is currently). <strong>When doing non-local configuration work, make sure that you alert all developers who may be working on the site before you start so that they do not push work that will override your dev changes before you get them into the workflow.</strong></p>
+			<p><strong>Paragraph Icon dev config—</strong> Paragraph icons need to be added in two places: a) <span class="code">node.css</span> in the Citizen module (for the add buttons); b) the edit for of the paragraph bundle itself (for the small icon shown when the paragraph is closed on the node editing form). This second icon needs to be added to both local and dev simultaneously and then your local config should be exported to dev.</p>
+			<p><strong>Custom Block dev config—</strong> Custom blocks should be created and placed where they are needed directly on dev (or whatever the current highest level environment is. Dev should then be imported to your local (through site:refresh or whatever the current workflow command is to sync your local database and code with dev) and re-exported back up to dev. This gets the correct block ID in assigned to the block in both environments and gets the configuration into the workflow stream.</p>
+		</div>
+	</div>
+</div>
+
+
+
+  <!--DO NOT REMOVE-->
+  <script type="text/json" id="sg-pattern-data-footer" class="sg-pattern-data">
+  {"cssEnabled":false,"lineage":[],"lineageR":[],"patternBreadcrumb":{"patternType":"documentation","patternSubtype":"miscellaneous"},"patternDesc":"","patternExtension":"twig","patternName":"dev content config","patternPartial":"documentation-dev-content-config","patternState":"","extraOutput":[]}
+</script>
+
+<script>
+  /*!
+  * scriptLoader - v0.1
+  *
+  * Copyright (c) 2014 Dave Olsen, http://dmolsen.com
+  * Licensed under the MIT license
+  *
+  */
+  
+  var scriptLoader = {
+    run: function(js,cb,target) {
+      var s  = document.getElementById(target+'-'+cb);
+      for (var i = 0; i < js.length; i++) {
+        var src = (typeof js[i] != 'string') ? js[i].src : js[i];
+        var c   = document.createElement('script');
+        c.src   = '../../'+src+'?'+cb;
+        if (typeof js[i] != 'string') {
+          if (js[i].dep !== undefined) {
+            c.onload = function(dep,cb,target) {
+              return function() {
+                scriptLoader.run(dep,cb,target);
+              }
+            }(js[i].dep,cb,target);
+          }
+        }
+        s.parentNode.insertBefore(c,s);
+      }
+    }
+  }
+</script>
+
+<script id="pl-js-polyfill-insert-1573669448">
+  (function() {
+    if (self != top) {
+      var cb = '1573669448';
+      var js = [];
+      if (typeof document !== 'undefined' && !('classList' in document.documentElement)) {
+        js.push('styleguide/bower_components/classList.min.js');
+      }
+      scriptLoader.run(js,cb,'pl-js-polyfill-insert');
+    }
+  })();
+</script>
+
+<script id="pl-js-insert-1573669448">
+  (function() {
+    if (self != top) {
+      var cb = '1573669448';
+      var js = [ { 'src': 'styleguide/bower_components/jwerty.min.js', 'dep': [ 'styleguide/js/patternlab-pattern.min.js' ] } ];
+      scriptLoader.run(js,cb,'pl-js-insert');
+    }
+  })();
+</script>
+
+  <!-- Drupal-specific files - UNCOMMENT AS NECESSARY -->
+  <!-- may need to change these below based on path -->
+  <script src="../../js/ready.min.js"></script>
+  <script src="../../js/drupal.js"></script>
+  <script src="../../js/underscore-min.js"></script>
+  <script src="../../js/jquery.js"></script>
+  <script src="../../js/jquery.once.min.js"></script>
+  <script src="../../js/select2.min.js"></script>
+  <script src="../../js/stacktable/stacktable.min.js"></script>
+  <script src="../../js/swipebox//src/js/jquery.swipebox.js"></script>
+  <script src="../../../../dist/scripts-styleguide.js"></script>
+  <script>Drupal.attachBehaviors();</script>
+  <script>
+    $("select").once('selects').each(function(){  
+        $( '.sg-pattern-example select' ).select2({
+          placeholder: "Select an option"
+        });
+    });
+  </script>
+
+  <script>
+    $(".node--type-landing_page select").once('landing_select').each(function(){  
+        $(this).select2();
+    });
+  </script>
+
+  <script>
+    $(".text-long table").once('stack').each(function(){  
+        $(this).cardtable({myClass:'responsive-table'});
+        $(document).ajaxComplete(function() {
+            $('.layout-container table').cardtable({myClass:'responsive-table'});
+        });
+    });
+  </script>
+  </body>
+</html>

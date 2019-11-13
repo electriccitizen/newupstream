@@ -1,0 +1,38 @@
+STYLE GUIDE ONLY: The Form widget template is not carried from pattern lab to drupal.
+
+<div class="paragraph paragraph--type--form">
+	<div class="widget-title">Form</div>
+	<div class="field field-form">
+		<form class="webform-submission-form">
+			<div class="webform-element--title-inline js-form-item js-form-type-textfield form-item-name">
+				<label for="edit-name" class="js-form-required form-required">
+					Name
+				</label>
+				<input data-drupal-selector="edit-name" type="text" class="form-text required" aria-reuiqred="true">
+			</div>
+			<div class="webform-element--title-inline js-form-item js-form-type-email form-item-email">
+				<label for="edit-email" class="js-form-required form-required">
+					Your Email
+				</label>
+				<input data-drupal-selector="edit-email" type="email" class="form-email required" aria-reuiqred="true">
+			</div>
+			<div class="webform-element--title-inline js-form-item js-form-type-textfield form-item-subject">
+				<label for="edit-subject" class="js-form-required form-required">
+					Subject
+				</label>
+				<input data-drupal-selector="edit-subject" type="text" class="form-text required" aria-reuiqred="true">
+			</div>
+			<div class="webform-element--title-inline js-form-item js-form-type-textarea form-item-message">
+				<label for="edit-message">
+					Message
+				</label>
+				<div>
+				<textarea data-drupal-selector="edit-message" id="edit-message" name="message" class="form-textarea"></textarea>
+				</div>
+			</div>
+			<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper">
+				<input class="webform-buton--submit button button--primary js-form-submit form-submit" type="submit" id="edit-submit" value="Send Message">
+			</div>
+		</form>
+	</div>
+</div>

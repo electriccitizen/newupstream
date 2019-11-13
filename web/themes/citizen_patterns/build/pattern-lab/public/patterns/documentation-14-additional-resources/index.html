@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html class="pl">
+  <head>
+    <title>Pattern Lab</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+
+    <link rel="stylesheet" href="../../css/style.css?1573669448" media="all" />
+    <link rel="stylesheet" href="../../css/pattern-scaffolding.css?1573669448" media="all" />
+    <link rel="stylesheet" href="../../../../dist/style.css?1573669448" media="all" />
+    <link rel="stylesheet" href="../../js/select2.min.css?1573669448" media="all" />
+    <link rel="stylesheet" href="../../js/swipebox/src/css/swipebox.css?1573669448" media="all" />
+
+    <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
+    <!-- never cache patterns -->
+<meta http-equiv="cache-control" content="max-age=0" />
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+<meta http-equiv="pragma" content="no-cache" />
+
+<link rel="stylesheet" href="../../styleguide/css/styleguide.min.css?1573669448" media="all">
+<link rel="stylesheet" href="../../styleguide/css/prism-typeahead.min.css?1573669448" media="all" />
+    <!-- End Pattern Lab -->
+
+  </head>
+  <body class="">
+    <!-- for js not found errors (only in styleguide)-->
+  	<div class="visually-hidden">
+  		<div id="tabs" class="tabs"></div>
+  	</div>
+<!-- View All Patterns in a Pattern Sub-Type -->
+<div class="sg-main" role="main">
+  <!-- Patterns -->
+  <div id="sg-patterns">
+                  <div id="viewall-documentation-additional-resources" class="sg-subtype">
+  <h2>
+    <a href="../../patterns/documentation-14-additional-resources/index.html" class="patternLink" data-patternpartial="viewall-documentation-additional-resources">
+      additional resources
+    </a>
+  </h2>
+  
+  <div class="sg-pattern-body">
+    
+  </div>
+</div>                        <div id="documentation-quick-reference" class="sg-pattern">
+  <div class="sg-pattern-head">
+    <h3 class="sg-pattern-title">
+      <a href="../../patterns/documentation-14-additional-resources-00-quick-reference/documentation-14-additional-resources-00-quick-reference.html" class="patternLink" data-patternpartial="documentation-quick-reference" title="Link to Pattern">
+        quick reference
+        
+              </a>
+    </h3>
+    
+    <div class="sg-pattern-breadcrumb">
+      
+    </div>
+    
+    <a href="#" data-patternpartial="documentation-quick-reference" title="View Pattern Info" id="sg-pattern-extra-toggle-documentation-quick-reference" class="sg-pattern-extra-toggle">
+      <span>&#9660;</span>
+    </a>
+  </div>
+  
+  <div class="sg-pattern-extra" id="sg-pattern-extra-documentation-quick-reference"></div>
+    
+  <div class="sg-pattern-example">
+    <a name="quick-reference" id="quick-reference"></a>
+
+<div class="doc-text">
+	<p>Quick reference / best practice links in human sounding short names, external references</p>
+	<div class="doc-section">
+		<h4 class="doc-section-title"></h4>
+		<div class="doc-section-inner">
+			<ul>
+				<li>Adding New Layouts</li>
+				<li>Add new regions to the Drupal Block Structure</li>
+				<li>Bringing Templates from Pattern Lab to Drupal</li>
+				<li>Getting Pattern Lab to pick up new Scss/JS/Twig files.</li>
+				<li>Breakpoints for Responsive Image Styles</li>
+				<li>Adding new JS files/libraries</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+
+
+  </div>
+  
+  <script type="text/json" id="sg-pattern-data-documentation-quick-reference" class="sg-pattern-data">
+    {"lineage":[],"lineageR":[],"patternBreadcrumb":{"patternType":"documentation","patternSubtype":"additional resources"},"patternDesc":"","patternExtension":"twig","patternName":"quick reference","patternPartial":"documentation-quick-reference","patternState":""}
+  </script>
+</div><!--end .sg-pattern-->                        <div id="documentation-drush-commands" class="sg-pattern">
+  <div class="sg-pattern-head">
+    <h3 class="sg-pattern-title">
+      <a href="../../patterns/documentation-14-additional-resources-01-drush-commands/documentation-14-additional-resources-01-drush-commands.html" class="patternLink" data-patternpartial="documentation-drush-commands" title="Link to Pattern">
+        drush commands
+        
+              </a>
+    </h3>
+    
+    <div class="sg-pattern-breadcrumb">
+      
+    </div>
+    
+    <a href="#" data-patternpartial="documentation-drush-commands" title="View Pattern Info" id="sg-pattern-extra-toggle-documentation-drush-commands" class="sg-pattern-extra-toggle">
+      <span>&#9660;</span>
+    </a>
+  </div>
+  
+  <div class="sg-pattern-extra" id="sg-pattern-extra-documentation-drush-commands"></div>
+    
+  <div class="sg-pattern-example">
+    <a name="drush-commands" id="drush-commands"></a>
+
+<div class="doc-text">
+	
+	<div class="doc-section">
+		<h4 class="doc-section-title">Common Terminal Commands</h4>
+		<div class="doc-section-inner">
+			<p><strong>Common D8 drush commands—</strong> Below are some common/useful drush commands for Drupal 8. <strong>NOTE:</strong> Always look at the readme file for each site repo to find site-specific import and export commands. All local drush commands must be followed by the site alias for that VM or preceded by 'lando' if on a lando VM.</p>
+			<p><ul class="spaced">
+				<li><strong><span class="code">drush cr all</span>—</strong> Clears the site cache. Needs to be done when new files are added, Twig code is changed, new modules are added, or as first defense against fatal errors/warnings.</li>
+				<li><strong><span class="code">drush -y config-set system.performance css.preprocess 0 && drush -y config-set system.performance js.preprocess 0</span>—</strong> Turns off the site CSS and JS file aggregation settings. This is usually done automatically during the site:refresh process.</li>
+				<li><strong><span class="code">drush sql-sync @pantheon.alias.dev @self</span>—</strong> Fetches the database from the dev environment and syncs it to your local.</li>
+				<li><strong><span class="code">drush sql-dump --result-file=../database-dump.sql</span>—</strong> Dumps you local database to an archive file to be shared with another developer.</li>
+				<li><strong><span class="code">drush pm-uninstall module_name</span>—</strong> Uninstalls a module. <strong>NOTE: </strong>after being uninstalled module must be composer removed if no longer needed by the site. Modules uninstalled only on local environments but still used on dev/live environments do not get composer removed.</li>
+				<li><strong><span class="code">drush pm-enable module_name</span>—</strong> Installs a module. <strong>NOTE:</strong> A module should be composer required before being installed (unless it is used on a different environment and is already required in the composer.json file).</li>
+				<li><strong><span class="code">drush upwd --password="admin" "admin" </span>—</strong> Changes the admin (user 1) password to 'admin'. <strong>NOTE:</strong> This can also be done using <span class="code">drush uli</span>.</li>
+				<li><strong><span class="code">drush config-delete module_name.settings</span>—</strong> Fixes 'configuration already exists' module errors that sometimes happen when re-installing a module previously used on the site or upgrading a module. <strong>NOTE: </strong>This is a very rare case and if you are not entirely sure of what you are doing, the Technical Director or Lead Front End Developer should be consulted.</li>
+			</ul></p>
+			<p><strong>Common composer commands—</strong> Below are some common/useful composer commands for Drupal 8.</p>
+			<p><ul class="spaced">
+				<li><strong><span class="code">composer install</span>—</strong> Installs all of the site dependencies listed in the composer.json file in the repo root. This is done when a site is first setup or is refreshed (done automatically on refresh).</li>
+				<li><strong><span class="code">composer update</span>—</strong> Updates all of the site dependencies listed in the composer.json file in the repo root to their latest versions. <strong>NOTE: This should never be done globally using just the '<span class="code">composer update</span>' command.</strong> Instead this should be on a module by module basis as needed: <span class="code">composer update drupal/module_name</span>. You can specify a specific version to update to by adding the version number at the end: <span class="code">composer update drupal/module_name:1x-dev</span>.</li>
+				<li><strong><span class="code">composer require drupal/module_name</span>—</strong> Adds a module and its dependencies to the site. You can specify a specific version to update to by adding the version number at the end: <span class="code">composer update drupal/module_name:1x-dev</span>. <strong>NOTE: </strong>A module msut be enabled using either <span class="code">drush en module_name</span> or through the Extends UI after it is required. You can also use composer require to add external git repos or other libraries as site dependencies if needed although it is preferred that this is done through npm in the theme package.json or through a CDN as an external library if possible.</li>
+				<li><strong><span class="code">composer remove drupal/module_name</span>—</strong> Removes a module and its dependencies from the site. <strong>NOTE:</strong> Any module removed from the site must be first uninstalled using <span class="code">drush pm-uninstall module_name</span> of through the Extend UI.</li>
+			</ul></p>
+
+		</div>
+	</div>
+</div>
+
+
+
+  </div>
+  
+  <script type="text/json" id="sg-pattern-data-documentation-drush-commands" class="sg-pattern-data">
+    {"lineage":[],"lineageR":[],"patternBreadcrumb":{"patternType":"documentation","patternSubtype":"additional resources"},"patternDesc":"","patternExtension":"twig","patternName":"drush commands","patternPartial":"documentation-drush-commands","patternState":""}
+  </script>
+</div><!--end .sg-pattern-->                        <div id="documentation-troubleshooting" class="sg-pattern">
+  <div class="sg-pattern-head">
+    <h3 class="sg-pattern-title">
+      <a href="../../patterns/documentation-14-additional-resources-02-troubleshooting/documentation-14-additional-resources-02-troubleshooting.html" class="patternLink" data-patternpartial="documentation-troubleshooting" title="Link to Pattern">
+        troubleshooting
+        
+              </a>
+    </h3>
+    
+    <div class="sg-pattern-breadcrumb">
+      
+    </div>
+    
+    <a href="#" data-patternpartial="documentation-troubleshooting" title="View Pattern Info" id="sg-pattern-extra-toggle-documentation-troubleshooting" class="sg-pattern-extra-toggle">
+      <span>&#9660;</span>
+    </a>
+  </div>
+  
+  <div class="sg-pattern-extra" id="sg-pattern-extra-documentation-troubleshooting"></div>
+    
+  <div class="sg-pattern-example">
+    <a name="trouble" id="trouble"></a>
+
+<div class="doc-text">
+	<div class="doc-section">
+		<h4 class="doc-section-title">Troubleshooting</h4>
+		<div class="doc-section-inner">
+			<p>Citizen Patterns normally is pretty bulletproof if you are using the most recent versions of npm and node.js. If you do run into trouble when either installing the theme or running (npm start), follow these steps:</p>
+			<p><ol class="spaced">
+				<li><strong>Update to the most recent version of npm and node.js—</strong> Since this theme is based on <a href="https://github.com/fourkitchens/emulsify" target="_blank">Four Kitchens Emulsify</a> it is best to run the most current versions of both npm and node.js in order to stay even with dependency needs.</li>
+				<li><strong>Make sure non of you files are misnamed or contain incorrect syntax—</strong> ES Lint (JS Linting) will cause the theme to quit running if it detects a JS error. It will give you the error and line to fix. New files (SCSS, JS & Twig) will also often cause the theme to quite running. Clear the site cache and re-run <span class="code">npm start</span>. Twig syntax/variable errors will often cause a white screen with a fatal error message. use the Recent Log Messages report (Config > Reports) to get the specific Twig error, fix it and clear cache.</li>
+				<li><strong>Check the error to see if it has to do with theme dependencies—</strong> Sometimes theme dependencies will fail due to npm/Gulp developers falling behind or version conflicts. Often resolutions to dependency errors can be found in issue queues either in the <a href="https://github.com/fourkitchens/emulsify" target="_blank">Emulsify theme repo</a>, the <a href="https://github.com/fourkitchens/emulsify-gulp" target="_blank">Emulsify Gulp repo</a>, or on the npm package or dependency repo issue queue.</li>
+				<li><strong>Scream for help at the top of your lungs—</strong> When all else fails, the Lead Front-End developer and/or Technical Director can most likely find a solution to your problem.</li>
+			</ol></p>
+		</div>
+	</div>
+</div>
+
+
+
+  </div>
+  
+  <script type="text/json" id="sg-pattern-data-documentation-troubleshooting" class="sg-pattern-data">
+    {"lineage":[],"lineageR":[],"patternBreadcrumb":{"patternType":"documentation","patternSubtype":"additional resources"},"patternDesc":"","patternExtension":"twig","patternName":"troubleshooting","patternPartial":"documentation-troubleshooting","patternState":""}
+  </script>
+</div><!--end .sg-pattern-->            </div> <!--end #sg-patterns-->
+</div><!--end .sg-main-->
+  <!--DO NOT REMOVE-->
+  <script type="text/json" id="sg-pattern-data-footer" class="sg-pattern-data">
+  {"patternPartial":"viewall-documentation-additional-resources"}
+</script>
+
+<script>
+  /*!
+  * scriptLoader - v0.1
+  *
+  * Copyright (c) 2014 Dave Olsen, http://dmolsen.com
+  * Licensed under the MIT license
+  *
+  */
+  
+  var scriptLoader = {
+    run: function(js,cb,target) {
+      var s  = document.getElementById(target+'-'+cb);
+      for (var i = 0; i < js.length; i++) {
+        var src = (typeof js[i] != 'string') ? js[i].src : js[i];
+        var c   = document.createElement('script');
+        c.src   = '../../'+src+'?'+cb;
+        if (typeof js[i] != 'string') {
+          if (js[i].dep !== undefined) {
+            c.onload = function(dep,cb,target) {
+              return function() {
+                scriptLoader.run(dep,cb,target);
+              }
+            }(js[i].dep,cb,target);
+          }
+        }
+        s.parentNode.insertBefore(c,s);
+      }
+    }
+  }
+</script>
+
+<script id="pl-js-polyfill-insert-1573669448">
+  (function() {
+    if (self != top) {
+      var cb = '1573669448';
+      var js = [];
+      if (typeof document !== 'undefined' && !('classList' in document.documentElement)) {
+        js.push('styleguide/bower_components/classList.min.js');
+      }
+      scriptLoader.run(js,cb,'pl-js-polyfill-insert');
+    }
+  })();
+</script>
+
+<script id="pl-js-insert-1573669448">
+  (function() {
+    if (self != top) {
+      var cb = '1573669448';
+      var js = [ { 'src': 'styleguide/bower_components/jwerty.min.js', 'dep': [ 'styleguide/js/patternlab-pattern.min.js' ] } ];
+      scriptLoader.run(js,cb,'pl-js-insert');
+    }
+  })();
+</script>
+
+  <!-- Drupal-specific files - UNCOMMENT AS NECESSARY -->
+  <!-- may need to change these below based on path -->
+  <script src="../../js/ready.min.js"></script>
+  <script src="../../js/drupal.js"></script>
+  <script src="../../js/underscore-min.js"></script>
+  <script src="../../js/jquery.js"></script>
+  <script src="../../js/jquery.once.min.js"></script>
+  <script src="../../js/select2.min.js"></script>
+  <script src="../../js/stacktable/stacktable.min.js"></script>
+  <script src="../../js/swipebox//src/js/jquery.swipebox.js"></script>
+  <script src="../../../../dist/scripts-styleguide.js"></script>
+  <script>Drupal.attachBehaviors();</script>
+  <script>
+    $("select").once('selects').each(function(){  
+        $( '.sg-pattern-example select' ).select2({
+          placeholder: "Select an option"
+        });
+    });
+  </script>
+
+  <script>
+    $(".node--type-landing_page select").once('landing_select').each(function(){  
+        $(this).select2();
+    });
+  </script>
+
+  <script>
+    $(".text-long table").once('stack').each(function(){  
+        $(this).cardtable({myClass:'responsive-table'});
+        $(document).ajaxComplete(function() {
+            $('.layout-container table').cardtable({myClass:'responsive-table'});
+        });
+    });
+  </script>
+  </body>
+</html>

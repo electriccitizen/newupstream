@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html class="pl">
+  <head>
+    <title>Pattern Lab</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+
+    <link rel="stylesheet" href="../../css/style.css?1573669448" media="all" />
+    <link rel="stylesheet" href="../../css/pattern-scaffolding.css?1573669448" media="all" />
+    <link rel="stylesheet" href="../../../../dist/style.css?1573669448" media="all" />
+    <link rel="stylesheet" href="../../js/select2.min.css?1573669448" media="all" />
+    <link rel="stylesheet" href="../../js/swipebox/src/css/swipebox.css?1573669448" media="all" />
+
+    <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
+    <!-- never cache patterns -->
+<meta http-equiv="cache-control" content="max-age=0" />
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+<meta http-equiv="pragma" content="no-cache" />
+
+<link rel="stylesheet" href="../../styleguide/css/styleguide.min.css?1573669448" media="all">
+<link rel="stylesheet" href="../../styleguide/css/prism-typeahead.min.css?1573669448" media="all" />
+    <!-- End Pattern Lab -->
+
+  </head>
+  <body class="">
+    <!-- for js not found errors (only in styleguide)-->
+  	<div class="visually-hidden">
+  		<div id="tabs" class="tabs"></div>
+  	</div>
+<a name="admin-citizen" id="admin-citizen"></a>
+
+<div class="doc-text">
+	<div class="doc-section">
+		<h4 class="doc-section-title">Citizen Module</h4>
+		<div class="doc-section-inner">
+			<p>The Citizen module is a module that is set for theming the admin side of Drupal 8 and performing other non-theme related tasks. The module is stored in <span class="code">web/modules/custom/citizen</span>.</p>
+			<p><strong>Admin CSS—</strong> Admin CSS is handled through two files in Citizen: <span class="code">global.css</span> and <span class="code">node.css</span>. CSS files are used because installing node and Gulp and compiling Scss files for the small amount of code used in these files is a bit of an overkill.</p>
+			<p><span class="code">Global.css</span> is used for all CSS outside of the node/add and node/edit forms (admin views, select lists, media browser and the admin toolbar.  <span class="code">Node.css</span> is used for all node related admin theming (field spacing, paragraph buttons, help text, labels, etc).</p>
+			<p><strong>Admin JS—</strong> Admin JS is also stored in two files: <span class="code">global.js</span> and <span class="code">node.js</span>. <span class="code">Global.js</span> is attached to every admin page using the <span class="code">citizen_custom.libraries.yml</span> and an admin page-alter function in the .module file. The global library is also used to call the Select2 JS file on all select lists on the site (both admin and front-facing). Select2 makes select lists easier to style and adds autocomplete and drop-up/drop-down functionality.</p>
+			<p><span class="code">Node.js</span> is used for showing and hiding node form fields and other tasks that will effect the editing experience. Some fields, for instance, should only be shown if another field is used or has a certain value selected. <span class="code">Node.js</span> fills that need. <strong>NOTE:</strong> Any field that is dependent on the output of another in node.js should have that same output dependency required on the front-end (through Twig, JS, or Scss).</p>
+		</div>
+	</div>
+</div>
+
+
+
+  <!--DO NOT REMOVE-->
+  <script type="text/json" id="sg-pattern-data-footer" class="sg-pattern-data">
+  {"cssEnabled":false,"lineage":[],"lineageR":[],"patternBreadcrumb":{"patternType":"documentation","patternSubtype":"admin theming"},"patternDesc":"","patternExtension":"twig","patternName":"citizen module","patternPartial":"documentation-citizen-module","patternState":"","extraOutput":[]}
+</script>
+
+<script>
+  /*!
+  * scriptLoader - v0.1
+  *
+  * Copyright (c) 2014 Dave Olsen, http://dmolsen.com
+  * Licensed under the MIT license
+  *
+  */
+  
+  var scriptLoader = {
+    run: function(js,cb,target) {
+      var s  = document.getElementById(target+'-'+cb);
+      for (var i = 0; i < js.length; i++) {
+        var src = (typeof js[i] != 'string') ? js[i].src : js[i];
+        var c   = document.createElement('script');
+        c.src   = '../../'+src+'?'+cb;
+        if (typeof js[i] != 'string') {
+          if (js[i].dep !== undefined) {
+            c.onload = function(dep,cb,target) {
+              return function() {
+                scriptLoader.run(dep,cb,target);
+              }
+            }(js[i].dep,cb,target);
+          }
+        }
+        s.parentNode.insertBefore(c,s);
+      }
+    }
+  }
+</script>
+
+<script id="pl-js-polyfill-insert-1573669448">
+  (function() {
+    if (self != top) {
+      var cb = '1573669448';
+      var js = [];
+      if (typeof document !== 'undefined' && !('classList' in document.documentElement)) {
+        js.push('styleguide/bower_components/classList.min.js');
+      }
+      scriptLoader.run(js,cb,'pl-js-polyfill-insert');
+    }
+  })();
+</script>
+
+<script id="pl-js-insert-1573669448">
+  (function() {
+    if (self != top) {
+      var cb = '1573669448';
+      var js = [ { 'src': 'styleguide/bower_components/jwerty.min.js', 'dep': [ 'styleguide/js/patternlab-pattern.min.js' ] } ];
+      scriptLoader.run(js,cb,'pl-js-insert');
+    }
+  })();
+</script>
+
+  <!-- Drupal-specific files - UNCOMMENT AS NECESSARY -->
+  <!-- may need to change these below based on path -->
+  <script src="../../js/ready.min.js"></script>
+  <script src="../../js/drupal.js"></script>
+  <script src="../../js/underscore-min.js"></script>
+  <script src="../../js/jquery.js"></script>
+  <script src="../../js/jquery.once.min.js"></script>
+  <script src="../../js/select2.min.js"></script>
+  <script src="../../js/stacktable/stacktable.min.js"></script>
+  <script src="../../js/swipebox//src/js/jquery.swipebox.js"></script>
+  <script src="../../../../dist/scripts-styleguide.js"></script>
+  <script>Drupal.attachBehaviors();</script>
+  <script>
+    $("select").once('selects').each(function(){  
+        $( '.sg-pattern-example select' ).select2({
+          placeholder: "Select an option"
+        });
+    });
+  </script>
+
+  <script>
+    $(".node--type-landing_page select").once('landing_select').each(function(){  
+        $(this).select2();
+    });
+  </script>
+
+  <script>
+    $(".text-long table").once('stack').each(function(){  
+        $(this).cardtable({myClass:'responsive-table'});
+        $(document).ajaxComplete(function() {
+            $('.layout-container table').cardtable({myClass:'responsive-table'});
+        });
+    });
+  </script>
+  </body>
+</html>
