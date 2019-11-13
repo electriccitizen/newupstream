@@ -81,12 +81,12 @@
 		@include onlySmall{
 			@include safeFlex(row,wrap,center,start);
 		}
-		a{
-			color: $footerLink;
-			&:hover,&:focus{
-				color: $footerLinkHover;
-			}
-		}
+		// a{
+		// 	color: $footerLink;
+		// 	&:hover,&:focus{
+		// 		color: $footerLinkHover;
+		// 	}
+		// }
 	}
 }//end block social-links
 

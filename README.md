@@ -79,6 +79,12 @@ You are working in a team environment and must follow a few rules. If you are ca
 
 See this guide to [following a safe workflow](docs/workflow/WORKFLOW.md) when using configuration management in Drupal 8. The recommended workflow below follows these best practices, and includes two helper commands (```fin sync``` and ```fin validate```) that automate important components of a safe work flow.
 
+## Deploying the styleguide
+
+Upstream ships with a Pattern Lab styleguide baked in. You can deploy the style guide to Github pages by running the ```npm deploy``` command in the /citizen_patterns folder in the command line. NOTE: You must have the theme installed: ```npm install```.
+
+The default github pages url for the site is: https://electriccitizen.github.io/< my-project-repo >/web/themes/citizen_patterns/build/pattern-lab/public.  This repo should be customized per site.
+
 
 ## Next steps
 
