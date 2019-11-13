@@ -11,9 +11,9 @@ Available macro variables: fixed, non-fixed.
 {{ footer_instructions }}
 {% endblock %}
 
-{% block footerContent %}
-<footer role="contentinfo" class="pl-spacer">
-	<div class="footer-inner">	
+{% block preFooterContent %}
+<section role="prefooter" class="prefooter">
+	<div class="prefooter-inner">	
 		<div>
 			{% if about %}
 				<div class="block-2">
@@ -41,7 +41,42 @@ Available macro variables: fixed, non-fixed.
 					%}
 				</div>
 			{% endif %}
+		</div>
+	</div>
+</sectionr>
+{% endblock %}
 
+{% block footerContent %}
+<footer role="contentinfo" class="pl-spacer">
+	<div class="footer-inner">	
+		<div>
+			{% if socialMedia %}
+				<div class="block-social-media-links">
+					{% if socialMedia.plLabel %}
+						<h2 class="block-title">{{ socialMedia.plLabel }}</h2>
+					{% endif %}
+					{% if socialMedia.intro %}
+						<div class="field body">
+							{% autoescape false %}
+								{{ socialMedia.intro }}
+							{% endautoescape %}
+						</div>
+					{% endif %}
+					{% if socialMedia.platforms %}
+						<div class="field field-platforms link">
+							<ul class="platform-links">
+								{% for platform in socialMedia.platforms %}
+									{% include "@atoms/05-field/social-platforms/_field-platforms.twig" 
+										with{
+											url: platform,
+										}
+									%}
+								{% endfor %}
+							</ul>
+						</div>
+					{% endif %}
+				</div>
+			{% endif %}
 			{% if copyright %}
 				<div class="block-1">
 					{% include "@molecules/blocks/footer/_footer-copyright.twig" %}

@@ -107,7 +107,9 @@
 	{% block pagePreFooter %}
 		{% if page.prefooter %}
 			<section role="prefooter" class="prefooter">
-				{{ page.prefooter }}
+				<div class="prefooter-inner">
+					{{ page.prefooter }}
+				</div>
 			</section>
 		{% endif %}
 	{% endblock %}

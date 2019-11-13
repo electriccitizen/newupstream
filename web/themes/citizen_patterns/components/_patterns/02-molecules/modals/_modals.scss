@@ -47,6 +47,7 @@
 			&:hover,&:focus{
 				opacity: .8;
 				border-color: $white;
+				outline: none;
 			}
 		}
 	}//end modal-header

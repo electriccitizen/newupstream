@@ -5,29 +5,11 @@
 /* ABOUT
 -------------- */
 .block-2{
+	width: 100%;
 	@include tab{
 		width: 33.333%;
 	}
 }//end block-2 about
-
-/* CONNECT
--------------- */
-.block-social-links{
-	.platforms{
-		@include listReset;
-		li{
-			display: inline-block;
-			margin-right: 10px;
-			a{
-				color: $footerIcon;
-				font-size: 32px;
-				&:hover,&:focus{
-					color: $footerIconHover;
-				}
-			}
-		}
-	}//end platforms
-}//end block social-links
 
 
 /* NEWSLETTER
@@ -37,48 +19,7 @@
 	@include tab{
 		width: 33.33%;
 	}
-	.field.body{
-		& > *:last-child{
-			margin-bottom: 0;
-		}
-		&.has-modal{
-			& > *:nth-last-child(2){
-				display: inline;
-			}
-		}
-		a{
-			color: $footerLink;
-			text-decoration: underline;
-			&:hover,&:focus{
-				color: $footerLinkHover;
-				text-decoration: none;
-			}
-		}
-	}
-	#mc_embed_signup{
-		background: none;
-		font: inherit;
-		width: 100%;
-		label{
-			display: none;
-		}
-		#mc-embedded-subscribe-form{
-			padding: 0;
-		}
-		#mce-EMAIL{
-			@include textInput;
-		}
-		#mc-embedded-subscribe{
-			@include submitButton;
-			width: auto;
-		}
-	}
-	.ctct-form-custom{
-		.grecaptcha-badge{
-			display: none !important;
-		}
-	}
-}//end block-4 newsletter
+}//end block-newsletter
 
 /* FOOTER MENU
 -------------- */
@@ -97,12 +38,12 @@
 			position: relative;
 			a{
 				display: block;
-				color: $footerLink;
+				color: $prefooterLink;
 				.footer-v1 &{
 					text-decoration: underline;
 				}
 				&:hover,&:focus{
-					color: $footerLinkHover;
+					color: $prefooterLinkHover;
 					@include transAll(.3s);
 					.footer-v1 &{
 						text-decoration: none;
@@ -128,14 +69,40 @@
 	}//end ul
 }//end footer-menu
 
+/* CONNECT
+-------------- */
+.block-social-media-links{
+	width: 100%;
+	@include tab{
+		max-width: 320px;
+		@include safeFlexOrder(2);
+	}
+	.platform-links{
+		@include onlySmall{
+			@include safeFlex(row,wrap,center,start);
+		}
+		a{
+			color: $footerLink;
+			&:hover,&:focus{
+				color: $footerLinkHover;
+			}
+		}
+	}
+}//end block social-links
+
 
 /* COPYRIGHT
 -------------- */
 .block-1{
-	width: 100%;
+	@include onlySmall{
+		width: 100%;
+	}	
 	.copyright{
 		text-align: center;
 		font-size: 1.5rem;
+		@include tab{
+			text-align: left;
+		}
 		& > span:first-child{
 			padding-right: .25em;
 			& + *{

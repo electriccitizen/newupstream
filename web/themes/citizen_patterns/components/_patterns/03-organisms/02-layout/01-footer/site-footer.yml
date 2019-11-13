@@ -39,19 +39,18 @@ newsletter:
   modalIntro:
     "We're glad you've decided to stay in touch."
 
-address:
-  1:
-    address_line:
-      "Electric Citizen"
-  2:
-    address_line:
-      "2822 Lyndale Ave S,"
-  3:
-    address_line:
-      "Minneapolis, MN 55408"
-  4:
-    address_line:
-      "612-466-0020"
+socialMedia:
+  plLabel:
+  intro:
+  platforms:
+    1: 
+      "https://www.facebook.com"
+    2: 
+      "https://www.twitter.com"
+    3: 
+      "https://www.linkedin.com"
+    4: 
+      "https://www.youtube.com"
 
 menuTitle:
   'Quicklinks'
@@ -73,7 +72,6 @@ menu:
       "#"
 
 footer_instructions:
-  "STYLEGUIDE ONLY: This template is not embedded into Drupal, but the footer macro variables will work in both. 
-   Available variables are: fixed, non-fixed."
+  "STYLEGUIDE ONLY: This template is not embedded into Drupal, but the blocks will work in both."
 
   
