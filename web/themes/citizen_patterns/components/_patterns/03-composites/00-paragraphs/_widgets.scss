@@ -1,0 +1,198 @@
+/* ===================
+	WIDGETS GLOBAL
+===================== */
+
+//widgets parent field
+.block-field-paragraphs{
+	//override layout padding
+	@include edgeToEdge;
+	.field-paragraphs{
+		//use flex to support layout field
+		@include safeFlex(row,wrap,null,null);
+	}	
+}//end field paragraphs
+
+
+/* ===========
+SECTION LAYOUTS
+============= */
+.paragraph{
+	width: 100%;
+}
+
+/* WIDGETS FLEX ITEMS
+--------------------- */
+.section{
+	width: 100%;
+	padding-left: $siteMarginMobile;
+	padding-right: $siteMarginMobile;
+	position: relative;
+
+	&:not(.background){
+		&:not(:first-child){
+			padding-top: $spaceLg;
+		}
+		&:not(:last-child){
+			padding-bottom: $spaceLg;
+		}
+		& + .section:not(.background){
+			padding-top: 0;
+		}
+	}
+	&.background{
+		padding-bottom: $spaceLg;
+		padding-top: $spaceLg;
+	}
+	.field-section-title{
+		.layout:not(.layout--twocol-sidebar) &{
+			max-width: $textMax;
+			@include auto;
+		}
+	}
+	.field-section-intro{
+		@extend .field-section-title;
+		margin-bottom: $spaceLg;
+	}
+
+	//default section layout
+	.field-section-widgets{
+		position: relative;
+		z-index: 4;
+		max-width: $contentStop;
+		@include auto;
+		& > .section-wrapper > .section-item{
+			width: 100%;
+			//need mins so that js can calculate width and height (for slider)
+			min-height: 0;
+			min-width: 0;
+			&:not(:last-child){
+				margin-bottom: $spaceLg;
+			}
+		}
+	}//end field section widgets
+
+	&.two-column{
+		.section-wrapper{
+			@include safeFlex(row,wrap,null,null);
+			@include tab{
+				@include bleed(padding,20px);
+			}
+			@include desk{
+				@include bleed(padding,30px);
+			}
+			& > .section-item{
+				width: 100%;
+				@include tab{
+					width: 50%;
+				}
+			}
+		}
+	}//end columned
+
+	&.three-column{
+		@extend .two-column;
+		.section-wrapper > .section-item{
+			@include tab{
+				width: 33.333%;
+			}
+		}//end section item
+	}//end three column
+
+	/* background styles
+	--------------------- */
+	&.grey{
+		background: $lightGrey;
+	}
+
+}//end section
+
+//Anchor Links
+.widget-anchors{
+	max-width: $contentStop;
+	padding-left: $siteMarginMobile;
+	padding-right: $siteMarginMobile;
+	padding-top: 2rem;
+	padding-bottom: 2rem;	
+	text-align: center;
+	position: relative;
+	z-index: 1;
+	@include auto;
+	&:after{
+		@include fullBack($grey);
+	}
+	h2#toc-title{			
+		margin-bottom: 0;
+		@include tab{
+			@include visuallyHidden;
+		}
+		a{
+			font-size: 2.4rem;
+			color: $black;
+			font-weight: $regular;
+			i{
+				margin-right: 1rem;
+			}
+		}
+	}
+	.anchors{
+		display: none;
+		padding-top: 2rem;
+		@include tab{
+			display: block !important;
+			@include bleed(padding,20px);
+			padding-bottom: 2rem;
+		}
+	}
+	a{
+		padding: 15px 10px;
+		position: relative;
+		display: block;
+		font-family: $header;
+		&:hover,&:focus{
+			color: $hoverLink;
+		}
+		&:not(:last-child):after{
+			content: '';
+			display: block;
+			position: absolute;
+			top: 100%;
+			right: 50%;
+			width: 100px;
+			margin-right: -50px;
+			background: $black;
+			height: 1px;
+		}
+		@include tab{
+			display: inline-block;
+			font-size: 2.2rem;
+			&:not(:last-child):after{
+				height: 70%;
+				width: 1px;
+				top: 18%;
+				right: -.5px;
+				margin-right: 0;
+			}
+		}
+		@include contentStop{
+			font-size: 2.4rem;
+		}
+	}//end a 
+
+	//snug up first section if it has a background
+	& + .field-paragraphs > .section:first-child:not(.background){
+		margin-top: $spaceLg;
+	}
+
+}//end widget anchors (in this section)
+
+
+/* WIDGETS WITHOUT SPECIFIC PL FOLDERS
+--------------------- */
+//admin view-placer
+.paragraph--type--admin-view-placer{
+	.wrapper{
+		max-width: 100% !important;
+	}
+}
+
+

@@ -10,8 +10,8 @@
 @import "00-base/**/*/font-awesome/solid.scss";
 @import "00-base/**/*/font-awesome/brands.scss";
 @import "00-base/**/*.scss";
-@import "01-atoms/**/*.scss";
-@import "02-molecules/**/*.scss";
-@import "03-organisms/**/*.scss";
-@import "04-elements/**/*.scss";
-@import "05-miscellaneous/**/*.scss";
+@import "01-parts/**/*.scss";
+@import "02-chunks/**/*.scss";
+@import "03-composites/**/*.scss";
+@import "04-units/**/*.scss";
+@import "05-assembly/**/*.scss";

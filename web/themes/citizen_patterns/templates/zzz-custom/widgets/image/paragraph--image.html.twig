@@ -55,7 +55,7 @@
 {%- endif -%}
 
 {% block widgetContent %}
-	{% embed "@organisms/00-paragraphs/image/image.twig" 
+	{% embed "@composites/00-paragraphs/image/image.twig" 
 		with{
 			widget_title: content.field_widget_title.0['#context'].value,
 			image_size: size,

@@ -1,7 +1,7 @@
 /* =====================
 BACKGROUND SIZE MIXINS
 ====================== */
-@import '../01-atoms/01-icons/_icon_sprite.scss';
+@import '../01-parts/01-icons/_icon_sprite.scss';
 
 //This file holds all background size mixins so they can be easily changed if the sprite is changed.
 //background size is the icons row and column position in the sprite multipled by the intended size.
@@ -45,7 +45,7 @@ $addtoany: 32px;
 	@include backgroundSize($columns * $addtoany,$rows * $addtoany);
 }
 
-/// used in MISCELLANEOUS GLOBAL-STYLES.SCSS 
+/// used in assembly GLOBAL-STYLES.SCSS 
 $iconsize: 18px;
 @mixin iconSize{
 	@include backgroundSize($columns * $iconsize,$rows * $iconsize);

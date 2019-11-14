@@ -1,0 +1,123 @@
+/* ==================
+	 STYLEGUIDE
+==================== */
+
+/* PATTERN LAB COLORS
+---------------------- */
+//these should come from the admin theme
+$offWhite     : #f6f6f6;
+$iceBlue      : #f2f9fb;
+$darkIce      : #e4f5fc;
+$blue         : #026cc5;
+$midBlue      : #1d5a9f;
+$darkBlue     : #073b75;
+$darkGrey     : #37363b;
+
+body{
+	position: relative;
+	&:before{
+		content: '';
+		display: block;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		//set grid paper background
+		background-color: $offWhite;
+		background-size:400px 400px, 400px 400px, 100px 100px, 100px 100px;
+		background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+		background-image: -webkit-linear-gradient($grey 2px, transparent 2px),
+			-webkit-linear-gradient(0, $grey 2px, transparent 2px),
+			-webkit-linear-gradient($lightGrey 1px, transparent 1px),
+			-webkit-linear-gradient(0, $lightGrey 1px, transparent 1px);
+		background-image: -moz-linear-gradient($grey 2px, transparent 2px),
+			-moz-linear-gradient(0, $grey 2px, transparent 2px),
+			-moz-linear-gradient($lightGrey 1px, transparent 1px),
+			-moz-linear-gradient(0, $lightGrey 1px, transparent 1px);
+		background-image: linear-gradient($grey 2px, transparent 2px),
+			linear-gradient(90deg, $grey 2px, transparent 2px),
+			linear-gradient($lightGrey 1px, transparent 1px),
+			linear-gradient(90deg, $lightGrey 1px, transparent 1px);
+	}
+}//end sg patterns
+
+/* MAIN PL CONTAINER
+----------------------- */
+.sg-main{
+	overflow-x: hidden !important;
+	padding: 0 0 $spaceXl;
+	position: relative;
+	z-index: 1;
+	#sg-patterns{
+		padding: 0 $spaceXl;
+		//main patterns sections
+		& > .sg-subtype{
+			&:not(:first-child){
+				& > h2{
+					background: $siteBack;
+					max-width: $largeScreen;
+					@include auto;
+					padding: $spaceLg $siteMarginMobile $spaceSm;
+					display: block;
+					@include desk{
+						padding-left: $siteMarginDesk;
+						padding-right: $siteMarginDesk;
+					}
+					a{
+						color: $baseText;
+						pointer-events: none;
+						display: block;
+						text-transform: capitalize;
+						font-size: 42px;
+						color: $midBlue;
+						padding-bottom: $spaceXs;
+						border-bottom: 1px solid $borderRule;
+					}
+				}
+			}//end no first child
+			//main section titles from MD files
+			& > .sg-pattern-body{
+				max-width: $textMax;
+				text-align: center;
+				@include auto;
+				h1{
+					font-size: 30px;
+					padding: $spaceMd 0;
+					position: relative;
+					color: $white;
+					&:after{
+						@include fullBack($darkGrey);
+					}
+				}
+				h2{
+					font-size: 42px;
+					padding: $spaceXl 0;
+					@include tab{
+						font-size: 50px;
+					}
+					@include contentStop{
+						font-size: 60px;
+					}
+				}
+			}//end sg-pattern-body
+		}//end top level types (all main _patterns folders)
+		.sg-pattern{
+			margin-bottom: 0;
+		}
+	}//end sg-patterns
+}//end sg-main
+
+/* PATTERNS
+--------------------- */
+.sg-pattern{
+	max-width: $largeScreen;
+	padding: 0 $siteMarginMobile $spaceMd;
+	background: $siteBack;
+	@include auto;
+	@include desk{
+		padding-left: $siteMarginDesk;
+		padding-right: $siteMarginDesk;
+	}
+}//end sg-patterns
+

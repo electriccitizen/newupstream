@@ -20,18 +20,10 @@ publicDir: public
 sourceDir: source
 defaultPattern: all
 defaultShowPatternInfo: false
-ishMinimum: '400'
+ishMinimum: '240'
 ishMaximum: '2600'
 ishControlsHide:
-    - s
-    - m
-    - l
-    - full
     - hay
-    - random
-    - disco
-    - tools-all
-    - views-new
 styleguideKit: pattern-lab/styleguidekit-twig-default
 styleguideKitPath: vendor/pattern-lab/styleguidekit-twig-default
 lineageMatch: '{%([ ]+)?(?:include|extends|embed)( |\()[&quot;\&#039;]([\/.@A-Za-z0-9-_]+)[&quot;\&#039;]([\s\S+]*?)%}'

@@ -38,6 +38,9 @@ Other notes:
 
 PATTERN LAB
 ----------------------------
+All Pattern Lab top-level folders can be renamed except the 00-base folder. Pattern Lab will die and the theme will not compile anything without 00-base. If folder are renamed make sure the libraries.yml, styles.scss, components section of .info.yml, pattern lab .md files and all inherited twig file paths are a updated accordingly.
+
+The styleguide main header is set in 00-base/base.md and the main section titles are set in .md files inside each top level folder.
 
 
 BEST PRACTICES

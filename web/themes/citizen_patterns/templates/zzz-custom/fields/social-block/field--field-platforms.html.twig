@@ -37,12 +37,12 @@
  */
 #}
 
-{% extends '@atoms/05-field/_field.twig' %}
+{% extends '@parts/05-field/_field.twig' %}
 
 {% block fieldMultiNoItems %}
 	<ul class="platform-links">
 		{% for item in items %}
-			{% include "@atoms/05-field/social-platforms/_field-platforms.twig" 
+			{% include "@parts/05-field/social-platforms/_field-platforms.twig" 
 				with{
 					url: item.content['#title']
 				}

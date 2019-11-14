@@ -26,18 +26,18 @@ component-libraries:
   base:
     paths:
       - components/_patterns/00-base
-  atoms:
+  parts:
     paths:
-      - components/_patterns/01-atoms
-  molecules:
+      - components/_patterns/01-parts
+  chunks:
     paths:
-      - components/_patterns/02-molecules
-  organisms:
+      - components/_patterns/02-chunks
+  composites:
     paths:
-      - components/_patterns/03-organisms
-  pages:
+      - components/_patterns/03-composites
+  units:
     paths:
-      - components/_patterns/04-elements
-  miscellaneous:
+      - components/_patterns/04-units
+  assembly:
     paths:
-      - components/_patterns/05-miscellaneous
+      - components/_patterns/05-assembly

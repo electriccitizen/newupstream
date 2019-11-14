@@ -40,7 +40,7 @@
 {% extends "paragraph.html.twig" %}
 
 {% block widgetContent %}
-  {% embed "@organisms/00-paragraphs/gallery/gallery.twig"
+  {% embed "@composites/00-paragraphs/gallery/gallery.twig"
     with{
       gallery_type: content.field_gallery_type.0['#markup']|clean_class,
 		  widget_title: content.field_widget_title.0['#context'].value
