@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.landing_page_section.field_anchor_link
-    - field.field.paragraph.landing_page_section.field_layout
     - field.field.paragraph.landing_page_section.field_section_intro
     - field.field.paragraph.landing_page_section.field_section_title
     - field.field.paragraph.landing_page_section.field_section_widgets
@@ -49,6 +48,5 @@ content:
     region: content
 hidden:
   field_anchor_link: true
-  field_layout: true
   field_style: true
   search_api_excerpt: true

@@ -80,7 +80,7 @@ table:
   version: 1.0
   js:
     components/js/stacktable/stacktable.min.js: { minified: true }
-    components/_patterns/01-atoms/04-tables/tables.js: {}
+    components/_patterns/01-atoms/04-tables/_tables.js: {}
 user:
   version: 1.0
   js:

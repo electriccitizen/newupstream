@@ -5,7 +5,6 @@ dependencies:
   config:
     - core.entity_view_mode.paragraph.preview
     - field.field.paragraph.landing_page_section.field_anchor_link
-    - field.field.paragraph.landing_page_section.field_layout
     - field.field.paragraph.landing_page_section.field_section_intro
     - field.field.paragraph.landing_page_section.field_section_title
     - field.field.paragraph.landing_page_section.field_section_widgets
@@ -14,7 +13,6 @@ dependencies:
   module:
     - entity_reference_revisions
     - layout_builder
-    - options
 third_party_settings:
   layout_builder:
     enabled: false
@@ -24,13 +22,6 @@ targetEntityType: paragraph
 bundle: landing_page_section
 mode: preview
 content:
-  field_layout:
-    weight: 0
-    label: inline
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: content
   field_section_widgets:
     type: entity_reference_revisions_entity_view
     weight: 2

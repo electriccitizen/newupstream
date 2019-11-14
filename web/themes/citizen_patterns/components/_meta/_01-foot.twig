@@ -7,24 +7,17 @@
   <script src="../../js/ready.min.js"></script>
   <script src="../../js/drupal.js"></script>
   <script src="../../js/underscore-min.js"></script>
-  <script src="../../js/jquery.js"></script>
+  <script src="../../js/jquery.min.js"></script>
   <script src="../../js/jquery.once.min.js"></script>
-  <script src="../../js/select2.min.js"></script>
+  <script src="../../js/select2/select2.min.js"></script>
   <script src="../../js/stacktable/stacktable.min.js"></script>
-  <script src="../../js/swipebox//src/js/jquery.swipebox.js"></script>
-  <script src="../../../../dist/scripts-styleguide.js"></script>
+  <script src="../../../../components/_patterns/05-miscellaneous/styleguide/styleguide.js"></script>
   <script>Drupal.attachBehaviors();</script>
   <script>
     $("select").once('selects').each(function(){  
         $( '.sg-pattern-example select' ).select2({
           placeholder: "Select an option"
         });
-    });
-  </script>
-
-  <script>
-    $(".node--type-landing_page select").once('landing_select').each(function(){  
-        $(this).select2();
     });
   </script>
 

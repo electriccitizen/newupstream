@@ -12,9 +12,9 @@ items:
   - name: $grey
     value: '#ccc'
   - name: $midGrey
-    value: '#676767'
+    value: '#615f6b'
   - name: $darkGrey
-    value: '#4a4a4a'
+    value: '#37363b'
   - name: $lightBlack
     value: '#222222'
   - name: $black

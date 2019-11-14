@@ -7,7 +7,7 @@ Drupal.behaviors.stackTable = {
 		$('.layout-container table:not(.ui-datepicker-calendar'), context).once('responsive_table').each(function(){
 			$(this).cardtable({myClass:'responsive-table'});
 			$(document).ajaxComplete(function() {
-					$('.layout-container table:not(.ui-datepicker-calendar').cardtable({myClass:'responsive-table'});
+				$('.layout-container table:not(.ui-datepicker-calendar').cardtable({myClass:'responsive-table'});
 			});
 		});
 	}

@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.landing_page_section.field_anchor_link
-    - field.field.paragraph.landing_page_section.field_layout
     - field.field.paragraph.landing_page_section.field_section_intro
     - field.field.paragraph.landing_page_section.field_section_title
     - field.field.paragraph.landing_page_section.field_section_widgets
@@ -58,12 +57,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
-    region: content
-  field_layout:
-    weight: 3
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
     region: content
   field_section_intro:
     weight: 2
