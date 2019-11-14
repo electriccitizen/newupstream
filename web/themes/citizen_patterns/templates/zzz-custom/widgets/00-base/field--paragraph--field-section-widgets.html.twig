@@ -45,8 +45,10 @@ set classes = [
 %}
 
 <div{{ attributes.addClass(classes) }}>
-	{%- for item in items -%}
-		{{- item.content -}}
-	{%- endfor -%}
+	<div class="section-wrapper">
+		{%- for item in items -%}
+			{{- item.content -}}
+		{%- endfor -%}
+	</div>
 </div>
 

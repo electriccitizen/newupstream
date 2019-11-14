@@ -6,12 +6,6 @@
 .block-field-paragraphs{
 	//override layout padding
 	@include edgeToEdge;
-	// preserve layout padding and prevent backgrounds from overflowing when next to sidebars
-	.layout.layout--twocol-sidebar &{
-		// @include tab{
-		// 	@include edgeReset;
-		// }
-	}
 	.field-paragraphs{
 		//use flex to support layout field
 		@include safeFlex(row,wrap,null,null);
@@ -64,7 +58,6 @@ SECTION LAYOUTS
 	.field-section-widgets{
 		position: relative;
 		z-index: 4;
-		@include safeFlex(row,wrap,null,null);
 		max-width: $contentStop;
 		@include auto;
 		& > .section-item{
@@ -78,49 +71,32 @@ SECTION LAYOUTS
 		}
 	}//end field section widgets
 
-	&.columned{
-		.field-section-widgets{
+	&.two-column{
+		.section-wrapper{
+			@include safeFlex(row,wrap,null,null);
+			@include tab{
+				@include bleed(padding,20px);
+			}
+			@include desk{
+				@include bleed(padding,30px);
+			}
 			& > .section-item{
+				width: 100%;
 				@include tab{
 					width: 50%;
-					&:nth-child(odd):not(:only-of-type){
-						padding-right: 30px;
-					}
-					&:nth-child(even){
-						padding-left: 30px;
-					}
-					&:nth-last-child(2){
-						margin-bottom: 0;
-					}
 				}
 			}
 		}
 	}//end columned
 
-	&.left{
-		.field-section-widgets{
-			& > .section-item{
-				@include tab{
-					width: 50%;
-					margin-right: 100px;
-					padding-right: 30px;
-				}
+	&.three-column{
+		@extend .two-column;
+		.section-wrapper > .section-item{
+			@include tab{
+				width: 33.333%;
 			}
-		}
-	}//end left
-
-	&.right{
-		.field-section-widgets{
-			@include safeFlex(row,wrap,end,null);
-			& > .section-item{
-				@include tab{
-					width: 50%;
-					margin-left: 100px;
-					padding-left: 30px;
-				}
-			}
-		}
-	}//end right
+		}//end section item
+	}//end three column
 
 	/* background styles
 	--------------------- */
