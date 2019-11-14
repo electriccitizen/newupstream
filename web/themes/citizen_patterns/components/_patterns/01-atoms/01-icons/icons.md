@@ -1,5 +1,5 @@
 ---
-title: Icons
+title: Icons Test
 ---
 ### How to use icons
 
