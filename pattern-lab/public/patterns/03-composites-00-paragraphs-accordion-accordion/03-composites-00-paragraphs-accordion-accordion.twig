@@ -1,0 +1,14 @@
+{#
+  STYLEGUIDE ONLY: This template is embedded into the Drupal accordion-group paragraph template and used in the Pattern Lab accordion group template.
+#}
+
+{{ accordion_instructions }}
+
+<div class="accordion-item" aria-label="Accordion">
+	<div class="accordion-header">
+        <a href="#" role="button" aria-controls="{{ accordion_control }}" aria-expanded="false">{{accordion_header}}</a>
+    </div>
+	<div class="field field-long-text" id="{{ accordion_control }}" aria-hidden="true">
+		{{accordion_content}}
+	</div>
+</div>
