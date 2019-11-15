@@ -13,7 +13,7 @@ $midBlue      : #1d5a9f;
 $darkBlue     : #073b75;
 $darkGrey     : #37363b;
 
-body{
+.project-styleguide{
 	position: relative;
 	&:before{
 		content: '';
@@ -27,16 +27,16 @@ body{
 		background-color: $offWhite;
 		background-size:400px 400px, 400px 400px, 100px 100px, 100px 100px;
 		background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
-		background-image: -webkit-linear-gradient($grey 2px, transparent 2px),
-			-webkit-linear-gradient(0, $grey 2px, transparent 2px),
+		background-image: -webkit-linear-gradient(darken($lightGrey,2%) 2px, transparent 2px),
+			-webkit-linear-gradient(0, darken($lightGrey,2%) 2px, transparent 2px),
 			-webkit-linear-gradient($lightGrey 1px, transparent 1px),
 			-webkit-linear-gradient(0, $lightGrey 1px, transparent 1px);
-		background-image: -moz-linear-gradient($grey 2px, transparent 2px),
-			-moz-linear-gradient(0, $grey 2px, transparent 2px),
+		background-image: -moz-linear-gradient(darken($lightGrey,2%) 2px, transparent 2px),
+			-moz-linear-gradient(0, darken($lightGrey,2%) 2px, transparent 2px),
 			-moz-linear-gradient($lightGrey 1px, transparent 1px),
 			-moz-linear-gradient(0, $lightGrey 1px, transparent 1px);
-		background-image: linear-gradient($grey 2px, transparent 2px),
-			linear-gradient(90deg, $grey 2px, transparent 2px),
+		background-image: linear-gradient(darken($lightGrey,2%) 2px, transparent 2px),
+			linear-gradient(90deg, darken($lightGrey,2%) 2px, transparent 2px),
 			linear-gradient($lightGrey 1px, transparent 1px),
 			linear-gradient(90deg, $lightGrey 1px, transparent 1px);
 	}
