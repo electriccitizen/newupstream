@@ -179,8 +179,9 @@
 	content: "#{$iconCode}";
 }
 
-@mixin faBrand($iconCode){
+@mixin faBrand($iconCode,$iconSize){
 	font-family: 'Font Awesome 5 Brands';
+	font-size: $iconSize;
 	content: '\#{$iconCode}';
 }
 
