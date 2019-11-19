@@ -13,7 +13,7 @@
 		display: none;
 	}
 	&:before{
-		@include faSolid($fa-var-bars,28px);
+		@include faSolid("\f0c9",28px);
 		display: block;
 		position: absolute;
 		top: 0;

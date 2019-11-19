@@ -137,7 +137,7 @@
 		//global toggles
 		a.menuparent{
 			&:after{
-				@include faSolid($fa-var-angle-right,inherit);
+				@include faSolid("\f105",inherit);
 				display: inline-block;
 				padding: 0;
 				position: relative;
@@ -240,7 +240,7 @@ ul.sf-menu.sf-accordion{
 				top: 50%;
 				left: 50%;
 				margin: 0;
-				@include faSolid($fa-var-angle-right,30px);
+				@include faSolid("\f105",30px);
 				@include translate(-50%, -50%);
 				background-color: transparent;
 			}
@@ -256,7 +256,7 @@ ul.sf-menu.sf-accordion{
 		}//end menupareny
 		&.sf-expanded > .sf-accordion-button{
 			&:after{
-				@include faSolid($fa-var-angle-left,30px);
+				@include faSolid("\f104",30px);
 			}
 		}
 	}//end li

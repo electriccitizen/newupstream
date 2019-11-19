@@ -173,18 +173,15 @@
 	padding: 0;
 }
 
-@mixin faSolid($fa-variable,$fa-size){
-	@extend %fa-icon;
-	@extend .fas;
-	content: fa-content(#{$fa-variable});
-	font-size: $fa-size;
+@mixin faSolid($iconCode,$iconSize){
+	font-family: 'Font Awesome 5 Free';
+	font-size: $iconSize;
+	content: "#{$iconCode}";
 }
 
-@mixin faBrand($fa-variable,$fa-size){
-	@extend %fa-icon;
-	@extend .fab;
-	content: fa-content(#{$fa-variable});
-	font-size: $fa-size;
+@mixin faBrand($iconCode){
+	font-family: 'Font Awesome 5 Brands';
+	content: '\#{$iconCode}';
 }
 
 // create a full screen background the height of the parent element (set on :after)
