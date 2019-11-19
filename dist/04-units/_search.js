@@ -1,40 +1,5 @@
-(function($, Drupal) {
-
-//highlight search results
-Drupal.behaviors.searchHighlight = {
-	attach: function (context, settings) {
-	 	$(".search-results").once('tSearch').each(function(){  
-
-
-      //find searched value if not null and highlight each word
-      if($('#edit-site-search-api-fulltext', this).val()){
-        var searchString = $('#edit-site-search-api-fulltext', this).val().split(' ');
-        
-        $.fn.wrapInTag = function(opts) {
-
-          var tag = opts.tag
-            , words = opts.words || []
-            , regex = RegExp(words.join('|'), 'gi') // case insensitive
-            , replacement = '<'+ tag +'>$&</'+ tag +'>';
-
-          return this.html(function() {
-            return $(this).text().replace(regex, replacement);
-          });
-        };
-
-        $('.views-field-body-1').wrapInTag({
-          tag: 'mark class="search-highlight"',
-          words: searchString
-        });
-      }
-      
-		});
-	}
-}
-
-
-
-})(jQuery, Drupal);
-
-
-
+"use strict";(function(a,b){//highlight search results
+b.behaviors.searchHighlight={attach:function attach(){a(".search-results").once("tSearch").each(function(){//find searched value if not null and highlight each word
+if(a("#edit-site-search-api-fulltext",this).val()){var b=a("#edit-site-search-api-fulltext",this).val().split(" ");a.fn.wrapInTag=function(b){var c=b.tag,d=b.words||[],e=RegExp(d.join("|"),"gi")// case insensitive
+;return this.html(function(){return a(this).text().replace(e,"<"+c+">$&</"+c+">")})},a(".views-field-body-1").wrapInTag({tag:"mark class=\"search-highlight\"",words:b})}})}}})(jQuery,Drupal);
+//# sourceMappingURL=_search.js.map

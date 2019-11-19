@@ -1,42 +1,4 @@
-(function($, Drupal) {
-
-/* USER LOGIN PASSWORD SHOW
------------------------------------- */
-Drupal.behaviors.userLogin = {
-	attach: function (context, settings) {
-		$('#user-login-form', context).once('showPass').each(function(){
-      $('.show-password').click(function(e){
-        e.preventDefault();
-        if($(this).is('.show')){
-          $(this).removeClass('show').text('Show');
-          $('#edit-pass').attr('type', 'password');
-        }else{
-          $(this).addClass('show').text('Hide');
-          $('#edit-pass').attr('type', 'text');
-        }
-      });
-		});
-	}
-};
-
-/* SELECT 2
------------------------------------- */
-Drupal.behaviors.select2 = {
-  attach: function (context, settings) {
-    $("select", context).once('selects').each(function(){
-      $( 'form select' ).select2({
-        placeholder: "Select an option"
-      });
-      $(".js-form-type-select", context).once('selectAccessiblity').each(function(){
-        $(document).ready(function(){
-          $('.select2-search__field').each(function(){
-            var label = $(this).closest('.select2-container').siblings('label').text();
-            $(this).attr('aria-label',label).removeAttr('role');
-          });
-        });
-      });
-    });
-   }
-};
-
-})(jQuery, Drupal);
+"use strict";(function(a,b){/* USER LOGIN PASSWORD SHOW
+------------------------------------ */ /* SELECT 2
+------------------------------------ */b.behaviors.userLogin={attach:function attach(b){a("#user-login-form",b).once("showPass").each(function(){a(".show-password").click(function(b){b.preventDefault(),a(this).is(".show")?(a(this).removeClass("show").text("Show"),a("#edit-pass").attr("type","password")):(a(this).addClass("show").text("Hide"),a("#edit-pass").attr("type","text"))})})}},b.behaviors.select2={attach:function attach(b){a("select",b).once("selects").each(function(){a("form select").select2({placeholder:"Select an option"}),a(".js-form-type-select",b).once("selectAccessiblity").each(function(){a(document).ready(function(){a(".select2-search__field").each(function(){var b=a(this).closest(".select2-container").siblings("label").text();a(this).attr("aria-label",b).removeAttr("role")})})})})}}})(jQuery,Drupal);
+//# sourceMappingURL=_forms.js.map

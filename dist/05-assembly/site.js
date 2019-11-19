@@ -1,39 +1,5 @@
-(function($, Drupal) {
-
-/* LAYOUT 
------------------- */
-Drupal.behaviors.removeEmptyRegions = {
-  attach: function (context, settings) {
-    $(".layout > .layout__region:not(.ui-sortable)", context).once('removeEmpty').each(function(){  
-      if(!$(this).children().length){
-        $(this).remove();
-      }
-    });
-  }
-}
-
-/* BACK TO TOP
------------------- */
-Drupal.behaviors.backToTop = {
-  attach: function (context, settings) {
-    $("html.js", context).once('backTop').each(function(){
-      $(window).scroll(function(){
-        var back = $(window).height() * .8;
-        if ($(this).scrollTop() > back ) {
-          $('.back-anchor').fadeIn(200);
-        }else{
-          $('.back-anchor').fadeOut(200);
-        }
-      });
-      //scroll to toc
-      $('.back-anchor a').click(function(e){
-        e.preventDefault();
-        $('html, body').animate({
-          scrollTop: $('body').offset().top - 10
-        });
-      });
-    });
-  }
-}
-
-})(jQuery, Drupal);
+"use strict";(function(a,b){/* LAYOUT 
+------------------ */b.behaviors.removeEmptyRegions={attach:function attach(b){a(".layout > .layout__region:not(.ui-sortable)",b).once("removeEmpty").each(function(){a(this).children().length||a(this).remove()})}/* BACK TO TOP
+------------------ */},b.behaviors.backToTop={attach:function attach(b){a("html.js",b).once("backTop").each(function(){//scroll to toc
+a(window).scroll(function(){var b=.8*a(window).height();a(this).scrollTop()>b?a(".back-anchor").fadeIn(200):a(".back-anchor").fadeOut(200)}),a(".back-anchor a").click(function(b){b.preventDefault(),a("html, body").animate({scrollTop:a("body").offset().top-10})})})}}})(jQuery,Drupal);
+//# sourceMappingURL=site.js.map
