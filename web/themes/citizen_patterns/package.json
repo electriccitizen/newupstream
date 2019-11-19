@@ -5,14 +5,15 @@
   "devDependencies": {
     "emulsify-gulp": "fourkitchens/emulsify-gulp",
     "gulp": "^3.9.1",
+    "gulp-clean": "^0.4.0",
     "gulp-gzip": "^1.4.2",
     "gulp-uglify": "^3.0.2"
   },
   "scripts": {
     "start": "gulp compile && gulp theme",
-    "build": "gulp build",
     "postinstall": "rm -rf pattern-lab && composer create-project -n pattern-lab/edition-twig-standard pattern-lab && rm -rf pattern-lab/source && ln -s ../components pattern-lab/source",
-    "deploy": "gulp ghpages-deploy"
+    "deploy": "gulp scriptRefresh && gulp ghpages-deploy",
+    "jsRefresh": "gulp scriptRefresh"
   },
   "dependencies": {
     "gulp-rename": "^1.4.0",

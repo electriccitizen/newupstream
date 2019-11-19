@@ -85,7 +85,7 @@ Upstream ships with a Pattern Lab styleguide baked in. You can deploy the style 
 
 Troublshooting:
 * You may get an error the very first time you run deploy about the /build folder not existing. If you do, simply run it again.
-* You get a 404 error at the styleguide url—GH Pages can take anywhere from a few seconds to 10 minutes to deploy (ususally around 15-20sec). During deploy you will get a 404 error. Also make sure that you are going to project repo url and the /pattern-lab/public inside there—otherwise you will get 404. If neither are the issue, ask the lead developer.
+* You get a 404 error at the styleguide url—GH Pages can take anywhere from a few seconds to 10 minutes to deploy (ususally around 15-20 seconds). During deploy you will get a 404 error. Also make sure that you are going to project repo url and the /pattern-lab/public inside there—otherwise you will get 404. If neither are the issue, ask the lead developer.
 * Your changes have not appeared after deploy—wait a minute or two and refresh again to make sure that the deploy is finished. Try a hard refresh (Command+Shift+R) to clear the browser cache for the GH Pages url—it often gets stuck, especially in Chrome.
 
 The default github pages url for the site is: https://electriccitizen.github.io/< my-project-repo >/pattern-lab/public.  This styleguide url should be customized on site launch to a subdomain of the project url—or some other custom url that disconnects it from the project repo page. <a href="https://help.github.com/en/github/working-with-github-pages/about-custom-domains-and-github-pages" target="_blank">Instructions for using a custom domain with gh-pages.</a>

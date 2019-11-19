@@ -38,9 +38,11 @@ Other notes:
 
 PATTERN LAB
 ----------------------------
-All Pattern Lab top-level folders can be renamed except the 00-base folder. Pattern Lab will die and the theme will not compile anything without 00-base. If folder are renamed make sure the libraries.yml, styles.scss, components section of .info.yml, pattern lab .md files and all inherited twig file paths are a updated accordingly.
+All Pattern Lab top-level folders can be renamed except the 00-base folder. Pattern Lab will die and the theme will not compile anything without 00-base. If folder are renamed make sure the libraries.yml, styles.scss, components section of .info.yml, Pattern Lab .md files and all inherited twig file paths are a updated accordingly.
 
 The styleguide main header is set in 00-base/base.md and the main section titles are set in .md files inside each top level folder.
+
+The theme currently has issues with js and Pattern Lab. For some reason, getting JS files from the theme into a place where Pattern Lab can read them both locally and post-deploy is tricky—especially since we don't want every JS file in the theme to be used in Pattern Lab. For this reason, currently any JS you do want to work in Pattern Lab must be manually added to the styleguide.js file in ./components/js. To see it in PL locally, run ```npm run jsRefresh``` and refresh your browser tab. To get it to the living styleguide run ```npm run deploy```.
 
 
 BEST PRACTICES
