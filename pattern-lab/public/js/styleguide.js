@@ -5,7 +5,6 @@ Drupal.behaviors.plScripts = {
   attach: function (context, settings) {
     $(".sg-colors").once('pl-script').each(function(){  
      	$('#sg-vp-wrap', window.parent.document).css({'top':'0','z-index':'5'});
-     	console.log('fucking work');
      	$('#sg-gen-container,#sg-viewport', window.parent.document).css({'width':'100%'});
     });
   }
