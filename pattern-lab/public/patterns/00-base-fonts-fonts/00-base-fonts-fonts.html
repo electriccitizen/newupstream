@@ -4,9 +4,9 @@
     <title>Pattern Lab</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" href="../../css/pattern-scaffolding.css?1574271020" media="all" />
-    <link rel="stylesheet" href="../../../../dist/style.css?1574271020" media="all" />
-    <link rel="stylesheet" href="../../js/select2/select2.min.css?1574271020" media="all" />
+    <link rel="stylesheet" href="../../css/pattern-scaffolding.css?1574285327" media="all" />
+    <link rel="stylesheet" href="../../../../dist/style.css?1574285327" media="all" />
+    <link rel="stylesheet" href="../../js/select2/select2.min.css?1574285327" media="all" />
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/813efb9b80.js" crossorigin="anonymous"></script>
     <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
@@ -17,8 +17,8 @@
 <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
 <meta http-equiv="pragma" content="no-cache" />
 
-<link rel="stylesheet" href="../../styleguide/css/styleguide.min.css?1574271020" media="all">
-<link rel="stylesheet" href="../../styleguide/css/prism-typeahead.min.css?1574271020" media="all" />
+<link rel="stylesheet" href="../../styleguide/css/styleguide.min.css?1574285327" media="all">
+<link rel="stylesheet" href="../../styleguide/css/prism-typeahead.min.css?1574285327" media="all" />
     <!-- End Pattern Lab -->
 
   </head>
@@ -27,6 +27,56 @@
   	<div class="visually-hidden">
   		<div id="tabs" class="tabs"></div>
   	</div>
+    <div id="styleguide-nav">
+      <h2 class="style-nav-toggle"><a href="#" aria-controls="#pattern-groups"><i class="fa fa-bars" aria-hidden="true" aria-label="menu"></i></a></h2>
+      <ul id="pattern-groups">
+        <li class="group-nav-item">
+          <a href="#" class="nav-group-link" data-group-target="materials">Materials</a>
+        </li>
+        <li class="group-nav-item">
+          <a href="#" class="nav-group-link" data-group-target="materials">Parts</a>
+        </li>
+        <li class="group-nav-item parent-group">
+          <a href="#" class="nav-group-link" data-group-target="materials">Chunks</a>
+          <ul class="sub-group-patterns">
+            <li class="sub-group-nav-item">
+              <a href="#" class="sub-nav-group-link" data-group-target="navigation">Navigation</a>
+            </li>
+            <li class="sub-group-nav-item">
+              <a href="#" class="sub-nav-group-link" data-group-target="in-page-nav">In Page Nav</a>
+            </li>
+          </ul>
+        </li>
+        <li class="group-nav-item parent-group">
+          <a href="#" class="nav-group-link" data-group-target="composites">Composites</a>
+          <ul class="sub-group-patterns">
+            <li class="sub-group-nav-item">
+              <a href="#" class="sub-nav-group-link" data-group-target="blocks">Blocks</a>
+            </li>
+            <li class="sub-group-nav-item">
+              <a href="#" class="sub-nav-group-link" data-group-target="paragraphs">Paragraphs</a>
+            </li>
+            <li class="sub-group-nav-item">
+              <a href="#" class="sub-nav-group-link" data-group-target="views">Card Views</a>
+            </li>
+            <li class="sub-group-nav-item">
+              <a href="#" class="sub-nav-group-link" data-group-target="layout">Layout</a>
+            </li>
+          </ul>
+        </li>
+        <li class="group-nav-item parent-group">
+          <a href="#" class="nav-group-link" data-group-target="units">Units</a>
+          <ul class="sub-group-patterns mouse-h-shim">
+            <li class="sub-group-nav-item">
+              <a href="#" class="sub-nav-group-link" data-group-target="content-types">Content Types</a>
+            </li>
+            <li class="sub-group-nav-item">
+              <a href="#" class="sub-nav-group-link" data-group-target="search">Site Search</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
 <ul class="fonts pl-spacer">
       <li>
       <div class="font-info">
@@ -90,10 +140,10 @@
   }
 </script>
 
-<script id="pl-js-polyfill-insert-1574271020">
+<script id="pl-js-polyfill-insert-1574285327">
   (function() {
     if (self != top) {
-      var cb = '1574271020';
+      var cb = '1574285327';
       var js = [];
       if (typeof document !== 'undefined' && !('classList' in document.documentElement)) {
         js.push('styleguide/bower_components/classList.min.js');
@@ -103,10 +153,10 @@
   })();
 </script>
 
-<script id="pl-js-insert-1574271020">
+<script id="pl-js-insert-1574285327">
   (function() {
     if (self != top) {
-      var cb = '1574271020';
+      var cb = '1574285327';
       var js = [ { 'src': 'styleguide/bower_components/jwerty.min.js', 'dep': [ 'styleguide/js/patternlab-pattern.min.js' ] } ];
       scriptLoader.run(js,cb,'pl-js-insert');
     }
