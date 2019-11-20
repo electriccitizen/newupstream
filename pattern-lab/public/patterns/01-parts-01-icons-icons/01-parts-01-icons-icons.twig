@@ -1,14 +1,13 @@
 {#
-	STYLEGUIDE ONLY: This template is not brought into to Drupal, but the macros that define viewBox position are used in both Pattern Lab and Drupal.
+	STYLEGUIDE ONLY: The icon sprite is generated from all individual svg files in /theme_name/images/icons/src and output in /dist/svg/.sprite.css.svg. ALL ICON FILES MUST BE THE SAME SIZE AND SQUARE (currently 80x80 pixels) Size for individual icons can adjusted with theming later.
 #}
-<p>The icon sprite is generated from all individual svg files in /theme_name/images/icons/src and output in /dist/svg/.sprite.css.svg. <strong>ALL ICON FILES MUST BE THE SAME SIZE (currently 80x80 pixels).</strong> Size for individual icons can adjusted with theming later.</p>
 
 {% import "@base/macros.twig" as styles %}
 
 <div class="icons-demo pl-spacer" id="icons">
 
 	{% for item in items %}
-		<div><span class="pl sprite-{{ item.value }} sprite-icon"></span><p>{{ item.name }}</p></div>
+		<div><span class="pl sprite-{{ item.value }} sprite-icon"></span></div>
 	{% endfor %}
 
 </div>
