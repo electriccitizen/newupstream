@@ -1,5 +1,5 @@
 ---
-title: 00-composites
+title: Paragraphs
 ---
 
-## Composites {#section-composites}
+<h3 id="group-paragraphs" class="sub-group-title" data-anchor="paragraphs">Paragraphs</h3>

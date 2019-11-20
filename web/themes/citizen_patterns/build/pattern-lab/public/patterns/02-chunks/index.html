@@ -4,9 +4,10 @@
     <title>Pattern Lab</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" href="../../css/pattern-scaffolding.css?1574194631" media="all" />
-    <link rel="stylesheet" href="../../../../dist/style.css?1574194631" media="all" />
-    <link rel="stylesheet" href="../../js/select2/select2.min.css?1574194631" media="all" />
+    <link rel="stylesheet" href="../../css/pattern-scaffolding.css?1574285327" media="all" />
+    <link rel="stylesheet" href="../../../../dist/style.css?1574285327" media="all" />
+    <link rel="stylesheet" href="../../js/select2/select2.min.css?1574285327" media="all" />
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/813efb9b80.js" crossorigin="anonymous"></script>
     <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
     <!-- never cache patterns -->
@@ -16,8 +17,8 @@
 <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
 <meta http-equiv="pragma" content="no-cache" />
 
-<link rel="stylesheet" href="../../styleguide/css/styleguide.min.css?1574194631" media="all">
-<link rel="stylesheet" href="../../styleguide/css/prism-typeahead.min.css?1574194631" media="all" />
+<link rel="stylesheet" href="../../styleguide/css/styleguide.min.css?1574285327" media="all">
+<link rel="stylesheet" href="../../styleguide/css/prism-typeahead.min.css?1574285327" media="all" />
     <!-- End Pattern Lab -->
 
   </head>
@@ -26,215 +27,74 @@
   	<div class="visually-hidden">
   		<div id="tabs" class="tabs"></div>
   	</div>
+    <div id="styleguide-nav">
+      <h2 class="style-nav-toggle"><a href="#" aria-controls="#pattern-groups"><i class="fa fa-bars" aria-hidden="true" aria-label="menu"></i></a></h2>
+      <ul id="pattern-groups">
+        <li class="group-nav-item">
+          <a href="#" class="nav-group-link" data-group-target="materials">Materials</a>
+        </li>
+        <li class="group-nav-item">
+          <a href="#" class="nav-group-link" data-group-target="materials">Parts</a>
+        </li>
+        <li class="group-nav-item parent-group">
+          <a href="#" class="nav-group-link" data-group-target="materials">Chunks</a>
+          <ul class="sub-group-patterns">
+            <li class="sub-group-nav-item">
+              <a href="#" class="sub-nav-group-link" data-group-target="navigation">Navigation</a>
+            </li>
+            <li class="sub-group-nav-item">
+              <a href="#" class="sub-nav-group-link" data-group-target="in-page-nav">In Page Nav</a>
+            </li>
+          </ul>
+        </li>
+        <li class="group-nav-item parent-group">
+          <a href="#" class="nav-group-link" data-group-target="composites">Composites</a>
+          <ul class="sub-group-patterns">
+            <li class="sub-group-nav-item">
+              <a href="#" class="sub-nav-group-link" data-group-target="blocks">Blocks</a>
+            </li>
+            <li class="sub-group-nav-item">
+              <a href="#" class="sub-nav-group-link" data-group-target="paragraphs">Paragraphs</a>
+            </li>
+            <li class="sub-group-nav-item">
+              <a href="#" class="sub-nav-group-link" data-group-target="views">Card Views</a>
+            </li>
+            <li class="sub-group-nav-item">
+              <a href="#" class="sub-nav-group-link" data-group-target="layout">Layout</a>
+            </li>
+          </ul>
+        </li>
+        <li class="group-nav-item parent-group">
+          <a href="#" class="nav-group-link" data-group-target="units">Units</a>
+          <ul class="sub-group-patterns mouse-h-shim">
+            <li class="sub-group-nav-item">
+              <a href="#" class="sub-nav-group-link" data-group-target="content-types">Content Types</a>
+            </li>
+            <li class="sub-group-nav-item">
+              <a href="#" class="sub-nav-group-link" data-group-target="search">Site Search</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
 <!-- View All Patterns in a Pattern Sub-Type -->
 <div class="sg-main" role="main">
   <!-- Patterns -->
   <div id="sg-patterns">
-                  <div id="viewall-chunks-blocks" class="sg-subtype">
+                  <div id="viewall-chunks-navigation" class="sg-subtype">
   <h2>
-    <a href="../../patterns/02-chunks-blocks/index.html" class="patternLink" data-patternpartial="viewall-chunks-blocks">
-      blocks
+    <a href="../../patterns/02-chunks-01-navigation/index.html" class="patternLink" data-patternpartial="viewall-chunks-navigation">
+      navigation
     </a>
   </h2>
   
   <div class="sg-pattern-body">
     
   </div>
-</div>                        <div id="chunks-block" class="sg-pattern">
+</div>                        <div id="chunks-breadcrumbs" class="sg-pattern">
   <div class="sg-pattern-head">
     <h3 class="sg-pattern-title">
-      <a href="../../patterns/02-chunks-blocks-block/02-chunks-blocks-block.html" class="patternLink" data-patternpartial="chunks-block" title="Link to Pattern">
-        block
-        
-              </a>
-    </h3>
-    
-    <div class="sg-pattern-breadcrumb">
-      
-    </div>
-    
-    <a href="#" data-patternpartial="chunks-block" title="View Pattern Info" id="sg-pattern-extra-toggle-chunks-block" class="sg-pattern-extra-toggle">
-      <span>&#9660;</span>
-    </a>
-  </div>
-  
-  <div class="sg-pattern-extra" id="sg-pattern-extra-chunks-block"></div>
-    
-  <div class="sg-pattern-example">
-    
-
-  <div>
-      
-                  
-          <p>Drupal content goes here</p>
-      </div>
-
-  </div>
-  
-  <script type="text/json" id="sg-pattern-data-chunks-block" class="sg-pattern-data">
-    {"lineage":[],"lineageR":[],"patternBreadcrumb":{"patternType":"chunks","patternSubtype":"blocks"},"patternDesc":"","patternExtension":"twig","patternName":"block","patternPartial":"chunks-block","patternState":""}
-  </script>
-</div><!--end .sg-pattern-->                        <div id="chunks-search-block" class="sg-pattern">
-  <div class="sg-pattern-head">
-    <h3 class="sg-pattern-title">
-      <a href="../../patterns/02-chunks-blocks-search-search-block/02-chunks-blocks-search-search-block.html" class="patternLink" data-patternpartial="chunks-search-block" title="Link to Pattern">
-        search block
-        
-              </a>
-    </h3>
-    
-    <div class="sg-pattern-breadcrumb">
-      
-    </div>
-    
-    <a href="#" data-patternpartial="chunks-search-block" title="View Pattern Info" id="sg-pattern-extra-toggle-chunks-search-block" class="sg-pattern-extra-toggle">
-      <span>&#9660;</span>
-    </a>
-  </div>
-  
-  <div class="sg-pattern-extra" id="sg-pattern-extra-chunks-search-block"></div>
-    
-  <div class="sg-pattern-example">
-    
-
-	This block replaces the Drupal search block and is embedded into Drupal. Form styles are set in macros.twig. Available styles: toggle, box.
-
-	<div data-drupal-selector="search-block-form" id="block-search-form" class="block block-search-form-block toggle">
-
-			<div>
-	
-					<div class="search-form-outer">
-				<div class="t-search-wrapper"><a href="#" class="t-search" role="button" aria-label="toggle-search" aria-controls="search-form-wrapper"><i class="fas fa-search"></i></a></div>
-				<div class="t-search-close"><a href="#" class="close-search" role="button" aria-label="toggle-search-close" aria-controls="search-form-wrapper"><i class="fas fa-times"></i></a></div>
-				<div id="search-form-wrapper" aria-hidden="true">
-					<form action="/site-search" method="get" id="views-exposed-form-site-search-search-results" accept-charset="UTF-8" data-drupal-form-fields="edit-search-api-fulltext">
-
-													<div class="js-form-item form-item js-form-type-textfield form-item-search-api-fulltext js-form-item-search-api-fulltext">
-								<label for="edit-search-api-fulltext" class="visually-hidden">Search</label>
-								<input id="edit-search-api-fulltext" class="form-text" placeholder="enter keywords" data-drupal-selector="edit-search-api-fulltext" type="text" size="30" max-length="128" >
-							</div>
-							<div data-drupal-selector="edit-actions" id="edit-site-search-actions" class="form-actions js-form-wrapper form-wrapper">
-								<input id="edit-submit-site-search" class="button js-form-submit form-submit" data-drupal-selector="edit-submit-site-search" value="search" type="submit">
-								<i class="fas fa-search"></i>
-							</div>
-						
-					</form>
-				</div>
-			</div>
-
-		
-			</div>
-	
-	</div>
-
-  </div>
-  
-  <script type="text/json" id="sg-pattern-data-chunks-search-block" class="sg-pattern-data">
-    {"lineage":[],"lineageR":[{"lineagePattern":"composites-site-header","lineagePath":"..\/..\/patterns\/03-composites-02-layout-00-header-site-header\/03-composites-02-layout-00-header-site-header.html"}],"patternBreadcrumb":{"patternType":"chunks","patternSubtype":"blocks"},"patternDesc":"","patternExtension":"twig","patternName":"search block","patternPartial":"chunks-search-block","patternState":""}
-  </script>
-</div><!--end .sg-pattern-->                        <div id="viewall-chunks-filters" class="sg-subtype">
-  <h2>
-    <a href="../../patterns/02-chunks-filters/index.html" class="patternLink" data-patternpartial="viewall-chunks-filters">
-      filters
-    </a>
-  </h2>
-  
-  <div class="sg-pattern-body">
-    
-  </div>
-</div>                        <div id="chunks-views-exposed-filters" class="sg-pattern">
-  <div class="sg-pattern-head">
-    <h3 class="sg-pattern-title">
-      <a href="../../patterns/02-chunks-filters-views-exposed-filters/02-chunks-filters-views-exposed-filters.html" class="patternLink" data-patternpartial="chunks-views-exposed-filters" title="Link to Pattern">
-        views exposed filters
-        
-              </a>
-    </h3>
-    
-    <div class="sg-pattern-breadcrumb">
-      
-    </div>
-    
-    <a href="#" data-patternpartial="chunks-views-exposed-filters" title="View Pattern Info" id="sg-pattern-extra-toggle-chunks-views-exposed-filters" class="sg-pattern-extra-toggle">
-      <span>&#9660;</span>
-    </a>
-  </div>
-  
-  <div class="sg-pattern-extra" id="sg-pattern-extra-chunks-views-exposed-filters"></div>
-    
-  <div class="sg-pattern-example">
-    <strong>Need to decide if we are showing for views exposed forms in PL and what we are inheriting into Drupal.</strong>
-
-  </div>
-  
-  <script type="text/json" id="sg-pattern-data-chunks-views-exposed-filters" class="sg-pattern-data">
-    {"lineage":[],"lineageR":[],"patternBreadcrumb":{"patternType":"chunks","patternSubtype":"filters"},"patternDesc":"","patternExtension":"twig","patternName":"views exposed filters","patternPartial":"chunks-views-exposed-filters","patternState":""}
-  </script>
-</div><!--end .sg-pattern-->                        <div id="viewall-chunks-media" class="sg-subtype">
-  <h2>
-    <a href="../../patterns/02-chunks-media/index.html" class="patternLink" data-patternpartial="viewall-chunks-media">
-      media
-    </a>
-  </h2>
-  
-  <div class="sg-pattern-body">
-    
-  </div>
-</div>                        <div id="viewall-chunks-menus" class="sg-subtype">
-  <h2>
-    <a href="../../patterns/02-chunks-menus/index.html" class="patternLink" data-patternpartial="viewall-chunks-menus">
-      menus
-    </a>
-  </h2>
-  
-  <div class="sg-pattern-body">
-    
-  </div>
-</div>                        <div id="chunks-book-navigation" class="sg-pattern">
-  <div class="sg-pattern-head">
-    <h3 class="sg-pattern-title">
-      <a href="../../patterns/02-chunks-menus-book-navigation-book-navigation/02-chunks-menus-book-navigation-book-navigation.html" class="patternLink" data-patternpartial="chunks-book-navigation" title="Link to Pattern">
-        book navigation
-        
-              </a>
-    </h3>
-    
-    <div class="sg-pattern-breadcrumb">
-      
-    </div>
-    
-    <a href="#" data-patternpartial="chunks-book-navigation" title="View Pattern Info" id="sg-pattern-extra-toggle-chunks-book-navigation" class="sg-pattern-extra-toggle">
-      <span>&#9660;</span>
-    </a>
-  </div>
-  
-  <div class="sg-pattern-extra" id="sg-pattern-extra-chunks-book-navigation"></div>
-    
-  <div class="sg-pattern-example">
-    STYLEGUIDE ONLY: This template is not embedded into drupal, but the drupal block--book.html.twig template is customized to turn the block title into a link to the parent book node.
-
-<div class="block block-book-navigation pl-spacer">
-
-		<h2 class="block-title"><a href="">Book Tree Navigation</a></h2>
-	
-		<ul>
-					<li><a href="#">Book Link 1</a></li>
-					<li><a href="#">Book Link 2</a></li>
-					<li><a href="#">Book Link 3</a></li>
-					<li><a href="#">Book Link 4</a></li>
-			</ul>
-	
-</div>
-
-  </div>
-  
-  <script type="text/json" id="sg-pattern-data-chunks-book-navigation" class="sg-pattern-data">
-    {"lineage":[],"lineageR":[],"patternBreadcrumb":{"patternType":"chunks","patternSubtype":"menus"},"patternDesc":"","patternExtension":"twig","patternName":"book navigation","patternPartial":"chunks-book-navigation","patternState":""}
-  </script>
-</div><!--end .sg-pattern-->                        <div id="chunks-breadcrumbs" class="sg-pattern">
-  <div class="sg-pattern-head">
-    <h3 class="sg-pattern-title">
-      <a href="../../patterns/02-chunks-menus-breadcrumbs-breadcrumbs/02-chunks-menus-breadcrumbs-breadcrumbs.html" class="patternLink" data-patternpartial="chunks-breadcrumbs" title="Link to Pattern">
+      <a href="../../patterns/02-chunks-01-navigation-01-breadcrumbs-breadcrumbs/02-chunks-01-navigation-01-breadcrumbs-breadcrumbs.html" class="patternLink" data-patternpartial="chunks-breadcrumbs" title="Link to Pattern">
         breadcrumbs
         
               </a>
@@ -270,77 +130,13 @@
   </div>
   
   <script type="text/json" id="sg-pattern-data-chunks-breadcrumbs" class="sg-pattern-data">
-    {"lineage":[],"lineageR":[],"patternBreadcrumb":{"patternType":"chunks","patternSubtype":"menus"},"patternDesc":"","patternExtension":"twig","patternName":"breadcrumbs","patternPartial":"chunks-breadcrumbs","patternState":""}
-  </script>
-</div><!--end .sg-pattern-->                        <div id="chunks-superfish-mobile" class="sg-pattern">
-  <div class="sg-pattern-head">
-    <h3 class="sg-pattern-title">
-      <a href="../../patterns/02-chunks-menus-superfish-superfish-mobile/02-chunks-menus-superfish-superfish-mobile.html" class="patternLink" data-patternpartial="chunks-superfish-mobile" title="Link to Pattern">
-        superfish mobile
-        
-              </a>
-    </h3>
-    
-    <div class="sg-pattern-breadcrumb">
-      
-    </div>
-    
-    <a href="#" data-patternpartial="chunks-superfish-mobile" title="View Pattern Info" id="sg-pattern-extra-toggle-chunks-superfish-mobile" class="sg-pattern-extra-toggle">
-      <span>&#9660;</span>
-    </a>
-  </div>
-  
-  <div class="sg-pattern-extra" id="sg-pattern-extra-chunks-superfish-mobile"></div>
-    
-  <div class="sg-pattern-example">
-    <div class="pl notes">Superfish desktop main level link and dropdown. Theming example only.</div>
-<div class="sf-mobile">
-	<div class="pl notes">Mobile Menu - Grey background for contrast only</div>
-	<ul id="#superfish-main-accordion" class="sf-menu sf-main sf-accordion sf-expanded sf-accordion-with-buttons">
-		<li class="sf-depth-1 sf-no-children">
-			<a class="sf-depth-1">Drop Link 1</a>
-		</li>
-		<li class="sf-depth-1 menuparent active-trail sf-expanded">
-			<a class="sf-accordion-button" href="#">Expand</a>
-			<a href="#" class="sf-depth-1 menuparent active-trail">Drop Link 2</a>
-			<ul>
-				<li class="sf-depth-2 sf-no-children">
-					<a class="sf-depth-2">Drop Sub 1</a>
-				</li>
-				<li class="sf-depth-2 sf-no-children active-trail">
-					<a class="sf-depth-2 is-active">Drop Sub 2</a>
-				</li>
-			</ul>
-		</li>
-		<li class="sf-depth-1 menuparent">
-			<a class="sf-accordion-button" href="#">Expand</a>
-			<a class="sf-depth-1">Drop Link 3</a>
-			<ul class="sf-hidden">
-				<li class="sf-depth-2 sf-no-children">
-					<a class="sf-depth-2">Drop Sub 3</a>
-				</li>
-				<li class="sf-depth-2 sf-no-children">
-					<a class="sf-depth-2 is-active">Drop Sub 4</a>
-				</li>
-			</ul>
-		</li>
-		<li class="sf-depth-1 sf-no-children">
-			<a class="sf-depth-1">Drop Link 4</a>
-		</li>
-	</ul>
-</div>
-
-
-  </div>
-  
-  <script type="text/json" id="sg-pattern-data-chunks-superfish-mobile" class="sg-pattern-data">
-    {"lineage":[],"lineageR":[],"patternBreadcrumb":{"patternType":"chunks","patternSubtype":"menus"},"patternDesc":"","patternExtension":"twig","patternName":"superfish mobile","patternPartial":"chunks-superfish-mobile","patternState":""}
+    {"lineage":[],"lineageR":[],"patternBreadcrumb":{"patternType":"chunks","patternSubtype":"navigation"},"patternDesc":"","patternExtension":"twig","patternName":"breadcrumbs","patternPartial":"chunks-breadcrumbs","patternState":""}
   </script>
 </div><!--end .sg-pattern-->                        <div id="chunks-superfish" class="sg-pattern">
   <div class="sg-pattern-head">
     <h3 class="sg-pattern-title">
-      <a href="../../patterns/02-chunks-menus-superfish-superfish/02-chunks-menus-superfish-superfish.html" class="patternLink" data-patternpartial="chunks-superfish" title="Link to Pattern">
-        superfish
+      <a href="../../patterns/02-chunks-01-navigation-01-superfish-superfish/02-chunks-01-navigation-01-superfish-superfish.html" class="patternLink" data-patternpartial="chunks-superfish" title="Link to Pattern">
+        Main Menu
         
               </a>
     </h3>
@@ -402,33 +198,13 @@
   </div>
   
   <script type="text/json" id="sg-pattern-data-chunks-superfish" class="sg-pattern-data">
-    {"lineage":[],"lineageR":[{"lineagePattern":"chunks-superfish-block","lineagePath":"..\/..\/patterns\/02-chunks-blocks-superfish-_superfish-block\/02-chunks-blocks-superfish-_superfish-block.html"}],"patternBreadcrumb":{"patternType":"chunks","patternSubtype":"menus"},"patternDesc":"","patternExtension":"twig","patternName":"superfish","patternPartial":"chunks-superfish","patternState":""}
+    {"lineage":[],"lineageR":[{"lineagePattern":"composites-superfish-block","lineagePath":"..\/..\/patterns\/03-composites-01-blocks-03-superfish-_superfish-block\/03-composites-01-blocks-03-superfish-_superfish-block.html"}],"patternBreadcrumb":{"patternType":"chunks","patternSubtype":"navigation"},"patternDesc":"","patternExtension":"twig","patternName":"Main Menu","patternPartial":"chunks-superfish","patternState":""}
   </script>
-</div><!--end .sg-pattern-->                        <div id="viewall-chunks-modals" class="sg-subtype">
-  <h2>
-    <a href="../../patterns/02-chunks-modals/index.html" class="patternLink" data-patternpartial="viewall-chunks-modals">
-      modals
-    </a>
-  </h2>
-  
-  <div class="sg-pattern-body">
-    
-  </div>
-</div>                        <div id="viewall-chunks-pagers" class="sg-subtype">
-  <h2>
-    <a href="../../patterns/02-chunks-pagers/index.html" class="patternLink" data-patternpartial="viewall-chunks-pagers">
-      pagers
-    </a>
-  </h2>
-  
-  <div class="sg-pattern-body">
-    
-  </div>
-</div>                        <div id="chunks-pager-full" class="sg-pattern">
+</div><!--end .sg-pattern-->                        <div id="chunks-section-menu" class="sg-pattern">
   <div class="sg-pattern-head">
     <h3 class="sg-pattern-title">
-      <a href="../../patterns/02-chunks-pagers-00-pager-full/02-chunks-pagers-00-pager-full.html" class="patternLink" data-patternpartial="chunks-pager-full" title="Link to Pattern">
-        pager full
+      <a href="../../patterns/02-chunks-01-navigation-02-section-menu-section-menu/02-chunks-01-navigation-02-section-menu-section-menu.html" class="patternLink" data-patternpartial="chunks-section-menu" title="Link to Pattern">
+        section menu
         
               </a>
     </h3>
@@ -437,12 +213,114 @@
       
     </div>
     
-    <a href="#" data-patternpartial="chunks-pager-full" title="View Pattern Info" id="sg-pattern-extra-toggle-chunks-pager-full" class="sg-pattern-extra-toggle">
+    <a href="#" data-patternpartial="chunks-section-menu" title="View Pattern Info" id="sg-pattern-extra-toggle-chunks-section-menu" class="sg-pattern-extra-toggle">
       <span>&#9660;</span>
     </a>
   </div>
   
-  <div class="sg-pattern-extra" id="sg-pattern-extra-chunks-pager-full"></div>
+  <div class="sg-pattern-extra" id="sg-pattern-extra-chunks-section-menu"></div>
+    
+  <div class="sg-pattern-example">
+    
+  </div>
+  
+  <script type="text/json" id="sg-pattern-data-chunks-section-menu" class="sg-pattern-data">
+    {"lineage":[],"lineageR":[],"patternBreadcrumb":{"patternType":"chunks","patternSubtype":"navigation"},"patternDesc":"","patternExtension":"twig","patternName":"section menu","patternPartial":"chunks-section-menu","patternState":""}
+  </script>
+</div><!--end .sg-pattern-->                        <div id="chunks-widget-anchors" class="sg-pattern">
+  <div class="sg-pattern-head">
+    <h3 class="sg-pattern-title">
+      <a href="../../patterns/02-chunks-01-navigation-04-widget-anchors-widget-anchors/02-chunks-01-navigation-04-widget-anchors-widget-anchors.html" class="patternLink" data-patternpartial="chunks-widget-anchors" title="Link to Pattern">
+        Anchor Navigation
+        
+              </a>
+    </h3>
+    
+    <div class="sg-pattern-breadcrumb">
+      
+    </div>
+    
+    <a href="#" data-patternpartial="chunks-widget-anchors" title="View Pattern Info" id="sg-pattern-extra-toggle-chunks-widget-anchors" class="sg-pattern-extra-toggle">
+      <span>&#9660;</span>
+    </a>
+  </div>
+  
+  <div class="sg-pattern-extra" id="sg-pattern-extra-chunks-widget-anchors"></div>
+    
+  <div class="sg-pattern-example">
+    
+  </div>
+  
+  <script type="text/json" id="sg-pattern-data-chunks-widget-anchors" class="sg-pattern-data">
+    {"lineage":[],"lineageR":[],"patternBreadcrumb":{"patternType":"chunks","patternSubtype":"navigation"},"patternDesc":"","patternExtension":"twig","patternName":"Anchor Navigation","patternPartial":"chunks-widget-anchors","patternState":""}
+  </script>
+</div><!--end .sg-pattern-->                        <div id="viewall-chunks-filters" class="sg-subtype">
+  <h2>
+    <a href="../../patterns/02-chunks-02-filters/index.html" class="patternLink" data-patternpartial="viewall-chunks-filters">
+      filters
+    </a>
+  </h2>
+  
+  <div class="sg-pattern-body">
+    
+  </div>
+</div>                        <div id="chunks-filters" class="sg-pattern">
+  <div class="sg-pattern-head">
+    <h3 class="sg-pattern-title">
+      <a href="../../patterns/02-chunks-02-filters-filters/02-chunks-02-filters-filters.html" class="patternLink" data-patternpartial="chunks-filters" title="Link to Pattern">
+        filters
+        
+              </a>
+    </h3>
+    
+    <div class="sg-pattern-breadcrumb">
+      
+    </div>
+    
+    <a href="#" data-patternpartial="chunks-filters" title="View Pattern Info" id="sg-pattern-extra-toggle-chunks-filters" class="sg-pattern-extra-toggle">
+      <span>&#9660;</span>
+    </a>
+  </div>
+  
+  <div class="sg-pattern-extra" id="sg-pattern-extra-chunks-filters"></div>
+    
+  <div class="sg-pattern-example">
+    <strong>Need to decide if we are showing for views exposed forms in PL and what we are inheriting into Drupal.</strong>
+
+  </div>
+  
+  <script type="text/json" id="sg-pattern-data-chunks-filters" class="sg-pattern-data">
+    {"lineage":[],"lineageR":[],"patternBreadcrumb":{"patternType":"chunks","patternSubtype":"filters"},"patternDesc":"","patternExtension":"twig","patternName":"filters","patternPartial":"chunks-filters","patternState":""}
+  </script>
+</div><!--end .sg-pattern-->                        <div id="viewall-chunks-pagers" class="sg-subtype">
+  <h2>
+    <a href="../../patterns/02-chunks-03-pagers/index.html" class="patternLink" data-patternpartial="viewall-chunks-pagers">
+      pagers
+    </a>
+  </h2>
+  
+  <div class="sg-pattern-body">
+    
+  </div>
+</div>                        <div id="chunks-pager" class="sg-pattern">
+  <div class="sg-pattern-head">
+    <h3 class="sg-pattern-title">
+      <a href="../../patterns/02-chunks-03-pagers-pager/02-chunks-03-pagers-pager.html" class="patternLink" data-patternpartial="chunks-pager" title="Link to Pattern">
+        pager
+        
+              </a>
+    </h3>
+    
+    <div class="sg-pattern-breadcrumb">
+      
+    </div>
+    
+    <a href="#" data-patternpartial="chunks-pager" title="View Pattern Info" id="sg-pattern-extra-toggle-chunks-pager" class="sg-pattern-extra-toggle">
+      <span>&#9660;</span>
+    </a>
+  </div>
+  
+  <div class="sg-pattern-extra" id="sg-pattern-extra-chunks-pager"></div>
     
   <div class="sg-pattern-example">
     <nav class="pager" role="navigation" aria-labelledby="pagination-heading">
@@ -486,87 +364,30 @@
 </nav>
   </div>
   
-  <script type="text/json" id="sg-pattern-data-chunks-pager-full" class="sg-pattern-data">
-    {"lineage":[],"lineageR":[],"patternBreadcrumb":{"patternType":"chunks","patternSubtype":"pagers"},"patternDesc":"","patternExtension":"twig","patternName":"pager full","patternPartial":"chunks-pager-full","patternState":""}
+  <script type="text/json" id="sg-pattern-data-chunks-pager" class="sg-pattern-data">
+    {"lineage":[],"lineageR":[],"patternBreadcrumb":{"patternType":"chunks","patternSubtype":"pagers"},"patternDesc":"","patternExtension":"twig","patternName":"pager","patternPartial":"chunks-pager","patternState":""}
   </script>
-</div><!--end .sg-pattern-->                        <div id="chunks-pager-mini" class="sg-pattern">
-  <div class="sg-pattern-head">
-    <h3 class="sg-pattern-title">
-      <a href="../../patterns/02-chunks-pagers-01-pager-mini/02-chunks-pagers-01-pager-mini.html" class="patternLink" data-patternpartial="chunks-pager-mini" title="Link to Pattern">
-        pager mini
-        
-              </a>
-    </h3>
-    
-    <div class="sg-pattern-breadcrumb">
-      
-    </div>
-    
-    <a href="#" data-patternpartial="chunks-pager-mini" title="View Pattern Info" id="sg-pattern-extra-toggle-chunks-pager-mini" class="sg-pattern-extra-toggle">
-      <span>&#9660;</span>
+</div><!--end .sg-pattern-->                        <div id="viewall-chunks-media" class="sg-subtype">
+  <h2>
+    <a href="../../patterns/02-chunks-04-media/index.html" class="patternLink" data-patternpartial="viewall-chunks-media">
+      media
     </a>
-  </div>
+  </h2>
   
-  <div class="sg-pattern-extra" id="sg-pattern-extra-chunks-pager-mini"></div>
+  <div class="sg-pattern-body">
     
-  <div class="sg-pattern-example">
-    <nav role="navigation" aria-labelledby="pagination-heading">
-	<ul class="js-pager__items">
-		<li>
-			<a href="#" title="Go to previous page">
-				<span>‹‹</span>
-			</a>
-		</li>
-		<li>Page 2</li>
-		<li>
-			<a href="#" title="Go to next page">
-				<span>››</span>
-			</a>
-		</li>
-	</ul>
-</nav>
   </div>
-  
-  <script type="text/json" id="sg-pattern-data-chunks-pager-mini" class="sg-pattern-data">
-    {"lineage":[],"lineageR":[],"patternBreadcrumb":{"patternType":"chunks","patternSubtype":"pagers"},"patternDesc":"","patternExtension":"twig","patternName":"pager mini","patternPartial":"chunks-pager-mini","patternState":""}
-  </script>
-</div><!--end .sg-pattern-->                        <div id="chunks-pager-flippy" class="sg-pattern">
-  <div class="sg-pattern-head">
-    <h3 class="sg-pattern-title">
-      <a href="../../patterns/02-chunks-pagers-02-pager-flippy/02-chunks-pagers-02-pager-flippy.html" class="patternLink" data-patternpartial="chunks-pager-flippy" title="Link to Pattern">
-        pager flippy
-        
-              </a>
-    </h3>
-    
-    <div class="sg-pattern-breadcrumb">
-      
-    </div>
-    
-    <a href="#" data-patternpartial="chunks-pager-flippy" title="View Pattern Info" id="sg-pattern-extra-toggle-chunks-pager-flippy" class="sg-pattern-extra-toggle">
-      <span>&#9660;</span>
+</div>                        <div id="viewall-chunks-modals" class="sg-subtype">
+  <h2>
+    <a href="../../patterns/02-chunks-05-modals/index.html" class="patternLink" data-patternpartial="viewall-chunks-modals">
+      modals
     </a>
-  </div>
+  </h2>
   
-  <div class="sg-pattern-extra" id="sg-pattern-extra-chunks-pager-flippy"></div>
+  <div class="sg-pattern-body">
     
-  <div class="sg-pattern-example">
-    <div class="pl block-flippy-block">
-	<ul class="flippy">
-		<li class="flippy-previous">
-			<a href="#">Previous Flippy Item</a>
-		</li>
-		<li class="flippy-next">
-			<a href="#">Next Flippy Item</a>
-		</li>
-	</ul>
-</div>
   </div>
-  
-  <script type="text/json" id="sg-pattern-data-chunks-pager-flippy" class="sg-pattern-data">
-    {"lineage":[],"lineageR":[],"patternBreadcrumb":{"patternType":"chunks","patternSubtype":"pagers"},"patternDesc":"","patternExtension":"twig","patternName":"pager flippy","patternPartial":"chunks-pager-flippy","patternState":""}
-  </script>
-</div><!--end .sg-pattern-->            </div> <!--end #sg-patterns-->
+</div>            </div> <!--end #sg-patterns-->
 </div><!--end .sg-main-->
   <!--DO NOT REMOVE-->
   <script type="text/json" id="sg-pattern-data-footer" class="sg-pattern-data">
@@ -604,10 +425,10 @@
   }
 </script>
 
-<script id="pl-js-polyfill-insert-1574194631">
+<script id="pl-js-polyfill-insert-1574285327">
   (function() {
     if (self != top) {
-      var cb = '1574194631';
+      var cb = '1574285327';
       var js = [];
       if (typeof document !== 'undefined' && !('classList' in document.documentElement)) {
         js.push('styleguide/bower_components/classList.min.js');
@@ -617,10 +438,10 @@
   })();
 </script>
 
-<script id="pl-js-insert-1574194631">
+<script id="pl-js-insert-1574285327">
   (function() {
     if (self != top) {
-      var cb = '1574194631';
+      var cb = '1574285327';
       var js = [ { 'src': 'styleguide/bower_components/jwerty.min.js', 'dep': [ 'styleguide/js/patternlab-pattern.min.js' ] } ];
       scriptLoader.run(js,cb,'pl-js-insert');
     }

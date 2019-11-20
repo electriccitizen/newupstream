@@ -1,5 +1,5 @@
 ---
-title: Parts
+title: 01-parts
 ---
 
-## Parts {#section-parts}
+<h2 id="group-parts" class="group-title" data-anchor="parts">Parts</h2>

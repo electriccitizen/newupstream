@@ -12,8 +12,12 @@ $blue         : #026cc5;
 $midBlue      : #1d5a9f;
 $darkBlue     : #073b75;
 $darkGrey     : #37363b;
+$red          : #bf0e0e;
+$lightRed     : #d94040;
 
-$adminFont    : 'PT Sans', sans-serif;
+$navBack      : $red;
+$navBackHover : $lightRed;
+$adminText    : 'PT Sans', sans-serif;
 
 .project-styleguide{
 	position: relative;
@@ -44,7 +48,121 @@ $adminFont    : 'PT Sans', sans-serif;
 	}
 }//end sg patterns
 
-/* MAIN PL CONTAINER
+/* SYTYLEGUIDE NAV
+--------------------- */
+#styleguide-nav{
+	position: fixed;
+	top: 154px;
+	background: $navBack;
+	font-family: $adminText;
+	z-index: 9997;
+	left: -210px;
+	min-width: 210px;
+	.style-nav-toggle{
+		width: 60px;
+		height: 60px;
+		position: fixed;
+		z-index: 9998;
+		top: 94px;
+		left: 0;
+		a{
+			text-align: center;
+			width: 100%;
+			height: 100%;
+			display: block;
+			font-size: 32px;
+			background: $red;
+			padding-top: 12px;
+			color: $white;
+			&:hover,&:focus{
+				background: $buttonBackHover;
+				color: $buttonTextHover;
+			}
+			&:active{
+				background: $buttonBackActive;
+				color: $buttonTextActive;
+			}
+		}
+	}
+	ul{
+		@include listReset;
+		&#pattern-groups{
+			padding: $spaceLg 0;
+		}
+		a{
+			color: $white;
+			background: $navBack;
+		}
+		ul{	
+			position: absolute;
+			padding: $spaceSm 0;
+			top: -$spaceXxs;
+			left: 0;
+			z-index: 9996;
+			background: $navBack;
+			width: 180px;
+			a{
+				display: block;
+				padding: 5px 20px 5px 40px;
+				&:hover,&:focus{
+					background: $navBackHover;
+				}
+			}
+		}
+	}
+	//top level
+	.group-nav-item{
+		position: relative;
+		background: $red;
+		&:last-child > a{
+			padding-bottom: 55px;
+		}
+		& > a{
+			display: block;
+			position: relative;
+			z-index: 9999;
+			font-size: 2.2rem;
+			padding: $spaceXxs 20px $spaceXxs 80px;
+			&:before{
+				content: '';
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 20px;
+				width: 40px;
+				height: 40px;
+				background-position: center;
+				background-repeat: none;
+				background-size: contain;
+			}
+			&:after{
+				content: '';
+				display: block;
+				width: 100%;
+				height: 50px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: -1;
+			}
+			&:focus{
+				&:after{
+					background: $navBackHover;
+				}
+			}
+			&[data-group-target="materials"]:before{
+				background-image: url('../images/custom/style-nav-icons/materials.svg');
+			}
+		}//end first level a
+		&:hover{
+			& > a:after{
+				background: $navBackHover;
+			}
+		}
+	}//end group-nav-item
+}//end styleguide nav
+
+/* MAIN PL CONTAINER & PATTERN/GROUP TITLES
 ----------------------- */
 .sg-main{
 	overflow-x: hidden !important;
@@ -55,12 +173,17 @@ $adminFont    : 'PT Sans', sans-serif;
 		padding: 0 $spaceXl;
 		//main patterns sections
 		& > .sg-subtype{
+			//constrain pattern group titles to max width & hide color bar overflow
 			&:not(:first-child){
-				& > h2{
-					display: none;
-				}
-			}//end no first child
-			//main section titles from MD files
+				max-width: $largeScreen;
+				@include auto;
+				overflow-x: hidden;
+			}
+			//hide default pl group link headers
+			& > h2{
+				display: none;
+			}
+			//group titles from MD files
 			& > .sg-pattern-body{
 				max-width: $textMax;
 				text-align: center;
@@ -70,15 +193,15 @@ $adminFont    : 'PT Sans', sans-serif;
 					padding: $spaceMd 0;
 					position: relative;
 					color: $white;
-					font-family: $adminFont;
+					font-family: $adminText;
 					&:after{
 						@include fullBack($darkGrey);
 					}
 				}
-				h2{
+				h2.group-title{
 					font-size: 42px;
-					padding: $spaceXl 0;
-					font-family: $adminFont;
+					padding: $spaceXl + 4 0 $spaceLg;
+					font-family: $adminText;
 					@include tab{
 						font-size: 50px;
 					}
@@ -86,9 +209,18 @@ $adminFont    : 'PT Sans', sans-serif;
 						font-size: 60px;
 					}
 				}
+				h3.sub-group-title{
+					position: relative;
+					color: $white;
+					padding: $spaceSm 0;
+					&:after{
+						@include fullBack($midBlue);
+					}	
+				}
 			}//end sg-pattern-body
 		}//end top level types (all main _patterns folders)
 		.sg-pattern{
+			padding-bottom: $spaceXl;
 			margin-bottom: 0;
 		}
 	}//end sg-patterns
@@ -112,7 +244,7 @@ $adminFont    : 'PT Sans', sans-serif;
 			@include auto;
 			padding: $spaceLg $siteMarginMobile $spaceSm;
 			display: block;
-			font-family: $adminFont;	
+			font-family: $adminText;	
 			@include desk{
 				padding-left: $siteMarginDesk;
 				padding-right: $siteMarginDesk;
@@ -135,4 +267,16 @@ $adminFont    : 'PT Sans', sans-serif;
 		border-top: 0;
 	}
 }//end sg-patterns
+
+
+/* HIDDEN PL ELEMENTS
+-------------------------- */
+//these are elements that could not easily be hidden from pattern lab through _file-name
+
+
+
+/* SPECIAL PONIES
+------------------------- */
+
+
 

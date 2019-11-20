@@ -40,15 +40,11 @@ galleries:
 layout:
   version: 1.0
   js:
-    components/_patterns/03-composites/04-layout/02-layout-builder/layout.js: {}
-section-menu:
-  version: 1.0
-  js:
-    components/_patterns/02-chunks/01-navigation/02-section-menu/section-menu.js: {}
+    components/_patterns/03-composites/04-layout/03-layout-builder/layout.js: {}
 modal:
   version: 1.0
   js:
-    components/_patterns/02-chunks/06-modals/modals.js: {}
+    components/_patterns/02-chunks/05-modals/modals.js: {}
 pager:
   version: 1.0
   js:
@@ -61,6 +57,10 @@ search-page:
   version: 1.0
   js:
     components/_patterns/04-units/03-search/search.js: {}
+section-menu:
+  version: 1.0
+  js:
+    components/_patterns/02-chunks/01-navigation/02-section-menu/section-menu.js: {}
 select:
   version: 4.0.3
   css:
@@ -85,7 +85,7 @@ table:
 widgets:
   version: 1.0
   js:
-    components/_patterns/02-chunks/01-navigation/03-widget-anchors/widget-anchors.js: {}
+    components/_patterns/02-chunks/01-navigation/04-widget-anchors/widget-anchors.js: {}
   dependencies:
     - core/underscore
 fonts:

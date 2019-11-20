@@ -101,3 +101,10 @@ $sectionGutter: 40px;
 		@content;
 	}
 }
+
+///mixin - desk
+@mixin largeScreen {
+	@include breakpoint($largeScreen) {
+		@content;
+	}
+}
