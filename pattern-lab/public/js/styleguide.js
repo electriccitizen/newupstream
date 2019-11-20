@@ -37,8 +37,18 @@ $(document).ready(function(){
   		$('.style-nav-toggle').removeClass('is-open').closest('#styleguide-nav').animate({'left':'-200'}, 300);
   		$('.sub-group-patterns').animate({'left':'0'}, 300);
   	});
-  	if(device){
-  		console.log(device);
+  	if(device == 'mobile'){
+  		$(this).click(function(){
+  			$('.sg-pattern').animate({'max-width':'400px'}, 300);
+  		});
+  	}else if(device == 'tablet'){
+  		$(this).click(function(){
+  			$('.sg-pattern').animate({'max-width':'760px'}, 300);
+  		});
+  	}else{
+  		$(this).click(function(){
+  			$('.sg-pattern').animate({'max-width':'1500px'}, 300);
+  		});
   	}
   });
 });
