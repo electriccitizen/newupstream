@@ -37,12 +37,12 @@
  */
 #}
 
-{% extends '@parts/05-field/_field.twig' %}
+{% extends 'field.html.twig' %}
 
 {% block fieldMultiNoItems %}
 	<ul class="platform-links">
 		{% for item in items %}
-			{% include "@parts/05-field/social-platforms/_field-platforms.twig" 
+			{% include "@parts/08-fields/01-social-platforms/_field-platforms.twig" 
 				with{
 					url: item.content['#title']
 				}

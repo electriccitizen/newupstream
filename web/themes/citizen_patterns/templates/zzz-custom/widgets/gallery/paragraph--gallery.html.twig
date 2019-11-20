@@ -40,7 +40,9 @@
 {% extends "paragraph.html.twig" %}
 
 {% block widgetContent %}
-  {% embed "@composites/00-paragraphs/gallery/gallery.twig"
+  {{ attach_library('citizen_patterns/galleries') }}
+  
+  {% embed "@composites/02-paragraphs/04-gallery/gallery.twig"
     with{
       gallery_type: content.field_gallery_type.0['#markup']|clean_class,
 		  widget_title: content.field_widget_title.0['#context'].value
@@ -70,5 +72,4 @@
     {% block plwidgetclose %}{# remove pl only structure #}{% endblock %}
 
   {% endembed %}
-  {{ attach_library('citizen_patterns/galleries') }}
 {% endblock %}

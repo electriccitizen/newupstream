@@ -37,7 +37,7 @@
 {% if configuration.label %}
   {% set blockTitle = configuration.label|clean_class %}
 {% endif %}
-{{ attach_library('citizen_patterns/page-menu') }}
+{{ attach_library('citizen_patterns/section-menu') }}
 <nav aria-label="section-menu" id="block-page-menu"{{ attributes|without('role', 'aria-labelledby', 'id').addClass(blockTitle,heading_id, 'page-menu') }}>
   {# Label. If not displayed, we still provide it for screen readers. #}
   {{ title_prefix }}

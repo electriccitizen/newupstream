@@ -39,7 +39,6 @@
 
 {% extends 'field.html.twig' %}
 {% block fieldSingleNo %}
-	{{ attach_library('citizen_patterns/user')}}
   {% set image = element['#object'].field_user_image.0.target_id %}
   {% set userId = element['#object'].uid.0.value %}
   {% if userId is divisible by(3) %}

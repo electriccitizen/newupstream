@@ -26,7 +26,7 @@
  */
 #}
 
-{% extends '@chunks/blocks/block.twig' %}
+{% extends 'block.html.twig' %}
 
 {% block dLabel %}
 	{{- label -}}
@@ -39,7 +39,7 @@
 		'#format': content.body.0['#format']
 	} %}
 
-	{% include '@chunks/blocks/footer/_footer-copyright.twig' 
+	{% include '@composites/01-blocks/04-footer/_footer-copyright.twig' 
 		with{
 			copyright: text
 		}

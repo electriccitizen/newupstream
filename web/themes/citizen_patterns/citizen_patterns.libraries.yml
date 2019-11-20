@@ -14,7 +14,12 @@ global-styling:
 accordion:
   version: 1.0
   js:
-    components/_patterns/03-composites/00-paragraphs/accordion/accordion.js: {}
+    components/_patterns/03-composites/02-paragraphs/01-accordion/accordion.js: {}
+dashboard:
+  version: 1.0
+  js:
+    components/_patterns/04-units/01-dashboard/dashboard.js: {}
+    https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js: { type: external, minified: true, preprocess: false }
 featherlight:
   version: 1.7.13
   css:
@@ -27,39 +32,35 @@ featherlight:
 forms:
   version: 1.0
   js:
-    components/_patterns/01-parts/03-forms/_forms.js: {}
+    components/_patterns/01-parts/06-forms/forms.js: {}
 galleries:
   version: 1.0
   js:
-    components/_patterns/03-composites/00-paragraphs/gallery/gallery.js: {}
+    components/_patterns/03-composites/02-paragraphs/04-gallery/gallery.js: {}
 layout:
   version: 1.0
   js:
-    components/_patterns/03-composites/02-layout/02-layout-builder/layout.js: {}
-menu-block:
+    components/_patterns/03-composites/04-layout/02-layout-builder/layout.js: {}
+section-menu:
   version: 1.0
   js:
-    components/_patterns/02-chunks/menus/menu-block/_menu-block.js: {}
+    components/_patterns/02-chunks/01-navigation/02-section-menu/section-menu.js: {}
 modal:
   version: 1.0
   js:
-    components/_patterns/02-chunks/modals/modal.js: {}
-object-fit:
-  version: 1.0
-  js:
-    components/_patterns/05-assembly/_object-fit.js: {}
+    components/_patterns/02-chunks/06-modals/modals.js: {}
 pager:
   version: 1.0
   js:
-    components/_patterns/02-chunks/pagers/_pager.js: {}
+    components/_patterns/02-chunks/03-pagers/pager.js: {}
 search-block:
   version: 1.0
   js:
-    components/_patterns/02-chunks/blocks/search/search-block.js: {}
+    components/_patterns/03-composites/01-blocks/02-search/search-block.js: {}
 search-page:
   version: 1.0
   js:
-    components/_patterns/04-units/_search.js: {}
+    components/_patterns/04-units/03-search/search.js: {}
 select:
   version: 4.0.3
   css:
@@ -67,7 +68,7 @@ select:
       components/js/select2/select2.min.css: { minified: true }
   js:
     components/js/select2/select2.min.js: { minified: true }
-    components/_patterns/01-parts/03-forms/_forms.js: {}
+    components/_patterns/01-parts/06-forms/forms.js: {}
 slick:
   version: 1.8.1
   css:
@@ -80,22 +81,11 @@ table:
   version: 1.0
   js:
     components/js/stacktable/stacktable.min.js: { minified: true }
-    components/_patterns/01-parts/04-tables/_tables.js: {}
-user:
-  version: 1.0
-  js:
-    components/_patterns/04-units/_user-dashboard.js: {}
-    https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js: { type: external, minified: true, preprocess: false }
-views:
-  version: 1.0
-  js:
-    components/_patterns/03-composites/01-views/_views.js: {}
-  dependencies:
-    - core/underscore
+    components/_patterns/01-parts/07-tables/tables.js: {}
 widgets:
   version: 1.0
   js:
-    components/_patterns/03-composites/00-paragraphs/_widgets.js: {}
+    components/_patterns/02-chunks/01-navigation/03-widget-anchors/widget-anchors.js: {}
   dependencies:
     - core/underscore
 fonts:
