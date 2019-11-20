@@ -2,4 +2,4 @@
 title: Views
 ---
 
-<h3 id="group-views" class="sub-group-title" data-anchor="views">Card Views</h3>
+<h3 id="group-views" class="sub-group-title">Card Views</h3>

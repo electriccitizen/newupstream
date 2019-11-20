@@ -56,8 +56,8 @@ $adminText    : 'PT Sans', sans-serif;
 	background: $navBack;
 	font-family: $adminText;
 	z-index: 9997;
-	left: -210px;
-	min-width: 210px;
+	left: -200px;
+	min-width: 200px;
 	.style-nav-toggle{
 		width: 60px;
 		height: 60px;
@@ -87,7 +87,7 @@ $adminText    : 'PT Sans', sans-serif;
 	ul{
 		@include listReset;
 		&#pattern-groups{
-			padding: $spaceLg 0;
+			padding: $spaceLg 0 0;
 		}
 		a{
 			color: $white;
@@ -101,6 +101,19 @@ $adminText    : 'PT Sans', sans-serif;
 			z-index: 9996;
 			background: $navBack;
 			width: 180px;
+			&:before{
+				content: '';
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100%;
+				width: 8px;
+				@include gradient(left,rgba(35,35,35,0.2),$navBack);
+			}
+			li{
+				padding-left: 6px;
+			}
 			a{
 				display: block;
 				padding: 5px 20px 5px 40px;
@@ -115,24 +128,24 @@ $adminText    : 'PT Sans', sans-serif;
 		position: relative;
 		background: $red;
 		&:last-child > a{
-			padding-bottom: 55px;
+			padding-bottom: 90px;
 		}
 		& > a{
 			display: block;
 			position: relative;
 			z-index: 9999;
 			font-size: 2.2rem;
-			padding: $spaceXxs 20px $spaceXxs 80px;
+			padding: $spaceXxs 20px $spaceXxs 50px;
 			&:before{
 				content: '';
 				display: block;
 				position: absolute;
-				top: 0;
+				top: 15px;
 				left: 20px;
-				width: 40px;
-				height: 40px;
+				width: 18px;
+				height: 18px;
 				background-position: center;
-				background-repeat: none;
+				background-repeat: no-repeat;
 				background-size: contain;
 			}
 			&:after{
@@ -151,7 +164,19 @@ $adminText    : 'PT Sans', sans-serif;
 				}
 			}
 			&[data-group-target="materials"]:before{
-				background-image: url('../images/custom/style-nav-icons/materials.svg');
+				background-image: url('../pattern-lab/public/images/custom/style-nav-icons/materials.svg');
+			}
+			&[data-group-target="parts"]:before{
+				background-image: url('../pattern-lab/public/images/custom/style-nav-icons/parts.svg');
+			}
+			&[data-group-target="chunks"]:before{
+				background-image: url('../pattern-lab/public/images/custom/style-nav-icons/chunks.svg');
+			}
+			&[data-group-target="composites"]:before{
+				background-image: url('../pattern-lab/public/images/custom/style-nav-icons/composites.svg');
+			}
+			&[data-group-target="units"]:before{
+				background-image: url('../pattern-lab/public/images/custom/style-nav-icons/units.svg');
 			}
 		}//end first level a
 		&:hover{
