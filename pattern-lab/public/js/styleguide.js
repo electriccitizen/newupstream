@@ -30,11 +30,15 @@ $(document).ready(function(){
   //scroll to link target on click and close the nav
   $('#pattern-groups a').each(function(){
   	var target = '#group-' + $(this).attr('data-group-target');
+  	var device = $(this).attr('data-device');
   	$(this).click(function(e){
   		e.preventDefault();
   		$('html, body').animate({scrollTop: $(target).offset().top - 100});
   		$('.style-nav-toggle').removeClass('is-open').closest('#styleguide-nav').animate({'left':'-200'}, 300);
   		$('.sub-group-patterns').animate({'left':'0'}, 300);
   	});
+  	if(device){
+  		console.log(device);
+  	}
   });
 });
