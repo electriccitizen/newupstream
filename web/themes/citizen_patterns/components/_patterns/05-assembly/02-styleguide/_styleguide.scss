@@ -15,6 +15,7 @@ $darkGrey     : #37363b;
 $red          : #bf0e0e;
 $lightRed     : #d94040;
 
+$navLinks     : $white;
 $navBack      : $red;
 $navBackHover : $lightRed;
 $adminText    : 'PT Sans', sans-serif;
@@ -73,7 +74,7 @@ $adminText    : 'PT Sans', sans-serif;
 			font-size: 32px;
 			background: $red;
 			padding-top: 12px;
-			color: $white;
+			color: $navLinks;
 			&:hover,&:focus{
 				background: $buttonBackHover;
 				color: $buttonTextHover;
@@ -90,7 +91,7 @@ $adminText    : 'PT Sans', sans-serif;
 			padding: $spaceLg 0 0;
 		}
 		a{
-			color: $white;
+			color: $navLinks;
 			background: $navBack;
 		}
 		ul{	
@@ -128,7 +129,7 @@ $adminText    : 'PT Sans', sans-serif;
 		position: relative;
 		background: $red;
 		&:last-child > a{
-			padding-bottom: 90px;
+			padding-bottom: 100px;
 		}
 		& > a{
 			display: block;
@@ -177,6 +178,9 @@ $adminText    : 'PT Sans', sans-serif;
 			}
 			&[data-group-target="units"]:before{
 				background-image: url('../pattern-lab/public/images/custom/style-nav-icons/units.svg');
+			}
+			&.devices:before{
+				background-image: url('../pattern-lab/public/images/custom/style-nav-icons/device.svg');
 			}
 		}//end first level a
 		&:hover{
@@ -294,14 +298,50 @@ $adminText    : 'PT Sans', sans-serif;
 }//end sg-patterns
 
 
+.pl-options{
+	width: 100%;
+	margin: $spaceSm 0;
+	.options-inner{
+		min-width: 180px;
+		@include safeFlex(row,wrap,start,start);
+	}
+}
+
 /* HIDDEN PL ELEMENTS
 -------------------------- */
 //these are elements that could not easily be hidden from pattern lab through _file-name
 
 
-
 /* SPECIAL PONIES
 ------------------------- */
+// special theming for specific patterns
+
+/* COLOR SWATCHES */
+.sg-colors{
+	@include bleed(padding,8px);
+	li{
+		max-width: none;
+		flex: 0 0 198px;
+		border: 0;
+		border-radius: 0;
+		padding: 0 4px 8px;
+		margin: 0;
+		.sg-swatch{
+			border-radius: 0;
+			height: 100px;
+			margin-bottom: 0;
+		}
+	}//end li
+}//end sg-colors
+
+.paragraph--type--gallery{
+	max-width: $contentStop;
+	@include auto;
+	&.slider:not(.first-child){
+		display: none;
+	}
+}
+
 
 
 

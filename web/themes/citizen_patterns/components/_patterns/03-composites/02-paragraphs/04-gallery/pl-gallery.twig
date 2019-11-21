@@ -1,0 +1,31 @@
+{#
+	DRUPAL: This template is embedded into the Drupal gallery paragraph template.
+#}
+
+  <div class="pl-options gallery-options">
+    <div class="options-inner">
+      <div class="form-item">
+        <label for="gallery-style">Gallery Style</label>
+        <select name="gallery-style">
+          {% if galleries[1].galleryType == 'lightbox' %}
+            <option value="lightbox">Lightbox</option>
+            <option value="slider">Slider</option>
+          {% else %}
+            <option value="slider">Slider</option>
+            <option value="lightbox">Lightbox</option>
+          {% endif %}
+        </select> 
+      </div>
+    </div>
+  </div>
+
+<div class="galleries-holder">
+  {% for gallery in galleries %}
+    {% include "@composites/02-paragraphs/04-gallery/_gallery.twig"
+      with{
+        widgetTitle: gallery.widgetTitle,
+        galleryType: gallery.galleryType
+      }
+    %}
+  {% endfor %}
+</div>

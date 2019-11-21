@@ -2,13 +2,13 @@
 	{% for item in items %}
 		<li>
 			<div class="sg-swatch" style="background: {{item.value}};"></div>
-			<div class="sg-info">
+			{# <div class="sg-info">
 				<span>{{item.value}}</span> <br/>
 				<code>{{item.name}}</code>
-			</div>
+			</div> #}
 		</li>
 	{% endfor %}
 </ul>
-{% if meta %}
+{# {% if meta %}
 	<p> <small>{{ meta.description }}</small> </p>
-{% endif %}
+{% endif %} #}

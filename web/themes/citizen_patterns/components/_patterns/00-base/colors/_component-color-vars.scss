@@ -1,5 +1,11 @@
 @import '_color-vars.scss';
 
+/* HIDDEN FROM PL SWATCHES BUT USED ON SITE */
+$white         : #fff;
+
+$transWhite    : rgba(255,255,255,0.7);
+$transBlack    : rgba(35,35,35,0.7);
+$transTint     : rgba(35,35,35,0.4);
 
 /* ADMINS - do not customize per site */
 $gold          : #fcd105;
