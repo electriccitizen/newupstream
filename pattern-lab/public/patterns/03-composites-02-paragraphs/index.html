@@ -4,9 +4,13 @@
     <title>Pattern Lab</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" href="../../css/pattern-scaffolding.css?1574289955" media="all" />
-    <link rel="stylesheet" href="../../../../dist/style.css?1574289955" media="all" />
-    <link rel="stylesheet" href="../../js/select2/select2.min.css?1574289955" media="all" />
+    <link rel="stylesheet" href="../../css/pattern-scaffolding.css?1574371529" media="all" />
+    <link rel="stylesheet" href="../../../../dist/style.css?1574371529" media="all" />
+    <link rel="stylesheet" href="../../js/select2/select2.min.css?1574371529" media="all" />
+    <link rel="stylesheet" href="../../js/featherlight/featherlight.css?1574371529" media="all" />
+    <link rel="stylesheet" href="../../js/featherlight/featherlight.gallery.css?1574371529" media="all" />
+    <link rel="stylesheet" href="../../js/slick/slick.css?1574371529" media="all" />
+    <link rel="stylesheet" href="../../js/slick/slick-theme.css?1574371529" media="all" />
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/813efb9b80.js" crossorigin="anonymous"></script>
     <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
@@ -17,8 +21,8 @@
 <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
 <meta http-equiv="pragma" content="no-cache" />
 
-<link rel="stylesheet" href="../../styleguide/css/styleguide.min.css?1574289955" media="all">
-<link rel="stylesheet" href="../../styleguide/css/prism-typeahead.min.css?1574289955" media="all" />
+<link rel="stylesheet" href="../../styleguide/css/styleguide.min.css?1574371529" media="all">
+<link rel="stylesheet" href="../../styleguide/css/prism-typeahead.min.css?1574371529" media="all" />
     <!-- End Pattern Lab -->
 
   </head>
@@ -76,7 +80,7 @@
           </ul>
         </li>
         <li class="group-nav-item parent-group">
-          <a href="#" class="nav-group-link">Device View</a>
+          <a href="#" class="nav-group-link devices">Device View</a>
           <ul class="sub-group-patterns">
             <li class="sub-group-nav-item">
               <a href="#" class="sub-nav-group-link" data-device="desktop">Desktop</a>
@@ -176,11 +180,11 @@
   <script type="text/json" id="sg-pattern-data-composites-accordion-group" class="sg-pattern-data">
     {"lineage":[],"lineageR":[],"patternBreadcrumb":{"patternType":"composites","patternSubtype":"paragraphs"},"patternDesc":"","patternExtension":"twig","patternName":"accordion group","patternPartial":"composites-accordion-group","patternState":""}
   </script>
-</div><!--end .sg-pattern-->                        <div id="composites-gallery" class="sg-pattern">
+</div><!--end .sg-pattern-->                        <div id="composites-pl-gallery" class="sg-pattern">
   <div class="sg-pattern-head">
     <h3 class="sg-pattern-title">
-      <a href="../../patterns/03-composites-02-paragraphs-04-gallery-gallery/03-composites-02-paragraphs-04-gallery-gallery.html" class="patternLink" data-patternpartial="composites-gallery" title="Link to Pattern">
-        gallery
+      <a href="../../patterns/03-composites-02-paragraphs-04-gallery-pl-gallery/03-composites-02-paragraphs-04-gallery-pl-gallery.html" class="patternLink" data-patternpartial="composites-pl-gallery" title="Link to Pattern">
+        Gallery
         
               </a>
     </h3>
@@ -189,57 +193,83 @@
       
     </div>
     
-    <a href="#" data-patternpartial="composites-gallery" title="View Pattern Info" id="sg-pattern-extra-toggle-composites-gallery" class="sg-pattern-extra-toggle">
+    <a href="#" data-patternpartial="composites-pl-gallery" title="View Pattern Info" id="sg-pattern-extra-toggle-composites-pl-gallery" class="sg-pattern-extra-toggle">
       <span>&#9660;</span>
     </a>
   </div>
   
-  <div class="sg-pattern-extra" id="sg-pattern-extra-composites-gallery"></div>
+  <div class="sg-pattern-extra" id="sg-pattern-extra-composites-pl-gallery"></div>
     
   <div class="sg-pattern-example">
     
-DRUPAL: This template is embedded in the drupal lightbox gallery paragraph template. 
-   <div class="paragraph--gallery">
+  <div class="pl-options gallery-options">
+    <div class="options-inner">
+      <div class="form-item">
+        <label for="gallery-style">Gallery Style</label>
+        <select name="gallery-style">
+                      <option value="lightbox">Lightbox</option>
+            <option value="slider">Slider</option>
+                  </select> 
+      </div>
+    </div>
+  </div>
 
+<div class="galleries-holder">
+      
+  <div class="paragraph--type--gallery lightbox">
 
        <div class="widget-title">Gallery Widget</div>
-  
-  <div class="gallery-type lightbox" >
+    <div class="gallery-type lightbox" >
     <div class="gallery-wrapper">
-
-                                    <div class="featherlight-gal image-gal" href="#itemone">
-                <img src="http://placeimg.com/800/640/people" />
-                <div class="featherlight-hidden" id="itemone">
-                    <img src="http://placeimg.com/800/640/people" />
-                </div>
+                                    <div class="gal-image featherlight-gal image-gal" href="#itemone">
+              <img src="http://placeimg.com/800/640/people" />
+              <div class="featherlight-hidden" id="itemone">
+                  <img src="http://placeimg.com/800/640/people" />
+                                      <div class="field-caption">This is a caption in a gallery.</div>
+                                </div>
             </div>
-                      <div class="featherlight-gal image-gal" href="#itemtwo">
-                <img src="http://placeimg.com/800/640/nature" />
-                <div class="featherlight-hidden" id="itemtwo">
-                    <img src="http://placeimg.com/800/640/nature" />
-                </div>
+                      <div class="gal-image featherlight-gal image-gal" href="#itemtwo">
+              <img src="http://placeimg.com/800/640/nature" />
+              <div class="featherlight-hidden" id="itemtwo">
+                  <img src="http://placeimg.com/800/640/nature" />
+                                </div>
             </div>
-                      <div class="featherlight-gal image-gal" href="#itemthree">
-                <img src="http://placeimg.com/800/640/architecture" />
-                <div class="featherlight-hidden" id="itemthree">
-                    <img src="http://placeimg.com/800/640/architecture" />
-                </div>
+                      <div class="gal-image featherlight-gal image-gal" href="#itemthree">
+              <img src="http://placeimg.com/800/640/architecture" />
+              <div class="featherlight-hidden" id="itemthree">
+                  <img src="http://placeimg.com/800/640/architecture" />
+                                </div>
             </div>
-                      <div class="featherlight-gal image-gal" href="#itemfour">
-                <img src="http://placeimg.com/800/640/tech" />
-                <div class="featherlight-hidden" id="itemfour">
-                    <img src="http://placeimg.com/800/640/tech" />
-                </div>
+                      <div class="gal-image featherlight-gal image-gal" href="#itemfour">
+              <img src="http://placeimg.com/800/640/tech" />
+              <div class="featherlight-hidden" id="itemfour">
+                  <img src="http://placeimg.com/800/640/tech" />
+                                </div>
             </div>
-                        
-    </div>   </div> 
-
-   </div>
+                            </div>
+  </div>
 
   </div>
+      
+  <div class="paragraph--type--gallery slider">
+
+    <div class="gallery-type slider" >
+    <div class="gallery-wrapper">
+                        <div class="field-image-multi">
+                          <div class="gal-image slider-image"><img src="http://placeimg.com/800/400/people"></div>
+                          <div class="gal-image slider-image"><img src="http://placeimg.com/800/400/nature"></div>
+                          <div class="gal-image slider-image"><img src="http://placeimg.com/800/400/architecture"></div>
+                          <div class="gal-image slider-image"><img src="http://placeimg.com/800/400/tech"></div>
+                      </div>
+                  </div>
+  </div>
+
+  </div>
+  </div>
+  </div>
   
-  <script type="text/json" id="sg-pattern-data-composites-gallery" class="sg-pattern-data">
-    {"lineage":[],"lineageR":[],"patternBreadcrumb":{"patternType":"composites","patternSubtype":"paragraphs"},"patternDesc":"","patternExtension":"twig","patternName":"gallery","patternPartial":"composites-gallery","patternState":""}
+  <script type="text/json" id="sg-pattern-data-composites-pl-gallery" class="sg-pattern-data">
+    {"lineage":[{"lineagePattern":"composites-gallery","lineagePath":"..\/..\/patterns\/03-composites-02-paragraphs-04-gallery-pl-gallery\/03-composites-02-paragraphs-04-gallery-pl-gallery.html"}],"lineageR":[],"patternBreadcrumb":{"patternType":"composites","patternSubtype":"paragraphs"},"patternDesc":"","patternExtension":"twig","patternName":"Gallery","patternPartial":"composites-pl-gallery","patternState":""}
   </script>
 </div><!--end .sg-pattern-->                        <div id="composites-image" class="sg-pattern">
   <div class="sg-pattern-head">
@@ -529,10 +559,10 @@ STYLEGUIDE ONLY: This template is not used in Drupal.
   }
 </script>
 
-<script id="pl-js-polyfill-insert-1574289955">
+<script id="pl-js-polyfill-insert-1574371529">
   (function() {
     if (self != top) {
-      var cb = '1574289955';
+      var cb = '1574371529';
       var js = [];
       if (typeof document !== 'undefined' && !('classList' in document.documentElement)) {
         js.push('styleguide/bower_components/classList.min.js');
@@ -542,10 +572,10 @@ STYLEGUIDE ONLY: This template is not used in Drupal.
   })();
 </script>
 
-<script id="pl-js-insert-1574289955">
+<script id="pl-js-insert-1574371529">
   (function() {
     if (self != top) {
-      var cb = '1574289955';
+      var cb = '1574371529';
       var js = [ { 'src': 'styleguide/bower_components/jwerty.min.js', 'dep': [ 'styleguide/js/patternlab-pattern.min.js' ] } ];
       scriptLoader.run(js,cb,'pl-js-insert');
     }
@@ -561,6 +591,9 @@ STYLEGUIDE ONLY: This template is not used in Drupal.
   <script src="../../js/jquery.once.min.js"></script>
   <script src="../../js/select2/select2.min.js"></script>
   <script src="../../js/stacktable/stacktable.min.js"></script>
+  <script src="../../js/slick/slick.min.js"></script>
+  <script src="../../js/featherlight/featherlight.min.js"></script>
+  <script src="../../js/featherlight/featherlight.gallery.min.js"></script>
   <script src="../../js/styleguide.js"></script>
   <script>Drupal.attachBehaviors();</script>
   <script>
