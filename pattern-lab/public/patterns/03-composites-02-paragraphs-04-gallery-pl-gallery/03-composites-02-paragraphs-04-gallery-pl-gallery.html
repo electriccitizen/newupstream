@@ -96,40 +96,82 @@
       </ul>
     </div>
 
+  <div class="pl-options gallery-options">
+    <div class="options-inner">
+      <div class="form-item">
+        <label for="gallery-style">Gallery Style</label>
+        <select name="gallery-style">
+                      <option value="lightbox">Lightbox</option>
+            <option value="slider">Slider</option>
+                  </select> 
+      </div>
+    </div>
+  </div>
 
-	This block replaces the Drupal search block and is embedded into Drupal. Form styles are set in macros.twig. Available styles: toggle, box.
+<div class="galleries-holder">
+      
+  <div class="paragraph--type--gallery lightbox">
 
-	<div data-drupal-selector="search-block-form" id="block-search-form" class="block block-search-form-block toggle">
+       <div class="widget-title">Gallery Widget</div>
+    <div class="gallery-type lightbox" >
+    <div class="gallery-wrapper">
+                                    <div class="gal-image featherlight-gal image-gal" href="#itemone">
+              <img src="http://placeimg.com/800/640/people" />
+              <div class="featherlight-hidden" id="itemone">
+                  <img src="http://placeimg.com/800/640/people" />
+                                      <div class="field-caption">This is a caption in a gallery.</div>
+                                </div>
+            </div>
+                      <div class="gal-image featherlight-gal image-gal" href="#itemtwo">
+              <img src="http://placeimg.com/800/640/nature" />
+              <div class="featherlight-hidden" id="itemtwo">
+                  <img src="http://placeimg.com/800/640/nature" />
+                                </div>
+            </div>
+                      <div class="gal-image featherlight-gal image-gal" href="#itemthree">
+              <img src="http://placeimg.com/800/640/architecture" />
+              <div class="featherlight-hidden" id="itemthree">
+                  <img src="http://placeimg.com/800/640/architecture" />
+                                </div>
+            </div>
+                      <div class="gal-image featherlight-gal image-gal" href="#itemfour">
+              <img src="http://placeimg.com/800/640/tech" />
+              <div class="featherlight-hidden" id="itemfour">
+                  <img src="http://placeimg.com/800/640/tech" />
+                                </div>
+            </div>
+                            </div>
+  </div>
 
-			<div>
-	
-					<div class="search-form-outer">
-				<div class="t-search-wrapper"><a href="#" class="t-search" role="button" aria-label="toggle-search" aria-controls="search-form-wrapper"><i class="fas fa-search"></i></a></div>
-				<div class="t-search-close"><a href="#" class="close-search" role="button" aria-label="toggle-search-close" aria-controls="search-form-wrapper"><i class="fas fa-times"></i></a></div>
-				<div id="search-form-wrapper" aria-hidden="true">
-					<form action="/site-search" method="get" id="views-exposed-form-site-search-search-results" accept-charset="UTF-8" data-drupal-form-fields="edit-search-api-fulltext">
+  </div>
+      
+  <div class="paragraph--type--gallery slider">
 
-													<div class="js-form-item form-item js-form-type-textfield form-item-search-api-fulltext js-form-item-search-api-fulltext">
-								<label for="edit-search-api-fulltext" class="visually-hidden">Search</label>
-								<input id="edit-search-api-fulltext" class="form-text" placeholder="enter keywords" data-drupal-selector="edit-search-api-fulltext" type="text" size="30" max-length="128" >
-							</div>
-							<div data-drupal-selector="edit-actions" id="edit-site-search-actions" class="form-actions js-form-wrapper form-wrapper">
-								<input id="edit-submit-site-search" class="button js-form-submit form-submit" data-drupal-selector="edit-submit-site-search" value="search" type="submit">
-								<i class="fas fa-search"></i>
-							</div>
-						
-					</form>
-				</div>
-			</div>
+    <div class="gallery-type slider" >
+    <div class="gallery-wrapper">
+                        <div class="field-image-multi">
+                          <div class="gal-image slider-image">
+                <img src="http://placeimg.com/800/400/people">
+                                  <div class="field-caption">This is a caption in a gallery.</div>
+                              </div>
+                          <div class="gal-image slider-image">
+                <img src="http://placeimg.com/800/400/nature">
+                              </div>
+                          <div class="gal-image slider-image">
+                <img src="http://placeimg.com/800/400/architecture">
+                              </div>
+                          <div class="gal-image slider-image">
+                <img src="http://placeimg.com/800/400/tech">
+                              </div>
+                      </div>
+                  </div>
+  </div>
 
-		
-			</div>
-	
-	</div>
-
+  </div>
+  </div>
   <!--DO NOT REMOVE-->
   <script type="text/json" id="sg-pattern-data-footer" class="sg-pattern-data">
-  {"cssEnabled":false,"lineage":[],"lineageR":[{"lineagePattern":"composites-site-header","lineagePath":"..\/..\/patterns\/03-composites-04-layout-01-header-site-header\/03-composites-04-layout-01-header-site-header.html"}],"patternBreadcrumb":{"patternType":"composites","patternSubtype":"blocks"},"patternDesc":"","patternExtension":"twig","patternName":"search","patternPartial":"composites-search","patternState":"","extraOutput":[]}
+  {"cssEnabled":false,"lineage":[{"lineagePattern":"composites-gallery","lineagePath":"..\/..\/patterns\/03-composites-02-paragraphs-04-gallery-pl-gallery\/03-composites-02-paragraphs-04-gallery-pl-gallery.html"}],"lineageR":[],"patternBreadcrumb":{"patternType":"composites","patternSubtype":"paragraphs"},"patternDesc":"","patternExtension":"twig","patternName":"Gallery","patternPartial":"composites-pl-gallery","patternState":"","extraOutput":[]}
 </script>
 
 <script>
