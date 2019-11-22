@@ -56,11 +56,6 @@ html {
 	margin: 0;
 }
 
-span.highlight{
-	background: #fcd916;
-}
-
-
 div.warning {
 	border: 2px solid #dd241b;
 	color: #dd241b;

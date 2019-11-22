@@ -1,10 +1,26 @@
 {#
   STYLEGUIDE ONLY: This template is not brought into to Drupal.
 #}
-<button class="button" href="{{ button_url }}">
-	{% block button_content %}
-		{{ button_content }}
-	{% endblock %}
-</button>
 
-
+<div class="grid-two-column">
+	<div>
+		<div class="element-title">Content Buttons</div>
+		<div class="grid-left-spaced content-buttons">
+			{% for button in buttons %}
+				<div class="button-item">
+					<button class="{{ button.class }}">{{ button.text }}</button>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+	<div>
+		<div class="element-title">Form Buttons</div>
+		<div class="grid-left">
+			{% for button in formButtons %}
+				<div class="button-item">
+					<button class="{{ button.class }}">{{ button.text }}</button>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>
