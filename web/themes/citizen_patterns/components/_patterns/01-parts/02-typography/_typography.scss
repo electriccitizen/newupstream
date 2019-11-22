@@ -194,20 +194,9 @@ h2.section-title{
 
 /* TEXT MIXINS
 ---------------- */
-@mixin xSmaller{
-	font-size: 80%;
-}
-
-@mixin smaller{
-	font-size: 90%;
-}
-
-@mixin larger{
-	font-size: 120%;
-}
 
 @mixin textDate{
-	@include smaller;
+	font-size: 1.6rem;
 	font-style: italic;
 	font-family: $serif;
 }
@@ -296,11 +285,7 @@ figcaption,.field-caption {
 }
 
 small{
-	font-size: 1.6rem;
-}
-
-span.highlight{
-	background: $highlighter;
+	font-size: 80%;
 }
 
 .warning{
@@ -312,10 +297,13 @@ span.highlight{
 	text-align: center;
 }
 
-.hr {
+.hr,hr {
 	border-style: solid;
 	border-width: 1px 0 0;
 	color: currentColor;
+	& + p{
+		margin-top: $spaceMd;
+	}
 }
 
 blockquote{

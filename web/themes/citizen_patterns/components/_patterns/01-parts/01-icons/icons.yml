@@ -2,18 +2,18 @@
 #The value should match the svg file name
 items:
   1:
-    name: "PDF"
-    value: "pdf"
+    name: 'PDF'
+    value: pdf
   2:
-    name: "Word"
-    value: "word"
+    name: 'Word'
+    value: word
   3:
-    name: "Excel"
-    value: "excel"
+    name: 'Excel'
+    value: excel
   4:
-    name: "Powerpoint"
-    value: "powerpoint"
+    name: 'Powerpoint'
+    value: powerpoint
   5:
-    name: "Generic"
-    value: "generic"
+    name: 'Generic'
+    value: generic
   

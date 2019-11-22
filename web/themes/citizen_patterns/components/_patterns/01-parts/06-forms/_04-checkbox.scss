@@ -3,8 +3,8 @@
 =============== */
 
 form:not(.layout-builder-add-block):not(.layout-builder-update-block){
-	.form-checkboxes{
-		margin-bottom: 0;
+	.form-checkboxes,.js-webform-checkboxes{
+		margin-bottom: -$formElementSpace;
 		@include safeFlex(row,wrap,null,null);
 		fieldset &{
 			margin-left: -2rem;
@@ -12,7 +12,11 @@ form:not(.layout-builder-add-block):not(.layout-builder-update-block){
 		}
 	}
 
-	fieldset.checkboxes--wrapper{
+	.checkboxes--wrapper{
+		padding: 0;
+		legend{
+			@include formLabel;
+		}
 		.fieldset-wrapper{
 			margin: 0;
 		}

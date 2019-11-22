@@ -1,6 +1,7 @@
 /* ==================
 	 STYLEGUIDE
 ==================== */
+/* For performance reasons, this stylesheet is not imported into the the main style.scss so it is added to the css styles used by Drupal. Its is for the style guide only. For that reason, we need to manually import any variables and mixins directly into this file before its compiled into the guide.css */
 @import 
 	'breakpoint-sass/stylesheets/breakpoint',
 	'../../00-base/colors/color-vars',
@@ -10,6 +11,7 @@
 	'../../00-base/02-backgrounds',
 	'../../00-base/03-units',
 	'../../01-parts/02-typography/typography';
+
 
 /* PATTERN LAB VARIABLES
 ---------------------- */
@@ -29,380 +31,440 @@ $navBack      : $red;
 $navBackHover : $lightRed;
 $adminText    : 'PT Sans', sans-serif;
 
-.pl{
-	.project-styleguide{
-		position: relative;
-		&:before{
-			content: '';
-			display: block;
-			position: fixed;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			//set grid paper background
-			background-color: $offWhite;
-			background-size:400px 400px, 400px 400px, 100px 100px, 100px 100px;
-			background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
-			background-image: -webkit-linear-gradient(darken($lightGrey,2%) 2px, transparent 2px),
-				-webkit-linear-gradient(0, darken($lightGrey,2%) 2px, transparent 2px),
-				-webkit-linear-gradient($lightGrey 1px, transparent 1px),
-				-webkit-linear-gradient(0, $lightGrey 1px, transparent 1px);
-			background-image: -moz-linear-gradient(darken($lightGrey,2%) 2px, transparent 2px),
-				-moz-linear-gradient(0, darken($lightGrey,2%) 2px, transparent 2px),
-				-moz-linear-gradient($lightGrey 1px, transparent 1px),
-				-moz-linear-gradient(0, $lightGrey 1px, transparent 1px);
-			background-image: linear-gradient(darken($lightGrey,2%) 2px, transparent 2px),
-				linear-gradient(90deg, darken($lightGrey,2%) 2px, transparent 2px),
-				linear-gradient($lightGrey 1px, transparent 1px),
-				linear-gradient(90deg, $lightGrey 1px, transparent 1px);
-		}
-	}//end sg patterns
 
-	/* SYTYLEGUIDE NAV
-	--------------------- */
-	#styleguide-nav{
+.project-styleguide{
+	position: relative;
+	&:before{
+		content: '';
+		display: block;
 		position: fixed;
-		top: 154px;
-		background: $navBack;
-		font-family: $adminText;
-		z-index: 9997;
-		left: -200px;
-		min-width: 200px;
-		.style-nav-toggle{
-			width: 60px;
-			height: 60px;
-			position: fixed;
-			z-index: 9998;
-			top: 94px;
-			left: 0;
-			a{
-				text-align: center;
-				width: 100%;
-				height: 100%;
-				display: block;
-				font-size: 32px;
-				background: $red;
-				padding-top: 12px;
-				color: $navLinks;
-				&:hover,&:focus{
-					background: $buttonBackHover;
-					color: $buttonTextHover;
-				}
-				&:active{
-					background: $buttonBackActive;
-					color: $buttonTextActive;
-				}
-			}
-		}
-		ul{
-			@include listReset;
-			&#pattern-groups{
-				padding: $spaceLg 0 0;
-			}
-			a{
-				color: $navLinks;
-				background: $navBack;
-			}
-			ul{	
-				position: absolute;
-				padding: $spaceSm 0;
-				top: -$spaceXxs;
-				left: 0;
-				z-index: 9996;
-				background: $navBack;
-				width: 180px;
-				&:before{
-					content: '';
-					display: block;
-					position: absolute;
-					top: 0;
-					left: 0;
-					height: 100%;
-					width: 8px;
-					@include gradient(left,rgba(35,35,35,0.2),$navBack);
-				}
-				li{
-					padding-left: 6px;
-				}
-				a{
-					display: block;
-					padding: 5px 20px 5px 40px;
-					&:hover,&:focus{
-						background: $navBackHover;
-					}
-				}
-			}
-		}
-		//top level
-		.group-nav-item{
-			position: relative;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		//set grid paper background
+		background-color: $offWhite;
+		background-size:400px 400px, 400px 400px, 100px 100px, 100px 100px;
+		background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+		background-image: -webkit-linear-gradient(darken($lightGrey,2%) 2px, transparent 2px),
+			-webkit-linear-gradient(0, darken($lightGrey,2%) 2px, transparent 2px),
+			-webkit-linear-gradient($lightGrey 1px, transparent 1px),
+			-webkit-linear-gradient(0, $lightGrey 1px, transparent 1px);
+		background-image: -moz-linear-gradient(darken($lightGrey,2%) 2px, transparent 2px),
+			-moz-linear-gradient(0, darken($lightGrey,2%) 2px, transparent 2px),
+			-moz-linear-gradient($lightGrey 1px, transparent 1px),
+			-moz-linear-gradient(0, $lightGrey 1px, transparent 1px);
+		background-image: linear-gradient(darken($lightGrey,2%) 2px, transparent 2px),
+			linear-gradient(90deg, darken($lightGrey,2%) 2px, transparent 2px),
+			linear-gradient($lightGrey 1px, transparent 1px),
+			linear-gradient(90deg, $lightGrey 1px, transparent 1px);
+	}
+}//end sg patterns
+
+/* SYTYLEGUIDE NAV
+--------------------- */
+#styleguide-nav{
+	position: fixed;
+	top: 154px;
+	background: $navBack;
+	font-family: $adminText;
+	z-index: 9997;
+	left: -200px;
+	min-width: 200px;
+	.style-nav-toggle{
+		width: 60px;
+		height: 60px;
+		position: fixed;
+		z-index: 9998;
+		top: 94px;
+		left: 0;
+		a{
+			text-align: center;
+			width: 100%;
+			height: 100%;
+			display: block;
+			font-size: 32px;
 			background: $red;
-			&:last-child > a{
-				padding-bottom: 100px;
+			padding-top: 12px;
+			color: $navLinks;
+			&:hover,&:focus{
+				background: $buttonBackHover;
+				color: $buttonTextHover;
 			}
-			& > a{
+			&:active{
+				background: $buttonBackActive;
+				color: $buttonTextActive;
+			}
+		}
+	}
+	ul{
+		@include listReset;
+		&#pattern-groups{
+			padding: $spaceLg 0 0;
+		}
+		a{
+			color: $navLinks;
+			background: $navBack;
+		}
+		ul{	
+			position: absolute;
+			padding: $spaceSm 0;
+			top: -$spaceXxs;
+			left: 0;
+			z-index: 9996;
+			background: $navBack;
+			width: 180px;
+			&:before{
+				content: '';
 				display: block;
-				position: relative;
-				z-index: 9999;
-				font-size: 2.2rem;
-				padding: $spaceXxs 20px $spaceXxs 50px;
-				&:before{
-					content: '';
-					display: block;
-					position: absolute;
-					top: 15px;
-					left: 20px;
-					width: 18px;
-					height: 18px;
-					background-position: center;
-					background-repeat: no-repeat;
-					background-size: contain;
-				}
-				&:after{
-					content: '';
-					display: block;
-					width: 100%;
-					height: 50px;
-					position: absolute;
-					top: 0;
-					left: 0;
-					z-index: -1;
-				}
-				&:focus{
-					&:after{
-						background: $navBackHover;
-					}
-				}
-				&[data-group-target="materials"]:before{
-					background-image: url('../pattern-lab/public/images/custom/style-nav-icons/materials.svg');
-				}
-				&[data-group-target="parts"]:before{
-					background-image: url('../pattern-lab/public/images/custom/style-nav-icons/parts.svg');
-				}
-				&[data-group-target="chunks"]:before{
-					background-image: url('../pattern-lab/public/images/custom/style-nav-icons/chunks.svg');
-				}
-				&[data-group-target="composites"]:before{
-					background-image: url('../pattern-lab/public/images/custom/style-nav-icons/composites.svg');
-				}
-				&[data-group-target="units"]:before{
-					background-image: url('../pattern-lab/public/images/custom/style-nav-icons/units.svg');
-				}
-				&.devices:before{
-					background-image: url('../pattern-lab/public/images/custom/style-nav-icons/device.svg');
-				}
-			}//end first level a
-			&:hover{
-				& > a:after{
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100%;
+				width: 8px;
+				@include gradient(left,rgba(35,35,35,0.2),$navBack);
+			}
+			li{
+				padding-left: 6px;
+			}
+			a{
+				display: block;
+				padding: 5px 20px 5px 40px;
+				&:hover,&:focus{
 					background: $navBackHover;
 				}
 			}
-		}//end group-nav-item
-	}//end styleguide nav
-
-	/* MAIN PL CONTAINER & PATTERN/GROUP TITLES
-	----------------------- */
-	.sg-main{
-		overflow-x: hidden !important;
-		padding: 0 0 $spaceXl;
-		position: relative;
-		z-index: 1;
-		#sg-patterns{
-			padding: 0 $spaceXl;
-			//main patterns sections
-			& > .sg-subtype{
-				//constrain pattern group titles to max width & hide color bar overflow
-				&:not(:first-child){
-					max-width: $largeScreen;
-					@include auto;
-					overflow-x: hidden;
-				}
-				//hide default pl group link headers
-				& > h2{
-					display: none;
-				}
-				//group titles from MD files
-				& > .sg-pattern-body{
-					max-width: $textMax;
-					text-align: center;
-					@include auto;
-					h1{
-						font-size: 30px;
-						padding: $spaceMd 0;
-						position: relative;
-						color: $white;
-						font-family: $adminText;
-						&:after{
-							@include fullBack($darkGrey);
-						}
-					}
-					h2.group-title{
-						font-size: 42px;
-						padding: $spaceXl + 4 0 $spaceLg;
-						font-family: $adminText;
-						@include tab{
-							font-size: 50px;
-						}
-						@include contentStop{
-							font-size: 60px;
-						}
-					}
-					h3.sub-group-title{
-						position: relative;
-						color: $white;
-						padding: $spaceSm 0;
-						&:after{
-							@include fullBack($midBlue);
-						}	
-					}
-				}//end sg-pattern-body
-			}//end top level types (all main _patterns folders)
-			.sg-pattern{
-				padding-bottom: $spaceXl;
-				margin-bottom: 0;
-			}
-		}//end sg-patterns
-	}//end sg-main
-
-	/* PATTERNS
-	--------------------- */
-	.sg-pattern{
-		max-width: $largeScreen;
-		padding: 0 $siteMarginMobile $spaceMd;
-		background: $siteBack;
-		@include auto;
-		@include desk{
-			padding-left: $siteMarginDesk;
-			padding-right: $siteMarginDesk;
 		}
-		.sg-pattern-head{
-			.sg-pattern-title{
-				background: $siteBack;
+	}
+	//top level
+	.group-nav-item{
+		position: relative;
+		background: $red;
+		&:last-child > a{
+			padding-bottom: 100px;
+		}
+		& > a{
+			display: block;
+			position: relative;
+			z-index: 9999;
+			font-size: 2.2rem;
+			padding: $spaceXxs 20px $spaceXxs 50px;
+			&:before{
+				content: '';
+				display: block;
+				position: absolute;
+				top: 15px;
+				left: 20px;
+				width: 18px;
+				height: 18px;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: contain;
+			}
+			&:after{
+				content: '';
+				display: block;
+				width: 100%;
+				height: 50px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: -1;
+			}
+			&:focus{
+				&:after{
+					background: $navBackHover;
+				}
+			}
+			&[data-group-target="materials"]:before{
+				background-image: url('../pattern-lab/public/images/custom/style-nav-icons/materials.svg');
+			}
+			&[data-group-target="parts"]:before{
+				background-image: url('../pattern-lab/public/images/custom/style-nav-icons/parts.svg');
+			}
+			&[data-group-target="chunks"]:before{
+				background-image: url('../pattern-lab/public/images/custom/style-nav-icons/chunks.svg');
+			}
+			&[data-group-target="composites"]:before{
+				background-image: url('../pattern-lab/public/images/custom/style-nav-icons/composites.svg');
+			}
+			&[data-group-target="units"]:before{
+				background-image: url('../pattern-lab/public/images/custom/style-nav-icons/units.svg');
+			}
+			&.devices:before{
+				background-image: url('../pattern-lab/public/images/custom/style-nav-icons/device.svg');
+			}
+		}//end first level a
+		&:hover{
+			& > a:after{
+				background: $navBackHover;
+			}
+		}
+	}//end group-nav-item
+}//end styleguide nav
+
+/* MAIN PL CONTAINER & PATTERN/GROUP TITLES
+----------------------- */
+.sg-main{
+	overflow-x: hidden !important;
+	padding: 0 0 $spaceXl;
+	position: relative;
+	z-index: 1;
+	#sg-patterns{
+		padding: 0 $spaceXl;
+		//main patterns sections
+		& > .sg-subtype{
+			//constrain pattern group titles to max width & hide color bar overflow
+			&:not(:first-child){
 				max-width: $largeScreen;
 				@include auto;
-				padding: $spaceLg $siteMarginMobile $spaceSm;
-				display: block;
-				font-family: $adminText;	
-				@include desk{
-					padding-left: $siteMarginDesk;
-					padding-right: $siteMarginDesk;
-				}
-				a{
-					pointer-events: none;
-					display: block;
-					text-transform: capitalize;
-					font-size: 42px;
-					color: $midBlue !important;
-					padding-bottom: $spaceXs;
-					border-bottom: 1px solid $midBlue;
-				}
-			}//end sg title
-			.sg-pattern-extra-toggle{
+				overflow-x: hidden;
+			}
+			//hide default pl group link headers
+			& > h2{
 				display: none;
 			}
-		}//end pattern head
-		.sg-pattern-extra{
-			border-top: 0;
-		}
-		.element-title{
-			color: $midBlue;
-			font-weight: $heavy;
-			font-family: $adminText;
-			font-size: 2.4rem;
-			margin-bottom: $spaceXxs;
+			//group titles from MD files
+			& > .sg-pattern-body{
+				max-width: $textMax;
+				text-align: center;
+				@include auto;
+				h1{
+					font-size: 30px;
+					padding: $spaceMd 0;
+					position: relative;
+					color: $white;
+					font-family: $adminText;
+					&:after{
+						@include fullBack($darkGrey);
+					}
+				}
+				h2.group-title{
+					font-size: 42px;
+					padding: $spaceXl + 4 0 $spaceLg;
+					font-family: $adminText;
+					@include tab{
+						font-size: 50px;
+					}
+					@include contentStop{
+						font-size: 60px;
+					}
+				}
+				h3.sub-group-title{
+					position: relative;
+					color: $white;
+					padding: $spaceSm 0;
+					&:after{
+						@include fullBack($midBlue);
+					}	
+				}
+			}//end sg-pattern-body
+		}//end top level types (all main _patterns folders)
+		.sg-pattern{
+			padding-bottom: $spaceXl;
+			margin-bottom: 0;
 		}
 	}//end sg-patterns
+}//end sg-main
 
-
-	.pl-options{
-		width: 100%;
-		margin: $spaceSm 0;
-		.options-inner{
-			min-width: 180px;
-			@include safeFlex(row,wrap,start,start);
-		}
+/* PATTERNS
+--------------------- */
+.sg-pattern{
+	max-width: $largeScreen;
+	padding: 0 $siteMarginMobile $spaceMd;
+	background: $siteBack;
+	@include auto;
+	@include desk{
+		padding-left: $siteMarginDesk;
+		padding-right: $siteMarginDesk;
 	}
-
-	/* HIDDEN PL ELEMENTS
-	-------------------------- */
-	//these are elements that could not easily be hidden from pattern lab through _file-name
-
-
-	/* SPECIAL PONIES
-	------------------------- */
-	// special theming for specific patterns
-
-	/* COLOR SWATCHES */
-	.sg-colors{
-		@include bleed(padding,8px);
-		@include safeFlex(row,wrap,center,start);
-		li{
-			max-width: none;
-			flex: 0 0 198px;
-			border: 0;
-			border-radius: 0;
-			padding: 0 4px 8px;
-			margin: 0;
-			.sg-swatch{
-				border-radius: 0;
-				height: 100px;
-				margin-bottom: 0;
-			}
-		}//end li
-	}//end sg-colors
-
-	/* ICONS LIST */
-	.icons-demo{
-		@include safeFlex(row,wrap,center,start);
-		@include bleed(padding,60px);
-		margin-bottom: -$spaceSm;
-		.sprite-icon{
-			display: inline-block;
-			width: $plIcon;
-			height: $plIcon;
-			@include plIconSize;
-			margin-bottom: $spaceSm;
-		}
-	}
-
-	/* TYPOGRAPHY */
-	.constrain-text{
-		max-width: $textMax;
-		&.center{
+	.sg-pattern-head{
+		.sg-pattern-title{
+			background: $siteBack;
+			max-width: $largeScreen;
 			@include auto;
-		}
-	}
-	.typography-element{
-		margin-bottom: $spaceMd;
-	}//end typography element
-	.banner-title{
-		@include bannerTitle;
-		
-		.block-field-banner{
-			@include tab{
-				height: 400px;
-				overflow: hidden;
-				img{
-					position: absolute;
-					top: 50%;
-					left: 0;
-					@include translateY(-50%);
-				}
+			padding: $spaceLg $siteMarginMobile $spaceSm;
+			display: block;
+			font-family: $adminText;	
+			@include desk{
+				padding-left: $siteMarginDesk;
+				padding-right: $siteMarginDesk;
 			}
-		}
-	}
-
-
-	/* PARAGRAPHS */
-	.paragraph--type--gallery{
-		max-width: $contentStop;
-		@include auto;
-		&.slider:not(.first-child){
+			a{
+				pointer-events: none;
+				display: block;
+				text-transform: capitalize;
+				font-size: 42px;
+				color: $midBlue !important;
+				padding-bottom: $spaceXs;
+				border-bottom: 1px solid $midBlue;
+				margin-bottom: $spaceMd;
+			}
+		}//end sg title
+		.sg-pattern-extra-toggle{
 			display: none;
 		}
+	}//end pattern head
+	.sg-pattern-extra{
+		border-top: 0;
 	}
+	.element-title{
+		color: $midBlue;
+		font-weight: $heavy;
+		font-family: $adminText;
+		font-size: 2.4rem;
+		margin-bottom: $spaceXxs;
+	}
+}//end sg-patterns
 
-}//end pl
+.pl-options{
+	width: 100%;
+	margin: $spaceSm 0;
+	.options-inner{
+		min-width: 180px;
+		@include safeFlex(row,wrap,start,start);
+	}
+}
+
+.pl-snug{
+	margin-bottom: $spaceSm;
+}
+
+.pl-space{
+	margin-bottom: $spaceMd;
+}
+
+/* SIZING
+------------- */
+.constrain-text{
+	max-width: $textMax;
+	&.center{
+		@include auto;
+	}
+}
+
+.max-small{
+	max-width: 350px;
+}
+
+.max-text{
+	max-width: $textMax;
+}
+
+/* PL GRIDS 
+-------------- */
+.grid-center-spaced{
+	@include safeFlex(row,wrap,center,start);
+	@include bleed(padding,70px);
+}
+
+.grid-left-spaced{
+	@include safeFlex(row,wrap,start,start);
+	@include bleed(padding,70px);
+}
+
+.grid-left{
+	@include safeFlex(row,wrap,start,start);
+	@include bleed(padding,20px);
+}
+
+.grid-two-column{
+	@include safeFlex(row,wrap,start,start);
+	& > *{
+		@include tab{
+			width: 50%;
+		}
+	}
+}
+
+
+/* HIDDEN PL ELEMENTS
+-------------------------- */
+//these are elements that could not easily be hidden from pattern lab through _file-name
+
+
+/* SPECIAL PONIES
+------------------------- */
+// special theming for specific patterns
+
+/* COLOR SWATCHES */
+.sg-colors{
+	@include bleed(padding,8px);
+	@include safeFlex(row,wrap,center,start);
+	li{
+		max-width: none;
+		flex: 0 0 198px;
+		border: 0;
+		border-radius: 0;
+		padding: 0 4px 8px;
+		margin: 0;
+		.sg-swatch{
+			border-radius: 0;
+			height: 100px;
+			margin-bottom: 0;
+		}
+	}//end li
+}//end sg-colors
+
+/* ICONS LIST */
+.icons-demo{
+	margin-bottom: -$spaceSm;
+	.sprite-icon{
+		display: inline-block;
+		width: $plIcon;
+		height: $plIcon;
+		@include plIconSize;
+		margin-bottom: $spaceSm;
+	}
+}
+
+/* TYPOGRAPHY */
+.typography-element{
+	margin-bottom: $spaceMd;
+}//end typography element
+
+.banner-title{
+	@include bannerTitle;
+	.block-field-banner{
+		@include tab{
+			height: 400px;
+			overflow: hidden;
+			img{
+				position: absolute;
+				top: 50%;
+				left: 0;
+				@include translateY(-50%);
+			}
+		}
+	}
+}//end banner title
+
+/* BUTTONS */
+.content-buttons{
+	button{
+		min-width: 200px;
+	}
+}	
+
+/* TABLES */
+.pl table{
+	// need to adjust the width of the table row value on mobile to prevent a border gap because the breakpoint and screen width are off by 120px;
+	.st-val{
+		@include smallTab{
+			max-width: 100%;
+		}
+	}
+}
+
+/* PARAGRAPHS */
+.paragraph--type--gallery{
+	max-width: $contentStop;
+	@include auto;
+	&.slider:not(.first-child){
+		display: none;
+	}
+}
+
+
 
 

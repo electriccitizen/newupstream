@@ -64,6 +64,16 @@ $elementBorder: $formElementBorderWidth solid $formElementBorder;
 	}
 }
 
+@mixin formLabel{
+	font-family: $header;
+	font-size: $formLabelSize;
+	font-weight: $formLabelWeight;
+	color: $black;
+	display: block;
+	margin-bottom: $spaceXs;
+	padding-bottom: 0;
+}
+
 @mixin required{
 	&:after{
 		content: '*';
@@ -71,7 +81,7 @@ $elementBorder: $formElementBorderWidth solid $formElementBorder;
 		position: relative;
 		top: -1px;
 		right: -.5rem;
-		@include xSmaller;
+		font-size: 1.4rem;
 	}
 }
 
@@ -154,14 +164,9 @@ input[type="submit"].button{
 // generic form-item
 .form-item{
 	width: 100%;
-	margin-bottom: $spaceMd;
+	margin-bottom: $formElementSpace;
 	label{
-		font-family: $header;
-		font-size: $formLabel;
-		color: $black;
-		display: block;
-		margin-bottom: $spaceXs;
-		padding-bottom: 0;
+		@include formLabel;
 	}
 }//end form item
 

@@ -1,3 +1,7 @@
+{#
+  STYLEGUIDE ONLY: This template is not brought into to Drupal.
+#}
+
 
 {% if h1 %}
 	<div class="typography-element">
@@ -104,6 +108,32 @@
 					{{ listItem.description }}
 				{% endfor %}
 			</p>
+		</div>
+	</div>
+{% endif %}
+
+{% if wysiwyg %}
+	<div class="typography-element">
+		<div class="element-title">WYSIWYG Text Styles</div>
+		<div class="constrain-text">
+			{% if wysiwyg.link %}
+				<p class="pl-snug">This is a <a href="#">text link.</a></p>
+			{% endif %}
+			{% if wysiwyg.bold %}
+				<p class="pl-snug">Bold text is used to show <strong>strong text</strong> without using a header.</p>
+			{% endif %}
+			{% if wysiwyg.italic %}
+				<p class="pl-snug">Italics are for <em>special emphasis</em> and <em>proper titles.</em></p>
+			{% endif %}
+			{% if wysiwyg.highlight %}
+				<p class="pl-snug">Highlight adds a <mark>mark element</mark> that draws a user's eye and alerts assistive technologys.</p>
+			{% endif %}
+			{% if wysiwyg.small %}
+				<p class="pl-snug">Small text used for items of <small>secondary importance</small> like side comments or notes.</p>
+			{% endif %}
+			{% if wysiwyg.small %}
+				<p class="pl-snug"><div class="warning">Warning text is an in-text alert that styles high-priority statements.</div></p>
+			{% endif %}
 		</div>
 	</div>
 {% endif %}

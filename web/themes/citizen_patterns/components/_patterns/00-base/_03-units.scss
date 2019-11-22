@@ -18,7 +18,7 @@ $onlyPhone: max-width $smallTab - 1px;
 $onlyMobile: max-width $desk - 1px;
 
 
-/* SPACING VARIABLES
+/* SPACING & LAYOUT VARIABLES
 ----------------------------- */
 $spaceXxs: 1rem;
 $spaceXs : 1rem;
@@ -30,10 +30,10 @@ $spaceXl : 6rem;
 $siteMarginMobile: 2rem;
 $siteMarginDesk: 6rem;
 
-/* LAYOUT VARIABLES
--------------------- */
-$elementSpace: 3rem;
+$formElementSpace: $spaceMd;
+$elementSpace: $spaceMd;
 $siteBottomSpace: 8rem;
+
 $sideBar: 240px;
 $sectionGutter: 40px;
 

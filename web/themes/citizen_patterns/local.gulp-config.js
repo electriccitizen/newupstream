@@ -115,7 +115,10 @@
     },
     pa11y: {
       includeNotices: false,
-      includeWarnings: false
+      includeWarnings: false,
+      rules: null,
+      standard: null,
+      actions: null
     }
   };
 })();

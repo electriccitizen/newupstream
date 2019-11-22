@@ -1,6 +1,58 @@
 {#
 	STYLEGUIDE ONLY: This template is not brought into to Drupal.
 #}
+{% import '@base/macros.twig' as styles %}
 
-
-<strong>Need to decide if we are showing form elements in PL and what we are inheriting into Drupal.</strong>
+{% set specialTypes = ['textarea','radio','checkbox','select'] %}
+<form>
+	{% for element in formElements %}
+		{% if elementTitle %}
+			<div class="element-title">{{ element.elementTitle }}</div>
+		{% endif %}
+		{% if not (element.type == 'radio' or element.type == 'checkbox') %}
+			<div class="js-form-item form-item js-form-type-{% if element.type == 'text' %}textfield{% else %}{{ element.type }}{% endif %} {{ styles.formElements }}">
+				{% if element.label %}
+					<label{% if element.required %} class="js-form-required required"{% endif %}>
+						{{- element.label -}}
+					</label>
+				{% endif %}
+				{% if element.type not in specialTypes %}
+					<input class="max-small" type="{{ element.type }}" name="{{ element.type }}" {% if element.placeholder %}placeholder="{{ element.placeholder }}"{% endif %} />
+				{% endif %}
+				{% if element.type == 'textarea' %}
+					<div>
+						<textarea name="{{ element.type }}" {% if element.placeholder %}placeholder="{{ element.placeholder }}"{% endif %} rows="5" cols="60" class="max-text"></textarea>
+					</div>
+				{% endif %}
+				{% if element.type == 'select' %}
+					<select name="{{ element.type }}" {% if element.placeholder %}placeholder="{{ element.placeholder }}"{% endif %} rows="5" cols="60" class="max-text">
+						{% for option in element.options %}
+							<option value="{{ option.value }}">{{ option.name }}</option>
+						{% endfor %}
+					</select>
+				{% endif %}
+				{% if element.description %}
+					<div class="description">{{ element.description }}</div>
+				{% endif %}
+			</div>
+		{% else %}
+			<fieldset class="fieldgroup form-composite js-form-item form-item js-form-wrapper {% if element.type == 'radio' %}radios--wrapper{% else %}checkboxes--wrapper{% endif %}">
+				{% if element.label %}
+					<legend>
+						<span class="fieldset-legend">{{ element.label }}</span>
+					</legend>
+				{% endif %}
+				<div class="fieldset-wrapper">
+					<div class="form-{% if element.type == 'radio' %}radios js-webform-radios{% else %}checkboxes js-webform-checkboxes{% endif %}">
+						{% for option in element.options %}
+							<div class="js-form-item form-item js-form-type-{{ element.type }} {{ styles.formElements }}">
+								<input type="{{ element.type }}" name="{{ element.type }}" value="{{ option.value }}" class="form-{{ element.type }}"/>
+							<label class="option">{{ option.name }}</label>
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+			</fieldset>
+		{% endif %}
+	{% endfor %}
+</form>

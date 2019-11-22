@@ -13,7 +13,7 @@
 	li{
 		display: inline-block;
 		color: $breadCurrent;
-		@include xSmaller;
+		font-size: 1.4rem;
 		a{
 			padding-right: .5rem;
 			@include transAll(.3s);

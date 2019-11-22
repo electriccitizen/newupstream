@@ -1,4 +1,22 @@
-button_url:
-  "#"
-button_content:
-  "Button"
+buttons:
+  1:
+    class:
+      button
+    text:
+      'Button'
+  2:
+    class:
+      button-outline
+    text:
+      'Outline Button'
+formButtons:
+  1:
+    class:
+      button-submit
+    text:
+      'Submit'
+  2:
+    class:
+      button-warning
+    text:
+      'Reset'

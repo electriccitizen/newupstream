@@ -35,7 +35,7 @@ $submitPadding: 0 1.5rem;
 ///mixin - button
 @mixin button{
 	background-color: $buttonBack;
-	border: none;
+	border: 1px solid $buttonBack;
 	color: $buttonText;
 	line-height: 1.15;
 	padding: $buttonPadding;
@@ -51,6 +51,7 @@ $submitPadding: 0 1.5rem;
 	&:hover,&:focus {
 		color: $buttonTextHover;
 		background-color: $buttonBackHover;
+		border-color: $buttonBackHover;
 		@include transAll(.3s);
 		text-decoration: none;
 		outline: 0;
@@ -58,6 +59,7 @@ $submitPadding: 0 1.5rem;
 	&:active{
 		color: $buttonTextActive;
 		background-color: $buttonBackActive;
+		border-color: $buttonBackActive;
 	}
 	.text-with-summary &,.text-long &{
 		padding: 0;
@@ -183,6 +185,11 @@ $submitPadding: 0 1.5rem;
 		border-color: $buttonBackActive;
 		color: $buttonTextActive;
 	}
+}
+
+button{
+	@include button;
+	cursor: pointer;
 }
 
 //button classes

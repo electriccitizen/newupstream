@@ -14,8 +14,21 @@ h6:
 bannerTitle:
   img:
     src: 
-      "http://placeimg.com/1500/900/nature"
+      'http://placeimg.com/1500/900/nature'
     alt: 
-      "Banner Nature Image"
+      'Banner Nature Image'
 paragraph:
   true
+wysiwyg:
+  link:
+    true
+  bold:
+    true
+  italic:
+    true
+  highlight:
+    true
+  small: 
+    true
+  warning:
+    true

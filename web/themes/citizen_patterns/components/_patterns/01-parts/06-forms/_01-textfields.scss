@@ -3,22 +3,22 @@
 ================= */
 
 .js-form-type-textfield {
-	input.form-text{
+	input{
 		@include textInput;
 	}
 }
 .js-form-type-email{
-	input.form-email{
+	input{
 		@include textInput;
 	}
 }
 .js-form-type-password,.form-item-password{
-	input.form-text{
+	input{
 		@include textInput;
 	}
 }
 .js-form-type-number{
-	input.form-number{
+	input{
 		@include textInput;
 		max-width: 150px;
 	}
@@ -36,7 +36,7 @@
 	}
 }
 .js-form-type-textarea{
-	textarea.form-textarea{
+	textarea{
 		@include textInput;
 		line-height: 1.4;
 	}

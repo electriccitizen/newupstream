@@ -2,6 +2,7 @@
 
 /* HIDDEN FROM PL SWATCHES BUT USED ON SITE */
 $white         : #fff;
+$pink          : #f8e8f1;
 
 $transWhite    : rgba(255,255,255,0.7);
 $transBlack    : rgba(35,35,35,0.7);
@@ -31,7 +32,6 @@ $hoverLink         : $midGrey;
 $breadLink         : $link;
 $breadLinkHover    : $hoverLink;
 $breadCurrent      : $darkGrey;
-$highlighter       : $brightYellow;
 $buttonBack        : $link;
 $buttonBackHover   : $grey;
 $buttonBackActive  : darken($grey, 5%);
@@ -135,13 +135,15 @@ $detailsWrapperBack       : $offWhite;
 
 /* TABLES
 ---------------- */
-$tableHeaderBack  : $darkGrey;
-$tableHeaderText  : $white;
-$rowBorder        : $borderRule;
-$evenRowBack      : $siteBack;
-$evenRowText      : $baseText;
-$oddRowBack       : $lightGrey;
-$oddRowText       : $baseText;
+$tableHeaderBack     : $darkGrey;
+$tableHeaderText     : $white;
+$tableRowHeaderBack  : $grey;
+$tableRowHeaderText  : $black;
+$rowBorder           : $borderRule;
+$evenRowBack         : $siteBack;
+$evenRowText         : $baseText;
+$oddRowBack          : $lightGrey;
+$oddRowText          : $baseText;
 
 
 /* SUPERFISH

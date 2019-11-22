@@ -53,8 +53,16 @@
 			}
 		}
 		th{
-			background: $tableHeaderBack;
-			color: $tableHeaderText;
+			background: $tableRowHeaderBack;
+			color: $tableRowHeaderText;
+			text-align: left;
+			padding-left: 3rem;
+			padding-right: 1.5rem;
+		}
+		&:not(:last-child){
+			th{
+				border-bottom: 1px solid $rowBorder;
+			}
 		}
 		//give a bit extra room in the row on mobile
 		@include onlyMobile{
@@ -86,18 +94,21 @@
 //stack table header on mobile
 table{
 	.st-key{
-		width: 52%;
-		max-width: 200px;
+		width: 50%;
 		background: $tableHeaderBack;
 		padding-left: 1rem !important;
 		padding-right: 1rem !important;
 		color: $tableHeaderText !important;
+		@include smallTab{
+			max-width: 200px;
+		}
 	}
 	//stack table td on mobile
 	.st-val{
-		min-width: 48%;
-		@include breakpoint (400px, true){
+		width: 50%;
+		@include smallTab{
 			@include calc(max-width, "100% - 200px");
+			width: 100%;
 		}
 	}
 }
