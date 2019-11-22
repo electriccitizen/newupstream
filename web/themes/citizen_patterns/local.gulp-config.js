@@ -112,6 +112,10 @@
     wpt: {
       // WebPageTest API key https://www.webpagetest.org/getkey.php
       // key:
+    },
+    pa11y: {
+      includeNotices: false,
+      includeWarnings: false
     }
   };
 })();

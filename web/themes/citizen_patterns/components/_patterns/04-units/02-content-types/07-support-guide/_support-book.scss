@@ -2,12 +2,6 @@
    SUPPORT BOOK NODE
 ===================== */
 .node-support-book.node-content{
-	
-	.block-field.block-title{
-		max-width: $textMax;
-		@include auto;
-		text-align: center;
-	}
 
 	.block-field.block-body{
 		max-width: 100%;

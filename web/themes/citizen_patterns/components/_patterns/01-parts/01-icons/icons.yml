@@ -2,30 +2,18 @@
 #The value should match the svg file name
 items:
   1:
-    name: "Drupal"
-    value: "drupal"
-  2:
-    name: "Facebook"
-    value: "facebook"
-  3:
-    name: "Twitter"
-    value: "twitter"
-  4:
-    name: "LinkedIn"
-    value: "linkedin"
-  5:
-    name: "YouTube"
-    value: "youtube"
-  6:
     name: "PDF"
     value: "pdf"
-  7:
+  2:
     name: "Word"
     value: "word"
-  8:
+  3:
     name: "Excel"
     value: "excel"
-  9:
+  4:
     name: "Powerpoint"
     value: "powerpoint"
+  5:
+    name: "Generic"
+    value: "generic"
   

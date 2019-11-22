@@ -20,12 +20,10 @@
 	}
 
 	.block-field.block-title{
-		@include onlySmall{
-			text-align: center;
-		}
 		.has-main-image &{
 			@include tab{
 				margin-left: 370px;
+				text-align: left;
 			}
 		}
 	}

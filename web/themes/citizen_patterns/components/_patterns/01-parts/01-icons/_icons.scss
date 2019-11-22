@@ -1,8 +1,6 @@
 /* ===============
    ICONS
 ================== */
-
-
 //svg icon color
 svg{
 	use{
@@ -21,20 +19,4 @@ a.icon{
 	}
 }
 
-
-/* PATTERN LAB ONLY
------------------ */
-.pl.sprite-icon{
-	display: inline-block;
-	width: 60px;
-	height: 60px;
-	@include plIconSize;
-}
-.pl .icons-demo{
-	@include safeFlex(row,wrap,null,null);
-	& > div{
-		text-align: center;
-		width: 240px;
-	}
-}
 

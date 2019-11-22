@@ -5,20 +5,7 @@
 
 	#section-1,#section-2{
 		.layout__region--content{
-			position: relative;
-		}
-	}
-	.block-field-banner{
-		opacity: 0;
-		@include animation('fadeIn 1.2s 1 forwards');
-		body:not(.path-taxonomy) &{
-			@include edgeToEdge;
-		}
-		.field-banner{
-			position: relative;
-			@include tab{
-				@include overlay;
-			}
+			@include bannerTitle;
 		}
 	}
 
@@ -34,21 +21,6 @@
 	}
 
 	.block-field.block-title{
-		max-width: $textMax;
-		@include auto;
-		text-align: center;
-		@include tab{
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			@include translate(-50%,-50%);
-		}
-		h1{
-			margin-bottom: $spaceSm;
-			@include tab{
-				color: $white;
-			}
-		}
 		.metatext{
 			@include textDate;
 			@include tab{

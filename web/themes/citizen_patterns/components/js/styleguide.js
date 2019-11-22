@@ -62,7 +62,7 @@ $(".gallery-options select").change(function(){
 	if(chosen == 'slider'){
 		$('.paragraph--type--gallery.lightbox').fadeOut(300);
 		$('.paragraph--type--gallery.slider .field-image-multi').slick('unslick');
-		$('.paragraph--type--gallery.slider').fadeIn(300);
+		$('.paragraph--type--gallery.slider').delay(300).fadeIn(300);
 		//need to reinitialize slick to get the correct height calculated
 		setTimeout(function(){
 			$('.paragraph--type--gallery.slider .field-image-multi').slick({
@@ -73,7 +73,7 @@ $(".gallery-options select").change(function(){
 		}, 100);
 	}else{
 		$('.paragraph--type--gallery.slider').fadeOut(300);
-		$('.paragraph--type--gallery.lightbox').fadeIn(300);
+		$('.paragraph--type--gallery.lightbox').delay(300).fadeIn(300);
 	}
 });
 

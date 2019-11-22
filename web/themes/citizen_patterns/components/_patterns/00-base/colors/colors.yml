@@ -13,8 +13,6 @@ items:
     value: '#615f6b'
   - name: $darkGrey
     value: '#37363b'
-  - name: $lightBlack
-    value: '#222222'
   - name: $black
     value: '#000'
   - name: $brightYellow

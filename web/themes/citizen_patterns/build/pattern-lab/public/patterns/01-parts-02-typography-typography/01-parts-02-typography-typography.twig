@@ -1,1 +1,110 @@
 
+{% if h1 %}
+	<div class="typography-element">
+		<div class="element-title">H1</div>
+		<div class="constrain-text">
+			<h1>
+				{% for listItem in listItems.one %}
+					{{ listItem.title }}
+				{% endfor %}
+			</h1>
+		</div>
+	</div>
+{% endif %}
+
+{% if h2 %}
+	<div class="typography-element">
+		<div class="element-title">H2</div>
+		<div class="constrain-text">
+			<h2>
+				{% for listItem in listItems.one %}
+					{{ listItem.title }}
+				{% endfor %}
+			</h2>
+		</div>
+	</div>
+{% endif %}
+
+{% if h3 %}
+	<div class="typography-element">
+		<div class="element-title">H3</div>
+		<div class="constrain-text">
+			<h3>
+				{% for listItem in listItems.one %}
+					{{ listItem.title }}
+				{% endfor %}
+			</h3>
+		</div>
+	</div>
+{% endif %}
+
+{% if h4 %}
+	<div class="typography-element">
+		<div class="element-title">H4</div>
+		<div class="constrain-text">
+			<h4>
+				{% for listItem in listItems.one %}
+					{{ listItem.title }}
+				{% endfor %}
+			</h4>
+		</div>
+	</div>
+{% endif %}
+
+{% if h5 %}
+	<div class="typography-element">
+		<div class="element-title">H5</div>
+		<div class="constrain-text">
+			<h5>
+				{% for listItem in listItems.one %}
+					{{ listItem.title }}
+				{% endfor %}
+			</h5>
+		</div>
+	</div>
+{% endif %}
+
+{% if h6 %}
+	<div class="typography-element">
+		<div class="element-title">H6</div>
+		<div class="constrain-text">
+			<h6>
+				{% for listItem in listItems.one %}
+					{{ listItem.title }}
+				{% endfor %}
+			</h6>
+		</div>
+	</div>
+{% endif %}
+
+{% if bannerTitle %}
+	<div class="typography-element">
+		<div class="element-title">H1 on Image Header</div>
+		<div class="layout__region--content banner-title">
+			<div class="block-field-banner">
+				<img src="{{ bannerTitle.img.src }}" alt="{{ bannerTitle.img.alt }}" />
+			</div>
+			<div class="block-title">
+				<h1>
+					{% for listItem in listItems.one %}
+						{{ listItem.shortTitle }}
+					{% endfor %}
+				</h1>
+			</div>
+		</div>
+	</div>
+{% endif %}
+
+{% if paragraph %}
+	<div class="typography-element">
+		<div class="element-title">Paragraph</div>
+		<div class="constrain-text">
+			<p>
+				{% for listItem in listItems.one %}
+					{{ listItem.description }}
+				{% endfor %}
+			</p>
+		</div>
+	</div>
+{% endif %}
+
