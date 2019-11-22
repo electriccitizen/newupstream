@@ -1,3 +1,11 @@
 {#
 	STYLEGUIDE ONLY: This template is not embedded into Drupal nor is it used in any other Pattern Lab template.
 #}
+
+{% for message in messages %}
+	<div class="drupal-message {{ message.type }}-message">
+		{% autoescape false %}
+			{{ random(message.randomText) }}
+		{% endautoescape %}
+	</div>
+{% endfor %}
