@@ -6,9 +6,6 @@
 ------------ */
 %menuDropdown{
 	background: $sfDropdown;
-	.background &{
-		background: $sfDropdownRev;
-	}
 }
 
 
@@ -18,26 +15,14 @@
 	a{
 		color: $sfChildLink;
 		text-align: left;
-		.background &{
-			color: $sfChildLinkRev;
-		}
 		&:hover,&:focus{
 			color: $sfChildLinkHover;
-			.background &{
-				color: $sfChildLinkRevHover;
-			}
 		}
 	}
 	&.active-trail > a{
 		color: $sfChildActive;
-		.background &{
-			color: $sfChildActiveRev;
-		}
 		&:hover,&:focus{
 			color: $sfChildActiveHover;
-			.background &{
-				color: $sfChildActiveRevHover;
-			}
 		}
 	}
 }//end sf-main li
@@ -46,73 +31,50 @@
 
 /* DESK FISH
 ---------------- */
-.sf-menu.sf-horizontal{
-	.background &{
-		position: relative;
-		&:after{
-			@include fullBack($navBack);
-		}
-	}
-	//override deafult floats
+ul.sf-menu.sf-horizontal{
+	@include safeFlex(row,wrap,end,null);
+	//override defult floats
 	li{
 		float: none;
 	}
-
-	/* ====  sf main links ==== */
-	&.sf-main{
-		@include safeFlex(row,wrap,end,null);
-		.left &{
-			@include safeFlex(row,wrap,start,null);
-			border-top: 1px solid $borderRule;
+	//top level links
+	& > li{
+		&:not(.sfHover){
+			& > ul{
+				display: none !important;
+			}
 		}
-		.center &{
-			@include safeFlex(row,wrap,center,null);
-			border-top: 1px solid $borderRule;
+		&:hover{
+			& > a{
+				background: $sfTopBackHover;
+				color: $sfTopLinkHover;
+			}
 		}
-		.inline &{
-			@include safeFlex(row,wrap,start,null);
-			padding-left: 80px;
+		& > a{
+			color: $sfTopLink;
+			padding: 20px 15px !important;
+			font-size: 2rem;
+			display: block;
+			position: relative;
+			&:hover,&:focus{
+				background: $sfTopBackHover;
+				color: $sfTopLinkHover;
+			}
 		}
-		.background &{
-			border-top: none;
-		}
-		& > li{
-			&:not(.sfHover){
-				& > ul{
-					display: none !important;
-				}
+		&.active-trail{
+			&:hover > a{
+				color: $sfTopActiveHover;
 			}
 			& > a{
-				color: $sfTopLink;
-				padding: 20px 15px !important;
-				font-size: 2rem;
-				display: block;
-				position: relative;
-				.background &{
-					color: $sfTopLinkRev;
-				}
-				&:hover,&:focus{
-					background: $sfTopBackHover;
-					color: $sfTopLinkHover;
-					.background &{
-						background: $sfTopBackHoverRev;
-					}
-				}
-			}
-			&.active-trail > a{
 				color: $sfTopActive;
 				&:hover,&:focus{
 					color: $sfTopActiveHover;
 				}
-				.background &{
-					color: $sfTopActiveRev;
-				}
 			}
 		}
-	}//end main links
+	}
 
-
-	/* ====  sf main dropdown ==== */
+	//top level dropdowns
 	& > li.sf-depth-1{
 
 		//dropdown wrapper
@@ -131,8 +93,13 @@
 
 	}//end main dropdown
 
+	//level 2 links
+	a.sf-depth-2{
+		line-height: 1;
+		padding: 12px 20px;
+	}
 
-	/* ==== TOGGLERS ==== */
+	// sub menu toggles
 	.sf-depth-2 {
 		//global toggles
 		a.menuparent{
@@ -146,7 +113,7 @@
 			}
 		}
 
-		//level 2 togglers only
+		//level 2 toggles only
 		& > a.menuparent{
 			&:after{
 				top: 1px;
@@ -156,20 +123,10 @@
 			}
 		}
 
-	}//end sf-depth 2 (global togglers)
+	}//end menu toggles
 
-
-	/* ====  Level 2 ==== */
-	a.sf-depth-2{
-		line-height: 1;
-		padding: 12px 20px;
-	}
-	 
-
-	/* ====  Level 3 ==== */
-
-	//dropdown wrapper 
-	.sf-depth-1 .sf-depth-2{
+	//level 2 dropdowns
+	.sf-depth-2{
 		ul{
 			@extend %menuDropdown;
 			left: 100%;
@@ -178,8 +135,8 @@
 		}
 	}
 
-	//level 3
-	li.sf-depth-2 li{
+	//level 3 links
+	li.sf-depth-3{
 		font-size: 1.7rem;
 		line-height: 1;
 		& > a{
@@ -193,10 +150,10 @@
 				}
 			}
 		}
-	}//end a.level 3
+	}//end level 2
 
 
-}//end .sf-menu.sf-horizontal.sf-main
+}//sf-horizontal
 
 
 
@@ -206,7 +163,7 @@
 		
 /* ====  sf main dropdown ====*/
 ul.sf-menu.sf-accordion{
-	&.sf-expanded.sf-main{
+	&.sf-expanded{
 		position: absolute;
 		left: 0 !important;
 		top: 100% !important;
@@ -216,7 +173,7 @@ ul.sf-menu.sf-accordion{
 		border-bottom: 8px solid $sfMobileDropBorder;
 	}
 
-	/* ====  global links ====*/
+	// global mobile links
 	a{
 		padding: 20px 30px;
 		line-height: 1.15;
@@ -228,21 +185,20 @@ ul.sf-menu.sf-accordion{
 		& > .sf-accordion-button{
 			width: 60px;
 			height: 60px;
+			padding: 0;
 			text-indent: 9000px;
 			position: absolute;
 			top: 0;
 			right: 0;
 			z-index: 1;
+			background-color: transparent;
+			background-image: url('../components/images/custom/form-elements/caret-down-red.svg');
+			background-repeat: no-repeat;
+			background-size: 20px;
+			background-position: center;
 			//expander toggle
 			&:after{
-				text-indent: 0;
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				margin: 0;
-				@include faSolid("\f105",30px);
-				@include translate(-50%, -50%);
-				background-color: transparent;
+				content: none;
 			}
 		}//end accordion button
 
@@ -261,14 +217,11 @@ ul.sf-menu.sf-accordion{
 		}
 	}//end li
 
-	
-
 	li.sf-expanded > ul{
 		padding: 0 0 10px;
 	}
 
-
-	/* ====  LEVEL 1  ====*/
+	// top level
 	li.sf-depth-1{
 		& > a{
 			color: $sfMobileTop;
@@ -291,8 +244,7 @@ ul.sf-menu.sf-accordion{
 		}
 	}//end level 1
 
-
-	/* ====  LEVEL 2  ====*/
+	//level 2
 	li.sf-depth-2{
 		&:first-of-type.sf-expanded{
 			border-top: 0;
@@ -316,7 +268,7 @@ ul.sf-menu.sf-accordion{
 	}//end level 2
 
 
-	/* ====  LEVEL 3 & Below ====*/
+	//level 3
 	li.sf-depth-3{
 		//font size for level 3 and those below
 		&.active-trail > a{
@@ -339,80 +291,3 @@ ul.sf-menu.sf-accordion{
 
 }//end sf-menu.sf-accordion
 
-
-
-
-
-/* PATTERN LAB ONLY
-------------------- */
-.pl #superfish-main,.pl #superfish-main-accordion{
-	li{
-		list-style: none;
-	}
-	.sf-hidden{
-		display: none;
-	}
-
-}//end pl
-
-.pl .sf-dropdown{
-	margin-bottom: 100px;
-	.sf-main{
-		display: block;
-		li.sf-depth-1{
-			max-width: 200px;
-			background: $white;
-			&:after{
-				background: $white;
-			}
-			a{
-				display: inline-block;
-			}
-		}
-	}
-	.menuparent{
-		position: relative;
-		& > ul{
-			@include listReset;
-			position: absolute;
-			top: 100%;
-			left: 0;
-			min-width: 300px;
-		}
-	}
-}//end sf-dropdown
-
-.pl .sf-mobile{
-	max-width: 500px;
-	padding: 10px 20px 30px;
-	background: $offWhite;
-	a{
-		display: block;
-	}
-	.sf-hidden{
-		display: none;
-	}
-	ul{
-		@include listReset;
-		&.sf-main{
-			position: relative;
-		}
-	}
-	.sf-accordion-button{
-		width: 60px;
-		height: 100%;
-		float: right;
-		text-indent: -9000px;
-		position: relative;
-		&:after{
-			content: '';
-			text-indent: 0;
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			margin: 0;
-			display: block;
-			@include translate(-50%, -50%);
-		}
-	}
-}

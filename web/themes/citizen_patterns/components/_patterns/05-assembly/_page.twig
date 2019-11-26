@@ -47,12 +47,11 @@
 {#
 	DRUPAL: This template is being embedded into multiple Drupal templates. Macros variables can also alter the footer theming/behavior. Avaiable variables: fixed, non-fixed.
 #}
-{% import "@base/macros.twig" as styles %}
 
 <div class="layout-container">
 
 	{% block pageHeader %}
-		<header role="banner" class="nav-{{ styles.mainNavStyle }}">
+		<header role="banner">
 			<a href="#main-navigation" class="visually-hidden focusable">
 				{{ 'Skip to main navigation'|t }}
 			</a>

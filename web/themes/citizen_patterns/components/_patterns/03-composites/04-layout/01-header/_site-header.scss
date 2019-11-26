@@ -11,11 +11,6 @@
 		position: relative;
 		@include safeFlex(row,wrap,null,center);
 	}
-	&.nav-left,&.nav-center{
-		& > div{
-			padding: 20px $siteMarginMobile 0;
-		}
-	}
 }//end layout container
 
 
@@ -26,8 +21,6 @@
 	@include calc(width, "100% - 70px");
 	position: relative;
 	z-index: 10;
-
-	//set width at desktop
 	@include desk{
 		width: 240px;
 	}
@@ -50,14 +43,8 @@
 	position: static;
 	display: inline-block;
 	text-align: right;
-
-	//set width at desktop
 	@include desk{
 		@include calc(width, "100% - 240px");
-		.nav-inline &{
-			@include safeFlexOrder(99);
-			width: 240px;
-		}
 	}
 
 	//search toggler
@@ -68,9 +55,6 @@
 		@include desk{
 			top: 13px;
 			right: 25px;
-			.nav-inline &{
-				top: 42px;
-			}
 		}
 	}
 }//end search block
@@ -91,24 +75,7 @@
 		bottom: 0;
 		width: 100%;
 		padding-left: 280px;
-		.nav-left &,.nav-center &{
-			position: relative;
-			padding-left: 0;
-			margin-top: 20px;
-		}
-		.nav-inline &{
-			position: relative;
-			@include calc(width, "100% - 480px");
-			padding-left: 0;
-			margin-top: -10px;
-		}
 	}//end desk
 	
 }//end main nav
 
-
-/* PATTERN LAB ONLY
-------------------- */
-.pl header .block-superfishmain .sf-hidden{
-	display: none;
-}

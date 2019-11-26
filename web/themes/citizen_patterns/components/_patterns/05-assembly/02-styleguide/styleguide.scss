@@ -27,9 +27,13 @@ $red          : #bf0e0e;
 $lightRed     : #d94040;
 
 $navLinks     : $white;
-$navBack      : $red;
-$navBackHover : $lightRed;
+$navBack      : $blue;
+$navBackHover : $midBlue;
 $adminText    : 'PT Sans', sans-serif;
+
+$subGroupHeader      : $gold;
+$subGroupHeaderBack  : $darkGrey;
+
 
 
 .project-styleguide{
@@ -69,22 +73,24 @@ $adminText    : 'PT Sans', sans-serif;
 	background: $navBack;
 	font-family: $adminText;
 	z-index: 9997;
-	left: -200px;
+	left: -205px;
 	min-width: 200px;
+	box-shadow: 3px 3px 4px rgba(35,35,35,0.3);
 	.style-nav-toggle{
 		width: 60px;
 		height: 60px;
 		position: fixed;
-		z-index: 9998;
+		z-index: 9996;
 		top: 94px;
 		left: 0;
+		box-shadow: 3px 1px 4px rgba(35,35,35,0.3);
 		a{
 			text-align: center;
 			width: 100%;
 			height: 100%;
 			display: block;
 			font-size: 32px;
-			background: $red;
+			background: $navBack;
 			padding-top: 12px;
 			color: $navLinks;
 			&:hover,&:focus{
@@ -236,7 +242,7 @@ $adminText    : 'PT Sans', sans-serif;
 					color: $white;
 					font-family: $adminText;
 					&:after{
-						@include fullBack($darkGrey);
+						@include fullBack($darkBlue);
 					}
 				}
 				h2.group-title{
@@ -252,10 +258,10 @@ $adminText    : 'PT Sans', sans-serif;
 				}
 				h3.sub-group-title{
 					position: relative;
-					color: $white;
+					color: $subGroupHeader;
 					padding: $spaceSm 0;
 					&:after{
-						@include fullBack($midBlue);
+						@include fullBack($subGroupHeaderBack);
 					}	
 				}
 			}//end sg-pattern-body
@@ -297,7 +303,7 @@ $adminText    : 'PT Sans', sans-serif;
 				font-size: 42px;
 				color: $midBlue !important;
 				padding-bottom: $spaceXs;
-				border-bottom: 1px solid $midBlue;
+				border-bottom: 2px solid $midBlue;
 				margin-bottom: $spaceMd;
 			}
 		}//end sg title
@@ -332,6 +338,10 @@ $adminText    : 'PT Sans', sans-serif;
 
 .pl-space{
 	margin-bottom: $spaceMd;
+}
+
+.visually-hidden{
+	@include visuallyHidden;
 }
 
 /* SIZING
@@ -455,6 +465,88 @@ $adminText    : 'PT Sans', sans-serif;
 		}
 	}
 }
+
+/* BREADCRUMBS */
+.breadcrumb{
+	max-width: 100%;
+	padding: 0;
+}
+
+/* SUPERFISH MAIN NAV */
+.block-superfishmain{
+	position: relative;
+	padding-left: 0;
+	min-height: 40px;
+	.sf-accordion-toggle{
+		#superfish-main-toggle{
+			&:before{
+				content: none;
+			}
+		}
+		@include desk{
+			display: none;
+		}
+	}
+	ul{
+		@include listReset;
+		&.sf-main{
+			.sf-hidden{
+				display: none;
+			}
+			a{
+				display: block;
+			}
+			&.sf-horizontal{
+				min-height: 200px;
+				@include safeFlex(row,wrap,start,start);
+				display: flex !important;
+				//hide mobile accordion links
+				.sf-accordion-button{
+					display: none;
+				}
+				//show top level links on hover
+				& > li{
+					&:not(.sfHover){
+						&:hover{
+							& > ul.sf-hidden{
+								display: block !important;
+							}
+						}
+						& > a:focus{
+							& ~ ul.sf-hidden{
+								display: block !important;
+							}
+						}
+					}
+				}
+				li{
+					position: relative;
+					.sf-hidden{
+						position: absolute;
+						top: 100%;
+						left: 0;
+						width: 280px;
+					}
+				}
+			}//end sf-horizontal
+			&.sf-accordion{
+				display: none;
+				width: 100%;
+				z-index: 499;
+				box-shadow: 0 3px 2px 0 rgba(35,35,35,0.2);
+			}
+		}//end sf-main
+	}//end ul
+	#superfish-main-toggle{
+		font-size: 28px;
+		color: $black;
+		#chunks-superfish &{
+			right: auto;
+			left: 0;
+			top: 0;
+		}
+	}//end main toggle
+}//end superfish main
 
 /* PARAGRAPHS */
 .paragraph--type--gallery{

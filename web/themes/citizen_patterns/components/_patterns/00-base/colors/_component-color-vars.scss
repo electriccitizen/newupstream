@@ -148,30 +148,17 @@ $oddRowText          : $baseText;
 
 /* SUPERFISH
 ---------------------- */
-//no background or light background
-$sfTopLink          : $black;
-$sfTopLinkHover     : $black;
-$sfTopBackHover     : $lightGrey;
-$sfTopActive        : $link;
-$sfTopActiveHover   : $link;
-$sfChildLink        : $link;
-$sfChildLinkHover   : $hoverLink;
-$sfChildActive      : $black;
-$sfChildActiveHover : $hoverLink;
-$sfDropdown         : $lightGrey;
-
-//SF dark background
-$navBack               : $darkGrey;
-$sfTopBackHoverRev     : $darkGrey;
-$sfTopLinkRev          : $white;
-$sfTopLinkRevHover     : $white;
-$sfTopActiveRev        : $link;
-$sfTopActiveRevHover   : $link; 
-$sfChildLinkRev        : $offWhite;
-$sfChildLinkRevHover   : $offWhite;
-$sfChildActiveRev      : $white;
-$sfChildActiveRevHover : $white;
-$sfDropdownRev         : $darkGrey;
+//desktop
+$sfTopLink            : $black;
+$sfTopLinkHover       : $black;
+$sfTopBackHover       : $lightGrey;
+$sfTopActive          : $link;
+$sfTopActiveHover     : $link;
+$sfChildLink          : $link;
+$sfChildLinkHover     : $hoverLink;
+$sfChildActive        : $black;
+$sfChildActiveHover   : $hoverLink;
+$sfDropdown           : $lightGrey;
 
 //mobile
 $sfMobileDrop            : $white;
