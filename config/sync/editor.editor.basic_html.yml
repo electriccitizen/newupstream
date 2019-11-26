@@ -26,7 +26,6 @@ settings:
             - JustifyLeft
             - JustifyCenter
             - JustifyRight
-            - Blockquote
         -
           name: Lists
           items:
@@ -72,7 +71,7 @@ settings:
             - Styles
   plugins:
     stylescombo:
-      styles: "span.highlight|Highlight\r\ndiv.warning|Warning\r\nsmall|Small\r\ndiv.button|Button"
+      styles: "mark|Highlight\r\ndiv.warning|Warning\r\nsmall|Small\r\ndiv.button|Button"
     language:
       language_list: un
     linkit:

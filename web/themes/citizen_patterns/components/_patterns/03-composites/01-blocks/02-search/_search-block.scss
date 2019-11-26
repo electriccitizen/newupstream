@@ -46,14 +46,8 @@
 
 
 .search-form-outer{
-
 	//search icon
 	.t-search-wrapper{
-		.box &{
-			@include desk{
-				display: none;
-			}
-		}
 		.search-page-block &{
 			display: none;
 		}
@@ -79,11 +73,6 @@
 		width: 50px;
 		display: none;
 		z-index: 502;
-		.box &{
-			@include desk{
-				display: none;
-			}
-		}
 		.search-page-block &{
 			display: none;
 		}
@@ -118,25 +107,6 @@
 			@include calc(left, "-50vw + 620px");
 			width: 100vw;
 		}
-		.box &{
-			@include desk{
-				display: block !important;
-				left: auto;
-				right: 18px;
-				max-width: 280px;
-				top: 15px;
-			}
-		}
-		.nav-inline .box &{
-			@include desk{
-				top: 28px;
-			}
-		}
-		.nav-right .box &{
-			@include desk{
-				top: 10px;
-			}
-		}
 		.search-page-block &{
 			display: block;
 			position: relative;
@@ -155,12 +125,6 @@
 		background: $searchDropBack;
 		@include desk{
 			padding: 160px $siteMarginMobile;
-		}
-		.box &{
-			@include desk{
-				padding: 0;
-				background: none;
-			}
 		}
 		.search-page-block &{
 			padding: 60px 20px;
@@ -189,7 +153,8 @@
 				padding: 9px 5px;
 				border: none;
 				color: $searchDropText;
-				border-bottom: 1px solid $searchDropInputBorder;
+				border: $formElementBorderWidth solid transparent;
+				border-bottom-color: $searchDropInputBorder;
 				border-radius: 0;
 				@extend %searchBlockPlaceholder;
 				//prevent yellow chrome autofill inset                                                   
@@ -199,29 +164,27 @@
 				@include tab{
 					font-size: 2.2rem;
 				}
-				&:focus{
-					outline: 1px solid $searchDropInputFocus;
-					@extend %searchBlockPlaceholderFocus;
+				&:hover{
+					border-color: $searchDropInputFocus;
+					box-shadow: inset 0 0 0 1px $searchDropInputFocus;
 				}
-				.box &{
-					@include desk{
-						color: $black;
-						border: 1px solid $black;
-						font-size: 1.6rem;
-						@include placeholder;
-						&:focus{
-							@include placeholderFocus;
-							outline: 1px solid $black;
-						}
-					}
+				&:focus{
+					outline: none;
+					border-color: $formElementBorderFocus;
+					box-shadow: inset 0 0 0 1px $formElementBorderFocus;
+					@extend %searchBlockPlaceholderFocus;
 				}
 				.search-page-block &{
 					color: $black;
 					border-bottom-color: $black;
 					@include placeholder;
+					&:hover{
+						border-color: $black;
+						box-shadow: inset 0 0 0 1px $black;
+					}
 					&:focus{
+						border-color: $formElementBorderFocus;
 						@include placeholderFocus;
-						outline: 1px solid $black;
 					}
 				}
 			}//end input
@@ -232,7 +195,7 @@
 			position: relative;
 			@include auto;
 			max-width: 800px;
-			.form-submit{
+			.form-submit.button{
 				position: absolute;
 				top: -46px;
 				right: 5px;
@@ -243,15 +206,20 @@
 				text-indent: -9000px;
 				cursor: pointer;
 				padding: 0;
+				min-width: 0;
+				border: 0;
 				@include tab{
 					top: -48px;
 					right: 10px;
 				}
 				&:focus,&:hover{
+					outline: none;
+					box-shadow: none;
+					border: 0;
 					& + i{
 						color: $searchDropSearchIconHover;
 						.search-page-block &{
-							color: $hoverLink;
+							color: $searchDropSearchIconHover;
 						}
 					}
 				}
@@ -267,14 +235,6 @@
 					font-size: 28px;
 					top: -48px;
 					right: 12px;
-				}
-				.box &{
-					@include desk{
-						color: $black;
-						font-size: 24px;
-						top: -42px;
-						right: 8px;
-					}
 				}
 				.search-page-block &{
 					color: $black;

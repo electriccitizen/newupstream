@@ -61,6 +61,8 @@ section-menu:
   version: 1.0
   js:
     components/_patterns/02-chunks/01-navigation/02-section-menu/section-menu.js: {}
+  dependencies:
+    - core/underscore
 select:
   version: 4.0.3
   css:

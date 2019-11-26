@@ -50,7 +50,7 @@
 	//search toggler
 	.t-search{
 		position: absolute;
-		top: 15px;
+		top: 18px;
 		right: 20px;
 		@include desk{
 			top: 13px;
@@ -66,6 +66,13 @@
 	@include onlyMobile{
 		&.contextual-region{
 			position: static;
+		}
+		#superfish-main-toggle{
+			position: absolute;
+			height: 30px;
+			width: 30px;
+			top: 17px;
+			right: 50px;
 		}
 	}
 	//desktop position

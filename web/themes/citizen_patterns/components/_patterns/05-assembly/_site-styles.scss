@@ -491,6 +491,9 @@ body {
 		.select2-selection--single,.select2-selection--multiple{
 			border-color: $link;
 			font-size: 1.4rem;
+			.select2-selection__arrow,.select2-search--inline:after{
+				background-color: transparent;
+			}
 		}//end select 2 selection single
 	}//end select2 container default
 

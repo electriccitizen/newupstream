@@ -1,4 +1,5 @@
-# Only top level links are allow to isActive
+# Only top level links are allow to have isActive
+
 menuLinks:
   1:
     title:

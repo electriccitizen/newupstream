@@ -86,6 +86,30 @@ function mobileMainMenu() {
   }
 };
 
+/* PAGE SECTION MENU
+------------------- */
+$(document).ready(function(){
+	$('#section-menu-wrapper a.is-active').parentsUntil('#section-menu-wrapper > ul').addClass('active-trail expanded');
+});
+$('.section-menu-toggle').click(function(){
+  if($(window).outerWidth() < 980){
+    if($(this).is('.active-nav')){
+      $(this).removeClass('active-nav').find('i').removeClass('fa-times-circle').addClass('fa-bars').closest('#section-menu-title').next('#section-menu-wrapper').slideUp(500);
+    }else{
+      $(this).addClass('active-nav').find('i').removeClass('fa-bars').addClass('fa-times-circle').closest('#section-menu-title').next('#section-menu-wrapper').slideDown(500);
+    }
+  }
+});
+$('#section-menu-wrapper .expander').click(function(){
+	var controller = $(this).closest('li');
+  if(!$(controller).is('.expanded')){
+		$(controller).siblings().removeClass('expanded').find('> ul').slideUp(300);
+		$(controller).addClass('expanded').find('> ul').slideDown(300);
+	}else{
+		$(controller).removeClass('expanded').find('> ul').slideUp(300);
+	}
+});
+
 /* PARAGRAPHS
 ------------------ */
 

@@ -4,16 +4,19 @@
     <title>Pattern Lab</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" href="../../css/pattern-scaffolding.css?1574463585" media="all" />
-    <link rel="stylesheet" href="../../../../dist/style.css?1574463585" media="all" />
-     <link rel="stylesheet" href="../../../../dist/guide.css?1574463585" media="all" />
-    <link rel="stylesheet" href="../../js/select2/select2.min.css?1574463585" media="all" />
-    <link rel="stylesheet" href="../../js/featherlight/featherlight.css?1574463585" media="all" />
-    <link rel="stylesheet" href="../../js/featherlight/featherlight.gallery.css?1574463585" media="all" />
-    <link rel="stylesheet" href="../../js/slick/slick.css?1574463585" media="all" />
-    <link rel="stylesheet" href="../../js/slick/slick-theme.css?1574463585" media="all" />
+    <link rel="stylesheet" href="../../css/pattern-scaffolding.css?1574802333" media="all" />
+    <link rel="stylesheet" href="../../../../dist/style.css?1574802333" media="all" />
+     <link rel="stylesheet" href="../../../../dist/guide.css?1574802333" media="all" />
+    <link rel="stylesheet" href="../../js/select2/select2.min.css?1574802333" media="all" />
+    <link rel="stylesheet" href="../../js/featherlight/featherlight.css?1574802333" media="all" />
+    <link rel="stylesheet" href="../../js/featherlight/featherlight.gallery.css?1574802333" media="all" />
+    <link rel="stylesheet" href="../../js/slick/slick.css?1574802333" media="all" />
+    <link rel="stylesheet" href="../../js/slick/slick-theme.css?1574802333" media="all" />
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/813efb9b80.js" crossorigin="anonymous"></script>
+    <noscript>
+      <link rel="stylesheet" href="https://kit.fontawesome.com/813efb9b80.css?1574802333" media="all" />
+    </noscript>
     <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
     <!-- never cache patterns -->
 <meta http-equiv="cache-control" content="max-age=0" />
@@ -22,8 +25,8 @@
 <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
 <meta http-equiv="pragma" content="no-cache" />
 
-<link rel="stylesheet" href="../../styleguide/css/styleguide.min.css?1574463585" media="all">
-<link rel="stylesheet" href="../../styleguide/css/prism-typeahead.min.css?1574463585" media="all" />
+<link rel="stylesheet" href="../../styleguide/css/styleguide.min.css?1574802333" media="all">
+<link rel="stylesheet" href="../../styleguide/css/prism-typeahead.min.css?1574802333" media="all" />
     <!-- End Pattern Lab -->
 
   </head>
@@ -131,20 +134,20 @@
   <div class="sg-pattern-extra" id="sg-pattern-extra-chunks-breadcrumbs"></div>
     
   <div class="sg-pattern-example">
-       <nav class="breadcrumb" aria-labelledby="system-breadcrumb">
-      <h2 class="visually-hidden">Breadcrumb</h2>
-      <ol class="breadcrumb-list">
-                     <li>
-                                 <a href="#">Home</a>
-                           </li>
-                     <li>
-                                 <a href="#">2nd Level</a>
-                           </li>
-                     <li>
-                                 3rd Level
-                           </li>
-               </ol>
-   </nav>
+    	<nav class="breadcrumb" aria-labelledby="system-breadcrumb">
+		<h2 class="visually-hidden">Breadcrumb</h2>
+		<ol class="breadcrumb-list">
+							<li>
+											<a href="#">Home</a>
+									</li>
+							<li>
+											<a href="#">2nd Level</a>
+									</li>
+							<li>
+											3rd Level
+									</li>
+					</ol>
+	</nav>
 
   </div>
   
@@ -173,51 +176,72 @@
     
   <div class="sg-pattern-example">
     
-<div class="pl notes">Superfish desktop main level link and dropdown. Theming example only.</div>
-<div class="flex-holder">
-	<div class="flex-half sf-desk">
-	<div class="pl notes">Main Level (with header background color)</div>
-		<div class="pl right">
-												<ul id="#superfish-main" class="sf-menu sf-main sf-horizontal">
-						<li class="sf-depth-1 sf-no-children">
-							<a href="#" class="sf-depth-1">Main Link 1</a>
-						</li>
-						<li class="sf-depth-1 menuparent">
-							<a href="#" class="sf-depth-1 menuparent">Main Link 2</a>
-							<ul class="sf-hidden">
-								<li class="sf-depth-2 sf-no-children">
-									<a href="#" class="sf-depth2">Link 1</a>
-								</li>
-							</ul>
-						</li>
-						<li class="sf-depth-1 sf-no-children active-trail">
-							<a href="#" class="sf-depth-1 is-active">Main Link 3</a>
-						</li>
-					</ul>
-										</div>
-		</div>
-	<div class="flex-half sf-dropdown">
-		<div class="pl notes">Dropdown</div>
-		<ul id="#superfish-main" class="sf-menu sf-main sf-horizontal">
-			<li class="sf-depth-1 menuparent sfHover">
-				<a href="#" class="sf-depth-1 menuparent active-trail">Main Link</a>
-				<ul>
-					<li class="sf-depth-2 sf-no-children">
-						<a class="sf-depth-2">Drop Link 1</a>
-					</li>
-					<li class="sf-depth-2 sf-no-children active-trail">
-						<a class="sf-depth-2 is-active">Drop Link 2</a>
-					</li>
-				</ul>
-			</li>
-		</ul>
-	</div>
-</div>
+		 
+	<div id="block-citizen-patterns-mainnavigation" class="block block-superfishmain">
+		<a id="main-navigation"></a>
+												<div class="sf-accordion-toggle sf-style-none">
+					<a id="superfish-main-toggle" href="#" aria-label="expand">
+						<i class="fas fa-bars"></i>
+					</a>
+				</div>	
+							<ul id="superfish-main" class="menu sf-menu sf-main sf-horizontal">
+					<li class="sf-depth-1 menuparent">
+									<a href="#" class="sf-accordion-button">Expand</a>
+								<a href="#" class="sf-depth-1 menuparent">What We Offer</a>
+									<ul class="sf-hidden">
+													<li class="sf-depth-2">
+								<a href="#" class="sf-depth-2">Services</a>
+							</li>
+													<li class="sf-depth-2">
+								<a href="#" class="sf-depth-2">Support</a>
+							</li>
+											</ul>
+							</li>
+					<li class="sf-depth-1 menuparent">
+									<a href="#" class="sf-accordion-button">Expand</a>
+								<a href="#" class="sf-depth-1 menuparent">Resources</a>
+									<ul class="sf-hidden">
+													<li class="sf-depth-2">
+								<a href="#" class="sf-depth-2">Journals</a>
+							</li>
+													<li class="sf-depth-2">
+								<a href="#" class="sf-depth-2">Books</a>
+							</li>
+													<li class="sf-depth-2">
+								<a href="#" class="sf-depth-2">Videos</a>
+							</li>
+											</ul>
+							</li>
+					<li class="sf-depth-1 menuparent">
+									<a href="#" class="sf-accordion-button">Expand</a>
+								<a href="#" class="sf-depth-1 menuparent">About</a>
+									<ul class="sf-hidden">
+													<li class="sf-depth-2">
+								<a href="#" class="sf-depth-2">Mission</a>
+							</li>
+													<li class="sf-depth-2">
+								<a href="#" class="sf-depth-2">History</a>
+							</li>
+													<li class="sf-depth-2">
+								<a href="#" class="sf-depth-2">Meet the Team</a>
+							</li>
+											</ul>
+							</li>
+					<li class="sf-depth-1 sf-no-children active-trail">
+								<a href="#" class="sf-depth-1 is-active">Get Involved</a>
+							</li>
+					<li class="sf-depth-1 sf-no-children">
+								<a href="#" class="sf-depth-1">Contact</a>
+							</li>
+			</ul>
+			</div>
+			
+
 
   </div>
   
   <script type="text/json" id="sg-pattern-data-chunks-superfish" class="sg-pattern-data">
-    {"lineage":[],"lineageR":[{"lineagePattern":"composites-superfish-block","lineagePath":"..\/..\/patterns\/03-composites-01-blocks-03-superfish-_superfish-block\/03-composites-01-blocks-03-superfish-_superfish-block.html"}],"patternBreadcrumb":{"patternType":"chunks","patternSubtype":"navigation"},"patternDesc":"","patternExtension":"twig","patternName":"Main Menu","patternPartial":"chunks-superfish","patternState":""}
+    {"lineage":[{"lineagePattern":"composites-superfish-block","lineagePath":"..\/..\/patterns\/02-chunks-01-navigation-01-superfish-superfish\/02-chunks-01-navigation-01-superfish-superfish.html"}],"lineageR":[],"patternBreadcrumb":{"patternType":"chunks","patternSubtype":"navigation"},"patternDesc":"","patternExtension":"twig","patternName":"Main Menu","patternPartial":"chunks-superfish","patternState":""}
   </script>
 </div><!--end .sg-pattern-->                        <div id="chunks-section-menu" class="sg-pattern">
   <div class="sg-pattern-head">
@@ -240,11 +264,52 @@
   <div class="sg-pattern-extra" id="sg-pattern-extra-chunks-section-menu"></div>
     
   <div class="sg-pattern-example">
+     
+<nav aria-label="section-menu" id="block-section-menu" class="block--system-menu section-menu">
     
+  <h2 id="section-menu-title" class="block-title"><a href="#" class="section-menu-toggle" aria-label="Mobile Section Menu Toggle"><i class="fa fa-bars" aria-hidden="true"></i></a>In This Section</h2>
+  
+
+  <div id="section-menu-wrapper">
+  		<ul>
+					<li class="menu-item item-level-1">
+								<a href="#">Journals</a>
+							</li>
+					<li class="menu-item item-level-1 menu-item--expanded parent">
+									<a href="#" class="expander"></a>
+								<a href="#">Books</a>
+									<ul>
+													<li class="menu-item item-level-2">
+								<a href="#">Coloring</a>
+							</li>
+													<li class="menu-item item-level-2">
+								<a href="#">Diaries</a>
+							</li>
+													<li class="menu-item item-level-2">
+								<a href="#">Pop-Up</a>
+							</li>
+													<li class="menu-item item-level-2">
+								<a href="#">Coffee Table</a>
+							</li>
+											</ul>
+							</li>
+					<li class="menu-item item-level-1">
+								<a href="#" class="is-active">Videos</a>
+							</li>
+					<li class="menu-item item-level-1">
+								<a href="#">Phone a Friend</a>
+							</li>
+			</ul>
+  </div>
+
+</nav>
+			
+
+
   </div>
   
   <script type="text/json" id="sg-pattern-data-chunks-section-menu" class="sg-pattern-data">
-    {"lineage":[],"lineageR":[],"patternBreadcrumb":{"patternType":"chunks","patternSubtype":"navigation"},"patternDesc":"","patternExtension":"twig","patternName":"section menu","patternPartial":"chunks-section-menu","patternState":""}
+    {"lineage":[{"lineagePattern":"composites-section-menu-block","lineagePath":"..\/..\/patterns\/02-chunks-01-navigation-02-section-menu-section-menu\/02-chunks-01-navigation-02-section-menu-section-menu.html"}],"lineageR":[],"patternBreadcrumb":{"patternType":"chunks","patternSubtype":"navigation"},"patternDesc":"","patternExtension":"twig","patternName":"section menu","patternPartial":"chunks-section-menu","patternState":""}
   </script>
 </div><!--end .sg-pattern-->                        <div id="chunks-widget-anchors" class="sg-pattern">
   <div class="sg-pattern-head">
@@ -311,10 +376,10 @@
   }
 </script>
 
-<script id="pl-js-polyfill-insert-1574463585">
+<script id="pl-js-polyfill-insert-1574802333">
   (function() {
     if (self != top) {
-      var cb = '1574463585';
+      var cb = '1574802333';
       var js = [];
       if (typeof document !== 'undefined' && !('classList' in document.documentElement)) {
         js.push('styleguide/bower_components/classList.min.js');
@@ -324,10 +389,10 @@
   })();
 </script>
 
-<script id="pl-js-insert-1574463585">
+<script id="pl-js-insert-1574802333">
   (function() {
     if (self != top) {
-      var cb = '1574463585';
+      var cb = '1574802333';
       var js = [ { 'src': 'styleguide/bower_components/jwerty.min.js', 'dep': [ 'styleguide/js/patternlab-pattern.min.js' ] } ];
       scriptLoader.run(js,cb,'pl-js-insert');
     }

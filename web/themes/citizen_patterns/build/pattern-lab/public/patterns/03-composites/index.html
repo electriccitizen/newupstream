@@ -4,16 +4,19 @@
     <title>Pattern Lab</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" href="../../css/pattern-scaffolding.css?1574463585" media="all" />
-    <link rel="stylesheet" href="../../../../dist/style.css?1574463585" media="all" />
-     <link rel="stylesheet" href="../../../../dist/guide.css?1574463585" media="all" />
-    <link rel="stylesheet" href="../../js/select2/select2.min.css?1574463585" media="all" />
-    <link rel="stylesheet" href="../../js/featherlight/featherlight.css?1574463585" media="all" />
-    <link rel="stylesheet" href="../../js/featherlight/featherlight.gallery.css?1574463585" media="all" />
-    <link rel="stylesheet" href="../../js/slick/slick.css?1574463585" media="all" />
-    <link rel="stylesheet" href="../../js/slick/slick-theme.css?1574463585" media="all" />
+    <link rel="stylesheet" href="../../css/pattern-scaffolding.css?1574802333" media="all" />
+    <link rel="stylesheet" href="../../../../dist/style.css?1574802333" media="all" />
+     <link rel="stylesheet" href="../../../../dist/guide.css?1574802333" media="all" />
+    <link rel="stylesheet" href="../../js/select2/select2.min.css?1574802333" media="all" />
+    <link rel="stylesheet" href="../../js/featherlight/featherlight.css?1574802333" media="all" />
+    <link rel="stylesheet" href="../../js/featherlight/featherlight.gallery.css?1574802333" media="all" />
+    <link rel="stylesheet" href="../../js/slick/slick.css?1574802333" media="all" />
+    <link rel="stylesheet" href="../../js/slick/slick-theme.css?1574802333" media="all" />
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/813efb9b80.js" crossorigin="anonymous"></script>
+    <noscript>
+      <link rel="stylesheet" href="https://kit.fontawesome.com/813efb9b80.css?1574802333" media="all" />
+    </noscript>
     <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
     <!-- never cache patterns -->
 <meta http-equiv="cache-control" content="max-age=0" />
@@ -22,8 +25,8 @@
 <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
 <meta http-equiv="pragma" content="no-cache" />
 
-<link rel="stylesheet" href="../../styleguide/css/styleguide.min.css?1574463585" media="all">
-<link rel="stylesheet" href="../../styleguide/css/prism-typeahead.min.css?1574463585" media="all" />
+<link rel="stylesheet" href="../../styleguide/css/styleguide.min.css?1574802333" media="all">
+<link rel="stylesheet" href="../../styleguide/css/prism-typeahead.min.css?1574802333" media="all" />
     <!-- End Pattern Lab -->
 
   </head>
@@ -165,10 +168,9 @@
     
   <div class="sg-pattern-example">
     
-
 	This block replaces the Drupal search block and is embedded into Drupal. Form styles are set in macros.twig. Available styles: toggle, box.
 
-	<div data-drupal-selector="search-block-form" id="block-search-form" class="block block-search-form-block toggle">
+	<div data-drupal-selector="search-block-form" id="block-search-form" class="block block-search-form-block">
 
 			<div>
 	
@@ -761,11 +763,10 @@ STYLEGUIDE ONLY: This template is not used in Drupal.
     
   <div class="sg-pattern-example">
     
-
 STYLEGUIDE ONLY: This template is not embedded into Drupal, but header blocks are embedded from chunks/blocks both here and in Drupal. Changing a variable at the blocks level changes both. See the blocks twig files for available variables for search and superfish.
 <div class="layout-container pl-spacer">
 
-<header role="banner" class="nav-right">
+<header role="banner">
   <div>
 
 		
@@ -776,10 +777,9 @@ STYLEGUIDE ONLY: This template is not embedded into Drupal, but header blocks ar
 			</a>
 </div>		 
 					
-
 	
 
-	<div data-drupal-selector="search-block-form" id="block-search-form" class="block block-search-form-block toggle">
+	<div data-drupal-selector="search-block-form" id="block-search-form" class="block block-search-form-block">
 
 			<div>
 	
@@ -808,31 +808,19 @@ STYLEGUIDE ONLY: This template is not embedded into Drupal, but header blocks ar
 	</div>
 				 
 		
-					<div id="block-citizen-patterns-mainnavigation" class="contextual-region block block-superfishmain right">
+		 
+	<div id="block-citizen-patterns-mainnavigation" class="block block-superfishmain">
+		<a id="main-navigation"></a>
 												<div class="sf-accordion-toggle sf-style-none">
-						<a id="superfish-main-toggle" href="#">
-							<span>Main Navigation</span>
-						</a>
-					</div>	
-													<ul id="#superfish-main" class="sf-menu sf-main sf-horizontal">
-						<li class="sf-depth-1 sf-no-children">
-							<a href="#" class="sf-depth-1">Main Link 1</a>
-						</li>
-						<li class="sf-depth-1 menuparent">
-							<a href="#" class="sf-depth-1 menuparent">Main Link 2</a>
-							<ul class="sf-hidden">
-								<li class="sf-depth-2 sf-no-children">
-									<a href="#" class="sf-depth2">Link 1</a>
-								</li>
-							</ul>
-						</li>
-						<li class="sf-depth-1 sf-no-children active-trail">
-							<a href="#" class="sf-depth-1 is-active">Main Link 3</a>
-						</li>
-					</ul>
-				
-					</div>
-			 
+					<a id="superfish-main-toggle" href="#" aria-label="expand">
+						<i class="fas fa-bars"></i>
+					</a>
+				</div>	
+											
+						</div>
+			
+
+		 
 	</div>
 </header>
 
@@ -1030,10 +1018,10 @@ STYLEGUIDE ONLY: This template is not embedded into Drupal, but the blocks will 
   }
 </script>
 
-<script id="pl-js-polyfill-insert-1574463585">
+<script id="pl-js-polyfill-insert-1574802333">
   (function() {
     if (self != top) {
-      var cb = '1574463585';
+      var cb = '1574802333';
       var js = [];
       if (typeof document !== 'undefined' && !('classList' in document.documentElement)) {
         js.push('styleguide/bower_components/classList.min.js');
@@ -1043,10 +1031,10 @@ STYLEGUIDE ONLY: This template is not embedded into Drupal, but the blocks will 
   })();
 </script>
 
-<script id="pl-js-insert-1574463585">
+<script id="pl-js-insert-1574802333">
   (function() {
     if (self != top) {
-      var cb = '1574463585';
+      var cb = '1574802333';
       var js = [ { 'src': 'styleguide/bower_components/jwerty.min.js', 'dep': [ 'styleguide/js/patternlab-pattern.min.js' ] } ];
       scriptLoader.run(js,cb,'pl-js-insert');
     }

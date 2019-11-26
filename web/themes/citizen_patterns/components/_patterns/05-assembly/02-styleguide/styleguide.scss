@@ -548,6 +548,13 @@ $subGroupHeaderBack  : $darkGrey;
 	}//end main toggle
 }//end superfish main
 
+/* SECTION MENU */
+#block-section-menu{
+	@include desk{
+		max-width: $sideBar;
+	}
+}
+
 /* PARAGRAPHS */
 .paragraph--type--gallery{
 	max-width: $contentStop;

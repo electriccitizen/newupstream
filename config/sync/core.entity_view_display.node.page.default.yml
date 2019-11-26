@@ -95,7 +95,7 @@ third_party_settings:
               parent: 'main:'
               label_type: root
               label_link: 1
-              suggestion: page_menu
+              suggestion: section_menu
               context_mapping: {  }
             additional: {  }
             weight: 0
@@ -116,8 +116,8 @@ third_party_settings:
                 entity: layout_builder.entity
             additional: {  }
             weight: 0
-          4220d5f8-189d-4709-a2bd-877a364e8688:
-            uuid: 4220d5f8-189d-4709-a2bd-877a364e8688
+          4af4147d-85ac-4ef5-b37d-9e1f8e2e9872:
+            uuid: 4af4147d-85ac-4ef5-b37d-9e1f8e2e9872
             region: content
             configuration:
               id: 'field_block:node:page:field_paragraphs'

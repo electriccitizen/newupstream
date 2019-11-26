@@ -75,7 +75,7 @@ third_party_settings:
               parent: 'support-book:'
               label_type: block
               label_link: 0
-              suggestion: page_menu
+              suggestion: section_menu
               context_mapping: {  }
             additional: {  }
             weight: 0
