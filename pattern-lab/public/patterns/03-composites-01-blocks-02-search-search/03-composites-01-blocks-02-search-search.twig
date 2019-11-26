@@ -2,14 +2,12 @@
  Drupal: This file is embedded in the site-header.twig pattern lab file and in the search-block Drupal block.
 #}
 
-{% import "@base/macros.twig" as styles %}
-
 {% block instructions %}
 	{{ search_instructions }}
 {% endblock %}
 
 {% block searchBlockStart %}
-	<div data-drupal-selector="search-block-form" id="block-search-form" class="block block-search-form-block {{ styles.searchBox }}">
+	<div data-drupal-selector="search-block-form" id="block-search-form" class="block block-search-form-block">
 {% endblock %}
 
 	{% block drupalWrapperStart %}
