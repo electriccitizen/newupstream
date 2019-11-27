@@ -18,13 +18,18 @@
 			@include edgeToEdge;
 		}	 
 		a.section-menu-toggle{
-			margin-right: 2rem;
 			color: $menuBlockTitle;
+			i{
+				margin-right: 2rem;
+			}
 			&:hover,&:focus{
 				color: $menuBlockTitleHover;
 			}
 			@include desk{
-				display: none;
+				pointer-events: none;
+				i{
+					display: none;
+				}
 			}
 		}
 	}

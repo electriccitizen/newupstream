@@ -48,6 +48,7 @@ Drupal.behaviors.sectionMenu = {
 function mobileSectionnav() {
   var wwidth = $(window).outerWidth();
   if (wwidth < 980) {
+  	$('.section-menu-toggle').attr('href','#');
     //add aria roles to menu title and wrapper if not already set by click above 
     if(!$('.section-menu-toggle').attr('aria-controls')){
       $('.section-menu-toggle').attr({
@@ -58,7 +59,7 @@ function mobileSectionnav() {
     } 
   }else{
     //strip all aria roles & prevent click
-    $('.section-menu-toggle').removeAttr('aria-controls aria-expanded role');
+    $('.section-menu-toggle').removeAttr('aria-controls aria-expanded role href');
     $('#section-menu-wrapper').removeAttr('aria-hidden');
   }
 };

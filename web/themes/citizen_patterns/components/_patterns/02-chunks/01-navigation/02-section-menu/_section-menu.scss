@@ -18,7 +18,7 @@
 	}
 	& > ul:not(.contextual-links){
 		@include listReset;
-		max-width: 400px;
+		//max-width: 300px;
 		@include auto;
 
 		//child menus
@@ -71,6 +71,7 @@
 				}//end when expanded
 			}//end parent
 			li{
+				padding: 4px 0;
 				a{
 					color: $menuChild;
 					&:hover,&:focus{

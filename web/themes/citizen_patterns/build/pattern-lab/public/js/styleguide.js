@@ -116,21 +116,14 @@ $('#section-menu-wrapper .expander').click(function(){
 //toggle between galleries
 $(".gallery-options select").change(function(){
 	var chosen = $(this).find('option:selected').val();
+	//slick needs to be destory each time teh gallery is changed then reinitialized to calculate the height properly
+	//$('.paragraph--type--gallery.slider .field-image-multi').slick('unslick').children().removeClass('gal-image slider-image').removeAttr('tabindex');
 	if(chosen == 'slider'){
 		$('.paragraph--type--gallery.lightbox').fadeOut(300);
-		$('.paragraph--type--gallery.slider .field-image-multi').slick('unslick');
-		$('.paragraph--type--gallery.slider').delay(300).fadeIn(300);
-		//need to reinitialize slick to get the correct height calculated
-		setTimeout(function(){
-			$('.paragraph--type--gallery.slider .field-image-multi').slick({
-				adaptiveHeight: true,
-				autoplay: true,
-				autoplaySpeed: 5000
-			});
-		}, 100);
+		$('.paragraph--type--gallery.slider').delay(300).removeClass('in-active');
 	}else{
-		$('.paragraph--type--gallery.slider').fadeOut(300);
-		$('.paragraph--type--gallery.lightbox').delay(300).fadeIn(300);
+		$('.paragraph--type--gallery.lightbox').fadeIn(300);
+		$('.paragraph--type--gallery.slider').delay(300).addClass('in-active');
 	}
 });
 
