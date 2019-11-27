@@ -110,14 +110,25 @@ $('#section-menu-wrapper .expander').click(function(){
 	}
 });
 
+/* ANCHOR NAVIGATION
+------------------- */
+$('.toc-toggle').click(function(){
+	console.log('anchors');
+	var controller = $(this).closest('#toc-title');
+  if(!$(controller).is('.active-nav')){
+		$(controller).addClass('active-nav').next().slideDown(300);
+	}else{
+		$(controller).removeClass('active-nav').next().slideUp(300);
+	}
+});
+
+
 /* PARAGRAPHS
 ------------------ */
 
 //toggle between galleries
 $(".gallery-options select").change(function(){
 	var chosen = $(this).find('option:selected').val();
-	//slick needs to be destory each time teh gallery is changed then reinitialized to calculate the height properly
-	//$('.paragraph--type--gallery.slider .field-image-multi').slick('unslick').children().removeClass('gal-image slider-image').removeAttr('tabindex');
 	if(chosen == 'slider'){
 		$('.paragraph--type--gallery.lightbox').fadeOut(300);
 		$('.paragraph--type--gallery.slider').delay(300).removeClass('in-active');
