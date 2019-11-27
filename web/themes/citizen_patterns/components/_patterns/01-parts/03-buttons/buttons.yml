@@ -17,6 +17,11 @@ formButtons:
       'Submit'
   2:
     class:
-      button-warning
+      button-caution
+    text:
+      'Cancel'
+  3:
+    class:
+      button-danger-robinson
     text:
       'Reset'

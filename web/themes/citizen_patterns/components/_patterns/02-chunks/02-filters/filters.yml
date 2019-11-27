@@ -1,0 +1,39 @@
+# Only top level links that are not parents are should have isActive. Like in Drupal, the top level links in this section should be the children of one of the main nav links in superfish.yml. 
+
+filters:
+  1:
+    label:
+      'Keywords'
+    type:
+      text
+    placeholder:
+      'Search this page'
+  2:
+    label:
+      'Categories'
+    type:
+      select
+    options:
+      - name: '- Any -'
+        value: All
+      - name: 'Dairy'
+        value: dairy
+      - name: 'Fruits'
+        value: fruits
+      - name: 'Grains'
+        value: grains
+      - name: 'Protein'
+        value: protein
+      - name: 'Vegetables'
+        value: vegetables
+buttons:
+  1:
+    label:
+      'Apply'
+    type:
+      submit
+  2:
+    label:
+      'Reset'
+    type:
+      reset

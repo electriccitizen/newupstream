@@ -35,7 +35,6 @@ $subGroupHeader      : $gold;
 $subGroupHeaderBack  : $darkGrey;
 
 
-
 .project-styleguide{
 	position: relative;
 	&:before{
@@ -559,6 +558,23 @@ $subGroupHeaderBack  : $darkGrey;
 #chunks-widget-anchors{
 	overflow-x: hidden;
 }
+
+/* FILTERS */
+.views-exposed-form{
+	.form-item{
+		.max-small{
+			max-width: 100%;
+		}
+		@include smallTab{
+			width: 100%;
+			max-width: 100%;
+		}
+		@include breakpoint(620px){
+			width: 50%;
+			max-width: 300px;
+		}
+	}
+}//end views exposed form
 
 /* PARAGRAPHS */
 .paragraph--type--gallery{

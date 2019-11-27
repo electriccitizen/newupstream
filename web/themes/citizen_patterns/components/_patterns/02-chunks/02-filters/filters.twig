@@ -1,4 +1,23 @@
 {#
 	STYLEGUIDE ONLY: This template is not brought into to Drupal.
 #}
-<strong>Need to decide if we are showing for views exposed forms in PL and what we are inheriting into Drupal.</strong>
+<form class="views-exposed-form">
+	{% for filterItem in filters %}
+		{% include '@parts/06-forms/_form-element.twig'
+			with{
+				type: filterItem.type,
+				label: filterItem.label,
+				options: filterItem.options,
+				placeholder: filterItem.placeholder,
+				description: filterItem.description
+			}
+		%}
+	{% endfor %}
+	{% if buttons %}
+		<div id="#edit-actions" class="form-actions js-form-wrapper form-wrapper">
+			{% for button in buttons %}
+				<input value="{{ button.label }}" class="button js-form-submit form-submit" type="submit" id="edit-{{ button.type }}" />
+			{% endfor %}
+		</div>
+	{% endif %}
+</form>
