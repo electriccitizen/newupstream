@@ -35,3 +35,12 @@
 		}
 	}
 }//end inline image row
+
+
+/* GLOBAL VIEWS SETTINGS */
+.view-empty{
+	margin-bottom: $spaceLg;
+	max-width: $textMax;
+	@include auto;
+}
+

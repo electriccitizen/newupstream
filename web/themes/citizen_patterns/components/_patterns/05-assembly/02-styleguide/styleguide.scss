@@ -576,6 +576,30 @@ $subGroupHeaderBack  : $darkGrey;
 	}
 }//end views exposed form
 
+/* PAGER */
+.smart-pager-intro{
+	width: 100%;
+	@include safeFlex(row,wrap,justify,start);
+	.pager-instructions{
+		@include breakpoint(620px){
+			@include calc(width,"100% - 190px");
+			padding-right: 20px;
+			max-width: $textMax;
+		}
+	}
+	.form-item{
+		max-width: 190px;
+	}
+}
+.per-page{
+	display: none;
+}
+.pager__number{
+	&[data-hide="true"]{
+		display: none !important;
+	}
+}
+
 /* PARAGRAPHS */
 .paragraph--type--gallery{
 	max-width: $contentStop;

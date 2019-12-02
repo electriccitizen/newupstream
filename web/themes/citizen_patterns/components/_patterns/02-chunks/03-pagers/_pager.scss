@@ -70,16 +70,7 @@ $pagerLine: 2.4rem;
 	border-top: 1px solid $borderRule;
 	padding-top: $spaceSm;
 	@include safeFlex(row,wrap,center,center);
-	&.results-pager{
-		@include onlySmall{
-			.pager__item--previous,.pager__item--next{
-				display: none;
-			}
-		}
-		@include tab{
-			@include safeFlex(row,nowrap,justify,center);
-		}
-	}
+
 	.pager__item{
 		a{
 			@include pagerItemStyle;
@@ -94,13 +85,27 @@ $pagerLine: 2.4rem;
 				}
 			}
 		}
-		&.pager__item--previous{
-			padding-right: 2rem;
+		@include onlySmall{
+			&.pager__item--first{
+				display: none;
+			}
+			&.pager__item--last{
+				display: none;
+			}
+			&.pager__item--ellipsis{
+				display: none;
+			}
 		}
-		&.pager__item--next{
-			padding-left: 2rem;
+		@include tab{
+			&.pager__item--previous{
+				padding-right: 2rem;
+			}
+			&.pager__item--next{
+				padding-left: 2rem;
+			}
 		}
 	}//end page number items
+
 	.disabled{
 		a{
 			color: $midGrey;
@@ -108,10 +113,47 @@ $pagerLine: 2.4rem;
 		}
 	}
 
-	.pager__number,.pager__current{
-		display: none;
-	}
+	//hide all numbers by default for smart pager
+	.pager-smart{
+		.pager__number,.pager__current{
+			display: none;
+		}
+		.results-pager{
+			@include tab{
+				@include safeFlex(row,nowrap,justify,center);
+			}
+		}
+		.pager__current{
+			span{
+				display: inline;
+			}
+		}
+		.pager__item{
+			&.pager__item--previous{
+				padding-right: 2rem;
+			}
+			&.pager__item--next{
+				padding-left: 2rem;
+			}
+		}
+	}//end smart pager
 
+	//smart pager with more than 7 pages
+	&.results-pager{
+		@include onlyPhone{
+			.pager__number{
+				margin: 0 .25rem !important;
+			}
+			.pager__item{
+				&.pager__item--previous{
+					padding-right: 0;
+				}
+				&.pager__item--next{
+					padding-left: 0;
+				}
+			}
+		}
+	}
 }//end full .pager
 
 
