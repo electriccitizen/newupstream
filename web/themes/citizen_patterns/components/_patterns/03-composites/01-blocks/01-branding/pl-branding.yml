@@ -1,0 +1,11 @@
+
+logo:
+  '/pattern-lab/public/images/custom/logo.svg'
+path:
+  '#'
+projectName:
+  'Citizen Patterns'
+attributes:
+  true
+classes:
+  'block-system-branding-block'

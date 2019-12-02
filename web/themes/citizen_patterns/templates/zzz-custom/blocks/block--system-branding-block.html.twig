@@ -14,17 +14,15 @@
  */
 #}
 
-{% extends "block.html.twig" %}
+{% extends 'block.html.twig' %}
 
 {% block blockContent %}
-	<a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">
-  		{% if site_logo %}
-      		<img class="logo" src="{{ site_logo }}" alt="{{ 'Home'|t }}" />
-    	{% endif %}
-
-    	{% if site_name %}
-    		<span class="site-name">{{ site_name }}</span>
-    	{% endif %}
-    </a>
-    <span class="tagline">{{ site_slogan }}</span>
+	{% include '@composites/01-blocks/01-branding/_branding.twig' 
+		with{
+			logo: site_logo,
+			path: path('<front>'),
+			projectName: site_name,
+			tagline: site_slogan
+		}
+	%}
 {% endblock %}
