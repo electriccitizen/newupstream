@@ -158,6 +158,26 @@ $('#pager-numbers').change(function(){
 	}
 });
 
+/* SEARCH
+------------------- */
+$('.t-search').click(function(){
+	$('#search-form-wrapper').slideDown(300);
+	$('.t-search-close').delay(300).fadeIn(300);
+});
+$('.t-search-close').click(function(){
+	$('.t-search-close').fadeOut(300);
+	$('#search-form-wrapper').slideUp(300);
+});
+
+/* NEWSLETTER
+------------------- */
+$('.block-newsletter .modal-trigger').click(function(){
+	$('#newsletter-modal').show(0).find('.modal-inner').fadeIn(400);
+});
+$('.block-newsletter .modal-close').click(function(){
+	$('#newsletter-modal').find('.modal-inner').fadeOut(400).end().hide(0);
+});
+
 
 /* PARAGRAPHS
 ------------------ */
