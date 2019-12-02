@@ -12,10 +12,21 @@
 {#######  FORM VARIABLES  #######}
 <div class="macro-tile">
 <p><strong>Form Elements</strong></br>
+	{# custom-options applies custom form element styling to checkboxes and radios #}
 	VARIABLES= default, custom-options</br>
 </p>
 </div>
 {% macro formElements() %}custom-options{% endmacro %}
+
+{#######  PAGER SETTINGS  #######}
+
+<div class="macro-tile">
+<p><strong>Pagers</strong></br>
+	{# smart will change the pager settings depending on the number of results -- see more instructions in the PL pager.yml file. NOTE: Currently smart pagers cannot be deployed on a pager-by-pager basis (except by restructuring individual drupal pager templates per view), but that may be something to explore in the future. #}
+	VARIABLES= default, smart</br>
+</p>
+</div>
+{% macro pagerSettings() %}smart{% endmacro %}
 
 
 
