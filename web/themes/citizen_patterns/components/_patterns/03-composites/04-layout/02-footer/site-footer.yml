@@ -7,6 +7,7 @@ about: |
 copyright:
   "Electric Citizen LLC, All Rights Reserved."
 
+# if changed, these values should also be updated in the pl-newsletter.yml file
 newsletter:
   plLabel:
     "Stay in Touch in Pattern lab"

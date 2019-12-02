@@ -6,5 +6,10 @@
 	.field.body{
 		margin-bottom: $spaceSm;
 	}
+	.platform-links{
+		@include onlySmall{
+			@include safeFlex(row,wrap,center,start);
+		}
+	}
 }//end block social-media-links
 

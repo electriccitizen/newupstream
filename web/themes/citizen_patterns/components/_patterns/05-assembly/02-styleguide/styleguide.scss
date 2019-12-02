@@ -71,7 +71,7 @@ $subGroupHeaderBack  : $darkGrey;
 	top: 154px;
 	background: $navBack;
 	font-family: $adminText;
-	z-index: 9997;
+	z-index: 497;
 	left: -205px;
 	min-width: 200px;
 	box-shadow: 3px 3px 4px rgba(35,35,35,0.3);
@@ -79,7 +79,7 @@ $subGroupHeaderBack  : $darkGrey;
 		width: 60px;
 		height: 60px;
 		position: fixed;
-		z-index: 9996;
+		z-index: 496;
 		top: 94px;
 		left: 0;
 		box-shadow: 3px 1px 4px rgba(35,35,35,0.3);
@@ -116,7 +116,7 @@ $subGroupHeaderBack  : $darkGrey;
 			padding: $spaceSm 0;
 			top: -$spaceXxs;
 			left: 0;
-			z-index: 9996;
+			z-index: 496;
 			background: $navBack;
 			width: 180px;
 			&:before{
@@ -151,7 +151,7 @@ $subGroupHeaderBack  : $darkGrey;
 		& > a{
 			display: block;
 			position: relative;
-			z-index: 9999;
+			z-index: 499;
 			font-size: 2.2rem;
 			padding: $spaceXxs 20px $spaceXxs 50px;
 			&:before{
@@ -617,6 +617,34 @@ $subGroupHeaderBack  : $darkGrey;
 			width: 100%;
 			left: 0;
 		}
+	}
+}//end search
+
+// newsletter
+.block-newsletter{
+
+	h2.block-title{
+		text-align: left;
+		max-width: 100%;
+	}
+	.field.body{
+		a{
+			color: $link;
+			&:hover,&:focus{
+				color: $hoverLink;
+			}
+		}
+	}
+	.form-embed{
+		max-width: 300px;
+	}
+}//end newsletter
+
+//social-media
+.block-social-media-links{
+	h2.block-title{
+		text-align: left;
+		max-width: 100%;
 	}
 }
 

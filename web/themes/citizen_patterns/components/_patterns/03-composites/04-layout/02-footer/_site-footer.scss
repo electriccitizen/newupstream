@@ -36,6 +36,35 @@
 					}
 				}
 			}
+			//about
+			.block-2{
+				width: 100%;
+				@include tab{
+					width: 33.333%;
+				}
+			}
+			//newsletter
+			.block-newsletter{
+				width: 100%;
+				@include tab{
+					width: 33.33%;
+				}
+				.field.body{
+					a{
+						color: $prefooterLink;
+						&:hover,&:focus{
+							color: $prefooterLinkHover;
+						}
+					}
+				}
+			}
+			//menu
+			.block-footer-menu{
+				width: 100%;
+				@include tab{
+					width: 33.33%;
+				}
+			}
 		}//end prefooter-inner > div
 	}//end prefooter inner
 }//end prefooter
@@ -78,6 +107,26 @@ footer {
 						text-align: left;
 					}
 				}
+			}
+			//social-media
+			.block-social-media-links{
+				width: 100%;
+				@include tab{
+					max-width: 320px;
+					@include safeFlexOrder(2);
+				}
+				a{
+					color: $footerLink;
+					&:hover,&:focus{
+						color: $footerLinkHover;
+					}
+				}
+			}
+			//copyright
+			.block-1{
+				@include onlySmall{
+					width: 100%;
+				}	
 			}
 		}//end prefooter-inner > div
 	}//end footer-inner

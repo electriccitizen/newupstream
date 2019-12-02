@@ -1,33 +1,11 @@
 /* =================
-   FOOTER BLOCKS BLOCK
+   FOOTER BLOCKS
 =================== */
-
-/* ABOUT
--------------- */
-.block-2{
-	width: 100%;
-	@include tab{
-		width: 33.333%;
-	}
-}//end block-2 about
-
-
-/* NEWSLETTER
--------------- */
-.block-newsletter{
-	width: 100%;
-	@include tab{
-		width: 33.33%;
-	}
-}//end block-newsletter
 
 /* FOOTER MENU
 -------------- */
 .block-footer-menu{
-	width: 100%;
-	@include tab{
-		width: 33.33%;
-	}
+	
 	ul:not(.contextual-links){
 		@include listReset;
 		@include safeFlex(row,wrap,center,start);
@@ -69,34 +47,9 @@
 	}//end ul
 }//end footer-menu
 
-/* CONNECT
--------------- */
-.block-social-media-links{
-	width: 100%;
-	@include tab{
-		max-width: 320px;
-		@include safeFlexOrder(2);
-	}
-	.platform-links{
-		@include onlySmall{
-			@include safeFlex(row,wrap,center,start);
-		}
-		a{
-			color: $footerLink;
-			&:hover,&:focus{
-				color: $footerLinkHover;
-			}
-		}
-	}
-}//end block social-links
-
-
 /* COPYRIGHT
 -------------- */
 .block-1{
-	@include onlySmall{
-		width: 100%;
-	}	
 	.copyright{
 		text-align: center;
 		font-size: 1.5rem;
@@ -110,7 +63,7 @@
 			}
 		}
 		p{
-			margin:0;
+			margin: 0;
 		}
 	}
 }//end footer-copyright
