@@ -44,203 +44,158 @@
 	}
 }
 
-
-.search-form-outer{
-	//search icon
-	.t-search-wrapper{
-		.search-page-block &{
-			display: none;
+//search icon
+.t-search-wrapper{
+	.t-search{
+		border: 1px solid transparent;
+		color: $searchIcon;
+		&:hover,&:focus{
+			color: $searchIconHover;
+			outline: none;
 		}
-		.t-search{
-			border: 1px solid transparent;
-			color: $searchIcon;
-			&:hover,&:focus{
-				color: $searchIconHover;
+		i{
+			position: relative;
+			font-size: 2.2rem;
+		}
+	}
+}//end t-search-wrapper
+
+//close search
+.t-search-close{
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 50px;
+	width: 50px;
+	display: none;
+	z-index: 502;
+	.close-search{
+		font-family: $header;
+		display: block;
+		width: 100%;
+		height: 100%;
+		color: $searchClose;
+		font-size: 2.8rem;
+		background: $searchCloseBack;
+		cursor: pointer;
+		@include safeFlex(column,null,center,center);
+		&:hover,&:focus{
+			text-decoration: none;
+			background: $searchCloseBackHover;
+			color: $searchCloseHover;
+		}
+	}
+}//end search close
+
+
+//put search form wrapper at top of screen and full width, hide for slide effect
+#search-form-wrapper{
+	position: absolute;
+	display: none;
+	z-index: 500;
+	top: 0;
+	left: 0;
+	width: 100%;
+	@include contentStop{
+		@include calc(left, "-50vw + 620px");
+		width: 100vw;
+	}
+}//end search-form-wrapper
+
+
+#site-search-form {
+	position: relative;
+	width: 100%;
+	padding: 80px $siteMarginMobile;
+	text-align: center;
+	background: $searchDropBack;
+	@include desk{
+		padding: 160px $siteMarginMobile;
+	}
+	//search box input
+	.js-form-item-site-search-api-fulltext{
+		padding: 10px 0;
+		width: 100%;
+		margin-bottom: 0;
+		max-width: 800px;
+		@include auto;
+		label{
+			@include visuallyHidden;
+		}
+		input{
+			width: 100%;
+			background: transparent;
+			padding: 9px 5px;
+			border: none;
+			color: $searchDropText;
+			border: $formElementBorderWidth solid transparent;
+			border-bottom-color: $searchDropInputBorder;
+			border-radius: 0;
+			@extend %searchBlockPlaceholder;
+			//prevent yellow chrome autofill inset                                                   
+			&:-webkit-autofill{
+				-webkit-box-shadow: 0 0 0 1000px $searchDropInputFocus inset;
 			}
-			i{
-				position: relative;
+			@include tab{
 				font-size: 2.2rem;
 			}
-		}
-	}//end t-search-wrapper
-
-	//close search
-	.t-search-close{
-		position: absolute;
-		top: 0;
-		right: 0;
-		height: 50px;
-		width: 50px;
-		display: none;
-		z-index: 502;
-		.search-page-block &{
-			display: none;
-		}
-		.close-search{
-			font-family: $header;
-			display: block;
-			width: 100%;
-			height: 100%;
-			color: $searchClose;
-			font-size: 2.8rem;
-			background: $searchCloseBack;
-			cursor: pointer;
-			@include safeFlex(column,null,center,center);
-			&:hover,&:focus{
-				text-decoration: none;
-				background: $searchCloseBackHover;
-				color: $searchCloseHover;
+			&:hover{
+				border-color: $searchDropInputFocus;
+				box-shadow: inset 0 0 0 1px $searchDropInputFocus;
 			}
-		}
-	}//end search close
+			&:focus{
+				outline: none;
+				border-color: $formElementBorderFocus;
+				box-shadow: inset 0 0 0 1px $formElementBorderFocus;
+				@extend %searchBlockPlaceholderFocus;
+			}
+		}//end input
+	}//end fulltext search
 
-
-	//put search form wrapper at top of screen and full width, hide for slide effect
-	#search-form-wrapper{
-		position: absolute;
-		display: none;
-		z-index: 500;
-		top: 0;
-		left: 0;
-		width: 100%;
-		@include contentStop{
-			@include calc(left, "-50vw + 620px");
-			width: 100vw;
-		}
-		.search-page-block &{
-			display: block;
-			position: relative;
-			left: auto;
-			margin: $spaceLg 0;
-			max-width: 100%;
-		}
-	}//end search-form-wrapper
-
-	//put search form at top of screen and full width
-	#views-exposed-form-site-search-search-results {
+	//search submit button
+	.form-actions{
 		position: relative;
-		width: 100%;
-		padding: 80px $siteMarginMobile;
-		text-align: center;
-		background: $searchDropBack;
-		@include desk{
-			padding: 160px $siteMarginMobile;
-		}
-		.search-page-block &{
-			padding: 60px 20px;
-			background: $lightGrey;
-			max-width: 1200px;
-			@include edgeToEdge;
-			@include calc(width, "100% + 40px");
-			@include contentStop{
-				@include edgeReset;
+		@include auto;
+		max-width: 800px;
+		.form-submit.button{
+			position: absolute;
+			top: -46px;
+			right: 5px;
+			height: 30px;
+			width: 30px;
+			background: transparent;
+			z-index: 2;
+			text-indent: -9000px;
+			cursor: pointer;
+			padding: 0;
+			min-width: 0;
+			border: 0;
+			@include tab{
+				top: -48px;
+				right: 10px;
 			}
-		}
-
-		//search box input
-		.js-form-item-site-search-api-fulltext{
-			padding: 10px 0;
-			width: 100%;
-			margin-bottom: 0;
-			max-width: 800px;
-			@include auto;
-			label{
-				@include visuallyHidden;
-			}
-			input{
-				width: 100%;
-				background: transparent;
-				padding: 9px 5px;
-				border: none;
-				color: $searchDropText;
-				border: $formElementBorderWidth solid transparent;
-				border-bottom-color: $searchDropInputBorder;
-				border-radius: 0;
-				@extend %searchBlockPlaceholder;
-				//prevent yellow chrome autofill inset                                                   
-				&:-webkit-autofill{
-					-webkit-box-shadow: 0 0 0 1000px $searchDropInputFocus inset;
-				}
-				@include tab{
-					font-size: 2.2rem;
-				}
-				&:hover{
-					border-color: $searchDropInputFocus;
-					box-shadow: inset 0 0 0 1px $searchDropInputFocus;
-				}
-				&:focus{
-					outline: none;
-					border-color: $formElementBorderFocus;
-					box-shadow: inset 0 0 0 1px $formElementBorderFocus;
-					@extend %searchBlockPlaceholderFocus;
-				}
-				.search-page-block &{
-					color: $black;
-					border-bottom-color: $black;
-					@include placeholder;
-					&:hover{
-						border-color: $black;
-						box-shadow: inset 0 0 0 1px $black;
-					}
-					&:focus{
-						border-color: $formElementBorderFocus;
-						@include placeholderFocus;
-					}
-				}
-			}//end input
-		}//end fulltext search
-
-		//search submit button
-		.form-actions{
-			position: relative;
-			@include auto;
-			max-width: 800px;
-			.form-submit.button{
-				position: absolute;
-				top: -46px;
-				right: 5px;
-				height: 30px;
-				width: 30px;
-				background: transparent;
-				z-index: 2;
-				text-indent: -9000px;
-				cursor: pointer;
-				padding: 0;
-				min-width: 0;
+			&:focus,&:hover{
+				outline: none;
+				box-shadow: none;
 				border: 0;
-				@include tab{
-					top: -48px;
-					right: 10px;
+				& + i{
+					color: $searchDropSearchIconHover;
 				}
-				&:focus,&:hover{
-					outline: none;
-					box-shadow: none;
-					border: 0;
-					& + i{
-						color: $searchDropSearchIconHover;
-						.search-page-block &{
-							color: $searchDropSearchIconHover;
-						}
-					}
-				}
-			}//end form submit
-			i{
-				position: absolute;
-				top: -45px;
-				right: 8px;
-				font-size: 24px;
-				color: $searchDropSearchIcon;
-				cursor: pointer;
-				@include tab{
-					font-size: 28px;
-					top: -48px;
-					right: 12px;
-				}
-				.search-page-block &{
-					color: $black;
-				}
-			}//end i
-		}//end form-actions
-	}//end search block form
+			}
+		}//end form submit
+		i{
+			position: absolute;
+			top: -45px;
+			right: 8px;
+			font-size: 24px;
+			color: $searchDropSearchIcon;
+			cursor: pointer;
+			@include tab{
+				font-size: 28px;
+				top: -48px;
+				right: 12px;
+			}
+		}//end i
+	}//end form-actions
+}//end search block form
 
-}//end search block

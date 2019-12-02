@@ -562,9 +562,6 @@ $subGroupHeaderBack  : $darkGrey;
 /* FILTERS */
 .views-exposed-form{
 	.form-item{
-		.max-small{
-			max-width: 100%;
-		}
 		@include smallTab{
 			width: 100%;
 			max-width: 100%;
@@ -597,6 +594,29 @@ $subGroupHeaderBack  : $darkGrey;
 .pager__number{
 	&[data-hide="true"]{
 		display: none !important;
+	}
+}
+
+/* BLOCKS */
+//search
+.block-site-search{
+	position: relative;
+	overflow-x: hidden;
+	width: 100%;
+	text-align: left;
+	.t-search{
+		position: static;
+	}
+	.t-search-close{
+		border: 1px solid $searchDropBack;
+	}
+	#search-form-wrapper{
+		position: relative;
+		top: -30px;
+		@include contentStop{
+			width: 100%;
+			left: 0;
+		}
 	}
 }
 

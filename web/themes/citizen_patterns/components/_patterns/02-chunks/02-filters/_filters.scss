@@ -26,14 +26,10 @@
 		}
 		input.form-submit.button{
 			@include submitButton;
-			@include smallTab{
-				margin: 0 10px;
-			}
+			margin: 0 10px;
 			&#edit-reset{
 				@include warningButton;
-				@include smallTab{
-					margin: 0 10px;
-				}
+				margin: 0 10px;
 			}
 		}
 	}

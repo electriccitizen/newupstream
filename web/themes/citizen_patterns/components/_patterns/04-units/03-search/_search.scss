@@ -29,13 +29,31 @@
 			}
 			.search-page-block{
 				margin-bottom: $elementSpace;
-				.search-form-outer{
-					#views-exposed-form-site-search-search-results{
-						display: block;
-						.form-actions{
-							margin: 0 auto;
-						}
+				.views-exposed-form{
+					@include safeFlex(row,wrap,center,start);
+					position: relative;
+					padding: $spaceLg 0;
+					&:after{
+						@include fullBack($lightGrey);
 					}
+				}
+				.js-form-type-textfield{
+					@include smallTab{
+						max-width: 100%;
+						width: 100%;
+					}
+					@include tab{
+						max-width: 400px;
+					}
+					label{
+						@include visuallyHidden;
+					}
+					@include tab{
+						margin-bottom: 0;
+					}
+				}
+				.form-actions{
+					margin: 0 0 0 -10px;
 				}
 			}
 			h2.results-header{

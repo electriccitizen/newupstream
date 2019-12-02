@@ -3,7 +3,7 @@
 //search toggle
 Drupal.behaviors.searchToggle = {
 	attach: function (context, settings) {
-	 	$(".block-search-form-block").once('tSearch').each(function(){  
+	 	$(".block-site-search").once('tSearch').each(function(){  
 	 		$('.t-search', this).click(function(e){
 	 			e.preventDefault();
 	 			$('#search-form-wrapper').slideDown(400).attr('aria-hidden', 'false');

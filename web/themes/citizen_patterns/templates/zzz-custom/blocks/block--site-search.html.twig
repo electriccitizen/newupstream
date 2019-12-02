@@ -10,17 +10,15 @@
  */
 #}
 
-{# this template extends from pattern lab #}
 
-{% extends '@composites/01-blocks/02-search/search.twig' %}
+{% extends 'block.html.twig' %}
 
-{% block instructions %}{{ title_suffix }}{% endblock %}
 
-{% block drupalWrapperStart %}
+{% block blockContent %}
   {{ attach_library('citizen_patterns/search-block') }}
-  <div class="search-block-inner">
-{% endblock %}
-
-{% block searchFormInner %}
-  {{ content }}
+  {% embed '@composites/01-blocks/02-search/_search-block.twig' %}
+  	{% block searchForm %}
+		  {{ content }}
+		{% endblock %}
+	{% endembed %}
 {% endblock %}

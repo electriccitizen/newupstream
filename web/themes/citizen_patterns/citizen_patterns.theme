@@ -55,7 +55,7 @@ function citizen_patterns_theme_suggestions_paragraph_alter(array &$suggestions,
  * Implements hook_form_alter.
  */
 function citizen_patterns_form_alter(&$form, FormStateInterface $form_state) {
-  if(($form['#id'] == 'views-exposed-form-site-search-search-results') || ($form['#id'] == 'site-search-form')){
-    $form['actions']['submit']['#suffix'] = '<i class="fa fa-search"></i>';
+  if($form['#id'] == 'site-search-form'){
+    $form['actions']['submit']['#suffix'] = '<i class="fas fa-search"></i>';
   }
 }

@@ -158,6 +158,16 @@ $('#pager-numbers').change(function(){
 	}
 });
 
+/* SEARCH
+------------------- */
+$('.t-search').click(function(){
+	$('#search-form-wrapper').slideDown(300);
+	$('.t-search-close').delay(300).fadeIn(300);
+});
+$('.t-search-close').click(function(){
+	$('.t-search-close').fadeOut(300);
+	$('#search-form-wrapper').slideUp(300);
+});
 
 /* PARAGRAPHS
 ------------------ */

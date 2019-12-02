@@ -3,7 +3,7 @@
 #}
 {% import '@base/macros.twig' as styles %}
 
-<div class="js-form-item form-item js-form-type-{% if type == 'text' %}textfield{% else %}{{ type }}{% endif %} {{ styles.formElements }}">
+<div class="js-form-item form-item js-form-type-{% if type == 'text' %}textfield{% else %}{{ type }}{% endif %}{% if nameClass %} js-form-item-{{ nameClass }}{% endif %} {{ styles.formElements }}">
 	
 	{# for radios and checkboxes labels are set as legends in the included template #}
 	{% if not (type == 'radio' or type == 'checkbox') %}
@@ -40,7 +40,7 @@
 			<textarea name="{{ type }}" {% if placeholder %}placeholder="{{ placeholder }}"{% endif %} rows="5" cols="60" class="max-text"></textarea>
 		</div>
 	{% else %}
-		<input class="max-small" type="{{ type }}" name="{{ type }}" {% if placeholder %}placeholder="{{ placeholder }}"{% endif %} />
+		<input class="{{ classes }}" type="{{ type }}" name="{{ type }}" {% if placeholder %}placeholder="{{ placeholder }}"{% endif %} />
 	{% endif %}
 
 	{% if description %}

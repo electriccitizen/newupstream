@@ -7,6 +7,8 @@ formElements:
       text
     label:
       'Your Name'
+    classes:
+      'max-small'
   2:
     type:
       email
@@ -16,6 +18,8 @@ formElements:
       'email@example.com'
     required:
       true
+    classes:
+      'max-small'
   3:
     type:
       password
@@ -23,6 +27,8 @@ formElements:
       'Password'
     description:
       'Enter the password that comes with your user name'
+    classes:
+      'max-small'
   4:
     type:
       number
