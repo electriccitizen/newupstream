@@ -2,14 +2,14 @@
   STYLEGUIDE ONLY: This template is not embedded into Drupal.
 #}
 
-{% embed '@composites/02-paragraphs/00-base/_paragraphs-field-item.twig' 
-	with{
-		sectionTitle:'',
-		sectionIntro:'',
-	}
-%}
+{% embed '@composites/02-paragraphs/00-base/_paragraphs-field-item.twig' %}
 	{% block paragraphItem %}
-		{% embed '@composites/02-paragraphs/00-base/_paragraph.twig' %}
+		{% embed '@composites/02-paragraphs/00-base/_paragraph.twig' 
+			with{
+				sectionTitle:'',
+				sectionIntro:'',
+			}
+		%}
 			{% block widgetContent %}
 				<div class="field field-accordion-item">
 					{% for accordion in accordionGroup %}

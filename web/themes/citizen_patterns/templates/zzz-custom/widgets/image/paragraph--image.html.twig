@@ -37,45 +37,43 @@
  */
 #}
 
-{% extends "paragraph.html.twig" %}
 
-{% set size = content.field_image_size[0]['#markup'] %}
+{% embed '@composites/02-paragraphs/00-base/_paragraph.twig' 
+	with{
+		type: paragraph.bundle|clean_class,
+		viewMode: view_mode|clean_class,
+		id: paragraph.id.value,
+		sectionTitle: '',
+		sectionIntro: '',
+		widgetTitle: content.field_widget_title.0['#context'].value,
+	}
+%}
 
-{# Define image size based on picker #}
-{%- if (size == 'small') -%}
-	{% set image =  drupal_entity('media', paragraph.field_image.0.target_id, 'small') %}
-{%- elseif (size == 'medium') -%}
-	{% set image =  drupal_entity('media', paragraph.field_image.0.target_id, 'medium') %}
-{%- elseif (size == 'large') -%}
-	{% set image =  drupal_entity('media', paragraph.field_image.0.target_id, 'large') %}
-{%- elseif (size == 'full') -%}
-	{% set image =  drupal_entity('media', paragraph.field_image.0.target_id, 'full') %}
-{%- elseif (size == 'default') -%}
-	{% set image =  drupal_entity('media', paragraph.field_image.0.target_id, 'default') %}
-{%- endif -%}
+	{% block widgetContent %}
+		{% set size = content.field_image_size[0]['#markup'] %}
 
-{% block widgetContent %}
-	{% embed "@composites/02-paragraphs/06-image/image.twig" 
-		with{
-			widget_title: content.field_widget_title.0['#context'].value,
-			image_size: size,
-			image_link: content.field_link.0['#url'],
-			image_aria: content.field_link.0['#title'],
+		{%- if (size == 'small') -%}
+			{% set image =  drupal_entity('media', paragraph.field_image.0.target_id, 'small') %}
+		{%- elseif (size == 'medium') -%}
+			{% set image =  drupal_entity('media', paragraph.field_image.0.target_id, 'medium') %}
+		{%- elseif (size == 'large') -%}
+			{% set image =  drupal_entity('media', paragraph.field_image.0.target_id, 'large') %}
+		{%- elseif (size == 'full') -%}
+			{% set image =  drupal_entity('media', paragraph.field_image.0.target_id, 'full') %}
+		{%- elseif (size == 'default') -%}
+			{% set image =  drupal_entity('media', paragraph.field_image.0.target_id, 'default') %}
+		{%- endif -%}
 
-		}
-	%}
+		{% embed "@composites/02-paragraphs/06-image/_image.twig" 
+			with{
+				url: content.field_link.0['#url'],
+				aria: content.field_link.0['#title'],
+			}
+		%}
+			{% block image %}
+				{{ image }}
+			{% endblock %}
 
-		{% block plwidgetopen %}{# patternlab specifc html #}{% endblock %}
-
-		{# block image is wrapped in block imageWrapper in pattern lab to detect if it is linked 
-		we need the extra block to strip out pattern lab html structure and use drupal rendered entities #}
-		{% block image %}
-			{{- image -}}
-		{% endblock %}
-
-		{% block plwidgetclose %}{# patternlab specifc html #}{% endblock %}
-
-	{% endembed %}
-	
-{% endblock %}
-
+		{% endembed %}
+	{% endblock %}
+{% endembed %}

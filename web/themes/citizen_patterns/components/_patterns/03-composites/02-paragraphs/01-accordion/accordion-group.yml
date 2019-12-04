@@ -2,8 +2,6 @@
 type:
   accordion-group
 
-# available section variables: background (should match the expected Drupal class output)
-
 #widget variables
 widgetTitle:
   'Accordion Group'

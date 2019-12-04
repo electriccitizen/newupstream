@@ -2,22 +2,22 @@
 	DRUPAL: This template is embedded into the Drupal gallery paragraph template.
 #}
 
-  <div class="pl-options gallery-options">
-    <div class="options-inner">
-      <div class="form-item">
-        <label for="gallery-style">Gallery Style</label>
-        <select name="gallery-style">
-          {% if galleries[1].galleryType == 'lightbox' %}
-            <option value="lightbox">Lightbox</option>
-            <option value="slider">Slider</option>
-          {% else %}
-            <option value="slider">Slider</option>
-            <option value="lightbox">Lightbox</option>
-          {% endif %}
-        </select> 
-      </div>
+<div class="pl-options gallery-options">
+  <div class="options-inner">
+    <div class="form-item">
+      <label for="gallery-style">Gallery Style</label>
+      <select name="gallery-style">
+        {% if galleries[1].galleryType == 'lightbox' %}
+          <option value="lightbox">Lightbox</option>
+          <option value="slider">Slider</option>
+        {% else %}
+          <option value="slider">Slider</option>
+          <option value="lightbox">Lightbox</option>
+        {% endif %}
+      </select> 
     </div>
   </div>
+</div>
 
 {% if widgetTitle %}
    <div class="widget-title">{{ widgetTitle }}</div>

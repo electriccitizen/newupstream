@@ -141,6 +141,7 @@ $submitPadding: 0 1.5rem;
 	line-height: 1;
 	@include safeFlex(column,nowrap,center,center);
 	min-width: 120px;
+	cursor: pointer;
 	&:hover,&:focus{
 		background: $buttonBackHover;
 		border-color: $buttonBackHover;

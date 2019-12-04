@@ -330,8 +330,8 @@
 			@include transAll(.3s);
 		}
 	}
-	figcaption,.field-caption {
-		color: $darkGrey;
+	.field-caption {
+		color: $black;
 	}
 }//end lightBack
 
@@ -360,7 +360,7 @@
 			@include transAll(.3s);
 		}
 	}
-	figcaption,.field-caption {
+	.field-caption {
 		color: $white;
 	}
 }//end darkBack

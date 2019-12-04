@@ -35,9 +35,6 @@
 		}//end gallery-wrapper
 	}//end lightbox
 	.slider {
-		.gallery-wrapper {
-			max-width: $contentStop !important;
-		}
 		//slider container overrides layout padding on mobile
 		.field-image-multi {
 			@include edgeToEdge;

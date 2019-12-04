@@ -37,12 +37,17 @@
  */
 #}
 
-{% extends "paragraph.html.twig" %}
-
-{% block widgetContent %}
-	{% embed "@composites/02-paragraphs/05-horizontal-rule/_horizontal-rule.twig" %}
-		{% block plwidgetopen %}{% endblock %}
-		{% block plwidgetclose %}{% endblock %}
-	{% endembed %}
-{% endblock %}
-
+{% embed '@composites/02-paragraphs/00-base/_paragraph.twig' 
+  with{
+    type: paragraph.bundle|clean_class,
+    viewMode: view_mode|clean_class,
+    id: paragraph.id.value,
+    sectionTitle: '',
+    sectionIntro: '',
+    widgetTitle: content.field_widget_title.0['#context'].value,
+  }
+%}
+	{% block widgetContent %}
+		{% include "@composites/02-paragraphs/05-horizontal-rule/_horizontal-rule.twig" %}
+	{% endblock %}
+{% endembed %}
