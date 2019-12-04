@@ -181,6 +181,17 @@ $('.block-newsletter .modal-close').click(function(){
 
 /* PARAGRAPHS
 ------------------ */
+//accordions
+$('.accordion-header a').click(function(){
+  var activeHeader = $(this).parent('.accordion-header');
+  if(activeHeader.closest('.accordion-item.accord-active').length){
+    $('.accord-active').removeClass('accord-active');
+    activeHeader.next().slideUp(300);
+  }else{
+    $('.accord-active').find('.field-long-text').slideUp(300).end().removeClass('accord-active');
+    activeHeader.parent('.accordion-item').addClass('accord-active').end().next().slideDown(300);
+  }
+});
 
 //toggle between galleries
 $(".gallery-options select").change(function(){

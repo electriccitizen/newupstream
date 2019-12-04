@@ -1,6 +1,6 @@
 
 logo:
-  '/pattern-lab/public/images/custom/logo.svg'
+  '../../images/custom/logo.svg'
 path:
   '#'
 projectName:

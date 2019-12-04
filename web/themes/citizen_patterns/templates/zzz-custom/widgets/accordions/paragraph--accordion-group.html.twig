@@ -36,14 +36,19 @@
  * @ingroup themeable
  */
 #}
-{% extends "paragraph.html.twig" %}
+{% embed "@composites/02-paragraphs/00-base/_paragraph.twig" 
+	with{
+		type: paragraph.bundle|clean_class,
+		viewMode: view_mode|clean_class,
+		id: paragraph.id.value,
+		sectionTitle: '',
+		sectionIntro: '',
+		widgetTitle: content.field_widget_title.0['#context'].value,
+	}
+%}
 
-{% block widgetContent %}
-	{{ attach_library('citizen_patterns/accordion') }}
-
-	{{- content.field_widget_title -}}
-
-	<div class="wrapper">
+	{% block widgetContent %}
+		{{ attach_library('citizen_patterns/accordion') }}
 		<div class="field field-accordion-item" aria-label="Accordion">
 			{%- for key, accordion in content.field_accordion_item if key|first != '#' -%}
 				{% set control = 'accordion-content-' ~ paragraph.id() ~ '-' ~ (key + 1) %}
@@ -54,12 +59,13 @@
 				 } %}
 				{% include "@composites/02-paragraphs/01-accordion/_accordion.twig"
 					with{
-						accordion_header: accordion['#paragraph'].field_accordion_header.value,
-						accordion_content: text,
-						accordion_control: control
+						accordionHeader: accordion['#paragraph'].field_accordion_header.value,
+						accordionContent: text,
+						accordionControl: control
 					}
 				%}
 			{%- endfor -%}
 		</div>
-	</div>
-{% endblock %}
+	{% endblock %}
+
+{% endembed %}

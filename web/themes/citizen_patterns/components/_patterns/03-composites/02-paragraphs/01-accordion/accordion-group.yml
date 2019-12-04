@@ -1,18 +1,27 @@
-accordion_group:
+
+type:
+  accordion-group
+
+# available section variables: background (should match the expected Drupal class output)
+
+#widget variables
+widgetTitle:
+  'Accordion Group'
+accordionGroup:
   1:
-    accordion_header:
+    accordionHeader:
       "Whoot Whoot"
-    accordion_content:
+    accordionContent:
       "Quae similitudo in genere etiam humano apparet. An potest cupiditas finiri? Faceres tu quidem, Torquate, haec omnia; Iubet igitur nos Pythius Apollo noscere nosmet ipsos. Cur deinde Metrodori liberos commendas? At ille pellit, qui permulcet sensum voluptate."
   2:
-    accordion_header:
+    accordionHeader:
       "Giddyup!!"
-    accordion_content: 
+    accordionContent: 
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cui Tubuli nomen odio non est? Honesta oratio, Socratica, Platonis etiam. Itaque eos id agere, ut a se dolores, morbos, debilitates repellant. Duo Reges: constructio interrete.
       Hoc ipsum elegantius poni meliusque potuit. Ut id aliis narrare gestiant? Omnes enim iucundum motum, quo sensus hilaretur. Indicant pueri, in quibus ut in speculis natura cernitur."
   3:
-    accordion_header:
+    accordionHeader:
       "Meh. We'll see how I feel."
-    accordion_content:
+    accordionContent:
       "Nam, ut sint illa vendibiliora, haec uberiora certe sunt. Audio equidem philosophi vocem, Epicure, sed quid tibi dicendum sit oblitus es. Primum cur ista res digna odio est, nisi quod est turpis? Haec et tu ita posuisti, et verba vestra sunt."
     

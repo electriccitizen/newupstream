@@ -649,6 +649,12 @@ $subGroupHeaderBack  : $darkGrey;
 }
 
 /* PARAGRAPHS */
+//global
+.paragraphs-layout{
+	padding: 0 20px;
+}
+
+//gallery
 .paragraph--type--gallery{
 	max-width: $contentStop;
 	@include auto;
@@ -673,7 +679,7 @@ $subGroupHeaderBack  : $darkGrey;
 	&:not(:first-child){
 		display: none;
 	}
-}
+}//end gallery
 
 
 

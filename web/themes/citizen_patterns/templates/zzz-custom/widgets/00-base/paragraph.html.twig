@@ -36,46 +36,25 @@
  * @ingroup themeable
  */
 #}
+{% if content.field_section_intro.0 %}
+	{% set intro = { 
+		'#type': 'processed_text',
+		'#text': content.field_section_intro.0['#text'],
+		'#format': content.field_section_intro.0['#format']
+	} %}
+{% endif %}
 
-
-{# define default paragraphs classes #}
-{%
-set classes = [
-'paragraph',
-'paragraph--type--' ~ paragraph.bundle|clean_class,
-view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
-'paragraphs-item-' ~ paragraph.id.value
-]
+{% embed '@composites/02-paragraphs/00-base/_paragraph.twig' 
+	with{
+		type: paragraph.bundle|clean_class,
+		viewMode: view_mode|clean_class,
+		id: paragraph.id.value,
+		sectionTitle: content.field_section_title.0['#context'].value,
+		sectionIntro: intro,
+		widgetTitle: content.field_widget_title.0['#context'].value,
+	}
 %}
-
-{# add a wrapper if not a main section widget (used for in-section layout) #}
-{%- if 'section' not in paragraph.bundle|clean_class -%}
-	<div class="section-item">
-{%- endif -%}
-	{% block widget %}
-		{# set the default paragraph classes #}
-		<div{{ attributes.addClass(classes)  }}>
-    		{% block widgetContent %}
-    			{# print section title, intro and widget title outside of inner wrapper #}
-    			{{- content.field_section_title -}}
- 					{{- content.field_section_intro -}}
-    			{{- content.field_widget_title -}}
-
-    			{% block widgetInner %}
-	    			{# print an inner wrapper if not a section field #}
-	    			{%- if 'section' not in paragraph.bundle|clean_class -%}
-	    				<div class="widget-wrapper">
-	    			{%- endif -%}
-	    					{{- content|without('field_widget_title','field_section_title','field_section_intro') -}}
-	    			{%- if 'section' not in paragraph.bundle|clean_class -%}
-	    				</div>
-	    			{%- endif -%}
-	    		{% endblock %}
-
-    		{% endblock %}
-		</div>
+	{% block widgetContent %}
+		{{- content|without('field_widget_title','field_section_title','field_section_intro') -}}
 	{% endblock %}
-
-{%- if 'section' not in paragraph.bundle|clean_class -%}
-	</div>
-{%- endif -%}
+{% endembed %}
