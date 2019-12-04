@@ -7,14 +7,4 @@
 		max-width: $textMax;
 		@include auto;
 	}
-	form{
-		& > .js-form-item{
-			margin-bottom: $spaceSm;
-			label{
-				margin-bottom: .5rem;
-				display: inline-block;
-				font-weight: $heavy;
-			}
-		}
-	}//end form
 }//end form widget

@@ -4,7 +4,7 @@
 
 form:not(.layout-builder-add-block):not(.layout-builder-update-block){
 	.form-checkboxes,.js-webform-checkboxes{
-		margin-bottom: -$formElementSpace;
+		margin-bottom: -$spaceXxs;
 		@include safeFlex(row,wrap,null,null);
 		fieldset &{
 			margin-left: -2rem;
@@ -25,6 +25,7 @@ form:not(.layout-builder-add-block):not(.layout-builder-update-block){
 	.js-form-type-checkbox{
 		width: auto;
 		margin-right: 2rem;
+		margin-bottom: $spaceXxs;
 		label,input{
 			display: inline-block;
 		}

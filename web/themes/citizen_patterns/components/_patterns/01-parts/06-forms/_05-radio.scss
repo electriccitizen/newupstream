@@ -4,7 +4,7 @@
 
 form:not(.layout-builder-add-block):not(.layout-builder-update-block){
 	.form-radios,.js-webform-radios{
-		margin-bottom: -$formElementSpace;
+		margin-bottom: -$spaceXxs;
 		@include safeFlex(row,wrap,null,null);
 	}
 	.radios--wrapper{
@@ -19,6 +19,7 @@ form:not(.layout-builder-add-block):not(.layout-builder-update-block){
 	.js-form-type-radio{
 		width: auto;
 		margin-right: 2rem;
+		margin-bottom: $spaceXxs;
 		label,input{
 			display: inline-block;
 		}

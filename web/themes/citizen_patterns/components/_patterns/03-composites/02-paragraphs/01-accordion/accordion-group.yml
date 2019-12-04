@@ -10,18 +10,17 @@ widgetTitle:
 accordionGroup:
   1:
     accordionHeader:
-      "Whoot Whoot"
+      'Veggies sunt bona vobis, proinde vos'
     accordionContent:
-      "Quae similitudo in genere etiam humano apparet. An potest cupiditas finiri? Faceres tu quidem, Torquate, haec omnia; Iubet igitur nos Pythius Apollo noscere nosmet ipsos. Cur deinde Metrodori liberos commendas? At ille pellit, qui permulcet sensum voluptate."
+      'Bush tomato gumbo potato garbanzo ricebean burdock daikon coriander kale quandong. Bok choy celery leek avocado shallot horseradish aubergine parsley. Bok choy bell pepper kale celery desert raisin kakadu plum bok choy bunya nuts.'
   2:
     accordionHeader:
-      "Giddyup!!"
-    accordionContent: 
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cui Tubuli nomen odio non est? Honesta oratio, Socratica, Platonis etiam. Itaque eos id agere, ut a se dolores, morbos, debilitates repellant. Duo Reges: constructio interrete.
-      Hoc ipsum elegantius poni meliusque potuit. Ut id aliis narrare gestiant? Omnes enim iucundum motum, quo sensus hilaretur. Indicant pueri, in quibus ut in speculis natura cernitur."
+      'Bacon ipsum dolor sit'
+    accordionContent:
+      'Und round meatball, bacon pig leberkas corned beef tongue shoulder. Drumstick pork loin prosciutto ball tip shank pancetta spare ribs jowl pastrami. Frankfurter boudin filet mignon ribeye. Pig hamburger strip steak ham turducken prosciutto bresaola ground round pancetta frankfurter jowl. Frankfurter tongue brisket tenderloin, beef ribs pastrami biltong tail bresaola flank. Biltong pork chop beef boudin hamburger bacon. Capicola bresaola sausage.'
   3:
     accordionHeader:
-      "Meh. We'll see how I feel."
+      'Multoque hoc melius nos veriusque'
     accordionContent:
-      "Nam, ut sint illa vendibiliora, haec uberiora certe sunt. Audio equidem philosophi vocem, Epicure, sed quid tibi dicendum sit oblitus es. Primum cur ista res digna odio est, nisi quod est turpis? Haec et tu ita posuisti, et verba vestra sunt."
+      'Demosthenes et Aeschines inter se decertare soliti sunt? Ad corpus diceres pertinere-, sed ea, quae dixi, ad corpusne refers?'
     

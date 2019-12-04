@@ -37,40 +37,46 @@
  */
 #}
 
-{% extends "paragraph.html.twig" %}
+{% embed '@composites/02-paragraphs/00-base/_paragraph.twig' 
+  with{
+    type: paragraph.bundle|clean_class,
+    viewMode: view_mode|clean_class,
+    id: paragraph.id.value,
+    sectionTitle: '',
+    sectionIntro: '',
+    widgetTitle: content.field_widget_title.0['#context'].value,
+  }
+%}
 
-{% block widgetContent %}
-  {{ attach_library('citizen_patterns/galleries') }}
-  
-  {% embed "@composites/02-paragraphs/04-gallery/_gallery.twig"
-    with{
-      galleryType: content.field_gallery_type.0['#markup']|clean_class,
-		  widgetTitle: content.field_widget_title.0['#context'].value
-    }
-  %}
-    {% block plOptions %}{# remove pl only structure #}{% endblock %}
-    {% block plOpen %}{# remove pl only structure #}{% endblock %}
+  {% block widgetContent %}
+    {{ attach_library('citizen_patterns/galleries') }}
+    
+    {% embed "@composites/02-paragraphs/04-gallery/_gallery.twig"
+      with{
+        galleryType: content.field_gallery_type.0['#markup']|clean_class,
+      }
+    %}
 
-    {% block lightboxContent %}
-      {{ attach_library('citizen_patterns/featherlight') }}
-      {%- for key, item in content.field_image_multi if key|first != '#' -%}
-        {%- if paragraph.field_image_multi[key].target_id > 0 -%}
-          <div class="featherlight-gal image-gal" href="#item{{paragraph.field_image_multi[key].target_id}}" rel="gallery-{{paragraph.id.value}}">
-            {{ drupal_entity('media', paragraph.field_image_multi[key].target_id, 'large_thumb') }}
-            <div class="featherlight-hidden" id="item{{paragraph.field_image_multi[key].target_id}}">
-              {{ drupal_entity('media', paragraph.field_image_multi[key].target_id, 'large') }}
+      {% block lightboxContent %}
+        {{ attach_library('citizen_patterns/featherlight') }}
+        {%- for key, item in content.field_image_multi if key|first != '#' -%}
+          {%- if paragraph.field_image_multi[key].target_id > 0 -%}
+            <div class="featherlight-gal image-gal" href="#item{{paragraph.field_image_multi[key].target_id}}" rel="gallery-{{paragraph.id.value}}">
+              {{ drupal_entity('media', paragraph.field_image_multi[key].target_id, 'large_thumb') }}
+              <div class="featherlight-hidden" id="item{{paragraph.field_image_multi[key].target_id}}">
+                {{ drupal_entity('media', paragraph.field_image_multi[key].target_id, 'large') }}
+              </div>
             </div>
-          </div>
-        {%- endif -%}
-      {%- endfor -%}
-    {% endblock %}
+          {%- endif -%}
+        {%- endfor -%}
+      {% endblock %}
 
-    {% block sliderContent %}
-     {{ attach_library('citizen_patterns/slick') }}
-  	 {{- content.field_image_multi -}}
-    {% endblock %}
+      {% block sliderContent %}
+       {{ attach_library('citizen_patterns/slick') }}
+    	 {{- content.field_image_multi -}}
+      {% endblock %}
 
-    {% block plClose %}{# remove pl only structure #}{% endblock %}
-
-  {% endembed %}
-{% endblock %}
+    {% endembed %}
+  {% endblock %}
+  
+{% endembed %}

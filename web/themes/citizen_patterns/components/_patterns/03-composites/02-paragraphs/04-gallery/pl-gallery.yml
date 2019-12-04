@@ -1,12 +1,13 @@
 
-# Two galleries and the need for a pl-galleries template is so a style guide user can toggle between gallery types. !!!!! NOTE: In order for slick to calculate the height of the first image correctly, the slider must always be the first gallery and only the first gallery should have a gallery title—if used. !!!!!!
+widgetTitle:
+  "Gallery Widget"
 
+# Two galleries and the need for a pl-galleries template is so a style guide user can toggle between gallery types. !!!!! NOTE: In order for slick to calculate the height of the first image correctly, the slider must always be the first gallery and only the first gallery should have a gallery title—if used. !!!!!!
 galleries:
   1:
     galleryType:
       slider
-    widgetTitle:
-      "Gallery Widget"
+    
   2:
     galleryType:
       lightbox

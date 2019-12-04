@@ -333,15 +333,22 @@ body {
 	}
 	.slick-arrow {
 		z-index: 1;
-		height: 40px;
+		height: 100%;
+		top: 0;
+		@include translate(0,0);
+		width: 15%;
+		min-width: 60px;
 		&:before {
 			content: '' !important;
 			display: block;
+			position: absolute;
+			@include calc(top, "50% - 10px");
 		}
 		&.slick-prev {
-			left: 20px;
+			left: 0;
 			&:before{
 				@include triangle(left,24px,12px,$white);
+				left: 20px;
 				@include tab {
 					@include triangle(left,40px,20px,$white);
 				}
@@ -354,10 +361,10 @@ body {
 			}
 		}
 		&.slick-next {
-			right: 20px;
+			right: 0;
 			&:before{
 				@include triangle(right,24px,12px,$white);
-				float: right;
+				right: 20px;
 				@include tab {
 					@include triangle(right,40px,20px,$white);
 				}
