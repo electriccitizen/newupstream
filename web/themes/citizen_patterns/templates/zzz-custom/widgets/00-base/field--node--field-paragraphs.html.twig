@@ -68,7 +68,7 @@ set classes = [
 {# paragraphs field #}
 <div{{ attributes.addClass(classes) }}>
 	{%- for item in items -%}
-		{% embed '@composites/02-paragraphs/00-base/_paragraphs-field-item.twig' 
+		{% embed '@parts/08-fields/02-paragraphs/_paragraphs-field-item.twig' 
 			with{
 				background: item.content['#paragraph'].field_style.0.entity.label|clean_class,
 				layout: item.content['#paragraph'].field_layout.0.value,

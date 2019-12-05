@@ -10,10 +10,10 @@
 			<article class="media media-image view-mode-{{ size }}">
 				<div class="field-media-image">
 					<img src="{{ src }}" />
-					{% if caption %}
-						<div class="field-caption">{{ caption }}</div>
-					{% endif %}
 				</div>
+				{% if caption %}
+					<div class="field-caption">{{ caption }}</div>
+				{% endif %}
 			</article>
 		{% endblock %}
 	{% if url %}

@@ -113,7 +113,6 @@ $('#section-menu-wrapper .expander').click(function(){
 /* ANCHOR NAVIGATION
 ------------------- */
 $('.toc-toggle').click(function(){
-	console.log('anchors');
 	var controller = $(this).closest('#toc-title');
   if(!$(controller).is('.active-nav')){
 		$(controller).addClass('active-nav').next().slideDown(300);
@@ -202,10 +201,10 @@ $('.accordion-header a').click(function(){
 //toggle image sizes
 $(".image-options select").change(function(){
 	var chosen = $(this).find('option:selected').val();
-	$('#composites-pl-image .image-wrapper').fadeOut(300).queue(function(next){
-		$('#composites-pl-image .image-wrapper').removeClass('default full large medium small').addClass(chosen).dequeue();
+	$('#composites-pl-image .image-wrapper').fadeTo(200,0, function() {
+		$(this).delay(400).removeClass('default full large medium small').addClass(chosen);
 	});
-	$('#composites-pl-image .image-wrapper').fadeIn(600);
+	$('#composites-pl-image .image-wrapper').fadeTo(800,100);
 });
 
 
@@ -263,3 +262,33 @@ $('#lf-numbers').change(function(){
 		$('#composites-pl-links-files .links-files').addClass('multi-col');
 	}
 });
+$('lf-item a').click(function(e){
+	e.preventDefault();
+});
+
+//section
+$('#section-style').change(function(){
+	var chosen = $(this).find('option:selected').val();
+	$('#composites-pl-sections .field-paragraphs > .section').fadeTo(200,0, function() {
+		if(chosen == 'none'){
+			$(this).delay(200).removeClass('background grey').addClass('backless');
+		}else{
+			$(this).delay(200).removeClass('backless').addClass('background ' + chosen);
+		}
+	});
+	$('#composites-pl-sections .field-paragraphs > .section').fadeTo(500,100);
+});
+$('#section-layout').change(function(){
+	var chosen = $(this).find('option:selected').val();
+	$('#composites-pl-sections .field-paragraphs > .section').fadeTo(200,0, function() {
+		if(chosen == 'two-column'){
+			$(this).delay(200).removeClass('full three-column').addClass('two-column');
+		}else if(chosen == 'three-column'){
+			$(this).delay(200).removeClass('two-column full').addClass('three-column');
+		}else{
+			$(this).delay(200).removeClass('two-column three-column').addClass('full');
+		}
+	});
+	$('#composites-pl-sections .field-paragraphs > .section').fadeTo(500,100);
+});
+

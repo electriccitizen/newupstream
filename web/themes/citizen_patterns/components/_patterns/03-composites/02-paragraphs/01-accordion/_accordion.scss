@@ -17,20 +17,27 @@
 	//accordion header bar
 	.accordion-header{
 		a{
-			padding: 1rem 1rem 1rem 3rem;
+			padding: 1rem 2.25rem 1rem 2rem;
 			display: block;
 			color: $accordHeader;
 			font-weight: $heavy;
 			position: relative;
-			font-size: 2.2rem;
+			font-size: 2rem;
 			border: 2px solid $accordHeaderBorder;
 			margin-top: -2px;
 			background: $accordHeaderBack;
+			@include tab{
+				padding: 1rem 3.25rem 1rem 3rem;
+				font-size: 2.2rem;
+			}
 			&:after{
 				position: absolute;
-				right: 3rem;
+				right: 2rem;
 				top: 1rem;
 				content: "+";
+				@include tab{
+					right: 3rem;
+				}
 			}
 			&:hover,&:focus{
 				color: $accordHeaderHover;

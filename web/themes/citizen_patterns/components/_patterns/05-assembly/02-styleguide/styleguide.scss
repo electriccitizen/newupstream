@@ -656,7 +656,7 @@ $subGroupHeaderBack  : $darkGrey;
 	max-width: $contentStop + 40px;
 	@include auto;
 }
-#composites-section{
+#composites-pl-sections{
 	.paragraphs-layout{
 		max-width: 100%;
 	}
@@ -728,5 +728,14 @@ $subGroupHeaderBack  : $darkGrey;
 	}
 }//end video
 
-
+//section
+.section-options{
+	.options-inner{
+		@include safeFlex(row,wrap,start,start);
+		@include bleed(padding,20px);
+		.form-item{
+			max-width: 250px;
+		}
+	}
+}//end section options
 
