@@ -4,13 +4,11 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.paragraph.preview
-    - field.field.paragraph.pullquote.field_quote
     - field.field.paragraph.pullquote.field_source
     - field.field.paragraph.pullquote.field_widget_title
     - paragraphs.paragraphs_type.pullquote
   module:
     - layout_builder
-    - text
 third_party_settings:
   layout_builder:
     enabled: false
@@ -21,14 +19,7 @@ id: paragraph.pullquote.preview
 targetEntityType: paragraph
 bundle: pullquote
 mode: preview
-content:
-  field_quote:
-    type: text_default
-    weight: 0
-    region: content
-    label: inline
-    settings: {  }
-    third_party_settings: {  }
+content: {  }
 hidden:
   field_source: true
   field_widget_title: true

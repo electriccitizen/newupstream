@@ -3,13 +3,11 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.pullquote.field_quote
     - field.field.paragraph.pullquote.field_source
     - field.field.paragraph.pullquote.field_widget_title
     - paragraphs.paragraphs_type.pullquote
   module:
     - layout_builder
-    - text
 third_party_settings:
   layout_builder:
     sections: {  }
@@ -22,13 +20,6 @@ targetEntityType: paragraph
 bundle: pullquote
 mode: default
 content:
-  field_quote:
-    weight: 1
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
-    region: content
   field_source:
     weight: 2
     label: hidden
