@@ -6477,8 +6477,8 @@ body:not(.role-administrator) .admin-list li.social-media-links {
 .field--widget-paragraphs .paragraph-top .paragraph-type.form-wrapper.links-files .paragraph-type-label {
   background-image: url("../images/icons/paragraphs/link.svg"); }
 
-.field--widget-paragraphs .paragraph-top .paragraph-type.form-wrapper.pullquote .paragraph-type-label, .field--widget-paragraphs .paragraphs-tabs-wrapper input.form-submit:not(.image-button)[value="Add Pullquote"] {
-  background-image: url("../images/icons/paragraphs/pullquote.svg"); }
+.field--widget-paragraphs .paragraph-top .paragraph-type.form-wrapper.pullquote .paragraph-type-label, .field--widget-paragraphs .paragraphs-tabs-wrapper input.form-submit:not(.image-button)[value="Add Quote"] {
+  background-image: url("../images/icons/paragraphs/quote.svg"); }
 
 .field--widget-paragraphs .paragraph-top .paragraph-type.form-wrapper.text .paragraph-type-label, .field--widget-paragraphs .paragraphs-tabs-wrapper input.form-submit:not(.image-button)[value="Add Text"] {
   background-image: url("../images/icons/paragraphs/text.svg"); }
@@ -6540,19 +6540,17 @@ body:not(.role-administrator) .admin-list li.social-media-links {
   font-weight: 700; }
 
 .field--widget-paragraphs .paragraphs-tabs-wrapper input.button.field-add-more-submit:hover, .field--widget-paragraphs .paragraphs-tabs-wrapper input.button.field-add-more-submit:focus {
-  border-color: #026cc5;
-  box-shadow: inset 0 0 0 0.05rem #026cc5;
-  background-color: #f6f6f6 !important; }
+  border-color: #cccccc;
+  background-color: #cccccc !important; }
 
 .field--widget-paragraphs .paragraphs-tabs-wrapper input.button.field-add-more-submit:active {
-  border-color: #121212;
-  box-shadow: inset 0 0 0 0.05rem #121212;
-  background-color: #ededed !important; }
+  border-color: #b3b3b3;
+  background-color: #b3b3b3 !important; }
 
 .field--widget-paragraphs .paragraphs-tabs-wrapper .clearfix {
   margin-bottom: 2em; }
 
-.field--widget-paragraphs .paragraphs-tabs-wrapper input.form-submit:not(.image-button)[value="Add Pullquote"] {
+.field--widget-paragraphs .paragraphs-tabs-wrapper input.form-submit:not(.image-button)[value="Add Quote"] {
   background-position: 7px 6px;
   background-size: 20px 20px; }
 

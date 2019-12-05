@@ -29,7 +29,7 @@
 	background-image: url('../images/icons/paragraphs/link.svg');
 }
 %quote{
-	background-image: url('../images/icons/paragraphs/pullquote.svg');
+	background-image: url('../images/icons/paragraphs/quote.svg');
 }
 %text{
 	background-image: url('../images/icons/paragraphs/text.svg');
@@ -161,14 +161,12 @@
 			  font-weight: $heavy;
 			}
 			&:hover,&:focus{
-				border-color: $formElementBorderHover;
-				box-shadow: inset 0 0 0 .05rem $formElementBorderHover;
-  			background-color: $offWhite !important;
+				border-color: $buttonBackHover;
+  			background-color: $buttonBackHover !important;
 			}
 			&:active{
-				border-color: $formElementBorderFocus;
-				box-shadow: inset 0 0 0 .05rem $formElementBorderFocus;
-  			background-color: $lightGrey !important;
+				border-color: $buttonBackActive;
+  			background-color: $buttonBackActive !important;
 			}
 		}
 		.clearfix{
@@ -199,7 +197,7 @@
 			&[value="Add Links & Files"]{
 			  @extend %image;
 			}
-			&[value="Add Pullquote"]{
+			&[value="Add Quote"]{
 			  @extend %quote;
 			  background-position: 7px 6px;
 			  background-size: 20px 20px;

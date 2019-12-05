@@ -5,7 +5,7 @@ dependencies: {  }
 _core:
   default_config_hash: gDuVmsYqqJ5O0fWK-BtniYeLfxlreTdd_nxfJ6gxsgk
 id: pullquote
-label: Pullquote
+label: Quote
 icon_uuid: null
 description: 'Displays text with stylized quotation marks and an optional source'
 behavior_plugins: {  }
