@@ -232,6 +232,7 @@ $(".gallery-type.lightbox").each(function(){
 		});
 	});
 });
+
 //Slider
 $(".gallery-type.slider").each(function(){
 	$(document).ready(function(){
@@ -241,4 +242,24 @@ $(".gallery-type.slider").each(function(){
 			autoplaySpeed: 5000
 		});
 	});
+});
+
+// Links & Files
+$(document).ready(function(){  
+	//hide any items past the default number displayed
+	var count = $('#lf-numbers').val();
+	var lastShown = $('#composites-pl-links-files .lf-item[data-item="' + count + '"]');
+	lastShown.nextAll().hide();
+});
+$('#lf-numbers').change(function(){
+	//when the current number displayed changes, show it and all previous and hide all the rest
+	var count = $('#lf-numbers').val();
+	var lastShown = $('#composites-pl-links-files .lf-item[data-item="' + count + '"]');
+	lastShown.fadeIn(200).prevAll().fadeIn(200).end().nextAll().fadeOut(200);
+	//reset the multi-col class depending on the count
+	if(count < 5){
+		$('#composites-pl-links-files .links-files').removeClass('multi-col');
+	}else{
+		$('#composites-pl-links-files .links-files').addClass('multi-col');
+	}
 });

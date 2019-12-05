@@ -85,6 +85,14 @@ img{
 		height: 18px;
 	}
 }
+span.file{
+	a{
+		@extend %docIcons;
+		&:before{
+			@include docGeneric;
+		}
+	}
+}
 .text-with-summary,.text-long,span.file{
 	a[href$='.pdf']{
 		@extend %docIcons;

@@ -18,6 +18,10 @@ $plIcon: 70px;
 
 ///used in MEDIA.SCSS
 $docIcon: 18px;
+@mixin docGeneric{
+	@include sprite-generic;
+	@include backgroundSize($columns * $docIcon,$rows * $docIcon);
+}
 @mixin docPDF{
 	@include sprite-pdf;
 	@include backgroundSize($columns * $docIcon,$rows * $docIcon);

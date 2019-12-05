@@ -36,50 +36,35 @@
  * @ingroup themeable
  */
 #}
-{% extends "paragraph.html.twig" %}
 
+{% embed '@composites/02-paragraphs/00-base/_paragraph.twig' 
+	with{
+		type: paragraph.bundle|clean_class,
+		viewMode: view_mode|clean_class,
+		id: paragraph.id.value,
+		sectionTitle: '',
+		sectionIntro: '',
+		widgetTitle: content.field_widget_title.0['#context'].value,
+	}
+%}
+	{% block widgetContent %}
+		{% embed "@composites/02-paragraphs/07-links-files/_links-files.twig"
+			with{
+				links: content.field_link_multi,
+				files: content.field_file_multi['#items'],
+			}
+		%}
 
-{# NOTES
-------------
-	This template extends the parent paragraphs.html.twig by bringing in the entire content of a widget and wrapping it with the background style selected by the user. If no style is set, then it just prints the content. 
+			{% block link %}
+				<a href="{{ link['#url'] }}">
+					{{- link['#title'] -}}
+				</a>
+			{% endblock %}
 
-	{{ bgImage }} and {{ special }} are global variables extended from paragraphs.html.twig
+			{% block file %}
+				{{ drupal_entity('media', file.entity.id, 'default') }}
+			{% endblock %}
 
-	This template also embeds the links-files.twig template from pattern lab 
-#}
-
-{% block widgetContent %}
-	
-	{% embed "@composites/02-paragraphs/07-links-files/links-files.twig"
-		with{
-			widget_title: content.field_widget_title.0['#context'].value
-		}
-	%}
-		{% block plwidgetopen %}{# patternlab specifc html #}{% endblock %}
-
-		{% block links %}
-			{%- if content.field_link_multi.0 or content.field_file_multi.0 -%}
-				{% set count = 0%}
-				{%- for key, link in content.field_link_multi if key|first != "#" -%}
-					{% set count = count + 1 %}
-				{% endfor %}
-				{%- for key, file in content.field_file_multi['#items'] if key|first != "#" -%}
-					{% set count = count + 1 %}
-				{% endfor %}
-				<div class="field links-files{% if count > 3 %} multi-col{% endif %}">
-					{%- for key, link in content.field_link_multi if key|first != "#" -%}
-						<div class="lf-item"><a href="{{ link['#url'] }}">{{ link['#title'] }}</a></div>
-					{%- endfor -%}
-					{%- for key, file in content.field_file_multi['#items'] if key|first != "#" -%}
-						<div class="lf-item">{{ drupal_entity('media', file.entity.id, 'default') }}</div>
-					{%- endfor -%}
-				</div>
-			{%- endif -%}
-		{% endblock %}
-
-		{% block plwidgetclose %}{# patternlab specifc html #}{% endblock %}
-
-	{% endembed %}
-
-{% endblock %}
-
+		{% endembed %}
+	{% endblock %}
+{% endembed %}

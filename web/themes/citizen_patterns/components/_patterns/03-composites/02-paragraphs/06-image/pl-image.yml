@@ -2,7 +2,7 @@
 type:
   image
 widgetTitle:
-  'Image Widget'
+  'Display images in various sizes'
 # sizes are: default (Original, whatever is defined in src), full, large, medium, small
 size:
   default

@@ -4,7 +4,7 @@ type:
 
 #widget variables
 widgetTitle:
-  'Accordion Group'
+  'Responsive and accessible accordions'
 accordionGroup:
   1:
     accordionHeader:
