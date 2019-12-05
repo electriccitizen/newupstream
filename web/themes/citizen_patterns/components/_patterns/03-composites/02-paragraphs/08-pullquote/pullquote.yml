@@ -1,11 +1,10 @@
-widget_title:
-  "Pullquote"
+type:
+  pullquote
+widgetTitle:
+  'Quotes with optional source'
 
-quote:
-  "Quis Aristidem non mortuum diligit? Nummus in Croesi divitiis obscuratur, pars est tamen."
+quote: |
+  <p>Quis Aristidem non mortuum diligit? Nummus in Croesi divitiis obscuratur, pars est tamen.</p>
 source:
-  "Some Guy"
-
-quote_instructions:
-  "DRUPAL: This template is embedded into the Drupal pullquote paragraph template."
+  "Sum One"
 
