@@ -1,5 +1,5 @@
 {#
-	STYLEGUIDE:
+	STYLEGUIDE ONLY
 #}
 
 {% embed '@composites/02-paragraphs/00-base/_paragraphs-field-item.twig' %}
@@ -15,7 +15,7 @@
     		{% if quote %}
     			{% autoescape false %}
     				<div class="field field-quote text-long">
-	    				{{- quote -}}
+	    				{{ quote }}
 	    			</div>
     			{% endautoescape %}
     		{% endif %}

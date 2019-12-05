@@ -1,24 +1,26 @@
 {#
-	DRUPAL: This template is embedded into the Drupal text paragraph template.
+	STYLEGUIDE ONLY
 #}
 
-{{ text_instructions }}
+{% embed '@composites/02-paragraphs/00-base/_paragraphs-field-item.twig' %}
+  {% block paragraphItem %}
+    {% embed '@composites/02-paragraphs/00-base/_paragraph.twig' 
+      with{
+        sectionTitle: '',
+        sectionIntro: '',
+      }
+    %}
 
-{% block plwidgetopen %}
-	<div class="paragraph paragraph--type--text">
-{% endblock %}
+    	{% block widgetContent %}
+    		{% if text %}
+    			{% autoescape false %}
+    				<div class="field field-text text-long">
+	    				{{ text }}
+	    			</div>
+    			{% endautoescape %}
+    		{% endif %}
+    	{% endblock %}
 
-		{% if widget_title %}
-			<div class="widget-title">{{ widget_title }}</div>
-		{% endif %}
-
-		{% block text %}
-			<div class="field field-long-text">
-				<p>{{ text }}</p>
-				<p>{{ text_two }}</p>
-			</div>
-		{% endblock %}
-				
-{% block plwidgetclose %}
-	</div>
-{% endblock %}
+    {% endembed %}
+  {% endblock %}
+{% endembed %}
