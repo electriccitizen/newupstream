@@ -12,18 +12,7 @@
     %}
 
     	{% block widgetContent %}
-    		{% if quote %}
-    			{% autoescape false %}
-    				<div class="field field-quote text-long">
-	    				{{ quote }}
-	    			</div>
-    			{% endautoescape %}
-    		{% endif %}
-    		{% if source %}
-    			<div class="field field-source string">
-    				{{- source -}}
-    			</div>
-    		{% endif %}
+    		{% include '@composites/02-paragraphs/08-quote/_quote.twig' %}
     	{% endblock %}
 
     {% endembed %}

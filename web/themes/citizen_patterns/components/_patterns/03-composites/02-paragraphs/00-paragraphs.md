@@ -1,5 +1,5 @@
 ---
-title: Paragraphs
+title: Paragraph Widgets
 ---
 
-<h3 id="group-paragraphs" class="sub-group-title">Paragraphs</h3>
+<h3 id="group-paragraphs" class="sub-group-title">Widgets</h3>

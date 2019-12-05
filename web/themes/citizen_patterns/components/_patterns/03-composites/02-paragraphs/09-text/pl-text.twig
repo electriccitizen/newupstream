@@ -12,13 +12,7 @@
     %}
 
     	{% block widgetContent %}
-    		{% if text %}
-    			{% autoescape false %}
-    				<div class="field field-text text-long">
-	    				{{ text }}
-	    			</div>
-    			{% endautoescape %}
-    		{% endif %}
+    		{% include '@composites/02-paragraphs/09-text/_text.twig' %}
     	{% endblock %}
 
     {% endembed %}

@@ -38,17 +38,12 @@
  * @ingroup themeable
  */
 #}
-{%
-set classes = [
-'field-section-widgets',
-]
-%}
+{% extends '@composites/02-paragraphs/11-section/_section-items-field.twig' %}
 
-<div{{ attributes.addClass(classes) }}>
-	<div class="section-wrapper">
-		{%- for item in items -%}
-			{{- item.content -}}
-		{%- endfor -%}
-	</div>
-</div>
+{% block sectionItems %}
+	{%- for item in items -%}
+		{{- item.content -}}
+	{%- endfor -%}
+{% endblock %}
+
 
