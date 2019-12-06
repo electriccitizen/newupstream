@@ -9,12 +9,10 @@
 		padding-bottom: $elementSpace;
 	}
 	.view-content{
-		@include safeFlex(row,wrap,null,null);
-		@include bleed(padding,30px);
+		margin-bottom: -$spaceLg;
+		@include bleed(padding,40px);
 	}
 	.views-row{
-		width: 100%;
-		margin-bottom: $spaceLg;
 		text-align: center;
 		@include smallTab{
 			width: 50%;
@@ -25,17 +23,6 @@
 		@include desk{
 			width: 25%;
 		}
-	}
-
-	.views-field-field-profile-image{
-		margin-bottom: $spaceSm;
-	}
-
-	.views-field-title{
-		@include heading4;
-	}
-	.views-field-field-position{
-		@include textDate;
 	}
 }//end profiles
 

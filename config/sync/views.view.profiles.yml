@@ -76,7 +76,7 @@ display:
         type: default
         options:
           grouping: {  }
-          row_class: ''
+          row_class: vertical
           default_row_class: true
       row:
         type: fields
@@ -251,7 +251,7 @@ display:
             preserve_tags: ''
             html: false
           element_type: ''
-          element_class: ''
+          element_class: metatext
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false

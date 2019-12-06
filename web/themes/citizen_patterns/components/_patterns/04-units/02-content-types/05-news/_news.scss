@@ -29,7 +29,7 @@
 
 	.block-created{
 		@extend .block-field.block-title;
-		@include textDate;
+		@include metaText;
 	}
 
 	.block-field.block-body{

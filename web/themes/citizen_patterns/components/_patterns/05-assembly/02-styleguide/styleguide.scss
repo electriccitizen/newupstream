@@ -392,9 +392,9 @@ $subGroupHeaderBack  : $darkGrey;
 //these are elements that could not easily be hidden from pattern lab through _file-name
 
 
-/* SPECIAL PONIES
+/* PATTERN SPECIFIC
 ------------------------- */
-// special theming for specific patterns
+// unicorn theming for specific patterns
 
 /* COLOR SWATCHES */
 .sg-colors{
@@ -739,3 +739,54 @@ $subGroupHeaderBack  : $darkGrey;
 	}
 }//end section options
 
+/* CARDS */
+.views-element-container{
+	max-width: $contentStop;
+	@include auto;
+}
+.view-content{
+	&.grid{
+		margin-bottom: -$spaceLg;
+		@include bleed(padding,40px);
+	}
+	.views-row{
+		&.horizontal{
+			&:nth-child(n+4){
+				display: none;
+			}
+			@include breakpoint(500px){
+				display: block;
+				.views-field-field-banner{
+					width: 100%;
+					padding-right: 0;
+					margin-bottom: $spaceSm;
+				}
+				.views-field-nothing{
+					width: 100%;
+				}
+			}
+			@include breakpoint(620px){
+				@include safeFlex(row,wrap,start,start);
+				.views-field-field-banner{
+					width: 340px;
+					padding-right: 40px;
+					margin-bottom: 0;
+				}
+				.views-field-nothing{
+					@include calc(width,"100% - 340px");
+				}
+			}
+		}
+		&.vertical{
+			@include smallTab{
+				width: 100%;
+			}
+			@include tab{
+				width: 50%;
+			}
+			@include desk{
+				width: 33.33%;
+			}
+		}
+	}//end views row
+}//end view content

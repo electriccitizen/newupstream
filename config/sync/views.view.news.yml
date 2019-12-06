@@ -79,7 +79,7 @@ display:
         type: default
         options:
           grouping: {  }
-          row_class: ''
+          row_class: horizontal
           default_row_class: true
       row:
         type: fields
@@ -165,7 +165,7 @@ display:
           exclude: true
           alter:
             alter_text: true
-            text: '<div class="date">{{ created }}</div>'
+            text: '<div class="metatext">{{ created }}</div>'
             make_link: false
             path: ''
             absolute: false
@@ -335,7 +335,7 @@ display:
           click_sort_column: target_id
           type: entity_reference_entity_view
           settings:
-            view_mode: large_thumb
+            view_mode: views_card
           group_column: target_id
           group_columns: {  }
           group_rows: true
@@ -358,7 +358,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"title\">{{ title }}</div>\r\n{{ created }}\r\n{{ body }}\r\n"
+            text: "<div class=\"title\">{{ title }}</div>\r\n{{ created }}\r\n{% if body %}\r\n<div class=\"body\">{{ body }}</div>\r\n{% endif %}\r\n"
             make_link: false
             path: ''
             absolute: false

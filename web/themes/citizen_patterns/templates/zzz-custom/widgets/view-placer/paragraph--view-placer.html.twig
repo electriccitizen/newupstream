@@ -37,15 +37,21 @@
  */
 #}
 
-{% extends "paragraph.html.twig" %}
-
-{# print the content without the styling fields #}
-{% block widgetContent %}
-	{{ content.field_widget_title }}
-	{% set viewName = content.field_view_machine_name.0['#context'].value|clean_class %}
-	{% set displayName = content.field_display_machine_name.0['#context'].value|clean_class %}
-	<div class="view-widget widget-{{ viewName }} {{ displayName }}">
-		{# print the content without the styling fields #}
-	    {{- content.field_display_machine_name -}}
-	</div>			
-{% endblock %}	
+{% embed '@composites/02-paragraphs/00-base/_paragraph.twig' 
+	with{
+		type: paragraph.bundle|clean_class,
+		viewMode: view_mode|clean_class,
+		id: paragraph.id.value,
+		sectionTitle: '',
+		sectionIntro: '',
+		widgetTitle: content.field_widget_title.0['#context'].value,
+	}
+%}
+	{% block widgetContent %}
+		{% set viewName = content.field_view_machine_name.0['#context'].value|clean_class %}
+		{% set displayName = content.field_display_machine_name.0['#context'].value|clean_class %}
+		<div class="view-widget widget-{{ viewName }} {{ displayName }}">
+		    {{- content.field_display_machine_name -}}
+		</div>			
+	{% endblock %}	
+{% endembed %}

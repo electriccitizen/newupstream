@@ -70,7 +70,9 @@ $pagerLine: 2.4rem;
 	border-top: 1px solid $borderRule;
 	padding-top: $spaceSm;
 	@include safeFlex(row,wrap,center,center);
-
+	.view-content + &{
+		margin-top: $spaceXl;
+	}
 	.pager__item{
 		a{
 			@include pagerItemStyle;

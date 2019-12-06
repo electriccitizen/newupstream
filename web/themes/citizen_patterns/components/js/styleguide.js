@@ -292,3 +292,18 @@ $('#section-layout').change(function(){
 	$('#composites-pl-sections .field-paragraphs > .section').fadeTo(500,100);
 });
 
+/* CARDS
+------------------- */
+//views 
+$('#card-type').change(function(){
+	var chosen = $(this).find('option:selected').val();
+	$('#composites-views .view-content').fadeTo(200,0, function() {
+		if(chosen == 'horizontal'){
+			$(this).delay(200).removeClass('grid').find('.views-row').removeClass('vertical').addClass('horizontal');
+		}else{
+			$(this).delay(200).addClass('grid').find('.views-row').removeClass('horizontal').addClass('vertical');
+		}
+	});
+	$('#composites-views .view-content').fadeTo(500,100);
+});
+

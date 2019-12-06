@@ -12,14 +12,14 @@
         "alt": "Square"
       },
       "rectangle": {
-        "src": "http://placeimg.com/400/300/tech",
+        "src": "http://placeimg.com/400/320/animals",
         "alt": "Rectangle"
       },
-      "landscape-4x3": {
+      "landscape4x3": {
         "src": "http://placeimg.com/400/300/tech",
         "alt": "4x3 Image"
       },
-      "landscape-16x9": {
+      "landscape16x9": {
         "src": "http://placeimg.com/640/360/tech",
         "alt": "16x9 Image"
       }
@@ -50,7 +50,8 @@
     "month": {
       "long": "January",
       "short": "Jan",
-      "digit": "01"
+      "digit": "01",
+      "digitShort": "1"
     },
     "dayofweek": {
       "long": "Sunday",
@@ -86,14 +87,14 @@
         "alt": "Square"
       },
       "rectangle": {
-        "src": "http://placeimg.com/400/300/people",
+        "src": "http://placeimg.com/400/320/people",
         "alt": "Rectangle"
       },
-      "landscape-4x3": {
+      "landscape4x3": {
         "src": "http://placeimg.com/400/300/people",
         "alt": "4x3 Image"
       },
-      "landscape-16x9": {
+      "landscape16x9": {
         "src": "http://placeimg.com/640/360/people",
         "alt": "16x9 Image"
       }
@@ -124,7 +125,8 @@
     "month": {
       "long": "February",
       "short": "Feb",
-      "digit": "02"
+      "digit": "02",
+      "digitShort": "2"
     },
     "dayofweek": {
       "long": "Monday",
@@ -160,14 +162,14 @@
         "alt": "Square"
       },
       "rectangle": {
-        "src": "http://placeimg.com/400/300/nature",
+        "src": "http://placeimg.com/400/320/nature",
         "alt": "Rectangle"
       },
-      "landscape-4x3": {
+      "landscape4x3": {
         "src": "http://placeimg.com/400/300/nature",
         "alt": "4x3 Image"
       },
-      "landscape-16x9": {
+      "landscape16x9": {
         "src": "http://placeimg.com/640/360/nature",
         "alt": "16x9 Image"
       }
@@ -198,7 +200,8 @@
     "month": {
       "long": "March",
       "short": "Mar",
-      "digit": "03"
+      "digit": "03",
+      "digitShort": "3"
     },
     "dayofweek": {
       "long": "Tuesday",
@@ -234,14 +237,14 @@
         "alt": "Square"
       },
       "rectangle": {
-        "src": "http://placeimg.com/400/300/people/grayscale",
+        "src": "http://placeimg.com/400/320/people/grayscale",
         "alt": "Rectangle"
       },
-      "landscape-4x3": {
+      "landscape4x3": {
         "src": "http://placeimg.com/400/300/people/greyscale",
         "alt": "4x3 Image"
       },
-      "landscape-16x9": {
+      "landscape16x9": {
         "src": "http://placeimg.com/640/360/people/greyscale",
         "alt": "16x9 Image"
       }
@@ -272,7 +275,8 @@
     "month": {
       "long": "April",
       "short": "Apr",
-      "digit": "04"
+      "digit": "04",
+      "digitShort": "4"
     },
     "dayofweek": {
       "long": "Wednesday",
@@ -308,14 +312,14 @@
         "alt": "Square"
       },
       "rectangle": {
-        "src": "http://placeimg.com/400/300/arch",
+        "src": "http://placeimg.com/400/320/arch",
         "alt": "Rectangle"
       },
-      "landscape-4x3": {
+      "landscape4x3": {
         "src": "http://placeimg.com/400/300/arch",
         "alt": "4x3 Image"
       },
-      "landscape-16x9": {
+      "landscape16x9": {
         "src": "http://placeimg.com/640/360/arch",
         "alt": "16x9 Image"
       }
@@ -346,7 +350,8 @@
     "month": {
       "long": "May",
       "short": "May",
-      "digit": "05"
+      "digit": "05",
+      "digitShort": "5"
     },
     "dayofweek": {
       "long": "Thursday",
@@ -378,18 +383,18 @@
         "alt": "Avatar"
       },
       "square": {
-        "src": "http://placeimg.com/300/300/animals",
+        "src": "http://placeimg.com/300/300/people",
         "alt": "Square"
       },
       "rectangle": {
-        "src": "http://placeimg.com/400/300/people/grayscale",
+        "src": "http://placeimg.com/400/320/people/grayscale",
         "alt": "Rectangle"
       },
-      "landscape-4x3": {
+      "landscape4x3": {
         "src": "http://placeimg.com/400/300/people/grayscale",
         "alt": "4x3 Image"
       },
-      "landscape-16x9": {
+      "landscape16x9": {
         "src": "http://placeimg.com/640/360/people/grayscale",
         "alt": "16x9 Image"
       }
@@ -420,7 +425,8 @@
     "month": {
       "long": "June",
       "short": "Jun",
-      "digit": "06"
+      "digit": "06",
+      "digitShort": "6"
     },
     "dayofweek": {
       "long": "Friday",

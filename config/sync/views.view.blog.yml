@@ -64,7 +64,7 @@ display:
         type: default
         options:
           grouping: {  }
-          row_class: ''
+          row_class: vertical
           default_row_class: true
       row:
         type: fields
@@ -438,6 +438,7 @@ display:
       filter_groups:
         operator: AND
         groups: {  }
+      css_class: ''
     cache_metadata:
       max-age: -1
       contexts:
@@ -860,7 +861,7 @@ display:
           click_sort_column: target_id
           type: entity_reference_entity_view
           settings:
-            view_mode: large_thumb
+            view_mode: views_card
           group_column: target_id
           group_columns: {  }
           group_rows: true
@@ -883,7 +884,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"title\">{{ title }}</div>\r\n<div class=\"metatext\"><span class=\"date\">{{ created }}</span>{{ field_author }}</div>\r\n{% if body %}\r\n<div class=\"views-field-body\">{{ body }}</div>\r\n{% endif %}\r\n{% if field_tags %}\r\n<div class=\"views-field-field-tags\">\r\n <span class=\"views-field-label inline-label\">Tags:</span>\r\n  {{ field_tags }}\r\n</div>\r\n{% endif %}"
+            text: "<div class=\"title\">{{ title }}</div>\r\n<div class=\"metatext\"><span class=\"date\">{{ created }}</span>{{ field_author }}</div>\r\n{% if body %}\r\n<div class=\"body\">{{ body }}</div>\r\n{% endif %}\r\n{% if field_tags %}\r\n<div class=\"views-field-field-tags\">\r\n <span class=\"views-field-label inline-label\">Tags:</span>\r\n  {{ field_tags }}\r\n</div>\r\n{% endif %}"
             make_link: false
             path: ''
             absolute: false

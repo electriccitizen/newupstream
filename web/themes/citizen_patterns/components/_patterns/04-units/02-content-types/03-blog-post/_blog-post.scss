@@ -22,7 +22,7 @@
 
 	.block-field.block-title{
 		.metatext{
-			@include textDate;
+			@include metaText;
 			@include tab{
 				color: $white;
 			}

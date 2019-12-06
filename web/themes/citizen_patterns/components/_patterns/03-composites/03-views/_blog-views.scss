@@ -12,40 +12,20 @@
 	}
 	
 	.view-content{
-		@include safeFlex(row,wrap,null,null);
-		@include bleed(padding,30px);
-	}
-
-	.views-row{
-		width: 100%;
-		margin-bottom: $spaceLg;
-		@include smallTab{
-			width: 50%;
+		margin-bottom: -$spaceLg;
+		@include bleed(padding,40px);
+		.views-row{
+			@include smallTab{
+				width: 50%;
+			}
+			@include desk{
+				width: 33.333%;
+			}
 		}
-		@include tab{
-			width: 33.33%;
-		}
-	}
-
-	.views-field-field-banner{
-		margin-bottom: $spaceSm;
 	}
 
 	//date and author
 	.views-field-nothing{
-		.title{
-			@include heading4;
-			margin-bottom: $spaceXs;
-		}
-		.metatext{
-			@include textDate;
-			margin-bottom: $spaceXs;
-		}
-		.views-field-body{
-			&:not(:last-child){
-				margin-bottom: $spaceXs;
-			}
-		}
 		.views-field-field-tags{
 			font-size: 1.6rem;
 			.inline-label{
