@@ -2,7 +2,7 @@
 	SITE HEADER
 =================== */
 
-.layout-container > header {
+.site-header {
 	background: $headerBack;
 	& > div{
 		padding: 20px $siteMarginMobile;
@@ -46,16 +46,11 @@
 	@include desk{
 		@include calc(width, "100% - 240px");
 	}
-
 	//search toggler
 	.t-search{
 		position: absolute;
 		top: 18px;
 		right: 20px;
-		@include desk{
-			top: 13px;
-			right: 25px;
-		}
 	}
 }//end search block
 

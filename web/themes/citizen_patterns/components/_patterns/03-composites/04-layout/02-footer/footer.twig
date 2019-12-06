@@ -1,88 +1,81 @@
 {#
-STYLEGUIDE ONLY: This template is not embedded into Drupal.
-NOTE: The blocks below are meant to simulate common drupal footer blocks.
-If there are different blocks in the Drupal footer, or they are named differently,
-that markup will need be changed in their pl twig files.
-Available macro variables: fixed, non-fixed.
+	 DRUPAL-ISH: This template is inherited into the _page.twig template which is inherited into Drupal.
 #}
 
-
-{% block footerStart %}
-{{ footer_instructions }}
-{% endblock %}
-
-{% block preFooterContent %}
-<section role="prefooter" class="prefooter">
-	<div class="prefooter-inner">	
-		<div>
-			{% if about %}
-				<div class="block-2">
-					{% autoescape false %}
-						{{ about }}
-					{% endautoescape %}
-				</div>
-			{% endif %}
-			{% if menu %}
-				{% include "@composites/01-blocks/04-footer/_footer-menu.twig" %}
-			{% endif %}
-
-			{% if newsletter %}
-				<div class="block-newsletter">
-					{% include "@composites/01-blocks/05-newsletter/_newsletter.twig" 
+{% if prefooter %}
+	{% embed '@composites/04-layout/02-footer/_prefooter.twig' %}
+		{% block prefooterContent %}
+			<div>
+				{% if prefooter.about %}
+					{% embed '@composites/01-blocks/_00-block.twig' 
 						with{
-							plLabel: newsletter.plLabel,
-							intro: newsletter.intro,
-							embedForm: newsletter.embedForm,
-							modal: newsletter.modal,
-							modalHeader: newsletter.modalHeader,
-							modalTrigger: newsletter.modalTrigger,
-							modalIntro: newsletter.modalIntro
+							classes: 'block-2'
 						}
 					%}
-				</div>
-			{% endif %}
-		</div>
-	</div>
-</sectionr>
-{% endblock %}
+						{% block blockContent %}
+							<div class="field body text-with-summary">
+								{% autoescape false %}
+									{{ prefooter.about }}
+								{% endautoescape %}
+							</div>
+						{% endblock	%}
+					{% endembed %}
+				{% endif %}
+				{% if prefooter.menu %}
+					{% include "@composites/01-blocks/04-footer/_footer-menu.twig" 
+						with{
+							classes: 'block--system-menu block-footer-menu',
+							label: prefooter.menu.label,
+							links: prefooter.menu.links
+						}
+					%}
+				{% endif %}
+				{% if prefooter.newsletter %}
+					{% include "@composites/01-blocks/05-newsletter/pl-newsletter.twig" 
+						with{
+							classes: 'block-newsletter',
+							label: prefooter.newsletter.label,
+							intro: prefooter.newsletter.intro,
+							embedForm: prefooter.newsletter.embedForm,
+							modal: prefooter.newsletter.modal,
+							modalHeader: prefooter.newsletter.modalHeader,
+							modalTrigger: prefooter.newsletter.modalTrigger,
+							modalIntro: prefooter.newsletter.modalIntro
+						}
+					%}
+				{% endif %}
+			</div>
+		{% endblock %}
+	{% endembed %}
+{% endif %}
 
-{% block footerContent %}
-<footer role="contentinfo" class="pl-spacer">
+
+<footer role="contentinfo" class="site-footer">
 	<div class="footer-inner">	
-		<div>
-			{% if socialMedia %}
-				<div class="block-social-media-links">
-					{% if socialMedia.plLabel %}
-						<h2 class="block-title">{{ socialMedia.plLabel }}</h2>
-					{% endif %}
-					{% if socialMedia.intro %}
-						<div class="field body">
-							{% autoescape false %}
-								{{ socialMedia.intro }}
-							{% endautoescape %}
-						</div>
-					{% endif %}
-					{% if socialMedia.platforms %}
-						<div class="field field-platforms link">
-							<ul class="platform-links">
-								{% for platform in socialMedia.platforms %}
-									{% include "@parts/08-fields/01-social-platforms/_field-platforms.twig" 
-										with{
-											url: platform,
-										}
-									%}
-								{% endfor %}
-							</ul>
-						</div>
-					{% endif %}
-				</div>
-			{% endif %}
-			{% if copyright %}
-				<div class="block-1">
-					{% include "@composites/01-blocks/04-footer/_footer-copyright.twig" %}
-				</div>
-			{% endif %}
-		</div>
+		{% block footerContent %}
+			<div>
+				{% if socialMedia %}
+					{% include '@composites/01-blocks/06-social-media-links/social-media-links.twig' 
+						with{
+							classes: 'block-social-media-links',
+							platforms: socialMedia.platforms 
+						}
+					%}
+				{% endif %}
+				{% if copyright %}
+					{% embed '@composites/01-blocks/_00-block.twig' 
+						with{
+							classes: 'block-1'
+						}
+					%}
+						{% block blockContent %}
+							{% include "@composites/01-blocks/04-footer/_footer-copyright.twig" %}
+						{% endblock	%}
+					{% endembed %}
+				{% endif %}
+			</div>
+		{% endblock %}
 	</div>
 </footer>
-{% endblock %}
+
+

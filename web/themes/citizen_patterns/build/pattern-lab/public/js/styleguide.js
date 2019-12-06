@@ -176,7 +176,7 @@ $('.t-search-close').click(function(){
 
 /* NEWSLETTER
 ------------------- */
-$('.block-newsletter .modal-trigger').click(function(){
+$('#composites-pl-newsletter .block-newsletter .modal-trigger').click(function(){
 	$('#newsletter-modal').show(0).find('.modal-inner').fadeIn(400);
 });
 $('.block-newsletter .modal-close').click(function(){
@@ -307,3 +307,9 @@ $('#card-type').change(function(){
 	$('#composites-views .view-content').fadeTo(500,100);
 });
 
+/* LAYOUT
+--------------- */
+//footer
+$('.site-footer a').click(function(e){
+	e.preventDefault();
+});

@@ -1,16 +1,13 @@
 {#
- Drupal: This file is embedded in the site-footer.twig pattern lab file.
+ STYLEGUIDE ONLY
 #}
 
-<div class="block block--system-menu block-footer-menu">
-	{% if menuTitle %}
-		<h2 class="block-title">{{ menuTitle }}</h2>
-	{% endif %}
-	{% block footer_menu %}
-		<ul>
-			{% for link in menu %}
-				<li><a href="{{ link_url }}">{{ link.link_text }}</a></li>
-			{% endfor %}
-		</ul>
-	{% endblock %}
-</div>
+{% extends '@composites/01-blocks/_00-block.twig' %}
+
+{% block blockContent %}
+	<ul>
+		{% for link in links %}
+			<li><a href="{{ link.url }}">{{ link.text }}</a></li>
+		{% endfor %}
+	</ul>
+{% endblock %}

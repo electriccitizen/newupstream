@@ -1,47 +1,64 @@
-footer_fixed_alert:
-  "The footer is currenty fixed at the bottom of the screen."
 
-about: |
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Atqui iste locus est, Piso, tibi etiam atque etiam confirmandus, inquam; Quia dolori non voluptas contraria est, sed doloris privatio. Cupiditates non Epicuri divisione finiebat, sed sua satietate. Apparet statim, quae sint officia, quae actiones.</p>
+prefooter:
+  about: |
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Atqui iste locus est, Piso, tibi etiam atque etiam confirmandus, inquam; Quia dolori non voluptas contraria est, sed doloris privatio. Cupiditates non Epicuri divisione finiebat, sed sua satietate. Apparet statim, quae sint officia, quae actiones.</p>
+  menu:
+    label:
+      'Quicklinks'
+    links:
+      1:
+        text:
+          "Contact"
+        url:
+          "#"
+      2:
+        text:
+          "Directions"
+        url:
+          "#"
+      3:
+        text:
+          "Policies"
+        url:
+          "#"
+  # if changed, these values should also be updated in the pl-newsletter.yml file
+  newsletter:
+    label:
+      "Stay in Touch"
+    intro: |
+      <p>Learn about breaking changes and the latest news.</p>
+    embedForm: |
+      <link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
+      <style type="text/css">
+        #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+        /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+           We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+      </style>
+      <div id="mc_embed_signup">
+        <form action="https://alphafox-design.us11.list-manage.com/subscribe/post?u=9e6e7f117cc33d5901f2c9ad0&amp;id=02c18215cc" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+            <div id="mc_embed_signup_scroll">
+          <label for="mce-EMAIL">Subscribe to our mailing list</label>
+          <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_9e6e7f117cc33d5901f2c9ad0_02c18215cc" tabindex="-1" value=""></div>
+            <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+            </div>
+        </form>
+      </div>
+    modal:
+      "On"
+    modalTrigger:
+      "Signup today!"
+    modalHeader:
+      "Newsletter PL Block"
+    modalIntro:
+      "We're glad you've decided to stay in touch."
 
 copyright:
   "Electric Citizen LLC, All Rights Reserved."
 
-# if changed, these values should also be updated in the pl-newsletter.yml file
-newsletter:
-  plLabel:
-    "Stay in Touch in Pattern lab"
-  intro: |
-    <p>Learn about breaking changes and the latest news.</p>
-  embedForm: |
-    <link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
-    <style type="text/css">
-      #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
-      /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
-         We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-    </style>
-    <div id="mc_embed_signup">
-      <form action="https://alphafox-design.us11.list-manage.com/subscribe/post?u=9e6e7f117cc33d5901f2c9ad0&amp;id=02c18215cc" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-          <div id="mc_embed_signup_scroll">
-        <label for="mce-EMAIL">Subscribe to our mailing list</label>
-        <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
-          <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-          <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_9e6e7f117cc33d5901f2c9ad0_02c18215cc" tabindex="-1" value=""></div>
-          <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-          </div>
-      </form>
-    </div>
-  modal:
-    "On"
-  modalTrigger:
-    "Signup today!"
-  modalHeader:
-    "Newsletter PL Block"
-  modalIntro:
-    "We're glad you've decided to stay in touch."
-
 socialMedia:
-  plLabel:
+  label:
   intro:
   platforms:
     1: 
@@ -52,27 +69,4 @@ socialMedia:
       "https://www.linkedin.com"
     4: 
       "https://www.youtube.com"
-
-menuTitle:
-  'Quicklinks'
-menu:
-  1:
-    link_text:
-      "Contact"
-    link_url:
-      "#"
-  2:
-    link_text:
-      "Directions"
-    link_url:
-      "#"
-  3:
-    link_text:
-      "Policies"
-    link_url:
-      "#"
-
-footer_instructions:
-  "STYLEGUIDE ONLY: This template is not embedded into Drupal, but the blocks will work in both."
-
   

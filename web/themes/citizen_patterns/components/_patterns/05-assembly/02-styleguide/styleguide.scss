@@ -473,8 +473,8 @@ $subGroupHeaderBack  : $darkGrey;
 
 /* SUPERFISH MAIN NAV */
 .block-superfishmain{
-	position: relative;
 	#chunks-superfish &{
+		position: relative;
 		padding-left: 0;
 		min-height: 40px;
 	}
@@ -543,8 +543,10 @@ $subGroupHeaderBack  : $darkGrey;
 		}//end sf-main
 	}//end ul
 	#superfish-main-toggle{
-		font-size: 28px;
 		color: $black;
+		i{
+			font-size: 28px;
+		}
 		#chunks-superfish &{
 			right: auto;
 			left: 0;

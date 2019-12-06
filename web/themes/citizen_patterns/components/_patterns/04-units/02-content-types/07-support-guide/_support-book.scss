@@ -9,7 +9,7 @@
 
 	//restricted access message
 	&:not(.logged-in){
-		.layout-container > main{
+		.main-page-content{
 			position: relative;
 		}
 		.restricted{
