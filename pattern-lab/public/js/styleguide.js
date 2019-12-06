@@ -54,7 +54,7 @@ $(document).ready(function(){
 
 /* SF MOBILE FAKE
 ------------------- */
-$('#superfish-main-toggle').click(function(){
+$('#chunks-superfish #superfish-main-toggle').click(function(){
 	if(!$(this).is('.sf-expanded')){
 		$(this).addClass('sf-expanded').find('.fas').removeClass('fa-bars').addClass('fa-times-circle');
 		$('.sf-accordion').show().addClass('sf-expanded');
@@ -165,7 +165,7 @@ $('#pager-numbers').change(function(){
 
 /* SEARCH
 ------------------- */
-$('.t-search').click(function(){
+$('#composites-pl-search-block .t-search').click(function(){
 	$('#search-form-wrapper').slideDown(300);
 	$('.t-search-close').delay(300).fadeIn(300);
 });
