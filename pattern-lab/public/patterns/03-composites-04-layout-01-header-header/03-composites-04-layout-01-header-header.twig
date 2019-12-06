@@ -8,8 +8,9 @@
 	<a href="#main-content" class="visually-hidden focusable">
 		{%- trans %}Skip to main content{% endtrans -%}
 	</a>
-  <div>
-  	{% block headerContent %}
+
+	{% block headerContent %}
+		<div>
 			{% include "@composites/01-blocks/01-branding/pl-branding.twig" 
 				with{
 					logo: branding.logo,
@@ -32,6 +33,6 @@
 					}
 				%}
 			{% endif %}
-		{% endblock %}
-	</div>
+		</div>
+	{% endblock %}
 </header>
