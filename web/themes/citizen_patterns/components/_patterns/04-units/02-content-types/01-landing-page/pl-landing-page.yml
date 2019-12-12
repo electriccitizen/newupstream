@@ -1,0 +1,69 @@
+
+machineName: 
+  landing-page 
+sections:
+  1:
+    machineName: 
+      onecol
+    regions:
+      1:
+        machineName:
+          content
+        regionContent:
+          1:
+            machineName:
+              breadcrumbs
+            breadcrumb:
+              1:
+                url: "#"
+                text: "Home"
+              2:
+                url: "#"
+                #this should match the page title of the example
+                text: "Landing Page Example"
+  2:
+    machineName: 
+      onecol
+    regions:
+      1:
+        machineName:
+          content
+        regionContent:
+          1:
+            machineName:
+              field-banner
+            content:
+              #banner images should always have at least a 75% ratio if using placeimg. If using 'custom' a landscape image from the pattern lab image folder will be used
+              src:
+                custom
+              alt:
+                a nature banner image
+          2:
+            machineName:
+              title
+            content: |
+              Landing Page Example
+  3:
+    machineName: 
+      onecol
+    regions:
+      1:
+        machineName:
+          content
+        regionContent:
+          1:
+            machineName:
+              body
+            content:
+              true
+  4:
+    machineName: 
+      onecol
+    regions:
+      1:
+        machineName:
+          content
+        regionContent:
+          1:
+            machineName:
+              field-paragraphs

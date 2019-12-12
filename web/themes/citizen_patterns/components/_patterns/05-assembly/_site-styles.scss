@@ -4,9 +4,6 @@
 body {
 	background: $siteBack;
 	width: 100%;
-	& > .overflow-guard{
-		overflow-x: hidden;
-	}
 	div{
 		box-sizing: border-box;
 
@@ -21,6 +18,10 @@ body {
 		padding-top: 0;
 	}
 }//end body
+
+.overflow-guard{
+	overflow-x: hidden;
+}
 
 .container-inline div{
 	display: inline;

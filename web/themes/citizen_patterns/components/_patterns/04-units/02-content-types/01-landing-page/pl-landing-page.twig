@@ -1,0 +1,78 @@
+{#
+	 STYLEGUIDE ONLY
+#}
+{% set randomCustomImage = [
+	'../../images/custom/banners/mountain-mirror-lake.jpg',
+	'../../images/custom/banners/beach-boardwalk.jpg',
+	'../../images/custom/banners/bay.jpg',
+	'../../images/custom/banners/sunrise-field.jpg',
+	'../../images/custom/banners/park3.jpg',
+	'../../images/custom/banners/stony-brook.jpg'
+] %}
+
+<div class="path-node node node-type-{{ machineName }}">
+	<div class="overflow-guard">
+		{% embed '@assembly/_page.twig' %}
+			{% block pageHeader %}{% endblock %}
+			{% block pageContent %}
+				{% embed '@units/02-content-types/_node.twig' %}
+					{% block node %}
+						{% for section in sections %}
+							<section id="section-{{ loop.index }}" class="node-section">
+								{% embed '@composites/04-layout/03-layout-builder/_layout-section.twig' 
+									with{
+										machineName: section.machineName,
+										regions: section.regions
+									}
+								%}
+									{% block regionContent %}
+										{% for item in region.regionContent %}
+											<div class="block{% if 'field' in item.machineName or item.machineName == 'body' or item.machineName == 'title' %}-field{% endif %} block-{{ item.machineName }}">
+												{% if item.blockTitle %}
+													<h2 class="block-title">{{ item.blockTitle }}</h2>
+												{% endif %}
+												{% if item.machineName == 'breadcrumbs' %}
+													{% include '@chunks/01-navigation/01-breadcrumbs/breadcrumbs.twig' 
+														with{
+															breadcrumb: item.breadcrumb
+														}
+													%}
+												{% elseif item.machineName == 'title' %}
+													<h1 class="field title">{{ item.content }}</h1>
+												{% elseif item.machineName == 'body' %}
+													<div class="field body text-with-summary">
+														{% for listItem in listItems.two %}
+															<p>{{ listItem.description }}</p>
+														{% endfor %}
+													</div>
+												{% elseif item.machineName == 'field-paragraphs' %}
+													paragraphs go here
+												{% else %}
+													{% if 'field' in item.machineName %}
+														<div class="field {{ item.machineName }}{% if item.type %} {{ item.type }}{% endif %}">
+															{% if item.content.src %}
+																<article>
+																	<div class="field field-media-image">
+																		<img src="{% if item.content.src == 'custom' %}{{ random(randomCustomImage) }}{% else %}{{ item.content.src }}{% endif %}" alt="{{ image.content.alt}}" />
+																	</div>
+																</article>
+															{% endif %}
+														</div>
+													{% else %}
+														{{ content }}
+													{% endif %}
+												{% endif %}
+											</div>
+										{% endfor %}
+									{% endblock %}
+								{% endembed %}
+							</section>
+						{% endfor %}
+					{% endblock %}
+				{% endembed %}
+			{% endblock %}
+			{% block pagePreFooter %}{% endblock %}
+			{% block pageFooter %}{% endblock %}
+		{% endembed %}
+	</div>
+</div>
