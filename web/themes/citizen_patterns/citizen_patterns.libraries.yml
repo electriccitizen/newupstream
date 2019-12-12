@@ -40,7 +40,7 @@ galleries:
 layout:
   version: 1.0
   js:
-    components/_patterns/03-composites/04-layout/03-layout-builder/layout.js: {}
+    components/_patterns/03-composites/04-layout/03-layout-builder/layouts.js: {}
 modal:
   version: 1.0
   js:

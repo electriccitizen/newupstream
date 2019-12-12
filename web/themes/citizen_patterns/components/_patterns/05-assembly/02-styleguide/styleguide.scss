@@ -804,4 +804,26 @@ $subGroupHeaderBack  : $darkGrey;
 	}//end views row
 }//end view content
 
-
+/* LAYOUTS */
+.layout__region:not(.layout__region--tabs){
+	.region-content{
+		background: $lightGrey;
+		min-height: 100px;
+	}
+}
+.layout__region--tabs{
+	max-width: $contentStop;
+	@include auto;
+	.tab-block{
+		.block-title{
+			display: none;
+		}
+		.field.body{
+			margin-top: 20px;
+			max-width: $textMax + 40px;
+			@include auto;
+			padding: $spaceLg 20px;
+			background: $lightGrey;
+		}
+	}
+}

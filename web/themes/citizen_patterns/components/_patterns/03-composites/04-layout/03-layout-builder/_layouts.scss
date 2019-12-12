@@ -116,6 +116,10 @@
 		}//end tabs header
 		.tab-item{
 			border-top: 1px solid $borderRule;
+			padding-top: 20px;
+			h2.block-title{
+				display: none;
+			}
 		}
 	}//end region--tabs
 }//end layout-tabs
