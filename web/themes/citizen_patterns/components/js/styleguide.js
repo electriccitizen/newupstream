@@ -342,7 +342,9 @@ $('.layout__region--tabs .region-content').each(function(){
   });
 });
 
-// WIDGET ANCHORS
+/* CONTENT TYPES
+------------------ */
+// LANDING PAGE
 //scroll to anchors
 $('#toc-anchor-wrapper a:not(.toc-toggle)').click(function(e){
 	e.preventDefault();
@@ -350,9 +352,15 @@ $('#toc-anchor-wrapper a:not(.toc-toggle)').click(function(e){
 	$('.toc-toggle.active-nav').attr('aria-expanded', 'false').removeClass('active-nav').find('i').removeClass('fa-times-circle').addClass('fa-bars').closest('#toc-title').next('#toc-anchor-wrapper').attr('aria-hidden', 'true').slideUp(10);
 	//scroll to the anchor
 	var anchor = $(this).attr('href');
+	$('html, body').animate({
+    	 scrollTop: $(anchor).offset().top - 100
+ 	});
+});
 
-		$('html, body').animate({
-      	 scrollTop: $(anchor).offset().top - 100
-   	});
-
+//EVENT
+$('.map-open').click(function(){
+	$('.map-overlay').fadeIn(300);
+});
+$('.map-close').click(function(){
+	$('.map-overlay').fadeOut(300);
 });

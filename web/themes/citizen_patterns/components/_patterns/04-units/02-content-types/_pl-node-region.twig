@@ -1,8 +1,9 @@
 {#
 	 STYLEGUIDE ONLY
 #}
+{% set fieldBlocks = ['title','body','created'] %}
 
-<div class="block{% if 'field' in item.machineName or item.machineName == 'body' or item.machineName == 'title' %}-field{% endif %} block-{{ item.machineName }}">
+<div class="block{% if item.machineName in fieldBlocks or 'field' in item.machineName  %}-field{% endif %} block-{{ item.machineName }}">
 	{% if item.blockTitle %}
 		<h2 class="block-title">{{ item.blockTitle }}</h2>
 	{% endif %}
@@ -72,6 +73,12 @@
 				<p>{{ listItem.description }}</p>
 			{% endfor %}
 		</div>
+	{% elseif item.machineName == 'created' %}
+			{% if item.date and item.time %}
+				<time>{% if item.date == 'auto' %}{{ "now"|date("F j, Y \\- g:ia") }}{% else %}{{ item.date }} - {{ item.time }}{% endif %}</time>
+			{% else %}
+				<span>{% if item.date == 'auto' %}{{ "now "|date("F j, Y") }}{% else %}{{ item.date }}{% endif %}</span>
+			{% endif %}
 	{% elseif item.machineName == 'field-paragraphs' %}
 		{% for pSection in item.paragraphSections %}
 			<div class="section{% if pSection.background %} background {{ pSection.background }}{% else %} backless{% endif %}{% if pSection.layout %} {{ pSection.layout }}{% endif %}">
@@ -111,6 +118,13 @@
 							<img src="{% if item.content.src == 'custom' %}{{ random(randomCustomImage) }}{% else %}{{ item.content.src }}{% endif %}" alt="{{ image.content.alt}}" />
 						</div>
 					</article>
+				{# date field #}
+				{% elseif item.date %}
+					{% if item.date and item.time %}
+						<time>{% if item.date == 'auto' %}{{ "now"|date("F j, Y \\- g:ia") }}{% else %}{{ item.date }} - {{ item.time }}{% endif %}</time>
+					{% else %}
+						<span>{% if item.date == 'auto' %}{{ "now "|date("F j, Y") }}{% else %}{{ item.date }}{% endif %}</span>
+					{% endif %}
 				{% elseif item.tags %}
 				{# tags #}
 					<span class="inline-label">Tags:</span>
@@ -120,6 +134,18 @@
 								tags: item.tags
 							}
 						%}
+					</div>
+				{% elseif item.map %}
+					<div class="map-fake">
+						<a href="#" class="map-open">
+							<div class="image-wrapper">
+								<img src="../../images/custom/map-style.jpg" alt="map-fake">
+							</div>
+						</a>
+						<div class="map-overlay">
+							<a href="#" class="map-close"></a>
+							<p>Due to Google Map embed restrictions, a true map cannot be displayed. This is a screenshot of approximately what a location map will look like on the event node.</p>
+						</div>
 					</div>
 				{% endif %}
 			</div>

@@ -41,7 +41,8 @@
 	}
 
 	.block-field-event-location{
-		@include textContent;
+		max-width: $contentStop;
+		@include auto;
 		//hide long/lat title
 		.geolocation-google-map{
 			.location-title{

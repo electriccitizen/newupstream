@@ -72,6 +72,8 @@
 #}
 {% extends '@units/02-content-types/_node.twig' %}
 
+{% block plhtml %}{% endblock %}
+
 {% block attributes %}
   {% set classes = [
     'node-content',
@@ -121,3 +123,4 @@
   {%- endif -%}
 {% endblock %}
 
+{% block plhtmlClose %}{% endblock %}

@@ -19,7 +19,6 @@ sections:
                 text: "Home"
               2:
                 url: "#"
-                #this should match the page title of the example
                 text: "Blog"
               3:
                 url: "#"
@@ -59,11 +58,11 @@ sections:
               title
             content: |
               Blog Post Example
-            #can be today or any formatted date (e.g. 3/4/20)
+            #can be today or any formatted date (e.g. 3/4/20) -- should match Drupal format used for post date
             metaDate:
               today
             metaAuthor:
-              'Banche DuBois'
+              'Blanche DuBois'
   3:
     machineName: 
       onecol
