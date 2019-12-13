@@ -131,35 +131,35 @@ $('input[type="submit"]').click(function(e){
 ------------------- */
 $('#chunks-pager .count-shim').each(function(){  
 	//add pager counter to results
-	var count = $('.count-shim').html();
-	$('.pager__current').append('<span>' + count + '</span>');
+	var count = $('#chunks-pager .count-shim').html();
+	$('#chunks-pager .pager__current').append('<span>' + count + '</span>');
 	if(count > 7){
-		$('nav.pager').addClass('results-pager');
-		$('.results-count').prependTo('.pager').wrap('<div class="results-count-wrapper"></div>');
-		$('.pager__number,.results-count').show();
+		$('#chunks-pager nav.pager').addClass('results-pager');
+		$('#chunks-pager .results-count').prependTo('#chunks-pager .pager').wrap('<div class="results-count-wrapper"></div>');
+		$('#chunks-pager .pager__number,#chunks-pager .results-count').show();
 	}else{
-		$('.pager__current').show();
+		$('#chunks-pager .pager__current').show();
 	}
 });
-$('#pager-numbers').change(function(){
+$('#chunks-pager #pager-numbers').change(function(){
 	var pCount = $(this).val();
-	$('.count-shim').html(pCount);
-	var count = $('.count-shim').html();
-	$('.pager__current').find('span').remove().end().append('<span>' + count + '</span>');
-	var perPage = $('.per-page').html();
+	$('#chunks-pager .count-shim').html(pCount);
+	var count = $('#chunks-pager .count-shim').html();
+	$('#chunks-pager .pager__current').find('span').remove().end().append('<span>' + count + '</span>');
+	var perPage = $('#chunks-pager .per-page').html();
 	var total = pCount * perPage;
-	$('.total-items').html(total);
+	$('#chunks-pager .total-items').html(total);
 	if(count > 7){
-		$('nav.pager').addClass('results-pager');
-		if(!$('.results-count-wrapper').length){
-			$('.results-count').prependTo('.pager').wrap('<div class="results-count-wrapper"></div>');
+		$('#chunks-pager nav.pager').addClass('results-pager');
+		if(!$('#chunks-pager .results-count-wrapper').length){
+			$('#chunks-pager .results-count').prependTo('#chunks-pager .pager').wrap('<div class="results-count-wrapper"></div>');
 		}
-		$('.pager__number,.results-count,.results-count-wrapper').show();
-		$('.pager__current').hide()
+		$('#chunks-pager .pager__number,#chunks-pager .results-count,#chunks-pager .results-count-wrapper').show();
+		$('#chunks-pager .pager__current').hide()
 	}else{
-		$('nav.pager').removeClass('results-pager');
-		$('.pager__current').show();
-		$('.pager__number,.results-count,.results-count-wrapper').hide();
+		$('#chunks-pager nav.pager').removeClass('results-pager');
+		$('#chunks-pager .pager__current').show();
+		$('#chunks-pager .pager__number,#chunks-pager .results-count,#chunks-pager .results-count-wrapper').hide();
 	}
 });
 
@@ -363,4 +363,42 @@ $('.map-open').click(function(){
 });
 $('.map-close').click(function(){
 	$('.map-overlay').fadeOut(300);
+});
+
+/* SITE SEARCH
+------------------ */
+//find searched value if not null and highlight each word
+if($('.search-page-block .js-form-item-site-search-api-fulltext input').val()){
+  var searchString = $('.search-page-block .js-form-item-site-search-api-fulltext input').val().split(' ');
+  
+  $.fn.wrapInTag = function(opts) {
+
+    var tag = opts.tag
+      , words = opts.words || []
+      , regex = RegExp(words.join('|'), 'gi') // case insensitive
+      , replacement = '<'+ tag +'>$&</'+ tag +'>';
+
+    return this.html(function() {
+      return $(this).text().replace(regex, replacement);
+    });
+  };
+
+  $('.site-search .views-field-body-1').wrapInTag({
+    tag: 'mark class="search-highlight"',
+    words: searchString
+  });
+}
+
+//copy pager setup from chunks pager
+$('#units-site-search .count-shim').each(function(){  
+	//add pager counter to results
+	var count = $('#units-site-search .count-shim').html();
+	$('#units-site-search .pager__current').append('<span>' + count + '</span>');
+	if(count > 7){
+		$('#units-site-search nav.pager').addClass('results-pager');
+		$('#units-site-search .results-count').prependTo('#units-site-search .pager').wrap('<div class="results-count-wrapper"></div>');
+		$('#units-site-search .pager__number,#units-site-search .results-count').show();
+	}else{
+		$('#units-site-search .pager__current').show();
+	}
 });

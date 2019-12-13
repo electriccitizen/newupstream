@@ -40,7 +40,7 @@
 			<textarea name="{{ type }}" {% if placeholder %}placeholder="{{ placeholder }}"{% endif %} rows="5" cols="60" class="max-text"></textarea>
 		</div>
 	{% else %}
-		<input class="{{ classes }}" type="{{ type }}" name="{{ type }}" {% if placeholder %}placeholder="{{ placeholder }}"{% endif %} />
+		<input class="{{ classes }}" type="{{ type }}" name="{{ type }}" {% if placeholder %}placeholder="{{ placeholder }}"{% endif %}{% if testValue %} value="{{ testValue }}"{% endif %} />
 	{% endif %}
 
 	{% if description %}

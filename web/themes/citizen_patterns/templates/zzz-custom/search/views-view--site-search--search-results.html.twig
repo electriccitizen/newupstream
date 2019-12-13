@@ -37,43 +37,31 @@
 		view.current_display|clean_class
 	]
 %}
-{{ attach_library('citizen_patterns/search-page') }}
-<div{{ attributes.addClass(classes) }}>
-	<h1>Site Search</h1>
-	
-	<div class="search-page-block">
-		<div class="search-form-outer">
-			{{ exposed }}
-		</div>
-	</div>
 
-	{%- if header -%}
-		<div class="view-header">
-			{{- header -}}
-		</div>
-	{%- endif -%}
+{% embed '@units/03-search/site-search.twig' 
+	with{
+		results: rows
+	}
+%}
+	{% block plhtml %}{% endblock %}
 
-	{{- attachment_before -}}
-	{%- if rows -%}
-		<div class="view-content">
-			{{- rows -}}
-		</div>
-	{%- endif -%}
-	{%- if empty -%}
-		<div class="view-empty">
-			{{- empty -}}
-		</div>
-	{%- endif -%}
+	{% block attributes %}
+		{{ attach_library('citizen_patterns/search-page') }}
+		{{ attributes.addClass(classes) }}
+	{% endblock %}
 
-	{%- if footer -%}
-		<div class="view-footer">
-			{{- footer -}}
-		</div>
-	{%- endif -%}
+	{% block filters %}
+		{{ exposed }}
+	{% endblock %}
 
-	{{- attachment_after -}}
-	{{- more -}}
+	{% block resultRows %}
+		{{- rows -}}
+	{% endblock %}
 
-	{{- pager -}}
+	{% block pager %}
+		{{- pager -}}
+	{% endblock %}
 
-</div>
+	{% block plhtmlClose %}{% endblock %}
+
+{% endembed %}

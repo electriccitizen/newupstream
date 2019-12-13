@@ -2,8 +2,10 @@
 
 # if using a smart pager (set in 00-base/macros.twig), having more than 7 pages will display the extended version of the smart pager, having less than 7 will display the short version. When smart pagers are in play, you MUST include results-count and count-shim span in each views results footer in Drupal and the full pager type must be set.
 items:
+  # only works in default apger
   first:
     true
+
   previous:
     true
   # do not alter the pages numbers
@@ -18,6 +20,8 @@ items:
     8:
   next:
     true
+
+  #only works in default pager
   last:
     true
 
@@ -25,6 +29,7 @@ items:
 current:
   3
 
+#only works in default pager
 ellipses:
   previous:
     true
