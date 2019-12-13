@@ -40,11 +40,18 @@
 {% extends 'field.html.twig' %}
 
 {% block fieldLabel %}
-  <div class="tag-list">
-    {%- for item in items -%}
-      <a href="/blog?combine=&field_tags_target_id%5B%5D={{ item.content['#taxonomy_term'].id }}">
-        {{- item.content['#taxonomy_term'].label -}}
-      </a>{% if not loop.last %}, {% endif %}
-    {%- endfor -%}
-  </div>
+  {% embed '@parts/08-fields/03-blog/_field-tags.twig' 
+  	with{
+  		tags: items
+  	}
+  %}
+	  {%- block url -%}
+			/blog?combine=&field_tags_target_id%5B%5D={{- item.content['#taxonomy_term'].id -}}
+		{%- endblock -%}
+	  
+	  {% block tag %}
+	  	 {{- item.content['#taxonomy_term'].label -}}
+	  {% endblock %}
+
+	{% endembed %}
 {% endblock %}

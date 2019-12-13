@@ -386,6 +386,13 @@
 	margin-right: 0;
 }
 
+@mixin textConstrain{
+	.layout:not(.layout--twocol-sideleft):not(.layout--twocol-sideright) &{
+		max-width: $textMax;
+		@include auto;
+	}
+}
+
 // clear floats (used on parent container)
 @mixin clearFix {
 	&::after {

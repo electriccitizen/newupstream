@@ -567,6 +567,14 @@ $subGroupHeaderBack  : $darkGrey;
 	overflow-x: hidden;
 }
 
+/* BACK TO TOP */
+#chunks-back-top{
+	.back-anchor{
+		display: inline-block;
+		position: static;
+	}
+}
+
 /* FILTERS */
 .views-exposed-form{
 	.form-item{
@@ -865,4 +873,57 @@ $subGroupHeaderBack  : $darkGrey;
 	}
 }
 
+/* BASIC PAGE */
+.node-page{
+	.field-banner{
+		@extend %bannerRatiosFake;
+	}
+}
+
+/* BLOG POST */
+.node-blog{
+	.field-banner{
+		@extend %bannerRatiosFake;
+	}
+}
+.addtoany_list{
+	display: inline;
+	a{
+		font-size: 32px;
+		cursor: pointer;
+		display: inline-block;
+		padding: 0 2px;
+		&:hover,&:focus{
+			span{
+				opacity: .7;
+			}
+		}
+		& > span{
+			height: 32px;
+			line-height: 32px;
+			opacity: 1;
+			width: 32px;
+			background-repeat: repeat;
+			display: inline-block;
+			float: none;
+			vertical-align: middle;
+			overflow: hidden;
+			padding: 0;
+			svg{
+				background-repeat: no-repeat;
+				background-position: 50% 50%;
+				border: none;
+				display: block;
+				left: 0;
+				margin: 0 auto;
+				overflow: hidden;
+				padding: 0;
+				position: relative;
+				top: 0;
+				width: auto;
+				height: auto;
+			}
+		}
+	}
+}//end add to any list
 

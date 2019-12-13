@@ -2,10 +2,7 @@
 	QUOTE WIDGET
 ======================= */
 .paragraph--type--pullquote{
-	.layout:not(.layout--twocol-sidebar) &{
-		max-width: $textMax;
-		@include auto;
-	}
+	@include textConstrain;
 	.widget-title{
 		margin-bottom: $spaceMd;
 	}

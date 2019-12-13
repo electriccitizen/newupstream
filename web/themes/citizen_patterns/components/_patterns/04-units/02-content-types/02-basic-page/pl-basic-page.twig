@@ -27,25 +27,6 @@
 								%}
 									{% block regionContent %}
 										{% for item in region.regionContent %}
-											{# widget anchors #}
-											{% set count = 0 %}
-											{% for pSection in item.paragraphSections %}
-												 {% if pSection.anchor %}
-											   	{% set count = count + 1 %}
-											   {% endif %}
-											{% endfor %}
-
-											{% if count > 0 %}
-												{% embed '@chunks/01-navigation/05-widget-anchors/widget-anchors.twig' %}
-													{% block anchors %}
-														{% for pSection in item.paragraphSections %}
-															{% if pSection.anchor %}
-												     	 	<a href="#anchor-{{ pSection.anchor|replace({' ':'-'})|lower }}">{{- pSection.anchor -}}</a>
-												      {% endif %}
-												    {%- endfor -%}
-													{% endblock %}
-												{% endembed %}
-											{% endif %}
 											{% include '@units/02-content-types/_pl-node-region.twig' %}
 										{% endfor %}
 									{% endblock %}

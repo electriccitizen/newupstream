@@ -135,34 +135,6 @@ body {
 	overflow: scroll;
 }
 
-/* BACK TO TOP
------------------ */
-//back to table of contents option
-.back-anchor{
-	display: none;
-	position: fixed;
-	bottom: 3%;
-	right: 3%;
-	box-shadow: 3px 3px 5px rgba(35,35,35, 0.35);
-	z-index: 500;
-	border-radius: 50%;
-	a{
-		display: block;
-		width: 50px;
-		height: 50px;
-		background: rgba(35,35,35,0.85);
-		border-radius: 50%;
-		position: relative;
-		text-align: center;
-		i{
-			color: $white;
-			font-size: 45px;
-			line-height: 45px;
-		}
-	}
-}//end back anchor
-
-
 /* ADMIN NODE EDIT TABS
 ----------------- */
 #block-citizen-patterns-local-tasks{

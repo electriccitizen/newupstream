@@ -2,9 +2,6 @@
    TEXT WIDGET
 ================= */
 .paragraph--type--text{
-	.layout:not(.layout--twocol-sidebar) &{
-		max-width: $textMax;
-		@include auto;
-	}
+	@include textConstrain;
 }//end links-files widget
 

@@ -48,6 +48,8 @@
 	DRUPAL: This template is being embedded into multiple Drupal templates. Macros variables can also alter the footer theming/behavior. Avaiable variables: fixed, non-fixed.
 #}
 
+{% import '@base/macros.twig' as styles %}
+
 <div class="layout-container">
 
 	{% block pageHeader %}
@@ -114,10 +116,12 @@
 			{% embed '@composites/04-layout/02-footer/footer.twig' %}
 				{% block footerContent %}
 					{{ page.footer }}
-					<div class="back-anchor"><a href="#" role="button" aria-label="back-to-top"><i class="fa fa-angle-up" aria-hidden="true"></i></a></div>
 				{% endblock %}
 			{% endembed %}
 		{% endif %}
 	{% endblock %}
 
+	{% if styles.backTopSettings() == 'yes' %}
+		{% include '@chunks/01-navigation/06-back-top/back-top.twig' %}
+	{% endif %}
 </div>

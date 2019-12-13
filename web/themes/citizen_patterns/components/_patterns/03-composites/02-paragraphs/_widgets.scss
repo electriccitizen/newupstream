@@ -44,10 +44,7 @@ SECTION LAYOUTS
 		padding-top: $spaceLg;
 	}
 	.field-section-title{
-		.layout:not(.layout--twocol-sidebar) &{
-			max-width: $textMax;
-			@include auto;
-		}
+		@include textConstrain;
 	}
 	.field-section-intro{
 		@extend .field-section-title;

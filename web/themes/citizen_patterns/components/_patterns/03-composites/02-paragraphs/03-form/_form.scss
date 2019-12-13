@@ -3,8 +3,5 @@
 ================ */
 
 .paragraph--type--form{
-	.layout:not(.layout--twocol-sidebar) &{
-		max-width: $textMax;
-		@include auto;
-	}
+	@include textConstrain;
 }//end form widget

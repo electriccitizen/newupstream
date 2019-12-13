@@ -53,7 +53,7 @@ set classes = [
 {% endfor %}
 
 {% if count > 0 %}
-	{% embed '@chunks/01-navigation/04-widget-anchors/widget-anchors.twig' %}
+	{% embed '@chunks/01-navigation/05-widget-anchors/widget-anchors.twig' %}
 		{% block anchors %}
 			{{ attach_library('citizen_patterns/widgets') }}
 			{%- for anchor in items -%}
