@@ -23,13 +23,15 @@
 {% extends 'field.html.twig' %}
 
 {% block fieldSingleNo %}
-<h1 class="page-title">
-	{{- element.0['#context'].value -}}
-</h1>
-<div class="metatext">
-	<span class="date">{{- element['#object'].created.value|date("F j, Y") -}}</span>
-	{%- if element['#object'].field_author -%}
-		<span class="author"> by {{ element['#object'].field_author.entity.title.value -}}</span>
-	{%- endif -%}
-</div>
+	{% include '@parts/08-fields/_field-title.twig' 
+		with{
+			title: element.0['#context'].value
+		}
+	%}
+	<div class="metatext">
+		<span class="date">{{- element['#object'].created.value|date("F j, Y") -}}</span>
+		{%- if element['#object'].field_author -%}
+			<span class="author"> by {{ element['#object'].field_author.entity.title.value -}}</span>
+		{%- endif -%}
+	</div>
 {% endblock %}

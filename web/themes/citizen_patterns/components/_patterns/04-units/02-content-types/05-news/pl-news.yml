@@ -39,14 +39,14 @@ sections:
               field-banner
             content:
               src:
-                'http://placeimg.com/350/350/people'
+                'http://placeimg.com/350/350/animal'
               alt:
-                a people image
+                an animal image
           2:
             machineName:
               title
-            content: |
-              News Article Example
+            content:
+              'News Article Example'
           3:
             machineName:
               created

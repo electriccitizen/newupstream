@@ -41,8 +41,8 @@ sections:
           2:
             machineName:
               title
-            content: |
-              Basic Page Example
+            content:
+              'Basic Page Example'
   3:
     machineName: 
       twocol-sideleft

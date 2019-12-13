@@ -41,8 +41,8 @@ sections:
           2:
             machineName:
               title
-            content: |
-              Landing Page Example
+            content:
+              'Landing Page Example'
   3:
     machineName: 
       onecol

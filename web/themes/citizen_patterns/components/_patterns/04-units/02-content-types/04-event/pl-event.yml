@@ -45,8 +45,8 @@ sections:
           2:
             machineName:
               title
-            content: |
-              Event Example
+            content:
+              'Event Example'
           3:
             machineName:
               field-date

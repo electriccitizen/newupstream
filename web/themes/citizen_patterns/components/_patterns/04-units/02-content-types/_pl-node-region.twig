@@ -15,7 +15,11 @@
 		%}
 	{% elseif item.machineName == 'title' %}
 		<div class="field title">
-			<h1 class="page-title">{{ item.content }}</h1>
+			{% include '@parts/08-fields/_field-title.twig' 
+				with{
+					title: item.content
+				}
+			%}
 			{% if item.metaDate or item.metaAuthor %}
 				<div class="metatext">
 					{% if item.metaDate %}
@@ -109,8 +113,14 @@
 			{% endif %}
 		</ul>
 	{% else %}
+		{% if item.label.type == 'block' %}
+			<h2 class="block-title">{{ item.label.lContent }}</h2>
+		{% endif %}
 		{% if 'field' in item.machineName %}
 			<div class="field {{ item.machineName }}{% if item.type %} {{ item.type }}{% endif %}">
+				{% if item.label.type == 'inline' %}
+					<span class="inline-label">{{ item.label.lContent }}</span>
+				{% endif %}
 				{# image fields #}
 				{% if item.content.src %}
 					<article>
@@ -127,7 +137,7 @@
 					{% endif %}
 				{% elseif item.tags %}
 				{# tags #}
-					<span class="inline-label">Tags:</span>
+					
 					<div class="field-multi-item">
 						{% include '@parts/08-fields/03-blog/_field-tags.twig' 
 							with{
@@ -147,10 +157,14 @@
 							<p>Due to Google Map embed restrictions, a true map cannot be displayed. This is a screenshot of approximately what a location map will look like on the event node.</p>
 						</div>
 					</div>
+				{% elseif item.email or item.tel %}
+					<a href="#">{{ item.email }}{{ item.tel }}</a>
+				{% else %}
+					{{ item.content }}
 				{% endif %}
 			</div>
 		{% else %}
-			{{ content }}
+			{{ item.content }}
 		{% endif %}
 	{% endif %}
 </div>

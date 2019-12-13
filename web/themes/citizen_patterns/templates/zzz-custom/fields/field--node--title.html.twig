@@ -23,5 +23,9 @@
 {% extends 'field.html.twig' %}
 
 {% block fieldSingleNo %}
-	<h1 class="page-title">{{- element.0['#context'].value -}}</h1>
+	{% include '@parts/08-fields/_field-title.twig' 
+		with{
+			title: element.0['#context'].value
+		}
+	%}
 {% endblock %}
