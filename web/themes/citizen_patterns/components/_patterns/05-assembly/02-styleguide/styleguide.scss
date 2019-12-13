@@ -840,8 +840,11 @@ $subGroupHeaderBack  : $darkGrey;
 
 /* CONTENT TYPES
 ------------------ */
-.path-node .layout-content{
-	max-width: 100% !important;
+.path-node{
+	margin-bottom: -12rem;
+	.layout-content{
+		max-width: 100% !important;
+	}
 }
 %bannerRatiosFake{
 	position: relative;

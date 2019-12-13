@@ -36,7 +36,7 @@
 											{% endfor %}
 
 											{% if count > 0 %}
-												{% embed '@chunks/01-navigation/04-widget-anchors/widget-anchors.twig' %}
+												{% embed '@chunks/01-navigation/05-widget-anchors/widget-anchors.twig' %}
 													{% block anchors %}
 														{% for pSection in item.paragraphSections %}
 															{% if pSection.anchor %}
@@ -46,57 +46,7 @@
 													{% endblock %}
 												{% endembed %}
 											{% endif %}
-
-											<div class="block{% if 'field' in item.machineName or item.machineName == 'body' or item.machineName == 'title' %}-field{% endif %} block-{{ item.machineName }}">
-												{% if item.blockTitle %}
-													<h2 class="block-title">{{ item.blockTitle }}</h2>
-												{% endif %}
-												{% if item.machineName == 'breadcrumbs' %}
-													{% include '@chunks/01-navigation/01-breadcrumbs/breadcrumbs.twig' 
-														with{
-															breadcrumb: item.breadcrumb
-														}
-													%}
-												{% elseif item.machineName == 'title' %}
-													<h1 class="field title">{{ item.content }}</h1>
-												{% elseif item.machineName == 'body' %}
-													<div class="field body text-with-summary">
-														{% for listItem in listItems.two %}
-															<p>{{ listItem.description }}</p>
-														{% endfor %}
-													</div>
-												{% elseif item.machineName == 'field-paragraphs' %}
-													{% for pSection in item.paragraphSections %}
-														<div class="section{% if pSection.background %} background {{ pSection.background }}{% else %} backless{% endif %}{% if pSection.layout %} {{ pSection.layout }}{% endif %}">
-															{%- if pSection.anchor -%}<a name="anchor-{{  pSection.anchor|replace({' ':'-'})|lower }}" id="anchor-{{  pSection.anchor|replace({' ':'-'})|lower }}"></a>{%- endif -%}
-													    {% include '@composites/02-paragraphs/11-section/_section.twig' 
-													    	with{
-													    		type: pSection.type,
-													    		sectionTitle: pSection.sectionTitle,
-													    		sectionIntro: pSection.sectionIntro,
-													    		layout: pSection.layout,
-													    		background: pSection.background,
-													    		paragraphs: pSection.paragraphs
-													    	}
-													    %}
-												  	</div>
-											    {% endfor %}
-												{% else %}
-													{% if 'field' in item.machineName %}
-														<div class="field {{ item.machineName }}{% if item.type %} {{ item.type }}{% endif %}">
-															{% if item.content.src %}
-																<article>
-																	<div class="field field-media-image">
-																		<img src="{% if item.content.src == 'custom' %}{{ random(randomCustomImage) }}{% else %}{{ item.content.src }}{% endif %}" alt="{{ image.content.alt}}" />
-																	</div>
-																</article>
-															{% endif %}
-														</div>
-													{% else %}
-														{{ content }}
-													{% endif %}
-												{% endif %}
-											</div>
+											{% include '@units/02-content-types/_pl-node-region.twig' %}
 										{% endfor %}
 									{% endblock %}
 								{% endembed %}
