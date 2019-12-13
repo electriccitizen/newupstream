@@ -72,9 +72,9 @@ sections:
                 type:
                   landing-page-section
                 sectionTitle:
-                  'Section of widgets'
+                  'Two Column Widgets'
                 sectionIntro: |
-                  <p>Each section can hold multiple widgets. Depending on the content type, section styling options can also be used. This is an example of a landing page section.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed haec nihil sane ad rem; Similiter sensus, cum accessit ad naturam, tuetur illam quidem, sed etiam se tuetur;</p>
                 anchor:
                   'Section 1'
                 #available layouts: full, two-column, three-column
@@ -90,7 +90,6 @@ sections:
                     type:
                       text
                     widgetTitle:
-                      'Text widget'
                     text: |
                       <p>Quis hoc dicit? <strong>Atque etiam valítudinem</strong>, vires, vacuitatem doloris non propter utilitatem solum, sed etiam ipsas propter se expetemus. <em>Cum autem in quo sapienter dicimus</em>, id a primo rectissime dicitur.</p><p>Praeteritis, inquit, gaudeo. An hoc usque quaque, aliter in vita? Tubulo putas dicere? <a href="#">Itaque haec cum illis</a> est dissensio, cum Peripateticis nulla sane. Tu quidem reddes; Istam voluptatem, inquit, Epicurus ignorat? At modo dixeras nihil in istis rebus esse, quod interesset.</p>
                   2:
@@ -102,3 +101,67 @@ sections:
                       'http://placeimg.com/1100/600/people'
                     caption:
                       'This is a medium size image without a link'
+              2:
+                type:
+                  landing-page-section
+                sectionTitle:
+                sectionIntro: 
+                anchor:
+                  'Section 2'
+                #available layouts: full, two-column, three-column
+                layout:
+                  full
+                #available backgrounds: grey (when more background colors are added, the js for the style option will have to be updated).
+                background:
+                  grey
+                #For the paragraphs you choose, you must have the paragraph type and all yml information for each field in the paragraph you want to display. You can model the information after teh yml file for each paragraph.  
+                #Available types: accordion-group, gallery, horizontal rule, image, links & files, pullquote, text, video. (all are the machine names of the paragraph entity)
+                paragraphs:
+                  1:
+                    type:
+                      text
+                    widgetTitle:
+                      'What would we do without Lorem Ipsum'
+                    text: |
+                      <p>Taque primos congressus copulationesque et consuetudinum instituendarum voluntates fieri propter voluptatem; Ego vero volo in virtute vim esse quam maximam; Nam diligi et carum esse iucundum est propterea, quia tutiorem vitam et voluptatem pleniorem efficit. Duo Reges: constructio interrete. Longum est enim ad omnia respondere, quae a te dicta sunt.</p>
+                      <p>Deprehensus omnem poenam contemnet. Nam, ut saepe iam dixi, in infirma aetate inbecillaque mente vis naturae quasi per caliginem cernitur;</p>
+              3:
+                type:
+                  landing-page-section
+                sectionTitle:
+                sectionIntro: 
+                anchor:
+                  'Section 3'
+                #available layouts: full, two-column, three-column
+                layout:
+                  full
+                #available backgrounds: grey (when more background colors are added, the js for the style option will have to be updated).
+                background:
+
+                #For the paragraphs you choose, you must have the paragraph type and all yml information for each field in the paragraph you want to display. You can model the information after teh yml file for each paragraph.  
+                #Available types: accordion-group, gallery, horizontal rule, image, links & files, pullquote, text, video. (all are the machine names of the paragraph entity)
+                paragraphs:
+                  1:
+                    type:
+                      gallery
+                    galleryType:
+                      lightbox
+                    widgetTitle:
+                    images:
+                      1:
+                        id:
+                          "one"
+                        lightSrc:
+                          http://placeimg.com/800/640/people
+                        caption:
+                          'This is a caption in a gallery.'
+                      2:
+                        id:
+                          "two"
+                        lightSrc:
+                          http://placeimg.com/800/640/nature
+                      3:
+                        id:
+                          "three"
+                        lightSrc:
+                          http://placeimg.com/800/640/animals
