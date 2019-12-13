@@ -70,12 +70,18 @@
  *   in different view modes.
  */
 #}
-{% set classes = [
-  'node-content',
-  'node-' ~ node.type.0.target_id|clean_class,
-  'node-' ~ node.id
-] %}
-<article{{ attributes.addClass(classes) }}>
+{% extends '@units/02-content-types/_node.twig' %}
+
+{% block attributes %}
+  {% set classes = [
+    'node-content',
+    'node-' ~ node.type.0.target_id|clean_class,
+    'node-' ~ node.id
+  ] %}
+  {{ attributes.addClass(classes) }}
+{% endblock %}
+
+{% block nodeMeta %}
   {{ title_prefix }}
   {% if not page and (view_mode != 'full') %}
     {% block nodeTitle %}
@@ -97,21 +103,21 @@
       {% endblock %}
     </footer>
   {%- endif -%}
+{% endblock %}
 
-  <div{{ content_attributes.addClass('main-node-content') }}>
-    {%- if content._layout_builder -%}
-      {%- for key, layoutSection in content._layout_builder if key|first != '#' -%}
-        {% block layoutSectionContent %}
-          <section id="section-{{ loop.index }}" class="node-section">
-            {{- layoutSection -}}
-          </section>
-        {% endblock %}
-      {%- endfor -%}
-    {%- else -%}
-      {% block nodeContent %}
-        {{- content -}}
+{% block node %}  
+  {%- if content._layout_builder -%}
+    {%- for key, layoutSection in content._layout_builder if key|first != '#' -%}
+      {% block layoutSectionContent %}
+        <section id="section-{{ loop.index }}" class="node-section">
+          {{- layoutSection -}}
+        </section>
       {% endblock %}
-    {%- endif -%}
-  </div>
+    {%- endfor -%}
+  {%- else -%}
+    {% block nodeContent %}
+      {{- content -}}
+    {% endblock %}
+  {%- endif -%}
+{% endblock %}
 
-</article>

@@ -1,8 +1,9 @@
 {#
-	 STYLEGUIDE ONLY
+	 DRUPAL: This template is extended into the node.html.twig template.
 #}
 
-<article class="node-content node-{{ machineName }}">
+<article{% block attributes%} class="node-content node-{{ machineName }}"{% endblock %}>
+	{% block nodeMeta %}{% endblock %}
 	<div class="main-node-content">
 		{% block node %}{% endblock %}
 	</div>
