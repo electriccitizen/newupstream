@@ -190,9 +190,6 @@
       },
       "drupal/paragraphs": {
         "Call to member function missing label": "https://www.drupal.org/files/issues/2019-08-08/paragraphs-call_id_on_null-2948778-15.patch"
-      },
-      "drupal/field_group": {
-        "Incompatibility with inline entity form": "https://www.drupal.org/files/issues/2018-10-30/field_group-inline_entity_form_compatibility-2986704-3.patch"
       }
     },
     "enable-patching": true
