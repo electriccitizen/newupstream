@@ -23,6 +23,8 @@ $config_directories = array(
  * Set up config splits
  */
 if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
+  $config['config_split.config_split.local']['status'] = FALSE;
+
   switch($_ENV['PANTHEON_ENVIRONMENT']) {
     case 'live':
       // $config['config_split.config_split.live']['status'] = TRUE;
@@ -40,7 +42,11 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
       break;
   }
 } else { // LOCAL
+  
   $config['config_split.config_split.local']['status'] = TRUE;
+  $config['config_split.config_split.dev']['status'] = FALSE;
+
+  $settings['trusted_host_patterns'] = array('^newupstream\.docksal');
 
   /**
    * If there is a drupalvm settings file, then include it

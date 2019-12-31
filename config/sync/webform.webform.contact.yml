@@ -1,12 +1,9 @@
-uuid: bb4d8c1f-afb2-4213-9c6d-bf02b072b18c
 langcode: en
 status: open
 dependencies:
   enforced:
     module:
       - webform
-_core:
-  default_config_hash: oZIx_IHS7gdveuJ3iSbhNY-A1FwlieWPdjJEJz4Wlb4
 open: null
 close: null
 weight: 0
@@ -17,7 +14,7 @@ id: contact
 title: Contact
 description: 'Basic email contact webform.'
 category: ''
-elements: "name:\n  '#type': textfield\n  '#title': Name\n  '#title_display': inline\n  '#maxlength': '60'\n  '#required': true\nemail:\n  '#type': email\n  '#title': 'Your Email'\n  '#title_display': inline\n  '#required': true\nsubject:\n  '#type': textfield\n  '#title': Subject\n  '#title_display': inline\n  '#required': true\n  '#test': 'Testing contact webform from [site:name]'\nmessage:\n  '#type': textarea\n  '#title': Message\n  '#title_display': inline\n  '#required': true\n  '#test': 'Please ignore this email.'\nradios:\n  '#type': radios\n  '#title': Radios\n  '#options': months\ncheckboxes:\n  '#type': checkboxes\n  '#title': Checkboxes\n  '#options':\n    one: One\n    two: two\n    three: Threeish"
+elements: "name:\n  '#type': textfield\n  '#title': Name\n  '#title_display': inline\n  '#maxlength': '60'\n  '#required': true\nemail:\n  '#type': email\n  '#title': 'Your Email'\n  '#title_display': inline\n  '#required': true\nsubject:\n  '#type': textfield\n  '#title': Subject\n  '#title_display': inline\n  '#required': true\n  '#test': 'Testing contact webform from [site:name]'\nmessage:\n  '#type': textarea\n  '#title': Message\n  '#title_display': inline\n  '#required': true\n  '#test': 'Please ignore this email.'\n"
 css: ''
 javascript: ''
 settings:
@@ -83,6 +80,7 @@ settings:
   wizard_progress_pages: false
   wizard_progress_percentage: false
   wizard_progress_link: false
+  wizard_progress_states: false
   wizard_start_label: ''
   wizard_preview_link: false
   wizard_confirmation: true
@@ -130,6 +128,7 @@ settings:
   purge_days: null
   results_disabled: false
   results_disabled_ignore: false
+  token_view: false
   token_update: false
   form_submit_label: 'Send message'
   form_submit_attributes: {  }
@@ -219,6 +218,7 @@ handlers:
       sender_mail: ''
       sender_name: ''
       theme_name: ''
+      parameters: {  }
   email_notification:
     id: email
     label: 'Email notification'
@@ -253,3 +253,7 @@ handlers:
       sender_mail: ''
       sender_name: ''
       theme_name: ''
+      parameters: {  }
+uuid: bb4d8c1f-afb2-4213-9c6d-bf02b072b18c
+_core:
+  default_config_hash: oZIx_IHS7gdveuJ3iSbhNY-A1FwlieWPdjJEJz4Wlb4
