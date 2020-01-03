@@ -11,24 +11,24 @@ $aliases['newupstream.local'] = array(
   ),
 );
 
-$aliases['newupstream.test'] = array(
-  'uri' => 'test-newupstream.pantheonsite.io',
-  'db-url' => 'mysql://pantheon:a5fef3ca0d7b47c2a5a545b6cdc0b9c6@dbserver.test.8be50dbc-4463-43b5-bd18-d83046623820.drush.in:11662/pantheon',
+$aliases['newupstream.dev'] = array(
+  'uri' => 'dev-newupstream.pantheonsite.io',
+  'db-url' => 'mysql://pantheon:597c2a5b8e2f4c88bd37b97666239de9@dbserver.dev.8be50dbc-4463-43b5-bd18-d83046623820.drush.in:25960/pantheon',
   'db-allows-remote' => TRUE,
-  'remote-host' => 'appserver.test.8be50dbc-4463-43b5-bd18-d83046623820.drush.in',
-  'remote-user' => 'test.8be50dbc-4463-43b5-bd18-d83046623820',
+  'remote-host' => 'appserver.dev.8be50dbc-4463-43b5-bd18-d83046623820.drush.in',
+  'remote-user' => 'dev.8be50dbc-4463-43b5-bd18-d83046623820',
   'ssh-options' => '-p 2222 -o "AddressFamily inet"',
   'path-aliases' => array(
     '%files' => 'files',
     '%drush-script' => 'drush',
    ),
 );
-$aliases['newupstream.dev'] = array(
-  'uri' => 'dev-newupstream.pantheonsite.io',
-  'db-url' => 'mysql://pantheon:fa2366c006dc4b009119a48a6e278a5f@dbserver.dev.8be50dbc-4463-43b5-bd18-d83046623820.drush.in:15871/pantheon',
+$aliases['newupstream.test'] = array(
+  'uri' => 'test-newupstream.pantheonsite.io',
+  'db-url' => 'mysql://pantheon:a5fef3ca0d7b47c2a5a545b6cdc0b9c6@dbserver.test.8be50dbc-4463-43b5-bd18-d83046623820.drush.in:11662/pantheon',
   'db-allows-remote' => TRUE,
-  'remote-host' => 'appserver.dev.8be50dbc-4463-43b5-bd18-d83046623820.drush.in',
-  'remote-user' => 'dev.8be50dbc-4463-43b5-bd18-d83046623820',
+  'remote-host' => 'appserver.test.8be50dbc-4463-43b5-bd18-d83046623820.drush.in',
+  'remote-user' => 'test.8be50dbc-4463-43b5-bd18-d83046623820',
   'ssh-options' => '-p 2222 -o "AddressFamily inet"',
   'path-aliases' => array(
     '%files' => 'files',
