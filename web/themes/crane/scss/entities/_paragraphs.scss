@@ -243,6 +243,40 @@
 			margin-bottom: $spaceXxs;
 		}
 	}
+	//add swatch if style
+	.field--name-field-style{
+		.swatch{
+			&:after{
+				content: '';
+				display: inline-block;
+				vertical-align: middle;
+				width: 30px;
+				height: 18px;
+				margin-left: 10px;
+				border: 1px solid $black;
+				position: relative;
+				top: -2px;
+			}
+			&.grey:after{
+				background: $sectionGrey;
+			}
+		}
+	}//end style
+	// add layout for preview
+	&.section-two-column{
+		.field--name-field-section-widgets > .field__items > .field__item{
+			@include tab{
+				width: 50%;
+			}
+		}
+	}
+	&.section-three-column{
+		.field--name-field-section-widgets > .field__items > .field__item{
+			@include tab{
+				width: 33.33%;
+			}
+		}
+	}
 	.field--name-field-section-widgets{
 		padding: $spaceXs 0;
 		& > .field__label{
@@ -253,8 +287,10 @@
 		}
 		& > .field__items{
 			padding-left: 1rem;
+			@include safeFlex(row,wrap,start,start);
 			& > .field__item{
 				clear: left;
+				width: 100%;
 			}
 			& > .field__item{
 				font-size: 1.4rem;

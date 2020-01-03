@@ -4218,6 +4218,7 @@ readers do not read off random characters that represent icons */
 ========================== */
 /* COMPONENT COLORS
 ----------------- */
+/* FRONT-END COLORS */
 /* ========================
    FONTS
 ========================== */
@@ -6579,6 +6580,24 @@ body:not(.role-administrator) .admin-list li.social-media-links {
   padding-top: 1rem; }
   .field--widget-paragraphs .paragraph--view-mode--preview.paragraph--type--landing-page-section > *:not(:last-child), .field--widget-paragraphs .paragraph--view-mode--preview.paragraph--type--basic-page-section > *:not(:last-child) {
     margin-bottom: 0.5rem; }
+  .field--widget-paragraphs .paragraph--view-mode--preview .field--name-field-style .swatch:after {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 30px;
+    height: 18px;
+    margin-left: 10px;
+    border: 1px solid #121212;
+    position: relative;
+    top: -2px; }
+  .field--widget-paragraphs .paragraph--view-mode--preview .field--name-field-style .swatch.grey:after {
+    background: #ededed; }
+  @media (min-width: 760px) {
+    .field--widget-paragraphs .paragraph--view-mode--preview.section-two-column .field--name-field-section-widgets > .field__items > .field__item {
+      width: 50%; } }
+  @media (min-width: 760px) {
+    .field--widget-paragraphs .paragraph--view-mode--preview.section-three-column .field--name-field-section-widgets > .field__items > .field__item {
+      width: 33.33%; } }
   .field--widget-paragraphs .paragraph--view-mode--preview .field--name-field-section-widgets {
     padding: 1rem 0; }
     .field--widget-paragraphs .paragraph--view-mode--preview .field--name-field-section-widgets > .field__label {
@@ -6587,9 +6606,20 @@ body:not(.role-administrator) .admin-list li.social-media-links {
       padding-right: 6rem;
       border-bottom: 1px solid #026cc5; }
     .field--widget-paragraphs .paragraph--view-mode--preview .field--name-field-section-widgets > .field__items {
-      padding-left: 1rem; }
+      padding-left: 1rem;
+      display: flex;
+      display: -ms-flexbox;
+      flex-direction: row;
+      -ms-flex-direction: row;
+      flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      justify-content: flex-start;
+      -ms-flex-pack: start;
+      align-items: flex-start;
+      -ms-flex-align: start; }
       .field--widget-paragraphs .paragraph--view-mode--preview .field--name-field-section-widgets > .field__items > .field__item {
-        clear: left; }
+        clear: left;
+        width: 100%; }
       .field--widget-paragraphs .paragraph--view-mode--preview .field--name-field-section-widgets > .field__items > .field__item {
         font-size: 1.4rem; }
         .field--widget-paragraphs .paragraph--view-mode--preview .field--name-field-section-widgets > .field__items > .field__item:not(:last-child) {
