@@ -283,18 +283,7 @@ display:
             label: ''
           plugin_id: search_api
       title: 'Site Search'
-      header:
-        area_text_custom:
-          id: area_text_custom
-          table: views
-          field: area_text_custom
-          relationship: none
-          group_type: group
-          admin_label: ''
-          empty: false
-          tokenize: false
-          content: '<h2 class="results-header">Search Results</h2>'
-          plugin_id: text_custom
+      header: {  }
       footer:
         result:
           id: result
