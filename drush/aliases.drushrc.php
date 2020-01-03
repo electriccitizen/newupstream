@@ -1,16 +1,4 @@
 <?php
-
-$aliases['newupstream.local'] = array(
-  'uri' => 'newupstream.local',
-  'root' => '/var/www/drupalvm/web',
-  'remote-host' => 'newupstream.local',
-  'remote-user' => 'vagrant',
-  'ssh-options' => '-o "SendEnv PHP_IDE_CONFIG PHP_OPTIONS XDEBUG_CONFIG" -o PasswordAuthentication=no -i "' . (getenv('VAGRANT_HOME') ?: drush_server_home() . '/.vagrant.d') . '/insecure_private_key"',
-  'path-aliases' => array(
-    '%drush-script' => '/var/www/drupalvm/vendor/drush/drush/drush',
-  ),
-);
-
 $aliases['newupstream.dev'] = array(
   'uri' => 'dev-newupstream.pantheonsite.io',
   'db-url' => 'mysql://pantheon:597c2a5b8e2f4c88bd37b97666239de9@dbserver.dev.8be50dbc-4463-43b5-bd18-d83046623820.drush.in:25960/pantheon',
@@ -47,3 +35,14 @@ $aliases['newupstream.live'] = array(
     '%drush-script' => 'drush',
    ),
 );
+$aliases['newupstream.local'] = array(
+  'uri' => 'newupstream.local',
+  'root' => '/var/www/drupalvm/web',
+  'remote-host' => 'newupstream.local',
+  'remote-user' => 'vagrant',
+  'ssh-options' => '-o "SendEnv PHP_IDE_CONFIG PHP_OPTIONS XDEBUG_CONFIG" -o PasswordAuthentication=no -i "' . (getenv('VAGRANT_HOME') ?: drush_server_home() . '/.vagrant.d') . '/insecure_private_key"',
+  'path-aliases' => array(
+    '%drush-script' => '/var/www/drupalvm/vendor/drush/drush/drush',
+  ),
+);
+
