@@ -122,7 +122,7 @@ function citizen_custom_preprocess_block(&$variables) {
           $output = '';
           $output .= '<h2>' . $cleanType . t('Layout Builder') . '</h2>';
           $output .= '<p><strong>' . t('WARNING: ') . '</strong>'. t('Changes to this layout will affect all non-customized ') . str_replace("_"," ",$nodeType) . t(' nodes.') . '</p>';
-          $output .= '<p><small>' . t('Forms and links inside the content of the layout builder tool have been disabled.') . '<small></p>';
+          $output .= '<p><small>' . t('Forms and links inside the content of the layout builder tool have been disabled.') . '</small></p>';
           $variables['content'][0]['#markup'] = $output;
           break;
         case 'layout_builder.overrides.node.view':

@@ -27,6 +27,54 @@
 		color: $tableHeaderText;
 		padding: 2rem 1.5rem;
 		text-align: left;
+		border-bottom: 3px solid $tableHeaderBack;
+		a{
+			color: $white;
+			position: relative;
+			display: block;
+			width: 100%;
+			height: 100%;
+			background-repeat: no-repeat;
+			background-size: 15px;
+			background-position: center left;
+			background-image: url('../images/form-elements/sort.svg');
+			padding-left: 25px;
+			&:after{
+				content: none;
+			}
+			&:hover,&:focus{
+				opacity: .6;
+				color: $white;
+			}
+			.tablesort{
+				background: none;
+				float: none;
+				position: absolute;
+				top: 4px;
+				left: -18px;
+				margin-left: 5px;
+				background-repeat: no-repeat;
+				background-size: contain;
+				background-position: center;
+				width: 18px;
+				height: 18px;
+				&.tablesort--desc{	
+					background-image: url('../images/form-elements/arrow-down-white.svg');
+				}
+				&.tablesort--asc{
+					background-image: url('../images/form-elements/arrow-up-white.svg');
+				}
+			}
+		}
+		&.is-active{
+			background: lighten($tableHeaderBack, 6%);
+			border-top-color: lighten($tableHeaderBack, 6%);
+			border-bottom-color: lighten($link, 10%);
+			& > a{
+				color: $white;
+				background-image: none;
+			}
+		}
 		&:first-child{
 			padding-left: 3rem;
 		}
