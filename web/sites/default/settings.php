@@ -16,14 +16,15 @@ include __DIR__ . "/settings.pantheon.php";
 /**
  * Place the config directory outside of the Drupal root.
  */
-$config_directories = array(
-  CONFIG_SYNC_DIRECTORY => dirname(DRUPAL_ROOT) . '/config/sync',
-);
+$settings['config_sync_directory'] = "../config/sync";
+
 /**
  * Set up config splits
  */
 if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
   $config['config_split.config_split.local']['status'] = FALSE;
+
+  $settings['file_temp_path'] = '/tmp';
 
   switch($_ENV['PANTHEON_ENVIRONMENT']) {
     case 'live':
@@ -64,4 +65,5 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
     include $local_settings;
   }
 }
-$settings['install_profile'] = 'citizen';
+
+// $settings['install_profile'] = 'citizen';
