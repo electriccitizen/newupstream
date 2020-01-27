@@ -17,10 +17,11 @@
   set title_classes = [
     required ? 'js-form-required',
     required ? 'form-required',
+    'label'
   ]
 %}
 {% if title %}
-  <h4{{ title_attributes.addClass(title_classes) }}>{{ title }}</h4>
+  <div{{ title_attributes.addClass(title_classes) }}>{{ title }}</div>
 {% endif %}
 {{ content }}
 {% if errors %}
@@ -28,4 +29,8 @@
     {{ errors }}
   </div>
 {% endif %}
-{{ description }}
+{% if description %}
+	<div class="description">
+		{{ description }}
+	</div>
+{% endif %}

@@ -2,6 +2,32 @@
    DATE
 ================ */
 
+field--type-datetime{
+	margin-bottom: $formElementSpace;
+	.label{
+		@include formLabel;
+	}
+	.description{
+		margin-top: -$spaceSm;
+	}
+}
+
+.field--type-daterange{
+	legend{
+		@include formLabel;
+	}
+	.description{
+		margin-top: -$spaceSm;
+	}
+	.fieldset-wrapper{
+		.label{
+			font-size: 1.6rem;
+			font-weight: $heavy;
+			margin-bottom: 3px;
+		}
+	}
+}
+
 .js-form-type-date,.form-item-html-5-date{
 	input{
 		@include textInput;

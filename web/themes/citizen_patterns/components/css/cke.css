@@ -63,8 +63,10 @@ div.warning {
 	margin-bottom: 3rem;
 	text-align: center;
 }
-small{
-	font-size: 80%;
+.cke_panel_listItem a div.warning{
+	margin-bottom: 0;
+	padding: 4px 10px;
+	font-size: 14px;
 }
 
 div.button{
@@ -75,9 +77,6 @@ div.button{
 	max-width: 260px;
 	text-align: center;
 	box-sizing: border-box;
-}
-.cke_panel_listItem div.button{
-	margin-bottom: 0;
 }
 div.button + div.button{
 	margin-left: 2rem;
@@ -93,6 +92,23 @@ div.button a{
 div.button a:hover{
 	background: #676767;
 }
+.cke_panel_listItem a div.button{
+	margin: 0;
+	background: #bf0e0e;
+	color: #ffffff;
+	padding: 4px 15px;
+	font-size: 14px;
+	display: block;
+}
+
+.cke_panel_listItem a mark{
+	font-size: 15px;
+}
+
+small{
+	font-size: 80%;
+}
+
 a{
 	color: #bf0e0e;
 }

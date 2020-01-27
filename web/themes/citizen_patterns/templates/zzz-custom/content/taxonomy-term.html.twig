@@ -23,10 +23,17 @@
  * @see template_preprocess_taxonomy_term()
  */
 #}
-<div{{ attributes }}>
+{% set classes = [
+	'term-page',
+	bundle
+] %}
+
+<div{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
   {% if not page %}
-    <h2><a href="{{ url }}">{{ name }}</a></h2>
+    <h2><a href="{{ url }}">{{ name[0]['#context'].value }}</a></h2>
+  {% else %}
+  	<h1 class="term-title">{{ name[0]['#context'].value }}</h1>
   {% endif %}
   {{ title_suffix }}
   {{ content }}
