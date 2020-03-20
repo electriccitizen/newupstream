@@ -191,7 +191,7 @@
         "Call to member function missing label": "https://www.drupal.org/files/issues/2020-01-14/paragraphs-call_id_on_null-2948778-20.patch"
       },
       "drupal/core": {
-        "Off canvas filling up localStorage's quota, causing errors": "https://www.drupal.org/files/issues/2019-11-04/3070745-25.patch"
+        "Off canvas filling up localStorage's quota, causing errors": "https://www.drupal.org/files/issues/2020-02-26/3070745-25.patch"
       }
     },
     "enable-patching": true
