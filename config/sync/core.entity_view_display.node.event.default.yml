@@ -26,7 +26,8 @@ third_party_settings:
     sections:
       -
         layout_id: layout_onecol
-        layout_settings: {  }
+        layout_settings:
+          label: ''
         components:
           4f63138d-9667-4838-9eb0-4c192b5807eb:
             uuid: 4f63138d-9667-4838-9eb0-4c192b5807eb
@@ -39,9 +40,11 @@ third_party_settings:
               context_mapping: {  }
             additional: {  }
             weight: 0
+        third_party_settings: {  }
       -
         layout_id: layout_onecol
-        layout_settings: {  }
+        layout_settings:
+          label: ''
         components:
           d22ea93e-d8cc-45a7-8af2-2662554a5b21:
             uuid: d22ea93e-d8cc-45a7-8af2-2662554a5b21
@@ -115,9 +118,11 @@ third_party_settings:
                 entity: layout_builder.entity
             additional: {  }
             weight: 4
+        third_party_settings: {  }
       -
         layout_id: layout_onecol
-        layout_settings: {  }
+        layout_settings:
+          label: ''
         components:
           b7759f63-8c59-4aaf-ac98-dd1de48175e4:
             uuid: b7759f63-8c59-4aaf-ac98-dd1de48175e4
@@ -164,6 +169,7 @@ third_party_settings:
                 entity: layout_builder.entity
             additional: {  }
             weight: 1
+        third_party_settings: {  }
     allow_custom: false
     is_enabled: true
     enabled: true
@@ -263,3 +269,4 @@ hidden:
   field_category: true
   field_event_pin_info: true
   links: true
+  search_api_excerpt: true
