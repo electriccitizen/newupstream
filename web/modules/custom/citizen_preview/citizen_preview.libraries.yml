@@ -2,8 +2,8 @@ preview:
   version: 1.0
   css:
     theme:
-      css/ec_preview.css: {}
+      css/citizen_preview.css: {}
   js:
-    js/ec_preview.js: {}
+    js/citizen_preview.js: {}
   dependencies:
     - core/jquery

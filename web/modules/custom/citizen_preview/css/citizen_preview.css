@@ -48,12 +48,12 @@
 }
 
 /* CUSTOM PREVIEW BUTTON ON NODE */
-#edit-ec-preview {
+#edit-citizen-preview {
   background: #018901;
   color: #ffffff;
   min-width: 120px;
 }
-#edit-ec-preview:hover,#edit-ec-preview:focus{
+#edit-citizen-preview:hover,#edit-citizen-preview:focus{
 	background: #ccc;
 	color: #121212;
 }
