@@ -16,7 +16,7 @@
 	overflow: hidden;
 	width: 300px;
 	background: $lightGrey;
-	border: 2px solid $gold;
+	border: 2px solid $adminGold;
 	border-right-width: 3px;
 	padding-bottom: 10px;
 	box-shadow: -8px 8px 16px rgba(35,35,35,0.3);
@@ -80,7 +80,7 @@
 		font-size: 2rem;
 		margin-bottom: $spaceSm;
 		display: block;
-		background: $gold;
+		background: $adminGold;
 		padding: 1.35rem 20px;
 		text-align: center;
 		height: 78px;
@@ -118,7 +118,7 @@
 .flag{
 	display: none;
 	position: absolute;
-	background: $purple;
+	background: $adminPurple;
 	color: $white;
 	padding: 0 2em;
 	line-height: 52px;
@@ -138,7 +138,7 @@
 		left: 250px;
 		@include rotate3d(0,1,2,29);
 		&:before{
-			@include triangle(left,52px,26px,$purple);
+			@include triangle(left,52px,26px,$adminPurple);
 			top: 0;
 			left: -26px;
 		}
@@ -149,7 +149,7 @@
 		left: 635px;
 		@include rotate3d(0,1,2,12);
 		&:before{
-			@include triangle(left,52px,26px,$purple);
+			@include triangle(left,52px,26px,$adminPurple);
 			top: 0;
 			left: -26px;
 		}
@@ -160,7 +160,7 @@
 		padding: 0 2em 0 1.5em;
 		@include rotate3d(0,1,2,-12);
 		&:before{
-			@include triangle(left,52px,26px,$purple);
+			@include triangle(left,52px,26px,$adminPurple);
 			top: 0;
 			left: -26px;
 		}
@@ -212,7 +212,10 @@
 
 	.user-image-wrapper{
 		width: 225px;
+		height: 225px;
+		border-radius: 50%;
 		margin-bottom: $spaceSm;
+		overflow: hidden;
 		@include safeFlexOrder(2);
 		@include desk{
 			@supports(display: grid){
@@ -221,8 +224,9 @@
 			}
 		}
 		img{
-			border-radius: 50%;
-			display: block;
+			height: 100%;
+			object-fit: cover;
+			object-position: center center;
 		}
 	}//end user image wrapper
 

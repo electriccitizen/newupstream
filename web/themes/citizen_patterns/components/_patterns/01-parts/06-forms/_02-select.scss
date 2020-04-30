@@ -77,10 +77,7 @@ body,#drupal-off-canvas{
 				background-position: center;
 				top: 9px;
 				right: 10px;
-				-webkit-transition: -webkit-transform 0.15s ease-in 0s;
-				transition: -webkit-transform 0.15s ease-in 0s;
-				transition: transform 0.15s ease-in 0s;
-				transition: transform 0.15s ease-in 0s, -webkit-transform 0.15s ease-in 0s;
+				@include transFormAnimate;
 				//hide default select2 arrow
 				b{
 					display: none;
@@ -124,10 +121,7 @@ body,#drupal-off-canvas{
 					background-position: center;
 					top: 9px;
 					right: 5px;
-					-webkit-transition: -webkit-transform 0.15s ease-in 0s;
-					transition: -webkit-transform 0.15s ease-in 0s;
-					transition: transform 0.15s ease-in 0s;
-					transition: transform 0.15s ease-in 0s, -webkit-transform 0.15s ease-in 0s;
+					@include transFormAnimate;
 				}
 				input.select2-search__field{
 					color: $darkGrey;
@@ -151,9 +145,7 @@ body,#drupal-off-canvas{
 			//single
 			.select2-selection--single{
 				.select2-selection__arrow{
-					-webkit-transform: rotate(180deg);
-					-ms-transform: rotate(180deg);
-					transform: rotate(180deg);
+					@include rotate(180);
 				}
 			}//end single
 
@@ -162,9 +154,7 @@ body,#drupal-off-canvas{
 				border-width: 2px;	
 				.select2-search--inline{ 
 					&:after{
-						-webkit-transform: rotate(180deg);
-						-ms-transform: rotate(180deg);
-						transform: rotate(180deg);
+						@include rotate(180);
 					}
 					input.select2-search__field{
 						@include placeholder;

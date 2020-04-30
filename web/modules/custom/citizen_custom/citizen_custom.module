@@ -87,7 +87,7 @@ function citizen_custom_form_alter(&$form, \Drupal\Core\Form\FormStateInterface 
   }
   //alter user form to prevent site managers from making themselves admins
   if($formId == 'user-form'){
-    if(!in_array('administrator', $userRole)){
+    if ((!in_array('administrator', $userRole)) && ($user->id() != '1')) {
       unset($form['account']['roles']['#options']['administrator']);
     }
   }
@@ -212,10 +212,12 @@ function citizen_custom_form_site_search_form_alter(&$form, FormStateInterface $
 function citizen_custom_field_widget_form_alter(&$element, \Drupal\Core\Form\FormStateInterface $form_state, $context) {
   $field_definition = $context['items']->getFieldDefinition();
   if ($field_definition->getType() == 'entity_reference_revisions') {
-    $type = $element['#paragraph_type'];
-    $element['top']['type']['#attributes']['class'][] = str_replace('_','-',$type);
-    if(isset($element['top']['type']['icon'])){
-      unset($element['top']['type']['icon']);
+    if (isset($element['#paragraph_type'])) {
+      $type = $element['#paragraph_type'];
+      $element['top']['type']['#attributes']['class'][] = str_replace('_','-',$type);
+      if(isset($element['top']['type']['icon'])){
+        unset($element['top']['type']['icon']);
+      }
     }
   }
 }

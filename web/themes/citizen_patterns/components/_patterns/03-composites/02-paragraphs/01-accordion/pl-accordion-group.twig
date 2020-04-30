@@ -13,15 +13,13 @@
 			{% block widgetContent %}
 				<div class="field field-accordion-item">
 					{% for accordion in accordionGroup %}
-						<div>
-							{% 
-								include "@composites/02-paragraphs/01-accordion/_accordion.twig"
-								with{
-									accordionHeader: accordion.accordionHeader,
-									accordionContent: accordion.accordionContent,
-								}
-							%}
-						</div>
+						{% 
+							include "@composites/02-paragraphs/01-accordion/_accordion.twig"
+							with{
+								accordionHeader: accordion.accordionHeader,
+								accordionContent: accordion.accordionContent,
+							}
+						%}
 					{% endfor %}
 				</div>
 			{% endblock %}

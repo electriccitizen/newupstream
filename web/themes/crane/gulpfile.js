@@ -38,7 +38,7 @@ gulp.task('workflow', function () {
     }))
 
     //minify css
-    //.pipe(cssnano())
+    .pipe(cssnano())
 
     //write sourcemaps
     .pipe(sourcemaps.write('./'))

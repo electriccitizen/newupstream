@@ -13,8 +13,12 @@
 	-moz-transition: color $time ease,background-color $time ease;
 	-webkit-transition: color $time ease,background-color $time ease;
 }
-
-///mixin - transAll(.3s)
+@mixin transFormAnimate{
+	-webkit-transition: -webkit-transform 0.15s ease-in 0s;
+  transition: -webkit-transform 0.15s ease-in 0s;
+  transition: transform 0.15s ease-in 0s;
+  transition: transform 0.15s ease-in 0s, -webkit-transform 0.15s ease-in 0s;
+}
 @mixin transClear{
 	transition: none;
 	-moz-transition: none;
@@ -121,16 +125,24 @@
 	filter: Alpha(opacity=($opacity * 100));
 }
 
-///mixin - column-count
-@mixin cssColumns($columns, $gap){
+// CSS columns short hand with number or columns and gutter
+@mixin cssColumns($columns, $gap, $break){
 	-webkit-column-count: #{$columns};
 	-moz-column-count: #{$columns};
 	column-count: #{$columns};
 	-webkit-column-gap: #{$gap};
 	-moz-column-gap: #{$gap};
 	column-gap: #{$gap};
+	@if $break == 'nobreak'{
+		& > *{
+			display: block;
+			-webkit-column-break-inside: avoid;
+			page-break-inside: avoid;
+			break-inside: avoid;
+			overflow: hidden;
+		}
+	}
 }
-
 
 ///mixin - calc
 @mixin calc($property, $expression) {

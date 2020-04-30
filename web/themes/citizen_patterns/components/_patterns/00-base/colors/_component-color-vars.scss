@@ -2,21 +2,20 @@
 
 /* HIDDEN FROM PL SWATCHES BUT USED ON SITE */
 $white         : #fff;
-$pink          : #f8e8f1;
+$adminPink     : #f8e8f1;
 
 $transWhite    : rgba(255,255,255,0.7);
 $transBlack    : rgba(35,35,35,0.7);
 $transTint     : rgba(35,35,35,0.4);
 
 /* ADMINS - do not customize per site */
-$gold          : #fcd105;
-$whiteGold     : #fefbc7;
-$fuchsia       : #c028bb;
-$purple        : #8b01e2;
-$green         : #018901;
-$gold          : #fcdc01;
-$contrastGrey  : #676767;
-$transGrey     : rgba(92,96,98,.92);
+$adminGold      : #fcd105;
+$adminWhiteGold : #fefbc7;
+$adminFuchsia   : #c028bb;
+$adminPurple    : #8b01e2;
+$adminGreen     : #018901;
+$adminGrey      : #676767;
+$adminTransGrey : rgba(92,96,98,.92);
 
 
 /* ===========================
@@ -54,18 +53,18 @@ $cautionTextHover  : $black;
 /* SYSTEM
 --------------------- */
 $siteBack                  : $white;
-$unpub                     : $pink;
+$unpub                     : $adminPink;
 $headerBack                : $offWhite;
 $prefooterBack             : $darkGrey;
 $prefooterText             : $offWhite;
-$prefooterLink             : $gold;
-$prefooterLinkHover        : $whiteGold;
+$prefooterLink             : $adminGold;
+$prefooterLinkHover        : $adminWhiteGold;
 $footerBack                : $black;
 $footerText                : $offWhite;
-$footerLink                : $gold;
-$footerLinkHover           : $whiteGold;
+$footerLink                : $adminGold;
+$footerLinkHover           : $adminWhiteGold;
 $borderRule                : $black;
-$modalBack                 : $transGrey;
+$modalBack                 : $adminTransGrey;
 $modalContent              : $baseText;
 $modalContentBack          : $siteBack;
 $modalHeader               : $white;
@@ -100,7 +99,7 @@ $searchCloseBackHover      : $black;
 $formElementBorder        : $borderRule;
 $formElementBorderHover   : $borderRule;
 $formElementBorderFocus   : $link;
-$placeColor               : $contrastGrey;
+$placeColor               : $adminGrey;
 $placeFocusColor          : $placeColor;
 $validation               : $brightRed;
 $checkbox                 : $link;
@@ -128,7 +127,7 @@ $datepickerDate           : $darkGrey;
 $datepickerDateBack       : $white;
 $datepickerDateBorder     : $lightGrey;
 $datepickerCurrent        : $darkGrey;
-$datepickerCurrentBack    : $whiteGold;
+$datepickerCurrentBack    : $adminWhiteGold;
 $datepickerSelected       : $black;
 $datepickerSelectedBack   : $darkIce;
 $detailsWrapperBack       : $offWhite;
@@ -235,9 +234,9 @@ $accordActiveBackHover    : $darkGrey;
 ------------------ */
 $messageText          : $white;
 $messageBack          : $darkGrey;
-$messageGoodBorder    : $green;
-$messageWarningBorder : $gold;
-$messageErrorBorder   : $fuchsia;
+$messageGoodBorder    : $adminGreen;
+$messageWarningBorder : $adminGold;
+$messageErrorBorder   : $adminFuchsia;
 $messageGoodIcon    : '../images/message/message-status.svg';
 $messageWarningIcon : '../images/message/message-warning.svg';
 $messageErrorIcon   : '../images/message/message-error.svg';
