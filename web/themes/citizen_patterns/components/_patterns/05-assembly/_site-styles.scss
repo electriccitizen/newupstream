@@ -177,7 +177,7 @@ body {
 				color: $buttonTextActive;
 			}
 			&.is-active {
-				background-color: $gold;
+				background-color: $adminGold;
 				&:hover,&:focus{
 					background: $buttonBackHover;
 					color: $buttonTextHover;
@@ -355,14 +355,14 @@ body {
 /* RESPONSIVE PREVIEW
 ------------------------- */
 #responsive-preview-toolbar-tab .responsive-preview-trigger.active{
-	background: $green;
+	background: $adminGreen;
 }
 #responsive-preview-toolbar-tab .responsive-preview-trigger.active:hover{
 	background: $midGrey;
 }
 
 #responsive-preview-modal-background{
-	background: $transGrey;
+	background: $adminTransGrey;
 }
 #responsive-preview-frame-container{
 	border-radius: 5px;

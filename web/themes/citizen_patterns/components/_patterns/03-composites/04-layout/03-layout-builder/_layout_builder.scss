@@ -125,7 +125,7 @@
 
 .is-layout-builder-highlighted{
 	border: none !important;
-	background: $whiteGold;
+	background: $adminWhiteGold;
 }
 
 .layout-builder-revert-overrides{
@@ -154,7 +154,7 @@ form.layout-builder-configure-block,form.layout-builder-block-move,form.layout-b
 	.layout-builder-components-table{
 		margin-bottom: $spaceLg;
 		.layout-builder-components-table__block-label--current{
-			border-left-color: $gold;
+			border-left-color: $adminGold;
 		}
 	}
 }//end layout builder configure/move/remove block

@@ -160,6 +160,9 @@ $buttonPadding: 1.15rem 1.5rem 1rem;
 }
 .button{
 	@include button;
+	&:focus{
+		z-index: inherit;
+	}
 }
 button{
 	&:focus{

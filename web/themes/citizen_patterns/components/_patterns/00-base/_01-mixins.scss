@@ -518,8 +518,6 @@
 
 /*  Keyframes setup
 ------------ */
-
-//slide in from 150% right (150% of the element height)
 //delayed fade in
 @include keyframes(fadeIn){
 	from{
@@ -532,7 +530,6 @@
 		opacity: 1;
 	}
 }
-
 
 .fadeIn {
 	@include animation('fadeIn 1.5s 1');
@@ -549,10 +546,14 @@
 	-webkit-transition: all $time ease;
 	-webkit-transform: translateZ(0);
 }
-
-///mixin - transAll(.3s)
 @mixin transClear{
 	transition: none;
 	-moz-transition: none;
 	-webkit-transition: none;
+}
+@mixin transFormAnimate{
+	-webkit-transition: -webkit-transform 0.15s ease-in 0s;
+	transition: -webkit-transform 0.15s ease-in 0s;
+	transition: transform 0.15s ease-in 0s;
+	transition: transform 0.15s ease-in 0s, -webkit-transform 0.15s ease-in 0s;
 }

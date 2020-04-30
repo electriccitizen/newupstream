@@ -257,6 +257,9 @@ p{
 	&:not(:last-child){
 		margin-bottom: $spaceMd;
 	}
+	& + article:not(:last-child){
+		margin-bottom: $spaceMd;
+	}
 }
 
 a {

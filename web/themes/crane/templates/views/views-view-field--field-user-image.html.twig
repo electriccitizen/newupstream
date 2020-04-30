@@ -19,8 +19,9 @@
  */
 #}
 {% if row._entity.field_user_image.0 %}
-	{{ output -}}
-{% else %}
+	<div class="image-wrapper">
+		{{ output -}}
+	</div>{% else %}
 	{% if row.uid is divisible by(3) %}
 		{% set avatar = '/themes/crane/images/avatars/avatar-gold.jpg' %}
 	{% elseif row.uid is even %}
@@ -28,5 +29,7 @@
 	{% else %}
 	  {% set avatar = '/themes/crane/images/avatars/avatar-blue.jpg' %}
 	{% endif %}
-	<img src="{{ avatar }}" width="100px" height="100px" alt="Profile image for {{ row._entity.name.0.value }}" />
+	<div class="image-wrapper">
+		<img src="{{ avatar }}" width="100px" height="100px" alt="Profile image for {{ row._entity.name.0.value }}" />
+	</div>
 {% endif %}

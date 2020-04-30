@@ -81,6 +81,9 @@
 		ul.tabs-header{
 			@include listReset;
 			@include safeFlex(row,wrap,start,start);
+			@include tab{
+				margin-left: 1px;
+			}
 			li{
 				min-width: 224px;
 				@include onlySmall{
@@ -97,19 +100,22 @@
 				width: 100%;
 				margin-bottom: -1px;
 				color: $black;
+				&:hover,&:focus,&:active{
+					border-color: $borderRule;
+				}
 				&.active-tab{
 					background: $midGrey;
 					color: $white;
-					border-color: $midGrey;
+					border-color: $borderRule;
 					&:hover,&:focus{
 						background: $buttonBackHover;
 						color: $buttonTextHover;
-						border-color: $buttonBackHover;
+						border-color: $borderRule;
 					}
 					&:active{
 						background: $buttonBackActive;
 						color: $buttonTextActive;
-						border-color: $buttonBackActive;
+						border-color: $borderRule;
 					}
 				}
 			}//end tab control
