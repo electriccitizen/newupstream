@@ -16,7 +16,7 @@
 	max-width: $contentStop;
 	@include auto;
 	a{
-		color: $gold;
+		color: $adminGold;
 		&:hover,&:focus{
 			opacity: .6;
 		}

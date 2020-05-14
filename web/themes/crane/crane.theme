@@ -2,20 +2,21 @@
 
 /**
  * @file
- * Functions to support theming in the Adminimal theme.
+ * Functions to support theming in the Crane theme.
  */
 
+use Drupal\user\Entity\User;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\taxonomy\Entity\Term;
 use Drupal\Core\Template\Attribute;
 
 /**
- * Implements hook_preprocess_HOOK() for HTML document templates.
+ * Implements hook_preprocess_HTML_variables() for HTML document templates.
  */
 function crane_preprocess_html(&$variables) {
   $route_name = \Drupal::routeMatch()->getRouteName();
-  $pathName =  preg_replace('/\W+/','-',strtolower($route_name));
-  $bodyClasses = 'crane ' . $pathName;  
+  $pathName = preg_replace('/\W+/', '-', strtolower($route_name));
+  $bodyClasses = 'crane ' . $pathName;
   // Add classes to the body.
   if ($variables['attributes'] instanceof Attribute) {
     $variables['attributes']->addClass($bodyClasses);
@@ -45,53 +46,55 @@ function crane_preprocess_html(&$variables) {
 }
 
 /**
- * Implements hook_preprocess_page to get pathname, site name and user first name as variables.
+ * Implements hook_preprocess_PAGE_variables().
  */
 function crane_preprocess_page(&$variables) {
   $route_name = \Drupal::routeMatch()->getRouteName();
-  $variables['pathName'] =  preg_replace('/\W+/','-',strtolower($route_name));
+  $variables['pathName'] = preg_replace('/\W+/', '-', strtolower($route_name));
 
-  //get teh site name and pass to page template
+  // Get the site name and pass to page template.
   $config = \Drupal::config('system.site');
   $variables['site_name'] = $config->get('name');
-  
-  //find the logged in user's first name and pass to page template
-  $user = \Drupal\user\Entity\User::load(\Drupal::currentUser()->id());
+
+  // Find the logged in user's first name and pass to page template.
+  $user = User::load(\Drupal::currentUser()->id());
   $variables['fname'] = $user->field_first_name;
 }
 
 /**
- * Implements hook_preprocess_MENU_LOCAL_ACTIONS() to add button-small class to action button.
+ * Implements hook_preprocess_MENU_LOCAL_ACTIONS_variables().
  */
 function crane_preprocess_menu_local_action(array &$variables) {
   $variables['link']['#options']['attributes']['class'][] = 'button--small-override';
 }
 
 /**
- * Implements hook_preprocess_BLOCK() to get secondary tasks as classes on block.
+ * Implements hook_preprocess_BLOCK_variables().
  */
 function crane_preprocess_block(&$variables) {
-  if($variables['elements']['#id'] == 'crane_secondary_local_tasks' ){
+  if ($variables['elements']['#id'] == 'crane_secondary_local_tasks') {
     $secondaryTasks = $variables['content']['#secondary'];
-    $taskClass = array();
-    foreach($secondaryTasks as $task){ 
-      $taskClass[] = preg_replace('/\W+/','-',strtolower($task['#link']['title']));
+    $taskClass = [];
+    foreach ($secondaryTasks as $task) {
+      $taskClass[] = preg_replace('/\W+/', '-', strtolower($task['#link']['title']));
     }
-    $variables['secondaryClasses'] = implode(' ',$taskClass);
+    $variables['secondaryClasses'] = implode(' ', $taskClass);
   }
 }
 
 /**
- * Implements hook_preprocess_paragraphs to get parent node id as variable in paragraph templates
+ * Implements hook_preprocess_PARAGRAPH_variables().
  */
 function crane_preprocess_paragraph(&$variables) {
   $paragraph = $variables['paragraph'];
   $parent = $paragraph->getParentEntity();
-  if($parent->getEntityTypeId() == 'node'){
+  if ($parent->getEntityTypeId() == 'node') {
     $nodeId = $parent->id();
-  }else if ($parent->getParentEntity()->getEntityTypeId() == 'node') {
+  }
+  elseif ($parent->getParentEntity()->getEntityTypeId() == 'node') {
     $nodeId = $parent->getParentEntity()->id();
-  }else{
+  }
+  else {
     $nodeId = '';
   }
   $variables['nodeId'] = $nodeId;
@@ -138,5 +141,3 @@ function crane_theme_suggestions_page_alter(array &$suggestions, array $variable
     $suggestions[] = 'page__taxonomy__' . $term->getVocabularyId();
   }
 }
-
-

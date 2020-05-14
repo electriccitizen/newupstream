@@ -90,7 +90,8 @@ div.button a{
 	text-decoration: none;
 }
 div.button a:hover{
-	background: #676767;
+	background: #ccc;
+	color: #000;
 }
 .cke_panel_listItem a div.button{
 	margin: 0;

@@ -88,7 +88,7 @@
   {% if not page and (view_mode != 'full') %}
     {% block nodeTitle %}
       <h2{{ title_attributes }}>
-        <a href="{{- url -}}" rel="bookmark">{{- label -}}</a>
+        <a href="{{- url -}}" rel="bookmark">{{- label.0['#context'].value -}}</a>
       </h2>
     {% endblock %}
   {%- endif -%}
@@ -109,17 +109,21 @@
 
 {% block node %}  
   {%- if content._layout_builder -%}
-    {%- for key, layoutSection in content._layout_builder if key|first != '#' -%}
-      {% block layoutSectionContent %}
-        <section id="section-{{ loop.index }}" class="node-section">
-          {{- layoutSection -}}
-        </section>
-      {% endblock %}
-    {%- endfor -%}
-  {%- else -%}
-    {% block nodeContent %}
+    {% if content._layout_builder.0 %}
+      {%- for key, layoutSection in content._layout_builder if key|first != '#' -%}
+        {% block layoutSectionContent %}
+          <section id="section-{{ loop.index }}" class="node-section">
+            {{- layoutSection -}}
+          </section>
+        {% endblock %}
+      {%- endfor -%}
+    {% else %}
+      {% block nodeContent %}
       {{- content -}}
     {% endblock %}
+    {% endif %}
+  {%- else -%}
+    {{- content -}}
   {%- endif -%}
 {% endblock %}
 

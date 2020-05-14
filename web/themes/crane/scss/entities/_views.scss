@@ -218,9 +218,16 @@
 			display: none !important;
 		}
 		.views-field-field-user-image{
-			img{
+			.image-wrapper{
 				width: 50px;
+				height: 50px;
+				overflow: hidden;
 				border-radius: 50%;
+				img{
+					height: 100%;
+					object-fit: cover;
+					object-position: center center;
+				}
 			}
 		}
 	}

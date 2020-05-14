@@ -16,10 +16,11 @@ header{
 	.shortcut-action--remove{
 		.shortcut-action__icon{
 			background: transparent url('../images/icons/admin-icons/shortcut-star-remove.svg') no-repeat left top;
-			&:hover,&:focus{
-				.shortcut-action__icon{
-					background: transparent url(../icons/admin-icons/shortcut-star-remove.svg) no-repeat left top;
-				}
+		}
+		&:hover,&:focus{
+			.shortcut-action__icon{
+				background-position: 0 0;
+				opacity: .6;
 			}
 		}
 	}

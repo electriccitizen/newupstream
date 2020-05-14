@@ -57,20 +57,21 @@ SECTION LAYOUTS
 		z-index: 4;
 		max-width: $contentStop;
 		@include auto;
-		& > .section-wrapper > .section-item{
-			width: 100%;
-			//need mins so that js can calculate width and height (for slider)
-			min-height: 0;
-			min-width: 0;
-			&:not(:last-child){
-				margin-bottom: $spaceLg;
+		& > .section-wrapper {
+			margin-bottom: -$elementSpace;
+			& > .section-item{
+				width: 100%;
+				//need mins so that js can calculate width and height (for slider)
+				min-height: 0;
+				min-width: 0;
+				margin-bottom: $elementSpace;
 			}
 		}
 	}//end field section widgets
 
 	&.two-column{
 		.section-wrapper{
-			@include safeFlex(row,wrap,null,null);
+			@include safeFlex(row,wrap,start,stretch);
 			@include tab{
 				@include bleed(padding,20px);
 			}
