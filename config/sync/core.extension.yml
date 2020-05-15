@@ -9,6 +9,7 @@ module:
   block_content: 0
   breakpoint: 0
   citizen_custom: 0
+  citizen_preview: 0
   ckeditor: 0
   color: 0
   components: 0
@@ -27,7 +28,6 @@ module:
   default_content: 0
   dynamic_page_cache: 0
   easy_breadcrumb: 0
-  ec_preview: 0
   editor: 0
   embed: 0
   entity: 0
