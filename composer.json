@@ -184,7 +184,7 @@
       },
       "drupal/menu_block": {
         "Enable using active menus as menu block titles": "https://www.drupal.org/files/issues/menu_block-label_configuration-2809699-51.patch",
-        "Enable link functionality on menu block titles - https://www.drupal.org/project/menu_block/issues/2950943": "https://www.drupal.org/files/issues/2020-05-03/2950943-33.patch"
+        "Enable link functionality on menu block titles - https://www.drupal.org/project/menu_block/issues/2950943": "https://www.drupal.org/files/issues/menu_block-title_as_link-1-d8.patch"
       },
       "drupal/paragraphs": {
         "Call to member function missing label - https://www.drupal.org/project/paragraphs/issues/2948778": "https://www.drupal.org/files/issues/2020-01-14/paragraphs-call_id_on_null-2948778-20.patch"
