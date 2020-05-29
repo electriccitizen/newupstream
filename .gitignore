@@ -122,3 +122,7 @@ Thumbs.db
 /.vagrant
 
 /web/sites/default/drushrc.php
+
+/*.gz
+/*.sql
+/*.mysql
