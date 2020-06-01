@@ -89,6 +89,7 @@ content:
     settings:
       default_longitude: ''
       default_latitude: ''
+      auto_client_location: '1'
       auto_client_location_marker: '1'
       google_map_settings:
         height: 400px
@@ -111,7 +112,6 @@ content:
         scrollwheel: 0
         preferScrollingToZooming: 0
         disableDoubleClickZoom: 0
-      auto_client_location: '0'
       allow_override_map_settings: 0
       populate_address_field: ''
       target_address_field: null

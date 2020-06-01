@@ -18,4 +18,4 @@ hide_single_home_item: false
 applies_admin_routes: false
 custom_paths: ''
 use_page_title_as_menu_title_fallback: true
-term_hierarchy: false
+term_hierarchy: true
