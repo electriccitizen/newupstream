@@ -1,5 +1,0 @@
-name: EC Preview
-description: EC Preview Overrides
-type: module
-package: Custom
-core: '8.x'
