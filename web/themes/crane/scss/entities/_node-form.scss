@@ -88,6 +88,9 @@
 			#edit-preview{
 				@include submitButton;
 				background: $green;
+				margin-bottom: 1rem;
+				margin-right: 1rem;
+				padding-bottom: 1.15rem;
 				&:hover,&:focus{
 					background: $buttonBackHover;
 					color: $buttonTextHover;
