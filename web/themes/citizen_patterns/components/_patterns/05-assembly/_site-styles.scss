@@ -91,7 +91,8 @@ body {
 /* MAP PINS
 -------------- */
 //google api map pins
-.gm-style-iw{
+.gm-style .gm-style-iw{
+	font-size: 2rem;
 	strong{
 		font-weight: $heavy;
 	}
@@ -103,6 +104,14 @@ body {
 	}
 	h3{
 		font-size: 1.4rem;
+	}
+	p:last-child{
+		margin-bottom: 0;
+	}
+}
+.geolocation-formatter-map-wrapper{
+	button{
+		min-width: 0;
 	}
 }
 

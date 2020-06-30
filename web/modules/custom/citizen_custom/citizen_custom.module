@@ -85,19 +85,9 @@ function citizen_custom_form_alter(&$form, \Drupal\Core\Form\FormStateInterface 
     $form['revision_information']['#access'] = FALSE;
     $form['revision']['#access'] = FALSE;
   }
-  //alter user form to prevent site managers from making themselves admins
-  if($formId == 'user-form'){
-    if ((!in_array('administrator', $userRole)) && ($user->id() != '1')) {
-      unset($form['account']['roles']['#options']['administrator']);
-    }
-  }
   // add entity browser scripts
   if ($form_state->has('entity_browser')) {
     $form['#attached']['library'][] = 'citizen_custom/browser';
-  }
-  // fix webform filter insanely long placeholder
-  if($formId == 'webform-filter-form'){
-    $form['filter']['search']['#placeholder'] = t('Search keywords');
   }
 }
 
