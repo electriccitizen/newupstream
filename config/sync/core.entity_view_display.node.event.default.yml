@@ -136,7 +136,7 @@ third_party_settings:
                 label: hidden
                 type: geolocation_map
                 settings:
-                  set_marker: '1'
+                  set_marker: true
                   title: ''
                   info_text: '[node:field_event_pin_info]'
                   replacement_patterns:
@@ -163,7 +163,7 @@ third_party_settings:
                     info_auto_display: 0
                     marker_icon_path: ''
                     disableAutoPan: 0
-                  use_overridden_map_settings: 1
+                  use_overridden_map_settings: true
                 third_party_settings: {  }
               context_mapping:
                 entity: layout_builder.entity
@@ -228,14 +228,17 @@ content:
     weight: 3
     label: hidden
     settings:
-      set_marker: '1'
+      set_marker: true
       title: ' '
       info_text: '[node:field_event_pin_info]'
-      google_map_settings:
+      use_overridden_map_settings: false
+      common_map: false
+      map_provider_id: google_maps
+      map_provider_settings:
         height: 400px
         width: 100%
         type: ROADMAP
-        zoom: '10'
+        zoom: 10
         maxZoom: 18
         minZoom: 0
         mapTypeControl: 1
@@ -247,13 +250,11 @@ content:
         style: '[{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#444444"}]},{"featureType":"administrative.country","elementType":"labels.text","stylers":[{"visibility":"off"},{"color":"#767676"}]},{"featureType":"administrative.locality","elementType":"labels.text","stylers":[{"visibility":"simplified"},{"color":"#767676"},{"lightness":"-23"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#acd5cb"},{"visibility":"on"},{"lightness":"49"}]},{"featureType":"water","elementType":"geometry.fill","stylers":[{"color":"#acd5cb"},{"lightness":"49"}]}]'
         marker_icon_path: ''
         disableAutoPan: 1
-        rotateControl: 0
+        rotateControl: false
         scrollwheel: 0
         preferScrollingToZooming: 0
         disableDoubleClickZoom: 0
         info_auto_display: 0
-      use_overridden_map_settings: 0
-      common_map: ''
     third_party_settings: {  }
     type: geolocation_map
     region: content
