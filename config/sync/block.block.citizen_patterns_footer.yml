@@ -21,11 +21,11 @@ settings:
   label: Quicklinks
   provider: menu_block
   label_display: visible
-  follow: 0
+  follow: false
   follow_parent: child
   level: 1
   depth: 1
-  expand: 0
+  expand: false
   parent: 'footer:'
   label_type: block
   label_link: 0

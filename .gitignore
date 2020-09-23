@@ -122,3 +122,5 @@ Thumbs.db
 /.vagrant
 
 /web/sites/default/drushrc.php
+/.editorconfig
+/.gitattributes

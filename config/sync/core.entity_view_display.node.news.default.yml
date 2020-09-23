@@ -21,7 +21,8 @@ third_party_settings:
     sections:
       -
         layout_id: layout_onecol
-        layout_settings: {  }
+        layout_settings:
+          label: ''
         components:
           2d19cf03-8fd6-4c33-b716-7852dbafa186:
             uuid: 2d19cf03-8fd6-4c33-b716-7852dbafa186
@@ -34,9 +35,11 @@ third_party_settings:
               context_mapping: {  }
             additional: {  }
             weight: 0
+        third_party_settings: {  }
       -
         layout_id: layout_onecol
-        layout_settings: {  }
+        layout_settings:
+          label: ''
         components:
           c10b7f9d-d1b9-4f0e-9310-8d676132d128:
             uuid: c10b7f9d-d1b9-4f0e-9310-8d676132d128
@@ -111,6 +114,7 @@ third_party_settings:
                 entity: layout_builder.entity
             additional: {  }
             weight: 3
+        third_party_settings: {  }
     allow_custom: false
     is_enabled: true
     enabled: true
@@ -178,3 +182,4 @@ content:
     third_party_settings: {  }
 hidden:
   addtoany: true
+  search_api_excerpt: true
