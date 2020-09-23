@@ -176,22 +176,19 @@
       }
     },
     "patches": {
-      "drupal/addanother":{
-        "URL doesnt match machine name": "https://www.drupal.org/files/issues/addanother-url-doesnt-match-machine-name-2851584-3.patch"
+      "drupal/core": {
+        "Off canvas filling up localStorage's quota, causing errors": "https://www.drupal.org/files/issues/2020-02-26/3070745-25.patch"
+      },
+      "drupal/entity_embed": {
+        "Array to string conversion for Media Image": "https://www.drupal.org/files/issues/2019-10-18/entity-embed-array-to-string--3069448-19.patch"
       },
       "drupal/menu_block": {
         "Enable menu block by page functionality": "https://www.drupal.org/files/issues/2018-08-08/menu_block-follow-2756675-55.patch",
         "Enable using active menus as menu block titles": "https://www.drupal.org/files/issues/menu_block-label_configuration-2809699-51.patch",
         "Enable link functionality on menu block titles": "https://www.drupal.org/files/issues/menu_block-title_as_link-1-d8.patch"
       },
-      "drupal/entity_embed": {
-        "Array to string conversion for Media Image": "https://www.drupal.org/files/issues/2019-10-18/entity-embed-array-to-string--3069448-19.patch"
-      },
       "drupal/paragraphs": {
         "Call to member function missing label": "https://www.drupal.org/files/issues/2020-01-14/paragraphs-call_id_on_null-2948778-20.patch"
-      },
-      "drupal/core": {
-        "Off canvas filling up localStorage's quota, causing errors": "https://www.drupal.org/files/issues/2020-02-26/3070745-25.patch"
       }
     },
     "enable-patching": true
