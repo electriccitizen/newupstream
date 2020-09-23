@@ -59,7 +59,7 @@
     "drupal/field_group": "^3.0",
     "drupal/flippy": "^1.0",
     "drupal/focal_point": "^1.0",
-    "drupal/geolocation": "^1.11",
+    "drupal/geolocation": "^3.2.0",
     "drupal/google_analytics": "^3.0",
     "drupal/hreflang": "^1.1",
     "drupal/image_style_quality": "^1.3",
