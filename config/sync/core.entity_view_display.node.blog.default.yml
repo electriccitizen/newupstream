@@ -24,7 +24,8 @@ third_party_settings:
     sections:
       -
         layout_id: layout_onecol
-        layout_settings: {  }
+        layout_settings:
+          label: ''
         components:
           f4d2b75e-a332-4c00-b169-75faee697c60:
             uuid: f4d2b75e-a332-4c00-b169-75faee697c60
@@ -40,7 +41,8 @@ third_party_settings:
         third_party_settings: {  }
       -
         layout_id: layout_onecol
-        layout_settings: {  }
+        layout_settings:
+          label: ''
         components:
           22c27178-e58b-4cf0-b1c7-4a72feb31293:
             uuid: 22c27178-e58b-4cf0-b1c7-4a72feb31293
@@ -92,7 +94,8 @@ third_party_settings:
         third_party_settings: {  }
       -
         layout_id: layout_onecol
-        layout_settings: {  }
+        layout_settings:
+          label: ''
         components:
           ba0bca5f-7ea0-4235-a1c7-eb5554f8c1f4:
             uuid: ba0bca5f-7ea0-4235-a1c7-eb5554f8c1f4
@@ -132,7 +135,8 @@ third_party_settings:
         third_party_settings: {  }
       -
         layout_id: layout_onecol
-        layout_settings: {  }
+        layout_settings:
+          label: ''
         components:
           d94df72a-42f8-461f-a52a-d75c8c166a73:
             uuid: d94df72a-42f8-461f-a52a-d75c8c166a73

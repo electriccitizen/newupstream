@@ -23,7 +23,8 @@ third_party_settings:
     sections:
       -
         layout_id: layout_onecol
-        layout_settings: {  }
+        layout_settings:
+          label: ''
         components:
           176805da-bf9e-449d-bffe-958a00a7ba3f:
             uuid: 176805da-bf9e-449d-bffe-958a00a7ba3f
@@ -57,7 +58,8 @@ third_party_settings:
         third_party_settings: {  }
       -
         layout_id: two_column_sidebar_left
-        layout_settings: {  }
+        layout_settings:
+          label: ''
         components:
           1a1fb60d-635c-4fb6-8459-2db1a58899a2:
             uuid: 1a1fb60d-635c-4fb6-8459-2db1a58899a2
@@ -67,11 +69,11 @@ third_party_settings:
               label: 'Web Editor Guide'
               provider: menu_block
               label_display: visible
-              follow: 0
+              follow: false
               follow_parent: child
               level: 1
               depth: 3
-              expand: 1
+              expand: true
               parent: 'support-book:'
               label_type: block
               label_link: 0
