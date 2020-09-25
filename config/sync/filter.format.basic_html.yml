@@ -5,6 +5,8 @@ dependencies:
   module:
     - editor
     - entity_embed
+    - linkit
+    - media
     - pathologic
 _core:
   default_config_hash: t7NqYO0ZgtimcRvICrO63omDoP5N8kmMLddTu3Wm_Ac
@@ -16,7 +18,7 @@ filters:
     id: filter_html
     provider: filter
     status: true
-    weight: -46
+    weight: -45
     settings:
       allowed_html: '<a href hreflang class target id title><em> <strong> <cite> <blockquote cite> <code> <ul type class> <ol start type class> <li> <dl> <dt> <dd> <h2 id class> <h3 id class> <h4 id class> <h5 id class> <h6 id class> <p class> <br> <span class> <img srcset typeof src alt height width data-entity-type data-entity-uuid data-align data-caption> <u> <hr> <table> <caption> <figcaption> <picture> <source srcset media type> <tbody> <thead> <tfoot> <th> <td> <tr> <div id class data-*> <iframe src class title frameborder aria-describedby tabindex allowtransparency style width height> <drupal-entity data-* data-entity-type data-entity-uuid data-entity-embed-display data-entity-embed-display-settings data-align data-caption data-embed-button alt title><article class data-*><small><mark>'
       filter_html_help: false
@@ -31,7 +33,7 @@ filters:
     id: filter_caption
     provider: filter
     status: false
-    weight: -41
+    weight: -40
     settings: {  }
   editor_file_reference:
     id: editor_file_reference
@@ -43,7 +45,7 @@ filters:
     id: filter_html_image_secure
     provider: filter
     status: false
-    weight: -40
+    weight: -39
     settings: {  }
   entity_embed:
     id: entity_embed
@@ -55,19 +57,19 @@ filters:
     id: filter_autop
     provider: filter
     status: false
-    weight: -42
+    weight: -41
     settings: {  }
   filter_htmlcorrector:
     id: filter_htmlcorrector
     provider: filter
     status: true
-    weight: -45
+    weight: -44
     settings: {  }
   filter_html_escape:
     id: filter_html_escape
     provider: filter
     status: false
-    weight: -43
+    weight: -42
     settings: {  }
   filter_url:
     id: filter_url
@@ -80,9 +82,25 @@ filters:
     id: filter_pathologic
     provider: pathologic
     status: true
-    weight: -44
+    weight: -43
     settings:
       settings_source: global
       local_settings:
         protocol_style: full
         local_paths: ''
+  media_embed:
+    id: media_embed
+    provider: media
+    status: false
+    weight: -38
+    settings:
+      default_view_mode: default
+      allowed_media_types: {  }
+      allowed_view_modes: {  }
+  linkit:
+    id: linkit
+    provider: linkit
+    status: true
+    weight: -46
+    settings:
+      title: true

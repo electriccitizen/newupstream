@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "31d5198dce3af418b34e8ac57a0ad0ca",
+    "content-hash": "be5a82cc84079a6655c64d0723471b0a",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -4643,32 +4643,32 @@
         },
         {
             "name": "drupal/linkit",
-            "version": "4.3.0",
+            "version": "5.0.0-beta11",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/linkit.git",
-                "reference": "8.x-4.3"
+                "reference": "8.x-5.0-beta11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/linkit-8.x-4.3.zip",
-                "reference": "8.x-4.3",
-                "shasum": "e624ea2f18a6100b76a8337e24f7c08df6e2235e"
+                "url": "https://ftp.drupal.org/files/projects/linkit-8.x-5.0-beta11.zip",
+                "reference": "8.x-5.0-beta11",
+                "shasum": "9133a3e61deafdd6a9d5a8b31a1f42e16051ee97"
             },
             "require": {
-                "drupal/core": "~8.0"
+                "drupal/core": "^8.7.7 || ^9"
+            },
+            "require-dev": {
+                "drupal/imce": "*"
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-4.x": "4.x-dev"
-                },
                 "drupal": {
-                    "version": "8.x-4.3",
-                    "datestamp": "1490205830",
+                    "version": "8.x-5.0-beta11",
+                    "datestamp": "1591971693",
                     "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
                     }
                 }
             },
@@ -4689,69 +4689,6 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/linkit",
                 "issues": "http://drupal.org/project/linkit"
-            }
-        },
-        {
-            "name": "drupal/media_entity_actions",
-            "version": "1.0.0-alpha2",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/media_entity_actions.git",
-                "reference": "8.x-1.0-alpha2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/media_entity_actions-8.x-1.0-alpha2.zip",
-                "reference": "8.x-1.0-alpha2",
-                "shasum": "9bf7881f11fa182c1b6673c4cc8c32ce3a1bdb81"
-            },
-            "require": {
-                "drupal/core": "^8.4.0"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-1.0-alpha2",
-                    "datestamp": "1510588386",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Project has not opted into security advisory coverage!"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "chr.fritsch",
-                    "homepage": "https://www.drupal.org/user/2103716"
-                },
-                {
-                    "name": "marcoscano",
-                    "homepage": "https://www.drupal.org/user/1288796"
-                },
-                {
-                    "name": "phenaproxima",
-                    "homepage": "https://www.drupal.org/user/205645"
-                },
-                {
-                    "name": "seanB",
-                    "homepage": "https://www.drupal.org/user/545912"
-                },
-                {
-                    "name": "slashrsm",
-                    "homepage": "https://www.drupal.org/user/744628"
-                }
-            ],
-            "description": "Provides Actions plugins to be used with Media in core",
-            "homepage": "https://www.drupal.org/project/media_entity_actions",
-            "support": {
-                "source": "https://git.drupalcode.org/project/media_entity_actions"
             }
         },
         {
@@ -5443,69 +5380,6 @@
             "homepage": "https://www.drupal.org/project/stage_file_proxy",
             "support": {
                 "source": "https://git.drupalcode.org/project/stage_file_proxy"
-            }
-        },
-        {
-            "name": "drupal/structure_sync",
-            "version": "1.16.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/structure_sync.git",
-                "reference": "8.x-1.16"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/structure_sync-8.x-1.16.zip",
-                "reference": "8.x-1.16",
-                "shasum": "b700c424503fa2d7285e972b1042ca6917ec0888"
-            },
-            "require": {
-                "drupal/core": "*"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-1.16",
-                    "datestamp": "1546851780",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "fidodido06",
-                    "homepage": "https://www.drupal.org/user/1494332"
-                },
-                {
-                    "name": "legolasbo",
-                    "homepage": "https://www.drupal.org/user/2480548"
-                },
-                {
-                    "name": "pdenooijer",
-                    "homepage": "https://www.drupal.org/user/3175437"
-                },
-                {
-                    "name": "timKruijsen",
-                    "homepage": "https://www.drupal.org/user/3513437"
-                },
-                {
-                    "name": "vinlaurens",
-                    "homepage": "https://www.drupal.org/user/2945689"
-                }
-            ],
-            "description": "Tool for syncing structural data that is stored as content.",
-            "homepage": "https://www.drupal.org/project/structure_sync",
-            "support": {
-                "source": "https://git.drupalcode.org/project/structure_sync"
             }
         },
         {
@@ -13216,7 +13090,6 @@
         "drupal/entity_usage": 10,
         "drupal/inline_entity_form": 10,
         "drupal/libraries": 15,
-        "drupal/media_entity_actions": 15,
         "drupal/media_entity_generic": 15,
         "drupal/responsive_preview": 10,
         "drupal/stage_file_proxy": 15,
