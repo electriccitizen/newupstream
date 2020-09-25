@@ -3,6 +3,7 @@ type: theme
 description: Custom theme by Electric Citizen for use with Pattern Lab
 package: EC
 core: 8.x
+core_version_requirement: ^8 || ^9
 # Defines libraries group in which we can add css/js.
 libraries:
   - citizen_patterns/global-styling

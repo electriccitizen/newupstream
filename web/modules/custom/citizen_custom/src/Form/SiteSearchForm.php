@@ -5,6 +5,7 @@ namespace Drupal\citizen_custom\Form;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Routing\RouteProvider;
+use Drupal\Core\Url;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
@@ -52,7 +53,7 @@ class SiteSearchForm extends FormBase {
 
     if (count($route_match)) {
       $route = 'view.site_search.search_results';
-      $form['#action'] = $this->url($route);
+      $form['#action'] = Url::fromRoute($route)->toString();
     }
     else {
       $form['#action'] = '/site-search';
