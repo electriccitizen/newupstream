@@ -85,7 +85,7 @@
     "drupal/video_embed_media": "^2.0",
     "drupal/views_bulk_operations": "^3.2",
     "drupal/views_infinite_scroll": "^1.5",
-    "drupal/webform": "^5.1",
+    "drupal/webform": "6.0-alpha-17",
     "drupal/xmlsitemap": "^1.0@alpha",
     "drush/drush": "^10",
     "electriccitizen/docksal": "^1.5",

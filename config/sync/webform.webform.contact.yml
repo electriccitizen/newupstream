@@ -1,3 +1,4 @@
+uuid: bb4d8c1f-afb2-4213-9c6d-bf02b072b18c
 langcode: en
 status: open
 dependencies:
@@ -35,7 +36,7 @@ settings:
   form_previous_submissions: true
   form_confidential: false
   form_confidential_message: ''
-  form_remote_addr: true
+  form_disable_remote_addr: false
   form_convert_anonymous: false
   form_prepopulate: false
   form_prepopulate_source_entity: false
@@ -270,6 +271,5 @@ handlers:
       theme_name: ''
       parameters: {  }
 variants: {  }
-uuid: bb4d8c1f-afb2-4213-9c6d-bf02b072b18c
 _core:
   default_config_hash: oZIx_IHS7gdveuJ3iSbhNY-A1FwlieWPdjJEJz4Wlb4
