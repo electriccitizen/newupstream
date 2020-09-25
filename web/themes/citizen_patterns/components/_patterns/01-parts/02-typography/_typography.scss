@@ -304,7 +304,7 @@ small{
 	border-style: solid;
 	border-width: 1px 0 0;
 	color: currentColor;
-	& + p{
+	& + *{
 		margin-top: $spaceMd;
 	}
 }
