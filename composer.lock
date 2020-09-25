@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "be5a82cc84079a6655c64d0723471b0a",
+    "content-hash": "0396d9f05bb945dd5f80729fd1198f2b",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2086,32 +2086,29 @@
         },
         {
             "name": "drupal/components",
-            "version": "1.1.0",
+            "version": "2.0.0-beta3",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/components.git",
-                "reference": "8.x-1.1"
+                "reference": "8.x-2.0-beta3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/components-8.x-1.1.zip",
-                "reference": "8.x-1.1",
-                "shasum": "72af8ff1ca842556ee4b95335595c24703acdb75"
+                "url": "https://ftp.drupal.org/files/projects/components-8.x-2.0-beta3.zip",
+                "reference": "8.x-2.0-beta3",
+                "shasum": "5883c8b6dd358d29127a3c49d1459814c061b566"
             },
             "require": {
-                "drupal/core": "~8.0"
+                "drupal/core": "^8.7.7 || ^9"
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
                 "drupal": {
-                    "version": "8.x-1.1",
-                    "datestamp": "1556870881",
+                    "version": "8.x-2.0-beta3",
+                    "datestamp": "1594633703",
                     "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
                     }
                 }
             },
@@ -2122,15 +2119,16 @@
             "authors": [
                 {
                     "name": "JohnAlbin",
-                    "homepage": "https://www.drupal.org/user/32095"
+                    "homepage": "https://www.drupal.org/user/32095",
+                    "email": "virtually.johnalbin@gmail.com"
                 },
                 {
                     "name": "RobLoach",
                     "homepage": "https://www.drupal.org/user/61114"
                 }
             ],
-            "description": "Registers “component libraries” defined in modules and themes with the Twig system",
-            "homepage": "https://www.drupal.org/project/components",
+            "description": "Sets up folders of components defined by your theme or module",
+            "homepage": "https://drupal.org/project/components",
             "support": {
                 "source": "https://git.drupalcode.org/project/components"
             }
@@ -4578,17 +4576,11 @@
         },
         {
             "name": "drupal/libraries",
-            "version": "3.0.0-alpha1",
+            "version": "dev-3.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/libraries.git",
-                "reference": "8.x-3.0-alpha1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/libraries-8.x-3.0-alpha1.zip",
-                "reference": "8.x-3.0-alpha1",
-                "shasum": "bb07036b1eaeea7d736fc7e72416238830cd8d67"
+                "reference": "3b7ae61a8e68ce37638b313eaccf4febaa48e3fa"
             },
             "require": {
                 "drupal/core": "~8.0"
@@ -4599,12 +4591,15 @@
                     "dev-3.x": "3.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-3.0-alpha1",
-                    "datestamp": "1517046484",
+                    "version": "8.x-3.0-alpha1+1-dev",
+                    "datestamp": "1561448285",
                     "security-coverage": {
                         "status": "not-covered",
-                        "message": "Alpha releases are not covered by Drupal security advisories."
+                        "message": "Dev releases are not covered by Drupal security advisories."
                     }
+                },
+                "patches_applied": {
+                    "New core version requirement": "https://www.drupal.org/files/issues/2019-10-08/libraries-Add_new_key_core_version_requirement_in_libraries.info.yml-3086588-2-D8.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -4639,7 +4634,8 @@
                 "source": "http://cgit.drupalcode.org/libraries",
                 "issues": "http://drupal.org/project/issues/libraries",
                 "irc": "irc://irc.freenode.org/drupal-contribute"
-            }
+            },
+            "time": "2019-06-25T07:35:46+00:00"
         },
         {
             "name": "drupal/linkit",
@@ -13089,7 +13085,7 @@
         "drupal/ctools": 15,
         "drupal/entity_usage": 10,
         "drupal/inline_entity_form": 10,
-        "drupal/libraries": 15,
+        "drupal/libraries": 20,
         "drupal/media_entity_generic": 15,
         "drupal/responsive_preview": 10,
         "drupal/stage_file_proxy": 15,

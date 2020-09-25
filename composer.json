@@ -32,7 +32,7 @@
     "drupal/admin_toolbar": "^2.0",
     "drupal/antibot": "^1.2",
     "drupal/auto_entitylabel": "^3.0@beta",
-    "drupal/components": "^1.0",
+    "drupal/components": "2.0-beta3",
     "drupal/config_direct_save": "^1.0",
     "drupal/config_filter": "^2.0",
     "drupal/config_ignore": "^2.2",
@@ -64,7 +64,7 @@
     "drupal/image_style_quality": "^1.3",
     "drupal/inline_entity_form": "^1.0@beta",
     "drupal/layout_builder_restrictions": "^2.2",
-    "drupal/libraries": "^3.0@alpha",
+    "drupal/libraries": "3.x-dev",
     "drupal/linkit": "5.0-beta11",
     "drupal/media_entity_generic": "^1.0@alpha",
     "drupal/menu_block": "^1.4",
@@ -186,6 +186,9 @@
       "drupal/menu_block": {
         "Enable using active menus as menu block titles": "https://www.drupal.org/files/issues/menu_block-label_configuration-2809699-51.patch",
         "Enable link functionality on menu block titles": "https://www.drupal.org/files/issues/menu_block-title_as_link-1-d8.patch"
+      },
+      "drupal/libraries": {
+        "New core version requirement": "https://www.drupal.org/files/issues/2019-10-08/libraries-Add_new_key_core_version_requirement_in_libraries.info.yml-3086588-2-D8.patch"
       }
     },
     "enable-patching": true

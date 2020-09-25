@@ -24,4 +24,5 @@ regions_hidden:
 # Information added by Drupal.org packaging script on 2019-05-23
 version: '8.x-1'
 core: '8.x'
+core_version_requirement: ^8 || ^9
 project: 'crane'
