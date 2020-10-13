@@ -88,6 +88,13 @@ filters:
       local_settings:
         protocol_style: full
         local_paths: ''
+  linkit:
+    id: linkit
+    provider: linkit
+    status: true
+    weight: -46
+    settings:
+      title: true
   media_embed:
     id: media_embed
     provider: media
@@ -97,10 +104,3 @@ filters:
       default_view_mode: default
       allowed_media_types: {  }
       allowed_view_modes: {  }
-  linkit:
-    id: linkit
-    provider: linkit
-    status: true
-    weight: -46
-    settings:
-      title: true
