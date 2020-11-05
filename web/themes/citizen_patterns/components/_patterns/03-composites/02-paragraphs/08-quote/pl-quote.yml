@@ -3,6 +3,8 @@ type:
 widgetTitle:
   'Quotes with optional source'
 
+image:
+  'http://placeimg.com/300/300/people'
 quote: |
   <p>Quis Aristidem non mortuum diligit? Nummus in Croesi divitiis obscuratur, pars est tamen.</p>
 source:

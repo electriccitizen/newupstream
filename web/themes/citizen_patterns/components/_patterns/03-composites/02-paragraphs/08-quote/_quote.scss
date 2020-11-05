@@ -6,7 +6,33 @@
 	.widget-title{
 		margin-bottom: $spaceMd;
 	}
+	.widget-wrapper{
+		//move side by side when in a single column
+		.full &{
+			@include safeFlex(row,wrap,start,center);
+			@include bleed(padding,32px);
+			@include tab{
+				.field-image{
+					margin-bottom: 0;
+				}
+				.quote-wrapper{
+					&:not(:only-child){
+						@include calc(width, "100% - 180px");
+					}
+				}
+			}
+		}//end full
+	}//end widget wrapper
 	//quote text
+	.field-image{
+		width: 240px;
+		@include auto;
+		margin-bottom: $spaceSm;
+		.field-media-image{
+			border-radius: 50%;
+			overflow: hidden;
+		}
+	}
 	.field-quote{
 		@include quote;
 	}//end long text

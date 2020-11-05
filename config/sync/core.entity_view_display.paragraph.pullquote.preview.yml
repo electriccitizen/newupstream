@@ -4,12 +4,15 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.pullquote.field_image
     - field.field.paragraph.pullquote.field_quote
     - field.field.paragraph.pullquote.field_source
     - field.field.paragraph.pullquote.field_widget_title
+    - image.style.paragraph_preview
     - paragraphs.paragraphs_type.pullquote
   module:
     - layout_builder
+    - media
 third_party_settings:
   layout_builder:
     enabled: false
@@ -21,9 +24,18 @@ targetEntityType: paragraph
 bundle: pullquote
 mode: preview
 content:
+  field_image:
+    type: media_thumbnail
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      image_style: paragraph_preview
+      image_link: ''
+    third_party_settings: {  }
   field_quote:
     type: basic_string
-    weight: 0
+    weight: 1
     region: content
     label: inline
     settings: {  }

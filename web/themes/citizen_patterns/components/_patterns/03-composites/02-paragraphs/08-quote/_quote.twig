@@ -2,16 +2,28 @@
 	STYLEGUIDE ONLY
 #}
 
-{% if quote %}
-	{% autoescape false %}
-		<div class="field field-quote text-long">
-			{{ quote }}
+{% if image %}
+	{% block image %}
+		<div class="field-image entity-reference">
+			<article>
+				<div class="field field-media-image image">
+					<img src="{{ image }}" alt="PL quote image example" /> 
+				</div>
+			</article>
 		</div>
-	{% endautoescape %}
+	{% endblock %}
 {% endif %}
-{% if source %}
-	<div class="field field-source string">
-		{{- source -}}
-	</div>
-{% endif %}
-		
+<div class="quote-wrapper">
+	{% if quote %}
+		{% autoescape false %}
+			<div class="field field-quote text-long">
+				{{ quote }}
+			</div>
+		{% endautoescape %}
+	{% endif %}
+	{% if source %}
+		<div class="field field-source string">
+			{{- source -}}
+		</div>
+	{% endif %}
+</div>
