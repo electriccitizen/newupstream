@@ -4,41 +4,60 @@ html {
 	line-height: 24px;
 	font-family: Helvetica, Arial, sans-serif;
 }
-
-.embedded-entity img{
+.cke_widget_drupalmedia img{
+	display: block;
 	max-width: 100%;
-	height: auto;
 }
-
+.media-library-item__edit{
+	background: #026cc5;
+	border: 0;
+	color: #fff;
+	padding: 5px 10px;
+	margin-right: .5em;
+}
+.media-library-item__edit:hover{
+	background: #cccccc;
+	color: #121212;
+}
 .align-right{
 	float: right;
 	margin:0 0 20px 20px;
 	clear: both;
-	max-width: 50%;
+	max-width: 50% !important;
+}
+.align-right.document{
+	float: none;
+	max-width: 100% !important;
+	width: 100% !important;
+	text-align: right;
 }
 .align-left{
 	float: left;
 	margin:0 20px 20px 0;
 	clear: both;
-	max-width: 50%;
+	max-width: 50% !important;
 }
-.align-center > .media {
-	margin: 0 auto;
-	text-align: center;
-	clear: both;
+.align-left.document{
+	float: none;
+	max-width: 100% !important;
+	width: 100% !important;
+	text-align: left;
 }
-
-.media--view-mode-small-embed,.view-modemediasmall-embed{
+.small-embed{
 	width: 300px;
 	max-width: 100%;
 }
-.media--view-mode-medium-embed,.view-modemediamedium-embed{
+.medium-embed{
 	max-width: 100%;
-	width: 500px;
+	width: 400px;
 }
-.media--view-mode-large-embed,.view-modemedialarge-embed{
+.large-embed{
 	max-width: 100%;
-	width: 800px;
+	width: 600px;
+}
+.full,.default{
+	width: 1200px;
+	max-width: 100%;
 }
 
 .field-media-video-embed-field .video-embed-field-responsive-video{
