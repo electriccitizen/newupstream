@@ -36,8 +36,7 @@ settings:
         -
           name: Media
           items:
-            - media
-            - document
+            - DrupalMediaLibrary
         -
           name: Miscellaneous
           items:

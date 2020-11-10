@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_form_mode.media.background_image
     - field.field.node.landing_page.body
     - field.field.node.landing_page.field_banner
     - field.field.node.landing_page.field_metatags
@@ -12,7 +11,7 @@ dependencies:
     - node.type.landing_page
   module:
     - entity_browser_entity_form
-    - inline_entity_form
+    - media_library
     - metatag
     - paragraphs
     - path
@@ -37,24 +36,16 @@ content:
   field_banner:
     weight: 1
     settings:
-      form_mode: background_image
-      label_singular: ''
-      label_plural: ''
-      allow_new: true
-      allow_existing: true
-      match_operator: CONTAINS
-      override_labels: false
-      collapsible: false
-      collapsed: false
-      allow_duplicate: false
+      media_types: {  }
     third_party_settings:
       entity_browser_entity_form:
         entity_browser_id: image_browser
-    type: inline_entity_form_complex
+    type: media_library_widget
     region: content
   field_metatags:
     weight: 4
-    settings: {  }
+    settings:
+      sidebar: true
     third_party_settings: {  }
     type: metatag_firehose
     region: content
@@ -71,9 +62,9 @@ content:
       form_display_mode: default
       default_paragraph_type: _none
       features:
+        add_above: '0'
         collapse_edit_all: collapse_edit_all
         duplicate: '0'
-        add_above: '0'
     third_party_settings: {  }
     type: paragraphs
     region: content

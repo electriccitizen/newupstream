@@ -9,8 +9,8 @@ dependencies:
     - paragraphs.paragraphs_type.links_files
   module:
     - entity_browser_entity_form
-    - inline_entity_form
     - link
+    - media_library
 _core:
   default_config_hash: srCP4vq8KutNp4MnwRCTTllJnHVyDZKeMVyrfSk6nHQ
 id: paragraph.links_files.default
@@ -21,20 +21,11 @@ content:
   field_file_multi:
     weight: 3
     settings:
-      form_mode: default
-      label_singular: ''
-      label_plural: ''
-      allow_new: true
-      allow_existing: true
-      match_operator: CONTAINS
-      override_labels: false
-      collapsible: false
-      collapsed: false
-      allow_duplicate: false
+      media_types: {  }
     third_party_settings:
       entity_browser_entity_form:
         entity_browser_id: file_browser
-    type: inline_entity_form_complex
+    type: media_library_widget
     region: content
   field_link_multi:
     weight: 2

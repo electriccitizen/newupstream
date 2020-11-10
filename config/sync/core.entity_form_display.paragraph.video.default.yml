@@ -8,7 +8,7 @@ dependencies:
     - paragraphs.paragraphs_type.video
   module:
     - entity_browser_entity_form
-    - inline_entity_form
+    - media_library
 _core:
   default_config_hash: LSlAJupZR0XkoEf_46NPM6XipiPmT53RRZYawFD5XUE
 id: paragraph.video.default
@@ -19,20 +19,11 @@ content:
   field_video:
     weight: 2
     settings:
-      form_mode: default
-      label_singular: ''
-      label_plural: ''
-      allow_new: true
-      allow_existing: true
-      match_operator: CONTAINS
-      override_labels: false
-      collapsible: false
-      collapsed: false
-      allow_duplicate: false
+      media_types: {  }
     third_party_settings:
       entity_browser_entity_form:
         entity_browser_id: video_browser
-    type: inline_entity_form_complex
+    type: media_library_widget
     region: content
   field_widget_title:
     weight: 0
