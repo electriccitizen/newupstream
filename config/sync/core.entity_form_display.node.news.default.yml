@@ -9,7 +9,6 @@ dependencies:
     - field.field.node.news.field_metatags
     - node.type.news
   module:
-    - entity_browser_entity_form
     - media_library
     - metatag
     - text
@@ -34,9 +33,7 @@ content:
     weight: 2
     settings:
       media_types: {  }
-    third_party_settings:
-      entity_browser_entity_form:
-        entity_browser_id: image_browser
+    third_party_settings: {  }
     type: media_library_widget
     region: content
   field_category:

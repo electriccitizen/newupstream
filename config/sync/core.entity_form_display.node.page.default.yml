@@ -9,7 +9,6 @@ dependencies:
     - field.field.node.page.field_paragraphs
     - node.type.page
   module:
-    - entity_browser_entity_form
     - media_library
     - metatag
     - paragraphs
@@ -36,9 +35,7 @@ content:
     weight: 1
     settings:
       media_types: {  }
-    third_party_settings:
-      entity_browser_entity_form:
-        entity_browser_id: image_browser
+    third_party_settings: {  }
     region: content
   field_metatags:
     weight: 4

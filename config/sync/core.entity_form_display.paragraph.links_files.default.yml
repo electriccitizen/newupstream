@@ -8,7 +8,6 @@ dependencies:
     - field.field.paragraph.links_files.field_widget_title
     - paragraphs.paragraphs_type.links_files
   module:
-    - entity_browser_entity_form
     - link
     - media_library
 _core:
@@ -22,9 +21,7 @@ content:
     weight: 3
     settings:
       media_types: {  }
-    third_party_settings:
-      entity_browser_entity_form:
-        entity_browser_id: file_browser
+    third_party_settings: {  }
     type: media_library_widget
     region: content
   field_link_multi:

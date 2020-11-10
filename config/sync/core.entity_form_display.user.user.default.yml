@@ -8,7 +8,6 @@ dependencies:
     - field.field.user.user.field_last_name
     - field.field.user.user.field_user_image
   module:
-    - entity_browser_entity_form
     - field_group
     - inline_entity_form
     - user
@@ -74,9 +73,8 @@ content:
       collapsible: false
       collapsed: false
       allow_duplicate: false
-    third_party_settings:
-      entity_browser_entity_form:
-        entity_browser_id: image_browser
+      revision: false
+    third_party_settings: {  }
     type: inline_entity_form_complex
     region: content
   google_analytics:
