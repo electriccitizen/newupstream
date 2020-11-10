@@ -13,6 +13,7 @@ dependencies:
     - media
     - media_library
     - user
+    - views_infinite_scroll
 _core:
   default_config_hash: dHOSWSHbMJNke0ZBGh1O5KrnwynSOCOpQycITW-pwfs
 id: media_library
@@ -481,7 +482,51 @@ display:
         - 'url.query_args:sort_by'
         - user
         - user.permissions
-      tags: {  }
+      tags:
+        - 'config:core.entity_view_display.media.document.banner'
+        - 'config:core.entity_view_display.media.document.default'
+        - 'config:core.entity_view_display.media.document.full'
+        - 'config:core.entity_view_display.media.document.full_embed'
+        - 'config:core.entity_view_display.media.document.large'
+        - 'config:core.entity_view_display.media.document.large_embed'
+        - 'config:core.entity_view_display.media.document.media_library'
+        - 'config:core.entity_view_display.media.document.medium'
+        - 'config:core.entity_view_display.media.document.medium_embed'
+        - 'config:core.entity_view_display.media.document.small'
+        - 'config:core.entity_view_display.media.document.small_embed'
+        - 'config:core.entity_view_display.media.image.banner'
+        - 'config:core.entity_view_display.media.image.default'
+        - 'config:core.entity_view_display.media.image.full'
+        - 'config:core.entity_view_display.media.image.full_embed'
+        - 'config:core.entity_view_display.media.image.large'
+        - 'config:core.entity_view_display.media.image.large_embed'
+        - 'config:core.entity_view_display.media.image.large_thumb'
+        - 'config:core.entity_view_display.media.image.media_browser_thumbnails'
+        - 'config:core.entity_view_display.media.image.media_library'
+        - 'config:core.entity_view_display.media.image.medium'
+        - 'config:core.entity_view_display.media.image.medium_embed'
+        - 'config:core.entity_view_display.media.image.small'
+        - 'config:core.entity_view_display.media.image.small_embed'
+        - 'config:core.entity_view_display.media.image.square'
+        - 'config:core.entity_view_display.media.image.thumbnail_cropped'
+        - 'config:core.entity_view_display.media.image.views_card'
+        - 'config:core.entity_view_display.media.remote_video.default'
+        - 'config:core.entity_view_display.media.remote_video.full'
+        - 'config:core.entity_view_display.media.remote_video.large_embed'
+        - 'config:core.entity_view_display.media.remote_video.media_library'
+        - 'config:core.entity_view_display.media.remote_video.medium_embed'
+        - 'config:core.entity_view_display.media.remote_video.small_embed'
+        - 'config:core.entity_view_display.media.video.banner'
+        - 'config:core.entity_view_display.media.video.default'
+        - 'config:core.entity_view_display.media.video.full'
+        - 'config:core.entity_view_display.media.video.full_embed'
+        - 'config:core.entity_view_display.media.video.large'
+        - 'config:core.entity_view_display.media.video.large_embed'
+        - 'config:core.entity_view_display.media.video.media_library'
+        - 'config:core.entity_view_display.media.video.medium'
+        - 'config:core.entity_view_display.media.video.medium_embed'
+        - 'config:core.entity_view_display.media.video.small'
+        - 'config:core.entity_view_display.media.video.small_embed'
   page:
     display_plugin: page
     id: page
@@ -768,6 +813,28 @@ display:
           plugin_id: rendered_entity
       defaults:
         fields: false
+        pager: false
+      pager:
+        type: full
+        options:
+          items_per_page: 24
+          offset: 0
+          id: 0
+          total_pages: null
+          tags:
+            previous: ‹‹
+            next: ››
+            first: '« First'
+            last: 'Last »'
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '6, 12, 24, 48'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+          quantity: 5
     cache_metadata:
       max-age: 0
       contexts:
@@ -778,7 +845,51 @@ display:
         - 'url.query_args:sort_by'
         - user
         - user.permissions
-      tags: {  }
+      tags:
+        - 'config:core.entity_view_display.media.document.banner'
+        - 'config:core.entity_view_display.media.document.default'
+        - 'config:core.entity_view_display.media.document.full'
+        - 'config:core.entity_view_display.media.document.full_embed'
+        - 'config:core.entity_view_display.media.document.large'
+        - 'config:core.entity_view_display.media.document.large_embed'
+        - 'config:core.entity_view_display.media.document.media_library'
+        - 'config:core.entity_view_display.media.document.medium'
+        - 'config:core.entity_view_display.media.document.medium_embed'
+        - 'config:core.entity_view_display.media.document.small'
+        - 'config:core.entity_view_display.media.document.small_embed'
+        - 'config:core.entity_view_display.media.image.banner'
+        - 'config:core.entity_view_display.media.image.default'
+        - 'config:core.entity_view_display.media.image.full'
+        - 'config:core.entity_view_display.media.image.full_embed'
+        - 'config:core.entity_view_display.media.image.large'
+        - 'config:core.entity_view_display.media.image.large_embed'
+        - 'config:core.entity_view_display.media.image.large_thumb'
+        - 'config:core.entity_view_display.media.image.media_browser_thumbnails'
+        - 'config:core.entity_view_display.media.image.media_library'
+        - 'config:core.entity_view_display.media.image.medium'
+        - 'config:core.entity_view_display.media.image.medium_embed'
+        - 'config:core.entity_view_display.media.image.small'
+        - 'config:core.entity_view_display.media.image.small_embed'
+        - 'config:core.entity_view_display.media.image.square'
+        - 'config:core.entity_view_display.media.image.thumbnail_cropped'
+        - 'config:core.entity_view_display.media.image.views_card'
+        - 'config:core.entity_view_display.media.remote_video.default'
+        - 'config:core.entity_view_display.media.remote_video.full'
+        - 'config:core.entity_view_display.media.remote_video.large_embed'
+        - 'config:core.entity_view_display.media.remote_video.media_library'
+        - 'config:core.entity_view_display.media.remote_video.medium_embed'
+        - 'config:core.entity_view_display.media.remote_video.small_embed'
+        - 'config:core.entity_view_display.media.video.banner'
+        - 'config:core.entity_view_display.media.video.default'
+        - 'config:core.entity_view_display.media.video.full'
+        - 'config:core.entity_view_display.media.video.full_embed'
+        - 'config:core.entity_view_display.media.video.large'
+        - 'config:core.entity_view_display.media.video.large_embed'
+        - 'config:core.entity_view_display.media.video.media_library'
+        - 'config:core.entity_view_display.media.video.medium'
+        - 'config:core.entity_view_display.media.video.medium_embed'
+        - 'config:core.entity_view_display.media.video.small'
+        - 'config:core.entity_view_display.media.video.small_embed'
   widget:
     display_plugin: page
     id: widget
@@ -897,6 +1008,7 @@ display:
         arguments: false
         header: false
         css_class: false
+        pager: false
       display_description: ''
       access:
         type: perm
@@ -1090,6 +1202,27 @@ display:
           empty: true
       css_class: ''
       rendering_language: '***LANGUAGE_language_interface***'
+      pager:
+        type: infinite_scroll
+        options:
+          items_per_page: 24
+          offset: 0
+          id: 0
+          total_pages: null
+          tags:
+            previous: ‹‹
+            next: ››
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '6, 12, 24, 48'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+          views_infinite_scroll:
+            button_text: 'Load More'
+            automatically_load_content: true
     cache_metadata:
       max-age: -1
       contexts:
@@ -1098,7 +1231,51 @@ display:
         - url.query_args
         - 'url.query_args:sort_by'
         - user.permissions
-      tags: {  }
+      tags:
+        - 'config:core.entity_view_display.media.document.banner'
+        - 'config:core.entity_view_display.media.document.default'
+        - 'config:core.entity_view_display.media.document.full'
+        - 'config:core.entity_view_display.media.document.full_embed'
+        - 'config:core.entity_view_display.media.document.large'
+        - 'config:core.entity_view_display.media.document.large_embed'
+        - 'config:core.entity_view_display.media.document.media_library'
+        - 'config:core.entity_view_display.media.document.medium'
+        - 'config:core.entity_view_display.media.document.medium_embed'
+        - 'config:core.entity_view_display.media.document.small'
+        - 'config:core.entity_view_display.media.document.small_embed'
+        - 'config:core.entity_view_display.media.image.banner'
+        - 'config:core.entity_view_display.media.image.default'
+        - 'config:core.entity_view_display.media.image.full'
+        - 'config:core.entity_view_display.media.image.full_embed'
+        - 'config:core.entity_view_display.media.image.large'
+        - 'config:core.entity_view_display.media.image.large_embed'
+        - 'config:core.entity_view_display.media.image.large_thumb'
+        - 'config:core.entity_view_display.media.image.media_browser_thumbnails'
+        - 'config:core.entity_view_display.media.image.media_library'
+        - 'config:core.entity_view_display.media.image.medium'
+        - 'config:core.entity_view_display.media.image.medium_embed'
+        - 'config:core.entity_view_display.media.image.small'
+        - 'config:core.entity_view_display.media.image.small_embed'
+        - 'config:core.entity_view_display.media.image.square'
+        - 'config:core.entity_view_display.media.image.thumbnail_cropped'
+        - 'config:core.entity_view_display.media.image.views_card'
+        - 'config:core.entity_view_display.media.remote_video.default'
+        - 'config:core.entity_view_display.media.remote_video.full'
+        - 'config:core.entity_view_display.media.remote_video.large_embed'
+        - 'config:core.entity_view_display.media.remote_video.media_library'
+        - 'config:core.entity_view_display.media.remote_video.medium_embed'
+        - 'config:core.entity_view_display.media.remote_video.small_embed'
+        - 'config:core.entity_view_display.media.video.banner'
+        - 'config:core.entity_view_display.media.video.default'
+        - 'config:core.entity_view_display.media.video.full'
+        - 'config:core.entity_view_display.media.video.full_embed'
+        - 'config:core.entity_view_display.media.video.large'
+        - 'config:core.entity_view_display.media.video.large_embed'
+        - 'config:core.entity_view_display.media.video.media_library'
+        - 'config:core.entity_view_display.media.video.medium'
+        - 'config:core.entity_view_display.media.video.medium_embed'
+        - 'config:core.entity_view_display.media.video.small'
+        - 'config:core.entity_view_display.media.video.small_embed'
   widget_table:
     display_plugin: page
     id: widget_table
@@ -1122,6 +1299,7 @@ display:
         arguments: false
         header: false
         css_class: false
+        pager: false
       row:
         type: fields
       fields:
@@ -1378,6 +1556,27 @@ display:
           empty: true
       css_class: ''
       rendering_language: '***LANGUAGE_language_interface***'
+      pager:
+        type: infinite_scroll
+        options:
+          items_per_page: 24
+          offset: 0
+          id: 0
+          total_pages: null
+          tags:
+            previous: ‹‹
+            next: ››
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '6, 12, 24, 48'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+          views_infinite_scroll:
+            button_text: 'Load More'
+            automatically_load_content: true
     cache_metadata:
       max-age: -1
       contexts:

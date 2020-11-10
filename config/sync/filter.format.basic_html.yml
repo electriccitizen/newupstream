@@ -110,7 +110,7 @@ filters:
       allowed_media_types:
         document: document
         image: image
-        video: video
+        remote_video: remote_video
       allowed_view_modes:
         full: full
         large_embed: large_embed

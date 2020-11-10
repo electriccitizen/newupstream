@@ -10,8 +10,8 @@ dependencies:
     - paragraphs.paragraphs_type.image
   module:
     - entity_browser_entity_form
-    - inline_entity_form
     - link
+    - media_library
 _core:
   default_config_hash: FVBfISJlWO2-DRtOaPU9en6Lp49axSbErBOHt_aBgWA
 id: paragraph.image.default
@@ -22,20 +22,11 @@ content:
   field_image:
     weight: 2
     settings:
-      form_mode: default
-      label_singular: ''
-      label_plural: ''
-      allow_new: true
-      allow_existing: true
-      match_operator: CONTAINS
-      override_labels: false
-      collapsible: false
-      collapsed: false
-      allow_duplicate: false
+      media_types: {  }
     third_party_settings:
       entity_browser_entity_form:
         entity_browser_id: image_browser
-    type: inline_entity_form_complex
+    type: media_library_widget
     region: content
   field_image_size:
     weight: 3

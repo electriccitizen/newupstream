@@ -1,9 +1,9 @@
 /* ==============
 	 MEDIA
 ================== */
-// .media-library-item__attributes{
-// 	min-height: 22px;
-// }
+.media-library-item__attributes{
+	min-height: 22px;
+}
 
 /* CAPTION FIELD
 ------------------- */
@@ -48,78 +48,6 @@
 %powerpoint{
 	background-image: url('../images/icons/file/powerpoint.svg');
 }
-
-/*
-//icons in browser
-.eb-media .views-field .file-extension{
-	& > span{
-		@extend %customIconWrap;
-		img{
-			display: none;
-		}
-		&[class$='.pdf']{
-			@extend %pdf;
-		}
-		&[class$='.doc'],&[class$='.docx']{
-			@extend %word;
-		}
-		&[class$='.xls'],&[class$='.xlsx']{
-			@extend %excel;
-		}
-		&[class$='.ppt'],&[class$='.pptx']{
-			@extend %powerpoint;
-		}
-	}
-}//end file extension & thumbnail fields
-
-.eb-media.view-display-id-embed_browser .views-field-thumbnail__target-id{
-	& > span.doc{
-		@extend %customIconWrap;
-		&[class$='pdf']{
-			@extend %pdf;
-		}
-		&[class$='doc'],&[class$='docx']{
-			@extend %excel;
-		}
-		&[class$='xls'],&[class$='xlsx']{
-			@extend %word;
-		}
-		&[class$='ppt'],&[class$='pptx']{
-			@extend %powerpoint;
-		}
-		img{
-			display: none;
-		}
-	}
-}
-
-//icons on main media view list
-.view-media.view-display-id-media_page_list{
-	.views-field-thumbnail__target-id span.doc{
-		display: block;
-		height: 75px;
-		width: 60px;
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: contain;
-		&[class$='pdf']{
-			@extend %pdf;
-		}
-		&[class$='doc'],&[class$='docx']{
-			@extend %excel;
-		}
-		&[class$='xls'],&[class$='xlsx']{
-			@extend %word;
-		}
-		&[class$='ppt'],&[class$='pptx']{
-			@extend %powerpoint;
-		}
-		img{
-			display: none;
-		}
-	}
-}//end media view list
-*/
 
 /* FILE ICONS
 --------------- */
@@ -185,4 +113,58 @@ span.file{
 	}
 }
 
+
+/* MEDIA LIBRARY
+--------------------- */
+.media-library-content{
+	.js-form-type-url{
+		input{
+			@include textInput;
+			margin-right: 2rem;
+		}
+	}
+	.button--primary{
+		margin-bottom: 0;
+	}
+	.media-library-item__click-to-select-checkbox{
+		top: 4px;
+		left: auto;
+		right: 2px;
+	}
+	.view-filters{
+		@include tab{
+			@include calc(width, "100% - 200px");
+		}
+		.views-exposed-form{
+			#views-filter-wrapper{
+				background: none;
+				margin-bottom: 0;
+				padding: 0;
+				.form--inline > .form-item{
+					label{
+						color: $black;
+					}
+				}
+				.form-submit{
+					margin-bottom: .75rem;
+				}
+			}
+		}//end views exposed form
+	}//end views filters
+	.drawer-toggle{
+		#drupal-modal &{
+			display: block;
+			margin-top: 1em;
+		}
+	}
+}//end media library content
+
+/* HIDE EXTRAS VIEWS INFINITE BUTTONS */
+.media-library-widget-modal{
+	.ui-dialog-buttonset.form-actions{
+		button.media-library-select.ui-widget:not(:first-child){
+			display: none !important;
+		}
+	}
+}
 
