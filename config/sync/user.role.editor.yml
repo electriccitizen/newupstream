@@ -13,7 +13,6 @@ permissions:
   - 'access content overview'
   - 'access embedded_browser entity browser pages'
   - 'access file_browser entity browser pages'
-  - 'access files overview'
   - 'access image_browser entity browser pages'
   - 'access in-place editing'
   - 'access media overview'
