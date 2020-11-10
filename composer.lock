@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "88d8bf28fcb9adacc9d59e9a78b6995a",
+    "content-hash": "2dbfd99093d1d03bf98559ed873b3ff4",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -3697,96 +3697,6 @@
             }
         },
         {
-            "name": "drupal/entity_browser",
-            "version": "2.5.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/entity_browser.git",
-                "reference": "8.x-2.5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/entity_browser-8.x-2.5.zip",
-                "reference": "8.x-2.5",
-                "shasum": "29456b961f0f90ff064601ab8a382446a8143774"
-            },
-            "require": {
-                "drupal/core": "^8.8 || ^9"
-            },
-            "require-dev": {
-                "drupal/embed": "~1.0",
-                "drupal/entity_embed": "1.x-dev",
-                "drupal/entity_reference_revisions": "1.x-dev",
-                "drupal/entityqueue": "1.x-dev",
-                "drupal/inline_entity_form": "1.x-dev",
-                "drupal/paragraphs": "1.x-dev",
-                "drupal/token": "~1.0"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-2.5",
-                    "datestamp": "1588015347",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Janez Urevc",
-                    "homepage": "https://github.com/slashrsm",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "Primoz Hmeljak",
-                    "homepage": "https://github.com/primsi",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "See other contributors",
-                    "homepage": "https://www.drupal.org/node/1943336/committers",
-                    "role": "contributor"
-                },
-                {
-                    "name": "Drupal Media Team",
-                    "homepage": "https://www.drupal.org/user/3260690"
-                },
-                {
-                    "name": "Primsi",
-                    "homepage": "https://www.drupal.org/user/282629"
-                },
-                {
-                    "name": "marcingy",
-                    "homepage": "https://www.drupal.org/user/77320"
-                },
-                {
-                    "name": "oknate",
-                    "homepage": "https://www.drupal.org/user/471638"
-                },
-                {
-                    "name": "samuel.mortenson",
-                    "homepage": "https://www.drupal.org/user/2582268"
-                },
-                {
-                    "name": "slashrsm",
-                    "homepage": "https://www.drupal.org/user/744628"
-                }
-            ],
-            "description": "Entity browsing and selecting component.",
-            "homepage": "http://drupal.org/project/entity_browser",
-            "support": {
-                "source": "https://git.drupalcode.org/project/entity_browser",
-                "issues": "https://www.drupal.org/project/issues/entity_browser",
-                "irc": "irc://irc.freenode.org/drupal-contribute"
-            }
-        },
-        {
             "name": "drupal/entity_embed",
             "version": "1.1.0",
             "source": {
@@ -4459,89 +4369,6 @@
             }
         },
         {
-            "name": "drupal/inline_entity_form",
-            "version": "1.0.0-rc7",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/inline_entity_form.git",
-                "reference": "8.x-1.0-rc7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/inline_entity_form-8.x-1.0-rc7.zip",
-                "reference": "8.x-1.0-rc7",
-                "shasum": "a11e59a8f3632728165170e9337cec9bc8eab870"
-            },
-            "require": {
-                "drupal/core": "^8.7.7 || ^9"
-            },
-            "require-dev": {
-                "drupal/entity_reference_revisions": "^1.0"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-1.0-rc7",
-                    "datestamp": "1596396104",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "RC releases are not covered by Drupal security advisories."
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "bojanz",
-                    "homepage": "https://www.drupal.org/user/86106"
-                },
-                {
-                    "name": "dawehner",
-                    "homepage": "https://www.drupal.org/user/99340"
-                },
-                {
-                    "name": "geek-merlin",
-                    "homepage": "https://www.drupal.org/user/229048"
-                },
-                {
-                    "name": "joachim",
-                    "homepage": "https://www.drupal.org/user/107701"
-                },
-                {
-                    "name": "jsacksick",
-                    "homepage": "https://www.drupal.org/user/972218"
-                },
-                {
-                    "name": "kaythay",
-                    "homepage": "https://www.drupal.org/user/2182186"
-                },
-                {
-                    "name": "oknate",
-                    "homepage": "https://www.drupal.org/user/471638"
-                },
-                {
-                    "name": "rszrama",
-                    "homepage": "https://www.drupal.org/user/49344"
-                },
-                {
-                    "name": "slashrsm",
-                    "homepage": "https://www.drupal.org/user/744628"
-                },
-                {
-                    "name": "webflo",
-                    "homepage": "https://www.drupal.org/user/254778"
-                }
-            ],
-            "description": "Provides a widget for inline management (creation, modification, removal) of referenced entities.",
-            "homepage": "https://www.drupal.org/project/inline_entity_form",
-            "support": {
-                "source": "https://git.drupalcode.org/project/inline_entity_form"
-            }
-        },
-        {
             "name": "drupal/layout_builder_restrictions",
             "version": "2.7.0",
             "source": {
@@ -4617,69 +4444,6 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/layout_builder_restrictions"
             }
-        },
-        {
-            "name": "drupal/libraries",
-            "version": "dev-3.x",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/libraries.git",
-                "reference": "3b7ae61a8e68ce37638b313eaccf4febaa48e3fa"
-            },
-            "require": {
-                "drupal/core": "~8.0"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-3.x": "3.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-3.0-alpha1+1-dev",
-                    "datestamp": "1561448285",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Dev releases are not covered by Drupal security advisories."
-                    }
-                },
-                "patches_applied": {
-                    "New core version requirement": "https://www.drupal.org/files/issues/2019-10-08/libraries-Add_new_key_core_version_requirement_in_libraries.info.yml-3086588-2-D8.patch"
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Pol",
-                    "homepage": "https://www.drupal.org/user/47194"
-                },
-                {
-                    "name": "joseph.olstad",
-                    "homepage": "https://www.drupal.org/user/1321830"
-                },
-                {
-                    "name": "rjacobs",
-                    "homepage": "https://www.drupal.org/user/422459"
-                },
-                {
-                    "name": "sun",
-                    "homepage": "https://www.drupal.org/user/54136"
-                },
-                {
-                    "name": "tstoeckler",
-                    "homepage": "https://www.drupal.org/user/107158"
-                }
-            ],
-            "description": "Allows version-dependent and shared usage of external libraries in Drupal.",
-            "homepage": "http://drupal.org/project/libraries",
-            "support": {
-                "source": "http://cgit.drupalcode.org/libraries",
-                "issues": "http://drupal.org/project/issues/libraries",
-                "irc": "irc://irc.freenode.org/drupal-contribute"
-            },
-            "time": "2019-06-25T07:35:46+00:00"
         },
         {
             "name": "drupal/linkit",
@@ -5773,104 +5537,6 @@
             "homepage": "http://drupal.org/project/upgrade_status",
             "support": {
                 "source": "https://git.drupalcode.org/project/upgrade_status"
-            }
-        },
-        {
-            "name": "drupal/video_embed_field",
-            "version": "2.4.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/video_embed_field.git",
-                "reference": "8.x-2.4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/video_embed_field-8.x-2.4.zip",
-                "reference": "8.x-2.4",
-                "shasum": "96b14bb93c1bb6a07b84315a4f87367870f8b574"
-            },
-            "require": {
-                "drupal/core": "^8.8 || ^9"
-            },
-            "require-dev": {
-                "drupal/colorbox": "^1.0",
-                "drupal/video_embed_media": "*"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-2.4",
-                    "datestamp": "1587686284",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Sam152",
-                    "homepage": "https://www.drupal.org/user/1485048"
-                },
-                {
-                    "name": "jec006",
-                    "homepage": "https://www.drupal.org/user/855980"
-                },
-                {
-                    "name": "plopesc",
-                    "homepage": "https://www.drupal.org/user/282415"
-                }
-            ],
-            "description": "A pluggable field type for storing videos from external video hosts such as Vimeo and YouTube.",
-            "homepage": "https://www.drupal.org/project/video_embed_field",
-            "support": {
-                "source": "https://git.drupalcode.org/project/video_embed_field"
-            }
-        },
-        {
-            "name": "drupal/video_embed_media",
-            "version": "2.4.0",
-            "require": {
-                "drupal/core": "^8.8 || ^9",
-                "drupal/video_embed_field": "self.version"
-            },
-            "type": "metapackage",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-2.4",
-                    "datestamp": "1587686284",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Sam152",
-                    "homepage": "https://www.drupal.org/user/1485048"
-                },
-                {
-                    "name": "jec006",
-                    "homepage": "https://www.drupal.org/user/855980"
-                },
-                {
-                    "name": "plopesc",
-                    "homepage": "https://www.drupal.org/user/282415"
-                }
-            ],
-            "description": "Integrates video_embed_field with the Media module, creating a new media type tailored to display embedded videos. Useful for websites which are using the media suite of modules.",
-            "homepage": "https://www.drupal.org/project/video_embed_field",
-            "support": {
-                "source": "https://git.drupalcode.org/project/video_embed_field"
             }
         },
         {
@@ -13245,8 +12911,6 @@
         "drupal/auto_entitylabel": 10,
         "drupal/ctools": 15,
         "drupal/entity_usage": 10,
-        "drupal/inline_entity_form": 10,
-        "drupal/libraries": 20,
         "drupal/media_entity_actions": 15,
         "drupal/media_entity_generic": 15,
         "drupal/responsive_preview": 10,
