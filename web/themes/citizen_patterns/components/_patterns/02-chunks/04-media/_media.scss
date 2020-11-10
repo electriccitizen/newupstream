@@ -12,27 +12,10 @@ img{
 	margin-top: $spaceXs;
 }
 
-//constrain images with smaller sizes (commonly embedded)
-.view-modemediasmall-embed{
-	max-width: 400px;
-	width: 100%;
-}
-.view-modemediamedium-embed{
-	max-width: 600px;
-	width: 100%;
-}
-.view-modemediasquare{
-	max-width: 400px;
-	width: 100%;
-}
-.view-modemedialarge-embed{
-	max-width: 900px;
-	width: 100%;
-}
 
 /* EMBEDDED VIDEO
 ------------------ */
-.field-media-oembed-video{
+.field-media-oembed-video,.field-media-video-embed-field{
 	position: relative;
 	padding-bottom: 56.25%;
 	iframe{
@@ -46,44 +29,82 @@ img{
 	}
 }
 
-/* MEDIA IN WYSIWYG 
+/* EMBEDDED MEDIA
 ------------------- */
-.embedded-entity{
-	margin-bottom: $spaceMd;
-
-	//embedded alignment (images only )
-	&.align-right{
-		@include onlySmall{
-			float: none;
+.text-with-summary article,.text-long article{
+	// set float props and max-widths for floated items
+	&.align-left{
+		float: none;
+		@include smallTab{
+			&:not(.document){
+				max-width: 50% !important;
+				float: left;
+				margin: 0 $spaceMd $spaceMd 0;
+			}
+			&.document{
+				text-align: left;
+				width: 100%;
+			}
 		}
-		@include tab {
-			margin-left: 2rem;
-			&:not(.view-modemediasmall-embed){
-				max-width: 50%;
+		//floated video
+		.field-media-video-embed-field{
+			padding-bottom: 0;
+			.video-embed-field-responsive-video{
+				width: 1200px;
+				max-width: 100%;
 			}
 		}
 	}
-	&.align-left{
-		@include onlySmall{
-			float: none;
-		}
-		@include tab {
-			margin-right: 2rem;
-			&:not(.view-modemediasmall-embed){
+	&.align-right{
+		float: none;
+		@include smallTab{
+			&:not(.document){
 				max-width: 50%;
+				float: right;
+				margin: 0 0 $spaceMd $spaceMd;
+			}
+			&.document{
+				text-align: right;
+				width: 100%;
+			}
+		}
+		//floated video
+		.field-media-video-embed-field{
+			padding-bottom: 0;
+			.video-embed-field-responsive-video{
+				width: 1200px;
+				max-width: 100%;
 			}
 		}
 	}
 	&.align-center{
-		@include auto;
+		&.document{
+			text-align: center;
+		}
+		.field-media-video-embed-field{
+			padding-bottom: 0;
+		}
 	}
-	.player .vp-player-layout{
-		width: 100% !important;
+	// control sizes for images and video
+	&.small-embed{
+		width: 300px;
+		max-width: 100%;
 	}
-}//end citizen-media
+	&.medium-embed{
+		width: 600px;
+		max-width: 100%;
+	}
+	&.large-embed{
+		width: 800px;
+		max-width: 100%;
+	}
+	&.default,&.full{
+		width: 100%;
+	}
+}//end article
 
 
-/* WYSIWYG DOC ICONS
+/* EMBEDDED DOC ICONS
 ---------------------------------------- */
 %docIcons{
 	position: relative;
