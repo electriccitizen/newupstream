@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_form_mode.media.background_image
     - field.field.node.event.body
     - field.field.node.event.field_banner
     - field.field.node.event.field_category
@@ -16,7 +15,6 @@ dependencies:
     - datetime
     - field_group
     - geolocation_google_maps
-    - inline_entity_form
     - metatag
     - text
 third_party_settings:
@@ -54,21 +52,14 @@ content:
     third_party_settings: {  }
     region: content
   field_banner:
-    weight: 3
+    weight: 26
     settings:
-      form_mode: background_image
-      label_singular: ''
-      label_plural: ''
-      allow_new: true
-      allow_existing: true
       match_operator: CONTAINS
-      override_labels: false
-      collapsible: false
-      collapsed: false
-      allow_duplicate: false
-      revision: false
+      match_limit: 10
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
-    type: inline_entity_form_complex
+    type: entity_reference_autocomplete
     region: content
   field_category:
     weight: 2
