@@ -178,6 +178,7 @@ permissions:
   - 'use ipe with page manager'
   - 'use panels dashboard'
   - 'use text format full_html'
+  - 'use text format limited_html'
   - 'view all revisions'
   - 'view any webform submission'
   - 'view blog revisions'

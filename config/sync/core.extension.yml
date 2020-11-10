@@ -2,6 +2,7 @@ module:
   addanother: 0
   addtoany: 0
   admin_toolbar: 0
+  allowed_formats: 0
   antibot: 0
   auto_entitylabel: 0
   automated_cron: 0

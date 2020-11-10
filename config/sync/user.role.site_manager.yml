@@ -158,6 +158,7 @@ permissions:
   - 'update paragraph content text'
   - 'update paragraph content video'
   - 'use add another'
+  - 'use text format limited_html'
   - 'view all media revisions'
   - 'view all revisions'
   - 'view any webform submission'

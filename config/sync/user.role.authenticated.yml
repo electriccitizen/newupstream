@@ -19,6 +19,7 @@ permissions:
   - 'search content'
   - 'skip comment approval'
   - 'use text format basic_html'
+  - 'use text format limited_html'
   - 'view disqus comments'
   - 'view media'
   - 'view paragraph content accordion_group'

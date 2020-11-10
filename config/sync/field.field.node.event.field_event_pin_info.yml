@@ -6,7 +6,14 @@ dependencies:
     - field.storage.node.field_event_pin_info
     - node.type.event
   module:
+    - allowed_formats
     - text
+third_party_settings:
+  allowed_formats:
+    limited_html: limited_html
+    basic_html: '0'
+    restricted_html: '0'
+    plain_text: '0'
 _core:
   default_config_hash: J2pqUZwsn1eSR3LTQj8IC1H2cSVx8FxTScBMOEr6TBk
 id: node.event.field_event_pin_info

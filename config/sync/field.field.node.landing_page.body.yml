@@ -6,7 +6,14 @@ dependencies:
     - field.storage.node.body
     - node.type.landing_page
   module:
+    - allowed_formats
     - text
+third_party_settings:
+  allowed_formats:
+    basic_html: basic_html
+    limited_html: '0'
+    restricted_html: '0'
+    plain_text: '0'
 _core:
   default_config_hash: LqgVWVk9FStxGvXXRybicR4fduENmHXQzLQm-DHkQtQ
 id: node.landing_page.body
