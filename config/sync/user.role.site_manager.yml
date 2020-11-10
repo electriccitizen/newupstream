@@ -28,6 +28,8 @@ permissions:
   - 'administer users'
   - 'administer webform element access'
   - 'administer webform submission'
+  - 'assign editor role'
+  - 'assign site_manager role'
   - 'cancel account'
   - 'change own username'
   - 'configure editable landing_page node layout overrides'

@@ -24,6 +24,7 @@ matchers:
       include_unpublished: false
       substitution_type: canonical
       metadata: ''
+      limit: 100
   0295521d-abea-485f-b0b2-02d7de94a6c2:
     uuid: 0295521d-abea-485f-b0b2-02d7de94a6c2
     id: 'entity:file'
@@ -37,3 +38,6 @@ matchers:
         thumbnail_image_style: linkit_result_thumbnail
       substitution_type: file
       metadata: ''
+      file_extensions: ''
+      file_status: 1
+      limit: 100

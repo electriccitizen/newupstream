@@ -129,13 +129,6 @@ function crane_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_sta
   $user = \Drupal::currentUser();
   $userRole = $user->getRoles();
   
-  //alter user form to prevent site managers from making themselves admins
-  if ($formId == 'user-form') {
-    if(!in_array('administrator', $userRole)){
-      unset($form['account']['roles']['#options']['administrator']);
-    }
-  }
-  
   // fix webform filter insanely long placeholder
   if ($formId == 'webform-filter-form') {
     $form['filter']['search']['#placeholder'] = t('Search keywords');
